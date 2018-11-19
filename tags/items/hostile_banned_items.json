@@ -1,0 +1,16 @@
+{
+    "values": [
+        "minecraft:ender_pearl",
+        "minecraft:potion",
+        "minecraft:splash_potion",
+        "minecraft:lingering_potion",
+        "minecraft:golden_apple",
+        "minecraft:milk_bucket",
+        "minecraft:lava_bucket",
+        "minecraft:water_bucket",
+        "minecraft:cod_bucket",
+        "minecraft:salmon_bucket",
+        "minecraft:pufferfish_bucket",
+        "minecraft:tropical_fish_bucket"
+    ]
+}

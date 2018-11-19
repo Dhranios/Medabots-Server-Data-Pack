@@ -1,0 +1,59 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:nether_star"
+        },
+        "title": {
+            "translate": "medabots_server:entity.master_core"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+        }
+    },
+    "parent": "medabots_server:wave_1/get_all_medabots/flame_tisara",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:master_core_master_giant\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:master_core_master_edges\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:master_core_master_beast\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:master_core_master_shadow\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/mt_battle/get_all_medabots/master_core"
+    }
+}

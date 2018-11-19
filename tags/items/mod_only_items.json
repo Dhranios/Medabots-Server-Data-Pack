@@ -1,0 +1,13 @@
+{
+    "values": [
+        "minecraft:map",
+        "minecraft:filled_map",
+        "minecraft:command_block_minecart",
+        "minecraft:command_block",
+        "minecraft:chain_command_block",
+        "minecraft:repeating_command_block",
+        "minecraft:structure_block",
+        "minecraft:structure_void",
+        "minecraft:debug_stick"
+    ]
+}

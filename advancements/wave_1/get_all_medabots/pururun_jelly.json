@@ -1,0 +1,59 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:nether_star"
+        },
+        "title": {
+            "translate": "medabots_server:entity.pururun_jelly"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+        }
+    },
+    "parent": "medabots_server:wave_1/get_all_medabots/rhinorush",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:pururun_jelly_missilebase\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:pururun_jelly_intermissile\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:pururun_jelly_guidemissile\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:pururun_jelly_limptank\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/mt_battle/get_all_medabots/pururun_jelly"
+    }
+}

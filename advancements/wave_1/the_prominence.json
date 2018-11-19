@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:tipped_arrow"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.wave_1.the_prominence"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.the_prominence.description"
+        },
+        "frame": "challenge"
+    },
+    "parent": "medabots_server:wave_1/dragon_knight",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "loot": [
+            "medabots_server:advancements/wave_1/the_prominence"
+        ],
+        "function": "medabots_server:advancements/wave_1/the_prominence"
+    }
+}

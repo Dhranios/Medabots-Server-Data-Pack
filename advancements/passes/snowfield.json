@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:paper"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.passes.snowfield_d"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.passes.taken"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "medabots_server:passes/extra",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/passes/snowfield_d"
+    }
+}

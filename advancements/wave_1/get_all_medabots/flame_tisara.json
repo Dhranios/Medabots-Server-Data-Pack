@@ -1,0 +1,59 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:nether_star"
+        },
+        "title": {
+            "translate": "medabots_server:entity.flame_tisara"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+        }
+    },
+    "parent": "medabots_server:wave_1/get_all_medabots/pastel_fairy",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:flame_tisara_sala_head\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:flame_tisara_sala_hand\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:flame_tisara_sala_arm\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:flame_tisara_sala_tail\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/mt_battle/get_all_medabots/flame_tisara"
+    }
+}

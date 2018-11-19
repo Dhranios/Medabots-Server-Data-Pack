@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:music_disc_13"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.easter_eggs.this_is_not_delfino_plaza"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.easter_eggs.this_is_not_delfino_plaza.description"
+        },
+        "hidden": true
+    },
+    "parent": "medabots_server:easter_eggs/root",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/easter_eggs"
+    }
+}

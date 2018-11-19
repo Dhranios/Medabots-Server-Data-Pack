@@ -1,0 +1,41 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:yellow_terracotta"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.wave_1.medabot_master"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.medabot_master.description"
+        },
+        "frame": "challenge"
+    },
+    "parent": "medabots_server:wave_1/true_medafighter",
+    "criteria": {
+        "grassland_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_d_first_go": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "loot": [
+            "medabots_server:advancements/wave_1/medabot_master"
+        ],
+        "function": "medabots_server:advancements/wave_1/medabot_master"
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:egg"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.easter_eggs.root"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.easter_eggs.root.description"
+        },
+        "background": "medabots_server:textures/gui/advancements/backgrounds/easter_eggs.png"
+    },
+    "criteria": {
+        "start": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

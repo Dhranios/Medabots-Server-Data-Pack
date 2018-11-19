@@ -1,0 +1,14 @@
+{
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        },
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "parent": "medabots_server:wave_1/root",
+    "rewards": {
+        "function": "medabots_server:advancements/wave_1/how_to_tame_the_twilight_dragon_achieve"
+    }
+}

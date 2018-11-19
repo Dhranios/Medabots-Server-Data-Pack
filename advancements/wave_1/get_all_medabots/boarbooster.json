@@ -1,0 +1,59 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:nether_star"
+        },
+        "title": {
+            "translate": "medabots_server:entity.boarbooster"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+        }
+    },
+    "parent": "medabots_server:wave_1/get_all_medabots/fancyroll",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:boarbooster_boartusk\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:boarbooster_drillril\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:boarbooster_wollybond\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{id:\"medabots_server:boarbooster_mashglow\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/mt_battle/get_all_medabots/boarbooster"
+    }
+}

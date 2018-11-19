@@ -1,0 +1,5 @@
+teleport @s -1604 51 -151 -180 0
+data merge block -1604 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/rock_a/play\"}}"}
+setblock -1604 53 -182 minecraft:redstone_block
+scoreboard players set @s Music 0
+scoreboard players set @s MusicType 1

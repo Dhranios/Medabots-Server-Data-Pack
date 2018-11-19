@@ -1,0 +1,39 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:chainmail_helmet"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.easter_eggs.a_nice_day_in_the_sun"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.easter_eggs.a_nice_day_in_the_sun.description"
+        },
+        "hidden": true
+    },
+    "parent": "medabots_server:easter_eggs/root",
+    "criteria": {
+        "position": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "position": {
+                    "x": {
+                        "min": -252,
+                        "max": -251
+                    },
+                    "y": {
+                        "min": 87,
+                        "max": 88
+                    },
+                    "z": {
+                        "min": -63,
+                        "max": -2
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/easter_eggs"
+    }
+}

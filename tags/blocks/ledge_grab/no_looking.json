@@ -1,0 +1,10 @@
+{
+    "values": [
+        "minecraft:barrier",
+        "minecraft:black_stained_glass",
+        "minecraft:lava",
+        "minecraft:water",
+        "minecraft:fire",
+        "minecraft:moving_piston"
+    ]
+}

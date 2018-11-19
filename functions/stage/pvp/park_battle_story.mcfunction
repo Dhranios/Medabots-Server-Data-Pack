@@ -1,0 +1,4 @@
+execute unless block -1950 51 -590 minecraft:stone_pressure_plate run tellraw @s {"translate":"medabots_server:message.stage.already_playing","color":"green"}
+#execute if block -1950 51 -590 minecraft:stone_pressure_plate if entity @s[scores={Error=0},advancements={medabots_server:wave_1/story={}}] run function medabots_server:stage/pvp/park_battle_story/
+execute if block -1950 51 -590 minecraft:stone_pressure_plate if entity @s[tag=!story_battle,scores={Error=0}] run tellraw @s {"translate":"medabots_server:message.stage.no_story","color":"green"}
+execute if block -1950 51 -590 minecraft:stone_pressure_plate run scoreboard players set @s[scores={Error=1..}] PreviousError 0

@@ -1,0 +1,224 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:nether_star"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+        },
+        "frame": "challenge"
+    },
+    "parent": "medabots_server:wave_1/the_basics_of_battle",
+    "criteria": {
+        "dragonbeetle": {
+            "trigger": "minecraft:impossible"
+        },
+        "fly_falcon": {
+            "trigger": "minecraft:impossible"
+        },
+        "hellphoenix": {
+            "trigger": "minecraft:impossible"
+        },
+        "fancyroll": {
+            "trigger": "minecraft:impossible"
+        },
+        "boarbooster": {
+            "trigger": "minecraft:impossible"
+        },
+        "dondoguu": {
+            "trigger": "minecraft:impossible"
+        },
+        "baroncastle": {
+            "trigger": "minecraft:impossible"
+        },
+        "magicalcard": {
+            "trigger": "minecraft:impossible"
+        },
+        "pastel_fairy": {
+            "trigger": "minecraft:impossible"
+        },
+        "flame_tisara": {
+            "trigger": "minecraft:impossible"
+        },
+        "kanehachi_mk2": {
+            "trigger": "minecraft:impossible"
+        },
+        "shoot_spider": {
+            "trigger": "minecraft:impossible"
+        },
+        "seven_colors": {
+            "trigger": "minecraft:impossible"
+        },
+        "poison_scorpi": {
+            "trigger": "minecraft:impossible"
+        },
+        "maxsnake": {
+            "trigger": "minecraft:impossible"
+        },
+        "god_emperor": {
+            "trigger": "minecraft:impossible"
+        },
+        "arcbeetle": {
+            "trigger": "minecraft:impossible"
+        },
+        "saikachis": {
+            "trigger": "minecraft:impossible"
+        },
+        "dorcus": {
+            "trigger": "minecraft:impossible"
+        },
+        "attack_tyrano": {
+            "trigger": "minecraft:impossible"
+        },
+        "nin_ninja": {
+            "trigger": "minecraft:impossible"
+        },
+        "bluesdog": {
+            "trigger": "minecraft:impossible"
+        },
+        "bezelga": {
+            "trigger": "minecraft:impossible"
+        },
+        "sailor_multi": {
+            "trigger": "minecraft:impossible"
+        },
+        "saintnurse": {
+            "trigger": "minecraft:impossible"
+        },
+        "blackbeetle": {
+            "trigger": "minecraft:impossible"
+        },
+        "blackstag": {
+            "trigger": "minecraft:impossible"
+        },
+        "pretty_prime": {
+            "trigger": "minecraft:impossible"
+        },
+        "peppercat": {
+            "trigger": "minecraft:impossible"
+        },
+        "aimflash": {
+            "trigger": "minecraft:impossible"
+        },
+        "kasou_touchu": {
+            "trigger": "minecraft:impossible"
+        },
+        "grade_kabuki": {
+            "trigger": "minecraft:impossible"
+        },
+        "doctor_study": {
+            "trigger": "minecraft:impossible"
+        },
+        "knight_armor": {
+            "trigger": "minecraft:impossible"
+        },
+        "potato_insect": {
+            "trigger": "minecraft:impossible"
+        },
+        "keithturtle": {
+            "trigger": "minecraft:impossible"
+        },
+        "king_pharaoh": {
+            "trigger": "minecraft:impossible"
+        },
+        "hippopojamas": {
+            "trigger": "minecraft:impossible"
+        },
+        "rhinorush": {
+            "trigger": "minecraft:impossible"
+        },
+        "frappe": {
+            "trigger": "minecraft:impossible"
+        },
+        "abyss_greater": {
+            "trigger": "minecraft:impossible"
+        },
+        "basstoyer": {
+            "trigger": "minecraft:impossible"
+        },
+        "uglyguck": {
+            "trigger": "minecraft:impossible"
+        },
+        "pure_mermaid": {
+            "trigger": "minecraft:impossible"
+        },
+        "pinguen": {
+            "trigger": "minecraft:impossible"
+        },
+        "darknut": {
+            "trigger": "minecraft:impossible"
+        },
+        "zant": {
+            "trigger": "minecraft:impossible"
+        },
+        "magolor": {
+            "trigger": "minecraft:impossible"
+        },
+        "rob": {
+            "trigger": "minecraft:impossible"
+        },
+        "ashton": {
+            "trigger": "minecraft:impossible"
+        },
+        "amelia": {
+            "trigger": "minecraft:impossible"
+        },
+        "mewtwo": {
+            "trigger": "minecraft:impossible"
+        },
+        "metal_general": {
+            "trigger": "minecraft:impossible"
+        },
+        "sphere_doomers": {
+            "trigger": "minecraft:impossible"
+        },
+        "smilidonad": {
+            "trigger": "minecraft:impossible"
+        },
+        "warbonnet": {
+            "trigger": "minecraft:impossible"
+        },
+        "primity_baby": {
+            "trigger": "minecraft:impossible"
+        },
+        "acehorn": {
+            "trigger": "minecraft:impossible"
+        },
+        "yuchitang": {
+            "trigger": "minecraft:impossible"
+        },
+        "ka_o_lantern": {
+            "trigger": "minecraft:impossible"
+        },
+        "crimson_king": {
+            "trigger": "minecraft:impossible"
+        },
+        "metabee": {
+            "trigger": "minecraft:impossible"
+        },
+        "rokusho": {
+            "trigger": "minecraft:impossible"
+        },
+        "pururun_jelly": {
+            "trigger": "minecraft:impossible"
+        },
+        "marine_killer": {
+            "trigger": "minecraft:impossible"
+        },
+        "le_villan": {
+            "trigger": "minecraft:impossible"
+        },
+        "suzumega_hummer": {
+            "trigger": "minecraft:impossible"
+        },
+        "master_core": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/wave_1/get_all_medabots"
+    }
+}

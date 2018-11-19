@@ -1,0 +1,82 @@
+{
+    "criteria": {
+        "opening": {
+            "trigger": "minecraft:impossible"
+        },
+        "opening_battle": {
+            "trigger": "minecraft:impossible"
+        },
+		"meet_karin": {
+            "trigger": "minecraft:impossible"
+        },
+		"meet_max": {
+            "trigger": "minecraft:impossible"
+        },
+		"see_doctor_haru": {
+            "trigger": "minecraft:impossible"
+        },
+		"meet_koji": {
+            "trigger": "minecraft:impossible"
+        },
+		"see_jaxy": {
+            "trigger": "minecraft:impossible"
+        },
+		"meet_director_tune": {
+            "trigger": "minecraft:impossible"
+        },
+		"meet_screws": {
+            "trigger": "minecraft:impossible"
+        },
+		"vs_spyke_begin": {
+            "trigger": "minecraft:impossible"
+        },
+		"vs_spyke": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_spyke_battle": {
+            "trigger": "minecraft:impossible"
+        },
+		"kuwagata_medal": {
+            "trigger": "minecraft:impossible"
+        },
+		"meet_jaxy": {
+            "trigger": "minecraft:impossible"
+        },
+		"maxs_first_love": {
+            "trigger": "minecraft:impossible"
+        },
+		"meet_doctor_haru": {
+            "trigger": "minecraft:impossible"
+        },
+		"tunes_order": {
+            "trigger": "minecraft:impossible"
+        },
+		"medanappings": {
+            "trigger": "minecraft:impossible"
+        },
+		"jaxy_talks": {
+            "trigger": "minecraft:impossible"
+        },
+		"rubberobo_breakout": {
+            "trigger": "minecraft:impossible"
+        },
+		"rock_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+		"snowfield_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+		"ruins_in_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+		"seashore_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+		"vs_squidguts": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_squidguts_battle": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

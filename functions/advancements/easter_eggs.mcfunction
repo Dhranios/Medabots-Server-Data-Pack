@@ -1,0 +1,1 @@
+advancement grant @s only medabots_server:easter_eggs/root

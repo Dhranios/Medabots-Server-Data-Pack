@@ -1,0 +1,1 @@
+advancement grant @s only medabots_server:developer_challenge/root

@@ -1,0 +1,3 @@
+tag @s[tag=pot_breaker] remove pot_breaker
+tag @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}]}] add pot_breaker
+execute if entity @s[scores={Battle=1},tag=!pot_breaker] unless entity @s[nbt={Inventory:[{Slot:8b}]}] run replaceitem entity @s hotbar.8 minecraft:diamond_axe{Unbreakable:1b,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.pot_breaker\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.pot_breaker.description\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.generic.drop_to_kill\"}"]},AttributeModifiers:[],HideFlags:62,CanDestroy:["minecraft:chest"],medabots_server:{id:"medabots_server:pot_breaker",kill:1b}}

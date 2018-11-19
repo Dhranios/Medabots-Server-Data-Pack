@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:end_crystal"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.mt_battle.magical_mega_bot"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.mt_battle.magical_mega_bot.description"
+        },
+        "frame": "challenge",
+        "hidden": true
+    },
+    "parent": "medabots_server:mt_battle/medabot_vs_mega_bot",
+    "criteria": {
+        "victory": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/mt_battle/magical_mega_bot"
+    }
+}

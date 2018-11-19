@@ -1,0 +1,4 @@
+execute unless block -2000 51 -633 minecraft:stone_pressure_plate run tellraw @s {"translate":"medabots_server:message.stage.already_playing","color":"green"}
+execute if block -2000 51 -633 minecraft:stone_pressure_plate if entity @s[scores={Error=0},advancements={medabots_server:wave_1/story={vs_spyke=true,vs_spyke_battle=false}}] run function medabots_server:stage/pvp/icefield_battle_story/vs_spyke
+execute if block -2000 51 -633 minecraft:stone_pressure_plate if entity @s[tag=!story_battle,scores={Error=0}] run tellraw @s {"translate":"medabots_server:message.stage.no_story","color":"green"}
+execute if block -2000 51 -633 minecraft:stone_pressure_plate run scoreboard players set @s[scores={Error=1..}] PreviousError 0
