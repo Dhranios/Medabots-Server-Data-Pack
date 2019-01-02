@@ -1,8 +1,12 @@
+# Protect the user from getting hurt
+effect give @e[sort=nearest,limit=1,scores={Medaforce=-2},distance=..5] minecraft:resistance 1 5 true
+
+# Protect teammates from getting hurt
+execute if entity @s[tag=ally_team] run effect give @e[sort=nearest,limit=1,distance=..5,tag=ally_medabot] minecraft:resistance 1 5 true
+execute if entity @s[tag=enemy_team] run effect give @e[sort=nearest,limit=1,distance=..5,tag=enemy_medabot] minecraft:resistance 1 5 true
+
 # Spawn lightning
 summon minecraft:lightning_bolt ~ ~-1.5 ~
-
-# Protect the user from getting hurt
-execute if entity @s[tag=!rotated] run effect give @e[sort=nearest,limit=1,scores={Medaforce=-2}] minecraft:resistance 1 5 true
 
 # CPU owned simulation
 execute if entity @s[tag=cpu_owned,tag=!rotated] run teleport @s ~ ~ ~ facing entity @e[type=!minecraft:player,sort=nearest,limit=1,scores={Medaforce=-2}]

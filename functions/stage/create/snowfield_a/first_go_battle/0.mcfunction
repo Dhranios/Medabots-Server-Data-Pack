@@ -18,3 +18,5 @@ execute if entity @e[x=-1630,y=45,z=-208,distance=..10,tag=enemy_medabot] run sc
 execute if entity @e[x=-1630,y=45,z=-208,distance=..10,tag=enemy_medabot] run summon minecraft:area_effect_cloud -1629 45 -207 {CustomName:"{\"translate\":\"medabots_server:message.stage.mission\"}",Tags:["mission","defeat_the_enemy"],Duration:2147483647}
 execute if entity @e[x=-1630,y=45,z=-208,distance=..10,tag=enemy_medabot] run teleport @e[x=-1630,y=45,z=-208,distance=..10,tag=enemy_medabot] -1630 45 -208
 execute if entity @e[x=-1630,y=45,z=-208,distance=..10,tag=enemy_medabot] run teleport @s -1629 45 -205
+bossbar set medabots_server:snowfield_a/time value 3600
+bossbar set medabots_server:snowfield_a/time players @a[scores={Stage=14}]

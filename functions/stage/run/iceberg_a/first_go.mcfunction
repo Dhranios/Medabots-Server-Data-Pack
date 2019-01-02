@@ -188,7 +188,7 @@ execute if block -1703 44 -203 minecraft:air run setblock -1703 45 -203 minecraf
 execute if block -1710 45 -209 minecraft:iron_door[open=true] if entity @s[x=-1709,y=44,z=-210,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_a/first_go_battle/0
 execute if block -1710 45 -209 minecraft:iron_door[open=true] positioned -1702 44 -207 run function medabots_server:stage/wait_for_robattle_preventation
 execute if block -1710 44 -209 minecraft:structure_block run setblock -1710 45 -209 minecraft:redstone_block
-execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand] store result score @s BattlingMedabots if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Stage=17,Medabot=0..}]
+execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Stage=17,Medabot=0..,Battle=1..}]
 execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=17}] run scoreboard players set @s Stage 17
 execute unless entity @s[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/iceberg_a/first_go
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/iceberg_a/first_go
@@ -199,4 +199,10 @@ scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
 advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:wave_1/torutoru_land_master iceberg_a_first_go
 teleport @s[scores={BattlingMedabots=1}] -1704 50 -221 -180 0
+execute as @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:boxer/time players
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:iceberg_a/time players
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:iceberg_a/time value
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossbar medabots_server:iceberg_a/time value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if score #temp Time matches 0 as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

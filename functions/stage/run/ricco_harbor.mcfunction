@@ -28,7 +28,7 @@ tag @a[scores={Death=1..},tag=achieve_rico] remove achieve_rico
 tag @a[scores={Death=1..},tag=ricco_harbor_full] remove ricco_harbor_full
 tag @a[scores={Death=1..},tag=removed] remove removed
 tag @a[scores={Death=1..},tag=selected] remove selected
-execute store result score @s BattlingMedabots if entity @e[scores={Stage=97,Medabot=0..}]
+execute store result score @s BattlingMedabots if entity @e[scores={Stage=97,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,tag=mr_referee,type=minecraft:armor_stand] run data merge block -1440 95 -210 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.full\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 execute if entity @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,tag=mr_referee,type=minecraft:armor_stand] run setblock -1440 96 -212 minecraft:red_wool
 execute if entity @s[scores={BattlingMedabots=3..}] unless entity @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1430 75 -149 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[-180.0f,0.0f]}

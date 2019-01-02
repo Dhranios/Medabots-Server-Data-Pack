@@ -1,5 +1,5 @@
 playsound medabots_server:entity.cannon.fire hostile @a ~ ~ ~ 1
-execute anchored eyes run summon minecraft:arrow ^ ^-0.2 ^1 {Motion:[0.01d,0.0d,0.0d],inGround:0b,Potion:"minecraft:water",CustomPotionColor:16777215,CustomPotionEffects:[{Id:18b,Amplifier:3b,Duration:0,Ambient:1b,ShowParticles:0b}],CustomName:"{\"translate\":\"medabots_server:move.missile\"}",Tags:["missile"],NoGravity:1b}
+execute anchored eyes run summon minecraft:arrow ^ ^-0.2 ^1 {Motion:[0.01d,0.0d,0.0d],inGround:0b,Potion:"minecraft:water",CustomPotionColor:16777215,CustomPotionEffects:[{Id:18b,Amplifier:3b,Duration:0,Ambient:1b,ShowParticles:0b}],CustomName:"{\"translate\":\"medabots_server:move.missile\"}",Tags:["missile"],damage:5.0d,NoGravity:1b}
 execute anchored eyes run summon minecraft:area_effect_cloud ^ ^-0.2 ^1.5 {CustomName:"{\"translate\":\"medabots_server:move.missile\"}",Tags:["missile"],Duration:1}
 execute as @e[type=minecraft:arrow,tag=missile,distance=..6,sort=nearest,limit=1] store result score @s PosX run data get entity @s Pos[0] 100
 execute as @e[type=minecraft:arrow,tag=missile,distance=..6,sort=nearest,limit=1] store result score @s PosY run data get entity @s Pos[1] 100

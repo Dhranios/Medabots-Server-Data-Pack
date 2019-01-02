@@ -1,18 +1,18 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","1"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","2"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","3"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","4"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","5"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","6"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","7"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","8"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","cannons_1"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","walls"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","accelerators"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","wind_1"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","cannons_2"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","balloon_bombs"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","action_floors"],Duration:1}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizer\"}",Tags:["version","wind_2"],Duration:1}
 tag @e[sort=random,tag=join_stage,limit=1] add selected
-execute if entity @e[tag=join_stage,tag=selected,tag=1] run function medabots_server:stage/create/park_battle/1
-execute if entity @e[tag=join_stage,tag=selected,tag=2] run function medabots_server:stage/create/park_battle/2
-execute if entity @e[tag=join_stage,tag=selected,tag=3] run function medabots_server:stage/create/park_battle/3
-execute if entity @e[tag=join_stage,tag=selected,tag=4] run function medabots_server:stage/create/park_battle/4
-execute if entity @e[tag=join_stage,tag=selected,tag=5] run function medabots_server:stage/create/park_battle/5
-execute if entity @e[tag=join_stage,tag=selected,tag=6] run function medabots_server:stage/create/park_battle/6
-execute if entity @e[tag=join_stage,tag=selected,tag=7] run function medabots_server:stage/create/park_battle/7
-execute if entity @e[tag=join_stage,tag=selected,tag=8] run function medabots_server:stage/create/park_battle/8
+execute if entity @e[tag=join_stage,tag=selected,tag=cannons_1] run function medabots_server:stage/create/park_battle/cannons_1
+execute if entity @e[tag=join_stage,tag=selected,tag=walls] run function medabots_server:stage/create/park_battle/walls
+execute if entity @e[tag=join_stage,tag=selected,tag=accelerators] run function medabots_server:stage/create/park_battle/accelerators
+execute if entity @e[tag=join_stage,tag=selected,tag=wind_1] run function medabots_server:stage/create/park_battle/wind_1
+execute if entity @e[tag=join_stage,tag=selected,tag=cannons_2] run function medabots_server:stage/create/park_battle/cannons_2
+execute if entity @e[tag=join_stage,tag=selected,tag=balloon_bombs] run function medabots_server:stage/create/park_battle/balloon_bombs
+execute if entity @e[tag=join_stage,tag=selected,tag=action_floors] run function medabots_server:stage/create/park_battle/action_floors
+execute if entity @e[tag=join_stage,tag=selected,tag=wind_2] run function medabots_server:stage/create/park_battle/wind_2
 kill @e[sort=random,tag=join_stage]

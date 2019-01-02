@@ -67,12 +67,12 @@ execute if block -1550 45 -206 minecraft:air run setblock -1550 46 -206 minecraf
 execute if block -1551 45 -207 minecraft:air run setblock -1551 46 -207 minecraft:air
 execute if block -1551 45 -205 minecraft:air run setblock -1551 46 -205 minecraft:air
 execute if block -1556 45 -193 minecraft:air run setblock -1556 46 -193 minecraft:air
-execute if block -1512 45 -230 minecraft:air if block -1512 46 -230 minecraft:barrier run summon minecraft:creeper -1512 45 -230 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}}],ArmorDropChances:[0.0f,0.0f,0.0f,1.0f],Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1512 45 -230 minecraft:air if block -1512 46 -230 minecraft:barrier run summon minecraft:creeper -1512 45 -230 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard/2_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1512 45 -230 minecraft:air run setblock -1512 46 -230 minecraft:air
 execute if block -1511 45 -227 minecraft:air run setblock -1511 46 -227 minecraft:air
 execute if block -1513 45 -225 minecraft:air run setblock -1513 46 -225 minecraft:air
 execute if block -1509 45 -225 minecraft:air run setblock -1509 46 -225 minecraft:air
-execute if block -1514 45 -223 minecraft:air if block -1514 46 -223 minecraft:barrier run summon minecraft:creeper -1514 45 -223 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:lapis_lazuli",Count:4b,tag:{medabots_server:{id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}}],ArmorDropChances:[0.0f,0.0f,0.0f,1.0f],Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1514 45 -223 minecraft:air if block -1514 46 -223 minecraft:barrier run summon minecraft:creeper -1514 45 -223 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1514 45 -223 minecraft:air run setblock -1514 46 -223 minecraft:air
 execute if block -1510 45 -223 minecraft:air run setblock -1510 46 -223 minecraft:air
 execute if block -1538 45 -240 minecraft:air run setblock -1538 46 -240 minecraft:air
@@ -83,14 +83,20 @@ execute if block -1564 45 -231 minecraft:air run setblock -1564 46 -231 minecraf
 execute if block -1540 46 -222 minecraft:iron_door[open=true] if entity @s[x=-1541,y=45,z=-225,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_a/first_go_battle/0
 execute if block -1540 46 -222 minecraft:iron_door[open=true] positioned -1538 45 -230 run function medabots_server:stage/wait_for_robattle_preventation
 execute if block -1540 45 -222 minecraft:structure_block run setblock -1540 46 -222 minecraft:redstone_block
-execute if entity @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand] store result score @s BattlingMedabots if entity @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,scores={Stage=11,Medabot=0..}]
+execute if entity @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,scores={Stage=11,Medabot=0..,Battle=1..}]
 execute as @e[x=-1570,y=42,z=-247,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1..}] run scoreboard players set @s Stage 11
 execute unless entity @s[x=-1570,y=42,z=-247,dx=63,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/seashore_a/first_go
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/seashore_a/first_go
 stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1539 51 -217 14
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1539 51 -216 14
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
 advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:wave_1/torutoru_land_master seashore_a_first_go
-teleport @s[scores={BattlingMedabots=1}] -1539 51 -217 -180 0
+teleport @s[scores={BattlingMedabots=1}] -1539 51 -216 -180 0
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:seashore_a/time players
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:seashore_a/time value
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossbar medabots_server:seashore_a/time value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if score #temp Time matches 0 as @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
+scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

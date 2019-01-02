@@ -21,12 +21,15 @@ fill -1995 45 -605 -1995 46 -605 minecraft:air
 fill -2007 45 -617 -2007 46 -617 minecraft:air
 fill -1990 45 -600 -1990 46 -600 minecraft:air
 fill -2022 45 -632 -1975 45 -585 minecraft:air replace minecraft:comparator
-tag @e[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48,type=!minecraft:player] add dead
+tag @e[scores={Stage=99},type=!minecraft:player] add dead
 stopsound @s music
+scoreboard players reset @a[scores={Stage=99}] Stage
 scoreboard players set @s Battle 0
-scoreboard players set @s MusicType 1
-scoreboard players set @s Music 299
-playsound medabots_server:music.stage.stage_end music @s -1948 51 -617 3
-scoreboard players add @s[tag=story_battle] Story 1
+scoreboard players set @s[tag=!story_battle] MusicType 1
+scoreboard players set @s[tag=!story_battle] Music 299
+playsound medabots_server:music.stage.stage_end music @s[tag=!story_battle] -1948 51 -617 3
+scoreboard players set @s[tag=story_battle] MusicType 0
+scoreboard players set @s[tag=story_battle] Dialog 0
+tag @s[tag=story_battle,advancements={medabots_server:wave_1/story_progression={vs_spyke=true,vs_spyke_battle=false}}] add dialog_infinity_vs_spyke_battle
 tag @s remove story_battle
 teleport @s -1999 51 -608 -180 0

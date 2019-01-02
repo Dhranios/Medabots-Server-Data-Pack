@@ -71,12 +71,14 @@ setblock -1701 47 -240 minecraft:air
 fill -1764 44 -247 -1573 44 -184 minecraft:air replace minecraft:chest
 fill -1764 44 -247 -1672 44 -184 minecraft:air replace minecraft:comparator
 fill -1764 43 -247 -1672 43 -184 minecraft:water replace minecraft:oak_planks
+bossbar set medabots_server:iceberg_a/time players
 tag @a[scores={Stage=17},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=17}] Music 0
 scoreboard players set @a[scores={Stage=17}] MusicType 1
 scoreboard players set @a[scores={Stage=17}] Battle 0
 teleport @a[scores={Stage=17}] -1704 50 -221 -180 0
 tag @e[scores={Stage=17},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=17}] Stage
 data merge block -1705 51 -244 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/iceberg_a/play\"}}"}
 setblock -1705 52 -245 minecraft:redstone_block
 scoreboard players set @s MusicType 1

@@ -32,12 +32,13 @@ fill -1973 44 -589 -1924 44 -540 minecraft:water replace minecraft:oak_planks
 fill -1973 45 -589 -1924 45 -540 minecraft:air replace minecraft:stone_slab
 fill -1973 45 -589 -1924 45 -540 minecraft:air replace minecraft:comparator
 fill -1973 45 -589 -1924 45 -540 minecraft:grass_block replace minecraft:dirt
-tag @e[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50,type=!minecraft:player] add dead
+tag @e[scores={Stage=101},type=!minecraft:player] add dead
 stopsound @s music
+scoreboard players reset @a[scores={Stage=101}] Stage
 scoreboard players set @s Battle 0
-scoreboard players set @s MusicType 1
-scoreboard players set @s Music 299
-playsound medabots_server:music.stage.stage_end music @s -1949 51 -564 3
-scoreboard players add @s[tag=story_battle] Story 1
+scoreboard players set @s[tag=!story_battle] MusicType 1
+scoreboard players set @s[tag=!story_battle] Music 299
+playsound medabots_server:music.stage.stage_end music @s[tag=!story_battle] -1949 51 -564 3
+scoreboard players set @s[tag=story_battle] Dialog 0
 tag @s remove story_battle
 teleport @s -1949 51 -564 -180 0

@@ -12,8 +12,8 @@ scoreboard players set @s[scores={Battle=2}] Damage 0
 scoreboard players set @s[scores={Battle=2}] UsePart 0
 
 # Prevent normal damage
-effect give @s[tag=!undead] minecraft:instant_health 10 0 true
-effect give @s[tag=undead] minecraft:instant_damage 10 0 true
+effect give @s[tag=!undead,scores={Damage=1..}] minecraft:instant_health 1 0 true
+effect give @s[tag=undead,scores={Damage=1..}] minecraft:instant_damage 1 0 true
 data merge entity @s[type=!minecraft:player] {AbsorptionAmount:100.0f}
 
 # Make Leg parts do something
@@ -29,7 +29,7 @@ execute if entity @s[tag=hostile] run function medabots_server:medaparts/wheel
 execute if entity @s[tag=hostile] run function medabots_server:medaparts/footstool
 
 # Grab ledges and pull yourself up
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/ledge_grab
+execute if entity @s[tag=hostile] run function medabots_server:medaparts/edge_grab
 
 # Charge up the medaforce
 execute if entity @s[tag=hostile,scores={MedaforceTimer=3}] run function medabots_server:medaparts/charge_medaforce

@@ -8,7 +8,6 @@ setblock -1629 46 -129 minecraft:air
 setblock -1628 46 -129 minecraft:air
 setblock -1628 46 -122 minecraft:air
 setblock -1627 46 -122 minecraft:air
-setblock -1622 46 -124 minecraft:air
 setblock -1628 46 -121 minecraft:air
 setblock -1627 46 -121 minecraft:air
 setblock -1605 46 -127 minecraft:air
@@ -72,17 +71,21 @@ fill -1604 45 -163 -1604 48 -163 minecraft:air
 fill -1603 45 -173 -1603 48 -173 minecraft:air
 fill -1601 45 -166 -1601 48 -166 minecraft:air
 fill -1599 45 -174 -1599 48 -174 minecraft:air
+fill -1586 45 -164 -1585 48 -164 minecraft:air
+fill -1617 45 -167 -1616 48 -166 minecraft:air
 setblock -1626 44 -127 minecraft:grass_block
 setblock -1626 48 -127 minecraft:air
 fill -1636 44 -180 -1573 44 -117 minecraft:water replace minecraft:oak_planks
 fill -1636 44 -180 -1573 44 -117 minecraft:grass_block replace minecraft:dirt
 fill -1636 45 -180 -1573 45 -117 minecraft:air replace minecraft:chest
+bossbar set medabots_server:rock_a/time players
 tag @a[scores={Stage=5},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=5}] Music 0
 scoreboard players set @a[scores={Stage=5}] MusicType 1
 scoreboard players set @a[scores={Stage=5}] Battle 0
-teleport @a[scores={Stage=5}] -1604 51 -151 -180 0
+teleport @a[scores={Stage=5}] -1603 51 -149 -180 0
 tag @e[scores={Stage=5},type=!minecraft:player] add dead
-data merge block -1604 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/rock_a/play\"}}"}
-setblock -1604 53 -182 minecraft:redstone_block
+scoreboard players reset @a[scores={Stage=5}] Stage
+data merge block -1605 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/rock_a/play\"}}"}
+setblock -1605 53 -182 minecraft:redstone_block
 scoreboard players set @s MusicType 1

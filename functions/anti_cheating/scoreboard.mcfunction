@@ -5,7 +5,6 @@
 
 #Re-add any objectives that may have been removed
 scoreboard objectives add AFKTime dummy
-scoreboard objectives add Action trigger
 scoreboard objectives add ActionFloorNr dummy
 scoreboard objectives add AntiFly dummy
 scoreboard objectives add AntiTank dummy
@@ -35,6 +34,7 @@ scoreboard objectives add DetectTime dummy
 scoreboard objectives add Dialog dummy
 scoreboard objectives add Donor dummy
 scoreboard objectives add Drop minecraft.custom:minecraft.drop
+scoreboard objectives add EdgeGrabAble dummy
 scoreboard objectives add EffectTimer dummy
 scoreboard objectives add Error dummy
 scoreboard objectives add Fall minecraft.custom:minecraft.fall_one_cm
@@ -43,6 +43,7 @@ scoreboard objectives add Float dummy
 scoreboard objectives add FloorSwitchTime dummy
 scoreboard objectives add Fly dummy
 scoreboard objectives add FlyCourse dummy
+scoreboard objectives add FlyCourseLaps dummy
 scoreboard objectives add FlyCourseSpeed trigger
 scoreboard objectives add FlyCourseTime dummy
 scoreboard objectives add FlyHackTime dummy
@@ -64,6 +65,7 @@ scoreboard objectives add HeadUses dummy
 scoreboard objectives add HeadUsesDanger dummy
 scoreboard objectives add HeadUsesPer dummy
 scoreboard objectives add Heal dummy
+scoreboard objectives add Health dummy
 scoreboard objectives add Hearts health
 scoreboard objectives add Hide dummy
 scoreboard objectives add HideTime dummy
@@ -84,7 +86,6 @@ scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer playerKillCount
 scoreboard objectives add LagdouKill dummy
 scoreboard objectives add Laser dummy
-scoreboard objectives add LedgeGrabAble dummy
 scoreboard objectives add LeftArmArmor dummy
 scoreboard objectives add LeftArmDanger dummy
 scoreboard objectives add LeftArmPer dummy
@@ -104,6 +105,7 @@ scoreboard objectives add MaxLegsArmor dummy
 scoreboard objectives add MaxRightArmArmor dummy
 scoreboard objectives add Medabot dummy
 scoreboard objectives add MedabotMet dummy
+scoreboard objectives add MedabotNr dummy
 scoreboard objectives add Medaforce dummy
 scoreboard objectives add MedaforceControl dummy
 scoreboard objectives add MedaforceTimer dummy
@@ -163,6 +165,7 @@ scoreboard objectives add SelfDestructTime dummy
 scoreboard objectives add ServerStats dummy {"translate":"medabots_server:scoreboard.objective.server_stats"}
 scoreboard objectives add SettingsCheck trigger
 scoreboard objectives add ShootingTrap dummy
+scoreboard objectives add Sneak minecraft.custom:minecraft.crouch_one_cm
 scoreboard objectives add Sneaking minecraft.custom:minecraft.sneak_time
 scoreboard objectives add Sound dummy
 scoreboard objectives add Stage dummy
@@ -178,6 +181,7 @@ scoreboard objectives add TaskCheck trigger
 scoreboard objectives add Time dummy
 scoreboard objectives add UpToDate dummy
 scoreboard objectives add UsePart minecraft.used:minecraft.fishing_rod
+scoreboard objectives add Verified trigger
 scoreboard objectives add Walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add WalkOnWater minecraft.custom:minecraft.walk_on_water_one_cm
 scoreboard objectives add WalkUnderWater minecraft.custom:minecraft.walk_under_water_one_cm
@@ -192,7 +196,10 @@ scoreboard objectives setdisplay belowName Level
 # Set Server stats
 scoreboard players set #0 Constants 0
 scoreboard players set #1 Constants 1
+scoreboard players set #10 Constants 10
 scoreboard players set #20 Constants 20
+scoreboard players set #40 Constants 40
+scoreboard players set #70 Constants 70
 scoreboard players set #100 Constants 100
 scoreboard players set #1000 Constants 1000
 scoreboard players set #1005 Constants 1005
@@ -218,7 +225,7 @@ team add Rubberobo
 team add StageBoss {"translate":"medabots_server:scoreboard.team.boss"}
 team add StageEnemy {"translate":"medabots_server:scoreboard.team.enemy"}
 
-# Set Team data
+# Set team data
 team modify AFK collisionRule never
 team modify AFK color black
 team modify AFK friendlyFire false
@@ -253,3 +260,183 @@ team modify StageEnemy friendlyFire false
 team modify StageEnemy nametagVisibility never
 team modify StageEnemy seeFriendlyInvisibles false
 team modify StageEnemy prefix {"translate":"medabots_server:entity.team.enemy","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.enemy"}}}
+
+# Re-add any bossbars that may have been removed
+bossbar add medabots_server:grassland_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:park_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:park_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:paradise_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:paradise_b/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_c/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_c/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_c/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_c/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_c/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_c/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:boxer/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_d/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_d/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_d/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_d/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_d/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_d/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_f/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+
+# Set bossbar data
+bossbar set medabots_server:grassland_a/time style notched_6
+bossbar set medabots_server:rock_a/time style notched_6
+bossbar set medabots_server:jungle_a/time style notched_6
+bossbar set medabots_server:seashore_a/time style notched_6
+bossbar set medabots_server:snowfield_a/time style notched_6
+bossbar set medabots_server:iceberg_a/time style notched_6
+bossbar set medabots_server:ruins_out_a/time style notched_6
+bossbar set medabots_server:ruins_in_a/time style notched_6
+bossbar set medabots_server:laboratory_a/time style notched_6
+bossbar set medabots_server:grassland_b/time style notched_6
+bossbar set medabots_server:rock_b/time style notched_6
+bossbar set medabots_server:jungle_b/time style notched_6
+bossbar set medabots_server:seashore_b/time style notched_6
+bossbar set medabots_server:snowfield_b/time style notched_6
+bossbar set medabots_server:iceberg_b/time style notched_6
+bossbar set medabots_server:ruins_out_b/time style notched_6
+bossbar set medabots_server:ruins_in_b/time style notched_6
+bossbar set medabots_server:laboratory_b/time style notched_6
+bossbar set medabots_server:park_a/time style notched_6
+bossbar set medabots_server:park_b/time style notched_6
+bossbar set medabots_server:paradise_a/time style notched_6
+bossbar set medabots_server:paradise_b/time style notched_6
+bossbar set medabots_server:grassland_c/time style notched_6
+bossbar set medabots_server:jungle_c/time style notched_6
+bossbar set medabots_server:seashore_c/time style notched_6
+bossbar set medabots_server:iceberg_c/time style notched_6
+bossbar set medabots_server:ruins_out_c/time style notched_6
+bossbar set medabots_server:laboratory_c/time style notched_6
+bossbar set medabots_server:boxer/time style notched_6
+bossbar set medabots_server:grassland_d/time style notched_6
+bossbar set medabots_server:jungle_d/time style notched_6
+bossbar set medabots_server:snowfield_d/time style notched_6
+bossbar set medabots_server:iceberg_d/time style notched_6
+bossbar set medabots_server:ruins_in_d/time style notched_6
+bossbar set medabots_server:laboratory_d/time style notched_6
+bossbar set medabots_server:grassland_e/time style notched_6
+bossbar set medabots_server:rock_e/time style notched_6
+bossbar set medabots_server:jungle_e/time style notched_6
+bossbar set medabots_server:seashore_e/time style notched_6
+bossbar set medabots_server:snowfield_e/time style notched_6
+bossbar set medabots_server:iceberg_e/time style notched_6
+bossbar set medabots_server:ruins_out_e/time style notched_6
+bossbar set medabots_server:ruins_in_e/time style notched_6
+bossbar set medabots_server:rock_f/time style notched_6
+bossbar set medabots_server:grassland_a/time max 3600
+bossbar set medabots_server:rock_a/time max 3600
+bossbar set medabots_server:jungle_a/time max 3600
+bossbar set medabots_server:seashore_a/time max 3600
+bossbar set medabots_server:snowfield_a/time max 3600
+bossbar set medabots_server:iceberg_a/time max 3600
+bossbar set medabots_server:ruins_out_a/time max 3600
+bossbar set medabots_server:ruins_in_a/time max 3600
+bossbar set medabots_server:laboratory_a/time max 3600
+bossbar set medabots_server:grassland_b/time max 3600
+bossbar set medabots_server:rock_b/time max 3600
+bossbar set medabots_server:jungle_b/time max 3600
+bossbar set medabots_server:seashore_b/time max 3600
+bossbar set medabots_server:snowfield_b/time max 3600
+bossbar set medabots_server:iceberg_b/time max 3600
+bossbar set medabots_server:ruins_out_b/time max 3600
+bossbar set medabots_server:ruins_in_b/time max 3600
+bossbar set medabots_server:laboratory_b/time max 3600
+bossbar set medabots_server:park_a/time max 3600
+bossbar set medabots_server:park_b/time max 3600
+bossbar set medabots_server:paradise_a/time max 3600
+bossbar set medabots_server:paradise_b/time max 3600
+bossbar set medabots_server:grassland_c/time max 3600
+bossbar set medabots_server:jungle_c/time max 3600
+bossbar set medabots_server:seashore_c/time max 3600
+bossbar set medabots_server:iceberg_c/time max 3600
+bossbar set medabots_server:ruins_out_c/time max 3600
+bossbar set medabots_server:laboratory_c/time max 3600
+bossbar set medabots_server:boxer/time max 3600
+bossbar set medabots_server:grassland_d/time max 3600
+bossbar set medabots_server:jungle_d/time max 3600
+bossbar set medabots_server:snowfield_d/time max 3600
+bossbar set medabots_server:iceberg_d/time max 3600
+bossbar set medabots_server:ruins_in_d/time max 3600
+bossbar set medabots_server:laboratory_d/time max 3600
+bossbar set medabots_server:grassland_e/time max 3600
+bossbar set medabots_server:rock_e/time max 3600
+bossbar set medabots_server:jungle_e/time max 3600
+bossbar set medabots_server:seashore_e/time max 3600
+bossbar set medabots_server:snowfield_e/time max 3600
+bossbar set medabots_server:iceberg_e/time max 3600
+bossbar set medabots_server:ruins_out_e/time max 3600
+bossbar set medabots_server:ruins_in_e/time max 3600
+bossbar set medabots_server:rock_f/time max 3600
+bossbar set medabots_server:grassland_a/time color green
+bossbar set medabots_server:rock_a/time color green
+bossbar set medabots_server:jungle_a/time color green
+bossbar set medabots_server:seashore_a/time color green
+bossbar set medabots_server:snowfield_a/time color green
+bossbar set medabots_server:iceberg_a/time color green
+bossbar set medabots_server:ruins_out_a/time color green
+bossbar set medabots_server:ruins_in_a/time color green
+bossbar set medabots_server:laboratory_a/time color green
+bossbar set medabots_server:grassland_b/time color green
+bossbar set medabots_server:rock_b/time color green
+bossbar set medabots_server:jungle_b/time color green
+bossbar set medabots_server:seashore_b/time color green
+bossbar set medabots_server:snowfield_b/time color green
+bossbar set medabots_server:iceberg_b/time color green
+bossbar set medabots_server:ruins_out_b/time color green
+bossbar set medabots_server:ruins_in_b/time color green
+bossbar set medabots_server:laboratory_b/time color green
+bossbar set medabots_server:park_a/time color green
+bossbar set medabots_server:park_b/time color green
+bossbar set medabots_server:paradise_a/time color green
+bossbar set medabots_server:paradise_b/time color green
+bossbar set medabots_server:grassland_c/time color green
+bossbar set medabots_server:jungle_c/time color green
+bossbar set medabots_server:seashore_c/time color green
+bossbar set medabots_server:iceberg_c/time color green
+bossbar set medabots_server:ruins_out_c/time color green
+bossbar set medabots_server:laboratory_c/time color green
+bossbar set medabots_server:boxer/time color green
+bossbar set medabots_server:grassland_d/time color green
+bossbar set medabots_server:jungle_d/time color green
+bossbar set medabots_server:snowfield_d/time color green
+bossbar set medabots_server:iceberg_d/time color green
+bossbar set medabots_server:ruins_in_d/time color green
+bossbar set medabots_server:laboratory_d/time color green
+bossbar set medabots_server:grassland_e/time color green
+bossbar set medabots_server:rock_e/time color green
+bossbar set medabots_server:jungle_e/time color green
+bossbar set medabots_server:seashore_e/time color green
+bossbar set medabots_server:snowfield_e/time color green
+bossbar set medabots_server:iceberg_e/time color green
+bossbar set medabots_server:ruins_out_e/time color green
+bossbar set medabots_server:ruins_in_e/time color green
+bossbar set medabots_server:rock_f/time color green

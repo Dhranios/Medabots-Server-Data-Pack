@@ -1,0 +1,1 @@
+tellraw @s {"translate":"medabots_server:message.stage.requires","extra":[{"text":" "},{"translate":"medabots_server:message.stage.requires.rank","with":[{"translate":"medabots_server:scoreboard.team.moderator"}]}]}

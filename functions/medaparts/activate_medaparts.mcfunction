@@ -1,12 +1,12 @@
 # Activate charged medaforce
 scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_kuwagata_medaforce"}}}]}] Medaforce -2
-scoreboard players set @s[scores={Medaforce=3},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_kabuto_medaforce"}}}]}] Medaforce -3
-scoreboard players set @s[scores={Medaforce=4},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_mermaid_medaforce"}}}]}] Medaforce -4
-scoreboard players set @s[scores={Medaforce=5},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_ghost_medaforce"}}}]}] Medaforce -5
-scoreboard players set @s[scores={Medaforce=6},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_monkey_medaforce"}}}]}] Medaforce -6
-scoreboard players set @s[scores={Medaforce=7},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_spidar_medaforce"}}}]}] Medaforce -7
-tag @s[scores={Medaforce=8},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_alien_medaforce"}}}]},tag=!alien] add alien
-scoreboard players set @s[scores={Medaforce=9},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,medabots_server:{activated:1b,id:"medabots_server:activate_question_medaforce"}}]}] Medaforce -9
+scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_kabuto_medaforce"}}}]}] Medaforce -3
+scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_mermaid_medaforce"}}}]}] Medaforce -4
+scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_ghost_medaforce"}}}]}] Medaforce -5
+scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_monkey_medaforce"}}}]}] Medaforce -6
+scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_spidar_medaforce"}}}]}] Medaforce -7
+scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,medabots_server:{activated:1b,id:"medabots_server:activate_question_medaforce"}}]}] Medaforce -8
+tag @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_alien_medaforce"}}}]},tag=!alien] add alien
 
 # Randomize alien medaforce
 execute if entity @s[tag=alien,scores={Time=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Medaforce\"}",Tags:["random_medaforce","2"],Duration:1}
@@ -15,7 +15,7 @@ execute if entity @s[tag=alien,scores={Time=1}] run summon minecraft:area_effect
 execute if entity @s[tag=alien,scores={Time=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Medaforce\"}",Tags:["random_medaforce","5"],Duration:1}
 execute if entity @s[tag=alien,scores={Time=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Medaforce\"}",Tags:["random_medaforce","6"],Duration:1}
 execute if entity @s[tag=alien,scores={Time=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Medaforce\"}",Tags:["random_medaforce","7"],Duration:1}
-execute if entity @s[tag=alien,scores={Time=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Medaforce\"}",Tags:["random_medaforce","9"],Duration:1}
+execute if entity @s[tag=alien,scores={Time=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Medaforce\"}",Tags:["random_medaforce","8"],Duration:1}
 execute if entity @s[tag=alien,scores={Time=1}] run scoreboard players set @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_medaforce] Medaforce 1
 execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=2] run scoreboard players set @s Medaforce -2
 execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=3] run scoreboard players set @s Medaforce -3
@@ -23,7 +23,7 @@ execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=4] run s
 execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=5] run scoreboard players set @s Medaforce -5
 execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=6] run scoreboard players set @s Medaforce -6
 execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=7] run scoreboard players set @s Medaforce -7
-execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=9] run scoreboard players set @s Medaforce -9
+execute at @e[type=minecraft:area_effect_cloud,scores={Medaforce=1},tag=8] run scoreboard players set @s Medaforce -8
 execute if entity @s[tag=alien,scores={Time=1}] run kill @e[type=minecraft:area_effect_cloud,tag=random_medaforce]
 
 # Static flying

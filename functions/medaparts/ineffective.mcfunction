@@ -8,8 +8,10 @@ scoreboard players set @s[scores={Time=3,Ineffective=3}] Time 27
 # Show particles
 execute if entity @s[scores={Time=32}] run particle minecraft:angry_villager ~ ~1 ~ 1 0 1 1 30
 
-# Disable a random part for the hit enemies
-execute if entity @s[scores={Time=32}] positioned ^ ^ ^2 as @e[distance=..2] unless entity @s[scores={Time=32,Ineffective=1..3}] run scoreboard players set @s[tag=hostile] IneffectiveTime 600
+# Give the effect
+execute if entity @s[scores={Time=32},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile] unless entity @s[scores={Time=32,Ineffective=1..3}] run scoreboard players set @s IneffectiveTime 600
+execute if entity @s[scores={Time=32},tag=ally_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=32,Ineffective=1..3}] run scoreboard players set @s IneffectiveTime 600
+execute if entity @s[scores={Time=32},tag=enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=32,Ineffective=1..3}] run scoreboard players set @s IneffectiveTime 600
 
 # Remove from head uses if this was the head part
 scoreboard players remove @s[scores={Ineffective=2,Time=32}] HeadUses 1

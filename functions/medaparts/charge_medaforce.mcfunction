@@ -8,7 +8,7 @@ scoreboard players set @s[tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Invento
 scoreboard players add @s[scores={Medaforce=1}] Charge 1
 
 # Fully charged
-execute if entity @s[scores={Charge=50}] run function medabots_server:medaparts/charged_medaforce
+execute if entity @s[scores={Charge=50,Medaforce=0..1}] run function medabots_server:medaparts/charged_medaforce
 
 # Remove 1 medal for while charge each time
 clear @s[scores={Medaforce=1}] minecraft:nether_star{medabots_server:{activated:1b,move:"medaforce_charge"}} 1

@@ -1,27 +1,27 @@
 # Refresh error
-scoreboard players set @s Error 0
+scoreboard players set @s[scores={Time=1}] Error 0
 
 # Set lack of tinpet
-execute unless entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{part:"tinpet"}}}]}] run scoreboard players set @s[scores={Error=0}] Error 1
+execute unless entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{part:"tinpet"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 1
 
 # Set lack of medal
-execute unless entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{part:"medal"}}}]}] run scoreboard players set @s[scores={Error=0}] Error 2
+execute unless entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{part:"medal"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 2
 
 # Set lack of a medapart
-execute unless entity @s[nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] run scoreboard players set @s[scores={Error=0}] Error 3
-execute unless entity @s[nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"right_arm"}}}]}] run scoreboard players set @s[scores={Error=0}] Error 4
-execute unless entity @s[nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"left_arm"}}}]}] run scoreboard players set @s[scores={Error=0}] Error 5
-execute unless entity @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{part:"legs"}}}]}] run scoreboard players set @s[scores={Error=0}] Error 6
+execute unless entity @s[nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 3
+execute unless entity @s[nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"right_arm"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 4
+execute unless entity @s[nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"left_arm"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 5
+execute unless entity @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{part:"legs"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 6
 
 # Set wrong tinpet-part gender combination
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{gender:0b,part:"legs"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{gender:0b,part:"left_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{gender:0b,part:"right_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{gender:0b,part:"head"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{gender:1b,part:"legs"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{gender:1b,part:"left_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{gender:1b,part:"right_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
-scoreboard players set @s[scores={Error=0},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{gender:1b,part:"head"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{gender:0b,part:"legs"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{gender:0b,part:"left_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{gender:0b,part:"right_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{gender:0b,part:"head"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{gender:1b,part:"legs"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{gender:1b,part:"left_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{gender:1b,part:"right_arm"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
+scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{gender:1b,part:"head"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] Error 7
 
 # Show this specific error only once
 tag @s add message_seen

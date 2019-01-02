@@ -10,3 +10,5 @@ execute if entity @e[x=-1889,y=44,z=-574,distance=..10,tag=enemy_medabot] run sc
 execute if entity @e[x=-1889,y=44,z=-574,distance=..10,tag=enemy_medabot] run summon minecraft:armor_stand -1892 44 -572 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[-90.0f,0.0f]}
 execute if entity @e[x=-1889,y=44,z=-574,distance=..10,tag=enemy_medabot] run teleport @e[x=-1890,y=44,z=-569,distance=..10,tag=enemy_medabot] -1889 44 -574
 execute if entity @e[x=-1889,y=44,z=-574,distance=..10,tag=enemy_medabot] run teleport @s -1890 44 -569
+bossbar set medabots_server:boxer/time value 3600
+bossbar set medabots_server:boxer/time players @a[scores={Stage=79}]

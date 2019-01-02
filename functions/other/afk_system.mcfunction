@@ -139,55 +139,38 @@ team leave @s[team=EnemyPlayer,scores={Battle=0}]
 
 # Not AFK anymore
 execute if entity @s[scores={AFKTime=1200..,UsePart=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={UsePart=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={UsePart=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Attack=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Attack=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Attack=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Drop=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Drop=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Drop=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Medaforce=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Medaforce=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Medaforce=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Jump=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Jump=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Jump=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Fall=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Fall=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Fall=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Run=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Run=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Run=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Swimming=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Swimming=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Swimming=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Flying=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Flying=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Flying=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Pig=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Pig=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Pig=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Horse=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Horse=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Horse=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Boat=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Boat=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Boat=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Minecart=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Minecart=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Minecart=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,WalkOnWater=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={WalkOnWater=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={WalkOnWater=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,WalkUnderWater=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={WalkUnderWater=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={WalkUnderWater=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Walk=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Walk=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Walk=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Sneaking=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Sneaking=1..,AFKTime=1200..},tag=!hostile] Offline 2
 scoreboard players set @s[scores={Sneaking=1..,AFKTime=1..}] AFKTime 0
 
 # Now AFK
@@ -206,8 +189,8 @@ tellraw @s[scores={AFKTime=2400}] {"translate":"chat.type.text","with":[{"transl
 execute if entity @s[scores={Damage=1..}] run playsound medabots_server:entity.medabot.damage player @s ~ ~ ~ .5
 execute if entity @s[scores={Run=0,Jump=1..}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ .05
 execute if entity @s[scores={Run=1..,Jump=1..}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ .1
-execute if entity @s[scores={Run=5..},tag=action_mode] if block ~ ~ ~ minecraft:stone_brick_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
-execute if entity @s[scores={Walk=5..},tag=action_mode] if block ~ ~ ~ minecraft:stone_brick_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Run=5..},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Walk=5..},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
 execute if entity @s[scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ .1
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ .025
 execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run playsound medabots_server:entity.medabot.move.mod player @s ~ ~ ~ .1
@@ -241,6 +224,7 @@ scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0
 scoreboard players set @s[scores={Pig=1..}] Pig 0
 scoreboard players set @s[scores={Fall=1..}] Fall 0
 scoreboard players set @s[scores={Sneaking=1..}] Sneaking 0
+scoreboard players set @s[scores={Sneak=1..}] Sneak 0
 
 # Give back headgear after going AFK
 replaceitem entity @s[tag=sunglasses,scores={AFKTime=0}] armor.head minecraft:chainmail_helmet{Unbreakable:1b,HideFlags:4,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sunglasses\"}"},AttributeModifiers:[],medabots_server:{id:"medabots_server:sunglasses"}}
@@ -251,7 +235,7 @@ tag @s[tag=!sunglasses,scores={AFKTime=1199},nbt={Inventory:[{Slot:103b,tag:{med
 tag @s[tag=!master_crown,scores={AFKTime=1199},nbt={Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:master_crown"}}}]}] add master_crown
 
 # Count up
-scoreboard players add @s[scores={Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0}] AFKTime 1
+execute unless entity @s[scores={Dialog=0..}] run scoreboard players add @s[scores={Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0}] AFKTime 1
 
 # Make sure non-AFKers get knockback again
 execute unless entity @s[scores={Wave=1..}] run clear @s[team=!AFK] minecraft:stone_button{medabots_server:{id:"medabots_server:remove_knockback"}}

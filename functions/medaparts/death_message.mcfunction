@@ -162,7 +162,7 @@ tag @s[tag=death_message] add had_death
 tag @s[tag=death_message] remove death_message
 
 # Remove 5 medallars
-scoreboard players remove @s[tag=!retry] do_not_teleport 5
+scoreboard players remove @s[tag=!retry] Money 5
 
 # no message? try again
 execute if entity @s[tag=!had_death,tag=!retry] run function medabots_server:medaparts/death_message_retry

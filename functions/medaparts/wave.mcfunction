@@ -8,6 +8,10 @@ scoreboard players set @s[scores={Time=3,Wave=3}] Time 27
 # Prevent self-damaging
 effect give @s[scores={Time=32}] minecraft:resistance 1 5 true
 
+# Prevent harming allies
+execute if entity @s[scores={Time=32},tag=ally_medabot] run effect give @a[distance=..10,tag=ally_medabot] minecraft:resistance 1 5 true
+execute if entity @s[scores={Time=32},tag=enemy_medabot] run effect give @e[distance=..10,tag=enemy_medabot] minecraft:resistance 1 5 true
+
 # Spawn an explosion depending on the charge value
 execute if entity @s[scores={Charge=0..5,Wave=1,Time=34}] run summon minecraft:creeper ^ ^ ^2 {CustomName:"{\"translate\":\"medabots_server:move.wave\"}",Fuse:0s,ExplosionRadius:1b,Tags:["wave"]}
 execute if entity @s[scores={Charge=6..10,Wave=1,Time=34}] run summon minecraft:creeper ^ ^ ^2 {CustomName:"{\"translate\":\"medabots_server:move.wave\"}",Fuse:0s,ExplosionRadius:2b,Tags:["wave"]}

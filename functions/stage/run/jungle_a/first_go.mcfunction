@@ -52,28 +52,38 @@ execute if block -1701 45 -140 minecraft:air run setblock -1701 46 -140 minecraf
 execute if block -1649 45 -176 minecraft:air run setblock -1649 46 -176 minecraft:air
 execute if block -1662 46 -124 minecraft:iron_door[open=true] if block -1661 46 -134 minecraft:iron_door[open=false] if entity @s[x=-1662,y=45,z=-125,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_a/first_go_battle/0
 execute if block -1662 46 -124 minecraft:iron_door[open=true] positioned -1652 45 -129 run function medabots_server:stage/wait_for_robattle_preventation
-execute if entity @e[x=-1651.5,y=45,z=-126.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud] store result score @s BattlingMedabots if entity @e[x=-1662,y=42,z=-135,dx=17,dy=8,dz=17,scores={Stage=8,Medabot=0..}]
+execute if entity @e[x=-1651.5,y=45,z=-126.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud] store result score @s BattlingMedabots if entity @e[x=-1662,y=42,z=-135,dx=17,dy=8,dz=17,scores={Stage=8,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1651.5,y=45,z=-126.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud] run title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if block -1662 46 -124 minecraft:iron_door[open=false] as @s[scores={BattlingMedabots=1}] run setblock -1662 45 -124 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1662 45 -124 minecraft:structure_block as @s[scores={BattlingMedabots=1}] run setblock -1662 45 -124 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1662 45 -124 minecraft:structure_block run setblock -1662 46 -124 minecraft:redstone_block
 execute if block -1661 46 -134 minecraft:iron_door[open=false] as @s[scores={BattlingMedabots=1}] run setblock -1661 45 -134 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1661 45 -134 minecraft:structure_block run setblock -1661 46 -134 minecraft:redstone_block
-execute as @s[scores={BattlingMedabots=1}] run kill @e[x=-1706,y=42,z=-179,dx=63,dy=7,dz=63,type=minecraft:area_effect_cloud,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1706,y=42,z=-179,dx=63,dy=7,dz=63,type=minecraft:area_effect_cloud,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:jungle_a/time players
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:jungle_a/time value
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossbar medabots_server:jungle_a/time value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if score #temp Time matches 0 as @e[x=-1706,y=42,z=-179,dx=63,dy=7,dz=63,type=minecraft:area_effect_cloud,tag=mission] at @s run function medabots_server:stage/mission_time_up
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1687 46 -173 minecraft:iron_door[open=true] if entity @s[x=-1690,y=45,z=-175,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_a/first_go_battle/1
 execute if block -1687 46 -173 minecraft:iron_door[open=true] positioned -1697 45 -167 run function medabots_server:stage/wait_for_robattle_preventation
 execute if block -1687 45 -173 minecraft:structure_block run setblock -1688 45 -173 minecraft:redstone_block
 execute if block -1688 45 -173 minecraft:redstone_block run setblock -1688 45 -173 minecraft:air
-execute if entity @e[x=-1706,y=42,z=-179,dx=63,dy=8,dz=63,tag=mr_referee,type=minecraft:armor_stand] store result score @s BattlingMedabots if entity @e[x=-1702,y=42,z=-178,dx=17,dy=8,dz=15,scores={Stage=8,Medabot=0..}]
+execute if entity @e[x=-1706,y=42,z=-179,dx=63,dy=8,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1705,y=42,z=-179,dx=63,dy=8,dz=63,scores={Stage=8,Medabot=0..,Battle=1..}]
 execute as @e[x=-1705,y=42,z=-179,dx=63,dy=8,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=8}] run scoreboard players set @s Stage 8
 execute unless entity @s[x=-1705,y=42,z=-179,dx=63,dy=8,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/jungle_a/first_go
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/jungle_a/first_go
 stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1674 51 -149 14
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1673 51 -148 14
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
 advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:wave_1/torutoru_land_master jungle_a_first_go
-teleport @s[scores={BattlingMedabots=1}] -1674 51 -149 -180 0
+teleport @s[scores={BattlingMedabots=1}] -1673 51 -148 -180 0
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:jungle_a/time players
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:jungle_a/time value
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossbar medabots_server:jungle_a/time value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if score #temp Time matches 0 as @e[x=-1706,y=42,z=-179,dx=63,dy=8,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

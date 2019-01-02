@@ -7,12 +7,12 @@ summon minecraft:area_effect_cloud -1695 45 -176 {CustomName:"{\"translate\":\"m
 summon minecraft:area_effect_cloud -1697 45 -169 {CustomName:"{\"translate\":\"medabots_server:block.hole\"}",Tags:["hole","delay_5"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1700 45 -166 {CustomName:"{\"translate\":\"medabots_server:block.hole\"}",Tags:["hole","delay_5"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1700 45 -173 {CustomName:"{\"translate\":\"medabots_server:block.hole\"}",Tags:["hole","delay_5"],Duration:2147483647}
-tag @a[x=-1652,y=45,z=-129,distance=..10,tag=enemy_medabot] remove enemy_medabot
-scoreboard players set @a[x=-1652,y=45,z=-129,distance=..10] Music 0
-scoreboard players set @a[x=-1652,y=45,z=-129,distance=..10] MusicType 1
-scoreboard players set @a[x=-1652,y=45,z=-129,distance=..10] Battle 0
-teleport @a[x=-1652,y=45,z=-129,distance=..10] -1674 51 -149 -180 0
-tag @e[x=-1652,y=45,z=-129,distance=..10,tag=enemy_medabot,type=!minecraft:player] add dead
+tag @a[x=-1697,y=45,z=-167,distance=10..,tag=enemy_medabot,scores={Stage=8}] remove enemy_medabot
+scoreboard players set @a[x=-1697,y=45,z=-167,distance=10..,tag=enemy_medabot,scores={Stage=8}] Music 0
+scoreboard players set @a[x=-1697,y=45,z=-167,distance=10..,tag=enemy_medabot,scores={Stage=8}] MusicType 1
+scoreboard players set @a[x=-1697,y=45,z=-167,distance=10..,tag=enemy_medabot,scores={Stage=8}] Battle 0
+teleport @a[x=-1697,y=45,z=-167,distance=10..,tag=enemy_medabot,scores={Stage=8}] -1673 51 -148 -180 0
+tag @e[x=-1697,y=45,z=-167,distance=10..,tag=enemy_medabot,scores={Stage=8},type=!minecraft:player] add dead
 execute if entity @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] run setblock -1687 45 -173 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
 execute if entity @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] run effect give @s minecraft:night_vision 2 0 true
 execute if entity @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] run effect give @s minecraft:blindness 2 0 true
@@ -23,3 +23,5 @@ execute if entity @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] run sc
 execute if entity @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] run summon minecraft:armor_stand -1696 45 -166 {CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Invisible:1b,Rotation:[-135f,0f]}
 execute if entity @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] run teleport @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] -1697 45 -167
 execute if entity @e[x=-1697,y=45,z=-167,distance=..10,tag=enemy_medabot] run teleport @s -1693 45 -168
+bossbar set medabots_server:jungle_a/time value 3600
+bossbar set medabots_server:jungle_a/time players @a[scores={Stage=8}]

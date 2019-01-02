@@ -5,7 +5,7 @@ execute if entity @s[tag=footstool] run function medabots_server:medaparts/foots
 execute if entity @s[tag=anti_tank] run function medabots_server:medaparts/anti_tank_attack
 
 # The small timer so that you can grab ledges
-execute if entity @s[tag=ledge_grab] run function medabots_server:medaparts/ledge_grab_cloud
+execute if entity @s[tag=edge_grab] run function medabots_server:medaparts/edge_grab_cloud
 
 # Make stage objects do something
 execute if entity @s[tag=spring_wall] run function medabots_server:stage/spring_wall

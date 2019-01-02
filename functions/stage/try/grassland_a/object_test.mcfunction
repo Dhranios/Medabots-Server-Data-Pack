@@ -1,0 +1,2 @@
+execute if entity @s[team=Moderator] run function medabots_server:stage/create/grassland_a/object_test
+execute unless entity @s[team=Moderator] run tellraw @s {"translate":"medabots_server:message.stage.not_matching_requirement","extra":[{"translate":"medabots_server:message.stage.requires.rank","with":[{"translate":"medabots_server:scoreboard.team.moderator"}]}]}

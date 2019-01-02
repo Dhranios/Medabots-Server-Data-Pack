@@ -136,14 +136,19 @@ execute if block -1592 45 -256 minecraft:air run setblock -1592 46 -256 minecraf
 execute if block -1594 45 -260 minecraft:air run setblock -1594 46 -260 minecraft:air
 execute if block -1610 46 -308 minecraft:iron_door[open=true] if block -1624 46 -284 minecraft:iron_door[open=false] if entity @s[x=-1619,y=45,z=-308,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_a/second_go_battle/0
 execute if block -1610 46 -308 minecraft:iron_door[open=true] positioned -1611 45 -297 run function medabots_server:stage/wait_for_robattle_preventation
-execute if entity @e[x=-1608.5,y=45,z=-299.5,distance=..0.7,tag=mission] store result score @s BattlingMedabots if entity @e[x=-1538,y=42,z=-274,dx=17,dy=7,dz=17,scores={Stage=21,Medabot=0..}]
+execute if entity @e[x=-1608.5,y=45,z=-299.5,distance=..0.7,tag=mission] store result score @s BattlingMedabots if entity @e[x=-1538,y=42,z=-274,dx=17,dy=7,dz=17,scores={Stage=21,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1608.5,y=45,z=-299.5,distance=..0.7,tag=mission] run title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if block -1610 46 -308 minecraft:iron_door[open=false] as @s[scores={BattlingMedabots=1}] run setblock -1610 45 -308 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1610 45 -308 minecraft:structure_block as @s[scores={BattlingMedabots=1}] run setblock -1610 45 -308 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if block -1610 46 -308 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1610 45 -308 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if block -1610 45 -308 minecraft:structure_block if entity @s[scores={BattlingMedabots=1}] run setblock -1610 45 -308 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1610 45 -308 minecraft:structure_block run setblock -1610 46 -308 minecraft:redstone_block
-execute if block -1624 46 -284 minecraft:iron_door[open=false] as @s[scores={BattlingMedabots=1}] run setblock -1624 45 -284 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if block -1624 46 -284 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1624 45 -284 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1624 45 -284 minecraft:structure_block run setblock -1624 46 -284 minecraft:redstone_block
-execute as @s[scores={BattlingMedabots=1}] run kill @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:ruins_out_a/time players
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:ruins_in_a/time value
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossbar medabots_server:ruins_out_a/time value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if score #temp Time matches 0 as @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,tag=mission] at @s run function medabots_server:stage/mission_time_up
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=21}] run scoreboard players set @s Stage 21
 execute unless entity @s[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,scores={Battle=1..}] run function medabots_server:stage/clean_up/ruins_out_a/second_go

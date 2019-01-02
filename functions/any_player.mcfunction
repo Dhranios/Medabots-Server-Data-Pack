@@ -1,6 +1,9 @@
 # Run stage
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..}] run function medabots_server:stage/run
 
+# Play dialogs/cutscenes
+execute if entity @s[scores={Dialog=0..}] run function medabots_server:dialog
+
 # No cheating!
 function medabots_server:anti_cheating/items
 function medabots_server:anti_cheating/scores
@@ -26,7 +29,10 @@ execute if entity @s[tag=hostile] run function medabots_server:any_hostile_playe
 execute if entity @s[tag=!hostile] run function medabots_server:any_non_hostile_player
 
 # Show the recommended settings if the player choses to
-execute if entity @s[scores={SettingsCheck=1..}] run function medabots_server:other/settings_check
+execute if entity @s[scores={SettingsCheck=1..2}] run function medabots_server:other/recommended_settings_check
+
+# Show player settings if the player choses to
+execute if entity @s[scores={SettingsCheck=3..}] run function medabots_server:other/settings_check
 
 # Complete a task
 execute if entity @s[scores={TaskCheck=2..}] run function medabots_server:other/complete_task
@@ -67,20 +73,23 @@ function medabots_server:other/music
 # Hush, no need to see what's going on here #FuturePlans
 execute if entity @s[tag=street_pass] run function medabots_server:other/streetpass
 
-# Welcome message
-execute if entity @s[scores={Offline=1..}] run function medabots_server:other/log_on
+# Verify resource pack
+execute if entity @s[scores={Offline=1..}] run function medabots_server:other/verify_resource_pack
+execute unless entity @s[scores={Verified=0..}] run function medabots_server:other/resource_pack_verification
+execute if entity @s[scores={Verified=1}] run function medabots_server:other/awaiting_resource_pack_verification
+execute if entity @s[scores={Verified=2}] run function medabots_server:other/resource_pack_verified
 
 # Upgrade path, not used yet as the server is still in development
 #execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{version:1}}}]}] run function medabots_server:other/upgrade_path/1
 #execute if entity @s[scores={UpToDate=1}] run function medabots_server:other/update_message/1
 
 # Fly course running
-execute if entity @s[scores={FlyCourse=1..}] run function medabots_server:stage/fly_course
+execute if entity @s[scores={FlyCourse=0..}] run function medabots_server:stage/fly_course
 
 # Enable chosing options
-scoreboard players enable @s Action
 scoreboard players enable @s TaskCheck
 scoreboard players enable @s SettingsCheck
+scoreboard players enable @s Verified
 
 # Reset the attack, damage and use part checks
 scoreboard players set @s[scores={Damage=1..}] Damage 0

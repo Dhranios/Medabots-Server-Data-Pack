@@ -66,12 +66,14 @@ setblock -1568 44 -256 minecraft:grass_block
 setblock -1568 48 -256 minecraft:air
 setblock -1567 44 -312 minecraft:grass_block
 fill -1567 45 -312 -1567 48 -312 minecraft:air
+bossbar set medabots_server:ruins_out_a/time players
 tag @a[scores={Stage=21},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=21}] Music 0
 scoreboard players set @a[scores={Stage=21}] MusicType 1
 scoreboard players set @a[scores={Stage=21}] Battle 0
 teleport @a[scores={Stage=21}] -1570 51 -284 -180 0
 tag @e[scores={Stage=21},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=21}] Stage
 data merge block -1571 52 -315 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/ruins_out_a/play\"}}"}
 setblock -1571 53 -317 minecraft:redstone_block
 scoreboard players set @s MusicType 1

@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:lapis_lazuli",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.medallar_cent\\\"}\"},medabots_server:{id:\"medabots_server:medallar_cent\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 2
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/cannon"
+                }
+            ]
+        }
+    ]
+}

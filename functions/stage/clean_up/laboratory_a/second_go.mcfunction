@@ -88,12 +88,14 @@ setblock -1773 43 -255 minecraft:polished_andesite
 setblock -1773 47 -255 minecraft:air
 fill -1812 44 -322 -1733 44 -250 minecraft:air replace minecraft:chest
 fill -1812 44 -322 -1733 44 -250 minecraft:air replace minecraft:comparator
+bossbar set medabots_server:laboratory_a/time players
 tag @a[scores={Stage=27},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=27}] Music 0
 scoreboard players set @a[scores={Stage=27}] MusicType 1
 scoreboard players set @a[scores={Stage=27}] Battle 0
 teleport @a[scores={Stage=27}] -1772 50 -285 -180 0
 tag @e[scores={Stage=27},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=27}] Stage
 data merge block -1773 51 -321 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/laboratory_a/play\"}}"}
 setblock -1773 52 -323 minecraft:redstone_block
 scoreboard players set @s MusicType 1

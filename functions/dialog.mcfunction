@@ -1,0 +1,2 @@
+execute if entity @s[tag=dialog_infinity_opening] run function medabots_server:dialog/infinity/opening
+execute if entity @s[tag=dialog_infinity_opening_battle] run function medabots_server:dialog/infinity/opening_battle

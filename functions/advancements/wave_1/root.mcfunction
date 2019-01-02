@@ -1,8 +1,6 @@
 experience add @s -10000 levels
 clear @s
-tellraw @s {"text":"Are you only here with a fly course/race invitation? Then we suggest to download this resource pack for sounds and translation strings only.","color":"gold","clickEvent":{"action":"open_url","value":"http://download947.mediafire.com/7ox8w3ju10ig/1u0a93uqw607h9u/elytra+course.zip"},"hoverEvent":{"action":"show_text","value":{"text":"Click me"}}}
-tellraw @s ""
-tellraw @s {"translate":"medabots_server:message.welcome","color":"gold","extra":[{"text":"\n"},{"translate":"medabots_server:settings.resource_pack","color":"gold"},{"text":" 0.6.5. ","color":"gold"},{"translate":"medabots_server:settings.resource_pack.download","color":"green","clickEvent":{"action":"open_url","value":"http://adf.ly/1N89Z1"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.resource_pack.click"}}},{"text":"\n"},{"translate":"medabots_server:settings.click.1","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 1"},"hoverEvent":{"action":"show_text","Value":{"translate":"medabots_server:settings.click.click"}}}]}
+tellraw @s {"translate":"medabots_server:message.welcome","color":"gold","extra":[{"text":"\n"},{"translate":"medabots_server:settings.click.1","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 1"},"hoverEvent":{"action":"show_text","Value":{"translate":"medabots_server:settings.click.click"}}},{"text":"\n"},{"translate":"medabots_server:settings.click.3","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 3"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.click"}}}]}
 scoreboard players reset @s
 team leave @s[team=MtBattleMaster]
 tag @s[tag=!action_mode] add action_mode
@@ -38,11 +36,15 @@ scoreboard players set @s Charge 0
 scoreboard players set @s Float 0
 scoreboard players set @s Fly 0
 scoreboard players set @s FlyTime 0
+scoreboard players set @s Error 0
+scoreboard players set @s PreviousError 0
+scoreboard players set @s FlyCourseLaps 3
 scoreboard players set @s[team=Moderator] Moderator 1
 scoreboard players set @s[team=!Moderator] Moderator 0
 scoreboard players set @s StreetPassHits 0
 scoreboard players set @s StreetPassCool 0
 scoreboard players set @s StreetPassTime 0
+scoreboard players set @s Verified 2
 experience add @s 1 levels
 experience add @s -1 levels
 effect give @s minecraft:health_boost 1000000 19 true
@@ -53,7 +55,6 @@ function medabots_server:give_medals/kabuto
 function medabots_server:give_tinpet/male
 stopsound @s music
 teleport @s -286 55 -52.0 -90 0
-playsound medabots_server:music.intro music @s -298 55 -52 30
-scoreboard players set @s Music 2960
-scoreboard players set @s MusicType 1
 spawnpoint @s -286 55 -52
+scoreboard players set @s Dialog 0
+tag @s add dialog_infinity_opening

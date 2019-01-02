@@ -12,8 +12,8 @@
         "background": "medabots_server:textures/gui/advancements/backgrounds/wave_1.png"
     },
     "criteria": {
-        "join": {
-            "trigger": "minecraft:tick"
+        "verified_resource_pack": {
+            "trigger": "minecraft:impossible"
         }
     },
     "rewards": {

@@ -91,7 +91,7 @@ execute if block -1622 45 -190 minecraft:air run setblock -1622 46 -190 minecraf
 execute if block -1612 45 -187 minecraft:air run setblock -1612 46 -187 minecraft:air
 execute if block -1607 45 -188 minecraft:air run setblock -1607 46 -188 minecraft:air
 execute if block -1603 45 -190 minecraft:air run setblock -1603 46 -190 minecraft:air
-execute if block -1596 45 -190 minecraft:air if block -1596 46 -190 minecraft:barrier run summon minecraft:creeper -1596 45 -190 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:lapis_lazuli",Count:4b,tag:{medabots_server:{id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}}],ArmorDropChances:[0.0f,0.0f,0.0f,1.0f],Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1596 45 -190 minecraft:air if block -1596 46 -190 minecraft:barrier run summon minecraft:creeper -1596 45 -190 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1596 45 -190 minecraft:air run setblock -1596 46 -190 minecraft:air
 execute if block -1594 45 -193 minecraft:air run setblock -1594 46 -193 minecraft:air
 execute if block -1593 45 -189 minecraft:air run setblock -1593 46 -189 minecraft:air
@@ -101,7 +101,7 @@ execute if block -1590 45 -189 minecraft:air if block -1590 46 -189 minecraft:ba
 execute if block -1590 45 -189 minecraft:air run setblock -1590 46 -189 minecraft:air
 execute if block -1589 45 -191 minecraft:air run setblock -1589 46 -191 minecraft:air
 execute if block -1666 45 -210 minecraft:air run setblock -1666 46 -210 minecraft:air
-execute if block -1664 45 -198 minecraft:air if block -1664 46 -198 minecraft:barrier run summon minecraft:creeper -1664 45 -198 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}}],ArmorDropChances:[0.0f,0.0f,0.0f,1.0f],Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1664 45 -198 minecraft:air if block -1664 46 -198 minecraft:barrier run summon minecraft:creeper -1664 45 -198 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard/10_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1664 45 -198 minecraft:air run setblock -1664 46 -198 minecraft:air
 execute if block -1629 45 -243 minecraft:air run setblock -1629 46 -243 minecraft:air
 execute if block -1629 45 -244 minecraft:air run setblock -1629 46 -244 minecraft:air

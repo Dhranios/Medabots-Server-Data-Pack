@@ -2,7 +2,8 @@
 scoreboard players remove @s HideTime 1
 
 # Turn invisible
-effect give @s minecraft:invisibility 1 0 true
+execute if entity @s[scores={HideTime=2..}] as @e[tag=medabot_model,nbt={ArmorItems:[{id:"minecraft:fishing_rod"}]}] if score @s MedabotNr = @e[distance=..0.1,tag=hostile,limit=1] MedabotNr run data modify entity @s ArmorItems[3].id set value "minecraft:stone_button"
+execute if entity @s[scores={HideTime=..1}] as @e[tag=medabot_model,nbt={ArmorItems:[{id:"minecraft:stone_button"}]}] if score @s MedabotNr = @e[distance=..0.1,tag=hostile,limit=1] MedabotNr run data modify entity @s ArmorItems[3].id set value "minecraft:fishing_rod"
 
 # Remove timer
 scoreboard players reset @s[scores={HideTime=0}] HideTime

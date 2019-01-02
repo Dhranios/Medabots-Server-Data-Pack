@@ -1,4 +1,4 @@
-execute store result score @s BattlingMedabots if entity @e[scores={Stage=93,Medabot=0..}]
+execute store result score @s BattlingMedabots if entity @e[scores={Stage=93,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1311,y=39,z=-220,dx=74,dy=9,dz=77,tag=mr_referee,type=minecraft:armor_stand] run data merge block -1279 52 -178 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.full\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 execute if entity @e[x=-1311,y=39,z=-220,dx=74,dy=9,dz=77,tag=mr_referee,type=minecraft:armor_stand] run setblock -1279 53 -180 minecraft:red_wool
 execute if entity @s[scores={BattlingMedabots=3..}] unless entity @e[x=-1311,y=39,z=-220,dx=74,dy=9,dz=77,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1280 44 -162 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[-180.0f,0.0f]}

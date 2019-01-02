@@ -32,12 +32,13 @@ fill -1997 45 -552 -1996 48 -552 minecraft:air
 fill -2005 45 -561 -2005 48 -560 minecraft:air
 fill -2017 45 -581 -1976 45 -540 minecraft:air replace minecraft:comparator
 fill -2017 44 -581 -1976 44 -540 minecraft:grass_block replace minecraft:dirt
-tag @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42,type=!minecraft:player] add dead
+tag @e[scores={Stage=100},type=!minecraft:player] add dead
 stopsound @s music
+scoreboard players reset @a[scores={Stage=100}] Stage
 scoreboard players set @s Battle 0
-scoreboard players set @s MusicType 1
-scoreboard players set @s Music 299
-playsound medabots_server:music.stage.stage_end music @s -1997 51 -561 3
-scoreboard players add @s[tag=story_battle] Story 1
+scoreboard players set @s[tag=!story_battle] MusicType 1
+scoreboard players set @s[tag=!story_battle] Music 299
+playsound medabots_server:music.stage.stage_end music @s[tag=!story_battle] -1997 51 -561 3
+scoreboard players set @s[tag=story_battle] Dialog 0
 tag @s remove story_battle
 teleport @s -1997 51 -561 -180 0

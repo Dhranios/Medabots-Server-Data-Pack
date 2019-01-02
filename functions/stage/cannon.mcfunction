@@ -42,16 +42,16 @@ scoreboard players set @s[tag=delay_2,scores={Time=0}] Time 40
 scoreboard players set @s[tag=delay_1,scores={Time=0}] Time 20
 
 # Not Detected but is attampting to detect is resetting the time and trying to find the enemy
-execute if entity @s[tag=detect,tag=look_over_x_negative] at @a[dx=-7,dy=3,dz=0,tag=hostile] run tag @s add detected
-execute if entity @s[tag=detect,tag=look_over_x_positive] at @a[dx=7,dy=3,dz=0,tag=hostile] run tag @s add detected
-execute if entity @s[tag=detect,tag=look_over_z_negative] at @a[dx=0,dy=3,dz=-7,tag=hostile] run tag @s add detected
-execute if entity @s[tag=detect,tag=look_over_z_positive] at @a[dx=0,dy=3,dz=7,tag=hostile] run tag @s add detected
+execute if entity @s[tag=detect,tag=look_over_x_negative] if entity @a[dx=-11,dy=3,dz=0,tag=hostile,tag=!enemy_medabot] run tag @s add detected
+execute if entity @s[tag=detect,tag=look_over_x_positive] if entity @a[dx=11,dy=3,dz=0,tag=hostile,tag=!enemy_medabot] run tag @s add detected
+execute if entity @s[tag=detect,tag=look_over_z_negative] if entity @a[dx=0,dy=3,dz=-11,tag=hostile,tag=!enemy_medabot] run tag @s add detected
+execute if entity @s[tag=detect,tag=look_over_z_positive] if entity @a[dx=0,dy=3,dz=11,tag=hostile,tag=!enemy_medabot] run tag @s add detected
 
 # Not Detected but is cannon type 4 is resetting the time and trying to find the enemy, and target lock
-execute if entity @s[tag=cannon_4] positioned ~ ~-1 ~ run summon minecraft:area_effect_cloud ^ ^ ^3.5 {CustomName:"{\"text\":\"Cannon Target\"}",Tags:["cannon_target"],Duration:1}
-execute at @e[tag=cannon_target,type=minecraft:area_effect_cloud] positioned ~ ~1 ~ at @a[limit=1,distance=..3.5,tag=hostile] run tag @s add detected
+execute if entity @s[tag=cannon_4] positioned ~ ~-1 ~ run summon minecraft:area_effect_cloud ^ ^ ^5.5 {CustomName:"{\"text\":\"Cannon Target\"}",Tags:["cannon_target"],Duration:1}
+execute at @e[tag=cannon_target,type=minecraft:area_effect_cloud] positioned ~ ~1 ~ if entity @a[limit=1,distance=..5.5,tag=hostile,tag=!enemy_medabot] run tag @s add detected
 kill @e[tag=cannon_target,type=minecraft:area_effect_cloud]
-teleport @s[tag=cannon_4,tag=detected] ~ ~ ~ facing entity @a[limit=1,tag=hostile,sort=nearest]
+teleport @s[tag=cannon_4,tag=detected] ~ ~ ~ facing entity @a[limit=1,tag=hostile,sort=nearest,tag=!enemy_medabot]
 
 # Not Detected results in no opening of fire
 scoreboard players set @s[scores={CannonFire=-1},tag=!detected] CannonFire 0

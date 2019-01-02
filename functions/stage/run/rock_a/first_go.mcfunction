@@ -13,7 +13,6 @@ execute if block -1629 45 -129 minecraft:chest run setblock -1629 46 -129 minecr
 execute if block -1628 45 -129 minecraft:chest run setblock -1628 46 -129 minecraft:barrier
 execute if block -1628 45 -122 minecraft:chest run setblock -1628 46 -122 minecraft:barrier
 execute if block -1627 45 -122 minecraft:chest run setblock -1627 46 -122 minecraft:barrier
-execute if block -1622 45 -124 minecraft:chest run setblock -1622 46 -124 minecraft:barrier
 execute if block -1628 45 -121 minecraft:chest run setblock -1628 46 -121 minecraft:barrier
 execute if block -1627 45 -121 minecraft:chest run setblock -1627 46 -121 minecraft:barrier
 execute if block -1605 45 -127 minecraft:chest run setblock -1605 46 -127 minecraft:barrier
@@ -58,7 +57,6 @@ execute if block -1629 45 -129 minecraft:air run setblock -1629 46 -129 minecraf
 execute if block -1628 45 -129 minecraft:air run setblock -1628 46 -129 minecraft:air
 execute if block -1628 45 -122 minecraft:air run setblock -1628 46 -122 minecraft:air
 execute if block -1627 45 -122 minecraft:air run setblock -1627 46 -122 minecraft:air
-execute if block -1622 45 -124 minecraft:air run setblock -1622 46 -124 minecraft:air
 execute if block -1628 45 -121 minecraft:air if block -1628 46 -121 minecraft:barrier run summon minecraft:tnt -1628 45 -121 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1628 45 -121 minecraft:air run setblock -1628 46 -121 minecraft:air
 execute if block -1627 45 -121 minecraft:air run setblock -1627 46 -121 minecraft:air
@@ -104,15 +102,20 @@ execute if block -1616 46 -167 minecraft:iron_door[open=true] if entity @s[x=-16
 execute if block -1616 46 -167 minecraft:iron_door[open=true] positioned -1604 45 -170 run function medabots_server:stage/wait_for_robattle_preventation
 execute if block -1616 45 -167 minecraft:structure_block run setblock -1615 45 -167 minecraft:redstone_block
 execute if block -1615 45 -167 minecraft:redstone_block run setblock -1615 45 -167 minecraft:air
-execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand] store result score @s BattlingMedabots if entity @e[x=-1612,y=43,z=-136,dx=20,dy=7,dz=18,scores={Stage=5,Medabot=0..}]
+execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Stage=5,Medabot=0..,Battle=1..}]
 execute as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
 execute unless entity @s[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/rock_a/first_go
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/rock_a/first_go
 stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1604 51 -151 14
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1603 51 -149 14
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
 advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:wave_1/torutoru_land_master rock_a_first_go
-teleport @s[scores={BattlingMedabots=1}] -1604 51 -151 -180 0
+teleport @s[scores={BattlingMedabots=1}] -1603 51 -149 -180 0
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:rock_a/time players
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:rock_a/time value
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossbar medabots_server:rock_a/time value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if score #temp Time matches 0 as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
