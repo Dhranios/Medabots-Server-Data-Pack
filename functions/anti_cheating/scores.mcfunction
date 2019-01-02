@@ -16,6 +16,7 @@ scoreboard players reset @s[tag=!hostile,scores={RightArmPer=..100}] RightArmPer
 scoreboard players reset @s[tag=!hostile,scores={HeadPer=..100}] HeadPer
 scoreboard players reset @s[tag=!hostile,scores={HeadUsesPer=..100}] HeadUsesPer
 scoreboard players set @s[tag=!hostile,scores={Medabot=1..}] Medabot 0
+scoreboard players reset @s[scores={OverheatingFly=0}] OverheatingFly
 
 # Set scores
 scoreboard players set @s[scores={Error=1..,Battle=1..}] Battle 0
