@@ -221,7 +221,11 @@ execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run scoreboard players se
 execute if entity @s[scores={Sneaking=1..},tag=hostile] if block ~ ~-1 ~ minecraft:air if block ~1 ~-1 ~ minecraft:air if block ~-1 ~-1 ~ minecraft:air if block ~ ~-1 ~1 minecraft:air if block ~ ~-1 ~-1 minecraft:air if block ~1 ~-1 ~1 minecraft:air if block ~1 ~-1 ~-1 minecraft:air if block ~-1 ~-1 ~1 minecraft:air if block ~-1 ~-1 ~-1 minecraft:air run teleport @s ~ ~-0.6 ~
 
 # Reset movement checks
+tag @s[tag=jumping] remove jumping
+tag @s[scores={Jump=1..}] add jumping
 scoreboard players set @s[scores={Jump=1..}] Jump 0
+tag @s[tag=walking] remove walking
+tag @s[scores={Walk=1..}] add walking
 scoreboard players set @s[scores={Walk=1..}] Walk 0
 scoreboard players set @s[scores={Run=1..}] Run 0
 scoreboard players set @s[scores={Swimming=1..}] Swimming 0
@@ -234,7 +238,11 @@ scoreboard players set @s[scores={WalkOnWater=1..}] WalkOnWater 0
 scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0
 scoreboard players set @s[scores={Pig=1..}] Pig 0
 scoreboard players set @s[scores={Fall=1..}] Fall 0
+tag @s[tag=sneak_pos] remove sneak_pos
+tag @s[scores={Sneaking=1..}] add sneak_pos
 scoreboard players set @s[scores={Sneaking=1..}] Sneaking 0
+tag @s[tag=sneaking] remove sneaking
+tag @s[scores={Sneak=1..}] add sneaking
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
 tag @s[tag=trading] remove trading
 tag @s[scores={Trading=1..}] add trading

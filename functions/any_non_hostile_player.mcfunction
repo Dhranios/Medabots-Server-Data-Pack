@@ -2,10 +2,12 @@
 function medabots_server:medaparts/remove_scores
 
 # Fast roads
-function medabots_server:other/action_mode
+execute if entity @s[tag=action_mode] run function medabots_server:other/action_mode
 
-# Toggle Fly Course Speed duration
-execute if entity @s[scores={FlyCourseSpeed=1..}] run function medabots_server:other/fly_course_speed
+# Talk to entities
+tag @e[distance=..3,tag=!talk,team=Passive] add talk 
+tag @e[distance=..3,tag=!talk,team=Rubberobo] add talk
 
 # Invalid medabot = no combat start
-function medabots_server:medaparts/medapart_error
+execute if entity @s[gamemode=!creative,gamemode=!spectator] run function medabots_server:medaparts/medapart_error
+scoreboard players set @s[gamemode=!creative,gamemode=!spectator] Error 0 

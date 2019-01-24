@@ -11,17 +11,14 @@ execute if entity @s[type=minecraft:armor_stand] run function medabots_server:an
 execute if entity @s[type=minecraft:item] run function medabots_server:any_item
 
 # Functions that run on every Rubberobo
-execute if entity @s[tag=rubberobo] unless entity @s[scores={Stage=1..}] run function medabots_server:other/rubberobo_caught
+execute if entity @s[tag=rubberobo,nbt={HurtTime:5s}] unless entity @s[scores={Stage=1..}] run function medabots_server:other/rubberobo_caught
 execute if entity @s[tag=rubberobo,scores={Stage=1..}] run function medabots_server:stage/rubberobo
 
 # Functions that run on every area effect cloud
 execute if entity @s[type=minecraft:area_effect_cloud] run function medabots_server:any_cloud
 
-# Make the press attack do something
-execute if entity @s[type=minecraft:snowball,tag=press] run function medabots_server:medaparts/press_attack
-
-# Make the kuwagata attack do something
-execute if entity @s[type=minecraft:snowball,tag=cut_space] run function medabots_server:medaparts/cut_space
+# Functions that run on every snowball
+execute if entity @s[type=minecraft:snowball] run function medabots_server:any_snowball
 
 # Make the guards do things
 execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_server:stage/guard
@@ -44,6 +41,7 @@ execute if entity @s[tag=shop] run function medabots_server:shopping/main
 
 # Prevent zombies from converting to drowned
 execute if entity @s[type=minecraft:zombie,nbt=!{DrownedConversionTime:-1,InWaterTime:-1}] run data merge entity @s {DrownedConversionTime:-1,InWaterTime:-1}
+execute if entity @s[type=minecraft:husk,nbt=!{DrownedConversionTime:-1,InWaterTime:-1}] run data merge entity @s {DrownedConversionTime:-1,InWaterTime:-1}
 
 # Talk
 execute if entity @s[tag=rubberobo,tag=talk] unless entity @s[scores={Stage=1..}] run function medabots_server:dialog/random_rubberobo

@@ -1,39 +1,12 @@
 # New rubberobos need scores
-execute unless entity @s[scores={Time=-200..}] store result score @s HomeRot run data get entity @s Rotation[0]
-execute unless entity @s[scores={Time=-200..}] store result score @s HomeX run data get entity @s Pos[0]
-execute unless entity @s[scores={Time=-200..}] store result score @s HomeY run data get entity @s Pos[1]
-execute unless entity @s[scores={Time=-200..}] store result score @s HomeZ run data get entity @s Pos[2]
-execute unless entity @s[scores={Time=-200..}] run scoreboard players set @s Time 0
+execute unless entity @s[scores={Time=-200..}] run function medabots_server:stage/rubberobo_scores
 
 # Respawn after death
-execute if entity @s[tag=respawning,scores={Time=0}] run playsound medabots_server:entity.rubberobo.respawn neutral @a ~ ~2 ~
-teleport @s[tag=respawning,scores={Time=0}] ~ ~2 ~
-data merge entity @s[tag=respawning,scores={Time=0}] {NoGravity:0b,Invulnerable:0b}
-tag @s[tag=respawning,scores={Time=0}] remove respawning
+execute if entity @s[tag=respawning,scores={Time=0}] run function medabots_server:stage/rubberobo_respawn
 
 # Hurt means turn
-tag @s[nbt={HurtTime:10s}] add hurt
-execute store result score @s Damage run data get entity @s AbsorptionAmount
-scoreboard players operation @s Damage -= @s Health
-execute if entity @s[tag=hurt] run playsound medabots_server:entity.rubberobo.hurt neutral @a ~ ~ ~ 1
-tag @s[tag=hurt,tag=!walking] add walking
-tag @s[tag=hurt,tag=walk_1_block] remove walk_1_block
-tag @s[tag=hurt,tag=toggle_turn_left] remove toggle_turn_left
-tag @s[tag=hurt,tag=follow_wall] remove follow_wall
-tag @s[tag=hurt,tag=see_goal_area] remove see_goal_area
-tag @s[tag=hurt,tag=seen_goal_area] remove seen_goal_area
-tag @s[tag=hurt,tag=!turn_left,scores={Time=41..}] add toggle_turn_left
-tag @s[tag=hurt,tag=turn_left,tag=!toggle_turn_left,scores={Time=41..}] remove turn_left
-tag @s[tag=toggle_turn_left] add turn_left
-tag @s[tag=toggle_turn_left] remove downed
-execute align xz run teleport @s[tag=hurt,y_rotation=-45..45] ~0.5 ~ ~0.5 0 ~
-execute align xz run teleport @s[tag=hurt,y_rotation=-135..-45] ~0.5 ~ ~0.5 -90 ~
-execute align xz run teleport @s[tag=hurt,y_rotation=135..-135] ~0.5 ~ ~0.5 -180 ~
-execute align xz run teleport @s[tag=hurt,y_rotation=45..135] ~0.5 ~ ~0.5 90 ~
-scoreboard players set @s[tag=hurt,scores={Damage=-20..}] Time 60
-scoreboard players set @s[tag=hurt,scores={Damage=..-20}] Time 100
-tag @s[tag=hurt,tag=downed,scores={Damage=..-20}] remove downed
-tag @s[tag=hurt] remove hurt
+execute if entity @s[nbt={HurtTime:10s}] run function medabots_server:stage/rubberobo_hurt
+
 execute align xz run teleport @s[scores={Time=1..40},tag=!respawning,tag=!turn_left,tag=walking,tag=!walk_1_block] ~0.5 ~ ~0.5 ~4.5 ~
 execute align xz run teleport @s[scores={Time=1..40},tag=!respawning,tag=turn_left,tag=walking,tag=!walk_1_block] ~0.5 ~ ~0.5 ~-4.5 ~
 execute align xz run teleport @s[scores={Time=-20..-1},tag=!respawning,tag=!turn_left,tag=walking] ~0.5 ~ ~0.5 ~-4.5 ~
@@ -78,28 +51,10 @@ execute if entity @s[scores={Time=1},tag=walk_1_block,tag=turn_left] rotated ~ 0
 tag @s[scores={Time=1},tag=walk_1_block] remove walk_1_block
 
 # Dead end?
-tag @s[tag=walking,scores={Time=0}] add downing
-execute if entity @s[scores={Time=0}] rotated ~ 0 if block ^ ^ ^0.6 minecraft:air if block ^ ^1 ^0.6 minecraft:air run tag @s remove downing
-execute if entity @s[scores={Time=0}] rotated ~ 0 if block ^-1 ^ ^ minecraft:air if block ^-1 ^1 ^ minecraft:air run tag @s remove downing
-execute if entity @s[scores={Time=0}] rotated ~ 0 if block ^1 ^ ^ minecraft:air if block ^1 ^1 ^ minecraft:air run tag @s remove downing
-execute if entity @s[scores={Time=0}] rotated ~ 0 if block ^ ^ ^0.6 minecraft:barrier if block ^ ^1 ^0.6 minecraft:barrier run tag @s remove downing
-execute if entity @s[scores={Time=0}] rotated ~ 0 if block ^-1 ^ ^ minecraft:barrier if block ^-1 ^1 ^ minecraft:barrier run tag @s remove downing
-execute if entity @s[scores={Time=0}] rotated ~ 0 if block ^1 ^ ^ minecraft:barrier if block ^1 ^1 ^ minecraft:barrier run tag @s remove downing
-
-# Dead end!
-tag @s[tag=downing] add downed
-execute if entity @s[tag=downing] run playsound medabots_server:entity.rubberobo.downing neutral @a ~ ~ ~ 1
-tag @s[tag=downing] remove walking
-scoreboard players set @s[tag=downing] Time 160
-tag @s[tag=downing] remove downing
+execute if entity @s[scores={Time=0}] run function medabots_server:stage/rubberobo_dead_end
 
 # Turn if there's a wall in front of me
-execute if entity @s[tag=walking,scores={Time=0},tag=!walk_1_block,tag=!ignore_footstool] rotated ~ 0 if block ^ ^ ^0.6 minecraft:barrier if block ^ ^1 ^0.6 minecraft:barrier run tag @s add ignore_footstool
-execute if entity @s[tag=walking,scores={Time=0},tag=!walk_1_block,tag=!ignore_footstool] rotated ~ 0 unless block ^ ^ ^0.6 minecraft:air run tag @s add follow_wall
-execute if entity @s[tag=walking,scores={Time=0},tag=!walk_1_block,tag=!ignore_footstool] rotated ~ 0 unless block ^ ^1 ^0.6 minecraft:air run tag @s add follow_wall
-execute if entity @s[tag=walking,scores={Time=0},tag=!walk_1_block,tag=!ignore_footstool] rotated ~ 0 unless block ^ ^ ^0.6 minecraft:air run scoreboard players set @s Time 20
-execute if entity @s[tag=walking,scores={Time=0},tag=!walk_1_block,tag=!ignore_footstool] rotated ~ 0 unless block ^ ^1 ^0.6 minecraft:air run scoreboard players set @s Time 20
-tag @s[tag=ignore_footstool] remove ignore_footstool
+execute if entity @s[tag=walking,scores={Time=0},tag=!walk_1_block] run function medabots_server:stage/rubberobo_wall
 
 # Follow the wall on my side
 execute if entity @s[tag=walking,scores={Time=0},tag=!turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 if block ^1 ^ ^ minecraft:air if block ^1 ^1 ^ minecraft:air run scoreboard players set @s Time -20
@@ -110,7 +65,6 @@ execute if entity @s[tag=walking,scores={Time=0},tag=!turn_left,tag=follow_wall,
 execute if entity @s[tag=walking,scores={Time=0},tag=turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 if block ^-1 ^ ^ minecraft:barrier if block ^-1 ^1 ^ minecraft:barrier run scoreboard players set @s Time -20
 execute if entity @s[tag=walking,scores={Time=-20},tag=!turn_left,tag=follow_wall] rotated ~ 0 if block ^1 ^ ^ minecraft:barrier if block ^1 ^1 ^ minecraft:barrier run tag @s add walk_1_block
 execute if entity @s[tag=walking,scores={Time=-20},tag=turn_left,tag=follow_wall] rotated ~ 0 if block ^-1 ^ ^ minecraft:barrier if block ^-1 ^1 ^ minecraft:barrier run tag @s add walk_1_block
-
 
 # Not downed after a while
 tag @s[tag=downed,tag=!walking,scores={Time=0}] remove downed

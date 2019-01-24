@@ -28,12 +28,11 @@ tag @s[team=Moderator,tag=!bug_tester] add bug_tester
 
 
 # Don't allow combat for creative players and spectators
-scoreboard players set @s[gamemode=creative,scores={Battle=1..}] Battle 0
-scoreboard players set @s[gamemode=spectator,scores={Battle=1..}] Battle 0
+scoreboard players set @s[gamemode=!adventure,gamemode=!survival,scores={Battle=1..}] Battle 0
 
 # Prevent spawn point from moving
 spawnpoint @s -286 55 -52
 
 # Deactivate parts
-execute unless entity @s[scores={FlyCourse=0..}] run scoreboard players reset @s[tag=!hostile,scores={Stage=1..,Battle=0}] Stage
+execute unless entity @s[scores={FlyCourse=0..}] run scoreboard players reset @s[tag=!hostile,scores={Stage=1..}] Stage
 execute if entity @s[scores={Battle=0},tag=hostile] run function medabots_server:medaparts/reset

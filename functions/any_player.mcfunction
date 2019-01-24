@@ -2,24 +2,17 @@
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..}] run function medabots_server:stage/run
 
 # Play dialogs/cutscenes
-execute if entity @s[scores={Dialog=0..}] run function medabots_server:dialog
+function medabots_server:dialog
 
 # No cheating!
 function medabots_server:anti_cheating/items
 function medabots_server:anti_cheating/scores
 function medabots_server:anti_cheating/anti_fly_hack
 
-# Talk to entities
-tag @e[distance=..3,tag=!talk,team=Passive] add talk 
-tag @e[distance=..3,tag=!talk,team=Rubberobo] add talk 
-
 # Functions that run on every player on the server except mods
 execute if entity @s[scores={Moderator=0}] run function medabots_server:any_non_mod
 
-# Remove the bobber, that is a side effect for activation
-execute if entity @s[scores={UsePart=1..},gamemode=!creative] run kill @e[type=minecraft:fishing_bobber,distance=..8]
-
-# Combat (it's not in any_hostile_player so that the weapons don't get stuck when the combat is ended)
+# Players are medabots
 function medabots_server:any_medabot
 
 # Make players in combat do something
@@ -37,13 +30,9 @@ execute if entity @s[scores={SettingsCheck=3..}] run function medabots_server:ot
 # Complete a task
 execute if entity @s[scores={TaskCheck=2..}] run function medabots_server:other/complete_task
 
-# Make players make a death sound
-execute if entity @s[scores={Death=1}] run playsound medabots_server:entity.medabot.death player @a ~ ~ ~ 0.7
-scoreboard players set @s[scores={Death=1..}] Damage 0
-
-# Send the death message
-execute if entity @s[scores={Death=1}] run function medabots_server:medaparts/death_message
-tag @s[scores={Death=0}] remove retry
+# Death
+execute if entity @s[scores={Death=1}] run function medabots_server:other/death
+tag @s[scores={Death=0},tag=retry] remove retry
 
 # Remove player from the world
 teleport @s[scores={Death=20}] ~ -4096 ~

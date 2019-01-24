@@ -1,38 +1,10 @@
 # No vanilla combat
 effect give @s minecraft:weakness 1000000 127 true
 
-# Set the damage taken
-execute if entity @s[type=minecraft:player] store result score @s Damage run data get entity @s Health -1
-execute if entity @s[type=!minecraft:player] store result score @s Damage run data get entity @s AbsorptionAmount -1
-scoreboard players operation @s Damage += #100 Constants
-
-# Waiting for start of robattle
-effect give @s[scores={Battle=2}] minecraft:slowness 1 10 true
-scoreboard players set @s[scores={Battle=2}] Damage 0
-scoreboard players set @s[scores={Battle=2}] UsePart 0
-
 # Prevent normal damage
 effect give @s[tag=!undead,scores={Damage=1..}] minecraft:instant_health 1 0 true
 effect give @s[tag=undead,scores={Damage=1..}] minecraft:instant_damage 1 0 true
 data merge entity @s[type=!minecraft:player] {AbsorptionAmount:100.0f}
-
-# Make Leg parts do something
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/float
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/fly
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/multi_legged
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/swim
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/tank
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/two_legged
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/wheel
-
-# Get a boost by jumping on another player
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/footstool
-
-# Grab ledges and pull yourself up
-execute if entity @s[tag=hostile] run function medabots_server:medaparts/edge_grab
-
-# Charge up the medaforce
-execute if entity @s[tag=hostile,scores={MedaforceTimer=3}] run function medabots_server:medaparts/charge_medaforce
 
 # Combat
 execute if entity @s[scores={AntiFly=1..}] run function medabots_server:medaparts/anti_fly
@@ -87,20 +59,3 @@ execute if entity @s[scores={ShootingTrap=1..}] run function medabots_server:med
 execute if entity @s[scores={StatusClear=1..}] run function medabots_server:medaparts/status_clear
 execute if entity @s[scores={Sword=1..}] run function medabots_server:medaparts/sword
 execute if entity @s[scores={Wave=1..}] run function medabots_server:medaparts/wave
-
-# Forget the part
-scoreboard players set @s[scores={Time=900..950}] Time 1
-
-# Prevent invalid Time values
-scoreboard players set @s[scores={Time=..0}] Time 1
-execute unless entity @s[scores={Time=-100..}] run scoreboard players set @s Time 1
-
-# Part breaks
-execute if entity @s[scores={LegsArmor=0}] run function medabots_server:medaparts/break_part
-execute if entity @s[scores={LeftArmArmor=0}] run function medabots_server:medaparts/break_part
-execute if entity @s[scores={RightArmArmor=0}] run function medabots_server:medaparts/break_part
-execute if entity @s[scores={HeadArmor=0}] run function medabots_server:medaparts/break_part
-
-# Global timer for the medaforce
-scoreboard players add @s MedaforceTimer 1
-scoreboard players set @s[scores={MedaforceTimer=6..}] MedaforceTimer 0

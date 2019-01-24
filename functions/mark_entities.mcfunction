@@ -18,5 +18,7 @@ tag @s[type=minecraft:zombie_horse] add undead
 tag @s[type=minecraft:zombie_pigman] add undead
 tag @s[type=minecraft:zombie_villager] add undead
 
+kill @s[type=minecraft:fishing_bobber]
+
 # Tag everything that they're marked
 tag @s add marked

@@ -1,5 +1,5 @@
 # Move with
-execute if entity @a[distance=..0.1,tag=hostile,scores={Sneaking=1..}] run tag @s add sneak_pos
+execute if entity @a[distance=..0.1,tag=hostile,tag=sneak_pos] run tag @s add sneak_pos
 execute rotated ~ 0 run teleport @s[tag=!sneak_pos] ^-.25 ^-.35 ^-.3
 execute rotated ~ 0 run teleport @s[tag=sneak_pos] ^-.25 ^-.45 ^-.3
 execute store result entity @s Rotation[0] float 0.01 run data get entity @e[distance=..0.1,tag=hostile,limit=1] Rotation[0] 100
@@ -18,10 +18,9 @@ execute if entity @s[tag=selected] unless entity @a[distance=..0.1,tag=hostile,l
 
 # Walk animation
 execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s[tag=!sneak_pos] {Pose:{Head:[0.0f,0.0f,0.001f]}}
-execute if entity @a[distance=..0.1,tag=hostile,scores={Walk=1..}] run tag @s add walking
-execute if entity @a[distance=..0.1,tag=hostile,scores={Run=1..}] run tag @s add running
-execute if entity @a[distance=..0.1,tag=hostile,scores={Sneak=1..}] run tag @s add sneaking
-execute if entity @e[distance=..0.1,tag=hostile,type=!minecraft:player,tag=walking] run tag @s add walking
+execute if entity @a[distance=..0.1,tag=hostile,tag=walking] run tag @s add walking
+execute if entity @a[distance=..0.1,tag=hostile,tag=running] run tag @s add running
+execute if entity @a[distance=..0.1,tag=hostile,tag=sneaking] run tag @s add sneaking
 execute if entity @e[distance=..0.1,tag=hostile,nbt={OnGround:0b}] run tag @s add in_air
 data merge entity @s[tag=!selected,tag=!walking,tag=!running,tag=!sneaking] {Pose:{Head:[0.0f,0.0f,0.001f]}}
 execute at @e[tag=legs,nbt={ArmorItems:[{tag:{medabots_server:{move:"two_legged"}}}]}] if score @e[distance=..0.1,tag=legs,limit=1] MedabotNr = @s MedabotNr run tag @s add two_legged

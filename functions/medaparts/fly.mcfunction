@@ -31,7 +31,7 @@ title @s[scores={FlyTime=140..160}] title {"translate":"medabots_server:move.ove
 scoreboard players remove @s[scores={OverheatingFly=1,MedaforceTimer=2}] LegsArmor 1
 
 # Spawn the fly crash checker
-execute if entity @s[scores={Fly=1}] if block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:air run summon minecraft:armor_stand ~ ~-4 ~ {Invisible:1b,NoGravity:1b,Marker:1b,CustomName:"{\"translate\":\"medabots_server:entity.flying_crash\"}",Tags:["flying_crash"]}
+execute if entity @s[scores={Fly=1,LegsArmor=..0}] if block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:air run summon minecraft:armor_stand ~ ~-4 ~ {Invisible:1b,NoGravity:1b,Marker:1b,CustomName:"{\"translate\":\"medabots_server:entity.flying_crash\"}",Tags:["flying_crash"]}
 
 # No flying if not in battle
 scoreboard players set @s[scores={Fly=1..},tag=!hostile] Fly 0

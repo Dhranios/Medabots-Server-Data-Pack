@@ -81,7 +81,7 @@ execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},nbt={SelectedItemSlo
 execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},nbt={SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
 execute if entity @s[scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
 execute if entity @s[scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-tag @s[scores={Damage=1..},nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{move:"medaforce_charge"}}}]}] add medal_damage
+tag @s[scores={Damage=1..},nbt={SelectedItemSlot:4,Inventory:[{tag:{medabots_server:{move:"medaforce_charge",activated:1b}}}]}] add medal_damage
 scoreboard players add @s[tag=medal_damage] Charge 1
 clear @s[tag=medal_damage] minecraft:nether_star 1
 tag @s[tag=medal_damage] remove medal_damage
