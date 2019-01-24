@@ -1,0 +1,12 @@
+execute positioned ~-1 ~ ~ if entity @e[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 1
+execute positioned ~ ~ ~-1 if entity @e[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 2
+execute positioned ~1 ~ ~ if entity @e[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 3
+execute positioned ~ ~ ~1 if entity @e[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 4
+execute positioned ~-1 ~ ~ if entity @e[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 1
+execute positioned ~ ~ ~-1 if entity @e[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 2
+execute positioned ~1 ~ ~ if entity @e[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 3
+execute positioned ~ ~ ~1 if entity @e[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 4
+execute positioned ~-1 ~ ~ if entity @e[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 1
+execute positioned ~ ~ ~-1 if entity @e[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 2
+execute positioned ~1 ~ ~ if entity @e[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 3
+execute positioned ~ ~ ~1 if entity @e[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 4

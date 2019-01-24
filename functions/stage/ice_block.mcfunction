@@ -1,28 +1,8 @@
 # Push me
-execute if entity @s[scores={Moving=0}] positioned ~-1 ~ ~ at @a[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 1
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~-1 at @a[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 2
-execute if entity @s[scores={Moving=0}] positioned ~1 ~ ~ at @a[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 3
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~1 at @a[distance=..1,scores={Destroy=1..}] run scoreboard players set @s Moving 4
-execute if entity @s[scores={Moving=0}] positioned ~-1 ~ ~ at @a[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 1
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~-1 at @a[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 2
-execute if entity @s[scores={Moving=0}] positioned ~1 ~ ~ at @a[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 3
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~1 at @a[distance=..1,scores={Press=1..}] run scoreboard players set @s Moving 4
-execute if entity @s[scores={Moving=0}] positioned ~-1 ~ ~ at @a[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 1
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~-1 at @a[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 2
-execute if entity @s[scores={Moving=0}] positioned ~1 ~ ~ at @a[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 3
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~1 at @a[distance=..1,scores={Hammer=1..}] run scoreboard players set @s Moving 4
+execute if entity @s[scores={Moving=0}] run function medabots_server:stage/ice_block_hit
 
 # Melt me
-execute if entity @s[scores={Moving=0}] positioned ~-1 ~ ~ at @a[distance=..1,scores={Melt=1..}] run tag @s add melting
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~-1 at @a[distance=..1,scores={Melt=1..}] run tag @s add melting
-execute if entity @s[scores={Moving=0}] positioned ~1 ~ ~ at @a[distance=..1,scores={Melt=1..}] run tag @s add melting
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~1 at @a[distance=..1,scores={Melt=1..}] run tag @s add melting
-execute if entity @s[scores={Moving=0}] positioned ~-1 ~ ~ at @e[distance=..1,type=minecraft:creeper,tag=napalm] run tag @s add melting
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~-1 at @e[distance=..1,type=minecraft:creeper,tag=napalm] run tag @s add melting
-execute if entity @s[scores={Moving=0}] positioned ~1 ~ ~ at @e[distance=..1,type=minecraft:creeper,tag=napalm] run tag @s add melting
-execute if entity @s[scores={Moving=0}] positioned ~ ~ ~1 at @e[distance=..1,type=minecraft:creeper,tag=napalm] run tag @s add melting
-execute if entity @s[tag=melting] run setblock ~ ~ ~ minecraft:water[level=7]
-kill @s[tag=melting]
+execute if entity @s[scores={Moving=0}] run function medabots_server:stage/ice_block_melt
 
 # Remove remains if dying
 execute if block ~ ~ ~ minecraft:lava run tag @s add dead
@@ -39,35 +19,10 @@ fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
 execute if entity @s[scores={Moving=0},tag=!freezing,tag=!dead] run fill ~ ~1 ~ ~ ~1 ~ minecraft:black_stained_glass replace minecraft:air
 
 # Reset if this is a valid move
-tag @s remove valid_move
-execute if entity @s[scores={Moving=1}] unless blocks ~0.5 ~ ~ ~0.5 ~ ~ ~1 ~ ~ masked run tag @s add valid_move
-execute if entity @s[scores={Moving=1}] if block ~0.5 ~ ~ minecraft:air run tag @s add valid_move
-execute if entity @s[scores={Moving=1}] if block ~0.5 ~ ~ minecraft:iron_block run tag @s add valid_move
-execute if entity @s[scores={Moving=1}] if block ~0.5 ~ ~ minecraft:piston_head run tag @s add valid_move
-execute if entity @s[scores={Moving=1}] positioned ~0.5 ~ ~ if entity @e[distance=..0.4,tag=round_stone] run tag @s remove valid_move
-execute if entity @s[scores={Moving=1}] positioned ~0.5 ~ ~ if entity @e[distance=..0.4,tag=ice_block] run tag @s remove valid_move
-execute if entity @s[scores={Moving=2}] unless blocks ~ ~ ~0.5 ~ ~ ~0.5 ~ ~ ~1 masked run tag @s add valid_move
-execute if entity @s[scores={Moving=2}] if block ~ ~ ~0.5 minecraft:air run tag @s add valid_move
-execute if entity @s[scores={Moving=2}] if block ~ ~ ~0.5 minecraft:iron_block run tag @s add valid_move
-execute if entity @s[scores={Moving=2}] if block ~ ~ ~0.5 minecraft:piston_head run tag @s add valid_move
-execute if entity @s[scores={Moving=2}] positioned ~ ~ ~0.5 if entity @e[distance=..0.4,tag=round_stone] run tag @s remove valid_move
-execute if entity @s[scores={Moving=2}] positioned ~ ~ ~0.5 if entity @e[distance=..0.4,tag=ice_block] run tag @s remove valid_move
-execute if entity @s[scores={Moving=3}] unless blocks ~-0.5 ~ ~ ~-0.5 ~ ~ ~-1 ~ ~ masked run tag @s add valid_move
-execute if entity @s[scores={Moving=3}] if block ~-0.5 ~ ~ minecraft:air run tag @s add valid_move
-execute if entity @s[scores={Moving=3}] if block ~-0.5 ~ ~ minecraft:iron_block run tag @s add valid_move
-execute if entity @s[scores={Moving=3}] if block ~-0.5 ~ ~ minecraft:piston_head run tag @s add valid_move
-execute if entity @s[scores={Moving=3}] positioned ~-0.5 ~ ~ if entity @e[distance=..0.4,tag=round_stone] run tag @s remove valid_move
-execute if entity @s[scores={Moving=3}] positioned ~-0.5 ~ ~ if entity @e[distance=..0.4,tag=ice_block] run tag @s remove valid_move
-execute if entity @s[scores={Moving=4}] unless blocks ~ ~ ~-0.5 ~ ~ ~-0.5 ~ ~ ~-1 masked run tag @s add valid_move
-execute if entity @s[scores={Moving=4}] if block ~ ~ ~-0.5 minecraft:air run tag @s add valid_move
-execute if entity @s[scores={Moving=4}] if block ~ ~ ~-0.5 minecraft:iron_block run tag @s add valid_move
-execute if entity @s[scores={Moving=4}] if block ~ ~ ~-0.5 minecraft:piston_head run tag @s add valid_move
-execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.5 if entity @e[distance=..0.4,tag=round_stone] run tag @s remove valid_move
-execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.5 if entity @e[distance=..0.4,tag=ice_block] run tag @s remove valid_move
-tag @s[tag=freezing] remove valid_move
-scoreboard players set @s[tag=!valid_move,scores={Moving=0..}] Moving 0
+execute if entity @s[scores={Moving=1..}] run function medabots_server:stage/ice_block_valid_move
 
 # Keep moving only if on ice
+scoreboard players set @s[tag=!valid_move,scores={Moving=0..}] Moving 0
 execute if entity @s[scores={Moving=1..}] if block ~ ~-1 ~ #minecraft:ice run tag @s add on_ice
 
 # Move bit by bit if on ice
@@ -110,26 +65,7 @@ scoreboard players set @s[scores={Time=20..}] Time 0
 execute if entity @s[scores={Time=1}] run playsound medabots_server:block.moving_block.move block @a ~ ~ ~ 1
 
 # Crush enemies
-execute if entity @s[scores={Moving=1..}] run tag @a[distance=..0.5,tag=hostile] add had_death
-execute if entity @s[scores={Moving=1..}] as @a[distance=..0.5,tag=hostile] run tellraw @a {"translate":"medabots_server:death.ice_block","with":[{"selector":"@s"},{"translate":"medabots_server:entity.ice_block"}]}
-execute if entity @s[scores={Moving=1..}] run tag @e[distance=..0.5,tag=hostile,tag=!ice_block,type=!minecraft:item,tag=!rubberobo] add dead
-execute if entity @s[scores={Moving=1..}] as @e[distance=..0.5,tag=hostile,tag=rubberobo] run data merge entity @s {AbsorptionAmount:0f}
-execute if entity @s[scores={Moving=1}] positioned ~0.2 ~ ~ run tag @a[distance=..0.7,tag=hostile] add had_death
-execute if entity @s[scores={Moving=1}] positioned ~0.2 ~ ~ as @a[distance=..0.7,tag=hostile] run tellraw @a {"translate":"medabots_server:death.ice_block","with":[{"selector":"@s"},{"translate":"medabots_server:entity.ice_block"}]}
-execute if entity @s[scores={Moving=1}] positioned ~0.2 ~ ~ run tag @e[distance=..0.7,tag=hostile,tag=!ice_block,type=!minecraft:item,tag=!rubberobo] add dead
-execute if entity @s[scores={Moving=1}] positioned ~0.2 ~ ~ as @e[distance=..0.5,tag=hostile,tag=rubberobo] run data merge entity @s {AbsorptionAmount:0f}
-execute if entity @s[scores={Moving=2}] positioned ~ ~ ~0.2 run tag @a[distance=..0.7,tag=hostile] add had_death
-execute if entity @s[scores={Moving=2}] positioned ~ ~ ~0.2 as @a[distance=..0.7,tag=hostile] run tellraw @a {"translate":"medabots_server:death.ice_block","with":[{"selector":"@s"},{"translate":"medabots_server:entity.ice_block"}]}
-execute if entity @s[scores={Moving=2}] positioned ~ ~ ~0.2 run tag @e[distance=..0.7,tag=hostile,tag=!ice_block,type=!minecraft:item,tag=!rubberobo] add dead
-execute if entity @s[scores={Moving=2}] positioned ~ ~ ~0.2 as @e[distance=..0.5,tag=hostile,tag=rubberobo] run data merge entity @s {AbsorptionAmount:0f}
-execute if entity @s[scores={Moving=3}] positioned ~-0.2 ~ ~ run tag @a[distance=..0.7,tag=hostile] add had_death
-execute if entity @s[scores={Moving=3}] positioned ~-0.2 ~ ~ as @a[distance=..0.7,tag=hostile] run tellraw @a {"translate":"medabots_server:death.ice_block","with":[{"selector":"@s"},{"translate":"medabots_server:entity.ice_block"}]}
-execute if entity @s[scores={Moving=3}] positioned ~-0.2 ~ ~ run tag @e[distance=..0.7,tag=hostile,tag=!ice_block,type=!minecraft:item,tag=!rubberobo] add dead
-execute if entity @s[scores={Moving=3}] positioned ~-0.2 ~ ~ as @e[distance=..0.5,tag=hostile,tag=rubberobo] run data merge entity @s {AbsorptionAmount:0f}
-execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.2 run tag @a[distance=..0.7,tag=hostile] add had_death
-execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.2 as @a[distance=..0.7,tag=hostile] run tellraw @a {"translate":"medabots_server:death.ice_block","with":[{"selector":"@s"},{"translate":"medabots_server:entity.ice_block"}]}
-execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.2 run tag @e[distance=..0.7,tag=hostile,tag=!ice_block,type=!minecraft:item,tag=!rubberobo] add dead
-execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.2 as @e[distance=..0.5,tag=hostile,tag=rubberobo] run data merge entity @s {AbsorptionAmount:0f}
+execute if entity @s[scores={Moving=1..}] run function medabots_server:stage/ice_block_crush
 
 # Remove model and collision if dead
 execute if entity @s[tag=dead] run function medabots_server:stage/ice_block_death

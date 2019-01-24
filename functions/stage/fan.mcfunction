@@ -22,15 +22,4 @@ kill @s[tag=dead]
 scoreboard players set @s[scores={Time=10}] Time 0
 
 # Change the moving speed
-execute if entity @s[scores={Time=0}] positioned ~-1 ~ ~ at @a[distance=..1,scores={Destroy=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~ ~ ~-1 at @a[distance=..1,scores={Destroy=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~1 ~ ~ at @a[distance=..1,scores={Destroy=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~ ~ ~1 at @a[distance=..1,scores={Destroy=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~-1 ~ ~ at @a[distance=..1,scores={Press=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~ ~ ~-1 at @a[distance=..1,scores={Press=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~1 ~ ~ at @a[distance=..1,scores={Press=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~ ~ ~1 at @a[distance=..1,scores={Press=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~-1 ~ ~ at @a[distance=..1,scores={Hammer=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~ ~ ~-1 at @a[distance=..1,scores={Hammer=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~1 ~ ~ at @a[distance=..1,scores={Hammer=1..}] run scoreboard players add @s Moving 1
-execute if entity @s[scores={Time=0}] positioned ~ ~ ~1 at @a[distance=..1,scores={Hammer=1..}] run scoreboard players add @s Moving 1
+execute if entity @s[scores={Time=0}] run function medabots_server:stage/fan_hit
