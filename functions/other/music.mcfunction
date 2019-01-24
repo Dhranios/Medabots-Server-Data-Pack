@@ -1,3 +1,6 @@
+# Change hub music to normal, beach or sea
+execute if entity @s[scores={MusicType=1..3}] run function medabots_server:other/music_hub 
+
 # Cooldown
 scoreboard players remove @s[scores={Music=1..}] Music 1
 
@@ -20,11 +23,11 @@ scoreboard players set @s[scores={Music=0,MusicType=4}] Music 384
 playsound medabots_server:music.stage.mt_battle.stage music @s[scores={Music=0,MusicType=5}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=5}] Music 1095
 playsound medabots_server:music.stage.fly_course music @s[scores={Music=0,MusicType=6}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=6}] Music 1815
+scoreboard players set @s[scores={Music=0,MusicType=6}] Music 1816
 playsound medabots_server:music.stage.plains music @s[scores={Music=0,MusicType=7}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=7}] Music 1000
 playsound medabots_server:music.stage.rock music @s[scores={Music=0,MusicType=8}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=8}] Music 1300
+scoreboard players set @s[scores={Music=0,MusicType=8}] Music 1285
 playsound medabots_server:music.stage.jungle music @s[scores={Music=0,MusicType=9}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=9}] Music 1140
 playsound medabots_server:music.stage.seashore music @s[scores={Music=0,MusicType=10}] ~ ~ ~ 1000
@@ -38,9 +41,9 @@ scoreboard players set @s[scores={Music=0,MusicType=13}] Music 1673
 playsound medabots_server:music.stage.ruins_in music @s[scores={Music=0,MusicType=14}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=14}] Music 827
 playsound medabots_server:music.stage.laboratory music @s[scores={Music=0,MusicType=15}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=15}] Music 1371
+scoreboard players set @s[scores={Music=0,MusicType=15}] Music 1309
 playsound medabots_server:music.stage.park music @s[scores={Music=0,MusicType=16}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=16}] Music 795
+scoreboard players set @s[scores={Music=0,MusicType=16}] Music 640
 playsound medabots_server:music.stage.paradise music @s[scores={Music=0,MusicType=17}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=17}] Music 889
 playsound medabots_server:music.stage.under_stage music @s[scores={Music=0,MusicType=18}] ~ ~ ~ 1000

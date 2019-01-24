@@ -1,0 +1,19 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:golden_helmet"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.wave_1.you_you_traitor"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.you_you_traitor.description"
+        }
+    },
+    "parent": "medabots_server:wave_1/the_basics_of_battle",
+    "criteria": {
+        "bought_unknown_crown": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

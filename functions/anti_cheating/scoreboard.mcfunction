@@ -32,6 +32,7 @@ scoreboard objectives add Destroy dummy
 scoreboard objectives add Detect dummy
 scoreboard objectives add DetectTime dummy
 scoreboard objectives add Dialog dummy
+scoreboard objectives add DialogNr dummy
 scoreboard objectives add Donor dummy
 scoreboard objectives add Drop minecraft.custom:minecraft.drop
 scoreboard objectives add EdgeGrabAble dummy
@@ -43,7 +44,10 @@ scoreboard objectives add Float dummy
 scoreboard objectives add FloorSwitchTime dummy
 scoreboard objectives add Fly dummy
 scoreboard objectives add FlyCourse dummy
+scoreboard objectives add FlyCourseFee dummy
+scoreboard objectives add FlyCourseLapTime dummy
 scoreboard objectives add FlyCourseLaps dummy
+scoreboard objectives add FlyCoursePlace dummy
 scoreboard objectives add FlyCourseSpeed trigger
 scoreboard objectives add FlyCourseTime dummy
 scoreboard objectives add FlyHackTime dummy
@@ -55,6 +59,7 @@ scoreboard objectives add Gatling dummy
 scoreboard objectives add GoalSearch dummy
 scoreboard objectives add GuardGravity dummy
 scoreboard objectives add GuardGunpowder dummy
+scoreboard objectives add GuardNr dummy
 scoreboard objectives add GuardOptical dummy
 scoreboard objectives add Hammer dummy
 scoreboard objectives add HeadArmor dummy
@@ -84,8 +89,8 @@ scoreboard objectives add InfectTime dummy
 scoreboard objectives add InfectTimer dummy
 scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer playerKillCount
-scoreboard objectives add LagdouKill dummy
 scoreboard objectives add Laser dummy
+scoreboard objectives add LastPlaceTime dummy
 scoreboard objectives add LeftArmArmor dummy
 scoreboard objectives add LeftArmDanger dummy
 scoreboard objectives add LeftArmPer dummy
@@ -165,13 +170,13 @@ scoreboard objectives add SelfDestructTime dummy
 scoreboard objectives add ServerStats dummy {"translate":"medabots_server:scoreboard.objective.server_stats"}
 scoreboard objectives add SettingsCheck trigger
 scoreboard objectives add ShootingTrap dummy
+scoreboard objectives add Shopping trigger
 scoreboard objectives add Sneak minecraft.custom:minecraft.crouch_one_cm
 scoreboard objectives add Sneaking minecraft.custom:minecraft.sneak_time
 scoreboard objectives add Sound dummy
 scoreboard objectives add Stage dummy
 scoreboard objectives add Stars dummy
 scoreboard objectives add StatusClear dummy
-scoreboard objectives add StoryProgress dummy
 scoreboard objectives add StreetPassCool dummy
 scoreboard objectives add StreetPassHits dummy
 scoreboard objectives add StreetPassTime dummy
@@ -179,6 +184,7 @@ scoreboard objectives add Swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add Sword dummy
 scoreboard objectives add TaskCheck trigger
 scoreboard objectives add Time dummy
+scoreboard objectives add Trading minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add UpToDate dummy
 scoreboard objectives add UsePart minecraft.used:minecraft.fishing_rod
 scoreboard objectives add Verified trigger

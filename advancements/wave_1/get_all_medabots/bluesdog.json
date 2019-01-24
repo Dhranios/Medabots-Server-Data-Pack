@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:nether_star"
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:8,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.bluesdog_headcannon\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.rifle\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.rifle.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"18\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"60\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.bluesdog\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.bluesdog_headcannon.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.bluesdog_headcannon.model\\\"}\"]},medabots_server:{id:\"medabots_server:bluesdog_headcannon\",gender:0b,move:\"rifle\",part:\"head\",armor:60,power:40,uses:18,activated:0b,version:1}}"
         },
         "title": {
             "translate": "medabots_server:entity.bluesdog"
@@ -54,6 +55,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/mt_battle/get_all_medabots/bluesdog"
+        "function": "medabots_server:advancements/wave_1/get_all_medabots/bluesdog"
     }
 }

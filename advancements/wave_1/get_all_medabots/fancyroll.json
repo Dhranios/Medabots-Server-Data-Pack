@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:nether_star"
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:36,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.fancyroll_palrunmannor\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.bug\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.bug.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"7\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"55\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.female\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.fancyroll\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.fancyroll_palrunmannor.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.fancyroll_palrunmannor.model\\\"}\"]},medabots_server:{id:\"medabots_server:fancyroll_palrunmannor\",gender:1b,move:\"bug\",part:\"head\",armor:55,power:33,uses:7,activated:0b,version:1}}"
         },
         "title": {
             "translate": "medabots_server:entity.fancyroll"
@@ -54,6 +55,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/mt_battle/get_all_medabots/fancyroll"
+        "function": "medabots_server:advancements/wave_1/get_all_medabots/fancyroll"
     }
 }

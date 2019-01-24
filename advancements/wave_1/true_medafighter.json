@@ -13,29 +13,8 @@
     },
     "parent": "medabots_server:wave_1/torutoru_land_master",
     "criteria": {
-        "grassland_c_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "jungle_c_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "seashore_c_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "iceberg_c_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "ruins_out_c_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "laboratory_c_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "boxer_first_go": {
+        "cleared": {
             "trigger": "minecraft:impossible"
         }
-    },
-    "rewards": {
-        "function": "medabots_server:advancements/passes/extra"
     }
 }

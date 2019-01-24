@@ -27,7 +27,7 @@ execute unless entity @s[scores={Time=0..}] if block ~ ~-1 ~ minecraft:stone_bri
 execute unless entity @s[scores={Time=0..}] if block ~ ~-1 ~ minecraft:cyan_terracotta run tag @s add cyan_terracotta
 
 # New spring walls need scores
-execute unless entity @s[scores={Time=-3..200}] run scoreboard players set @s Time 40
+execute unless entity @s[scores={Time=-3..300}] run scoreboard players set @s Time 40
 
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead,tag=air] run setblock ~ ~-1 ~ minecraft:air
@@ -59,14 +59,14 @@ execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 kill @s[tag=dead]
 
 # Force a push if a round stone or ice block moves into the face
-execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1 ~-0.38 ~ if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=3}] run scoreboard players set @s Time 39
-execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1 ~-0.38 ~ if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=3}] run scoreboard players set @s Time 39
-execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.38 ~-1 if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=2}] run scoreboard players set @s Time 39
-execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.38 ~-1 if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=2}] run scoreboard players set @s Time 39
-execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1 ~-0.38 ~ if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=1}] run scoreboard players set @s Time 39
-execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1 ~-0.38 ~ if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=1}] run scoreboard players set @s Time 39
-execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.38 ~1 if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=4}] run scoreboard players set @s Time 39
-execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.38 ~1 if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=4}] run scoreboard players set @s Time 39
+execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1.2 ~-0.38 ~ if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=3}] run scoreboard players set @s[scores={Time=40..}] Time 40
+execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1.2 ~-0.38 ~ if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=3}] run scoreboard players set @s[scores={Time=40..}] Time 40
+execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.38 ~-1.2 if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=2}] run scoreboard players set @s[scores={Time=40..}] Time 40
+execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.38 ~-1.2 if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=2}] run scoreboard players set @s[scores={Time=40..}] Time 40
+execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1.2 ~-0.38 ~ if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=1}] run scoreboard players set @s[scores={Time=40..}] Time 40
+execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1.2 ~-0.38 ~ if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=1}] run scoreboard players set @s[scores={Time=40..}] Time 40
+execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.38 ~1.2 if entity @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=4}] run scoreboard players set @s[scores={Time=40..}] Time 40
+execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.38 ~1.2 if entity @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=4}] run scoreboard players set @s[scores={Time=40..}] Time 40
 
 # Push
 execute if entity @s[scores={Time=-2}] run setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=false]

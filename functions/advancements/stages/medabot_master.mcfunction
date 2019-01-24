@@ -1,0 +1,2 @@
+advancement grant @s only medabots_server:stages/root
+advancement grant @s[advancements={medabots_server:wave_1/true_medafighter=true,medabots_server:stages/grassland_d_first_go=true,medabots_server:stages/jungle_d_first_go=true,medabots_server:stages/snowfield_d_first_go=true,medabots_server:stages/iceberg_d_first_go=true,medabots_server:stages/ruins_in_d_first_go=true,medabots_server:stages/laboratory_d_first_go=true}] only medabots_server:wave_1/medabot_master

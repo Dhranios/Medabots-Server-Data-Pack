@@ -1,3 +1,6 @@
+# Settings options show on un-AFKing
+execute unless entity @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0}] run tellraw @s[scores={AFKTime=1200..}] {"translate":"medabots_server:settings.click.2","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 2"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.click"}},"extra":[{"text":"\n"},{"translate":"medabots_server:settings.click.3","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 3"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.click"}}},{"text":"\n"},{"translate":"medabots_server:message.pending_tasks","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TaskCheck set 1"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:message.pending_tasks.click"}}}]}
+
 # This is a bot
 team join Bot @s[tag=Bot,team=AFK,scores={Walk=1..}]
 team join Bot @s[tag=Bot,team=AFK,scores={Run=1..}]
@@ -17,6 +20,7 @@ team join Bot @s[tag=Bot,team=AFK,scores={Attack=1..}]
 team join Bot @s[tag=Bot,team=AFK,scores={Drop=1..}]
 team join Bot @s[tag=Bot,team=AFK,scores={Offline=1..}]
 team join Bot @s[tag=Bot,team=AFK,scores={UsePart=1..}]
+team join Bot @s[tag=Bot,team=AFK,scores={Trading=1..}]
 team join Bot @s[tag=Bot,team=EnemyPlayer]
 team join Bot @s[tag=Bot,team=]
 
@@ -39,6 +43,7 @@ team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Attack=1..}]
 team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Drop=1..}]
 team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Offline=1..}]
 team join Advanced @s[team=AFK,scores={OnlineTime=5760..,UsePart=1..}]
+team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Trading=1..}]
 team join Advanced @s[team=EnemyPlayer,scores={OnlineTime=5760..,Battle=0}]
 team join Advanced @s[team=,scores={OnlineTime=5760..}]
 
@@ -61,6 +66,7 @@ team join Donor @s[team=AFK,scores={Donor=1,Attack=1..}]
 team join Donor @s[team=AFK,scores={Donor=1,Drop=1..}]
 team join Donor @s[team=AFK,scores={Donor=1,Offline=1..}]
 team join Donor @s[team=AFK,scores={Donor=1,UsePart=1..}]
+team join Donor @s[team=AFK,scores={Donor=1,Trading=1..}]
 team join Donor @s[team=EnemyPlayer,scores={Donor=1,Battle=0}]
 team join Donor @s[team=Advanced,scores={Donor=1}]
 team join Donor @s[team=,scores={Donor=1}]
@@ -84,6 +90,7 @@ team join MtBattleMaster @s[team=AFK,scores={MtBattle=1,Attack=1..}]
 team join MtBattleMaster @s[team=AFK,scores={MtBattle=1,Drop=1..}]
 team join MtBattleMaster @s[team=AFK,scores={MtBattle=1,Offline=1..}]
 team join MtBattleMaster @s[team=AFK,scores={MtBattle=1,UsePart=1..}]
+team join MtBattleMaster @s[team=AFK,scores={MtBattle=1,Trading=1..}]
 team join MtBattleMaster @s[team=EnemyPlayer,scores={MtBattle=1,Battle=0}]
 team join MtBattleMaster @s[team=Bot,scores={MtBattle=1}]
 team join MtBattleMaster @s[team=Advanced,scores={MtBattle=1}]
@@ -109,6 +116,7 @@ team join Moderator @s[team=AFK,scores={Moderator=1,Attack=1..}]
 team join Moderator @s[team=AFK,scores={Moderator=1,Drop=1..}]
 team join Moderator @s[team=AFK,scores={Moderator=1,Offline=1..}]
 team join Moderator @s[team=AFK,scores={Moderator=1,UsePart=1..}]
+team join Moderator @s[team=AFK,scores={Moderator=1,Trading=1..}]
 team join Moderator @s[team=EnemyPlayer,scores={Moderator=1,Battle=0}]
 team join Moderator @s[team=Bot,scores={Moderator=1}]
 team join Moderator @s[team=Advanced,scores={Moderator=1}]
@@ -135,9 +143,12 @@ team leave @s[team=AFK,scores={Attack=1..}]
 team leave @s[team=AFK,scores={Drop=1..}]
 team leave @s[team=AFK,scores={Offline=1..}]
 team leave @s[team=AFK,scores={UsePart=1..}]
+team leave @s[team=AFK,scores={Trading=1..}]
 team leave @s[team=EnemyPlayer,scores={Battle=0}]
 
 # Not AFK anymore
+execute if entity @s[scores={AFKTime=1200..,Trading=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
+scoreboard players set @s[scores={Trading=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,UsePart=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
 scoreboard players set @s[scores={UsePart=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Attack=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
@@ -187,23 +198,23 @@ tellraw @s[scores={AFKTime=2400}] {"translate":"chat.type.text","with":[{"transl
 
 # Make sounds
 execute if entity @s[scores={Damage=1..}] run playsound medabots_server:entity.medabot.damage player @s ~ ~ ~ .5
-execute if entity @s[scores={Run=0,Jump=1..}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ .05
-execute if entity @s[scores={Run=1..,Jump=1..}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ .1
-execute if entity @s[scores={Run=5..},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
-execute if entity @s[scores={Walk=5..},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Run=0,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ .05
+execute if entity @s[scores={Run=1..,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ .1
+execute if entity @s[scores={Run=5..,Jump=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Walk=5..,Jump=0},tag=action_mode,tag=!hostile] if block ~ ~-1 ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
 execute if entity @s[scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ .1
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ .025
+execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 8
 execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run playsound medabots_server:entity.medabot.move.mod player @s ~ ~ ~ .1
+execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run scoreboard players set @s Sound 20
 execute if entity @s[scores={Fall=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.fall player @s ~ ~ ~ .1
+execute if entity @s[scores={Fall=5..,Sound=0}] run scoreboard players set @s Sound 10
 execute if entity @s[scores={Run=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.run player @s ~ ~ ~ .05
+execute if entity @s[scores={Run=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 6
 execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.under_water player @s ~ ~ ~ .1
+execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run scoreboard players set @s Sound 17
 execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.on_water player @s ~ ~ ~ .1
 execute if entity @s[scores={Swimming=5..,Sound=0}] run scoreboard players set @s Sound 2
-execute if entity @s[scores={Run=5..,Sound=0,Jump=0}] run scoreboard players set @s Sound 6
-execute if entity @s[scores={Walk=5..,Sound=0,Jump=0}] run scoreboard players set @s Sound 8
-execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run scoreboard players set @s Sound 20
-execute if entity @s[scores={Fall=5..,Sound=0}] run scoreboard players set @s Sound 10
-execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run scoreboard players set @s Sound 17
 execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run scoreboard players set @s Sound 17
 
 # Fast falling
@@ -225,6 +236,9 @@ scoreboard players set @s[scores={Pig=1..}] Pig 0
 scoreboard players set @s[scores={Fall=1..}] Fall 0
 scoreboard players set @s[scores={Sneaking=1..}] Sneaking 0
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
+tag @s[tag=trading] remove trading
+tag @s[scores={Trading=1..}] add trading
+scoreboard players set @s[scores={Trading=1..}] Trading 0
 
 # Give back headgear after going AFK
 replaceitem entity @s[tag=sunglasses,scores={AFKTime=0}] armor.head minecraft:chainmail_helmet{Unbreakable:1b,HideFlags:4,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sunglasses\"}"},AttributeModifiers:[],medabots_server:{id:"medabots_server:sunglasses"}}
@@ -235,7 +249,7 @@ tag @s[tag=!sunglasses,scores={AFKTime=1199},nbt={Inventory:[{Slot:103b,tag:{med
 tag @s[tag=!master_crown,scores={AFKTime=1199},nbt={Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:master_crown"}}}]}] add master_crown
 
 # Count up
-execute unless entity @s[scores={Dialog=0..}] run scoreboard players add @s[scores={Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0}] AFKTime 1
+execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0}] AFKTime 1
 
 # Make sure non-AFKers get knockback again
 execute unless entity @s[scores={Wave=1..}] run clear @s[team=!AFK] minecraft:stone_button{medabots_server:{id:"medabots_server:remove_knockback"}}

@@ -1,0 +1,48 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:stone_bricks"
+        },
+        "title": {
+            "translate": "medabots_server:location.ruins_out",
+			"with": [
+				{
+					"text": "B"
+				}
+			],
+			"extra": [
+				{
+					"translate": "medabots_server:message.stage.requires.version"
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.rubberobo"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.version",
+			"with": [
+				{
+					"translate": "medabots_server:location.ruins_out",
+					"with": [
+						{
+							"text": "B"
+						}
+					]
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.rubberobo"
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/ruins_out_b_second_go",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/torutoru_land_master"
+    }
+}

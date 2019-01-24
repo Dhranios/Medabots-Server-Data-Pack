@@ -36,6 +36,12 @@ execute if entity @s[type=minecraft:arrow] run function medabots_server:any_arro
 execute if entity @s[type=minecraft:tnt] run function medabots_server:anti_cheating/tnt
 execute if entity @s[type=minecraft:tnt_minecart] run function medabots_server:anti_cheating/tnt
 
+# Cutscene entities
+execute if entity @s[tag=cutscene] run function medabots_server:dialog/main
+
+# All shops
+execute if entity @s[tag=shop] run function medabots_server:shopping/main
+
 # Prevent zombies from converting to drowned
 execute if entity @s[type=minecraft:zombie,nbt=!{DrownedConversionTime:-1,InWaterTime:-1}] run data merge entity @s {DrownedConversionTime:-1,InWaterTime:-1}
 

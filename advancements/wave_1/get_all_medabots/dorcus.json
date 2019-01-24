@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:nether_star"
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:32,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.dorcus_twinincome\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.scout\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.scout.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"6\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"85\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.dorcus\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.dorcus_twinincome.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.dorcus_twinincome.model\\\"}\"]},medabots_server:{id:\"medabots_server:dorcus_twinincome\",gender:0b,move:\"scout\",part:\"head\",armor:85,power:72,uses:6,activated:0b,version:1}}"
         },
         "title": {
             "translate": "medabots_server:entity.dorcus"
@@ -54,6 +55,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/mt_battle/get_all_medabots/dorcus"
+        "function": "medabots_server:advancements/wave_1/get_all_medabots/dorcus"
     }
 }

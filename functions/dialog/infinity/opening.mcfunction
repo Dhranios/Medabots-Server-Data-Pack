@@ -1,145 +1,233 @@
+scoreboard players operation @s[scores={Dialog=0}] DialogNr > @a[scores={DialogNr=0..}] DialogNr
+scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression opening
 stopsound @s[scores={Dialog=1}] music
 scoreboard players set @s[scores={Dialog=1}] MusicType -1
 scoreboard players set @s[scores={Dialog=1}] Music 0
+teleport @s[scores={Dialog=1}] -284 55 -53 90 0
+teleport @s[scores={Dialog=2..591}] -284 55 -53
+execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -305 55 -53 {Duration:1000000,Tags:["cutscene","brass"],Rotation:[-90.0f,0.0f]}
+execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-305,y=55,z=-53,distance=..1,tag=brass] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
+execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[x=-305,y=55,z=-53,distance=..1,tag=brass] MedabotNr 1
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -53 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","brass","legs","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:39,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_flaregather\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged.description\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.sailor_multi\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_flaregather.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_flaregather.model\"}"]},medabots_server:{id:"medabots_server:sailor_multi_flaregather",gender:1b,move:"two_legged",part:"legs",armor:40,defense:40,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -53 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","brass","left_arm","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:39,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_short_shot\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle.description\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"35\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.sailor_multi\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_short_shot.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_short_shot.model\"}"]},medabots_server:{id:"medabots_server:sailor_multi_short_shot",gender:1b,move:"rifle",part:"left_arm",armor:35,power:24,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -53 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","brass","right_arm","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:39,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_pateri_vulcan\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.gatling\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.gatling.description\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"35\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.sailor_multi\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_pateri_vulcan.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_pateri_vulcan.model\"}"]},medabots_server:{id:"medabots_server:sailor_multi_pateri_vulcan",gender:1b,move:"gatling",part:"right_arm",armor:35,power:20,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -53 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","brass","head","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:39,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_variablehair\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.scout\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.scout.description\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"7\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"75\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.sailor_multi\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_variablehair.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sailor_multi_variablehair.model\"}"]},medabots_server:{id:"medabots_server:sailor_multi_variablehair",gender:1b,move:"scout",part:"head",armor:75,power:50,uses:7,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] positioned -305 55 -53 as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=brass] MedabotNr
+execute at @s as @e[x=-305,y=55,z=-53,tag=brass,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -284 55 -51 {Duration:1000000,Tags:["cutscene","metabee"],Rotation:[90.0f,0.0f]}
+execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-284,y=55,z=-51,distance=..1,tag=metabee] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
+execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[x=-284,y=55,z=-51,distance=..1,tag=metabee] MedabotNr 1
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -284 55 -51 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","metabee","legs","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_enplace\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged.description\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"50\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.saikachis\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_enplace.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_enplace.model\"}"]},medabots_server:{id:"medabots_server:saikachis_enplace",gender:0b,move:"two_legged",part:"legs",armor:50,defense:56,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -284 55 -51 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","metabee","left_arm","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_blaster\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.gatling\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.gatling.description\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"45\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.saikachis\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_blaster.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_blaster.model\"}"]},medabots_server:{id:"medabots_server:saikachis_blaster",gender:0b,move:"gatling",part:"left_arm",armor:45,power:26,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -284 55 -51 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","metabee","right_arm","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_fuser\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle.description\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"45\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.saikachis\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_fuser.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_fuser.model\"}"]},medabots_server:{id:"medabots_server:saikachis_fuser",gender:0b,move:"rifle",part:"right_arm",armor:45,power:30,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -284 55 -51 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","metabee","head","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}",ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_balister\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.missile\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.missile.description\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"6\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"75\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.saikachis\"}","","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_balister.quote\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.saikachis_balister.model\"}"]},medabots_server:{id:"medabots_server:saikachis_balister",gender:0b,move:"missile",part:"head",armor:75,power:28,uses:6,activated:0b,version:1}}}]}
+execute if entity @s[scores={Dialog=1}] positioned -284 55 -51 as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=metabee] MedabotNr
+execute at @s as @e[x=-284,y=55,z=-51,tag=metabee,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -51 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["erika","cutscene"],Rotation:[-90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:6046341}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:14574460}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:10272473}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=-305,y=55,z=-51,tag=erika,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -343 55 -52 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["select_corps","cutscene"],Rotation:[-90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2437407}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:13948116}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:10473420}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=-343,y=55,z=-52,tag=select_corps,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.1"}]}
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.2"}]}
-tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.3"}]}
-tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.4"}]}
-tellraw @s[scores={Dialog=184}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.5"}]}
-tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.6"}]}
-tellraw @s[scores={Dialog=256}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.7"}]}
-tellraw @s[scores={Dialog=360}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.8"}]}
-tellraw @s[scores={Dialog=392}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.9"}]}
-tellraw @s[scores={Dialog=432}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.10"}]}
-tellraw @s[scores={Dialog=480}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.11"}]}
-tellraw @s[scores={Dialog=512}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.12","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=544}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.13"}]}
-tellraw @s[scores={Dialog=576}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.14"}]}
-tellraw @s[scores={Dialog=600}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.15"}]}
-tellraw @s[scores={Dialog=632}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.16"}]}
-tellraw @s[scores={Dialog=712}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.17"}]}
-tellraw @s[scores={Dialog=744}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.18"}]}
-tellraw @s[scores={Dialog=776}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.19"}]}
-tellraw @s[scores={Dialog=856}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.20"}]}
-tellraw @s[scores={Dialog=880}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.21"}]}
-tellraw @s[scores={Dialog=960}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.22"}]}
-tellraw @s[scores={Dialog=968}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.23"}]}
-tellraw @s[scores={Dialog=1000}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.24"}]}
-tellraw @s[scores={Dialog=1016}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.25"}]}
-tellraw @s[scores={Dialog=1064}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.26"}]}
-tellraw @s[scores={Dialog=1176}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.27"}]}
-tellraw @s[scores={Dialog=1208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.28"}]}
-tellraw @s[scores={Dialog=1224}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.29"}]}
-tellraw @s[scores={Dialog=1256}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.30"}]}
-tellraw @s[scores={Dialog=1320}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.31"}]}
-tellraw @s[scores={Dialog=1376}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.32"}]}
-tellraw @s[scores={Dialog=1384}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.33"}]}
-tellraw @s[scores={Dialog=1464}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.34"}]}
-tellraw @s[scores={Dialog=1480}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.35"}]}
-tellraw @s[scores={Dialog=1520}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.36"}]}
-tellraw @s[scores={Dialog=1536}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.37"}]}
-tellraw @s[scores={Dialog=1656}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.38"}]}
-tellraw @s[scores={Dialog=1696}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.39"}]}
-tellraw @s[scores={Dialog=1712}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.40"}]}
-tellraw @s[scores={Dialog=1736}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.41"}]}
-tellraw @s[scores={Dialog=1808}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.42"}]}
-tellraw @s[scores={Dialog=1840}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.43"}]}
-tellraw @s[scores={Dialog=1864}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.44"}]}
-tellraw @s[scores={Dialog=1904}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.45"}]}
-tellraw @s[scores={Dialog=1928}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.46"}]}
-tellraw @s[scores={Dialog=1960}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.47"}]}
-tellraw @s[scores={Dialog=2024}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.48"}]}
-tellraw @s[scores={Dialog=2040}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.49"}]}
-tellraw @s[scores={Dialog=2080}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.50"}]}
-tellraw @s[scores={Dialog=2152}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.51"}]}
-tellraw @s[scores={Dialog=2192}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.52"}]}
-tellraw @s[scores={Dialog=2200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.53"}]}
-tellraw @s[scores={Dialog=2224}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.54"}]}
-tellraw @s[scores={Dialog=2256}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.55"}]}
-tellraw @s[scores={Dialog=2312}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.56"}]}
-tellraw @s[scores={Dialog=2344}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.57"}]}
-tellraw @s[scores={Dialog=2424}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.58"}]}
-tellraw @s[scores={Dialog=2432}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.59"}]}
-tellraw @s[scores={Dialog=2448}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.60"}]}
-tellraw @s[scores={Dialog=2504}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.61"}]}
-tellraw @s[scores={Dialog=2584}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.62"}]}
-tellraw @s[scores={Dialog=2608}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.63"}]}
-tellraw @s[scores={Dialog=2648}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.64"}]}
-tellraw @s[scores={Dialog=2656}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.65"}]}
-tellraw @s[scores={Dialog=2680}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.66"}]}
-tellraw @s[scores={Dialog=2728}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.67"}]}
-tellraw @s[scores={Dialog=2800}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.68"}]}
-tellraw @s[scores={Dialog=2832}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.69"}]}
-tellraw @s[scores={Dialog=2912}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.70"}]}
-tellraw @s[scores={Dialog=2920}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.71"}]}
-tellraw @s[scores={Dialog=2968}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.72"}]}
-tellraw @s[scores={Dialog=3024}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.73"}]}
-tellraw @s[scores={Dialog=3040}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.74"}]}
-tellraw @s[scores={Dialog=3056}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.75"}]}
-tellraw @s[scores={Dialog=3072}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.76"}]}
-tellraw @s[scores={Dialog=3144}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.77"}]}
-tellraw @s[scores={Dialog=3176}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.78"}]}
-tellraw @s[scores={Dialog=3296}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.79"}]}
-tellraw @s[scores={Dialog=3320}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.80"}]}
-tellraw @s[scores={Dialog=3344}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.81"}]}
-tellraw @s[scores={Dialog=3376}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.82"}]}
-tellraw @s[scores={Dialog=3456}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.83"}]}
-tellraw @s[scores={Dialog=3488}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.84"}]}
-tellraw @s[scores={Dialog=3512}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.85"}]}
-stopsound @s[scores={Dialog=3568}] music
-scoreboard players set @s[scores={Dialog=3568}] Music 0
-tellraw @s[scores={Dialog=3568}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.86"}]}
-tellraw @s[scores={Dialog=3576}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.87"}]}
-tellraw @s[scores={Dialog=3596}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.88"}]}
-tellraw @s[scores={Dialog=3668}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.89"}]}
-tellraw @s[scores={Dialog=3716}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.90"}]}
-tellraw @s[scores={Dialog=3724}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.91"}]}
-tellraw @s[scores={Dialog=3744}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.92"}]}
-tellraw @s[scores={Dialog=3752}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.93"}]}
-tellraw @s[scores={Dialog=3784}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.94"}]}
-tellraw @s[scores={Dialog=3816}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.95"}]}
-tellraw @s[scores={Dialog=3824}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.96"}]}
-tellraw @s[scores={Dialog=3904}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.97"}]}
-tellraw @s[scores={Dialog=3952}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.98"}]}
-tellraw @s[scores={Dialog=3992}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.99"}]}
-tellraw @s[scores={Dialog=4016}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.100"}]}
-tellraw @s[scores={Dialog=4048}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.101","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=4120}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.102"}]}
-tellraw @s[scores={Dialog=4200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.103"}]}
-tellraw @s[scores={Dialog=4224}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.104"}]}
-tellraw @s[scores={Dialog=4232}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.105"}]}
-tellraw @s[scores={Dialog=4304}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.106"}]}
-tellraw @s[scores={Dialog=4368}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.107","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=4408}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.108"}]}
-tellraw @s[scores={Dialog=4472}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.109"}]}
-tellraw @s[scores={Dialog=4512}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.110"}]}
-tellraw @s[scores={Dialog=4560}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.111"}]}
-stopsound @s[scores={Dialog=4632}] music
-scoreboard players set @s[scores={Dialog=4632}] Music 0
-tellraw @s[scores={Dialog=4632}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.112"}]}
-tellraw @s[scores={Dialog=4648}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.113"}]}
-tellraw @s[scores={Dialog=4696}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.114"}]}
-tellraw @s[scores={Dialog=4736}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.115"}]}
-tellraw @s[scores={Dialog=4744}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.116"}]}
-tellraw @s[scores={Dialog=4776}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.117"}]}
-tellraw @s[scores={Dialog=4816}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.118"}]}
-tellraw @s[scores={Dialog=4840}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.119"}]}
-tellraw @s[scores={Dialog=4864}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.120"}]}
-tag @s[scores={Dialog=4904}] remove dialog_infinity_opening
-stopsound @s[scores={Dialog=4904}] music
-scoreboard players set @s[scores={Dialog=4904}] MusicType 1
-scoreboard players set @s[scores={Dialog=4904}] Music 0
-scoreboard players reset @s[scores={Dialog=4904}] Dialog
+execute if entity @s[scores={Dialog=40}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
+execute if entity @s[scores={Dialog=40..129}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=58}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~-0.5 ~
+execute if entity @s[scores={Dialog=88}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~0.5 ~
+execute if entity @s[scores={Dialog=129}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
+tellraw @s[scores={Dialog=120}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.3"}]}
+tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.4"}]}
+tellraw @s[scores={Dialog=264}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.5"}]}
+tellraw @s[scores={Dialog=328}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.6"}]}
+tellraw @s[scores={Dialog=336}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.7"}]}
+tellraw @s[scores={Dialog=440}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.8"}]}
+tellraw @s[scores={Dialog=472}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.9"}]}
+tellraw @s[scores={Dialog=512}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.10"}]}
+teleport @s[scores={Dialog=592..681}] ~-0.2125 ~ ~
+teleport @s[scores={Dialog=641}] ~ ~0.5 ~
+execute if entity @s[scores={Dialog=682}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
+execute if entity @s[scores={Dialog=682}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -135 0
+teleport @s[scores={Dialog=682..2850}] -303 55 -53
+tellraw @s[scores={Dialog=682}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.11"}]}
+tellraw @s[scores={Dialog=714}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.12","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=746}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.13"}]}
+tellraw @s[scores={Dialog=778}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.14"}]}
+tellraw @s[scores={Dialog=802}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.15"}]}
+tellraw @s[scores={Dialog=834}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.16"}]}
+tellraw @s[scores={Dialog=914}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.17"}]}
+tellraw @s[scores={Dialog=946}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.18"}]}
+tellraw @s[scores={Dialog=978}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.19"}]}
+tellraw @s[scores={Dialog=1058}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.20"}]}
+tellraw @s[scores={Dialog=1082}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.21"}]}
+tellraw @s[scores={Dialog=1162}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.22"}]}
+tellraw @s[scores={Dialog=1170}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.23"}]}
+tellraw @s[scores={Dialog=1202}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.24"}]}
+tellraw @s[scores={Dialog=1218}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.25"}]}
+tellraw @s[scores={Dialog=1266}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.26"}]}
+tellraw @s[scores={Dialog=1378}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.27"}]}
+tellraw @s[scores={Dialog=1410}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.28"}]}
+tellraw @s[scores={Dialog=1426}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.29"}]}
+tellraw @s[scores={Dialog=1458}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.30"}]}
+tellraw @s[scores={Dialog=1522}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.31"}]}
+tellraw @s[scores={Dialog=1578}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.32"}]}
+tellraw @s[scores={Dialog=1586}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.33"}]}
+tellraw @s[scores={Dialog=1666}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.34"}]}
+tellraw @s[scores={Dialog=1682}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.35"}]}
+tellraw @s[scores={Dialog=1722}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.36"}]}
+tellraw @s[scores={Dialog=1738}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.37"}]}
+tellraw @s[scores={Dialog=1858}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.38"}]}
+tellraw @s[scores={Dialog=1898}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.39"}]}
+tellraw @s[scores={Dialog=1914}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.40"}]}
+tellraw @s[scores={Dialog=1938}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.41"}]}
+tellraw @s[scores={Dialog=2010}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.42"}]}
+tellraw @s[scores={Dialog=2042}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.43"}]}
+tellraw @s[scores={Dialog=2066}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.44"}]}
+tellraw @s[scores={Dialog=2106}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.45"}]}
+tellraw @s[scores={Dialog=2130}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.46"}]}
+tellraw @s[scores={Dialog=2162}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.47"}]}
+tellraw @s[scores={Dialog=2226}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.48"}]}
+tellraw @s[scores={Dialog=2242}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.49"}]}
+tellraw @s[scores={Dialog=2282}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.50"}]}
+tellraw @s[scores={Dialog=2354}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.51"}]}
+tellraw @s[scores={Dialog=2394}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.52"}]}
+tellraw @s[scores={Dialog=2402}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.53"}]}
+tellraw @s[scores={Dialog=2426}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.54"}]}
+tellraw @s[scores={Dialog=2458}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.55"}]}
+tellraw @s[scores={Dialog=2514}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.56"}]}
+tellraw @s[scores={Dialog=2546}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.57"}]}
+tellraw @s[scores={Dialog=2626}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.58"}]}
+tellraw @s[scores={Dialog=2634}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.59"}]}
+tellraw @s[scores={Dialog=2650}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.60"}]}
+tellraw @s[scores={Dialog=2706}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.61"}]}
+tellraw @s[scores={Dialog=2786}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.62"}]}
+tellraw @s[scores={Dialog=2810}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.63"}]}
+tellraw @s[scores={Dialog=2850}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.64"}]}
+execute if entity @s[scores={Dialog=2858}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=2858}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=2858}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=2859}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
+execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=2944}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
+execute if entity @s[scores={Dialog=2859}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
+execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=2944}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
+execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
+teleport @s[scores={Dialog=2859..2944}] ~-0.2125 ~ ~
+teleport @s[scores={Dialog=2945..3935}] -321 55 -53
+tellraw @s[scores={Dialog=2943}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.65"}]}
+tellraw @s[scores={Dialog=2967}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.66"}]}
+tellraw @s[scores={Dialog=3015}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.67"}]}
+tellraw @s[scores={Dialog=3087}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.68"}]}
+tellraw @s[scores={Dialog=3119}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.69"}]}
+tellraw @s[scores={Dialog=3199}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.70"}]}
+tellraw @s[scores={Dialog=3207}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.71"}]}
+tellraw @s[scores={Dialog=3255}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.72"}]}
+playsound medabots_server:entity.max.photo neutral @s[scores={Dialog=3311}] ~ ~ ~ 1000
+tellraw @s[scores={Dialog=3331}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.73"}]}
+tellraw @s[scores={Dialog=3357}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.74"}]}
+execute if entity @s[scores={Dialog=3363}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -135 0
+tellraw @s[scores={Dialog=3363}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.75"}]}
+tellraw @s[scores={Dialog=3379}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.76"}]}
+tellraw @s[scores={Dialog=3451}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.77"}]}
+tellraw @s[scores={Dialog=3483}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.78"}]}
+execute if entity @s[scores={Dialog=3363}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
+tellraw @s[scores={Dialog=3603}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.79"}]}
+execute if entity @s[scores={Dialog=3627}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 0 0
+tellraw @s[scores={Dialog=3627}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.80"}]}
+execute if entity @s[scores={Dialog=3651}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 132 0
+execute if entity @s[scores={Dialog=3651}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 130 0
+execute if entity @s[scores={Dialog=3652..3842}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=3652}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s add walking
+execute if entity @s[scores={Dialog=3652..3842}] as @e[tag=brass] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=3842}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s remove walking
+execute if entity @s[scores={Dialog=3843}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s -407 55 -120 0 0
+execute if entity @s[scores={Dialog=3843}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s -405 55 -120 0 0
+execute if entity @s[scores={Dialog=3711}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
+tellraw @s[scores={Dialog=3711}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.81"}]}
+tellraw @s[scores={Dialog=3743}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.82"}]}
+tellraw @s[scores={Dialog=3823}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.83"}]}
+tellraw @s[scores={Dialog=3855}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.84"}]}
+tellraw @s[scores={Dialog=3879}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.85"}]}
+execute if entity @s[scores={Dialog=3935}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=3936}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
+execute if entity @s[scores={Dialog=3936..4024}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=4024}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
+teleport @s[scores={Dialog=3936..4024}] ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=4025}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 108 0
+teleport @s[scores={Dialog=4025..5164}] -340 55 -53
+stopsound @s[scores={Dialog=4025}] music
+scoreboard players set @s[scores={Dialog=4025}] Music 70
+playsound medabots_server:music.entity.select_corps_intro music @s[scores={Dialog=4025}] ~ ~ ~ 100
+tellraw @s[scores={Dialog=4024}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.86"}]}
+tellraw @s[scores={Dialog=4060}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.87"}]}
+tellraw @s[scores={Dialog=4080}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.88"}]}
+tellraw @s[scores={Dialog=4152}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.89"}]}
+tellraw @s[scores={Dialog=4200}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.90"}]}
+tellraw @s[scores={Dialog=4226}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.91"}]}
+tellraw @s[scores={Dialog=4256}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.92"}]}
+tellraw @s[scores={Dialog=4264}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.93"}]}
+tellraw @s[scores={Dialog=4296}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.94"}]}
+tellraw @s[scores={Dialog=4328}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.95"}]}
+tellraw @s[scores={Dialog=4356}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.96"}]}
+tellraw @s[scores={Dialog=4436}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.97"}]}
+tellraw @s[scores={Dialog=4484}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.98"}]}
+tellraw @s[scores={Dialog=4524}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.99"}]}
+tellraw @s[scores={Dialog=4548}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.100"}]}
+tellraw @s[scores={Dialog=4580}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.101","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=4652}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.102"}]}
+tellraw @s[scores={Dialog=4732}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.103"}]}
+advancement grant @s[scores={Dialog=4756}] only medabots_server:passes/attendee
+tellraw @s[scores={Dialog=4756}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.104"}]}
+tellraw @s[scores={Dialog=4764}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.105"}]}
+tellraw @s[scores={Dialog=4836}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.106"}]}
+execute if entity @s[scores={Dialog=4900}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
+tellraw @s[scores={Dialog=4900}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.107","with":[{"selector":"@s"}]}]}
+execute if entity @s[scores={Dialog=4950}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 108 0
+tellraw @s[scores={Dialog=4940}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.108"}]}
+tellraw @s[scores={Dialog=5004}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.109"}]}
+tellraw @s[scores={Dialog=5044}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.110"}]}
+tellraw @s[scores={Dialog=5092}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.111"}]}
+execute if entity @s[scores={Dialog=5164}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s -407 55 -117 -180 0
+teleport @s[scores={Dialog=5164}] -405 55 -117 -180 0
+teleport @s[scores={Dialog=5165..}] -405 55 -117
+stopsound @s[scores={Dialog=5164}] music
+scoreboard players set @s[scores={Dialog=5164}] Music 0
+tellraw @s[scores={Dialog=5164}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.112"}]}
+tellraw @s[scores={Dialog=5180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.113"}]}
+tellraw @s[scores={Dialog=5228}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.114"}]}
+tellraw @s[scores={Dialog=5268}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.115"}]}
+tellraw @s[scores={Dialog=5276}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.116"}]}
+tellraw @s[scores={Dialog=5308}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.117"}]}
+tellraw @s[scores={Dialog=5348}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.118"}]}
+tellraw @s[scores={Dialog=5372}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.119"}]}
+tellraw @s[scores={Dialog=5396}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.120"}]}
+execute if entity @s[scores={Dialog=5436}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 70 0
+execute if entity @s[scores={Dialog=5436}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 80 0
+execute if entity @s[scores={Dialog=5436}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 110 0
+execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5437}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s add walking
+execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5437}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s add walking
+execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5460}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=5460}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=5460}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5444}] run setblock -412 53 -118 minecraft:redstone_block
+execute if entity @s[scores={Dialog=5472}] run setblock -412 53 -118 minecraft:air
+tag @s[scores={Dialog=5472}] remove dialog_infinity_opening
+stopsound @s[scores={Dialog=5472}] music
+scoreboard players set @s[scores={Dialog=5472}] MusicType 1
+scoreboard players set @s[scores={Dialog=5472}] Music 0
+scoreboard players reset @s[scores={Dialog=5472}] DialogNr
+scoreboard players set @s[scores={Dialog=5472}] Dialog 0
 
-
-
-playsound medabots_server:music.intro music @s[scores={Music=0,MusicType=-1,Dialog=..3567}] ~ ~ ~ 100
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..3567}] Music 915
-playsound medabots_server:music.entity.select_corps_intro music @s[scores={Music=0,MusicType=-1,Dialog=3568..4631}] ~ ~ ~ 100
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=3568..4631}] Music 70
-playsound medabots_server:music.entity.select_corps music @s[scores={Music=1,MusicType=-1,Dialog=3568..4631}] ~ ~ ~ 100
-scoreboard players set @s[scores={Music=1,MusicType=-1,Dialog=3568..4631}] Music 720
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=4632..}] ~ ~ ~ 100
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=4632..,Dialog=4632..}] Music 501
+playsound medabots_server:music.intro music @s[scores={Music=0,MusicType=-1,Dialog=..4024}] ~ ~ ~ 100
+scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..4024}] Music 915
+playsound medabots_server:music.entity.select_corps music @s[scores={Music=0,MusicType=-1,Dialog=4025..5163}] ~ ~ ~ 100
+scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=4081..5163}] Music 720
+playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=5164..}] ~ ~ ~ 100
+scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=5164..}] Music 502

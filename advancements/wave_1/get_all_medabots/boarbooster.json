@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:nether_star"
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:29,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.boarbooster_boartusk\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.hammer\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.hammer.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"12\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"55\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.female\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.boarbooster\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.boarbooster_boartusk.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.boarbooster_boartusk.model\\\"}\"]},medabots_server:{id:\"medabots_server:boarbooster_boartusk\",gender:1b,move:\"hammer\",part:\"head\",armor:55,power:28,uses:12,activated:0b,version:1}}"
         },
         "title": {
             "translate": "medabots_server:entity.boarbooster"
@@ -54,6 +55,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/mt_battle/get_all_medabots/boarbooster"
+        "function": "medabots_server:advancements/wave_1/get_all_medabots/boarbooster"
     }
 }

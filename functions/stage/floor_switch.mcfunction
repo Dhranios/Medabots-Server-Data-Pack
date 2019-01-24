@@ -34,38 +34,39 @@ scoreboard players remove @s[scores={FloorSwitchTime=1..},tag=!green_floor_switc
 
 # Play sound
 execute if entity @s[scores={FloorSwitchTime=0}] if block ~ ~ ~ minecraft:chest run playsound medabots_server:block.floor_switch block @a ~ ~ ~ 1
-execute if entity @s[scores={FloorSwitchTime=0}] if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard] run playsound medabots_server:block.floor_switch block @a ~ ~ ~ 1
-execute if entity @s[scores={FloorSwitchTime=0}] if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run playsound medabots_server:block.floor_switch block @a ~ ~ ~ 1
+execute if entity @s[scores={FloorSwitchTime=0}] if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target,tag=!guard] run playsound medabots_server:block.floor_switch block @a ~ ~ ~ 1
+execute if entity @s[scores={FloorSwitchTime=0}] if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run playsound medabots_server:block.floor_switch block @a ~ ~ ~ 1
 
 # Not a yellow floor switch
 execute if block ~ ~ ~ minecraft:chest run scoreboard players set @s[tag=!yellow_floor_switch] FloorSwitchTime 2
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=!yellow_floor_switch] FloorSwitchTime 2
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=!yellow_floor_switch] FloorSwitchTime 2
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=!yellow_floor_switch] FloorSwitchTime 2
 
 # Yellow floor switch
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_2] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 40
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_2] FloorSwitchTime 40
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_2] FloorSwitchTime 40
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_2] FloorSwitchTime 40
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_2] FloorSwitchTime 40
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_5] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 100
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_5] FloorSwitchTime 100
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_5] FloorSwitchTime 100
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_5] FloorSwitchTime 100
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_5] FloorSwitchTime 100
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_10] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 200
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_10] FloorSwitchTime 200
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_10] FloorSwitchTime 200
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_10] FloorSwitchTime 200
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_10] FloorSwitchTime 200
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_20] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 400
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_20] FloorSwitchTime 400
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_20] FloorSwitchTime 400
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_20] FloorSwitchTime 400
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_20] FloorSwitchTime 400
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_30] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 600
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_30] FloorSwitchTime 600
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_30] FloorSwitchTime 600
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_30] FloorSwitchTime 600
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_30] FloorSwitchTime 600
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_40] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 800
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_40] FloorSwitchTime 800
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_40] FloorSwitchTime 800
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_40] FloorSwitchTime 800
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_40] FloorSwitchTime 800
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_60] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 1200
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_60] FloorSwitchTime 1200
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_60] FloorSwitchTime 1200
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_60] FloorSwitchTime 1200
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_60] FloorSwitchTime 1200
 execute if entity @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_120] if block ~ ~ ~ minecraft:chest run scoreboard players set @s FloorSwitchTime 2400
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_120] FloorSwitchTime 2400
-execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_120] FloorSwitchTime 2400
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=hostile,type=!minecraft:item,tag=!guard,tag=!move_target] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_120] FloorSwitchTime 2400
+execute if entity @e[distance=..0.7,scores={Float=0,Fly=0},tag=guard] unless entity @e[distance=..0.7,tag=hostile,type=minecraft:item] run scoreboard players set @s[tag=yellow_floor_switch,scores={FloorSwitchTime=0},tag=delay_120] FloorSwitchTime 2400
 
 # Set the lit/unlit floor switch block
 execute if entity @s[tag=green_floor_switch,scores={FloorSwitchTime=0}] run setblock ~ ~-1 ~ minecraft:green_wool

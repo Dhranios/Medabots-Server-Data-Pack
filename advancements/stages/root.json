@@ -1,0 +1,19 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:flower_banner_pattern"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.stages.root"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.root.description"
+        },
+        "background": "medabots_server:textures/gui/advancements/backgrounds/stages.png"
+    },
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

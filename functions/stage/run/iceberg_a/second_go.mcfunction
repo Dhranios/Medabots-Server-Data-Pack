@@ -193,7 +193,7 @@ execute if block -1680 44 -194 minecraft:air run setblock -1680 45 -194 minecraf
 execute if block -1681 44 -193 minecraft:air run setblock -1681 45 -193 minecraft:air
 execute if block -1680 44 -193 minecraft:air if block -1680 45 -193 minecraft:barrier run summon minecraft:tnt -1680 44 -193 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1680 44 -193 minecraft:air run setblock -1680 45 -193 minecraft:air
-execute if block -1680 44 -188 minecraft:air if block -1680 45 -188 minecraft:barrier run summon minecraft:creeper -1680 44 -188 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1680 44 -188 minecraft:air if block -1680 45 -188 minecraft:barrier run summon minecraft:creeper -1680 44 -188 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1680 44 -188 minecraft:air run setblock -1680 45 -188 minecraft:air
 execute if block -1734 44 -230 minecraft:air run setblock -1734 45 -230 minecraft:air
 execute if block -1735 44 -229 minecraft:air run setblock -1735 45 -229 minecraft:air
@@ -210,7 +210,7 @@ playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabot
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:wave_1/torutoru_land_master iceberg_a_second_go
+advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/iceberg_a_second_go
 teleport @s[scores={BattlingMedabots=1}] -1704 50 -221 -180 0
 execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:iceberg_a/time players
 execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:iceberg_a/time value

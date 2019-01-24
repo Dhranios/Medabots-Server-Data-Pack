@@ -8,7 +8,8 @@ stopsound @s[scores={BattlingMedabots=1}] music medabots_server:music.stage.pvp.
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-scoreboard players add @s[scores={BattlingMedabots=1,Death=0,LagdouKill=18..19}] LagdouKill 1
+advancement grant @s[scores={BattlingMedabots=1,Death=0},advancements={medabots_server:stages/lagdou_ruins_10=true}] only medabots_server:wave_1/hero_of_magvel
+advancement grant @s[scores={BattlingMedabots=1,Death=0},advancements={medabots_server:stages/lagdou_ruins_10=false}] only medabots_server:stages/lagdou_ruins_10
 playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1361 51 -80 3
 teleport @s[scores={BattlingMedabots=1}] -1361 51 -80 -180 0
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1362 51 -115 minecraft:stone_pressure_plate

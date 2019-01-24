@@ -2,19 +2,19 @@
 execute if entity @a[distance=..0.1,tag=hostile,scores={Sneaking=1..}] run tag @s add sneak_pos
 execute rotated ~ 0 run teleport @s[tag=!sneak_pos] ^-.25 ^-.35 ^-.3
 execute rotated ~ 0 run teleport @s[tag=sneak_pos] ^-.25 ^-.45 ^-.3
-execute store result entity @s Rotation[0] float 0.01 run data get entity @a[distance=..0.1,tag=hostile,limit=1] Rotation[0] 100
+execute store result entity @s Rotation[0] float 0.01 run data get entity @e[distance=..0.1,tag=hostile,limit=1] Rotation[0] 100
 
 # Look up/down
-execute as @s[tag=selected] unless entity @s[nbt={Pose:{Head:[0.0f]}}] run data merge entity @s {Pose:{Head:[0.0f,0.001f,0.0f]}}
-execute as @s[tag=selected] store result score #temp Time run data get entity @a[distance=..0.1,tag=hostile,limit=1] Rotation[1] 1
-execute as @s[tag=selected] store result entity @s Pose.Head[0] float 1 run scoreboard players operation #temp Time -= #70 Constants
+execute if entity @s[tag=selected] unless entity @s[nbt={Pose:{Head:[0.0f]}}] run data merge entity @s {Pose:{Head:[0.0f,0.001f,0.0f]}}
+execute if entity @s[tag=selected] store result score #temp Time run data get entity @e[distance=..0.1,tag=hostile,limit=1] Rotation[1] 1
+execute if entity @s[tag=selected] store result entity @s Pose.Head[0] float 1 run scoreboard players operation #temp Time -= #70 Constants
 scoreboard players reset #temp Time
 
 # Equipped arms
 execute if entity @a[nbt={SelectedItemSlot:2}] run tag @s add selected
 execute if entity @e[distance=..0.1,tag=hostile,type=!minecraft:player,tag=right_arm_selected] run tag @s add selected
-execute as @s[tag=selected] unless entity @a[distance=..0.1,tag=hostile,limit=1,nbt={SelectedItemSlot:2}] unless entity @e[distance=..0.1,tag=hostile,type=!minecraft:player,tag=right_arm_selected] run data merge entity @s {Pose:{Head:[0.0f,0.0f,0.001f]}}
-execute as @s[tag=selected] unless entity @a[distance=..0.1,tag=hostile,limit=1,nbt={SelectedItemSlot:2}] unless entity @e[distance=..0.1,tag=hostile,type=!minecraft:player,tag=right_arm_selected] run tag @s remove selected
+execute if entity @s[tag=selected] unless entity @a[distance=..0.1,tag=hostile,limit=1,nbt={SelectedItemSlot:2}] unless entity @e[distance=..0.1,tag=hostile,type=!minecraft:player,tag=right_arm_selected] run data merge entity @s {Pose:{Head:[0.0f,0.0f,0.001f]}}
+execute if entity @s[tag=selected] unless entity @a[distance=..0.1,tag=hostile,limit=1,nbt={SelectedItemSlot:2}] unless entity @e[distance=..0.1,tag=hostile,type=!minecraft:player,tag=right_arm_selected] run tag @s remove selected
 
 # Walk animation
 execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s[tag=!sneak_pos] {Pose:{Head:[0.0f,0.0f,0.001f]}}

@@ -35,5 +35,5 @@ scoreboard players set @s[gamemode=spectator,scores={Battle=1..}] Battle 0
 spawnpoint @s -286 55 -52
 
 # Deactivate parts
-scoreboard players reset @s[tag=!hostile,scores={Stage=1..,Battle=0,FlyCourse=0}] Stage
+execute unless entity @s[scores={FlyCourse=0..}] run scoreboard players reset @s[tag=!hostile,scores={Stage=1..,Battle=0}] Stage
 execute if entity @s[scores={Battle=0},tag=hostile] run function medabots_server:medaparts/reset

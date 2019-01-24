@@ -6,8 +6,8 @@ stopsound @s[scores={BattlingMedabots=1}] music medabots_server:music.stage.pvp.
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-scoreboard players add @s[scores={BattlingMedabots=1,Death=0,LagdouKill=..1}] LagdouKill 1
-execute if entity @s[scores={BattlingMedabots=1,Death=0}] unless entity @s[scores={LagdouKill=1..}] run scoreboard players add @s LagdouKill 1
+advancement grant @s[scores={BattlingMedabots=1,Death=0},advancements={medabots_server:stages/lagdou_ruins_1_first_go=true}] only medabots_server:stages/lagdou_ruins_1_second_go
+advancement grant @s[scores={BattlingMedabots=1,Death=0},advancements={medabots_server:stages/lagdou_ruins_1_first_go=false}] only medabots_server:stages/lagdou_ruins_1_first_go
 playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1298 51 -87 3
 teleport @s[scores={BattlingMedabots=1}] -1298 51 -87 -180 0
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1297 51 -116 minecraft:stone_pressure_plate

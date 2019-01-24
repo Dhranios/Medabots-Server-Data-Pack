@@ -1,1 +1,1 @@
-execute if entity @s[tag=!talked,tag=talk] run tellraw @a[distance=..5] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.random_rubberobo"}]}
+execute if entity @s[tag=!talked,tag=talk] run tellraw @a[distance=..5,scores={Dialog=0}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.random_rubberobo"}]}

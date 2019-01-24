@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:nether_star"
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:11,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.baroncastle_king_balcony\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.falling\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.falling.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"8\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"55\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.baroncastle\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.baroncastle_king_balcony.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.baroncastle_king_balcony.model\\\"}\"]},medabots_server:{id:\"medabots_server:baroncastle_king_balcony\",gender:0b,move:\"falling\",part:\"head\",armor:55,power:28,uses:8,activated:0b,version:1}}"
         },
         "title": {
             "translate": "medabots_server:entity.baroncastle"
@@ -54,6 +55,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/mt_battle/get_all_medabots/baroncastle"
+        "function": "medabots_server:advancements/wave_1/get_all_medabots/baroncastle"
     }
 }

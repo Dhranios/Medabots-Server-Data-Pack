@@ -86,10 +86,14 @@ execute if entity @s[scores={Verified=2}] run function medabots_server:other/res
 # Fly course running
 execute if entity @s[scores={FlyCourse=0..}] run function medabots_server:stage/fly_course
 
+# Buy items from shops
+execute if entity @s[scores={Shopping=1..}] run function medabots_server:shopping/buy_item
+
 # Enable chosing options
 scoreboard players enable @s TaskCheck
 scoreboard players enable @s SettingsCheck
 scoreboard players enable @s Verified
+scoreboard players enable @s Shopping
 
 # Reset the attack, damage and use part checks
 scoreboard players set @s[scores={Damage=1..}] Damage 0

@@ -99,12 +99,7 @@ execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.2 run tag @e[distance
 execute if entity @s[scores={Moving=4}] positioned ~ ~ ~-0.2 as @e[distance=..0.5,tag=hostile,tag=rubberobo] run data merge entity @s {AbsorptionAmount:0f}
 
 # Remove model and collision if dead
-teleport @s[tag=dead] ~ -1000 ~
-execute if entity @s[tag=dead] run teleport @e[distance=..0.4,tag=round_stone] ~ -1000 ~
-execute if entity @s[tag=dead] at @s run teleport @e[distance=..0.4,tag=round_stone] ~ -1000 ~
-execute if entity @s[tag=dead] run tag @e[distance=..0.4,tag=round_stone] add dead
-execute if entity @s[tag=dead] at @s run tag @e[distance=..0.4,tag=round_stone] add dead
-execute if entity @s[tag=dead] run fill ~ ~1 ~ ~ ~1 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[tag=dead] run function medabots_server:stage/round_stone_death
 
 # Prevent model and collision from rotating
 execute as @e[distance=..0.4,tag=round_stone] run data merge entity @s {Rotation:[0.0d,0.0d]}

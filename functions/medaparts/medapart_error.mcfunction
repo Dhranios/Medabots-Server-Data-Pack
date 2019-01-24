@@ -2,16 +2,16 @@
 scoreboard players set @s[scores={Time=1}] Error 0
 
 # Set lack of tinpet
-execute unless entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{part:"tinpet"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 1
+execute unless entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{part:"tinpet"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1},gamemode=!creative,gamemode=!spectator] Error 1
 
 # Set lack of medal
-execute unless entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{part:"medal"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 2
+execute unless entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{part:"medal"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1},gamemode=!creative,gamemode=!spectator] Error 2
 
 # Set lack of a medapart
-execute unless entity @s[nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 3
-execute unless entity @s[nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"right_arm"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 4
-execute unless entity @s[nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"left_arm"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 5
-execute unless entity @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{part:"legs"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1}] Error 6
+execute unless entity @s[nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1},gamemode=!creative,gamemode=!spectator] Error 3
+execute unless entity @s[nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"right_arm"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1},gamemode=!creative,gamemode=!spectator] Error 4
+execute unless entity @s[nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"left_arm"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1},gamemode=!creative,gamemode=!spectator] Error 5
+execute unless entity @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{part:"legs"}}}]}] run scoreboard players set @s[scores={Error=0,Time=1},gamemode=!creative,gamemode=!spectator] Error 6
 
 # Set wrong tinpet-part gender combination
 scoreboard players set @s[scores={Error=0,Time=1},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{gender:0b,part:"legs"}}},{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] Error 7
@@ -28,20 +28,20 @@ tag @s add message_seen
 execute unless score @s PreviousError = @s Error run tag @s remove message_seen
 
 # Show the error message
-tellraw @s[scores={Error=0},tag=!message_seen] {"translate":"medabots_server:message.error.none","color":"green"}
-tellraw @s[scores={Error=1},tag=!message_seen] {"translate":"medabots_server:message.error.tinpet","color":"red"}
-tellraw @s[scores={Error=2},tag=!message_seen] {"translate":"medabots_server:message.error.medal","color":"red"}
-tellraw @s[scores={Error=3},tag=!message_seen] {"translate":"medabots_server:message.error.head","color":"red"}
-tellraw @s[scores={Error=4},tag=!message_seen] {"translate":"medabots_server:message.error.right_arm","color":"red"}
-tellraw @s[scores={Error=5},tag=!message_seen] {"translate":"medabots_server:message.error.left_arm","color":"red"}
-tellraw @s[scores={Error=6},tag=!message_seen] {"translate":"medabots_server:message.error.legs","color":"red"}
-tellraw @s[scores={Error=7},tag=!message_seen] {"translate":"medabots_server:message.error.combination","color":"red"}
+tellraw @s[scores={Error=0},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.none","color":"green"}
+tellraw @s[scores={Error=1},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.tinpet","color":"red"}
+tellraw @s[scores={Error=2},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.medal","color":"red"}
+tellraw @s[scores={Error=3},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.head","color":"red"}
+tellraw @s[scores={Error=4},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.right_arm","color":"red"}
+tellraw @s[scores={Error=5},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.left_arm","color":"red"}
+tellraw @s[scores={Error=6},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.legs","color":"red"}
+tellraw @s[scores={Error=7},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"medabots_server:message.error.combination","color":"red"}
 
 # Metabee
-tellraw @s[scores={PreviousError=0,Error=1..6,Offline=0},tag=!message_seen] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.not_done_assambling"}]}
-playsound medabots_server:entity.metabee.not_done_assambling voice @s[scores={PreviousError=0,Error=1..6,Offline=0},tag=!message_seen] ~ ~ ~ 1
-tellraw @s[scores={PreviousError=..6,Error=7,Offline=0},tag=!message_seen] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.wait_a_minute"}]}
-playsound medabots_server:entity.metabee.wait_a_minute voice @s[scores={PreviousError=..6,Error=7,Offline=0},tag=!message_seen] ~ ~ ~ 1
+tellraw @s[scores={PreviousError=0,Error=1..6,Offline=0},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.not_done_assambling"}]}
+playsound medabots_server:entity.metabee.not_done_assambling voice @s[scores={PreviousError=0,Error=1..6,Offline=0},tag=!message_seen,gamemode=!creative,gamemode=!spectator] ~ ~ ~ 1
+tellraw @s[scores={PreviousError=..6,Error=7,Offline=0},tag=!message_seen,gamemode=!creative,gamemode=!spectator] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.wait_a_minute"}]}
+playsound medabots_server:entity.metabee.wait_a_minute voice @s[scores={PreviousError=..6,Error=7,Offline=0},tag=!message_seen,gamemode=!creative,gamemode=!spectator] ~ ~ ~ 1
 
 # Set previous error value
 scoreboard players operation @s PreviousError = @s Error

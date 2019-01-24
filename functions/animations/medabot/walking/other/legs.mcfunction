@@ -10,6 +10,6 @@ execute if entity @s[tag=sneaking] store result score #temp Time run data get en
 execute if entity @s[tag=sneaking,tag=!walk_animation_other_way] store result entity @s Pose.Head[0] float 0.1 run scoreboard players operation #temp Time += #10 Constants
 execute if entity @s[tag=sneaking,tag=walk_animation_other_way] store result entity @s Pose.Head[0] float 0.1 run scoreboard players operation #temp Time -= #10 Constants
 execute if entity @s[tag=sneaking] store result entity @s Pose.Head[2] float 0.05 run scoreboard players get #temp Time
-execute if score #temp Time matches 100.. run tag @s add walk_animation_other_way
-execute if score #temp Time matches ..-100 run tag @s remove walk_animation_other_way
+execute if score #temp Time matches 80.. run tag @s add walk_animation_other_way
+execute if score #temp Time matches ..-80 run tag @s remove walk_animation_other_way
 scoreboard players reset #temp Time

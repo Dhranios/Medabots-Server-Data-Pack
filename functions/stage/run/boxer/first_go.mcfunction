@@ -123,7 +123,7 @@ playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabot
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 22
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:wave_1/true_medafighter boxer_first_go
+advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/boxer_first_go
 teleport @s[scores={BattlingMedabots=1}] -1890 50 -571 -180 0
 execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:boxer/time players
 execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:boxer/time value

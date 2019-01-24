@@ -37,7 +37,7 @@ execute if block -1645 45 -176 minecraft:air if block -1645 46 -176 minecraft:ba
 execute if block -1645 45 -176 minecraft:air run setblock -1645 46 -176 minecraft:air
 execute if block -1703 45 -144 minecraft:air run setblock -1703 46 -144 minecraft:air
 execute if block -1701 45 -143 minecraft:air run setblock -1701 46 -143 minecraft:air
-execute if block -1702 45 -142 minecraft:air if block -1702 46 -142 minecraft:barrier run summon minecraft:creeper -1702 45 -142 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1702 45 -142 minecraft:air if block -1702 46 -142 minecraft:barrier run summon minecraft:creeper -1702 45 -142 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1702 45 -142 minecraft:air run setblock -1702 46 -142 minecraft:air
 execute if block -1701 45 -140 minecraft:air run setblock -1701 46 -140 minecraft:air
 execute if block -1648 45 -177 minecraft:air run setblock -1648 46 -177 minecraft:air
@@ -70,7 +70,7 @@ playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabot
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:wave_1/torutoru_land_master jungle_a_second_go
+advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/jungle_a_second_go
 teleport @s[scores={BattlingMedabots=1}] -1673 51 -148 -180 0
 execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:jungle_a/time players
 execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:jungle_a/time value

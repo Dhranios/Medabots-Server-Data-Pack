@@ -1,0 +1,48 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:water_bucket"
+        },
+        "title": {
+            "translate": "medabots_server:location.seashore",
+			"with": [
+				{
+					"text": "A"
+				}
+			],
+			"extra": [
+				{
+					"translate": "medabots_server:message.stage.requires.version"
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.second_go"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.version",
+			"with": [
+				{
+					"translate": "medabots_server:location.seashore",
+					"with": [
+						{
+							"text": "A"
+						}
+					]
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.second_go"
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/seashore_a_first_go",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/torutoru_land_master"
+    }
+}

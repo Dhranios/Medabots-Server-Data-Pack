@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:firework_rocket"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.developer_challenge.fly_course_no_detours",
+			"with": [
+				{
+					"text": "1"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.developer_challenge.fly_course_no_detours.description"
+        },
+        "frame": "challenge"
+    },
+	"parent": "medabots_server:developer_challenge/root",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/developer_challenge"
+    }
+}

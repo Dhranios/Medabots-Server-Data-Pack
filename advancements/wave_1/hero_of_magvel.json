@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_axe"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.wave_1.hero_of_magvel"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.wave_1.hero_of_magvel.description"
+        }
+    },
+    "parent": "medabots_server:wave_1/the_basics_of_battle",
+    "criteria": {
+        "cleared_lagdou_ruins_10_a_second_time": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "loot": [
+            "medabots_server:advancements/wave_1/hero_of_magvel"
+        ],
+        "function": "medabots_server:advancements/wave_1/hero_of_magvel"
+    }
+}
