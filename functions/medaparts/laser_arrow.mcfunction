@@ -1,6 +1,3 @@
-# Name the arrow
-data merge entity @s[tag=!laser,nbt={CustomPotionEffects:[{Id:18b,Amplifier:2b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:"{\"translate\":\"medabots_server:move.laser\"}",Tags:["laser"]}
-
 # Remove old movement
 tag @s[nbt=!{inBlockState:{Name:"minecraft:gray_stained_glass"}},nbt=!{inBlockState:{Name:"minecraft:black_stained_glass"}}] remove above
 tag @s[nbt=!{inBlockState:{Name:"minecraft:gray_stained_glass"}},nbt=!{inBlockState:{Name:"minecraft:black_stained_glass"}}] remove below
@@ -135,5 +132,5 @@ data remove entity @s[tag=in_ground,nbt=!{inGround:1b}] inBlockState
 tag @s[tag=in_ground,nbt=!{inGround:1b}] remove in_ground
 
 # Leave light blue light trail
-execute if entity @s[tag=laser] run summon minecraft:armor_stand ~ ~-1.7 ~ {CustomName:"{\"translate\":\"medabots_server:move.laser\"}",Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["life_time"]}
-execute if entity @s[tag=laser] run effect give @a[distance=..10] minecraft:night_vision 1 0 true
+execute if entity @s run summon minecraft:armor_stand ~ ~-1.7 ~ {CustomName:"{\"translate\":\"medabots_server:move.laser\"}",Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["life_time"]}
+execute if entity @s run effect give @a[distance=..10] minecraft:night_vision 1 0 true

@@ -1,6 +1,9 @@
 # Run stage
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..}] run function medabots_server:stage/run
 
+# Make the random server messages appear
+function medabots_server:other/random_message
+
 # Play dialogs/cutscenes
 function medabots_server:dialog
 

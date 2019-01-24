@@ -13,9 +13,6 @@ execute as @a at @s run function medabots_server:any_player
 # Functions that run on every non-player entity
 execute as @e[type=!minecraft:player,tag=!no_processing] at @s run function medabots_server:any_non_player
 
-# Make the random server messages appear
-function medabots_server:other/random_message
-
 # Make the sound cooldown cool down
 scoreboard players remove @e[scores={Sound=1..}] Sound 1
 

@@ -2,22 +2,21 @@
 tag @s[nbt={inGround:1b}] add in_ground
 
 # Make the shooting attacks do something
-function medabots_server:medaparts/anti_fly_arrow
-function medabots_server:medaparts/medaforce_arrow
-function medabots_server:medaparts/missile_arrow
-function medabots_server:medaparts/napalm_arrow
-function medabots_server:medaparts/laser_arrow
+data merge entity @s[tag=!anti_fly,nbt={CustomPotionEffects:[{Id:18b,Amplifier:8b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:"{\"translate\":\"medabots_server:move.anti_fly\"}",Tags:["anti_fly"]}
+data merge entity @s[tag=!ultra_shot,nbt={CustomPotionEffects:[{Id:18b,Amplifier:4b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:"{\"translate\":\"medabots_server:move.kabuto\"}",Tags:["ultra_shot"]}
+data merge entity @s[tag=!missile,nbt={CustomPotionEffects:[{Id:18b,Amplifier:3b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:"{\"translate\":\"medabots_server:move.missile\"}",Tags:["missile"]}
+data merge entity @s[tag=!napalm,nbt={CustomPotionEffects:[{Id:18b,Amplifier:1b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:"{\"translate\":\"medabots_server:move.napalm\"}",Tags:["napalm"]}
+data merge entity @s[tag=!laser,nbt={CustomPotionEffects:[{Id:18b,Amplifier:2b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:"{\"translate\":\"medabots_server:move.laser\"}",Tags:["laser"]}
+execute if entity @s[tag=anti_fly] run function medabots_server:medaparts/anti_fly_arrow
+execute if entity @s[tag=ultra_shot] run function medabots_server:medaparts/medaforce_arrow
+execute if entity @s[tag=missile] run function medabots_server:medaparts/missile_arrow
+execute if entity @s[tag=napalm] run function medabots_server:medaparts/napalm_arrow
+execute if entity @s[tag=laser] run function medabots_server:medaparts/laser_arrow
 
 scoreboard players add @s[tag=life_time] LifeTime 1
 
 # Trigger Balloon Bombs
-tag @s[tag=in_ground,nbt={inBlockState:{Name:"minecraft:sponge"}}] add bomb
-execute if entity @s[tag=bomb] if block ~ ~0.1 ~ minecraft:sponge positioned ~ ~-0.9 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb] add burst
-execute if entity @s[tag=bomb] if block ~ ~-0.1 ~ minecraft:sponge positioned ~ ~-1.1 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb] add burst
-execute if entity @s[tag=bomb] if block ~0.1 ~ ~ minecraft:sponge positioned ~0.1 ~-1 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb] add burst
-execute if entity @s[tag=bomb] if block ~-0.1 ~ ~ minecraft:sponge positioned ~-0.1 ~-1 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb] add burst
-execute if entity @s[tag=bomb] if block ~ ~ ~0.1 minecraft:sponge positioned ~ ~-1 ~0.1 run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb] add burst
-execute if entity @s[tag=bomb] if block ~ ~ ~-0.1 minecraft:sponge positioned ~ ~-1 ~-0.1 run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb] add burst
+execute if entity @s[tag=in_ground,nbt={inBlockState:{Name:"minecraft:sponge"}}] run function medabots_server:stage/balloon_bomb_shot
 
 # Destroy chests
 execute if entity @s[tag=in_ground] if block ~ ~ ~ minecraft:chest run setblock ~ ~ ~ minecraft:air destroy

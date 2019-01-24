@@ -7,9 +7,8 @@ title @s[tag=returner] times 10 60 20
 # No longer AFK
 scoreboard players set @s[tag=returner] AFKTime 0
 
-# Not the sidebar "owner" anymore
+# Not the random message "owner" anymore
 tag @a[tag=message,tag=returner] remove message
-tag @a[tag=message_2,tag=returner] remove message_2
 scoreboard players reset @s[tag=returner] RandomMessage
 
 # No music when logging in
