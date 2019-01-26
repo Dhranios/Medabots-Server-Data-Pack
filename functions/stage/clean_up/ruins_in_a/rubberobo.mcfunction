@@ -59,22 +59,20 @@ fill -1717 44 -317 -1716 47 -317 minecraft:air
 setblock -1717 43 -325 minecraft:red_wool
 fill -1717 44 -325 -1717 47 -325 minecraft:air
 setblock -1683 43 -259 minecraft:polished_granite
-setblock -1650 47 -286 minecraft:air
 setblock -1683 47 -259 minecraft:air
+fill -1651 46 -286 -1650 46 -286 minecraft:air
 setblock -1651 46 -287 minecraft:wall_torch[facing=east]
+setblock -1662 47 -336 minecraft:air
 setblock -1662 46 -336 minecraft:wall_torch[facing=east]
 setblock -1650 46 -287 minecraft:wall_torch[facing=west]
 fill -1729 44 -344 -1640 44 -252 minecraft:air replace minecraft:comparator
 fill -1729 44 -344 -1640 44 -252 minecraft:air replace minecraft:chest
 fill -1729 43 -344 -1640 43 -252 minecraft:water replace minecraft:oak_planks
 bossbar set medabots_server:ruins_in_a/time players
-tag @a[scores={Stage=25},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=25}] Music 0
 scoreboard players set @a[scores={Stage=25}] MusicType 1
 scoreboard players set @a[scores={Stage=25}] Battle 0
-teleport @a[scores={Stage=25}] -1683 50 -259 -180 0
 tag @e[scores={Stage=25},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=25}] Stage
 data merge block -1683 51 -277 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/ruins_in_a/play\"}}"}
 setblock -1685 52 -277 minecraft:redstone_block
 scoreboard players set @s MusicType 1

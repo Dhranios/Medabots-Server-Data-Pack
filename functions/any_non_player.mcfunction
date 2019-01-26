@@ -40,8 +40,8 @@ execute if entity @s[tag=cutscene] run function medabots_server:dialog/main
 execute if entity @s[tag=shop] run function medabots_server:shopping/main
 
 # Prevent zombies from converting to drowned
-execute if entity @s[type=minecraft:zombie,nbt=!{DrownedConversionTime:-1,InWaterTime:-1}] run data merge entity @s {DrownedConversionTime:-1,InWaterTime:-1}
-execute if entity @s[type=minecraft:husk,nbt=!{DrownedConversionTime:-1,InWaterTime:-1}] run data merge entity @s {DrownedConversionTime:-1,InWaterTime:-1}
+data merge entity @s[type=minecraft:zombie,nbt=!{DrownedConversionTime:-1,InWaterTime:-1}] {DrownedConversionTime:-1,InWaterTime:-1}
+data merge entity @s[type=minecraft:husk,nbt=!{DrownedConversionTime:-1,InWaterTime:-1}] {DrownedConversionTime:-1,InWaterTime:-1}
 
 # Talk
 execute if entity @s[tag=rubberobo,tag=talk] unless entity @s[scores={Stage=1..}] run function medabots_server:dialog/random_rubberobo

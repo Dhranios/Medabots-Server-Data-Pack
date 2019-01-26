@@ -79,13 +79,10 @@ fill -1636 44 -180 -1573 44 -117 minecraft:water replace minecraft:oak_planks
 fill -1636 44 -180 -1573 44 -117 minecraft:grass_block replace minecraft:dirt
 fill -1636 45 -180 -1573 45 -117 minecraft:air replace minecraft:chest
 bossbar set medabots_server:rock_a/time players
-tag @a[scores={Stage=5},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=5}] Music 0
 scoreboard players set @a[scores={Stage=5}] MusicType 1
 scoreboard players set @a[scores={Stage=5}] Battle 0
-teleport @a[scores={Stage=5}] -1603 51 -149 -180 0
 tag @e[scores={Stage=5},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=5}] Stage
 data merge block -1605 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/rock_a/play\"}}"}
 setblock -1605 53 -182 minecraft:redstone_block
 scoreboard players set @s MusicType 1

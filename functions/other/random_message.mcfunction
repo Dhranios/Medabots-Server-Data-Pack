@@ -4,4 +4,4 @@ scoreboard players reset @s[tag=!message] RandomMessage
 
 # Random server messages
 scoreboard players add @s[tag=message] RandomMessage 1
-execute as @s[scores={RandomMessage=6667}] run function medabots_server:other/random_message/show
+execute as @s[scores={RandomMessage=6667}] run function medabots_server:other/random_message_show

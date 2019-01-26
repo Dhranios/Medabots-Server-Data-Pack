@@ -46,3 +46,15 @@ execute as @e[scores={MedabotNr=1..}] if score @s MedabotNr > @e[distance=..0.1,
 scoreboard players reset @s MedabotNr
 effect clear @s minecraft:invisibility
 tag @s remove hostile
+
+# Remove medabot indexing
+tag @s remove enemy_medabot
+tag @s remove 1
+tag @s remove 2
+tag @s remove 3
+tag @s remove 4
+tag @s remove 5
+tag @s remove 6
+tag @s remove 7
+tag @s remove 8
+tag @s remove 9

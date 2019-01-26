@@ -34,6 +34,6 @@ setblock -1519 44 -171 minecraft:structure_block[mode=load]{name:"medabots_serve
 setblock -1519 45 -171 minecraft:redstone_block
 teleport @s -1519 45 -171
 scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Stage 102
+scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Stage 102
 scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Music 0
 scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] MusicType 7

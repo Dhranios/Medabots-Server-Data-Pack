@@ -1,5 +1,5 @@
-execute unless entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run tellraw @s {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run scoreboard players set @s BattlingMedabots 1
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] run function medabots_server:stage/create/boxer/first_go_battle/3_cpu
 summon minecraft:item -1890 44 -602 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 summon minecraft:zombie -1890 44 -601 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -1889 44 -601 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
@@ -33,15 +33,15 @@ setblock -1894 45 -600 minecraft:redstone_block
 setblock -1885 45 -600 minecraft:redstone_block
 setblock -1893 45 -588 minecraft:redstone_block
 setblock -1886 45 -588 minecraft:redstone_block
-execute if entity @e[x=-1889,y=44,z=-547,distance=..10,tag=enemy_medabot] run setblock -1889 44 -585 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run effect give @s minecraft:night_vision 2 0 true
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run effect give @s minecraft:blindness 2 0 true
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run scoreboard players set @s Battle 2
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run effect give @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] minecraft:night_vision 2 0 true
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run effect give @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] minecraft:blindness 2 0 true
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run scoreboard players set @e[x=-1889,y=44,z=-547,distance=..10,tag=enemy_medabot] Battle 2
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run summon minecraft:area_effect_cloud -1889 44 -595 {CustomName:"{\"translate\":\"medabots_server:message.stage.mission\"}",Tags:["mission","defeat_the_enemy"],Duration:2147483647}
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run teleport @e[x=-1889,y=44,z=-547,distance=..10,tag=enemy_medabot] -1890 44 -596
-execute if entity @e[x=-1890,y=44,z=-596,distance=..10,tag=enemy_medabot] run teleport @s -1889 44 -593
+setblock -1889 44 -585 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
+effect give @s minecraft:night_vision 2 0 true
+effect give @s minecraft:blindness 2 0 true
+scoreboard players set @s Battle 2
+teleport @s -1889 44 -593
+effect give @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] minecraft:night_vision 2 0 true
+effect give @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] minecraft:blindness 2 0 true
+scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] Battle 2
+teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] -1890 44 -596
+summon minecraft:area_effect_cloud -1889 44 -595 {CustomName:"{\"translate\":\"medabots_server:message.stage.mission\"}",Tags:["mission","defeat_the_enemy"],Duration:2147483647}
 bossbar set medabots_server:boxer/time value 3600
 bossbar set medabots_server:boxer/time players @a[scores={Stage=79}]

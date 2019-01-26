@@ -53,7 +53,6 @@ fill -1668 44 -247 -1573 44 -184 minecraft:water replace minecraft:oak_planks
 fill -1668 45 -247 -1573 45 -184 minecraft:air replace minecraft:chest
 fill -1668 45 -247 -1573 45 -184 minecraft:air replace minecraft:comparator
 tag @e[scores={Stage=15},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=15}] Stage
 data merge block -1621 52 -247 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/snowfield_a/play\"}}"}
 setblock -1621 53 -249 minecraft:redstone_block
 scoreboard players set @s MusicType 1

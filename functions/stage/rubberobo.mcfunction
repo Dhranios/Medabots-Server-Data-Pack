@@ -34,7 +34,7 @@ execute if block ~1 ~ ~ minecraft:black_wool run function medabots_server:stage/
 execute if block ~-1 ~ ~ minecraft:black_wool run function medabots_server:stage/rubberobo_reset
 
 # Search for the goal
-execute if entity @s[tag=!see_goal_area,scores={Time=0}] rotated ~ 0 run function medabots_server:stage/rubberobo_search_goal
+execute if entity @s[tag=!see_goal_area,scores={Time=0}] rotated as @s rotated ~ 0 run function medabots_server:stage/rubberobo_search_goal
 scoreboard players set @s[scores={GoalSearch=1..}] GoalSearch 0
 
 # If I see the goal, walk towards it, quietly

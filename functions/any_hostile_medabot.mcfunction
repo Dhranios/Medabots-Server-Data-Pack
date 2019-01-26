@@ -1,8 +1,3 @@
-# Set the damage taken
-execute if entity @s[type=minecraft:player] store result score @s Damage run data get entity @s Health -1
-execute if entity @s[type=!minecraft:player] store result score @s Damage run data get entity @s AbsorptionAmount -1
-scoreboard players operation @s Damage += #100 Constants
-
 # Waiting for start of robattle
 effect give @s[scores={Battle=2}] minecraft:slowness 1 10 true
 scoreboard players set @s[scores={Battle=2}] Damage 0
@@ -26,8 +21,30 @@ function medabots_server:medaparts/edge_grab
 # Charge up the medaforce
 execute if entity @s[scores={MedaforceTimer=3}] run function medabots_server:medaparts/charge_medaforce
 
-#  Forget the part
+# Forget the part
 scoreboard players set @s[scores={Time=900..950}] Time 1
+
+# No combat if wiating for the player
+scoreboard players set @s[scores={Time=2..},tag=0] Time 950
+scoreboard players set @s[scores={Time=2..},tag=1] Time 950
+scoreboard players set @s[scores={Time=2..},tag=2] Time 950
+scoreboard players set @s[scores={Time=2..},tag=3] Time 950
+scoreboard players set @s[scores={Time=2..},tag=4] Time 950
+scoreboard players set @s[scores={Time=2..},tag=5] Time 950
+scoreboard players set @s[scores={Time=2..},tag=6] Time 950
+scoreboard players set @s[scores={Time=2..},tag=7] Time 950
+scoreboard players set @s[scores={Time=2..},tag=8] Time 950
+scoreboard players set @s[scores={Time=2..},tag=9] Time 950
+effect give @s[scores={Time=2..},tag=0] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=1] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=2] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=3] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=4] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=5] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=6] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=7] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=8] minecraft:resistance 9 1 true
+effect give @s[scores={Time=2..},tag=9] minecraft:resistance 9 1 true
 
 # Prevent invalid Time values
 scoreboard players set @s[scores={Time=..0}] Time 1

@@ -55,13 +55,10 @@ fill -1570 45 -247 -1507 45 -184 minecraft:air replace minecraft:comparator
 fill -1570 44 -247 -1507 44 -184 minecraft:water replace minecraft:oak_planks
 clone -1570 43 -247 -1507 43 -184 -1570 44 -247 filtered minecraft:oak_planks
 bossbar set medabots_server:seashore_a/time players
-tag @a[scores={Stage=11},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=11}] Music 0
 scoreboard players set @a[scores={Stage=11}] MusicType 1
 scoreboard players set @a[scores={Stage=11}] Battle 0
-teleport @a[scores={Stage=11}] -1539 51 -216 -180 0
 tag @e[scores={Stage=11},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=11}] Stage
 data merge block -1540 52 -247 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/seashore_a/play\"}}"}
 setblock -1540 53 -249 minecraft:redstone_block
 scoreboard players set @s MusicType 1

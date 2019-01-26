@@ -1,5 +1,5 @@
-execute unless entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run tellraw @s {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run scoreboard players set @s BattlingMedabots 1
+execute unless entity @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,tag=1] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
+execute unless entity @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,tag=1] run function medabots_server:stage/create/snowfield_a/first_go_battle/1_cpu
 summon minecraft:area_effect_cloud -1654 45 -225 {CustomName:"{\"translate\":\"medabots_server:entity.ice_block\"}",Tags:["ice_block","hostile","killerable"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile","killerable"]}]}
 summon minecraft:area_effect_cloud -1657 45 -227 {CustomName:"{\"translate\":\"medabots_server:entity.ice_block\"}",Tags:["ice_block","hostile","killerable"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile","killerable"]}]}
 summon minecraft:area_effect_cloud -1659 45 -229 {CustomName:"{\"translate\":\"medabots_server:entity.ice_block\"}",Tags:["ice_block","hostile","killerable"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile","killerable"]}]}
@@ -10,15 +10,18 @@ summon minecraft:area_effect_cloud -1657 45 -235 {CustomName:"{\"translate\":\"m
 summon minecraft:area_effect_cloud -1654 45 -237 {CustomName:"{\"translate\":\"medabots_server:entity.ice_block\"}",Tags:["ice_block","hostile","killerable"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile","killerable"]}]}
 summon minecraft:area_effect_cloud -1661 45 -239 {CustomName:"{\"translate\":\"medabots_server:entity.ice_block\"}",Tags:["ice_block","hostile","killerable"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile","killerable"]}]}
 summon minecraft:area_effect_cloud -1658 45 -240 {CustomName:"{\"translate\":\"medabots_server:entity.ice_block\"}",Tags:["ice_block","hostile","killerable"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile","killerable"]}]}
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run setblock -1652 45 -229 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run effect give @s minecraft:night_vision 2 0 true
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run effect give @s minecraft:blindness 2 0 true
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run scoreboard players set @s Battle 2
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run effect give @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] minecraft:night_vision 2 0 true
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run effect give @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] minecraft:blindness 2 0 true
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run scoreboard players set @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] Battle 2
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run summon minecraft:armor_stand -1658 45 -234 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[0.0f,0.0f]}
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run teleport @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] -1660 45 -233
-execute if entity @e[x=-1660,y=45,z=-233,distance=..10,tag=enemy_medabot] run teleport @s -1656 45 -233
+setblock -1652 45 -229 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
+effect give @s minecraft:night_vision 2 0 true
+effect give @s minecraft:blindness 2 0 true
+scoreboard players set @s Battle 2
+teleport @s -1656 45 -233
+effect give @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,tag=1] minecraft:night_vision 2 0 true
+effect give @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,tag=1] minecraft:blindness 2 0 true
+scoreboard players set @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,tag=1] Battle 2
+teleport @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,tag=1] -1660 45 -233
+summon minecraft:armor_stand -1658 45 -234 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[0.0f,0.0f]}
+scoreboard players set @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,scores={Stage=14}] Music 0
+scoreboard players set @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,scores={Stage=14}] MusicType 1
+scoreboard players set @a[x=-1668,y=51,z=-247,dx=105,dy=4,dz=63,scores={Stage=14}] Battle 0
 bossbar set medabots_server:snowfield_a/time value 3600
 bossbar set medabots_server:snowfield_a/time players @a[scores={Stage=14}]

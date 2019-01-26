@@ -1,10 +1,18 @@
 # No vanilla combat
 effect give @s minecraft:weakness 1000000 127 true
 
+# Set the damage taken
+execute if entity @s[type=minecraft:player] store result score @s Damage run data get entity @s Health -1
+execute if entity @s[type=!minecraft:player] store result score @s Damage run data get entity @s AbsorptionAmount -1
+scoreboard players operation @s Damage += #100 Constants
+
 # Prevent normal damage
 effect give @s[tag=!undead,scores={Damage=1..}] minecraft:instant_health 1 0 true
 effect give @s[tag=undead,scores={Damage=1..}] minecraft:instant_damage 1 0 true
 data merge entity @s[type=!minecraft:player] {AbsorptionAmount:100.0f}
+
+# In combat
+execute if entity @s[tag=hostile] run function medabots_server:any_hostile_medabot
 
 # Combat
 execute if entity @s[scores={AntiFly=1..}] run function medabots_server:medaparts/anti_fly

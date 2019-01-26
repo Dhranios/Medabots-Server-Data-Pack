@@ -75,13 +75,10 @@ fill -1668 44 -247 -1573 44 -184 minecraft:water replace minecraft:oak_planks
 fill -1668 45 -247 -1573 45 -184 minecraft:air replace minecraft:chest
 fill -1668 45 -247 -1573 45 -184 minecraft:air replace minecraft:comparator
 bossbar set medabots_server:snowfield_a/time players
-tag @a[scores={Stage=14},tag=enemy_medabot] remove enemy_medabot
 scoreboard players set @a[scores={Stage=14}] Music 0
 scoreboard players set @a[scores={Stage=14}] MusicType 1
 scoreboard players set @a[scores={Stage=14}] Battle 0
-teleport @a[scores={Stage=14}] -1620 51 -216 -180 0
 tag @e[scores={Stage=14},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=14}] Stage
 data merge block -1621 52 -247 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/snowfield_a/play\"}}"}
 setblock -1621 53 -249 minecraft:redstone_block
 scoreboard players set @s MusicType 1

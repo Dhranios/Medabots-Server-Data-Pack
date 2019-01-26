@@ -1,9 +1,9 @@
-summon minecraft:creeper -1754 44 -294 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1750 44 -294 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1795 44 -280 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1797 44 -285 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1802 44 -288 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1803 44 -281 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
+summon minecraft:creeper -1754 44 -294 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+summon minecraft:creeper -1750 44 -294 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+summon minecraft:creeper -1795 44 -280 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
+summon minecraft:creeper -1797 44 -285 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
+summon minecraft:creeper -1802 44 -288 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
+summon minecraft:creeper -1803 44 -281 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/4_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
 summon minecraft:zombie -1738 44 -266 {NoAI:1b,Silent:1b,CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],Tags:["delay_4","hostile","killerable","rotate_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,Team:"StageEnemy",AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -1736 44 -268 {NoAI:1b,Silent:1b,CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],Tags:["delay_4","hostile","killerable","rotate_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,Team:"StageEnemy",AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -1736 44 -273 {NoAI:1b,Silent:1b,CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],Tags:["delay_4","hostile","killerable","rotate_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,Team:"StageEnemy",AbsorptionAmount:20.0f,Health:100.0f}
@@ -263,16 +263,17 @@ setblock -1772 45 -313 minecraft:redstone_block
 setblock -1773 43 -255 minecraft:structure_block[mode=load]{name:"medabots_server:stage/starting_area",mode:"LOAD"}
 setblock -1773 44 -255 minecraft:redstone_block
 teleport @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=-1] -1773 44 -255
-teleport @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=0] -1752 44 -271
-teleport @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=1] -1799 44 -259
-teleport @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=2] -1773 44 -298
-tag @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=-1] remove -1
-tag @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=0] remove 0
-tag @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=1] remove 1
-tag @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=2] remove 2
-scoreboard players set @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72] Battle 1
-scoreboard players set @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72] Stage 27
-stopsound @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72] music
-playsound medabots_server:music.stage.laboratory_intro music @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72] ~ ~ ~ 1000
-scoreboard players set @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72] Music 109
-scoreboard players set @a[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72] MusicType 15
+teleport @s[tag=-1] -1773 44 -255
+tag @a[x=-1773,y=44,z=-255,distance=..1] remove -1
+scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Battle 1
+scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Stage 27
+stopsound @a[x=-1773,y=44,z=-255,distance=..1] music
+playsound medabots_server:music.stage.laboratory_intro music @a[x=-1773,y=44,z=-255,distance=..1] ~ ~ ~ 1000
+scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Music 109
+scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] MusicType 15
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Battle 1
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Stage 27
+stopsound @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] music
+playsound medabots_server:music.stage.laboratory_intro music @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] ~ ~ ~ 1000
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Music 109
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] MusicType 15

@@ -56,17 +56,17 @@ execute if block -1538 45 -187 minecraft:air run setblock -1538 46 -187 minecraf
 execute if block -1537 45 -186 minecraft:air run setblock -1537 46 -186 minecraft:air
 execute if block -1549 45 -187 minecraft:air run setblock -1549 46 -187 minecraft:air
 execute if block -1548 45 -186 minecraft:air run setblock -1548 46 -186 minecraft:air
-execute if block -1550 45 -186 minecraft:air if block -1550 46 -186 minecraft:barrier run summon minecraft:creeper -1550 45 -186 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1550 45 -186 minecraft:air if block -1550 46 -186 minecraft:barrier run summon minecraft:creeper -1550 45 -186 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1550 45 -186 minecraft:air run setblock -1550 46 -186 minecraft:air
 execute if block -1547 45 -207 minecraft:air run setblock -1547 46 -207 minecraft:air
 execute if block -1547 45 -205 minecraft:air run setblock -1547 46 -205 minecraft:air
 execute if block -1548 45 -208 minecraft:air run setblock -1548 46 -208 minecraft:air
-execute if block -1548 45 -206 minecraft:air if block -1548 46 -206 minecraft:barrier run summon minecraft:creeper -1548 45 -206 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1548 45 -206 minecraft:air if block -1548 46 -206 minecraft:barrier run summon minecraft:creeper -1548 45 -206 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1548 45 -206 minecraft:air run setblock -1548 46 -206 minecraft:air
 execute if block -1549 45 -207 minecraft:air run setblock -1549 46 -207 minecraft:air
 execute if block -1549 45 -205 minecraft:air run setblock -1549 46 -205 minecraft:air
 execute if block -1550 45 -208 minecraft:air run setblock -1550 46 -208 minecraft:air
-execute if block -1550 45 -206 minecraft:air if block -1550 46 -206 minecraft:barrier run summon minecraft:creeper -1550 45 -206 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1550 45 -206 minecraft:air if block -1550 46 -206 minecraft:barrier run summon minecraft:creeper -1550 45 -206 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1550 45 -206 minecraft:air run setblock -1550 46 -206 minecraft:air
 execute if block -1551 45 -207 minecraft:air run setblock -1551 46 -207 minecraft:air
 execute if block -1551 45 -205 minecraft:air run setblock -1551 46 -205 minecraft:air
@@ -75,12 +75,12 @@ execute if block -1565 45 -239 minecraft:air run setblock -1565 46 -239 minecraf
 execute if block -1562 45 -235 minecraft:air run setblock -1562 46 -235 minecraft:air
 execute if block -1564 45 -231 minecraft:air run setblock -1564 46 -231 minecraft:air
 execute if block -1567 45 -236 minecraft:air run setblock -1567 46 -236 minecraft:air
-execute if block -1512 45 -230 minecraft:air if block -1512 46 -230 minecraft:barrier run summon minecraft:creeper -1512 45 -230 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1512 45 -230 minecraft:air if block -1512 46 -230 minecraft:barrier run summon minecraft:creeper -1512 45 -230 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1512 45 -230 minecraft:air run setblock -1512 46 -230 minecraft:air
 execute if block -1511 45 -227 minecraft:air run setblock -1511 46 -227 minecraft:air
 execute if block -1513 45 -225 minecraft:air run setblock -1513 46 -225 minecraft:air
 execute if block -1509 45 -225 minecraft:air run setblock -1509 46 -225 minecraft:air
-execute if block -1514 45 -223 minecraft:air if block -1514 46 -223 minecraft:barrier run summon minecraft:creeper -1514 45 -223 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1514 45 -223 minecraft:air if block -1514 46 -223 minecraft:barrier run summon minecraft:creeper -1514 45 -223 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1514 45 -223 minecraft:air run setblock -1514 46 -223 minecraft:air
 execute if block -1510 45 -223 minecraft:air run setblock -1510 46 -223 minecraft:air
 execute unless entity @s[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/seashore_a/second_go

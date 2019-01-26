@@ -193,7 +193,7 @@ execute if block -1680 44 -194 minecraft:air run setblock -1680 45 -194 minecraf
 execute if block -1681 44 -193 minecraft:air run setblock -1681 45 -193 minecraft:air
 execute if block -1680 44 -193 minecraft:air if block -1680 45 -193 minecraft:barrier run summon minecraft:tnt -1680 44 -193 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1680 44 -193 minecraft:air run setblock -1680 45 -193 minecraft:air
-execute if block -1680 44 -188 minecraft:air if block -1680 45 -188 minecraft:barrier run summon minecraft:creeper -1680 44 -188 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1680 44 -188 minecraft:air if block -1680 45 -188 minecraft:barrier run summon minecraft:creeper -1680 44 -188 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1680 44 -188 minecraft:air run setblock -1680 45 -188 minecraft:air
 execute if block -1734 44 -230 minecraft:air run setblock -1734 45 -230 minecraft:air
 execute if block -1735 44 -229 minecraft:air run setblock -1735 45 -229 minecraft:air

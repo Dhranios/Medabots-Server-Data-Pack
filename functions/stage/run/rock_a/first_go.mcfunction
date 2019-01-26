@@ -83,7 +83,7 @@ execute if block -1587 45 -173 minecraft:air run setblock -1587 46 -173 minecraf
 execute if block -1589 45 -176 minecraft:air run setblock -1589 46 -176 minecraft:air
 execute if block -1602 45 -142 minecraft:air run setblock -1602 46 -142 minecraft:air
 execute if block -1597 45 -151 minecraft:air run setblock -1597 46 -151 minecraft:air
-execute if block -1612 45 -143 minecraft:air if block -1612 46 -143 minecraft:barrier run summon minecraft:creeper -1612 45 -143 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1612 45 -143 minecraft:air if block -1612 46 -143 minecraft:barrier run summon minecraft:creeper -1612 45 -143 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1612 45 -143 minecraft:air run setblock -1612 46 -143 minecraft:air
 execute if block -1627 45 -139 minecraft:air run setblock -1627 46 -139 minecraft:air
 execute if block -1631 45 -143 minecraft:air run setblock -1631 46 -143 minecraft:air
@@ -99,7 +99,6 @@ execute if block -1628 45 -154 minecraft:air run setblock -1628 46 -154 minecraf
 execute if block -1629 45 -154 minecraft:air run setblock -1629 46 -154 minecraft:air
 execute if block -1626 45 -177 minecraft:air run setblock -1626 46 -177 minecraft:air
 execute if block -1616 46 -167 minecraft:iron_door[open=true] if entity @s[x=-1616,y=45,z=-168,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_a/first_go_battle/0
-execute if block -1616 46 -167 minecraft:iron_door[open=true] positioned -1604 45 -170 run function medabots_server:stage/wait_for_robattle_preventation
 execute if block -1616 45 -167 minecraft:structure_block run setblock -1615 45 -167 minecraft:redstone_block
 execute if block -1615 45 -167 minecraft:redstone_block run setblock -1615 45 -167 minecraft:air
 execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Stage=5,Medabot=0..,Battle=1..}]

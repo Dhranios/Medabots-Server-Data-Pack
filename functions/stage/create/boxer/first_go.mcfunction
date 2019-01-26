@@ -33,24 +33,13 @@ setblock -1899 45 -561 minecraft:redstone_block
 setblock -1890 43 -548 minecraft:structure_block[mode=load]{name:"medabots_server:stage/starting_area",mode:"LOAD"}
 setblock -1890 44 -548 minecraft:redstone_block
 teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=-1] -1890 44 -548
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=0] -1871 44 -555
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=1] -1916 44 -572
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=2] -1873 43 -590
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] -1890 44 -596
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=4] -1908 44 -588
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] -1917 44 -572
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] -1906 43 -553
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] -1889 44 -574
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=-1] remove -1
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=0] remove 0
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=1] remove 1
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=2] remove 2
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=3] remove 3
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=4] remove 4
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=5] remove 5
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=6] remove 6
-tag @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=7] remove 7
-scoreboard players set @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64] Battle 1
-scoreboard players set @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64] Stage 79
-scoreboard players set @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64] Music 0
-scoreboard players set @a[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64] MusicType 21
+teleport @s[tag=-1] -1890 44 -548
+tag @a[x=-1890,y=44,z=-548,distance=..1] remove -1
+scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Battle 1
+scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Stage 79
+scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Music 0
+scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] MusicType 21
+scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] Battle 1
+scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] Stage 79
+scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] Music 0
+scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] MusicType 21
