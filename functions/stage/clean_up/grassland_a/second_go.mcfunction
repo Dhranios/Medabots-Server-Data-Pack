@@ -72,4 +72,3 @@ fill -1570 44 -180 -1507 44 -117 minecraft:grass_block replace minecraft:dirt
 tag @e[scores={Stage=2},type=!minecraft:player] add dead
 data merge block -1540 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/grassland_a/play\"}}"}
 setblock -1540 53 -182 minecraft:redstone_block
-scoreboard players set @s MusicType 1

@@ -85,4 +85,3 @@ scoreboard players set @a[scores={Stage=5}] Battle 0
 tag @e[scores={Stage=5},type=!minecraft:player] add dead
 data merge block -1605 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/rock_a/play\"}}"}
 setblock -1605 53 -182 minecraft:redstone_block
-scoreboard players set @s MusicType 1

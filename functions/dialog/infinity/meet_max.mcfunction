@@ -24,6 +24,7 @@ execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -1536 5
 execute if entity @s[scores={Dialog=1}] positioned -1536 51 -147 as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=max] MedabotNr
 execute at @s as @e[x=-1536,y=51,z=-147,tag=max,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
 teleport @s[scores={Dialog=1}] -1539 51 -151 -55 0
+playsound medabots_server:entity.max.photo neutral @s[scores={Dialog=1}] ~ ~ ~ 1000
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.meet_max.1"}]}
 tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.meet_max.2"}]}
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.meet_max.3"}]}

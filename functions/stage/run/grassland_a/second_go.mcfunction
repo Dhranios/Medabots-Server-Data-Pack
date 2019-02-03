@@ -1,28 +1,15 @@
 execute if block -1517 46 -128 minecraft:iron_door[open=false] if block -1513 44 -123 minecraft:lime_wool if block -1516 44 -120 minecraft:lime_wool if block -1520 44 -121 minecraft:lime_wool if block -1520 44 -124 minecraft:lime_wool run setblock -1517 45 -128 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1517 45 -128 minecraft:structure_block run setblock -1517 46 -128 minecraft:redstone_block
 execute if block -1540 46 -127 minecraft:iron_door[open=false] if block -1541 44 -127 minecraft:light_blue_wool run setblock -1540 45 -127 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1540 46 -127 minecraft:iron_door[open=false] if block -1529 44 -125 minecraft:yellow_wool run setblock -1540 45 -127 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1540 46 -127 minecraft:iron_door[open=true] if block -1541 44 -127 minecraft:blue_wool if block -1529 44 -125 minecraft:orange_wool run setblock -1540 45 -127 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
-execute if block -1540 45 -127 minecraft:structure_block run setblock -1540 46 -127 minecraft:redstone_block
 execute if block -1548 46 -157 minecraft:iron_door[open=false] if block -1551 44 -151 minecraft:lime_wool run setblock -1548 45 -157 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1548 45 -157 minecraft:structure_block run setblock -1548 46 -157 minecraft:redstone_block
 execute if block -1535 46 -158 minecraft:iron_door[open=false] if block -1540 44 -152 minecraft:lime_wool run setblock -1535 45 -158 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1535 45 -158 minecraft:structure_block run setblock -1535 46 -158 minecraft:redstone_block
 execute if block -1524 46 -160 minecraft:iron_door[open=false] if block -1532 44 -152 minecraft:lime_wool run setblock -1524 45 -160 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1524 45 -160 minecraft:structure_block run setblock -1524 46 -160 minecraft:redstone_block
 execute if block -1514 46 -162 minecraft:iron_door[open=false] if block -1519 44 -152 minecraft:lime_wool run setblock -1514 45 -162 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1514 45 -162 minecraft:structure_block run setblock -1514 46 -162 minecraft:redstone_block
 execute if block -1528 46 -171 minecraft:iron_door[open=false] if block -1518 44 -173 minecraft:lime_wool run setblock -1528 45 -171 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1528 45 -171 minecraft:structure_block run setblock -1528 46 -171 minecraft:redstone_block
 execute if block -1547 46 -172 minecraft:iron_door[open=false] if block -1533 44 -174 minecraft:lime_wool run setblock -1547 45 -172 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1547 45 -172 minecraft:structure_block run setblock -1546 45 -172 minecraft:redstone_block
-execute if block -1546 45 -172 minecraft:redstone_block run setblock -1546 45 -172 minecraft:air
 execute if block -1548 46 -172 minecraft:iron_door[open=false] if block -1538 44 -169 minecraft:lime_wool run setblock -1548 45 -172 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1548 45 -172 minecraft:structure_block run setblock -1548 45 -171 minecraft:redstone_block
-execute if block -1548 45 -171 minecraft:redstone_block run setblock -1548 45 -171 minecraft:barrier
 execute if block -1549 46 -172 minecraft:iron_door[open=false] if block -1543 44 -174 minecraft:lime_wool run setblock -1549 45 -172 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1549 45 -172 minecraft:structure_block run setblock -1550 45 -172 minecraft:redstone_block
-execute if block -1550 45 -172 minecraft:redstone_block run setblock -1550 45 -172 minecraft:air
 execute if block -1518 45 -131 minecraft:chest run setblock -1518 46 -131 minecraft:barrier
 execute if block -1517 45 -132 minecraft:chest run setblock -1517 46 -132 minecraft:barrier
 execute if block -1516 45 -132 minecraft:chest run setblock -1516 46 -132 minecraft:barrier
@@ -115,7 +102,6 @@ execute if block -1565 45 -171 minecraft:air if block -1565 46 -171 minecraft:ba
 execute if block -1565 45 -171 minecraft:air run setblock -1565 46 -171 minecraft:air
 execute if block -1566 45 -172 minecraft:air run setblock -1566 46 -172 minecraft:air
 execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=2}] run scoreboard players set @s Stage 2
-execute unless entity @s[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/grassland_a/second_go
 execute if entity @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/grassland_a/second_go
 stopsound @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] music
 playsound medabots_server:music.stage.stage_end music @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] -1539 51 -151 14
@@ -124,3 +110,16 @@ scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gam
 scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
 advancement grant @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/grassland_a_second_go
 teleport @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] -1539 51 -151 -180 0
+execute if block -1517 45 -128 minecraft:structure_block run setblock -1517 46 -128 minecraft:redstone_block
+execute if block -1540 45 -127 minecraft:structure_block run setblock -1540 46 -127 minecraft:redstone_block
+execute if block -1548 45 -157 minecraft:structure_block run setblock -1548 46 -157 minecraft:redstone_block
+execute if block -1535 45 -158 minecraft:structure_block run setblock -1535 46 -158 minecraft:redstone_block
+execute if block -1524 45 -160 minecraft:structure_block run setblock -1524 46 -160 minecraft:redstone_block
+execute if block -1514 45 -162 minecraft:structure_block run setblock -1514 46 -162 minecraft:redstone_block
+execute if block -1528 45 -171 minecraft:structure_block run setblock -1528 46 -171 minecraft:redstone_block
+execute if block -1547 45 -172 minecraft:structure_block run setblock -1546 45 -172 minecraft:redstone_block
+execute if block -1546 45 -172 minecraft:redstone_block run setblock -1546 45 -172 minecraft:air
+execute if block -1548 45 -172 minecraft:structure_block run setblock -1548 45 -171 minecraft:redstone_block
+execute if block -1548 45 -171 minecraft:redstone_block run setblock -1548 45 -171 minecraft:barrier
+execute if block -1549 45 -172 minecraft:structure_block run setblock -1550 45 -172 minecraft:redstone_block
+execute if block -1550 45 -172 minecraft:redstone_block run setblock -1550 45 -172 minecraft:air

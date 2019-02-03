@@ -56,4 +56,3 @@ clone -1570 43 -247 -1507 43 -184 -1570 44 -247 filtered minecraft:oak_planks
 tag @e[scores={Stage=12},type=!minecraft:player] add dead
 data merge block -1540 52 -247 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/seashore_a/play\"}}"}
 setblock -1540 53 -249 minecraft:redstone_block
-scoreboard players set @s MusicType 1

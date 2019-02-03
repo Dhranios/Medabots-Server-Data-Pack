@@ -52,26 +52,29 @@ tag @s[tag=toggle_practice_battle] remove toggle_practice_battle
 tag @s[scores={SettingsCheck=7},tag=practice_battle] remove practice_battle
 
 # Toggle fly course force fallout
-tellraw @s[scores={SettingsCheck=8},tag=!fly_course_force_fallout] {"translate":"medabots_server:settings.modified.fly_course.force_fallout","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 8"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
-tellraw @s[scores={SettingsCheck=8},tag=fly_course_force_fallout] {"translate":"medabots_server:settings.modified.fly_course.force_fallout","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 8"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
-tag @s[scores={SettingsCheck=8},tag=!fly_course_force_fallout] add toggle_fly_course_force_fallout
-tag @s[tag=toggle_fly_course_force_fallout] add fly_course_force_fallout
-scoreboard players reset @s[tag=toggle_fly_course_force_fallout] SettingsCheck
-tag @s[tag=toggle_fly_course_force_fallout] remove toggle_fly_course_force_fallout
-tag @s[scores={SettingsCheck=8},tag=fly_course_force_fallout] remove fly_course_force_fallout
+tellraw @s[scores={SettingsCheck=8},tag=racer] {"translate":"medabots_server:settings.fly_course.in_race","color":"blue"}
+tellraw @s[scores={SettingsCheck=8},tag=!fly_course_force_fallout,tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.force_fallout","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 8"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
+tellraw @s[scores={SettingsCheck=8},tag=fly_course_force_fallout,tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.force_fallout","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 8"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
+tag @s[scores={SettingsCheck=8},tag=!fly_course_force_fallout,tag=!racer] add toggle_fly_course_force_fallout
+tag @s[tag=toggle_fly_course_force_fallout,tag=!racer] add fly_course_force_fallout
+scoreboard players reset @s[tag=toggle_fly_course_force_fallout,tag=!racer] SettingsCheck
+tag @s[tag=toggle_fly_course_force_fallout,tag=!racer] remove toggle_fly_course_force_fallout
+tag @s[scores={SettingsCheck=8},tag=fly_course_force_fallout,tag=!racer] remove fly_course_force_fallout
 
 # Toggle fly course laps
-scoreboard players add @s[scores={SettingsCheck=9}] FlyCourseLaps 1
-scoreboard players set @s[scores={SettingsCheck=9,FlyCourseLaps=1}] FlyCourseLaps 3
-scoreboard players set @s[scores={SettingsCheck=9,FlyCourseLaps=11}] FlyCourseLaps 0
-tellraw @s[scores={SettingsCheck=9,FlyCourseLaps=1..}] {"translate":"medabots_server:settings.modified.fly_course.laps","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 9"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"FlyCourseLaps"}}]}
-tellraw @s[scores={SettingsCheck=9,FlyCourseLaps=0}] {"translate":"medabots_server:settings.modified.fly_course.laps","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 9"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.fly_course.fallout"}]}
+tellraw @s[scores={SettingsCheck=9},tag=racer] {"translate":"medabots_server:settings.fly_course.in_race","color":"blue"}
+scoreboard players add @s[scores={SettingsCheck=9},tag=!racer] FlyCourseLaps 1
+scoreboard players set @s[scores={SettingsCheck=9,FlyCourseLaps=1},tag=!racer] FlyCourseLaps 3
+scoreboard players set @s[scores={SettingsCheck=9,FlyCourseLaps=11},tag=!racer] FlyCourseLaps 0
+tellraw @s[scores={SettingsCheck=9,FlyCourseLaps=1..},tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.laps","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 9"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"FlyCourseLaps"}}]}
+tellraw @s[scores={SettingsCheck=9,FlyCourseLaps=0},tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.laps","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 9"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.fly_course.fallout"}]}
 
 # Toggle fly course fee
-scoreboard players add @s[scores={SettingsCheck=10}] FlyCourseFee 10
-scoreboard players set @s[scores={SettingsCheck=10,FlyCourseFee=60}] FlyCourseFee 0
-tellraw @s[scores={SettingsCheck=10,FlyCourseFee=1..}] {"translate":"medabots_server:settings.modified.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"FlyCourseFee"}}]}
-tellraw @s[scores={SettingsCheck=10,FlyCourseFee=0}] {"translate":"medabots_server:settings.modified.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.fly_course.no_fee"}]}
+tellraw @s[scores={SettingsCheck=10},tag=racer] {"translate":"medabots_server:settings.fly_course.in_race","color":"blue"}
+scoreboard players add @s[scores={SettingsCheck=10},tag=!racer] FlyCourseFee 10
+scoreboard players set @s[scores={SettingsCheck=10,FlyCourseFee=60},tag=!racer] FlyCourseFee 0
+tellraw @s[scores={SettingsCheck=10,FlyCourseFee=1..},tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"FlyCourseFee"}}]}
+tellraw @s[scores={SettingsCheck=10,FlyCourseFee=0},tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.fly_course.no_fee"}]}
 
 
 scoreboard players reset @s[scores={SettingsCheck=3..}] SettingsCheck

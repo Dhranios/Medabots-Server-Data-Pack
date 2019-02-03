@@ -188,8 +188,6 @@ scoreboard players set @s[scores={Sneaking=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200}] run tellraw @a {"translate":"medabots_server:message.afk.yes","with":[{"selector":"@s"}]}
 execute if entity @s[scores={AFKTime=1200}] run playsound medabots_server:entity.metabee.forgetting_me voice @s ~ ~ ~ 2
 tellraw @s[scores={AFKTime=1200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.forgetting_me"}]}
-replaceitem entity @s[scores={AFKTime=1200..}] armor.head minecraft:stone_button{display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.remove_knockback\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.remove_knockback.afk\"}"]},AttributeModifiers:[{AttributeName:"generic.knockbackResistance",Name:"generic.knockbackResistance",Amount:1.0f,Operation:0,UUIDMost:93175l,UUIDLeast:132111l,Slot:"head"}],Enchantments:[{id:"minecraft:binding_curse",lvl:1s}],medabots_server:{id:"medabots_server:remove_knockback"}}
-effect give @s[scores={AFKTime=1200..}] minecraft:resistance 1 9 true
 team join AFK @s[scores={AFKTime=1200..},team=!AFK]
 
 # Friendly reminder
@@ -248,16 +246,5 @@ tag @s[tag=trading] remove trading
 tag @s[scores={Trading=1..}] add trading
 scoreboard players set @s[scores={Trading=1..}] Trading 0
 
-# Give back headgear after going AFK
-replaceitem entity @s[tag=sunglasses,scores={AFKTime=0}] armor.head minecraft:chainmail_helmet{Unbreakable:1b,HideFlags:4,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sunglasses\"}"},AttributeModifiers:[],medabots_server:{id:"medabots_server:sunglasses"}}
-replaceitem entity @s[tag=master_crown,scores={AFKTime=0}] armor.head minecraft:golden_helmet{Unbreakable:1b,HideFlags:4,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.master_crown\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.master_crown.description\"}"]},AttributeModifiers:[],medabots_server:{id:"medabots_server:master_crown"}}
-tag @s[tag=sunglasses,scores={AFKTime=0}] remove sunglasses
-tag @s[tag=master_crown,scores={AFKTime=0}] remove master_crown
-tag @s[tag=!sunglasses,scores={AFKTime=1199},nbt={Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:sunglasses"}}}]}] add sunglasses
-tag @s[tag=!master_crown,scores={AFKTime=1199},nbt={Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:master_crown"}}}]}] add master_crown
-
 # Count up
 execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0}] AFKTime 1
-
-# Make sure non-AFKers get knockback again
-execute unless entity @s[scores={Wave=1..}] run clear @s[team=!AFK] minecraft:stone_button{medabots_server:{id:"medabots_server:remove_knockback"}}

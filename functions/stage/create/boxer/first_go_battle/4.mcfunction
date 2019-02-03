@@ -1,6 +1,6 @@
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=4] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=4] run function medabots_server:stage/create/boxer/first_go_battle/4_cpu
-summon minecraft:item -1914 44 -588 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
+summon minecraft:item -1914 44 -588 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 setblock -1902 44 -585 minecraft:stone_slab
 setblock -1904 44 -583 minecraft:stone_slab
 setblock -1906 44 -581 minecraft:stone_slab

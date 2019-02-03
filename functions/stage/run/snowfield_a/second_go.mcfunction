@@ -1,20 +1,17 @@
 execute if block -1598 46 -213 minecraft:iron_door[open=false] if block -1594 44 -218 minecraft:yellow_wool run setblock -1598 45 -213 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1598 46 -213 minecraft:iron_door[open=true] if block -1594 44 -218 minecraft:orange_wool run setblock -1598 45 -213 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/door",mode:"LOAD"}
-execute if block -1598 45 -213 minecraft:structure_block run setblock -1598 46 -213 minecraft:redstone_block
 execute if block -1590 46 -207 minecraft:iron_door[open=false] if block -1594 44 -218 minecraft:yellow_wool run setblock -1590 45 -207 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1590 46 -207 minecraft:iron_door[open=true] if block -1594 44 -218 minecraft:orange_wool run setblock -1590 45 -207 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/door",mode:"LOAD"}
-execute if block -1590 45 -207 minecraft:structure_block run setblock -1590 46 -207 minecraft:redstone_block
 execute if block -1652 46 -229 minecraft:iron_door[open=false] if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecraft:lime_wool if block -1627 44 -232 minecraft:lime_wool if block -1643 44 -236 minecraft:lime_wool run setblock -1652 45 -229 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
-execute if block -1652 45 -229 minecraft:structure_block run setblock -1652 46 -229 minecraft:redstone_block
 execute if block -1613 44 -203 minecraft:light_blue_wool run scoreboard players add @e[x=-1611.5,y=45,z=-202.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=fan,tag=!changed] Moving 1
 execute if block -1613 44 -203 minecraft:light_blue_wool run tag @e[x=-1611.5,y=45,z=-202.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=fan,tag=!changed] add changed
 execute if block -1613 44 -203 minecraft:blue_wool run scoreboard players remove @e[x=-1611.5,y=45,z=-202.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=fan,tag=changed] Moving 1
 execute if block -1613 44 -203 minecraft:blue_wool run tag @e[x=-1611.5,y=45,z=-202.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=fan,tag=changed] remove changed
-execute if block -1617 44 -226 minecraft:light_blue_wool run tag @e[x=-1617.5,y=45,z=-225.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=laser,tag=!enabled] add enabled
-execute if block -1617 44 -226 minecraft:blue_wool run tag @e[x=-1617.5,y=45,z=-225.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=laser,tag=enabled] remove enabled
+execute if block -1617 44 -226 minecraft:light_blue_wool run tag @e[x=-1617.5,y=45,z=-225.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1617 44 -226 minecraft:blue_wool run tag @e[x=-1617.5,y=45,z=-225.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=laser_trap,tag=enabled] remove enabled
 execute if block -1663 44 -187 minecraft:light_blue_wool run tag @e[x=-1656.5,y=45,z=-211,type=minecraft:area_effect_cloud,tag=spring_wall,distance=0.7] add enabled
 execute if block -1663 44 -187 minecraft:blue_wool run tag @e[x=-1656.5,y=45,z=-211,type=minecraft:area_effect_cloud,tag=spring_wall,distance=0.7] remove enabled
-execute if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecraft:lime_wool if block -1627 44 -232 minecraft:lime_wool if block -1643 44 -236 minecraft:lime_wool run tag @e[x=-1660.5,y=45,z=-242,dx=6,dy=1,dz=19,type=minecraft:area_effect_cloud,tag=laser] add enabled
+execute if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecraft:lime_wool if block -1627 44 -232 minecraft:lime_wool if block -1643 44 -236 minecraft:lime_wool run tag @e[x=-1660.5,y=45,z=-242,dx=6,dy=1,dz=19,type=minecraft:area_effect_cloud,tag=laser_trap] add enabled
 execute if block -1592 45 -244 minecraft:chest run setblock -1592 46 -244 minecraft:barrier
 execute if block -1588 45 -243 minecraft:chest run setblock -1588 46 -243 minecraft:barrier
 execute if block -1596 45 -242 minecraft:chest run setblock -1596 46 -242 minecraft:barrier
@@ -112,7 +109,6 @@ execute if block -1605 45 -242 minecraft:air run setblock -1605 46 -242 minecraf
 execute if block -1603 45 -244 minecraft:air run setblock -1603 46 -244 minecraft:air
 execute if block -1606 45 -245 minecraft:air run setblock -1606 46 -245 minecraft:air
 execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=15}] run scoreboard players set @s Stage 15
-execute unless entity @s[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/snowfield_a/second_go
 execute if entity @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/snowfield_a/second_go
 stopsound @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] music
 playsound medabots_server:music.stage.stage_end music @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 14
@@ -121,3 +117,6 @@ scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gam
 scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
 advancement grant @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/snowfield_a_second_go
 teleport @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 -180 0
+execute if block -1598 45 -213 minecraft:structure_block run setblock -1598 46 -213 minecraft:redstone_block
+execute if block -1590 45 -207 minecraft:structure_block run setblock -1590 46 -207 minecraft:redstone_block
+execute if block -1652 45 -229 minecraft:structure_block run setblock -1652 46 -229 minecraft:redstone_block

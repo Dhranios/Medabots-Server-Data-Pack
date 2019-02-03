@@ -5,9 +5,6 @@ tag @s remove story_battle
 effect give @s minecraft:health_boost 1000000 19 true
 effect give @s minecraft:instant_health 1 19 true
 
-# Penalty for dying, losing carried medallar cents
-clear @s minecraft:lapis_lazuli{medabots_server:{id:"medabots_server:medallar_cent"}}
-
 # play music
 stopsound @s music
 scoreboard players set @s Music 0

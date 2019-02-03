@@ -1,13 +1,9 @@
 execute if block -1514 46 -216 minecraft:iron_door[open=false] if block -1511 44 -190 minecraft:lime_wool run setblock -1514 45 -216 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1514 45 -216 minecraft:structure_block run setblock -1514 46 -216 minecraft:redstone_block
 execute if block -1533 46 -196 minecraft:iron_door[open=false] if block -1549 44 -186 minecraft:lime_wool run setblock -1533 45 -196 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1533 45 -196 minecraft:structure_block run setblock -1533 46 -196 minecraft:redstone_block
 execute if block -1551 46 -194 minecraft:iron_door[open=false] if block -1537 44 -187 minecraft:lime_wool run setblock -1551 45 -194 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1551 45 -194 minecraft:structure_block run setblock -1551 46 -194 minecraft:redstone_block
 execute if block -1534 46 -207 minecraft:iron_door[open=false] if block -1534 44 -206 minecraft:light_blue_wool run setblock -1534 45 -207 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1534 46 -207 minecraft:iron_door[open=false] if block -1551 44 -206 minecraft:lime_wool run setblock -1534 45 -207 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1534 46 -207 minecraft:iron_door[open=true] if block -1534 44 -206 minecraft:blue_wool if block -1551 44 -206 minecraft:green_wool run setblock -1534 45 -207 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
-execute if block -1534 45 -207 minecraft:structure_block run setblock -1534 46 -207 minecraft:redstone_block
 execute if block -1511 44 -190 minecraft:lime_wool run tag @e[x=-1511.5,y=45,z=-214.5,distance=..0.7,tag=action_floor] add enabled
 execute if block -1511 44 -190 minecraft:lime_wool run tag @e[x=-1510.5,y=45,z=-217.5,distance=..0.7,tag=action_floor] add enabled
 execute if block -1517 45 -189 minecraft:chest run setblock -1517 46 -189 minecraft:barrier
@@ -81,11 +77,8 @@ execute if block -1567 45 -236 minecraft:air run setblock -1567 46 -236 minecraf
 execute if block -1562 45 -233 minecraft:air run setblock -1562 46 -233 minecraft:air
 execute if block -1564 45 -231 minecraft:air run setblock -1564 46 -231 minecraft:air
 execute if block -1540 46 -222 minecraft:iron_door[open=true] if entity @s[x=-1541,y=45,z=-225,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_a/first_go_battle/0
-execute if block -1540 46 -222 minecraft:iron_door[open=true] positioned -1538 45 -230 run function medabots_server:stage/wait_for_robattle_preventation
-execute if block -1540 45 -222 minecraft:structure_block run setblock -1540 46 -222 minecraft:redstone_block
 execute if entity @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,scores={Stage=11,Medabot=0..,Battle=1..}]
 execute as @e[x=-1570,y=42,z=-247,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1..}] run scoreboard players set @s Stage 11
-execute unless entity @s[x=-1570,y=42,z=-247,dx=63,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/seashore_a/first_go
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/seashore_a/first_go
 stopsound @s[scores={BattlingMedabots=1}] music
 playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1539 51 -216 14
@@ -100,3 +93,8 @@ execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossba
 execute if score #temp Time matches 0 as @e[x=-1764,y=42,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
 execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
+execute if block -1514 45 -216 minecraft:structure_block run setblock -1514 46 -216 minecraft:redstone_block
+execute if block -1533 45 -196 minecraft:structure_block run setblock -1533 46 -196 minecraft:redstone_block
+execute if block -1551 45 -194 minecraft:structure_block run setblock -1551 46 -194 minecraft:redstone_block
+execute if block -1534 45 -207 minecraft:structure_block run setblock -1534 46 -207 minecraft:redstone_block
+execute if block -1540 45 -222 minecraft:structure_block run setblock -1540 46 -222 minecraft:redstone_block

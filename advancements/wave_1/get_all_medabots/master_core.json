@@ -11,7 +11,7 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots/flame_tisara",
+    "parent": "medabots_server:wave_1/get_all_medabots/flame_tisala",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",

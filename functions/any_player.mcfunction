@@ -1,5 +1,6 @@
 # Run stage
-execute if entity @s[tag=!enemy_medabot,scores={Stage=1..}] run function medabots_server:stage/run
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=0}] run function medabots_server:stage/left_server
+execute unless entity @s[scores={FlyCourse=0..,Battle=0}] if entity @s[tag=!enemy_medabot,scores={Stage=1..}] run function medabots_server:stage/run
 
 # Make the random server messages appear
 function medabots_server:other/random_message

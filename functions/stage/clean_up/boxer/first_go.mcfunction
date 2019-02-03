@@ -1,5 +1,3 @@
-setblock -1889 43 -595 minecraft:sand
-setblock -1889 47 -595 minecraft:air
 fill -1889 44 -582 -1889 47 -582 minecraft:air
 fill -1882 44 -579 -1882 47 -579 minecraft:air
 fill -1879 44 -571 -1879 47 -571 minecraft:air
@@ -30,13 +28,13 @@ fill -1879 44 -562 -1878 47 -562 minecraft:air
 fill -1876 44 -571 -1876 47 -570 minecraft:air
 fill -1880 44 -583 -1880 47 -582 minecraft:air
 fill -1889 44 -585 -1888 47 -585 minecraft:air
-fill -1921 43 -603 -1858 43 -540 minecraft:sand replace minecraft:moving_piston
+setblock -1890 43 -548 minecraft:sand
+setblock -1890 47 -548 minecraft:air
 fill -1921 44 -603 -1858 44 -540 minecraft:air replace minecraft:stone_slab
 bossbar set medabots_server:boxer/time players
 scoreboard players set @a[scores={Stage=79}] Music 0
-scoreboard players set @a[scores={Stage=79}] MusicType 1
+scoreboard players set @a[scores={Stage=79}] MusicType 22
 scoreboard players set @a[scores={Stage=79}] Battle 0
 tag @e[scores={Stage=79},type=!minecraft:player] add dead
 data merge block -1891 51 -603 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/boxer/play\"}}"}
 setblock -1891 52 -605 minecraft:redstone_block
-scoreboard players set @s MusicType 1

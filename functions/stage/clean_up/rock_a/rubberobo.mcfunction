@@ -90,4 +90,3 @@ fill -1636 45 -180 -1573 45 -117 minecraft:air replace minecraft:chest
 tag @e[scores={Stage=7},type=!minecraft:player] add dead
 data merge block -1605 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/rock_a/play\"}}"}
 setblock -1605 53 -182 minecraft:redstone_block
-scoreboard players set @s MusicType 1

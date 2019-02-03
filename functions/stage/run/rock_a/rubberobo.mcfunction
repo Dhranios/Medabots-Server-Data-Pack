@@ -1,8 +1,6 @@
 execute if block -1586 46 -165 minecraft:iron_door[open=false] if block -1597 44 -159 minecraft:lime_wool run setblock -1586 45 -165 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1586 45 -165 minecraft:structure_block run setblock -1586 46 -165 minecraft:redstone_block
 execute if block -1617 46 -167 minecraft:iron_door[open=false] if block -1617 44 -156 minecraft:blue_wool run setblock -1617 45 -167 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1617 46 -167 minecraft:iron_door[open=true] if block -1617 44 -156 minecraft:light_blue_wool run setblock -1617 45 -167 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
-execute if block -1617 45 -167 minecraft:structure_block run setblock -1617 46 -167 minecraft:redstone_block
 execute if block -1628 45 -121 minecraft:chest run setblock -1628 46 -121 minecraft:barrier
 execute if block -1627 45 -122 minecraft:chest run setblock -1627 46 -122 minecraft:barrier
 execute if block -1626 45 -130 minecraft:chest run setblock -1626 46 -130 minecraft:barrier
@@ -103,7 +101,6 @@ execute if block -1629 45 -154 minecraft:air run setblock -1629 46 -154 minecraf
 execute if block -1617 45 -156 minecraft:air run setblock -1617 46 -156 minecraft:air
 execute if block -1626 45 -177 minecraft:air run setblock -1626 46 -177 minecraft:air
 execute as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=7}] run scoreboard players set @s Stage 7
-execute unless entity @s[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/rock_a/rubberobo
 execute unless entity @e[tag=rubberobo,scores={Stage=7}] if entity @s[x=-1600.5,y=45,z=-175.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/rock_a/rubberobo
 execute unless entity @e[tag=rubberobo,scores={Stage=7}] run stopsound @s[x=-1600.5,y=45,z=-175.5,distance=..0.7,tag=hostile,gamemode=adventure] music
 execute unless entity @e[tag=rubberobo,scores={Stage=7}] run playsound medabots_server:music.stage.stage_end music @s[x=-1600.5,y=45,z=-175.5,distance=..0.7,tag=hostile,gamemode=adventure] -1603 51 -149 14
@@ -112,3 +109,5 @@ execute unless entity @e[tag=rubberobo,scores={Stage=7}] run scoreboard players 
 execute unless entity @e[tag=rubberobo,scores={Stage=7}] run scoreboard players set @s[x=-1600.5,y=45,z=-175.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
 execute unless entity @e[tag=rubberobo,scores={Stage=7}] run advancement grant @s[x=-1600.5,y=45,z=-175.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/rock_a_rubberobo
 execute unless entity @e[tag=rubberobo,scores={Stage=7}] run teleport @s[x=-1600.5,y=45,z=-175.5,distance=..0.7,tag=hostile,gamemode=adventure] -1603 51 -149 -180 0
+execute if block -1586 45 -165 minecraft:structure_block run setblock -1586 46 -165 minecraft:redstone_block
+execute if block -1617 45 -167 minecraft:structure_block run setblock -1617 46 -167 minecraft:redstone_block

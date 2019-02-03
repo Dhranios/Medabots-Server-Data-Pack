@@ -1,8 +1,5 @@
 execute if block -1586 46 -164 minecraft:iron_door[open=false] if block -1597 44 -159 minecraft:lime_wool run setblock -1586 45 -164 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1586 45 -164 minecraft:structure_block run setblock -1586 46 -164 minecraft:redstone_block
 execute if block -1617 46 -167 minecraft:iron_door[open=false] if block -1617 44 -156 minecraft:lime_wool run setblock -1617 45 -167 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1617 45 -167 minecraft:structure_block run setblock -1618 45 -167 minecraft:redstone_block
-execute if block -1618 45 -167 minecraft:redstone_block run setblock -1618 45 -167 minecraft:air
 execute if block -1625 45 -132 minecraft:chest run setblock -1625 46 -132 minecraft:barrier
 execute if block -1624 45 -132 minecraft:chest run setblock -1624 46 -132 minecraft:barrier
 execute if block -1625 45 -131 minecraft:chest run setblock -1625 46 -131 minecraft:barrier
@@ -99,11 +96,8 @@ execute if block -1628 45 -154 minecraft:air run setblock -1628 46 -154 minecraf
 execute if block -1629 45 -154 minecraft:air run setblock -1629 46 -154 minecraft:air
 execute if block -1626 45 -177 minecraft:air run setblock -1626 46 -177 minecraft:air
 execute if block -1616 46 -167 minecraft:iron_door[open=true] if entity @s[x=-1616,y=45,z=-168,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_a/first_go_battle/0
-execute if block -1616 45 -167 minecraft:structure_block run setblock -1615 45 -167 minecraft:redstone_block
-execute if block -1615 45 -167 minecraft:redstone_block run setblock -1615 45 -167 minecraft:air
 execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Stage=5,Medabot=0..,Battle=1..}]
 execute as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
-execute unless entity @s[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Battle=1..}] run function medabots_server:stage/clean_up/rock_a/first_go
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/rock_a/first_go
 stopsound @s[scores={BattlingMedabots=1}] music
 playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1603 51 -149 14
@@ -118,3 +112,8 @@ execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossba
 execute if score #temp Time matches 0 as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
 execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
+execute if block -1586 45 -164 minecraft:structure_block run setblock -1586 46 -164 minecraft:redstone_block
+execute if block -1617 45 -167 minecraft:structure_block run setblock -1618 45 -167 minecraft:redstone_block
+execute if block -1618 45 -167 minecraft:redstone_block run setblock -1618 45 -167 minecraft:air
+execute if block -1616 45 -167 minecraft:structure_block run setblock -1615 45 -167 minecraft:redstone_block
+execute if block -1615 45 -167 minecraft:redstone_block run setblock -1615 45 -167 minecraft:air
