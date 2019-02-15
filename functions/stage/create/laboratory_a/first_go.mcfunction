@@ -94,11 +94,11 @@ summon minecraft:area_effect_cloud -1740 44 -266 {CustomName:"{\"translate\":\"m
 summon minecraft:area_effect_cloud -1760 44 -285 {CustomName:"{\"translate\":\"medabots_server:block.spring_wall\"}",Tags:["spring_wall","delay_10"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1760 44 -284 {CustomName:"{\"translate\":\"medabots_server:block.spring_wall\"}",Tags:["spring_wall","delay_10"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1766 44 -318 {CustomName:"{\"translate\":\"medabots_server:block.spring_wall\"}",Tags:["spring_wall","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1738 44 -314 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1740 44 -315 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1736 44 -316 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1740 44 -318 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1737 44 -319 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1738 44 -314 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1740 44 -315 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1736 44 -316 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1740 44 -318 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1737 44 -319 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1740 44 -290 {CustomName:"{\"translate\":\"medabots_server:block.action_floor\"}",Tags:["action_floor","cannon","look_over_z_positive","delay_4","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1739 44 -290 {CustomName:"{\"translate\":\"medabots_server:block.action_floor\"}",Tags:["action_floor","cannon","look_over_z_positive","delay_4","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1740 44 -300 {CustomName:"{\"translate\":\"medabots_server:block.action_floor\"}",Tags:["action_floor","cannon","look_over_z_negative","delay_4","enabled"],Duration:2147483647}

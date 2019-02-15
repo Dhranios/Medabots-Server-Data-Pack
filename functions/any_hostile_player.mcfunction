@@ -1,9 +1,9 @@
 # Send a killer message depending on parts
 execute if entity @s[scores={Killer=1..}] run function medabots_server:medaparts/killer
 
-# Stage effects
-execute if block ~ ~ ~ minecraft:comparator run function medabots_server:stage/accelerator
-execute if entity @s[tag=hammer_punch_hit] run function medabots_server:stage/hammer_punch_hit
+# Block effects
+execute if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator
+execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
 # Instant death if you fall in the void
 execute if entity @s[y=-80,dy=79] run tellraw @a {"translate":"medabots_server:death.void","with":[{"selector":"@s"}]}
@@ -67,21 +67,22 @@ tag @s[tag=checked_effects,nbt=!{SelectedItem:{tag:{medabots_server:{id:"medabot
 scoreboard players add @s OnlineTime 1
 
 # Damage the selected part, change up the medaforce if it's the medal
-execute if entity @s[scores={Damage=1..,LegsArmor=1..},nbt={SelectedItemSlot:0}] if score @s LegsArmor < @s Damage run scoreboard players set @s LegsArmor 0
-execute if entity @s[scores={Damage=1..,LegsArmor=1..},nbt={SelectedItemSlot:0}] if score @s LegsArmor >= @s Damage run scoreboard players operation @s LegsArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LegsArmor=..-1},nbt={SelectedItemSlot:0}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..,LegsArmor=..-1},nbt={SelectedItemSlot:0}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LeftArmArmor=1..},nbt={SelectedItemSlot:1}] if score @s LeftArmArmor < @s Damage run scoreboard players set @s LeftArmArmor 0
-execute if entity @s[scores={Damage=1..,LeftArmArmor=1..},nbt={SelectedItemSlot:1}] if score @s LeftArmArmor >= @s Damage run scoreboard players operation @s LeftArmArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LeftArmArmor=..-1},nbt={SelectedItemSlot:1}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..,LeftArmArmor=..-1},nbt={SelectedItemSlot:1}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,RightArmArmor=1..},nbt={SelectedItemSlot:2}] if score @s RightArmArmor < @s Damage run scoreboard players set @s RightArmArmor 0
-execute if entity @s[scores={Damage=1..,RightArmArmor=1..},nbt={SelectedItemSlot:2}] if score @s RightArmArmor >= @s Damage run scoreboard players operation @s RightArmArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},nbt={SelectedItemSlot:2}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},nbt={SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-execute if entity @s[scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-tag @s[scores={Damage=1..},nbt={SelectedItemSlot:4,Inventory:[{tag:{medabots_server:{move:"medaforce_charge",activated:1b}}}]}] add medal_damage
+execute if entity @s[tag=murder_mystery,scores={Damage=1..}] run scoreboard players set @s HeadArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LegsArmor=1..},nbt={SelectedItemSlot:0}] if score @s LegsArmor < @s Damage run scoreboard players set @s LegsArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LegsArmor=1..},nbt={SelectedItemSlot:0}] if score @s LegsArmor >= @s Damage run scoreboard players operation @s LegsArmor -= @s Damage
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LegsArmor=..-1},nbt={SelectedItemSlot:0}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LegsArmor=..-1},nbt={SelectedItemSlot:0}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LeftArmArmor=1..},nbt={SelectedItemSlot:1}] if score @s LeftArmArmor < @s Damage run scoreboard players set @s LeftArmArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LeftArmArmor=1..},nbt={SelectedItemSlot:1}] if score @s LeftArmArmor >= @s Damage run scoreboard players operation @s LeftArmArmor -= @s Damage
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LeftArmArmor=..-1},nbt={SelectedItemSlot:1}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LeftArmArmor=..-1},nbt={SelectedItemSlot:1}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,RightArmArmor=1..},nbt={SelectedItemSlot:2}] if score @s RightArmArmor < @s Damage run scoreboard players set @s RightArmArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,RightArmArmor=1..},nbt={SelectedItemSlot:2}] if score @s RightArmArmor >= @s Damage run scoreboard players operation @s RightArmArmor -= @s Damage
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,RightArmArmor=..-1},nbt={SelectedItemSlot:2}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..,RightArmArmor=..-1},nbt={SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[tag=!murder_mystery,scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+tag @s[tag=!murder_mystery,scores={Damage=1..},nbt={SelectedItemSlot:4,Inventory:[{tag:{medabots_server:{move:"medaforce_charge",activated:1b}}}]}] add medal_damage
 scoreboard players add @s[tag=medal_damage] Charge 1
 clear @s[tag=medal_damage] minecraft:nether_star 1
 tag @s[tag=medal_damage] remove medal_damage

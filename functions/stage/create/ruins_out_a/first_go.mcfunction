@@ -88,7 +88,7 @@ summon minecraft:area_effect_cloud -1602 45 -276 {CustomName:"{\"translate\":\"m
 summon minecraft:area_effect_cloud -1611 45 -285 {CustomName:"{\"translate\":\"medabots_server:block.action_floor\"}",Tags:["action_floor","guard","slow","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1621 45 -286 {CustomName:"{\"translate\":\"medabots_server:block.action_floor\"}",Tags:["action_floor","guard","slow","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1622 45 -291 {CustomName:"{\"translate\":\"medabots_server:block.action_floor\"}",Tags:["action_floor","bomb","delay_5","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1603 45 -284 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1603 45 -284 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
 summon minecraft:armor_stand -1511 45 -299 {CustomName:"{\"translate\":\"medabots_server:block.mirror\"}",Tags:["mirror"],Invisible:1b,NoGravity:1b,Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:glass_pane",Count:1b}],Rotation:[-45.0f,0.0f]}
 summon minecraft:armor_stand -1510 45 -300 {CustomName:"{\"translate\":\"medabots_server:block.mirror\"}",Tags:["mirror"],Invisible:1b,NoGravity:1b,Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:glass_pane",Count:1b}],Rotation:[-45.0f,0.0f]}
 summon minecraft:armor_stand -1511 45 -292 {CustomName:"{\"translate\":\"medabots_server:block.mirror\"}",Tags:["mirror"],Invisible:1b,NoGravity:1b,Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:glass_pane",Count:1b}],Rotation:[45.0f,0.0f]}

@@ -3,8 +3,8 @@ scoreboard players set @s[scores={LeaveStage=1}] Battle 0
 scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
 
 # Run stage
-execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=0}] run function medabots_server:stage/left_server
-execute unless entity @s[scores={FlyCourse=0..,Battle=0}] if entity @s[tag=!enemy_medabot,scores={Stage=1..}] run function medabots_server:stage/run
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=0},tag=!murder_mystery] run function medabots_server:stage/left_server
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=!enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/run
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run function medabots_server:stage/run_fly_course
 
 # Make the random server messages appear

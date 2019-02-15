@@ -7,8 +7,8 @@ summon minecraft:area_effect_cloud -1900 44 -574 {CustomName:"{\"translate\":\"m
 summon minecraft:area_effect_cloud -1892 44 -582 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","ineffective","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1887 44 -582 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","no_defend","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1879 44 -574 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","no_defend","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1879 44 -569 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1887 44 -569 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1879 44 -569 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1887 44 -569 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1892 44 -569 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","no_defend","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1892 44 -574 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","ineffective","enabled"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1887 44 -574 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","confuse","enabled"],Duration:2147483647}

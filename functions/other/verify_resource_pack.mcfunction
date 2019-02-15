@@ -2,5 +2,5 @@ tellraw @s {"translate":"%1$s","with":[{"text":"Sorry, this server requires you 
 scoreboard players set @s Verified 1
 tag @s[advancements={medabots_server:wave_1/root=true}] add returner
 scoreboard players set @s Offline 0
-scoreboard players set @s Battle 0
+scoreboard players set @s LeaveStage 0
 scoreboard players set @s AFKTime 0

@@ -140,10 +140,10 @@ summon minecraft:area_effect_cloud -1643 44 -277 {CustomName:"{\"translate\":\"m
 summon minecraft:area_effect_cloud -1643 44 -276 {CustomName:"{\"translate\":\"medabots_server:block.press_wall\"}",Tags:["press_wall","west"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1643 44 -275 {CustomName:"{\"translate\":\"medabots_server:block.press_wall\"}",Tags:["press_wall","west"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1643 44 -274 {CustomName:"{\"translate\":\"medabots_server:block.press_wall\"}",Tags:["press_wall","west"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1726 44 -270 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1725 44 -270 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1706 44 -271 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1706 44 -270 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling_effect","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1726 44 -270 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1725 44 -270 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1706 44 -271 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1706 44 -270 {CustomName:"{\"translate\":\"medabots_server:block.gas_floor\"}",Tags:["gas_floor","falling","enabled"],Duration:2147483647}
 scoreboard players set @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=minecraft:area_effect_cloud,tag=fan] Moving 0
 scoreboard players set @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=minecraft:area_effect_cloud,tag=fan] Range 6
 scoreboard players set @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=minecraft:area_effect_cloud,tag=press_wall] Range 10

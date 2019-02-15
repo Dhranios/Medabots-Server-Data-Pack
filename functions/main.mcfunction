@@ -3,10 +3,6 @@
 #       Tick Function       #
 #############################
 
-# Fly couse checker
-# Something about it doesn't make it work...
-#function medabots_server:stage/fly_course_checker
-
 # Functions that run on every player
 execute as @a at @s run function medabots_server:any_player
 
@@ -17,7 +13,7 @@ execute as @e[type=!minecraft:player,tag=!no_processing] at @s run function meda
 scoreboard players remove @e[scores={Sound=1..}] Sound 1
 
 # Teleport action-floor-spawning area effect clouds up
-execute as @e[tag=no_processing] at @s run function medabots_server:stage/action_floor_move
+execute as @e[tag=no_processing] at @s run function medabots_server:blocks/action_floor/move
 
 # Kill every entity that is tagged as dead
 kill @e[tag=dead]

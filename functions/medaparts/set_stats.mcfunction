@@ -30,11 +30,8 @@ scoreboard players operation @s LeftArmArmor = @s MaxLeftArmArmor
 scoreboard players operation @s LegsArmor = @s MaxLegsArmor
 
 # Activate parts
-execute store result entity @s Inventory[{Slot:0b}].tag.medabots_server.activated byte 1 run scoreboard players get #1 Constants
-execute store result entity @s Inventory[{Slot:1b}].tag.medabots_server.activated byte 1 run scoreboard players get #1 Constants
-execute store result entity @s Inventory[{Slot:2b}].tag.medabots_server.activated byte 1 run scoreboard players get #1 Constants
-execute store result entity @s Inventory[{Slot:3b}].tag.medabots_server.activated byte 1 run scoreboard players get #1 Constants
-execute store result entity @s Inventory[{Slot:4b}].tag.medabots_server.activated byte 1 run scoreboard players get #1 Constants
+execute if entity @s[tag=!murder_mystery] run function medabots_server:medaparts/enable_medaparts
+execute if entity @s[tag=murder_mystery,tag=!inocent] run function medabots_server:medaparts/enable_medaparts
 
 # Model
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["legs","medabot_model"],CustomName:"{\"translate\":\"medabots_server:entity.medabot_model\"}"}

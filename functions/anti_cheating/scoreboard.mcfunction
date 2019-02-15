@@ -55,6 +55,7 @@ scoreboard objectives add FlyTime dummy
 scoreboard objectives add Flying minecraft.custom:minecraft.fly_one_cm
 scoreboard objectives add Freeze dummy
 scoreboard objectives add FreezeTime dummy
+scoreboard objectives add GamemodeTime dummy
 scoreboard objectives add Gatling dummy
 scoreboard objectives add GoalSearch dummy
 scoreboard objectives add GuardGravity dummy

@@ -37,7 +37,7 @@ scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] FlyCourse 2
 # Racers placement
 tag @s add me
 execute if entity @a[tag=racer,scores={FlyCourse=1..4}] run scoreboard players set @s[tag=racer] FlyCoursePlace 1
-execute if entity @a[tag=racer,scores={FlyCourse=1..4}] if entity @s[tag=racer] at @a[tag=racer,tag=!me] if score @s Stage = @a[distance=..0.1,limit=1,tag=!me] Stage run function medabots_server:stage/fly_course_placement
+execute if entity @a[tag=racer,scores={FlyCourse=1..4}] if entity @s[tag=racer] at @a[tag=racer,tag=!me] if score @s Stage = @a[distance=..0.1,limit=1,tag=!me] Stage run function medabots_server:stage/fly_course/placement
 tag @s add last_place
 execute if entity @s[tag=racer,tag=force_fallout_on] at @a[tag=racer,tag=!me,scores={FlyCourse=1..2}] if score @s Stage = @a[distance=..0.1,limit=1,tag=!me] Stage if score @s FlyCoursePlace <= @a[distance=..0.1,limit=1,tag=!me] FlyCoursePlace run tag @s remove last_place
 scoreboard players reset @s[tag=!last_place,tag=force_fallout_on] LastPlaceTime
@@ -50,7 +50,7 @@ playsound medabots_server:ambient.fly_course_fallout master @s[scores={LastPlace
 playsound medabots_server:ambient.fly_course_fallout master @s[scores={LastPlaceTime=595}] ~ ~ ~ 1000 2
 scoreboard players set @s[scores={LastPlaceTime=600}] FlyCourse 0
 tellraw @s[scores={LastPlaceTime=600}] {"translate":"medabots_server:message.stage.fly_course.forced_fallout","color":"green"}
-execute if entity @s[tag=racer] at @a[tag=racer,tag=0] if score @s Stage = @a[distance=..0.1,limit=1] Stage run function medabots_server:stage/fly_course_setting_specifics
+execute if entity @s[tag=racer] at @a[tag=racer,tag=0] if score @s Stage = @a[distance=..0.1,limit=1] Stage run function medabots_server:stage/fly_course/setting_specifics
 tag @s remove me
 tag @s remove still_racers
 tag @s remove last_place
@@ -97,3 +97,6 @@ tag @s[scores={FlyCourse=5}] remove 8
 tag @s[scores={FlyCourse=5}] remove 9
 scoreboard players reset @s[scores={FlyCourse=5}] LastPlaceTime
 scoreboard players set @s[scores={FlyCourse=5}] FlyCourse 0
+
+# Fly couse checker, in case of lag, goes from your last position, to your new position, to see if you flew through any rings
+function medabots_server:stage/fly_course/checker

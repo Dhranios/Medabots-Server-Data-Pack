@@ -11,8 +11,8 @@ execute if entity @s[type=minecraft:armor_stand] run function medabots_server:an
 execute if entity @s[type=minecraft:item] run function medabots_server:any_item
 
 # Functions that run on every Rubberobo
-execute if entity @s[tag=rubberobo,nbt={HurtTime:5s}] unless entity @s[scores={Stage=1..}] run function medabots_server:other/rubberobo_caught
-execute if entity @s[tag=rubberobo,scores={Stage=1..}] run function medabots_server:stage/rubberobo
+execute if entity @s[tag=rubberobo,nbt={HurtTime:5s}] unless entity @s[scores={Stage=1..}] run function medabots_server:entities/rubberobo/caught
+execute if entity @s[tag=rubberobo,scores={Stage=1..}] run function medabots_server:entities/rubberobo
 
 # Functions that run on every area effect cloud
 execute if entity @s[type=minecraft:area_effect_cloud] run function medabots_server:any_cloud
@@ -21,10 +21,10 @@ execute if entity @s[type=minecraft:area_effect_cloud] run function medabots_ser
 execute if entity @s[type=minecraft:snowball] run function medabots_server:any_snowball
 
 # Make the guards do things
-execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_server:stage/guard
+execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_server:entities/guard
 
 # Make the cannons do things
-execute if entity @s[type=minecraft:zombie,tag=cannon] run function medabots_server:stage/cannon
+execute if entity @s[type=minecraft:zombie,tag=cannon] run function medabots_server:entities/cannon
 
 # Functions that run on every arrow
 execute if entity @s[type=minecraft:arrow] run function medabots_server:any_arrow
