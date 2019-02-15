@@ -1,1 +1,1 @@
-tellraw @s {"translate":"medabots_server:message.stage.requires","extra":[{"text":" "},{"translate":"medabots_server:message.stage.requires.battle.at","with":[{"translate":"medabots_server:entity.squidguts"},{"translate":"medabots_server:location.ruins_battle"}]}]}
+tellraw @s {"translate":"medabots_server:message.stage.requires","extra":[{"text":" "},{"translate":"medabots_server:message.stage.requires.battle.at","with":[{"translate":"medabots_server:entity.koji"},{"translate":"medabots_server:location.woods_battle"}]}]}

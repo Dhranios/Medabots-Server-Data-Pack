@@ -5,7 +5,7 @@ execute if entity @s[tag=cobblestone] run setblock ~ ~-1 ~ minecraft:cobblestone
 execute if entity @s[tag=coarse_dirt] run setblock ~ ~-1 ~ minecraft:coarse_dirt
 execute if entity @s[tag=sand] run setblock ~ ~-1 ~ minecraft:sand
 execute if entity @s[tag=packed_ice] run setblock ~ ~-1 ~ minecraft:packed_ice
-execute if entity @s[tag=stone_slab] run setblock ~ ~-1 ~ minecraft:stone_slab[type=double]
+execute if entity @s[tag=smooth_stone_slab] run setblock ~ ~-1 ~ minecraft:smooth_stone_slab[type=double]
 execute if entity @s[tag=oak_planks] run setblock ~ ~-1 ~ minecraft:oak_planks
 execute if entity @s[tag=snow_block] run setblock ~ ~-1 ~ minecraft:snow_block
 execute if entity @s[tag=orange_terracotta] run setblock ~ ~-1 ~ minecraft:orange_terracotta

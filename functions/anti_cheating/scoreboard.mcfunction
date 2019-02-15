@@ -91,6 +91,7 @@ scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer playerKillCount
 scoreboard objectives add Laser dummy
 scoreboard objectives add LastPlaceTime dummy
+scoreboard objectives add LeaveStage trigger
 scoreboard objectives add LeftArmArmor dummy
 scoreboard objectives add LeftArmDanger dummy
 scoreboard objectives add LeftArmPer dummy

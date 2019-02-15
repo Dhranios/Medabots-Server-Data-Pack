@@ -259,10 +259,11 @@ scoreboard players set @s[x=-511,y=68,z=256,dx=3,dy=0,dz=3,scores={Rings=64},x_r
 scoreboard players add @s[x=-512,y=89,z=267,dx=3,dy=3,dz=0,scores={Rings=65},y_rotation=-90..90] RingsTotal 1
 playsound medabots_server:block.fly_course_ring master @s[x=-512,y=89,z=267,dx=3,dy=3,dz=0,scores={Rings=65},y_rotation=-90..90] ~ ~ ~ 1000 2
 scoreboard players set @s[x=-512,y=89,z=267,dx=3,dy=3,dz=0,scores={Rings=65},y_rotation=-90..90] Time 220
-advancement grant @s[x=-512,y=89,z=267,dx=3,dy=3,dz=0,scores={Rings=65,FlyCourseLapTime=..30},y_rotation=-90..90] only medabots_server:developer_challenge/hard_fly_course_1_no_detours
 scoreboard players set @s[x=-512,y=89,z=267,dx=3,dy=3,dz=0,scores={Rings=65},y_rotation=-90..90] Rings 1
 advancement grant @s[tag=!lap_race,scores={RingsTotal=196..}] only medabots_server:stages/hard_fly_course_1
 advancement grant @s[tag=lap_race,scores={RingsTotal=3..}] only medabots_server:stages/hard_fly_course_1
+advancement grant @s[scores={FlyCourseLapTime=..93,RingsTotal=196},tag=!lap_race] only medabots_server:developer_challenge/hard_fly_course_1_no_detours
+advancement grant @s[scores={FlyCourseLapTime=..93,RingsTotal=3},tag=lap_race] only medabots_server:developer_challenge/hard_fly_course_1_no_detours
 execute if entity @s[scores={FlyCourse=0}] run kill @e[type=minecraft:firework_rocket,distance=..2]
 teleport @s[scores={FlyCourse=0}] -465 90 267 90 0
 teleport @s[scores={FlyCourse=3}] -465 90 267 90 0

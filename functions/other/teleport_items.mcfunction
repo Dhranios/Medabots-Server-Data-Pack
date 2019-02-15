@@ -9,4 +9,4 @@ data modify entity @s[nbt={Thrower:{}},nbt=!{Owner:{}}] Owner merge from entity 
 execute at @a[tag=hostile,distance=..2,sort=nearest,limit=1] run teleport @s[tag=!do_not_teleport] ~ ~ ~
 tag @s add do_not_teleport
 scoreboard players add @s[scores={Time=..59}] Time 1
-execute unless entity @s[scores={Time=0..}] run scoreboard players add @s Time 1
+execute unless entity @s[scores={Time=0..}] run scoreboard players add @s[nbt={Thrower:{}}] Time 1

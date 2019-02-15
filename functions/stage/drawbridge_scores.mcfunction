@@ -5,7 +5,7 @@ execute if block ~ ~-1 ~ minecraft:cobblestone run tag @s add cobblestone
 execute if block ~ ~-1 ~ minecraft:coarse_dirt run tag @s add coarse_dirt
 execute if block ~ ~-1 ~ minecraft:sand run tag @s add sand
 execute if block ~ ~-1 ~ minecraft:packed_ice run tag @s add packed_ice
-execute if block ~ ~-1 ~ minecraft:stone_slab run tag @s add stone_slab
+execute if block ~ ~-1 ~ minecraft:smooth_stone_slab run tag @s add smooth_stone_slab
 execute if block ~ ~-1 ~ minecraft:snow_block run tag @s add snow_block
 execute if block ~ ~-1 ~ minecraft:oak_planks run tag @s add oak_planks
 execute if block ~ ~-1 ~ minecraft:orange_terracotta run tag @s add orange_terracotta
@@ -28,7 +28,7 @@ execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:cobblestone run tag @
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:stone_slab run tag @s add stone_slab_1
+execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:smooth_stone_slab run tag @s add smooth_stone_slab_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:orange_terracotta run tag @s add orange_terracotta_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:polished_granite run tag @s add polished_granite_1
@@ -50,7 +50,7 @@ execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:cobblestone run tag 
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:stone_slab run tag @s add stone_slab_1
+execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:smooth_stone_slab run tag @s add smooth_stone_slab_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:orange_terracotta run tag @s add orange_terracotta_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:polished_granite run tag @s add polished_granite_1
@@ -72,7 +72,7 @@ execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:cobblestone run tag
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:stone_slab run tag @s add stone_slab_1
+execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:smooth_stone_slab run tag @s add smooth_stone_slab_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:orange_terracotta run tag @s add orange_terracotta_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:polished_granite run tag @s add polished_granite_1
@@ -94,7 +94,7 @@ execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:cobblestone run tag 
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:stone_slab run tag @s add stone_slab_1
+execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:smooth_stone_slab run tag @s add smooth_stone_slab_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:orange_terracotta run tag @s add orange_terracotta_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:polished_granite run tag @s add polished_granite_1

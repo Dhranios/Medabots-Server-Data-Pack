@@ -47,7 +47,7 @@ setblock -1530 44 -225 minecraft:cobblestone
 setblock -1509 44 -196 minecraft:cobblestone
 setblock -1509 48 -196 minecraft:air
 setblock -1538 44 -229 minecraft:cobblestone
-setblock -1538 48 -229 minecraft:air
+fill -1538 45 -229 -1538 48 -229 minecraft:air
 fill -1570 45 -247 -1507 45 -184 minecraft:air replace minecraft:stone_slab
 fill -1570 45 -247 -1507 45 -184 minecraft:air replace minecraft:chest
 fill -1570 45 -247 -1507 45 -184 minecraft:air replace minecraft:comparator

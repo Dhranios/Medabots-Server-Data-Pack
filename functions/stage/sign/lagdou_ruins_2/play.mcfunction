@@ -9,6 +9,6 @@ scoreboard players set @s[scores={Error=0,Dialog=0,Level=10},advancements={medab
 scoreboard players set @s[scores={Error=0,Dialog=0,Level=10},advancements={medabots_server:stages/lagdou_ruins_1_second_go=true},gamemode=adventure] Battle 1
 scoreboard players set @s[scores={Error=0,Dialog=0,Level=10},advancements={medabots_server:stages/lagdou_ruins_1_second_go=true},gamemode=adventure] MusicType 19
 scoreboard players set @s[scores={Error=0,Dialog=0,Level=10},advancements={medabots_server:stages/lagdou_ruins_1_second_go=true},gamemode=adventure] Music 0
-kill @e[sort=random,tag=join_stage]
+kill @e[tag=join_stage]
 scoreboard players set @s[scores={Error=1..}] PreviousError 0
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}

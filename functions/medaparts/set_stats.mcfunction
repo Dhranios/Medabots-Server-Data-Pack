@@ -49,3 +49,9 @@ execute as @e[tag=left_arm] unless entity @s[nbt={ArmorItems:[{tag:{medabots_ser
 execute as @e[tag=right_arm] unless entity @s[nbt={ArmorItems:[{tag:{medabots_server:{}}}]}] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[2]
 execute as @e[tag=head] unless entity @s[nbt={ArmorItems:[{tag:{medabots_server:{}}}]}] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[3]
 effect give @s minecraft:invisibility 1000000 0 true
+
+# Save headgear
+tag @s[nbt={Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:sunglasses"}}}]}] add had_sunglasses_equipped
+replaceitem entity @s[tag=had_sunglasses_equipped] armor.head minecraft:air
+tag @s[nbt={Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:master_crown"}}}]}] add had_master_crown_equipped
+replaceitem entity @s[tag=had_master_crown_equipped] armor.head minecraft:air

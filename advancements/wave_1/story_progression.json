@@ -24,6 +24,12 @@
 		"meet_director_tune": {
             "trigger": "minecraft:impossible"
         },
+		"see_spyke": {
+            "trigger": "minecraft:impossible"
+        },
+		"see_sloan": {
+            "trigger": "minecraft:impossible"
+        },
 		"meet_screws": {
             "trigger": "minecraft:impossible"
         },
@@ -60,16 +66,28 @@
 		"rubberobo_breakout": {
             "trigger": "minecraft:impossible"
         },
-		"rock_a_rubberobo": {
+		"rock_a_rubberobo_start": {
             "trigger": "minecraft:impossible"
         },
-		"snowfield_a_rubberobo": {
+		"rock_a_rubberobo_end": {
             "trigger": "minecraft:impossible"
         },
-		"ruins_in_a_rubberobo": {
+		"snowfield_a_rubberobo_start": {
             "trigger": "minecraft:impossible"
         },
-		"seashore_a_rubberobo": {
+		"snowfield_a_rubberobo_end": {
+            "trigger": "minecraft:impossible"
+        },
+		"ruins_in_a_rubberobo_start": {
+            "trigger": "minecraft:impossible"
+        },
+		"ruins_in_a_rubberobo_end": {
+            "trigger": "minecraft:impossible"
+        },
+		"seashore_a_rubberobo_start": {
+            "trigger": "minecraft:impossible"
+        },
+		"seashore_a_rubberobo_end": {
             "trigger": "minecraft:impossible"
         },
 		"vs_squidguts": {

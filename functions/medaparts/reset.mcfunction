@@ -62,3 +62,9 @@ tag @s remove 9
 
 # Re-give items who have stage_item:1b
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:stage/give_obtained_item
+
+# Re-equip headgear
+replaceitem entity @s[tag=had_sunglasses_equipped] armor.head minecraft:chainmail_helmet{Unbreakable:1b,HideFlags:4,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.sunglasses\"}"},AttributeModifiers:[],medabots_server:{id:"medabots_server:sunglasses"}}
+tag @s[tag=had_sunglasses_equipped] remove had_sunglasses_equipped
+replaceitem entity @s[tag=had_master_crown_equipped] armor.head minecraft:golden_helmet{Unbreakable:1b,HideFlags:4,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.master_crown\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.master_crown.description\"}"]},AttributeModifiers:[],medabots_server:{id:"medabots_server:master_crown"}}
+tag @s[tag=had_master_crown_equipped] remove had_sunglasses_equipped

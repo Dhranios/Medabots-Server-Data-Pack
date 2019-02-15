@@ -85,3 +85,9 @@ tag @s[scores={Damage=1..},nbt={SelectedItemSlot:4,Inventory:[{tag:{medabots_ser
 scoreboard players add @s[tag=medal_damage] Charge 1
 clear @s[tag=medal_damage] minecraft:nether_star 1
 tag @s[tag=medal_damage] remove medal_damage
+
+# No armor
+execute if entity @s[nbt={Inventory:[{Slot:100b}]}] run function medabots_server:stage/give_obtained_item/100
+execute if entity @s[nbt={Inventory:[{Slot:101b}]}] run function medabots_server:stage/give_obtained_item/101
+execute if entity @s[nbt={Inventory:[{Slot:102b}]}] run function medabots_server:stage/give_obtained_item/102
+execute if entity @s[nbt={Inventory:[{Slot:103b}]}] run function medabots_server:stage/give_obtained_item/103

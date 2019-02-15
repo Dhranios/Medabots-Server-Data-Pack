@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] run function medabots_server:stage/create/boxer/second_go_battle/6_cpu
+summon minecraft:item -1906 44 -547 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 summon minecraft:area_effect_cloud -1903 44 -561 {CustomName:"{\"translate\":\"medabots_server:block.press_wall\"}",Tags:["press_wall","south"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1905 44 -562 {CustomName:"{\"translate\":\"medabots_server:block.press_wall\"}",Tags:["press_wall","south"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1908 44 -562 {CustomName:"{\"translate\":\"medabots_server:block.press_wall\"}",Tags:["press_wall","south"],Duration:2147483647}
