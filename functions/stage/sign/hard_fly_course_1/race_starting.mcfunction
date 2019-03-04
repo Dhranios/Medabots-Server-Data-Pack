@@ -1,5 +1,6 @@
 scoreboard players set @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=racer] FlyCourse 1
 scoreboard players set @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=racer] Stage 3
+scoreboard players set @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=racer] Time 220
 scoreboard players set @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=racer] Rings 0
 scoreboard players set @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=racer] RingsTotal 0
 teleport @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=0,limit=1] -511 89 266 0 0

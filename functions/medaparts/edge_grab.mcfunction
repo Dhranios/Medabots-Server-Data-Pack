@@ -12,7 +12,7 @@ execute if entity @s[y_rotation=135..-135,scores={EdgeGrabAble=1}] run function 
 execute if entity @s[y_rotation=-45..45,scores={EdgeGrabAble=1}] run function medabots_server:medaparts/edge_grab_zp
 
 # Spawn the ledge grab, unless the user sneaks
-execute if entity @s[scores={EdgeGrabAble=2,Sneaking=0}] if block ~ ~-1 ~ minecraft:air run summon minecraft:area_effect_cloud ~ ~-1 ~ {CustomName:"{\"translate\":\"medabots_server:move.edge_grab\"}",Duration:31,Tags:["edge_grab"]}
+execute if entity @s[scores={EdgeGrabAble=2,Sneaking=0}] if block ~ ~-1 ~ minecraft:air run summon minecraft:area_effect_cloud ~ ~-1 ~ {CustomName:'{"translate":"medabots_server:move.edge_grab"}',Duration:31,Tags:["edge_grab"]}
 
 # Prevent fall damage
 execute if entity @s[scores={EdgeGrabAble=2,Sneaking=0}] if block ~ ~-1 ~ minecraft:air run effect give @s minecraft:resistance 1 9 true

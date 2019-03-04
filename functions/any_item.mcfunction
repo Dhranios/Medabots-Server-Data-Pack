@@ -1,7 +1,7 @@
 # Make the break, falling and power press attacks do something
 tag @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{id:"medabots_server:break"}}}}] add break
 tag @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{id:"medabots_server:falling"}}}}] add falling
-tag @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{id:"medabots_server:power_press"}}}}] add power_press
+tag @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{id:"medabots_server:chameleon"}}}}] add power_press
 execute if entity @s[tag=break] run function medabots_server:medaparts/break_attack
 execute if entity @s[tag=falling] run function medabots_server:medaparts/falling_attack
 execute if entity @s[tag=power_press] run function medabots_server:medaparts/power_press

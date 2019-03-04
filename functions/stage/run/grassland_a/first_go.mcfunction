@@ -111,7 +111,7 @@ playsound medabots_server:music.stage.stage_end music @s[x=-1550.5,y=45,z=-170.5
 scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] Battle 0
 scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
 scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
-advancement grant @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/grassland_a_first_go
+advancement grant @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/grassland_a_first_go
 tag @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={meet_karin=true,meet_max=false}}] add dialog_infinity_meet_max
 teleport @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] -1539 51 -151 -180 0
 execute if block -1517 45 -128 minecraft:structure_block run setblock -1517 46 -128 minecraft:redstone_block

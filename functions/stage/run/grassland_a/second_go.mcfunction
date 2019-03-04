@@ -108,7 +108,7 @@ playsound medabots_server:music.stage.stage_end music @s[x=-1550.5,y=45,z=-170.5
 scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] Battle 0
 scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
 scoreboard players set @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
-advancement grant @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/grassland_a_second_go
+advancement grant @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/grassland_a_second_go
 teleport @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] -1539 51 -151 -180 0
 execute if block -1517 45 -128 minecraft:structure_block run setblock -1517 46 -128 minecraft:redstone_block
 execute if block -1540 45 -127 minecraft:structure_block run setblock -1540 46 -127 minecraft:redstone_block

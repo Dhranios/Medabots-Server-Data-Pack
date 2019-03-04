@@ -4,9 +4,9 @@ stopsound @s music
 # send death message depending on the death
 execute if entity @s[tag=!had_death,tag=murder_mystery] as @a[scores={Killer=1},limit=1] run tag @a[scores={Death=1},limit=1] add death_message
 execute if entity @s[tag=!had_death,tag=death_message] run tellraw @a {"translate":"medabots_server:death.murder_mystery","with":[{"selector":"@s"}]}
-execute if entity @s[tag=!had_death,tag=death_message] as @a[scores={Killer=1},limit=1,tag=!murderer] run tellraw @a {"translate":"medabots_server:death.murder_mystery.killed_inocent","with":[{"selector":"@s"}]}
-execute if entity @s[tag=!had_death,tag=death_message] as @a[scores={Killer=1},limit=1,tag=!murderer] run tag @s add had_death
-execute if entity @s[tag=!had_death,tag=death_message] as @a[scores={Killer=1},limit=1,tag=!murderer] run kill @s
+execute if entity @s[tag=!had_death,tag=death_message,tag=!murderer] as @a[scores={Killer=1},limit=1,tag=!murderer] run tellraw @a {"translate":"medabots_server:death.murder_mystery.killed_inocent","with":[{"selector":"@s"}]}
+execute if entity @s[tag=!had_death,tag=death_message,tag=!murderer] as @a[scores={Killer=1},limit=1,tag=!murderer] run tag @s add had_death
+execute if entity @s[tag=!had_death,tag=death_message,tag=!murderer] as @a[scores={Killer=1},limit=1,tag=!murderer] run kill @s
 tag @s[tag=death_message] add had_death
 
 execute if entity @s[tag=!had_death] if block ~ ~ ~ minecraft:lava run tellraw @a {"translate":"medabots_server:death.lava","with":[{"selector":"@s"}]}

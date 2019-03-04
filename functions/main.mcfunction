@@ -12,7 +12,7 @@ execute as @e[type=!minecraft:player,tag=!no_processing] at @s run function meda
 # Make the sound cooldown cool down
 scoreboard players remove @e[scores={Sound=1..}] Sound 1
 
-# Teleport action-floor-spawning area effect clouds up
+# Teleport action-floor-spawning up
 execute as @e[tag=no_processing] at @s run function medabots_server:blocks/action_floor/move
 
 # Kill every entity that is tagged as dead

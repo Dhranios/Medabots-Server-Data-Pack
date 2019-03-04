@@ -1,0 +1,34 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:polished_granite"
+        },
+        "title": {
+            "translate": "medabots_server:location.lagdou_ruins",
+			"with": [
+				{
+					"text": "4"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.clear",
+			"with": [
+				{
+					"translate": "medabots_server:location.lagdou_ruins",
+					"with": [
+						{
+							"text": "4"
+						}
+					]
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/wave_1/lagdou_ruins_3_second_go",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

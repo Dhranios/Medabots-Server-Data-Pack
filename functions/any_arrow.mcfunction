@@ -16,7 +16,7 @@ execute if entity @s[tag=laser] run function medabots_server:medaparts/laser_arr
 scoreboard players add @s[tag=life_time] LifeTime 1
 
 # Trigger Balloon Bombs
-execute if entity @s[tag=in_ground,nbt={inBlockState:{Name:"minecraft:sponge"}}] run function medabots_server:stage/balloon_bomb_shot
+execute if entity @s[tag=in_ground,nbt={inBlockState:{Name:"minecraft:sponge"}}] run function medabots_server:entities/balloon_bomb/shot
 
 # Destroy chests
 execute if entity @s[tag=in_ground] if block ~ ~ ~ minecraft:chest run setblock ~ ~ ~ minecraft:air destroy

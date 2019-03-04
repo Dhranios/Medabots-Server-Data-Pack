@@ -121,3 +121,8 @@ execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:stone_bricks run tag
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:stone_bricks run tag @s add stone_bricks_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:stone_bricks run tag @s add stone_bricks_1
 scoreboard players set @s Time -1
+
+execute if entity @s[tag=east] run setblock ~ ~ ~ minecraft:oak_stairs[facing=east,shape=straight,half=bottom]
+execute if entity @s[tag=west] run setblock ~ ~ ~ minecraft:oak_stairs[facing=west,shape=straight,half=bottom]
+execute if entity @s[tag=north] run setblock ~ ~ ~ minecraft:oak_stairs[facing=north,shape=straight,half=bottom]
+execute if entity @s[tag=south] run setblock ~ ~ ~ minecraft:oak_stairs[facing=south,shape=straight,half=bottom]

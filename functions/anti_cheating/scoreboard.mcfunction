@@ -212,13 +212,11 @@ scoreboard players set #100 Constants 100
 scoreboard players set #1000 Constants 1000
 scoreboard players set #1005 Constants 1005
 scoreboard players set Medabots: ServerStats 69
-scoreboard players set Stage_Versions: ServerStats 133
-scoreboard players set Dev_Mode_Versions: ServerStats 0
-scoreboard players set Stages: ServerStats 62
-scoreboard players set Advancements: ServerStats 29
+scoreboard players set Medals: ServerStats 12
 scoreboard players set Bosses: ServerStats 13
 scoreboard players set Enemies: ServerStats 9
-scoreboard players set Medals: ServerStats 8
+scoreboard players set Passes: ServerStats 19
+scoreboard players set Dev_Mode_Versions: ServerStats 0
 
 # Re-add any teams that may have been removed
 team add AFK {"translate":"medabots_server:scoreboard.team.afk"}
@@ -314,6 +312,48 @@ bossbar add medabots_server:iceberg_e/time {"translate":"medabots_server:scorebo
 bossbar add medabots_server:ruins_out_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
 bossbar add medabots_server:ruins_in_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
 bossbar add medabots_server:rock_f/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:argorok {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.argorok","color":"green"}]}
+bossbar add medabots_server:argorok/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.argorok","color":"green"}]}
+bossbar add medabots_server:argorok/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.argorok","color":"green"}]}
+bossbar add medabots_server:hr_d3 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.hr_d3","color":"green"}]}
+bossbar add medabots_server:hr_d3/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.hr_d3","color":"green"}]}
+bossbar add medabots_server:hr_d3/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.hr_d3","color":"green"}]}
+bossbar add medabots_server:topmaniac {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.topmaniac","color":"green"}]}
+bossbar add medabots_server:topmaniac/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.topmaniac","color":"green"}]}
+bossbar add medabots_server:topmaniac/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.topmaniac","color":"green"}]}
+bossbar add medabots_server:lor_starcutter {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.lor_starcutter","color":"green"}]}
+bossbar add medabots_server:lor_starcutter/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.lor_starcutter","color":"green"}]}
+bossbar add medabots_server:lor_starcutter/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.lor_starcutter","color":"green"}]}
+bossbar add medabots_server:magolor {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.magolor","color":"green"}]}
+bossbar add medabots_server:magolor/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.magolor","color":"green"}]}
+bossbar add medabots_server:magolor/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.magolor","color":"green"}]}
+bossbar add medabots_server:magolor_soul {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.magolor_soul","color":"green"}]}
+bossbar add medabots_server:magolor_soul/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.magolor_soul","color":"green"}]}
+bossbar add medabots_server:magolor_soul/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.magolor_soul","color":"green"}]}
+bossbar add medabots_server:master_hand/1 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_hand","color":"green"}]}
+bossbar add medabots_server:master_hand/2 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_hand","color":"green"}]}
+bossbar add medabots_server:master_hand/3 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_hand","color":"green"}]}
+bossbar add medabots_server:master_hand/4 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_hand","color":"green"}]}
+bossbar add medabots_server:master_hand/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_hand","color":"green"}]}
+bossbar add medabots_server:master_hand/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_hand","color":"green"}]}
+bossbar add medabots_server:crazy_hand/2 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.crazy_hand","color":"green"}]}
+bossbar add medabots_server:crazy_hand/3 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.crazy_hand","color":"green"}]}
+bossbar add medabots_server:crazy_hand/4 {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.crazy_hand","color":"green"}]}
+bossbar add medabots_server:crazy_hand/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.crazy_hand","color":"green"}]}
+bossbar add medabots_server:crazy_hand/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.crazy_hand","color":"green"}]}
+bossbar add medabots_server:master_giant {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_giant","color":"green"}]}
+bossbar add medabots_server:master_giant/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_giant","color":"green"}]}
+bossbar add medabots_server:master_giant/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_giant","color":"green"}]}
+bossbar add medabots_server:master_beast {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_beast","color":"green"}]}
+bossbar add medabots_server:master_beast/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_beast","color":"green"}]}
+bossbar add medabots_server:master_beast/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_beast","color":"green"}]}
+bossbar add medabots_server:master_edges {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_edges","color":"green"}]}
+bossbar add medabots_server:master_edges/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_edges","color":"green"}]}
+bossbar add medabots_server:master_edges/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.master_edges","color":"green"}]}
+bossbar add medabots_server:galleom/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.galleom","color":"green"}]}
+bossbar add medabots_server:galleom/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.galleom","color":"green"}]}
+bossbar add medabots_server:dimentio/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.dimentio","color":"green"}]}
+bossbar add medabots_server:dimentio/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.dimentio","color":"green"}]}
 
 # Set bossbar data
 bossbar set medabots_server:grassland_a/time style notched_6
@@ -448,3 +488,87 @@ bossbar set medabots_server:iceberg_e/time color green
 bossbar set medabots_server:ruins_out_e/time color green
 bossbar set medabots_server:ruins_in_e/time color green
 bossbar set medabots_server:rock_f/time color green
+bossbar set medabots_server:argorok style progress
+bossbar set medabots_server:argorok/mt_battle style progress
+bossbar set medabots_server:argorok/arena style progress
+bossbar set medabots_server:hr_d3 style progress
+bossbar set medabots_server:hr_d3/mt_battle style progress
+bossbar set medabots_server:hr_d3/arena style progress
+bossbar set medabots_server:topmaniac style progress
+bossbar set medabots_server:topmaniac/mt_battle style progress
+bossbar set medabots_server:topmaniac/arena style progress
+bossbar set medabots_server:lor_starcutter style progress
+bossbar set medabots_server:lor_starcutter/mt_battle style progress
+bossbar set medabots_server:lor_starcutter/arena style progress
+bossbar set medabots_server:magolor style progress
+bossbar set medabots_server:magolor/mt_battle style progress
+bossbar set medabots_server:magolor/arena style progress
+bossbar set medabots_server:magolor_soul style progress
+bossbar set medabots_server:magolor_soul/mt_battle style progress
+bossbar set medabots_server:magolor_soul/arena style progress
+bossbar set medabots_server:master_hand/1 style progress
+bossbar set medabots_server:master_hand/2 style progress
+bossbar set medabots_server:master_hand/3 style progress
+bossbar set medabots_server:master_hand/4 style progress
+bossbar set medabots_server:master_hand/mt_battle style progress
+bossbar set medabots_server:master_hand/arena style progress
+bossbar set medabots_server:crazy_hand/2 style progress
+bossbar set medabots_server:crazy_hand/3 style progress
+bossbar set medabots_server:crazy_hand/4 style progress
+bossbar set medabots_server:crazy_hand/mt_battle style progress
+bossbar set medabots_server:crazy_hand/arena style progress
+bossbar set medabots_server:master_giant style progress
+bossbar set medabots_server:master_giant/mt_battle style progress
+bossbar set medabots_server:master_giant/arena style progress
+bossbar set medabots_server:master_beast style progress
+bossbar set medabots_server:master_beast/mt_battle style progress
+bossbar set medabots_server:master_beast/arena style progress
+bossbar set medabots_server:master_edges style progress
+bossbar set medabots_server:master_edges/mt_battle style progress
+bossbar set medabots_server:master_edges/arena style progress
+bossbar set medabots_server:galleom/mt_battle style progress
+bossbar set medabots_server:galleom/arena style progress
+bossbar set medabots_server:dimentio/mt_battle style progress
+bossbar set medabots_server:dimentio/arena style progress
+bossbar set medabots_server:argorok color red
+bossbar set medabots_server:argorok/mt_battle color red
+bossbar set medabots_server:argorok/arena color red
+bossbar set medabots_server:hr_d3 color red
+bossbar set medabots_server:hr_d3/mt_battle color red
+bossbar set medabots_server:hr_d3/arena color red
+bossbar set medabots_server:topmaniac color red
+bossbar set medabots_server:topmaniac/mt_battle color red
+bossbar set medabots_server:topmaniac/arena color red
+bossbar set medabots_server:lor_starcutter color red
+bossbar set medabots_server:lor_starcutter/mt_battle color red
+bossbar set medabots_server:lor_starcutter/arena color red
+bossbar set medabots_server:magolor color red
+bossbar set medabots_server:magolor/mt_battle color red
+bossbar set medabots_server:magolor/arena color red
+bossbar set medabots_server:magolor_soul color red
+bossbar set medabots_server:magolor_soul/mt_battle color red
+bossbar set medabots_server:magolor_soul/arena color red
+bossbar set medabots_server:master_hand/1 color red
+bossbar set medabots_server:master_hand/2 color red
+bossbar set medabots_server:master_hand/3 color red
+bossbar set medabots_server:master_hand/4 color red
+bossbar set medabots_server:master_hand/mt_battle color red
+bossbar set medabots_server:master_hand/arena color red
+bossbar set medabots_server:crazy_hand/2 color red
+bossbar set medabots_server:crazy_hand/3 color red
+bossbar set medabots_server:crazy_hand/4 color red
+bossbar set medabots_server:crazy_hand/mt_battle color red
+bossbar set medabots_server:crazy_hand/arena color red
+bossbar set medabots_server:master_giant color red
+bossbar set medabots_server:master_giant/mt_battle color red
+bossbar set medabots_server:master_giant/arena color red
+bossbar set medabots_server:master_beast color red
+bossbar set medabots_server:master_beast/mt_battle color red
+bossbar set medabots_server:master_beast/arena color red
+bossbar set medabots_server:master_edges color red
+bossbar set medabots_server:master_edges/mt_battle color red
+bossbar set medabots_server:master_edges/arena color red
+bossbar set medabots_server:galleom/mt_battle color red
+bossbar set medabots_server:galleom/arena color red
+bossbar set medabots_server:dimentio/mt_battle color red
+bossbar set medabots_server:dimentio/arena color red

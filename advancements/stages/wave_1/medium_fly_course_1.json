@@ -1,0 +1,43 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:elytra"
+        },
+        "title": {
+            "translate": "medabots_server:location.fly_course.name",
+			"with": [
+				{
+					"translate": "medabots_server:location.fly_course.medium.prefix"
+				},
+				{
+					"text": "1"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.fly_course",
+			"with": [
+				{
+					"translate": "medabots_server:location.fly_course.name",
+					"with": [
+						{
+							"translate": "medabots_server:location.fly_course.medium.prefix"
+						},
+						{
+							"text": "1"
+						}
+					]
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/wave_1",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/wave_1"
+    }
+}

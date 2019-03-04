@@ -9,7 +9,7 @@ scoreboard players set @s[scores={Time=3,Destroy=3}] Time 27
 execute if entity @s[scores={Time=32}] run particle minecraft:smoke ~ ~1 ~ 1 0 1 1 10
 
 # Spawn the attack
-execute if entity @s[scores={Time=48}] run summon minecraft:armor_stand ^ ^ ^1 {Invisible:1b,Small:1b,ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}],CustomName:"{\"translate\":\"medabots_server:move.destroy\"}",Tags:["destroy"]}
+execute if entity @s[scores={Time=48}] run summon minecraft:armor_stand ^ ^ ^1 {Invisible:1b,Small:1b,ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}],CustomName:'{"translate":"medabots_server:move.destroy"}',Tags:["destroy"]}
 execute if entity @s[scores={Time=48}] at @e[type=minecraft:armor_stand,tag=destroy,distance=..0.2] rotated as @s run teleport @e[type=minecraft:armor_stand,tag=destroy,distance=..0.2] ~ ~ ~ ~ ~
 
 # Remove from head uses if this was the head part

@@ -4,5 +4,6 @@ execute unless block ~ ~ ~ minecraft:air{loaded:0b} if entity @s[tag=dialog_infi
 execute unless block ~ ~ ~ minecraft:air{loaded:0b} if entity @s[tag=dialog_infinity_meet_max] run function medabots_server:dialog/infinity/meet_max
 execute unless block ~ ~ ~ minecraft:air{loaded:0b} if entity @s[tag=dialog_infinity_meet_koji] run function medabots_server:dialog/infinity/meet_koji
 execute unless block ~ ~ ~ minecraft:air{loaded:0b} if entity @s[tag=dialog_infinity_meet_tune] run function medabots_server:dialog/infinity/meet_tune
+execute unless block ~ ~ ~ minecraft:air{loaded:0b} if entity @s[tag=dialog_infinity_meet_screws] run function medabots_server:dialog/infinity/meet_screws
 
 execute unless block ~ ~ ~ minecraft:air{loaded:0b} if entity @s[tag=dialog_magolor] run function medabots_server:dialog/magolor

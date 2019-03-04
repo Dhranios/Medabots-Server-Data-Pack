@@ -1,0 +1,37 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:black_wool"
+        },
+        "title": {
+            "translate": "medabots_server:location.final_destination",
+			"with": [
+				{
+					"text": "4"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.clear",
+			"with": [
+				{
+					"translate": "medabots_server:location.final_destination",
+					"with": [
+						{
+							"text": "4"
+						}
+					]
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/wave_1/final_destination_3",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/wave_1"
+    }
+}

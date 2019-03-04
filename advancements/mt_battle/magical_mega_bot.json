@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:end_crystal"
+            "item": "minecraft:diamond_pickaxe",
+            "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:12}"
         },
         "title": {
             "translate": "medabots_server:advancements.mt_battle.magical_mega_bot"

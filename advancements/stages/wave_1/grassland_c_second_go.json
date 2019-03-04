@@ -1,0 +1,48 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:grass_block"
+        },
+        "title": {
+            "translate": "medabots_server:location.grassland",
+			"with": [
+				{
+					"text": "C"
+				}
+			],
+			"extra": [
+				{
+					"translate": "medabots_server:message.stage.requires.version"
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.second_go"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.version",
+			"with": [
+				{
+					"translate": "medabots_server:location.grassland",
+					"with": [
+						{
+							"text": "C"
+						}
+					]
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.second_go"
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/wave_1/grassland_c_first_go",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/true_medafighter"
+    }
+}

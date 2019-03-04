@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_pickaxe",
+            "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:8}"
+        },
+        "title": {
+            "translate": "medabots_server:entity.master_giant"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.bosses.defeated",
+			"with": [
+				{
+					"translate": "medabots_server:entity.master_giant"
+				}
+			]
+        },
+        "hidden": true
+    },
+	"parent": "medabots_server:bosses/wave_1/crazy_hand",
+    "criteria": {
+        "defeated": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/bosses/wave_1"
+    }
+}

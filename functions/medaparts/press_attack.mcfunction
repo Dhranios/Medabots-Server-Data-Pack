@@ -1,5 +1,5 @@
 # Spawn black mass
-summon minecraft:armor_stand ~ ~-1.5 ~ {Invisible:1b,CustomName:"{\"translate\":\"medabots_server:move.press\"}",NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:coal_block",Count:1b}],Marker:1b,Tags:["LifeTime"]}
+summon minecraft:armor_stand ~ ~-1.5 ~ {Invisible:1b,CustomName:'{"translate":"medabots_server:move.press"}',NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:coal_block",Count:1b}],Marker:1b,Tags:["LifeTime"]}
 
 # CPU owned simulation
 execute if entity @s[tag=cpu_owned,tag=!rotated] run teleport @s ~ ~ ~ facing entity @e[type=!minecraft:player,sort=nearest,limit=1,scores={Press=1..}]

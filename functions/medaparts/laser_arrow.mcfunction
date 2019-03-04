@@ -132,5 +132,5 @@ data remove entity @s[tag=in_ground,nbt=!{inGround:1b}] inBlockState
 tag @s[tag=in_ground,nbt=!{inGround:1b}] remove in_ground
 
 # Leave light blue light trail
-execute if entity @s run summon minecraft:armor_stand ~ ~-1.7 ~ {CustomName:"{\"translate\":\"medabots_server:move.laser\"}",Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["life_time"]}
+execute if entity @s run summon minecraft:armor_stand ~ ~-1.7 ~ {CustomName:'{"translate":"medabots_server:move.laser"}',Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["life_time"]}
 execute if entity @s run effect give @a[distance=..10] minecraft:night_vision 1 0 true

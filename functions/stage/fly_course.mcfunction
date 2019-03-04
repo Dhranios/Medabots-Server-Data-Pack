@@ -1,4 +1,6 @@
 # Reset the course data
+clear @s[scores={FlyCourse=0}] minecraft:elytra{medabots_server:{id:"medabots_server:fly_course_wings"}}
+clear @s[scores={FlyCourse=0}] minecraft:firework_rocket{medabots_server:{id:"medabots_server:fly_course_speed"}}
 scoreboard players reset @s[scores={FlyCourse=0}] Stage
 scoreboard players reset @s[scores={FlyCourse=0}] FlyTime
 scoreboard players reset @s[scores={FlyCourse=0}] FlyCourseLapTime
@@ -62,7 +64,7 @@ scoreboard players operation @s[scores={FlyCourse=2}] FlyCourseTime = @s Time
 scoreboard players operation @s[scores={FlyCourse=2}] FlyCourseTime /= #20 Constants
 scoreboard players operation @s[scores={FlyCourse=2}] FlyCourseLapTime = @s FlyTime
 scoreboard players operation @s[scores={FlyCourse=2}] FlyCourseLapTime /= #20 Constants
-title @s[scores={FlyCourse=2},tag=training] actionbar {"translate":"medabots_server:message.stage.fly_course.rings","color":"green","with":[{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"},{"score":{"name":"@s","objective":"FlyCourseTime"},"color":"green"}]}
+title @s[scores={FlyCourse=2},tag=!racer] actionbar {"translate":"medabots_server:message.stage.fly_course.rings","color":"green","with":[{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"},{"score":{"name":"@s","objective":"FlyCourseTime"},"color":"green"}]}
 title @s[scores={FlyCourse=2..4},tag=racer,tag=!lap_race] actionbar {"translate":"medabots_server:message.stage.fly_course.placement.fallout","color":"green","with":[{"score":{"name":"@s","objective":"FlyCoursePlace"},"color":"green"},{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"FlyCourseTime"},"color":"green"}]}
 title @s[scores={FlyCourse=2..4},tag=racer,tag=lap_race] actionbar {"translate":"medabots_server:message.stage.fly_course.placement.laps","color":"green","with":[{"score":{"name":"@s","objective":"FlyCoursePlace"},"color":"green"},{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"FlyCourseTime"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"},{"score":{"name":"@s","objective":"FlyCourseLapTime"},"color":"green"}]}
 
@@ -70,15 +72,13 @@ title @s[scores={FlyCourse=2..4},tag=racer,tag=lap_race] actionbar {"translate":
 effect give @s[tag=racer] minecraft:glowing 1 0 true
 
 # Remove the items
-clear @s[scores={FlyCourse=0}] minecraft:elytra{medabots_server:{id:"medabots_server:fly_course_wings"}}
-clear @s[scores={FlyCourse=0}] minecraft:firework_rocket{medabots_server:{id:"medabots_server:fly_course_speed"}}
 clear @s[scores={FlyCourse=5}] minecraft:elytra{medabots_server:{id:"medabots_server:fly_course_wings"}}
 clear @s[scores={FlyCourse=5}] minecraft:firework_rocket{medabots_server:{id:"medabots_server:fly_course_speed"}}
 
 # Show stop message
 tellraw @s[scores={FlyCourse=0},nbt={FallFlying:0b}] {"translate":"medabots_server:message.stage.fly_course.stop_fly","color":"green"}
 tellraw @s[scores={FlyCourse=0,Time=19}] {"translate":"medabots_server:message.stage.fly_course.too_late","color":"green"}
-tellraw @s[scores={FlyCourse=0},tag=training] {"translate":"medabots_server:message.stage.fly_course.results","color":"green","with":[{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"}]}
+tellraw @s[scores={FlyCourse=0},tag=!race] {"translate":"medabots_server:message.stage.fly_course.results","color":"green","with":[{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"}]}
 tellraw @s[scores={FlyCourse=5},tag=!lap_race] {"translate":"medabots_server:message.stage.fly_course.race_results.fallout","color":"green","with":[{"score":{"name":"@s","objective":"FlyCoursePlace"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"}]}
 tellraw @s[scores={FlyCourse=5},tag=lap_race] {"translate":"medabots_server:message.stage.fly_course.race_results.laps","color":"green","with":[{"score":{"name":"@s","objective":"FlyCoursePlace"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"},{"score":{"name":"@s","objective":"FlyCourseLapTime"},"color":"green"}]}
 scoreboard players set @s[scores={FlyCourse=0},tag=racer] FlyCourse 3
@@ -99,4 +99,4 @@ scoreboard players reset @s[scores={FlyCourse=5}] LastPlaceTime
 scoreboard players set @s[scores={FlyCourse=5}] FlyCourse 0
 
 # Fly couse checker, in case of lag, goes from your last position, to your new position, to see if you flew through any rings
-function medabots_server:stage/fly_course/checker
+execute if entity @s[scores={FlyCourse=1..2}] run function medabots_server:stage/fly_course/checker

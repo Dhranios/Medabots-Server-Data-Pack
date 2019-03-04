@@ -36,10 +36,10 @@ execute if entity @s[scores={Time=540}] run playsound medabots_server:block.alar
 execute if entity @s[scores={Time=560}] run playsound medabots_server:block.alarm ambient @a ~ ~ ~ 1
 execute if entity @s[scores={Time=580}] run playsound medabots_server:block.alarm ambient @a ~ ~ ~ 1
 execute if entity @s[scores={Time=600}] run playsound medabots_server:block.alarm ambient @a ~ ~ ~ 1
-execute if entity @s[scores={Time=1..}] as @e[tag=guard,distance=..16] if score @s Stage = @e[distance=..0.1,limit=1,tag=alarm] Stage run data merge entity @s {NoAI:1b}
+execute if entity @s[scores={Time=1..}] as @e[tag=guard,distance=..16,tag=!alarm_ringing] if score @s Stage = @e[distance=..0.1,limit=1,tag=alarm] Stage run tag @s add alarm_ringing
 
 # Stop annoying the guards when disabled again
-execute if entity @s[tag=!enabled,scores={Time=0}] as @e[tag=guard,distance=..16] if score @s Stage = @e[distance=..0.1,limit=1,tag=alarm] Stage run data merge entity @s {NoAI:0b}
+execute if entity @s[tag=!enabled,scores={Time=0}] as @e[tag=guard,distance=..16,tag=alarm_ringing] if score @s Stage = @e[distance=..0.1,limit=1,tag=alarm] Stage run tag @s remove alarm_ringing
 
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air

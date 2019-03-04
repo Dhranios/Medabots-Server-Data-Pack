@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:paper"
+            "item": "minecraft:book"
         },
         "title": {
             "translate": "medabots_server:advancements.passes.root"
