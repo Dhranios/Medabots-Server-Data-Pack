@@ -31,7 +31,7 @@ execute if entity @s[scores={TaskCheck=13}] run data merge block -290 18 -60 {au
 execute if entity @s[scores={TaskCheck=15}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"D stages second go version data needs to be shared."]}
 execute if entity @s[scores={TaskCheck=15}] run data merge block -289 18 -59 {auto:0b}
 execute if entity @s[scores={TaskCheck=16}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"A list of all enemy medabots' medals needs to be shared."]}
-execute if entity @s[scores={TaskCheck=16}] run data merge block -288 18 -58 {auto:0b}
+execute if entity @s[scores={TaskCheck=16}] run data merge block -288 18 -60 {auto:0b}
 
 # Coop
 
