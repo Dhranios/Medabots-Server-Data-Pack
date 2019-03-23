@@ -1,7 +1,3 @@
-setblock -1998 51 -582 minecraft:air
-setblock -1996 51 -582 minecraft:air
-setblock -1998 53 -583 minecraft:red_wool
-setblock -1996 53 -583 minecraft:red_wool
 summon minecraft:zombie -1982 45 -573 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","rotate_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[1.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -1982 45 -563 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","rotate_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[1.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -1982 45 -558 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","rotate_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[1.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
@@ -18,7 +14,12 @@ summon minecraft:zombie -1984 45 -546 {NoAI:1b,Silent:1b,Team:"StageEnemy",Armor
 summon minecraft:zombie -1994 45 -546 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","rotate_over_z_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[1.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -1999 45 -546 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","rotate_over_z_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[1.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -2009 45 -546 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","rotate_over_z_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[1.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-teleport @a[x=-1998,y=51,z=-582,distance=..0.7,limit=1] -1996 45 -557
-teleport @a[x=-1996,y=51,z=-582,distance=..0.7,limit=1] -1997 45 -564
-scoreboard players set @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Stage 100
+teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=-1] -1996 45 -557
+teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=0] -1997 45 -564
+teleport @s[tag=-1] -1996 45 -557
+tag @a[x=-1996,y=45,z=-557,distance=..1] remove -1
+tag @a[x=-1997,y=45,z=-564,distance=..1] remove 0
+scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Stage 49
 scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Battle 1
+scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Music 0
+scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] MusicType 0

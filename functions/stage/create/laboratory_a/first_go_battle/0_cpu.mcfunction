@@ -1,6 +1,6 @@
 # Dragonbeetle
 summon minecraft:skeleton -1752 44 -271 {CustomName:"{\"translate\":\"medabots_server:entity.dragonbeetle\"}",CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/laboratory_a/first_go/dragonbeetle",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["dragonbeetle","enemy_medabot","killerable","hostile","fly_legs","sword_left_arm","guard_optical_right_arm","press_head","kabuto_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
-scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Stage 27
+scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Stage 9
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Medabot 0
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Battle 2
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] MaxHeadUses 15

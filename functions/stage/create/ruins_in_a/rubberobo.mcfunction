@@ -262,10 +262,10 @@ teleport @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=-1] -1683 44 -259
 teleport @s[tag=-1] -1683 44 -259
 tag @a[x=-1683,y=44,z=-259,distance=..1] remove -1
 scoreboard players set @a[x=-1683,y=44,z=-259,distance=..1] Battle 1
-scoreboard players set @a[x=-1683,y=44,z=-259,distance=..1] Stage 25
+scoreboard players set @a[x=-1683,y=44,z=-259,distance=..1] Stage 8
 scoreboard players set @a[x=-1683,y=44,z=-259,distance=..1] Music 0
 scoreboard players set @a[x=-1683,y=44,z=-259,distance=..1] MusicType 14
 scoreboard players set @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=enemy_medabot] Battle 1
-scoreboard players set @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=enemy_medabot] Stage 25
+scoreboard players set @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=enemy_medabot] Stage 8
 scoreboard players set @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=enemy_medabot] Music 0
 scoreboard players set @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=enemy_medabot] MusicType 14

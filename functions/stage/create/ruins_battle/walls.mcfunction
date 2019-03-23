@@ -1,7 +1,3 @@
-setblock -1998 51 -582 minecraft:air
-setblock -1996 51 -582 minecraft:air
-setblock -1998 53 -583 minecraft:red_wool
-setblock -1996 53 -583 minecraft:red_wool
 fill -1992 45 -565 -1992 48 -565 minecraft:bedrock
 fill -1992 45 -556 -1992 48 -556 minecraft:bedrock
 fill -2001 45 -556 -2001 48 -556 minecraft:bedrock
@@ -22,7 +18,12 @@ fill -2012 45 -545 -2012 48 -545 minecraft:bedrock
 fill -2013 45 -559 -2013 48 -559 minecraft:bedrock
 fill -2012 45 -576 -2012 48 -576 minecraft:bedrock
 fill -1998 45 -577 -1998 48 -577 minecraft:bedrock
-teleport @a[x=-1998,y=51,z=-582,distance=..0.7,limit=1] -1996 45 -557
-teleport @a[x=-1996,y=51,z=-582,distance=..0.7,limit=1] -1997 45 -564
-scoreboard players set @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Stage 100
+teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=-1] -1996 45 -557
+teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=0] -1997 45 -564
+teleport @s[tag=-1] -1996 45 -557
+tag @a[x=-1996,y=45,z=-557,distance=..1] remove -1
+tag @a[x=-1997,y=45,z=-564,distance=..1] remove 0
+scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Stage 49
 scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Battle 1
+scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Music 0
+scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] MusicType 0

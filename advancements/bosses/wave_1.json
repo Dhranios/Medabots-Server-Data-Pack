@@ -22,11 +22,41 @@
     },
 	"parent": "medabots_server:bosses/root",
     "criteria": {
-        "cleared": {
+        "argorok": {
+            "trigger": "minecraft:impossible"
+        },
+        "hr_d3": {
+            "trigger": "minecraft:impossible"
+        },
+        "topmaniac": {
+            "trigger": "minecraft:impossible"
+        },
+        "lor_starcutter": {
+            "trigger": "minecraft:impossible"
+        },
+        "magolor": {
+            "trigger": "minecraft:impossible"
+        },
+        "magolor_soul": {
+            "trigger": "minecraft:impossible"
+        },
+        "master_hand": {
+            "trigger": "minecraft:impossible"
+        },
+        "crazy_hand": {
+            "trigger": "minecraft:impossible"
+        },
+        "master_giant": {
+            "trigger": "minecraft:impossible"
+        },
+        "master_beast": {
+            "trigger": "minecraft:impossible"
+        },
+        "master_edges": {
             "trigger": "minecraft:impossible"
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/root"
+        "function": "medabots_server:advancements/mt_battle/wave_1"
     }
 }

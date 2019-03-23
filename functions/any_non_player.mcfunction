@@ -20,9 +20,6 @@ execute if entity @s[type=minecraft:area_effect_cloud] run function medabots_ser
 # Functions that run on every ghast
 execute if entity @s[type=minecraft:ghast] run function medabots_server:any_ghast
 
-# Functions that run on every boss model
-execute if entity @s[tag=boss_model] run function medabots_server:entities/boss_model
-
 # Functions that run on every snowball
 execute if entity @s[type=minecraft:snowball] run function medabots_server:any_snowball
 

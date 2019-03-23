@@ -43,6 +43,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/medabot_master"
+        "function": "medabots_server:advancements/stages/wave_1/grassland_d_first_go"
     }
 }

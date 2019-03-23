@@ -1,7 +1,3 @@
-setblock -2000 51 -633 minecraft:air
-setblock -1998 51 -633 minecraft:air
-setblock -2000 53 -635 minecraft:red_wool
-setblock -1998 53 -635 minecraft:red_wool
 summon minecraft:zombie -2013 45 -626 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","look_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -2016 45 -623 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","look_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
 summon minecraft:zombie -2016 45 -594 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:"{\"translate\":\"medabots_server:entity.cannon\"}",Tags:["delay_4","hostile","killerable","look_over_z_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
@@ -18,7 +14,12 @@ setblock -1988 45 -593 minecraft:comparator[facing=east,mode=compare,powered=fal
 setblock -1982 45 -598 minecraft:comparator[facing=south,mode=compare,powered=false]
 setblock -1983 45 -619 minecraft:comparator[facing=north,mode=compare,powered=false]
 setblock -1988 45 -625 minecraft:comparator[facing=east,mode=compare,powered=false]
-teleport @a[x=-2000,y=51,z=-633,distance=..0.7,limit=1] -1999 45 -605
-teleport @a[x=-1998,y=51,z=-633,distance=..0.7,limit=1] -1998 45 -612
-scoreboard players set @e[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Stage 99
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=-1] -1999 45 -605
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=0] -1998 45 -612
+teleport @s[tag=-1] -1999 45 -605
+tag @a[x=-1999,y=45,z=-605,distance=..1] remove -1
+tag @a[x=-1998,y=45,z=-612,distance=..1] remove 0
+scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Stage 48
 scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Battle 1
+scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Music 0
+scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] MusicType 0

@@ -220,6 +220,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/wave_1/get_all_medabots"
+        "function": "medabots_server:advancements/mt_battle/wave_1"
     }
 }

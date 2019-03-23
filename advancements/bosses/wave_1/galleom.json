@@ -22,8 +22,5 @@
         "defeated": {
             "trigger": "minecraft:impossible"
         }
-    },
-    "rewards": {
-        "function": "medabots_server:advancements/bosses/wave_1"
     }
 }

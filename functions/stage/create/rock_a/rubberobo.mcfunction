@@ -111,8 +111,9 @@ setblock -1629 44 -127 minecraft:structure_block[mode=load]{name:"medabots_serve
 setblock -1629 45 -127 minecraft:redstone_block
 setblock -1626 44 -127 minecraft:structure_block[mode=load]{name:"medabots_server:stage/goal_area",mode:"LOAD"}
 setblock -1626 45 -127 minecraft:redstone_block
+tag @s add rubberobo
 teleport @s -1629 45 -127
 scoreboard players set @a[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] Stage 7
+scoreboard players set @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] Stage 2
 scoreboard players set @a[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] Music 0
 scoreboard players set @a[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] MusicType 8

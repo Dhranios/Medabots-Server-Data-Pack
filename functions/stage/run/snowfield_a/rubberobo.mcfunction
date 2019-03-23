@@ -107,15 +107,15 @@ execute if block -1606 45 -245 minecraft:air run setblock -1606 46 -245 minecraf
 execute if block -1605 45 -242 minecraft:air run setblock -1605 46 -242 minecraft:air
 execute if block -1603 45 -241 minecraft:air run setblock -1603 46 -241 minecraft:air
 execute if block -1603 45 -244 minecraft:air run setblock -1603 46 -244 minecraft:air
-execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=16}] run scoreboard players set @s Stage 16
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] if entity @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/snowfield_a/rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] run stopsound @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] music
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] run playsound medabots_server:music.stage.stage_end music @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 14
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] run scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] Battle 0
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] run scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] run scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] run advancement grant @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/snowfield_a_rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=16}] run teleport @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 -180 0
+execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] if entity @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/snowfield_a/rubberobo
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] run stopsound @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] music
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] run playsound medabots_server:music.stage.stage_end music @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 14
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] run scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] Battle 0
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] run scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] run scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] run advancement grant @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/snowfield_a_rubberobo
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=!minecraft:player] run teleport @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 -180 0
 execute if block -1598 45 -213 minecraft:structure_block run setblock -1598 46 -213 minecraft:redstone_block
 execute if block -1590 45 -207 minecraft:structure_block run setblock -1590 46 -207 minecraft:redstone_block
 execute if block -1652 45 -229 minecraft:structure_block run setblock -1652 46 -229 minecraft:redstone_block

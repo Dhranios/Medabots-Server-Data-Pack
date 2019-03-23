@@ -24,6 +24,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/wave_1"
+        "function": "medabots_server:advancements/bosses/master_hand"
     }
 }

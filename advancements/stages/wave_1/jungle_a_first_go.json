@@ -43,6 +43,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/torutoru_land_master"
+        "function": "medabots_server:advancements/stages/wave_1/jungle_a_first_go"
     }
 }

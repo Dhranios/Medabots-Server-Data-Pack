@@ -180,8 +180,9 @@ setblock -1660 44 -234 minecraft:structure_block[mode=load]{name:"medabots_serve
 setblock -1660 45 -234 minecraft:redstone_block
 setblock -1594 44 -243 minecraft:structure_block[mode=load]{name:"medabots_server:stage/starting_area",mode:"LOAD"}
 setblock -1594 45 -243 minecraft:redstone_block
+tag @s add second_go
 teleport @s -1594 45 -243
 scoreboard players set @a[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63] Battle 1
-scoreboard players set @a[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63] Stage 15
+scoreboard players set @a[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63] Stage 5
 scoreboard players set @a[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63] Music 0
 scoreboard players set @a[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63] MusicType 11

@@ -1,4 +1,4 @@
-execute store result score @s BattlingMedabots if entity @e[scores={Stage=95,Medabot=0..,Battle=1..}]
+execute store result score @s BattlingMedabots if entity @e[scores={Stage=44,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=mr_referee,type=minecraft:armor_stand] run data merge block -1288 52 -279 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.full\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 execute if entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=mr_referee,type=minecraft:armor_stand] run setblock -1288 53 -281 minecraft:red_wool
 execute if entity @s[scores={BattlingMedabots=3..}] unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1304 46 -261 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[-90.0f,0.0f]}
@@ -16,10 +16,10 @@ execute if entity @s[scores={BattlingMedabots=1}] run setblock -1289 53 -281 min
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1287 53 -281 minecraft:redstone_block
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1288 53 -281 minecraft:red_wool
 execute if entity @s[scores={BattlingMedabots=1}] run fill -1314 46 -291 -1261 46 -223 minecraft:air replace minecraft:fire
-execute if entity @s[scores={BattlingMedabots=1}] run tag @e[scores={Stage=95},type=!minecraft:player] add dead
+execute if entity @s[scores={BattlingMedabots=1}] run tag @e[scores={Stage=44},type=!minecraft:player] add dead
 execute if entity @s[scores={BattlingMedabots=1}] run data merge block -1288 52 -279 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.no_pvp\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute as @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,type=!minecraft:player] unless entity @s[scores={Stage=95}] run scoreboard players set @s Stage 95
+execute as @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,type=!minecraft:player] unless entity @s[scores={Stage=44}] run scoreboard players set @s Stage 44
 execute unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=fire_timer,type=minecraft:area_effect_cloud] run fill -1314 46 -291 -1261 46 -223 minecraft:air replace minecraft:fire
 execute unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=fire_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizing_marker\"}",Tags:["fire_marker","1"]}
 execute unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=fire_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"translate\":\"medabots_server:entity.stage_randomizing_marker\"}",Tags:["fire_marker","2"]}

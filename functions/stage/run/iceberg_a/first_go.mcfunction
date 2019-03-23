@@ -177,8 +177,8 @@ execute if block -1707 44 -203 minecraft:air if block -1707 45 -203 minecraft:ba
 execute if block -1707 44 -203 minecraft:air run setblock -1707 45 -203 minecraft:air
 execute if block -1703 44 -203 minecraft:air run setblock -1703 45 -203 minecraft:air
 execute if block -1710 45 -209 minecraft:iron_door[open=true] if entity @s[x=-1709,y=44,z=-210,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_a/first_go_battle/0
-execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Stage=17,Medabot=0..,Battle=1..}]
-execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=17}] run scoreboard players set @s Stage 17
+execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Stage=6,Medabot=0..,Battle=1..}]
+execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=6}] run scoreboard players set @s Stage 6
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/iceberg_a/first_go
 stopsound @s[scores={BattlingMedabots=1}] music
 playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1704 50 -221 14

@@ -1,0 +1,2 @@
+#execute if entity @s[advancements={medabots_server:wave_1/story_progression={}}] run function medabots_server:stage/try/story_battle/
+execute if entity @s[tag=!story_battle] run tellraw @s {"translate":"medabots_server:message.stage.no_story","color":"green"}

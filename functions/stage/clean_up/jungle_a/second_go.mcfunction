@@ -41,9 +41,9 @@ fill -1642 45 -116 -1705 45 -179 minecraft:air replace minecraft:stone_slab
 fill -1642 45 -116 -1705 45 -179 minecraft:air replace minecraft:chest
 fill -1642 44 -116 -1705 44 -179 minecraft:water replace minecraft:oak_planks
 bossbar set medabots_server:jungle_a/time players
-scoreboard players set @a[scores={Stage=9}] Music 0
-scoreboard players set @a[scores={Stage=9}] MusicType 1
-scoreboard players set @a[scores={Stage=9}] Battle 0
-tag @e[scores={Stage=9},type=!minecraft:player] add dead
+scoreboard players set @a[scores={Stage=3}] Music 0
+scoreboard players set @a[scores={Stage=3}] MusicType 1
+scoreboard players set @a[scores={Stage=3}] Battle 0
+tag @e[scores={Stage=3},type=!minecraft:player] add dead
 data merge block -1674 52 -179 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/jungle_a/play\"}}"}
 setblock -1674 53 -181 minecraft:redstone_block

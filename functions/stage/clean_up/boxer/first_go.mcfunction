@@ -32,9 +32,9 @@ setblock -1890 43 -548 minecraft:sand
 setblock -1890 47 -548 minecraft:air
 fill -1921 44 -603 -1858 44 -540 minecraft:air replace minecraft:stone_slab
 bossbar set medabots_server:boxer/time players
-scoreboard players set @a[scores={Stage=79}] Music 0
-scoreboard players set @a[scores={Stage=79}] MusicType 22
-scoreboard players set @a[scores={Stage=79}] Battle 0
-tag @e[scores={Stage=79},type=!minecraft:player] add dead
+scoreboard players set @a[scores={Stage=29}] Music 0
+scoreboard players set @a[scores={Stage=29}] MusicType 22
+scoreboard players set @a[scores={Stage=29}] Battle 0
+tag @e[scores={Stage=29},type=!minecraft:player] add dead
 data merge block -1891 51 -603 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/boxer/play\"}}"}
 setblock -1891 52 -605 minecraft:redstone_block

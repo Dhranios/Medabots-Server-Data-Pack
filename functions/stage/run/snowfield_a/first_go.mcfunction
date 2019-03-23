@@ -107,7 +107,7 @@ execute if block -1605 45 -242 minecraft:air run setblock -1605 46 -242 minecraf
 execute if block -1603 45 -244 minecraft:air run setblock -1603 46 -244 minecraft:air
 execute if block -1606 45 -245 minecraft:air run setblock -1606 46 -245 minecraft:air
 execute if block -1623 46 -203 minecraft:iron_door[open=true] if block -1630 46 -201 minecraft:iron_door[open=false] if entity @s[x=-1626,y=45,z=-205,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_a/first_go_battle/0
-execute if entity @e[x=-1628.5,y=45,z=-206.5,distance=..0.7,tag=mission,scores={Time=81}] store result score @s BattlingMedabots if entity @e[x=-1637,y=42,z=-215,dx=17,dy=7,dz=17,scores={Stage=14,Medabot=0..,Battle=1..}]
+execute if entity @e[x=-1628.5,y=45,z=-206.5,distance=..0.7,tag=mission,scores={Time=81}] store result score @s BattlingMedabots if entity @e[x=-1637,y=42,z=-215,dx=17,dy=7,dz=17,scores={Stage=5,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1628.5,y=45,z=-206.5,distance=..0.7,tag=mission,scores={Time=81}] run title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @e[x=-1628.5,y=45,z=-206.5,distance=..0.7,tag=mission,scores={Time=81}] if block -1623 46 -203 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1623 45 -203 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if entity @e[x=-1628.5,y=45,z=-206.5,distance=..0.7,tag=mission,scores={Time=81}] if block -1630 46 -201 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1630 45 -201 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
@@ -120,8 +120,8 @@ execute if score #temp Time matches 0 as @e[x=-1668,y=42,z=-247,dx=105,dy=7,dz=6
 execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1652 46 -229 minecraft:iron_door[open=true] if entity @s[x=-1655,y=45,z=-231,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_a/first_go_battle/1
-execute if entity @e[x=-1582.5,y=45,z=-196.5,distance=..0.7,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1667,y=42,z=-246,dx=18,dy=7,dz=28,scores={Stage=14,Medabot=0..,Battle=1..}]
-execute as @e[x=-1668,y=42,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1..}] run scoreboard players set @s Stage 14
+execute if entity @e[x=-1582.5,y=45,z=-196.5,distance=..0.7,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1667,y=42,z=-246,dx=18,dy=7,dz=28,scores={Stage=5,Medabot=0..,Battle=1..}]
+execute as @e[x=-1668,y=42,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/snowfield_a/first_go
 stopsound @s[scores={BattlingMedabots=1}] music
 playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1620 51 -216 14

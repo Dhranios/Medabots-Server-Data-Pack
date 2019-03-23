@@ -67,9 +67,9 @@ fill -1651 46 -286 -1650 46 -286 minecraft:air
 setblock -1651 46 -287 minecraft:wall_torch[facing=east]
 setblock -1650 46 -287 minecraft:wall_torch[facing=west]
 bossbar set medabots_server:ruins_in_a/time players
-scoreboard players set @a[scores={Stage=24}] Music 0
-scoreboard players set @a[scores={Stage=24}] MusicType 1
-scoreboard players set @a[scores={Stage=24}] Battle 0
-tag @e[scores={Stage=24},type=!minecraft:player] add dead
+scoreboard players set @a[scores={Stage=8}] Music 0
+scoreboard players set @a[scores={Stage=8}] MusicType 1
+scoreboard players set @a[scores={Stage=8}] Battle 0
+tag @e[scores={Stage=8},type=!minecraft:player] add dead
 data merge block -1683 51 -277 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/ruins_in_a/play\"}}"}
 setblock -1685 52 -277 minecraft:redstone_block

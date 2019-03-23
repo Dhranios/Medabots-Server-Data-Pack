@@ -259,13 +259,13 @@ teleport @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=-1] -1773 44 -255
 teleport @s[tag=-1] -1773 44 -255
 tag @a[x=-1773,y=44,z=-255,distance=..1] remove -1
 scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Battle 1
-scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Stage 26
+scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Stage 9
 stopsound @a[x=-1773,y=44,z=-255,distance=..1] music
 playsound medabots_server:music.stage.laboratory_intro music @a[x=-1773,y=44,z=-255,distance=..1] ~ ~ ~ 1000
 scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Music 109
 scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] MusicType 15
 scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Battle 1
-scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Stage 26
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Stage 9
 stopsound @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] music
 playsound medabots_server:music.stage.laboratory_intro music @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] ~ ~ ~ 1000
 scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Music 109

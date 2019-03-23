@@ -1,4 +1,4 @@
-execute store result score @s BattlingMedabots if entity @e[scores={Stage=87,Medabot=0..,Battle=1..}]
+execute store result score @s BattlingMedabots if entity @e[scores={Stage=36,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1329,y=0,z=-115,dx=61,dy=50,dz=61,tag=mr_referee,type=minecraft:armor_stand] run data merge block -1298 52 -115 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.full\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 execute if entity @e[x=-1329,y=0,z=-115,dx=61,dy=50,dz=61,tag=mr_referee,type=minecraft:armor_stand] run setblock -1298 53 -117 minecraft:red_wool
 execute if entity @s[scores={BattlingMedabots=3..}] unless entity @e[x=-1329,y=0,z=-115,dx=61,dy=50,dz=61,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1298 46 -73 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[-180.0f,0.0f]}
@@ -15,7 +15,7 @@ execute if entity @s[scores={BattlingMedabots=1}] run setblock -1299 51 -116 min
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1299 53 -117 minecraft:redstone_block
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1297 53 -117 minecraft:redstone_block
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1298 53 -117 minecraft:red_wool
-execute if entity @s[scores={BattlingMedabots=1}] run tag @e[scores={Stage=87},type=!minecraft:player] add dead
+execute if entity @s[scores={BattlingMedabots=1}] run tag @e[scores={Stage=36},type=!minecraft:player] add dead
 execute if entity @s[scores={BattlingMedabots=1}] run data merge block -1298 52 -115 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.no_pvp\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute as @e[x=-1329,y=0,z=-115,dx=61,dy=50,dz=61,type=!minecraft:player] unless entity @s[scores={Stage=87}] run scoreboard players set @s Stage 87
+execute as @e[x=-1329,y=0,z=-115,dx=61,dy=50,dz=61,type=!minecraft:player] unless entity @s[scores={Stage=36}] run scoreboard players set @s Stage 36

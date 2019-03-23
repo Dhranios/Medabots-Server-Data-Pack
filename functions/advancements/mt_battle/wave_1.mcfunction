@@ -1,0 +1,4 @@
+advancement grant @s[advancements={medabots_server:wave_1/get_all_medabots=true,medabots_server:bosses/wave_1=true,medabots_server:stages/wave_1=true}] only medabots_server:mt_battle/root
+advancement grant @s[advancements={medabots_server:wave_1/get_all_medabots=true,medabots_server:bosses/wave_1=true,medabots_server:stages/wave_1=true}] only medabots_server:mt_battle/clear_wave_1
+advancement grant @s[advancements={medabots_server:wave_1/get_all_medabots=true,medabots_server:bosses/wave_1=true,medabots_server:stages/wave_1=true}] only medabots_server:passes/mt_battle
+advancement grant @s[advancements={medabots_server:wave_1/get_all_medabots=true,medabots_server:bosses/wave_1=true,medabots_server:stages/wave_1=true}] only medabots_server:passes/mt_battle/wave_1

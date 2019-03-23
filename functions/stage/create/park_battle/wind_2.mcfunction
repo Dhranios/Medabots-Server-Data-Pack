@@ -1,7 +1,3 @@
-setblock -1950 51 -590 minecraft:air
-setblock -1948 51 -590 minecraft:air
-setblock -1950 53 -591 minecraft:red_wool
-setblock -1948 53 -591 minecraft:red_wool
 summon minecraft:area_effect_cloud -1944 44 -554 {CustomName:"{\"translate\":\"medabots_server:entity.raft\"}",Tags:["raft"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1938 44 -543 {CustomName:"{\"translate\":\"medabots_server:entity.raft\"}",Tags:["raft"],Duration:2147483647}
 summon minecraft:area_effect_cloud -1927 44 -549 {CustomName:"{\"translate\":\"medabots_server:entity.raft\"}",Tags:["raft"],Duration:2147483647}
@@ -37,7 +33,12 @@ setblock -1946 46 -546 minecraft:redstone_block
 fill -1945 45 -563 -1945 48 -563 minecraft:bedrock
 fill -1946 45 -562 -1946 48 -562 minecraft:bedrock
 fill -1947 45 -561 -1947 48 -561 minecraft:bedrock
-teleport @a[x=-1950,y=51,z=-590,distance=..0.7,limit=1] -1933 45 -551
-teleport @a[x=-1948,y=51,z=-590,distance=..0.7,limit=1] -1938 45 -552
-scoreboard players set @e[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] Stage 101
+teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,tag=-1] -1933 45 -551
+teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,tag=0] -1938 45 -552
+teleport @s[tag=-1] -1933 45 -551
+tag @a[x=-1933,y=45,z=-551,distance=..1] remove -1
+tag @a[x=-1938,y=45,z=-552,distance=..1] remove 0
+scoreboard players set @a[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] Stage 50
 scoreboard players set @a[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] Battle 1
+scoreboard players set @a[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] Music 0
+scoreboard players set @a[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] MusicType 0

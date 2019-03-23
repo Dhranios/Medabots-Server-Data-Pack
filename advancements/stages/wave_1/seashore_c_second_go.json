@@ -43,6 +43,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/true_medafighter"
+        "function": "medabots_server:advancements/stages/wave_1/seashore_c_second_go"
     }
 }

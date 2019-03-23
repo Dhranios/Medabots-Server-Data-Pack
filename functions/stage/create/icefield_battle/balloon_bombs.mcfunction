@@ -1,7 +1,3 @@
-setblock -2000 51 -633 minecraft:air
-setblock -1998 51 -633 minecraft:air
-setblock -2000 53 -635 minecraft:red_wool
-setblock -1998 53 -635 minecraft:red_wool
 summon minecraft:area_effect_cloud -2000 45 -613 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
 summon minecraft:area_effect_cloud -2003 45 -610 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
 summon minecraft:area_effect_cloud -2002 45 -605 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
@@ -24,7 +20,12 @@ setblock -1999 46 -621 minecraft:redstone_block
 setblock -1986 46 -609 minecraft:redstone_block
 setblock -1998 46 -596 minecraft:redstone_block
 setblock -2011 46 -608 minecraft:redstone_block
-teleport @a[x=-2000,y=51,z=-633,distance=..0.7,limit=1] -1999 45 -605
-teleport @a[x=-1998,y=51,z=-633,distance=..0.7,limit=1] -1998 45 -612
-scoreboard players set @e[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Stage 99
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=-1] -1999 45 -605
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=0] -1998 45 -612
+teleport @s[tag=-1] -1999 45 -605
+tag @a[x=-1999,y=45,z=-605,distance=..1] remove -1
+tag @a[x=-1998,y=45,z=-612,distance=..1] remove 0
+scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Stage 48
 scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Battle 1
+scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Music 0
+scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] MusicType 0

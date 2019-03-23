@@ -33,6 +33,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/true_medafighter"
+        "function": "medabots_server:advancements/stages/wave_1/boxer_first_go"
     }
 }

@@ -154,6 +154,7 @@ setblock -1551 44 -171 minecraft:structure_block[mode=load]{name:"medabots_serve
 setblock -1551 45 -171 minecraft:redstone_block
 setblock -1516 44 -123 minecraft:structure_block[mode=load]{name:"medabots_server:stage/starting_area",mode:"LOAD"}
 setblock -1516 45 -123 minecraft:redstone_block
+tag @s add first_go
 teleport @s -1516 45 -123
 scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Battle 1
 scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Stage 1

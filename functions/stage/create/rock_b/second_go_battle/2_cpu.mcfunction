@@ -1,6 +1,6 @@
 # Bluesdog
 summon minecraft:skeleton -1604 45 -374 {CustomName:"{\"translate\":\"medabots_server:entity.bluesdog\"}",CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/grassland_b/second_go/bluesdog",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["bluesdog","enemy_medabot","killerable","hostile","two_legged_legs","rifle_left_arm","napalm_right_arm","rifle_head","kuwagata_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
-scoreboard players set @e[x=-1604,y=45,z=-374,distance=..1,tag=bluesdog] Stage 32
+scoreboard players set @e[x=-1604,y=45,z=-374,distance=..1,tag=bluesdog] Stage 11
 scoreboard players set @e[x=-1604,y=45,z=-374,distance=..1,tag=bluesdog] Medabot 0
 scoreboard players set @e[x=-1604,y=45,z=-374,distance=..1,tag=bluesdog] Battle 2
 scoreboard players set @e[x=-1604,y=45,z=-374,distance=..1,tag=bluesdog] MaxHeadUses 18

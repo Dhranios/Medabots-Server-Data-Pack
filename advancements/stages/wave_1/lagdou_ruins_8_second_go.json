@@ -30,5 +30,8 @@
         "cleared": {
             "trigger": "minecraft:impossible"
         }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/wave_1/lagdou_ruins_8_second_go"
     }
 }

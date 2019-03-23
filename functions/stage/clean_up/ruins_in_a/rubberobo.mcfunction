@@ -69,9 +69,9 @@ fill -1729 44 -344 -1640 44 -252 minecraft:air replace minecraft:comparator
 fill -1729 44 -344 -1640 44 -252 minecraft:air replace minecraft:chest
 fill -1729 43 -344 -1640 43 -252 minecraft:water replace minecraft:oak_planks
 bossbar set medabots_server:ruins_in_a/time players
-scoreboard players set @a[scores={Stage=25}] Music 0
-scoreboard players set @a[scores={Stage=25}] MusicType 1
-scoreboard players set @a[scores={Stage=25}] Battle 0
-tag @e[scores={Stage=25},type=!minecraft:player] add dead
+scoreboard players set @a[scores={Stage=8}] Music 0
+scoreboard players set @a[scores={Stage=8}] MusicType 1
+scoreboard players set @a[scores={Stage=8}] Battle 0
+tag @e[scores={Stage=8},type=!minecraft:player] add dead
 data merge block -1683 51 -277 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/ruins_in_a/play\"}}"}
 setblock -1685 52 -277 minecraft:redstone_block

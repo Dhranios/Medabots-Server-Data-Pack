@@ -41,5 +41,8 @@
         "cleared": {
             "trigger": "minecraft:impossible"
         }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/wave_1/park_a_special"
     }
 }

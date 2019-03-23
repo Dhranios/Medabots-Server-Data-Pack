@@ -1,3 +1,4 @@
+tellraw @s {"translate":"medabots_server:message.medallar_count","color":"green","with":[{"score":{"objective":"Money","name":"@s"}}]}
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman"},{"translate":"medabots_server:message.shop.greeting"}]}
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman"},{"translate":"medabots_server:message.shop.ask"}]}
 tellraw @s {"translate":"medabots_server:message.shop.item","clickEvent":{"action":"run_command","value":"/trigger Shopping set 1"},"with":[{"translate":"medabots_server:item.sunglasses"},{"translate":"64"}]}

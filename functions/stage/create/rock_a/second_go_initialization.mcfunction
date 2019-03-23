@@ -1,4 +1,5 @@
 tag @s add -1
+tag @s add second_go
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/rock_a/second_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1604 51 -149 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1603 53 -182 minecraft:redstone_block

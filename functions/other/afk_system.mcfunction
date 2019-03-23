@@ -243,9 +243,10 @@ scoreboard players set @s[scores={Sneaking=1..}] Sneaking 0
 tag @s[tag=sneaking] remove sneaking
 tag @s[scores={Sneak=1..}] add sneaking
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
-tag @s[tag=trading] remove trading
+scoreboard players set @s[scores={Trading=1..},tag=!trading] Trading 2
+scoreboard players set @s[scores={Trading=1..},tag=trading] Trading 0
+execute unless entity @e[tag=shop,distance=..10,limit=1] run tag @s[tag=trading] remove trading
 tag @s[scores={Trading=1..}] add trading
-scoreboard players set @s[scores={Trading=1..}] Trading 0
 
 # Count up
 execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0}] AFKTime 1

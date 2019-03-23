@@ -9,7 +9,7 @@ scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={Selec
 scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_chameleon_medaforce"}}}]}] Medaforce -9
 scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_knight_medaforce"}}}]}] Medaforce -10
 scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_unicorn_medaforce"}}}]}] Medaforce -11
-scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_destroy_medaforce"}}}]}] Medaforce -12
+scoreboard players set @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_devil_medaforce"}}}]}] Medaforce -12
 tag @s[scores={Medaforce=2},tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_alien_medaforce"}}}]},tag=!alien] add alien
 
 # Randomize alien medaforce

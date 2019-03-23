@@ -70,9 +70,9 @@ fill -1570 45 -414 -1508 45 -319 minecraft:air replace minecraft:chest
 fill -1570 44 -414 -1508 44 -319 minecraft:water replace minecraft:oak_planks
 fill -1570 44 -414 -1508 44 -319 minecraft:grass_block replace minecraft:dirt
 bossbar set medabots_server:grassland_b/time players
-scoreboard players set @a[scores={Stage=30}] Music 0
-scoreboard players set @a[scores={Stage=30}] MusicType 1
-scoreboard players set @a[scores={Stage=30}] Battle 0
-tag @e[scores={Stage=30},type=!minecraft:player] add dead
+scoreboard players set @a[scores={Stage=10}] Music 0
+scoreboard players set @a[scores={Stage=10}] MusicType 1
+scoreboard players set @a[scores={Stage=10}] Battle 0
+tag @e[scores={Stage=10},type=!minecraft:player] add dead
 data merge block -1541 52 -414 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/grassland_b/play\"}}"}
 setblock -1541 53 -416 minecraft:redstone_block

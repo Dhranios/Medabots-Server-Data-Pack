@@ -38,6 +38,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/wave_1"
+        "function": "medabots_server:advancements/stages/wave_1/hard_fly_course_1_challenge"
     }
 }

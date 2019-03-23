@@ -1,6 +1,6 @@
 # Hellphoenix
 summon minecraft:skeleton -1656 45 -233 {CustomName:"{\"translate\":\"medabots_server:entity.hellphoenix\"}",CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/snowfield_a/first_go/hellphoenix",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["hellphoenix","enemy_medabot","killerable","hostile","fly_legs","napalm_left_arm","hold_right_arm","melt_head","kuwagata_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
-scoreboard players set @e[x=-1656,y=45,z=-233,distance=..1,tag=hellphoenix] Stage 14
+scoreboard players set @e[x=-1656,y=45,z=-233,distance=..1,tag=hellphoenix] Stage 5
 scoreboard players set @e[x=-1656,y=45,z=-233,distance=..1,tag=hellphoenix] Medabot 0
 scoreboard players set @e[x=-1656,y=45,z=-233,distance=..1,tag=hellphoenix] Battle 2
 scoreboard players set @e[x=-1656,y=45,z=-233,distance=..1,tag=hellphoenix] MaxHeadUses 7

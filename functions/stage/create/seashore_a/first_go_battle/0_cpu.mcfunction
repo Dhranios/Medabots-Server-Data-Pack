@@ -1,6 +1,6 @@
 # Pure Mermaid
 summon minecraft:skeleton -1538 45 -230 {CustomName:"{\"translate\":\"medabots_server:entity.pure_mermaid\"}",CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/seashore_a/first_go/pure_mermaid",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["pure_mermaid","enemy_medabot","killerable","hostile","swim_legs","shooting_trap_left_arm","feeze_right_arm","heal_head","mermaid_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
-scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Stage 11
+scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Stage 4
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Medabot 0
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Battle 2
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] MaxHeadUses 10

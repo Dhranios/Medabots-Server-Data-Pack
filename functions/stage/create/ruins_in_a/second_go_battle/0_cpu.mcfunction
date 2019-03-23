@@ -1,6 +1,6 @@
 # Maxsnake
 summon minecraft:skeleton -1651 44 -339 {CustomName:"{\"translate\":\"medabots_server:entity.maxsnake\"}",CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/ruins_in_a/second_go/maxsnake",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["maxsnake","enemy_medabot","killerable","hostile","multi_legged_legs","hide_left_arm","melt_right_arm","infect_head","kuwagata_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
-scoreboard players set @e[x=-1651,y=44,z=-339,distance=..1,tag=maxsnake] Stage 24
+scoreboard players set @e[x=-1651,y=44,z=-339,distance=..1,tag=maxsnake] Stage 8
 scoreboard players set @e[x=-1651,y=44,z=-339,distance=..1,tag=maxsnake] Medabot 0
 scoreboard players set @e[x=-1651,y=44,z=-339,distance=..1,tag=maxsnake] Battle 2
 scoreboard players set @e[x=-1651,y=44,z=-339,distance=..1,tag=maxsnake] MaxHeadUses 6

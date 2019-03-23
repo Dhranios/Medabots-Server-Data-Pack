@@ -1,6 +1,6 @@
 # Kanehachi Mk2
 summon minecraft:skeleton -1630 45 -208 {CustomName:"{\"translate\":\"medabots_server:entity.kanehachi_mk2\"}",CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/snowfield_a/first_go/kanehachi_mk2",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["kanehachi_mk2","enemy_medabot","killerable","hostile","multi_legged_legs","destroy_left_arm","melt_right_arm","hold_head","kuwagata_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
-scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Stage 14
+scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Stage 5
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Medabot 0
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Battle 2
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] MaxHeadUses 9

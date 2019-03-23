@@ -98,6 +98,7 @@ scoreboard players enable @s LeaveStage
 scoreboard players set @s[scores={Damage=1..}] Damage 0
 scoreboard players set @s[scores={UsePart=1..}] UsePart 0
 scoreboard players set @s[scores={Attack=1..}] Attack 0
+scoreboard players set @s[scores={Shopping=1..}] Shopping 0
 
 # Store old position
 execute store result score @s PosX run data get entity @s Pos[0] 100

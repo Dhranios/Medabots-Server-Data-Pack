@@ -108,7 +108,7 @@ execute if block -1603 45 -241 minecraft:air run setblock -1603 46 -241 minecraf
 execute if block -1605 45 -242 minecraft:air run setblock -1605 46 -242 minecraft:air
 execute if block -1603 45 -244 minecraft:air run setblock -1603 46 -244 minecraft:air
 execute if block -1606 45 -245 minecraft:air run setblock -1606 46 -245 minecraft:air
-execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=15}] run scoreboard players set @s Stage 15
+execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
 execute if entity @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/snowfield_a/second_go
 stopsound @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] music
 playsound medabots_server:music.stage.stage_end music @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 14

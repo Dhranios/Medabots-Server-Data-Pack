@@ -101,7 +101,7 @@ execute if block -1565 45 -172 minecraft:air run setblock -1565 46 -172 minecraf
 execute if block -1565 45 -171 minecraft:air if block -1565 46 -171 minecraft:barrier run summon minecraft:creeper -1565 45 -171 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/1_medallar_cent",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1565 45 -171 minecraft:air run setblock -1565 46 -171 minecraft:air
 execute if block -1566 45 -172 minecraft:air run setblock -1566 46 -172 minecraft:air
-execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=2}] run scoreboard players set @s Stage 2
+execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1}] run scoreboard players set @s Stage 1
 execute if entity @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/grassland_a/second_go
 stopsound @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] music
 playsound medabots_server:music.stage.stage_end music @s[x=-1550.5,y=45,z=-170.5,distance=..0.7,tag=hostile,gamemode=adventure] -1539 51 -151 14

@@ -28,7 +28,7 @@ tag @a[scores={Death=1..},tag=achieve_rico] remove achieve_rico
 tag @a[scores={Death=1..},tag=ricco_harbor_full] remove ricco_harbor_full
 tag @a[scores={Death=1..},tag=removed] remove removed
 tag @a[scores={Death=1..},tag=selected] remove selected
-execute store result score @s BattlingMedabots if entity @e[scores={Stage=97,Medabot=0..,Battle=1..}]
+execute store result score @s BattlingMedabots if entity @e[scores={Stage=46,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,tag=mr_referee,type=minecraft:armor_stand] run data merge block -1440 95 -210 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.full\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 execute if entity @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,tag=mr_referee,type=minecraft:armor_stand] run setblock -1440 96 -212 minecraft:red_wool
 execute if entity @s[scores={BattlingMedabots=3..}] unless entity @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1430 75 -149 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[-180.0f,0.0f]}
@@ -47,10 +47,10 @@ execute if entity @s[scores={BattlingMedabots=1}] run setblock -1439 94 -211 min
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1441 96 -212 minecraft:redstone_block
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1439 96 -212 minecraft:redstone_block
 execute if entity @s[scores={BattlingMedabots=1}] run setblock -1440 96 -212 minecraft:red_wool
-execute if entity @s[scores={BattlingMedabots=1}] run tag @e[scores={Stage=97},type=!minecraft:player] add dead
+execute if entity @s[scores={BattlingMedabots=1}] run tag @e[scores={Stage=46},type=!minecraft:player] add dead
 execute if entity @s[scores={BattlingMedabots=1}] run data merge block -1440 95 -210 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.pvp_stage.no_pvp\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute as @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,type=!minecraft:player] unless entity @s[scores={Stage=97}] run scoreboard players set @s Stage 97
+execute as @e[x=-1504,y=50,z=-210,dx=275,dy=43,dz=93,type=!minecraft:player] unless entity @s[scores={Stage=46}] run scoreboard players set @s Stage 46
 execute if block ~ ~-1 ~ minecraft:white_wool run effect give @s minecraft:jump_boost 1 3 true
 tag @s[x=-1440,y=87,z=-163,dx=8,dy=5,dz=8,advancements={medabots_server:wave_1/screw_you_all=false}] add achieve_rico
 execute if block ~ ~1 ~ minecraft:water run advancement grant @s[tag=achieve_rico] only medabots_server:wave_1/screw_you_all
