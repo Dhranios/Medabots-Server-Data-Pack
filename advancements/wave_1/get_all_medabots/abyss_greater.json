@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:22,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.abyss_greater_enticed\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.missile\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.missile.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"5\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"75\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.abyss_greater\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.abyss_greater_enticed.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.abyss_greater_enticed.model\\\"}\"]},medabots_server:{id:\"medabots_server:abyss_greater_enticed\",gender:0b,move:\"missile\",part:\"head\",armor:75,power:29,uses:5,activated:0b,version:1}}"
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:22}"
         },
         "title": {
             "translate": "medabots_server:entity.abyss_greater"
@@ -18,7 +18,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:abyss_greater_enticed\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:abyss_greater_enticed\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:abyss_greater_burst\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:abyss_greater_burst\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:abyss_greater_pro_fence\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:abyss_greater_pro_fence\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:abyss_greater_depth_sole\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:abyss_greater_depth_sole\"}}"
                     }
                 ]
             }

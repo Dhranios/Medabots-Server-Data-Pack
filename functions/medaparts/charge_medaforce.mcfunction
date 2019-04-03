@@ -1,7 +1,7 @@
 # Un-set charging
 scoreboard players set @s[scores={Medaforce=1},type=minecraft:player] Medaforce 0
 scoreboard players set @s[scores={Medaforce=1,OverheatingMedal=10..},type=!minecraft:player] Medaforce 0
-scoreboard players set @s[scores={Medaforce=1},tag=!medaforce_blocked,type=!minecraft:player] Medaforce 0
+scoreboard players set @s[scores={Medaforce=1},tag=medaforce_blocked,type=!minecraft:player] Medaforce 0
 
 # Set charging
 scoreboard players set @s[tag=!medaforce_blocked,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,move:"medaforce_charge"}}}]}] Medaforce 1

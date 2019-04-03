@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:21,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.kanehachi_mk2_hatchin\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.hold\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.hold.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"9\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"55\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.kanehachi_mk2\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.kanehachi_mk2_hatchin.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.kanehachi_mk2_hatchin.model\\\"}\"]},medabots_server:{id:\"medabots_server:kanehachi_mk2_hatchin\",gender:0b,move:\"hold\",part:\"head\",armor:55,power:28,uses:9,activated:0b,version:1}}"
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:21}"
         },
         "title": {
             "translate": "medabots_server:entity.kanehachi_mk2"
@@ -11,14 +11,14 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots",
+    "parent": "medabots_server:wave_1/get_all_medabots/god_emperor",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:kanehachi_mk2_hatchin\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kanehachi_mk2_hatchin\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:kanehachi_mk2_catch\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kanehachi_mk2_catch\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:kanehachi_mk2_twist\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kanehachi_mk2_twist\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:kanehachi_mk2_swick\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kanehachi_mk2_swick\"}}"
                     }
                 ]
             }

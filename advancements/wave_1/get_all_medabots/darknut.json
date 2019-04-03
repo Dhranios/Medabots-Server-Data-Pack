@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:23,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.darknut_darkhelmet\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.perfect_guard\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.perfect_guard.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"5\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"60\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.darknut\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.darknut_darkhelmet.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.darknut_darkhelmet.model\\\"}\"]},medabots_server:{id:\"medabots_server:darknut_darkhelmet\",gender:0b,move:\"perfect_guard\",part:\"head\",armor:65,power:72,uses:5,activated:0b,version:1}}"
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:23}"
         },
         "title": {
             "translate": "medabots_server:entity.darknut"
@@ -11,14 +11,14 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots/frappe",
+    "parent": "medabots_server:wave_1/get_all_medabots/amelia",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:darknut_darkhelmet\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:darknut_darkhelmet\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:darknut_darksword\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:darknut_darksword\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:darknut_darkshield\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:darknut_darkshield\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:darknut_darkarmor\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:darknut_darkarmor\"}}"
                     }
                 ]
             }

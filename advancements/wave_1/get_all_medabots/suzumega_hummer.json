@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:67,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.suzumega_hummer_datalink\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.scout\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.scout.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"7\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"40\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.suzumega_hummer\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.suzumega_hummer_datalink.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.suzumega_hummer_datalink.model\\\"}\"]},medabots_server:{id:\"medabots_server:suzumega_hummer_datalink\",gender:0b,move:\"scout\",part:\"head\",armor:40,power:94,uses:7,activated:0b,version:1}}"
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:67}"
         },
         "title": {
             "translate": "medabots_server:entity.suzumega_hummer"
@@ -11,14 +11,14 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots/mewtwo",
+    "parent": "medabots_server:wave_1/get_all_medabots/sphere_doomers",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:suzumega_hummer_datalink\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:suzumega_hummer_datalink\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:suzumega_hummer_chopper_sword\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:suzumega_hummer_chopper_sword\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:suzumega_hummer_light_hammer\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:suzumega_hummer_light_hammer\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:suzumega_hummer_execute\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:suzumega_hummer_execute\"}}"
                     }
                 ]
             }

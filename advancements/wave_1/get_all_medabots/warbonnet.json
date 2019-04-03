@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:56,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.warbonnet_tension_up\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.auxiliary_charge\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.auxiliary_charge.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"3\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"60\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.warbonnet\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.warbonnet_tension_up.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.warbonnet_tension_up.model\\\"}\"]},medabots_server:{id:\"medabots_server:warbonnet_tension_up\",gender:0b,move:\"auxiliary_charge\",part:\"head\",armor:60,power:29,uses:3,activated:0b,version:1}}"
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:56}"
         },
         "title": {
             "translate": "medabots_server:entity.warbonnet"
@@ -18,7 +18,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:warbonnet_tension_up\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:warbonnet_tension_up\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:warbonnet_shoot_barrel\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:warbonnet_shoot_barrel\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:warbonnet_range_shooter\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:warbonnet_range_shooter\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:warbonnet_abductor\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:warbonnet_abductor\"}}"
                     }
                 ]
             }

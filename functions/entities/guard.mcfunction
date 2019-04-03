@@ -4,6 +4,9 @@ tag @s[tag=!dead,nbt={AbsorptionAmount:0.0f}] add dead
 # new guards need a new guard number
 execute unless entity @s[scores={Time=-30..}] run function medabots_server:entities/guard/scores
 
+# If hurt, freezes
+scoreboard players set @s[nbt={HurtTime:9s}] Time 40
+
 # Attack
 scoreboard players remove @s[scores={Time=1..}] Time 1
 execute if entity @s[scores={Time=0},tag=!alarm_ringing] positioned ^ ^ ^1 if entity @a[tag=hostile,distance=..1.05,tag=!enemy_medabot,scores={Battle=1}] run function medabots_server:entities/guard/attack

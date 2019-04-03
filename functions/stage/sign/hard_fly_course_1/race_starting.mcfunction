@@ -14,6 +14,6 @@ teleport @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=7,limit=1] -512 89 263 0 0
 teleport @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=8,limit=1] -511 89 262 0 0
 teleport @a[x=-468,y=90,z=263,dx=6,dy=3,dz=8,tag=9,limit=1] -509 89 262 0 0
 setblock -469 92 266 minecraft:redstone_block
-data merge block -468 91 266 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.stage.fly_course.no_race\\\",\\\"color\\\":\\\"green\\\"}\"}}"}
+data merge block -468 91 266 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/fly_course_no_race"}}'}
 setblock -469 92 268 minecraft:redstone_block
-data merge block -468 91 268 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"tellraw @s {\\\"translate\\\":\\\"medabots_server:message.stage.fly_course.currently_racing\\\",\\\"color\\\":\\\"green\\\"}\"}}",Text3:"{\"translate\":\"medabots_server:sign.stage.fly_course.race\"}"}
+data merge block -468 91 268 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/fly_course_currently_racing"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}

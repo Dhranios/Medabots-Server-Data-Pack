@@ -1,7 +1,5 @@
 # Waiting for start of robattle
-effect give @s[scores={Battle=2}] minecraft:slowness 1 10 true
-scoreboard players set @s[scores={Battle=2}] Damage 0
-scoreboard players set @s[scores={Battle=2}] UsePart 0
+execute if entity @s[scores={Battle=2}] run function medabots_server:other/robattle_wait
 
 # Make Leg parts do something
 function medabots_server:medaparts/float
@@ -19,12 +17,12 @@ function medabots_server:medaparts/footstool
 function medabots_server:medaparts/edge_grab
 
 # Charge up the medaforce
-execute if entity @s[scores={MedaforceTimer=3}] run function medabots_server:medaparts/charge_medaforce
+execute if entity @s[scores={MedaforceTimer=3,Battle=1}] run function medabots_server:medaparts/charge_medaforce
 
 # Forget the part
 scoreboard players set @s[scores={Time=900..950}] Time 1
 
-# No combat if wiating for the player
+# No combat if waiting for the player
 scoreboard players set @s[scores={Time=2..},tag=0] Time 950
 scoreboard players set @s[scores={Time=2..},tag=1] Time 950
 scoreboard players set @s[scores={Time=2..},tag=2] Time 950

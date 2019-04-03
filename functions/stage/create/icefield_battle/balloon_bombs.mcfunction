@@ -1,17 +1,17 @@
-summon minecraft:area_effect_cloud -2000 45 -613 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2003 45 -610 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2002 45 -605 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1997 45 -604 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1994 45 -607 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1995 45 -612 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1999 45 -619 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2007 45 -615 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2009 45 -609 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2007 45 -601 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1999 45 -598 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1991 45 -600 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1988 45 -609 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1991 45 -617 {CustomName:"{\"translate\":\"medabots_server:entity.balloon_bomb\"}",Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2000 45 -613 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2003 45 -610 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2002 45 -605 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1997 45 -604 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1994 45 -607 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1995 45 -612 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1999 45 -619 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2007 45 -615 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2009 45 -609 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2007 45 -601 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1999 45 -598 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1991 45 -600 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1988 45 -609 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1991 45 -617 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
 setblock -1999 45 -621 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
 setblock -1986 45 -609 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
 setblock -1998 45 -596 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/door",mode:"LOAD"}

@@ -1,6 +1,6 @@
 # Part of team?
-execute if entity @e[scores={Napalm=1..,Time=32..82},tag=ally_medabot] run tag @s[tag=!life_time] add ally_team
-execute if entity @e[scores={Napalm=1..,Time=32..82},tag=enemy_medabot] run tag @s[tag=!life_time] add enemy_team
+execute if entity @e[scores={Napalm=1..,Time=20..59},tag=ally_medabot] run tag @s[tag=!life_time] add ally_team
+execute if entity @e[scores={Napalm=1..,Time=20..59},tag=enemy_medabot] run tag @s[tag=!life_time] add enemy_team
 
 # Leave a temporary trail
 tag @s add life_time

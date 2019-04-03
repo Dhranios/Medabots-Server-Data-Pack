@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.knight_armor_clearshield\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.defense\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.defense.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"8\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"100\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.knight_armor\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.kight_armor_clearshield.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.kight_armor_clearshield.model\\\"}\"]},medabots_server:{id:\"medabots_server:kight_armor_clearshield\",gender:0b,move:\"defense\",part:\"head\",armor:100,power:52,uses:8,activated:0b,version:1}}"
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:2}"
         },
         "title": {
             "translate": "medabots_server:entity.knight_armor"
@@ -11,14 +11,14 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots/doctor_study",
+    "parent": "medabots_server:wave_1/get_all_medabots/kasou_touchu",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:knight_armor_clearshield\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:knight_armor_clearshield\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:knight_armor_knightshield\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:knight_armor_knightshield\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:knight_armor_greatshield\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:knight_armor_greatshield\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:knight_armor_troyan_horse\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:knight_armor_troyan_horse\"}}"
                     }
                 ]
             }

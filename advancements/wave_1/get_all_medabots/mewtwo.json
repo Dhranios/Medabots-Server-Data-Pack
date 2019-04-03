@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:52,display:{Name:\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.mewtwo_confusion\\\"}\",Lore:[\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.confuse\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:move.confuse.description\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.uses.more\\\",\\\"with\\\":[{\\\"text\\\":\\\"6\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.armor\\\",\\\"with\\\":[{\\\"text\\\":\\\"70\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.male\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:entity.mewtwo\\\"}\",\"\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.mewtwo_confusion.quote\\\"}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.part.wave\\\",\\\"with\\\":[{\\\"text\\\":\\\"1\\\"}]}\",\"{\\\"italic\\\":false,\\\"color\\\":\\\"white\\\",\\\"translate\\\":\\\"medabots_server:item.mewtwo_confusion.model\\\"}\"]},medabots_server:{id:\"medabots_server:mewtwo_confusion\",gender:0b,move:\"confuse\",part:\"head\",armor:70,power:4,uses:6,activated:0b,version:1}}"
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:52}"
         },
         "title": {
             "translate": "medabots_server:entity.mewtwo"
@@ -11,14 +11,14 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots/sphere_doomers",
+    "parent": "medabots_server:wave_1/get_all_medabots/metal_general",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:mewtwo_confusion\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:mewtwo_confusion\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:mewtwo_shadow_ball\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:mewtwo_shadow_ball\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:mewtwo_pure_darkness\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:mewtwo_pure_darkness\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{id:\"medabots_server:mewtwo_teleport\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:mewtwo_teleport\"}}"
                     }
                 ]
             }

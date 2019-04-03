@@ -1,4 +1,4 @@
-summon minecraft:item -1889 44 -541 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}"}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
+summon minecraft:item -1889 44 -541 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 setblock -1890 44 -558 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
 setblock -1879 44 -562 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
 setblock -1878 44 -561 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
@@ -48,6 +48,8 @@ setblock -1890 44 -548 minecraft:redstone_block
 teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=-1] -1890 44 -548
 teleport @s[tag=-1] -1890 44 -548
 tag @a[x=-1890,y=44,z=-548,distance=..1] remove -1
+bossbar set medabots_server:boxer/time value 0
+bossbar set medabots_server:boxer/time players @a[x=-1890,y=44,z=-548,distance=..1]
 scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Battle 1
 scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Stage 29
 scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Music 0

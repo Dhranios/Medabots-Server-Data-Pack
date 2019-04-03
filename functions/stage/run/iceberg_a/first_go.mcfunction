@@ -1,3 +1,13 @@
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/iceberg_a/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
+execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] run bossbar set medabots_server:iceberg_a/time players @s
+execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:iceberg_a/time value
+execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result bossbar medabots_server:iceberg_a/time value run scoreboard players operation #temp Time += #1 Constants
+execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:iceberg_a/robattle value
+execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result bossbar medabots_server:iceberg_a/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] if score #temp Time matches 0 as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mission] at @s run function medabots_server:stage/mission_time_up
+execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] if score #temp Time matches 0 as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+scoreboard players reset #temp Time
 execute if block -1716 45 -239 minecraft:iron_door[open=false] if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=blue_floor_switch_timer,scores={FloorSwitchTime=0..40}] run setblock -1716 44 -239 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1716 45 -239 minecraft:iron_door[open=false] if block -1715 43 -239 minecraft:light_blue_wool run setblock -1716 44 -239 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1716 45 -239 minecraft:iron_door[open=true] if block -1715 43 -239 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=blue_floor_switch_timer,scores={FloorSwitchTime=0..40}] run setblock -1716 44 -239 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
@@ -48,7 +58,7 @@ execute if block -1690 43 -189 minecraft:light_blue_wool run tag @e[x=-1700.5,y=
 execute if block -1689 43 -190 minecraft:light_blue_wool run tag @e[x=-1700.5,y=44,z=-189.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1688 43 -189 minecraft:light_blue_wool run tag @e[x=-1700.5,y=44,z=-189.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1690 43 -189 minecraft:blue_wool if block -1689 43 -190 minecraft:blue_wool if block -1688 43 -189 minecraft:blue_wool run tag @e[x=-1700.5,y=44,z=-189.5,distance=..0.7,tag=laser_trap] remove enabled
-execute if block -1711 43 -220 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=blue_floor_switch_timer] run summon minecraft:area_effect_cloud -1711 44 -220 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["blue_floor_switch_timer"],Duration:2147483647}
+execute if block -1711 43 -220 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=blue_floor_switch_timer] run summon minecraft:area_effect_cloud -1711 44 -220 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["blue_floor_switch_timer"],Duration:2147483647}
 scoreboard players add @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=blue_floor_switch_timer] FloorSwitchTime 1
 scoreboard players set @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,type=minecraft:area_effect_cloud,tag=blue_floor_switch_timer,scores={FloorSwitchTime=220}] FloorSwitchTime 0
 execute if block -1737 45 -222 minecraft:iron_door[open=true] run tag @e[x=-1732.5,y=44,z=-220.5,distance=..0.7,tag=action_floor] add enabled
@@ -121,7 +131,7 @@ execute if block -1692 44 -243 minecraft:air run setblock -1692 45 -243 minecraf
 execute if block -1691 44 -243 minecraft:air run setblock -1691 45 -243 minecraft:air
 execute if block -1686 44 -239 minecraft:air run setblock -1686 45 -239 minecraft:air
 execute if block -1685 44 -235 minecraft:air run setblock -1685 45 -235 minecraft:air
-execute if block -1680 44 -237 minecraft:air if block -1680 45 -237 minecraft:barrier run summon minecraft:tnt -1680 44 -237 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1680 44 -237 minecraft:air if block -1680 45 -237 minecraft:barrier run summon minecraft:tnt -1680 44 -237 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1680 44 -237 minecraft:air run setblock -1680 45 -237 minecraft:air
 execute if block -1677 44 -235 minecraft:air run setblock -1677 45 -235 minecraft:air
 execute if block -1685 44 -228 minecraft:air run setblock -1685 45 -228 minecraft:air
@@ -134,31 +144,31 @@ execute if block -1711 44 -220 minecraft:air run setblock -1711 45 -220 minecraf
 execute if block -1748 44 -238 minecraft:air run setblock -1748 45 -238 minecraft:air
 execute if block -1730 44 -218 minecraft:air run setblock -1730 45 -218 minecraft:air
 execute if block -1725 44 -227 minecraft:air run setblock -1725 45 -227 minecraft:air
-execute if block -1721 44 -227 minecraft:air if block -1721 45 -227 minecraft:barrier run summon minecraft:tnt -1721 44 -227 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1721 44 -227 minecraft:air if block -1721 45 -227 minecraft:barrier run summon minecraft:tnt -1721 44 -227 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1721 44 -227 minecraft:air run setblock -1721 45 -227 minecraft:air
-execute if block -1719 44 -226 minecraft:air if block -1719 45 -226 minecraft:barrier run summon minecraft:tnt -1719 44 -226 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1719 44 -226 minecraft:air if block -1719 45 -226 minecraft:barrier run summon minecraft:tnt -1719 44 -226 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1719 44 -226 minecraft:air run setblock -1719 45 -226 minecraft:air
-execute if block -1718 44 -224 minecraft:air if block -1718 45 -224 minecraft:barrier run summon minecraft:tnt -1718 44 -224 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1718 44 -224 minecraft:air if block -1718 45 -224 minecraft:barrier run summon minecraft:tnt -1718 44 -224 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1718 44 -224 minecraft:air run setblock -1718 45 -224 minecraft:air
 execute if block -1720 44 -212 minecraft:air run setblock -1720 45 -212 minecraft:air
 execute if block -1719 44 -202 minecraft:air run setblock -1719 45 -202 minecraft:air
 execute if block -1729 44 -209 minecraft:air run setblock -1729 45 -209 minecraft:air
-execute if block -1729 44 -205 minecraft:air if block -1729 45 -205 minecraft:barrier run summon minecraft:tnt -1729 44 -205 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1729 44 -205 minecraft:air if block -1729 45 -205 minecraft:barrier run summon minecraft:tnt -1729 44 -205 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1729 44 -205 minecraft:air run setblock -1729 45 -205 minecraft:air
 execute if block -1730 44 -204 minecraft:air run setblock -1730 45 -204 minecraft:air
 execute if block -1728 44 -204 minecraft:air run setblock -1728 45 -204 minecraft:air
 execute if block -1729 44 -203 minecraft:air run setblock -1729 45 -203 minecraft:air
 execute if block -1746 44 -208 minecraft:air run setblock -1746 45 -208 minecraft:air
 execute if block -1747 44 -209 minecraft:air run setblock -1747 45 -209 minecraft:air
-execute if block -1753 44 -204 minecraft:air if block -1753 45 -204 minecraft:barrier run summon minecraft:tnt -1753 44 -204 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1753 44 -204 minecraft:air if block -1753 45 -204 minecraft:barrier run summon minecraft:tnt -1753 44 -204 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1753 44 -204 minecraft:air run setblock -1753 45 -204 minecraft:air
 execute if block -1756 44 -203 minecraft:air run setblock -1756 45 -203 minecraft:air
 execute if block -1756 44 -192 minecraft:air run setblock -1756 45 -192 minecraft:air
 execute if block -1755 44 -191 minecraft:air run setblock -1755 45 -191 minecraft:air
 execute if block -1732 44 -196 minecraft:air run setblock -1732 45 -196 minecraft:air
-execute if block -1732 44 -189 minecraft:air if block -1732 45 -189 minecraft:barrier run summon minecraft:tnt -1732 44 -189 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1732 44 -189 minecraft:air if block -1732 45 -189 minecraft:barrier run summon minecraft:tnt -1732 44 -189 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1732 44 -189 minecraft:air run setblock -1732 45 -189 minecraft:air
-execute if block -1717 44 -189 minecraft:air if block -1717 45 -189 minecraft:barrier run summon minecraft:tnt -1717 44 -189 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1717 44 -189 minecraft:air if block -1717 45 -189 minecraft:barrier run summon minecraft:tnt -1717 44 -189 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1717 44 -189 minecraft:air run setblock -1717 45 -189 minecraft:air
 execute if block -1717 44 -195 minecraft:air run setblock -1717 45 -195 minecraft:air
 execute if block -1697 44 -194 minecraft:air run setblock -1697 45 -194 minecraft:air
@@ -169,11 +179,11 @@ execute if block -1686 44 -193 minecraft:air run setblock -1686 45 -193 minecraf
 execute if block -1685 44 -194 minecraft:air run setblock -1685 45 -194 minecraft:air
 execute if block -1685 44 -193 minecraft:air run setblock -1685 45 -193 minecraft:air
 execute if block -1681 44 -193 minecraft:air run setblock -1681 45 -193 minecraft:air
-execute if block -1680 44 -194 minecraft:air if block -1680 45 -194 minecraft:barrier run summon minecraft:tnt -1680 44 -194 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1680 44 -194 minecraft:air if block -1680 45 -194 minecraft:barrier run summon minecraft:tnt -1680 44 -194 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1680 44 -194 minecraft:air run setblock -1680 45 -194 minecraft:air
-execute if block -1680 44 -188 minecraft:air if block -1680 45 -188 minecraft:barrier run summon minecraft:creeper -1680 44 -188 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1680 44 -188 minecraft:air if block -1680 45 -188 minecraft:barrier run summon minecraft:creeper -1680 44 -188 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1680 44 -188 minecraft:air run setblock -1680 45 -188 minecraft:air
-execute if block -1707 44 -203 minecraft:air if block -1707 45 -203 minecraft:barrier run summon minecraft:tnt -1707 44 -203 {CustomName:"{\"translate\":\"medabots_server:entity.bomb\"}",Fuse:100s,Tags:["bomb","hostile","killerable"]}
+execute if block -1707 44 -203 minecraft:air if block -1707 45 -203 minecraft:barrier run summon minecraft:tnt -1707 44 -203 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
 execute if block -1707 44 -203 minecraft:air run setblock -1707 45 -203 minecraft:air
 execute if block -1703 44 -203 minecraft:air run setblock -1703 45 -203 minecraft:air
 execute if block -1710 45 -209 minecraft:iron_door[open=true] if entity @s[x=-1709,y=44,z=-210,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_a/first_go_battle/0
@@ -187,12 +197,8 @@ scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
 advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/wave_1/iceberg_a_first_go
 teleport @s[scores={BattlingMedabots=1}] -1704 50 -221 -180 0
-execute as @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:boxer/time players
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:iceberg_a/time players
-execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result score #temp Time run bossbar get medabots_server:iceberg_a/time value
-execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] store result bossbar medabots_server:iceberg_a/time value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
-execute if score #temp Time matches 0 as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
-execute if entity @s[scores={BattlingMedabots=2..,Battle=1}] run scoreboard players reset #temp Time
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:iceberg_a/robattle players
+tag @s[scores={BattlingMedabots=1},advancements={medabots_server:wave_1/story_progression={kuwagata_medal=true,meet_jaxy=false}}] add dialog_infinity_meet_jaxy
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1716 44 -239 minecraft:structure_block run setblock -1716 45 -239 minecraft:redstone_block
 execute if block -1737 44 -222 minecraft:structure_block run setblock -1737 45 -222 minecraft:redstone_block

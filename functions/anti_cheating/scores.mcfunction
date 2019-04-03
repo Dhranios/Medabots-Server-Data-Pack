@@ -21,7 +21,8 @@ scoreboard players reset @s[scores={OverheatingFly=0}] OverheatingFly
 # Set scores
 scoreboard players set @s[scores={Error=1..,Battle=1..}] Battle 0
 scoreboard players set @s[scores={Death=1..,Battle=1..}] Battle 0
-execute if entity @s[scores={Battle=1..},tag=!hostile] run function medabots_server:medaparts/set_stats
+execute if entity @s[scores={Battle=1..},tag=!hostile,tag=add_hostile] at @s run function medabots_server:medaparts/set_stats
+tag @s[scores={Battle=1..},tag=!hostile,tag=!add_hostile] add add_hostile
 team join EnemyPlayer @s[team=!EnemyPlayer,scores={Battle=1..}]
 scoreboard players set @a[team=Moderator] Moderator 1
 tag @s[team=Moderator,tag=!bug_tester] add bug_tester
@@ -34,5 +35,5 @@ scoreboard players set @s[gamemode=!adventure,gamemode=!survival,scores={Battle=
 spawnpoint @s -286 55 -52
 
 # Deactivate parts
-execute unless entity @s[scores={FlyCourse=0..}] run scoreboard players reset @s[tag=!hostile,scores={Stage=1..}] Stage
+execute unless entity @s[scores={FlyCourse=0..}] run scoreboard players reset @s[tag=!hostile,scores={Stage=1..},tag=!add_hostile] Stage
 execute if entity @s[scores={Battle=0},tag=hostile] run function medabots_server:medaparts/reset

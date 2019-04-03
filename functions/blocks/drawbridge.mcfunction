@@ -2,7 +2,7 @@
 execute unless entity @s[scores={Time=-1..}] run function medabots_server:blocks/drawbridge/scores
 
 # Count down timer
-scoreboard players remove @s[scores={Time=0..}] Time 1
+scoreboard players remove @s[scores={Time=1..}] Time 1
 scoreboard players set @s[tag=dead] Time 0
 
 # Lift the bridge

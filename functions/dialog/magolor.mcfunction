@@ -6,7 +6,7 @@ execute if entity @s[scores={Dialog=1}] run playsound medabots_server:music.enti
 scoreboard players set @s[scores={Dialog=1}] MusicType 2
 scoreboard players set @s[scores={Dialog=1}] Music 2676
 execute if entity @s[scores={Dialog=1..}] run teleport @s -292 55 205
-execute if entity @s[scores={Dialog=286}] run summon minecraft:skeleton -292 68 195 {Invulnerable:1b,Silent:1b,NoGravity:1b,NoAI:1b,CustomName:"{\"translate\":\"medabots_server:entity.magolor\"}",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandItems:[{},{}],HandDropChances:[0.0f,0.0f],LeftHanded:1b,Tags:["magolor","cutscene"]}
+execute if entity @s[scores={Dialog=286}] run summon minecraft:skeleton -292 68 195 {Invulnerable:1b,Silent:1b,NoGravity:1b,NoAI:1b,CustomName:'{"translate":"medabots_server:entity.magolor"}',ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandItems:[{},{}],HandDropChances:[0.0f,0.0f],LeftHanded:1b,Tags:["magolor","cutscene"]}
 execute at @s as @e[x=-292,y=68,z=195,tag=magolor,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=286}] DialogNr
 execute if entity @s[scores={Dialog=286}] run tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.magolor"},{"translate":"medabots_server:dialog.magolor.1"}]}
 execute if entity @s[scores={Dialog=286}] as @e[tag=magolor] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ ~ ~-10
@@ -24,7 +24,7 @@ execute if entity @s[scores={Dialog=561}] run tellraw @s {"translate":"chat.type
 execute if entity @s[scores={Dialog=690}] run tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.magolor"},{"translate":"medabots_server:dialog.magolor.4"}]}
 execute if entity @s[scores={Dialog=770}] as @e[tag=magolor] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run data merge entity @s {ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",Count:1b}],HandItems:[]}
 execute if entity @s[scores={Dialog=770..955}] as @e[tag=magolor] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run particle minecraft:poof ~-1 ~-1 ~-1 2 2 2 0 4
-execute if entity @s[scores={Dialog=955}] run summon minecraft:wither_skeleton -292 64 195 {Invulnerable:1b,Silent:1b,NoGravity:1b,NoAI:1b,CustomName:"{\"translate\":\"medabots_server:entity.magolor\"}",ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandItems:[{},{}],HandDropChances:[0.0f,0.0f],Rotation:[0.0f,10.0f],LeftHanded:1b,Tags:["magolor","cutscene","crowned"]}
+execute if entity @s[scores={Dialog=955}] run summon minecraft:wither_skeleton -292 64 195 {Invulnerable:1b,Silent:1b,NoGravity:1b,NoAI:1b,CustomName:'{"translate":"medabots_server:entity.magolor"}',ArmorItems:[{},{},{},{id:"minecraft:golden_helmet",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandItems:[{},{}],HandDropChances:[0.0f,0.0f],Rotation:[0.0f,10.0f],LeftHanded:1b,Tags:["magolor","cutscene","crowned"]}
 execute at @s as @e[x=-292,y=64,z=195,tag=magolor,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=955}] DialogNr
 execute if entity @s[scores={Dialog=955}] as @e[tag=magolor,tag=!crowned] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ -1000 ~
 execute if entity @s[scores={Dialog=955}] as @e[tag=magolor,tag=!crowned] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run kill @s
@@ -52,7 +52,7 @@ execute if entity @s[scores={Dialog=1750..1767}] as @e[tag=magolor] if score @s 
 execute if entity @s[scores={Dialog=1767}] run tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.magolor"},{"translate":"medabots_server:dialog.magolor.15"}]}
 execute if entity @s[scores={Dialog=1820}] as @e[tag=magolor] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~-1
 execute if entity @s[scores={Dialog=1820}] run tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.magolor"},{"translate":"medabots_server:dialog.magolor.16"}]}
-execute if entity @s[scores={Dialog=1820}] run advancement grant @s only medabots_server:passes/dimensional
+execute if entity @s[scores={Dialog=1820}] run advancement grant @s only medabots_server:special_items/passes/dimensional
 execute if entity @s[scores={Dialog=1948}] as @e[tag=magolor] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run particle minecraft:poof ~-1 ~-1 ~-1 2 2 2 0 60
 execute if entity @s[scores={Dialog=1948}] run fill -295 63 193 -289 69 193 minecraft:air
 tag @s[scores={Dialog=1948}] remove dialog_magolor

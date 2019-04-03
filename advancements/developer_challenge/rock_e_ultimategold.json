@@ -47,7 +47,7 @@
         },
         "frame": "challenge"
     },
-	"parent": "medabots_server:developer_challenge/root",
+	"parent": "medabots_server:developer_challenge/ruins_in_b_fvbico",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

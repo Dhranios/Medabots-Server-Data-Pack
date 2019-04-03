@@ -2,37 +2,37 @@
 scoreboard players add @s Time 1
 
 # Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=3,Freeze=1}] Time 19
-scoreboard players set @s[scores={Time=3,Freeze=3}] Time 27
+scoreboard players set @s[scores={Time=2,Freeze=1}] Time 10
+scoreboard players set @s[scores={Time=2,Freeze=3}] Time 20
 
 # Show particles
-execute if entity @s[scores={Time=32}] run particle minecraft:enchanted_hit ~ ~1 ~ 1 0 1 1 10
-execute if entity @s[scores={Time=34}] run particle minecraft:enchanted_hit ~ ~1 ~ 1 0 1 1 10
+execute if entity @s[scores={Time=20}] run particle minecraft:enchanted_hit ~ ~1 ~ 1 0 1 1 10
+execute if entity @s[scores={Time=25}] run particle minecraft:enchanted_hit ~ ~1 ~ 1 0 1 1 10
 
 # Give the effect
-execute if entity @s[scores={Time=36},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile] unless entity @s[scores={Time=36,Freeze=1..3}] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 false
-execute if entity @s[scores={Time=36},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile] unless entity @s[scores={Time=36,Freeze=1..3}] run effect give @s[tag=undead] minecraft:instant_health 1 0 false
-execute if entity @s[scores={Time=36},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile] unless entity @s[scores={Time=36,Freeze=1..3}] run scoreboard players set @s FreezeTime 60
-execute if entity @s[scores={Time=36},tag=ally_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=36,Freeze=1..3}] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 false
-execute if entity @s[scores={Time=36},tag=ally_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=36,Freeze=1..3}] run effect give @s[tag=undead] minecraft:instant_health 1 0 false
-execute if entity @s[scores={Time=36},tag=ally_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=36,Freeze=1..3}] run scoreboard players set @s FreezeTime 60
-execute if entity @s[scores={Time=36},tag=enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=36,Freeze=1..3}] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 false
-execute if entity @s[scores={Time=36},tag=enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=36,Freeze=1..3}] run effect give @s[tag=undead] minecraft:instant_health 1 0 false
-execute if entity @s[scores={Time=36},tag=enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=36,Freeze=1..3}] run scoreboard players set @s FreezeTime 60
+execute if entity @s[scores={Time=20},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile] unless entity @s[scores={Time=20,Freeze=1..3}] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 false
+execute if entity @s[scores={Time=20},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile] unless entity @s[scores={Time=20,Freeze=1..3}] run effect give @s[tag=undead] minecraft:instant_health 1 0 false
+execute if entity @s[scores={Time=20},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile] unless entity @s[scores={Time=20,Freeze=1..3}] run scoreboard players set @s FreezeTime 60
+execute if entity @s[scores={Time=20},tag=ally_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=20,Freeze=1..3}] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 false
+execute if entity @s[scores={Time=20},tag=ally_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=20,Freeze=1..3}] run effect give @s[tag=undead] minecraft:instant_health 1 0 false
+execute if entity @s[scores={Time=20},tag=ally_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=20,Freeze=1..3}] run scoreboard players set @s FreezeTime 60
+execute if entity @s[scores={Time=20},tag=enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=20,Freeze=1..3}] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 false
+execute if entity @s[scores={Time=20},tag=enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=20,Freeze=1..3}] run effect give @s[tag=undead] minecraft:instant_health 1 0 false
+execute if entity @s[scores={Time=20},tag=enemy_medabot] positioned ^ ^ ^2 as @e[distance=..2,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=20,Freeze=1..3}] run scoreboard players set @s FreezeTime 60
 
 # Create thin ice
-execute if entity @s[scores={Time=36}] rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~ minecraft:water[level=0] unless block ~ ~ ~ minecraft:water run summon minecraft:area_effect_cloud ~ ~-1 ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
-execute if entity @s[scores={Time=36}] rotated 0 ~ positioned ^ ^ ^2 if block ~-1 ~-1 ~ minecraft:water[level=0] unless block ~-1 ~ ~ minecraft:water run summon minecraft:area_effect_cloud ~-1 ~-1 ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
-execute if entity @s[scores={Time=36}] rotated 0 ~ positioned ^ ^ ^2 if block ~1 ~-1 ~ minecraft:water[level=0] unless block ~1 ~ ~ minecraft:water run summon minecraft:area_effect_cloud ~1 ~-1 ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
-execute if entity @s[scores={Time=36}] rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~-1 minecraft:water[level=0] unless block ~ ~ ~-1 minecraft:water run summon minecraft:area_effect_cloud ~ ~-1 ~-1 {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
-execute if entity @s[scores={Time=36}] rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~1 minecraft:water[level=0] unless block ~ ~ ~1 minecraft:water run summon minecraft:area_effect_cloud ~ ~-1 ~1 {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
+execute if entity @s[scores={Time=20}] rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~ minecraft:water[level=0] unless block ~ ~ ~ minecraft:water run summon minecraft:area_effect_cloud ~ ~-1 ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
+execute if entity @s[scores={Time=20}] rotated 0 ~ positioned ^ ^ ^2 if block ~-1 ~-1 ~ minecraft:water[level=0] unless block ~-1 ~ ~ minecraft:water run summon minecraft:area_effect_cloud ~-1 ~-1 ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
+execute if entity @s[scores={Time=20}] rotated 0 ~ positioned ^ ^ ^2 if block ~1 ~-1 ~ minecraft:water[level=0] unless block ~1 ~ ~ minecraft:water run summon minecraft:area_effect_cloud ~1 ~-1 ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
+execute if entity @s[scores={Time=20}] rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~-1 minecraft:water[level=0] unless block ~ ~ ~-1 minecraft:water run summon minecraft:area_effect_cloud ~ ~-1 ~-1 {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
+execute if entity @s[scores={Time=20}] rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~1 minecraft:water[level=0] unless block ~ ~ ~1 minecraft:water run summon minecraft:area_effect_cloud ~ ~-1 ~1 {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[scores={Freeze=2,Time=36}] HeadUses 1
+scoreboard players remove @s[scores={Freeze=2,Time=22}] HeadUses 1
 
 # Finish the move
-scoreboard players reset @s[scores={Time=38..}] Freeze
-scoreboard players set @s[scores={Time=38..}] Time 1
+scoreboard players reset @s[scores={Time=30..}] Freeze
+scoreboard players set @s[scores={Time=30..}] Time 1
 
 # Attacked by melee trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

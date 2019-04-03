@@ -4,3 +4,4 @@ execute if entity @s[tag=right_arm] run function medabots_server:animations/meda
 execute if entity @s[tag=head] run function medabots_server:animations/medabot/cutscene_head
 data merge entity @s {Fire:2s}
 tag @s add found_owner
+tag @s add found_owner_2

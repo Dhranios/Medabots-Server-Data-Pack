@@ -1,19 +1,19 @@
-summon minecraft:area_effect_cloud -1999 45 -566 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1994 45 -566 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1991 45 -563 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1991 45 -558 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1994 45 -555 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1999 45 -555 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2002 45 -558 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2002 45 -563 {CustomName:"{\"translate\":\"medabots_server:block.floor_switch\"}",Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1999 45 -579 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1994 45 -579 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1978 45 -563 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1978 45 -558 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1994 45 -542 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1999 45 -542 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2015 45 -558 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
-summon minecraft:area_effect_cloud -2015 45 -563 {CustomName:"{\"translate\":\"medabots_server:block.laser_trap\"}",Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1999 45 -566 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1994 45 -566 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1991 45 -563 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1991 45 -558 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1994 45 -555 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1999 45 -555 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2002 45 -558 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2002 45 -563 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1999 45 -579 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1994 45 -579 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1978 45 -563 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1978 45 -558 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1994 45 -542 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1999 45 -542 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2015 45 -558 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
+summon minecraft:area_effect_cloud -2015 45 -563 {CustomName:'{"translate":"medabots_server:block.laser_trap"}',Tags:["laser_trap","delay_10"],Duration:2147483647}
 setblock -1999 45 -579 minecraft:structure_block[mode=load]{name:"medabots_server:stage/laser_trap",mode:"LOAD"}
 setblock -1994 45 -579 minecraft:structure_block[mode=load]{name:"medabots_server:stage/laser_trap",mode:"LOAD"}
 setblock -1978 45 -563 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/laser_trap",mode:"LOAD"}

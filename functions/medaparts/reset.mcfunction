@@ -101,6 +101,13 @@ tag @s remove wind_1
 tag @s remove wind_2
 
 # Re-give items who have stage_item:1b
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:purple_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/purple_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:blue_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/blue_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:light_blue_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/light_blue_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:green_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/green_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:yellow_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/yellow_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:orange_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/orange_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:red_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/red_plant
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:stage/give_obtained_item
 
 # Re-equip headgear

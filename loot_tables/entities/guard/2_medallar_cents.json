@@ -10,7 +10,7 @@
                     "functions": [
                         {
                             "function": "minecraft:set_nbt",
-                            "tag": "{display:{Name:\'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}\'},medabots_server:{stage_item:1b,id:\'medabots_server:medallar_cent\'}}"
+                            "tag": "{display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar_cent\"}'},medabots_server:{stage_item:1b,id:\"medabots_server:medallar_cent'}}"
                         },
                         {
                             "function": "minecraft:set_count",

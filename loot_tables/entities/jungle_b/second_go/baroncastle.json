@@ -1,0 +1,69 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:diamond",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar\"}'},medabots_server:{stage_item:1b,id:\"medabots_server:medallar\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 15
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:11,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_tyrantower\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.float\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.float.description\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"60\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.baroncastle\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_tyrantower.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_tyrantower.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:baroncastle_tyrantower\",gender:0b,move:\"float\",part:\"legs\",armor:60,defense:28,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_falcon_burncapsule\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.napalm\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.napalm.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"50\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.fly_falcon\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_falcon_burncapsule.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_falcon_burncapsule.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:fly_falcon_burncapsule\",gender:0b,move:\"napalm\",part:\"left_arm\",armor:50,power:24,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:30,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dondoguu_dohtack\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.guard_optical\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.guard_optical.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"55\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.dondoguu\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dondoguu_dohtack.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dondoguu_dohtack.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:dondoguu_dohtack\",gender:0b,move:\"guard_optical\",part:\"right_arm\",armor:55,power:0,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:11,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_king_balcony\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.falling\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.falling.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"8\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"55\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.baroncastle\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_king_balcony.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_king_balcony.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:baroncastle_king_balcony\",gender:0b,move:\"falling\",part:\"head\",armor:55,power:28,uses:8,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

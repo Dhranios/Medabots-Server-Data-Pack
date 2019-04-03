@@ -1,3 +1,6 @@
+execute store result score #temp Time run bossbar get medabots_server:grassland_a/time value
+execute store result bossbar medabots_server:grassland_a/time value run scoreboard players operation #temp Time += #1 Constants
+scoreboard players reset #temp Time
 execute if block -1517 46 -128 minecraft:iron_door[open=false] if block -1513 44 -123 minecraft:lime_wool if block -1516 44 -120 minecraft:lime_wool if block -1520 44 -121 minecraft:lime_wool if block -1520 44 -124 minecraft:lime_wool run setblock -1517 45 -128 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1540 46 -127 minecraft:iron_door[open=false] if block -1541 44 -127 minecraft:light_blue_wool run setblock -1540 45 -127 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1540 46 -127 minecraft:iron_door[open=false] if block -1529 44 -125 minecraft:yellow_wool run setblock -1540 45 -127 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
@@ -86,7 +89,7 @@ execute if block -1543 45 -149 minecraft:air run setblock -1543 46 -149 minecraf
 execute if block -1530 45 -151 minecraft:air run setblock -1530 46 -151 minecraft:air
 execute if block -1511 45 -147 minecraft:air run setblock -1511 46 -147 minecraft:air
 execute if block -1511 45 -145 minecraft:air run setblock -1511 46 -145 minecraft:air
-execute if block -1510 45 -146 minecraft:air if block -1510 46 -146 minecraft:barrier run summon minecraft:creeper -1510 45 -146 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/1_medallar_cent",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1510 45 -146 minecraft:air if block -1510 46 -146 minecraft:barrier run summon minecraft:creeper -1510 45 -146 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/1_medallar_cent",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1510 45 -146 minecraft:air run setblock -1510 46 -146 minecraft:air
 execute if block -1509 45 -147 minecraft:air run setblock -1509 46 -147 minecraft:air
 execute if block -1509 45 -145 minecraft:air run setblock -1509 46 -145 minecraft:air
@@ -97,11 +100,11 @@ execute if block -1524 45 -177 minecraft:air run setblock -1524 46 -177 minecraf
 execute if block -1534 45 -175 minecraft:air run setblock -1534 46 -175 minecraft:air
 execute if block -1539 45 -169 minecraft:air run setblock -1539 46 -169 minecraft:air
 execute if block -1542 45 -173 minecraft:air run setblock -1542 46 -173 minecraft:air
-execute if block -1565 45 -174 minecraft:air if block -1565 46 -174 minecraft:barrier run summon minecraft:creeper -1565 45 -174 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/1_medallar_cent",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1565 45 -174 minecraft:air if block -1565 46 -174 minecraft:barrier run summon minecraft:creeper -1565 45 -174 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/1_medallar_cent",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1565 45 -174 minecraft:air run setblock -1565 46 -174 minecraft:air
 execute if block -1565 45 -173 minecraft:air run setblock -1565 46 -173 minecraft:air
 execute if block -1565 45 -172 minecraft:air run setblock -1565 46 -172 minecraft:air
-execute if block -1565 45 -171 minecraft:air if block -1565 46 -171 minecraft:barrier run summon minecraft:creeper -1565 45 -171 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:"{\"translate\":\"medabots_server:entity.guard\"}",Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/1_medallar_cent",AbsorptionAmount:10.0f,Health:100.0f}
+execute if block -1565 45 -171 minecraft:air if block -1565 46 -171 minecraft:barrier run summon minecraft:creeper -1565 45 -171 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/1_medallar_cent",AbsorptionAmount:10.0f,Health:100.0f}
 execute if block -1565 45 -171 minecraft:air run setblock -1565 46 -171 minecraft:air
 execute if block -1566 45 -172 minecraft:air run setblock -1566 46 -172 minecraft:air
 execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1}] run scoreboard players set @s Stage 1

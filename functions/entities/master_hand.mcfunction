@@ -4,29 +4,29 @@ execute unless entity @s[scores={Dialog=0..}] run scoreboard players add @s Dial
 execute unless entity @s[scores={Medaforce=1..}] if entity @a[distance=..16] run scoreboard players add @s[scores={Time=1,Dialog=0}] Dialog 1
 execute unless entity @s[scores={Medaforce=1..}] run scoreboard players add @s[scores={Dialog=1..59}] Dialog 1
 execute if entity @s[scores={Dialog=60},tag=has_crazy_hand] at @e[tag=crazy_hand,tag=main,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=crazy_hand,sort=nearest,limit=1] Stage run tag @s add cooperate
-execute if entity @s[scores={Dialog=60},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","catch"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","twin_lasers"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","double_jet"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=cooperate] unless entity @s[tag=!2,tag=!3] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","applaud"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=cooperate] unless entity @s[tag=!2,tag=!3] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","double_punch"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","ball_throw"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","crawl_slam"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","jet"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","ram"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","crush"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","lasers"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","gun"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","grab"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","poke"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","punch"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","slap"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","drill"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","walk"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate] unless entity @s[tag=!2,tag=!3] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","sweep"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","snap"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","wind"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","cards"],Duration:1}
-execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:"{\"text\":\"Random Select\"}",Tags:["random_select","spread_fire"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","catch"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","twin_lasers"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","double_jet"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=cooperate] unless entity @s[tag=!2,tag=!3] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","applaud"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=cooperate] unless entity @s[tag=!2,tag=!3] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","double_punch"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","ball_throw"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crawl_slam"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","jet"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","ram"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crush"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","lasers"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","gun"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","grab"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","poke"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","punch"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","slap"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","drill"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","walk"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate] unless entity @s[tag=!2,tag=!3] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","sweep"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","snap"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","wind"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","cards"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!cooperate,tag=4] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","spread_fire"],Duration:1}
 execute if entity @s[scores={Dialog=60}] run tag @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_select] add success
 execute if entity @e[tag=random_select,tag=selected,tag=catch] as @e[tag=crazy_hand,tag=main,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_catch
 execute if entity @e[tag=random_select,tag=selected,tag=catch] run tag @s add attack_catch

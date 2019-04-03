@@ -10,6 +10,7 @@ replaceitem entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{id:"medabot
 
 # Set to in-battle and set the killer score
 tag @s add hostile
+tag @s remove add_hostile
 function medabots_server:medaparts/killer_score
 scoreboard players set @s[tag=!full_medapart_set] Battle 0
 
@@ -34,17 +35,18 @@ execute if entity @s[tag=!murder_mystery] run function medabots_server:medaparts
 execute if entity @s[tag=murder_mystery,tag=!innocent] run function medabots_server:medaparts/enable_medaparts
 
 # Model
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["legs","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["left_arm","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["legs","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["left_arm","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
 scoreboard players operation @s MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 scoreboard players add @s MedabotNr 1
-execute as @e[tag=medabot_model,distance=..0.1] run scoreboard players operation @s MedabotNr = @a[distance=..0.1,limit=1] MedabotNr
-execute as @e[tag=legs] unless entity @s[nbt={ArmorItems:[{tag:{medabots_server:{}}}]}] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[0]
-execute as @e[tag=left_arm] unless entity @s[nbt={ArmorItems:[{tag:{medabots_server:{}}}]}] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[1]
-execute as @e[tag=right_arm] unless entity @s[nbt={ArmorItems:[{tag:{medabots_server:{}}}]}] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[2]
-execute as @e[tag=head] unless entity @s[nbt={ArmorItems:[{tag:{medabots_server:{}}}]}] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[3]
+execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = @a[distance=..0.1,limit=1] MedabotNr
+execute as @e[tag=legs,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[0]
+execute as @e[tag=left_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[1]
+execute as @e[tag=right_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[2]
+execute as @e[tag=head,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[3]
+tag @e[tag=medabot_model,tag=new] remove new
 effect give @s minecraft:invisibility 1000000 0 true
 
 # Save headgear

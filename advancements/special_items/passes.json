@@ -1,0 +1,21 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:book"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.special_items.passes"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.passes.description"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "medabots_server:special_items/root",
+    "criteria": {
+        "got_a_pass": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

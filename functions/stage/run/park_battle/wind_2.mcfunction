@@ -1,5 +1,5 @@
 execute store result score @s BattlingMedabots if entity @e[scores={Stage=50,Medabot=0..,Battle=1..}]
-execute if entity @s[scores={BattlingMedabots=2..}] unless entity @e[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1935 45 -549 {Invisible:1b,Marker:1b,Small:1b,CustomName:"{\"translate\":\"medabots_server:entity.mr_referee\"}",Tags:["mr_referee"],Rotation:[-180.0f,0.0f]}
+execute if entity @s[scores={BattlingMedabots=2..}] unless entity @e[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1935 45 -549 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Rotation:[-180.0f,0.0f]}
 execute if block -1943 44 -559 minecraft:yellow_wool run scoreboard players remove @e[x=-1955.5,y=45,z=-566.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1943 44 -559 minecraft:yellow_wool run tag @e[x=-1945.5,y=45,z=-545.5,distance=..0.7,tag=fan,tag=!changed] add changed
 execute if block -1943 44 -559 minecraft:yellow_wool run scoreboard players remove @e[x=-1924.5,y=45,z=-556.5,distance=..0.7,tag=fan,tag=!changed] Moving 1

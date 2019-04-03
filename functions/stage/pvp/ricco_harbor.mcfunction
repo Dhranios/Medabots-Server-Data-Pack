@@ -12,5 +12,5 @@ setblock -1441 94 -211 minecraft:air
 setblock -1439 94 -211 minecraft:air
 setblock -1441 96 -212 minecraft:red_wool
 setblock -1439 96 -212 minecraft:red_wool
-data merge block -1440 95 -210 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/ricco_harbor/play\"}}"}
+data merge block -1440 95 -210 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ricco_harbor/play"}}'}
 setblock -1440 96 -212 minecraft:redstone_block

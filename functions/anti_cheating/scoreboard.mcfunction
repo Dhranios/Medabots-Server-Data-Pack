@@ -3,6 +3,9 @@
 #       Load Function       #
 #############################
 
+# Say server is (re)loaded
+tellraw @a {"text":"[Server] Reload complete."}
+
 #Re-add any objectives that may have been removed
 scoreboard objectives add AFKTime dummy
 scoreboard objectives add ActionFloorNr dummy
@@ -312,6 +315,50 @@ bossbar add medabots_server:iceberg_e/time {"translate":"medabots_server:scorebo
 bossbar add medabots_server:ruins_out_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
 bossbar add medabots_server:ruins_in_e/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
 bossbar add medabots_server:rock_f/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:park_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:park_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:paradise_a/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:paradise_b/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_c/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_c/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_c/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_c/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_c/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_c/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:boxer/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_d/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_d/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_d/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_d/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_d/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:laboratory_d/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:grassland_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:jungle_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:seashore_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:snowfield_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:iceberg_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_out_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:ruins_in_e/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
+bossbar add medabots_server:rock_f/robattle {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}
 bossbar add medabots_server:argorok {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.argorok","color":"green"}]}
 bossbar add medabots_server:argorok/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.argorok","color":"green"}]}
 bossbar add medabots_server:argorok/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.argorok","color":"green"}]}
@@ -400,50 +447,50 @@ bossbar set medabots_server:iceberg_e/time style notched_6
 bossbar set medabots_server:ruins_out_e/time style notched_6
 bossbar set medabots_server:ruins_in_e/time style notched_6
 bossbar set medabots_server:rock_f/time style notched_6
-bossbar set medabots_server:grassland_a/time max 3600
-bossbar set medabots_server:rock_a/time max 3600
-bossbar set medabots_server:jungle_a/time max 3600
-bossbar set medabots_server:seashore_a/time max 3600
-bossbar set medabots_server:snowfield_a/time max 3600
-bossbar set medabots_server:iceberg_a/time max 3600
-bossbar set medabots_server:ruins_out_a/time max 3600
-bossbar set medabots_server:ruins_in_a/time max 3600
-bossbar set medabots_server:laboratory_a/time max 3600
-bossbar set medabots_server:grassland_b/time max 3600
-bossbar set medabots_server:rock_b/time max 3600
-bossbar set medabots_server:jungle_b/time max 3600
-bossbar set medabots_server:seashore_b/time max 3600
-bossbar set medabots_server:snowfield_b/time max 3600
-bossbar set medabots_server:iceberg_b/time max 3600
-bossbar set medabots_server:ruins_out_b/time max 3600
-bossbar set medabots_server:ruins_in_b/time max 3600
-bossbar set medabots_server:laboratory_b/time max 3600
-bossbar set medabots_server:park_a/time max 3600
-bossbar set medabots_server:park_b/time max 3600
-bossbar set medabots_server:paradise_a/time max 3600
-bossbar set medabots_server:paradise_b/time max 3600
-bossbar set medabots_server:grassland_c/time max 3600
-bossbar set medabots_server:jungle_c/time max 3600
-bossbar set medabots_server:seashore_c/time max 3600
-bossbar set medabots_server:iceberg_c/time max 3600
-bossbar set medabots_server:ruins_out_c/time max 3600
-bossbar set medabots_server:laboratory_c/time max 3600
-bossbar set medabots_server:boxer/time max 3600
-bossbar set medabots_server:grassland_d/time max 3600
-bossbar set medabots_server:jungle_d/time max 3600
-bossbar set medabots_server:snowfield_d/time max 3600
-bossbar set medabots_server:iceberg_d/time max 3600
-bossbar set medabots_server:ruins_in_d/time max 3600
-bossbar set medabots_server:laboratory_d/time max 3600
-bossbar set medabots_server:grassland_e/time max 3600
-bossbar set medabots_server:rock_e/time max 3600
-bossbar set medabots_server:jungle_e/time max 3600
-bossbar set medabots_server:seashore_e/time max 3600
-bossbar set medabots_server:snowfield_e/time max 3600
-bossbar set medabots_server:iceberg_e/time max 3600
-bossbar set medabots_server:ruins_out_e/time max 3600
-bossbar set medabots_server:ruins_in_e/time max 3600
-bossbar set medabots_server:rock_f/time max 3600
+bossbar set medabots_server:grassland_a/time max 72000
+bossbar set medabots_server:rock_a/time max 72000
+bossbar set medabots_server:jungle_a/time max 72000
+bossbar set medabots_server:seashore_a/time max 72000
+bossbar set medabots_server:snowfield_a/time max 72000
+bossbar set medabots_server:iceberg_a/time max 72000
+bossbar set medabots_server:ruins_out_a/time max 72000
+bossbar set medabots_server:ruins_in_a/time max 72000
+bossbar set medabots_server:laboratory_a/time max 72000
+bossbar set medabots_server:grassland_b/time max 72000
+bossbar set medabots_server:rock_b/time max 72000
+bossbar set medabots_server:jungle_b/time max 72000
+bossbar set medabots_server:seashore_b/time max 72000
+bossbar set medabots_server:snowfield_b/time max 72000
+bossbar set medabots_server:iceberg_b/time max 72000
+bossbar set medabots_server:ruins_out_b/time max 72000
+bossbar set medabots_server:ruins_in_b/time max 72000
+bossbar set medabots_server:laboratory_b/time max 72000
+bossbar set medabots_server:park_a/time max 72000
+bossbar set medabots_server:park_b/time max 72000
+bossbar set medabots_server:paradise_a/time max 72000
+bossbar set medabots_server:paradise_b/time max 72000
+bossbar set medabots_server:grassland_c/time max 72000
+bossbar set medabots_server:jungle_c/time max 72000
+bossbar set medabots_server:seashore_c/time max 72000
+bossbar set medabots_server:iceberg_c/time max 72000
+bossbar set medabots_server:ruins_out_c/time max 72000
+bossbar set medabots_server:laboratory_c/time max 72000
+bossbar set medabots_server:boxer/time max 72000
+bossbar set medabots_server:grassland_d/time max 72000
+bossbar set medabots_server:jungle_d/time max 72000
+bossbar set medabots_server:snowfield_d/time max 72000
+bossbar set medabots_server:iceberg_d/time max 72000
+bossbar set medabots_server:ruins_in_d/time max 72000
+bossbar set medabots_server:laboratory_d/time max 72000
+bossbar set medabots_server:grassland_e/time max 72000
+bossbar set medabots_server:rock_e/time max 72000
+bossbar set medabots_server:jungle_e/time max 72000
+bossbar set medabots_server:seashore_e/time max 72000
+bossbar set medabots_server:snowfield_e/time max 72000
+bossbar set medabots_server:iceberg_e/time max 72000
+bossbar set medabots_server:ruins_out_e/time max 72000
+bossbar set medabots_server:ruins_in_e/time max 72000
+bossbar set medabots_server:rock_f/time max 72000
 bossbar set medabots_server:grassland_a/time color green
 bossbar set medabots_server:rock_a/time color green
 bossbar set medabots_server:jungle_a/time color green
@@ -488,6 +535,138 @@ bossbar set medabots_server:iceberg_e/time color green
 bossbar set medabots_server:ruins_out_e/time color green
 bossbar set medabots_server:ruins_in_e/time color green
 bossbar set medabots_server:rock_f/time color green
+bossbar set medabots_server:grassland_a/robattle style notched_6
+bossbar set medabots_server:rock_a/robattle style notched_6
+bossbar set medabots_server:jungle_a/robattle style notched_6
+bossbar set medabots_server:seashore_a/robattle style notched_6
+bossbar set medabots_server:snowfield_a/robattle style notched_6
+bossbar set medabots_server:iceberg_a/robattle style notched_6
+bossbar set medabots_server:ruins_out_a/robattle style notched_6
+bossbar set medabots_server:ruins_in_a/robattle style notched_6
+bossbar set medabots_server:laboratory_a/robattle style notched_6
+bossbar set medabots_server:grassland_b/robattle style notched_6
+bossbar set medabots_server:rock_b/robattle style notched_6
+bossbar set medabots_server:jungle_b/robattle style notched_6
+bossbar set medabots_server:seashore_b/robattle style notched_6
+bossbar set medabots_server:snowfield_b/robattle style notched_6
+bossbar set medabots_server:iceberg_b/robattle style notched_6
+bossbar set medabots_server:ruins_out_b/robattle style notched_6
+bossbar set medabots_server:ruins_in_b/robattle style notched_6
+bossbar set medabots_server:laboratory_b/robattle style notched_6
+bossbar set medabots_server:park_a/robattle style notched_6
+bossbar set medabots_server:park_b/robattle style notched_6
+bossbar set medabots_server:paradise_a/robattle style notched_6
+bossbar set medabots_server:paradise_b/robattle style notched_6
+bossbar set medabots_server:grassland_c/robattle style notched_6
+bossbar set medabots_server:jungle_c/robattle style notched_6
+bossbar set medabots_server:seashore_c/robattle style notched_6
+bossbar set medabots_server:iceberg_c/robattle style notched_6
+bossbar set medabots_server:ruins_out_c/robattle style notched_6
+bossbar set medabots_server:laboratory_c/robattle style notched_6
+bossbar set medabots_server:boxer/robattle style notched_6
+bossbar set medabots_server:grassland_d/robattle style notched_6
+bossbar set medabots_server:jungle_d/robattle style notched_6
+bossbar set medabots_server:snowfield_d/robattle style notched_6
+bossbar set medabots_server:iceberg_d/robattle style notched_6
+bossbar set medabots_server:ruins_in_d/robattle style notched_6
+bossbar set medabots_server:laboratory_d/robattle style notched_6
+bossbar set medabots_server:grassland_e/robattle style notched_6
+bossbar set medabots_server:rock_e/robattle style notched_6
+bossbar set medabots_server:jungle_e/robattle style notched_6
+bossbar set medabots_server:seashore_e/robattle style notched_6
+bossbar set medabots_server:snowfield_e/robattle style notched_6
+bossbar set medabots_server:iceberg_e/robattle style notched_6
+bossbar set medabots_server:ruins_out_e/robattle style notched_6
+bossbar set medabots_server:ruins_in_e/robattle style notched_6
+bossbar set medabots_server:rock_f/robattle style notched_6
+bossbar set medabots_server:grassland_a/robattle max 3600
+bossbar set medabots_server:rock_a/robattle max 3600
+bossbar set medabots_server:jungle_a/robattle max 3600
+bossbar set medabots_server:seashore_a/robattle max 3600
+bossbar set medabots_server:snowfield_a/robattle max 3600
+bossbar set medabots_server:iceberg_a/robattle max 3600
+bossbar set medabots_server:ruins_out_a/robattle max 3600
+bossbar set medabots_server:ruins_in_a/robattle max 3600
+bossbar set medabots_server:laboratory_a/robattle max 3600
+bossbar set medabots_server:grassland_b/robattle max 3600
+bossbar set medabots_server:rock_b/robattle max 3600
+bossbar set medabots_server:jungle_b/robattle max 3600
+bossbar set medabots_server:seashore_b/robattle max 3600
+bossbar set medabots_server:snowfield_b/robattle max 3600
+bossbar set medabots_server:iceberg_b/robattle max 3600
+bossbar set medabots_server:ruins_out_b/robattle max 3600
+bossbar set medabots_server:ruins_in_b/robattle max 3600
+bossbar set medabots_server:laboratory_b/robattle max 3600
+bossbar set medabots_server:park_a/robattle max 3600
+bossbar set medabots_server:park_b/robattle max 3600
+bossbar set medabots_server:paradise_a/robattle max 3600
+bossbar set medabots_server:paradise_b/robattle max 3600
+bossbar set medabots_server:grassland_c/robattle max 3600
+bossbar set medabots_server:jungle_c/robattle max 3600
+bossbar set medabots_server:seashore_c/robattle max 3600
+bossbar set medabots_server:iceberg_c/robattle max 3600
+bossbar set medabots_server:ruins_out_c/robattle max 3600
+bossbar set medabots_server:laboratory_c/robattle max 3600
+bossbar set medabots_server:boxer/robattle max 3600
+bossbar set medabots_server:grassland_d/robattle max 3600
+bossbar set medabots_server:jungle_d/robattle max 3600
+bossbar set medabots_server:snowfield_d/robattle max 3600
+bossbar set medabots_server:iceberg_d/robattle max 3600
+bossbar set medabots_server:ruins_in_d/robattle max 3600
+bossbar set medabots_server:laboratory_d/robattle max 3600
+bossbar set medabots_server:grassland_e/robattle max 3600
+bossbar set medabots_server:rock_e/robattle max 3600
+bossbar set medabots_server:jungle_e/robattle max 3600
+bossbar set medabots_server:seashore_e/robattle max 3600
+bossbar set medabots_server:snowfield_e/robattle max 3600
+bossbar set medabots_server:iceberg_e/robattle max 3600
+bossbar set medabots_server:ruins_out_e/robattle max 3600
+bossbar set medabots_server:ruins_in_e/robattle max 3600
+bossbar set medabots_server:rock_f/robattle max 3600
+bossbar set medabots_server:grassland_a/robattle color green
+bossbar set medabots_server:rock_a/robattle color green
+bossbar set medabots_server:jungle_a/robattle color green
+bossbar set medabots_server:seashore_a/robattle color green
+bossbar set medabots_server:snowfield_a/robattle color green
+bossbar set medabots_server:iceberg_a/robattle color green
+bossbar set medabots_server:ruins_out_a/robattle color green
+bossbar set medabots_server:ruins_in_a/robattle color green
+bossbar set medabots_server:laboratory_a/robattle color green
+bossbar set medabots_server:grassland_b/robattle color green
+bossbar set medabots_server:rock_b/robattle color green
+bossbar set medabots_server:jungle_b/robattle color green
+bossbar set medabots_server:seashore_b/robattle color green
+bossbar set medabots_server:snowfield_b/robattle color green
+bossbar set medabots_server:iceberg_b/robattle color green
+bossbar set medabots_server:ruins_out_b/robattle color green
+bossbar set medabots_server:ruins_in_b/robattle color green
+bossbar set medabots_server:laboratory_b/robattle color green
+bossbar set medabots_server:park_a/robattle color green
+bossbar set medabots_server:park_b/robattle color green
+bossbar set medabots_server:paradise_a/robattle color green
+bossbar set medabots_server:paradise_b/robattle color green
+bossbar set medabots_server:grassland_c/robattle color green
+bossbar set medabots_server:jungle_c/robattle color green
+bossbar set medabots_server:seashore_c/robattle color green
+bossbar set medabots_server:iceberg_c/robattle color green
+bossbar set medabots_server:ruins_out_c/robattle color green
+bossbar set medabots_server:laboratory_c/robattle color green
+bossbar set medabots_server:boxer/robattle color green
+bossbar set medabots_server:grassland_d/robattle color green
+bossbar set medabots_server:jungle_d/robattle color green
+bossbar set medabots_server:snowfield_d/robattle color green
+bossbar set medabots_server:iceberg_d/robattle color green
+bossbar set medabots_server:ruins_in_d/robattle color green
+bossbar set medabots_server:laboratory_d/robattle color green
+bossbar set medabots_server:grassland_e/robattle color green
+bossbar set medabots_server:rock_e/robattle color green
+bossbar set medabots_server:jungle_e/robattle color green
+bossbar set medabots_server:seashore_e/robattle color green
+bossbar set medabots_server:snowfield_e/robattle color green
+bossbar set medabots_server:iceberg_e/robattle color green
+bossbar set medabots_server:ruins_out_e/robattle color green
+bossbar set medabots_server:ruins_in_e/robattle color green
+bossbar set medabots_server:rock_f/robattle color green
 bossbar set medabots_server:argorok style progress
 bossbar set medabots_server:argorok/mt_battle style progress
 bossbar set medabots_server:argorok/arena style progress

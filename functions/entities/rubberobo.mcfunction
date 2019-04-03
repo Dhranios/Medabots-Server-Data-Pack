@@ -5,7 +5,7 @@ execute unless entity @s[scores={Time=-200..}] run function medabots_server:enti
 execute if entity @s[tag=respawning,scores={Time=0}] run function medabots_server:entities/rubberobo/respawn
 
 # Hurt means turn
-execute if entity @s[nbt={HurtTime:10s}] run function medabots_server:entities/rubberobo/hurt
+execute if entity @s[nbt={HurtTime:9s}] run function medabots_server:entities/rubberobo/hurt
 
 execute align xz run teleport @s[scores={Time=1..40},tag=!respawning,tag=!turn_left,tag=walking,tag=!walk_1_block] ~0.5 ~ ~0.5 ~4.5 ~
 execute align xz run teleport @s[scores={Time=1..40},tag=!respawning,tag=turn_left,tag=walking,tag=!walk_1_block] ~0.5 ~ ~0.5 ~-4.5 ~

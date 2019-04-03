@@ -1,9 +1,20 @@
-# Send a killer message depending on parts
-execute if entity @s[scores={Killer=1..}] run function medabots_server:medaparts/killer
-
 # Block effects
 execute if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
+
+# Effects
+execute if entity @s[scores={AuxiliaryTime=1..}] run function medabots_server:medaparts/auxiliary_charge_effect
+execute if entity @s[scores={BugTime=1..}] run function medabots_server:medaparts/bug_effect
+execute if entity @s[scores={ConfuseTime=1..}] run function medabots_server:medaparts/confuse_effect
+execute if entity @s[scores={DefenseTime=1..}] run function medabots_server:medaparts/defense_shield
+execute if entity @s[scores={FreezeTime=1..}] run function medabots_server:medaparts/freeze_effect
+execute if entity @s[scores={HideTime=1..}] run function medabots_server:medaparts/hide_effect
+execute if entity @s[scores={HoldTime=1..}] run function medabots_server:medaparts/hold_effect
+execute if entity @s[scores={IneffectiveTime=1..}] run function medabots_server:medaparts/ineffective_effect
+execute if entity @s[scores={InfectTime=1..}] run function medabots_server:medaparts/infect_effect
+execute if entity @s[scores={ParalyzeTime=1..}] run function medabots_server:medaparts/paralyze_effect
+execute if entity @s[scores={PerfectGuardTime=1..}] run function medabots_server:medaparts/perfect_guard_effect
+execute if entity @s[scores={ScoutTime=1..}] run function medabots_server:medaparts/scout_effect
 
 # Instant death if you fall in the void
 execute if entity @s[y=-80,dy=79] run tellraw @a {"translate":"medabots_server:death.void","with":[{"selector":"@s"}]}
@@ -58,6 +69,12 @@ function medabots_server:other/pot_breaker
 # Let the combat begin, activate your part
 execute if entity @s[scores={Time=1,Battle=1,UsePart=1..}] run function medabots_server:medaparts/activate_medaparts
 
+# Static flying
+tag @s[scores={Battle=1,UsePart=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] add static_flying 
+tag @s[scores={Battle=1,UsePart=1..},tag=static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] remove static_fly
+tag @s[tag=static_flying] add static_fly
+tag @s[tag=static_flying] remove static_flying
+
 # Check status effects
 execute if entity @s[tag=!checked_effects,nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}}] run function medabots_server:other/check_effects
 tag @s[tag=checked_effects,nbt=!{SelectedItem:{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}}] remove checked_effects
@@ -91,4 +108,4 @@ tag @s[tag=medal_damage] remove medal_damage
 execute if entity @s[nbt={Inventory:[{Slot:100b}]}] run function medabots_server:stage/give_obtained_item/100
 execute if entity @s[nbt={Inventory:[{Slot:101b}]}] run function medabots_server:stage/give_obtained_item/101
 execute if entity @s[nbt={Inventory:[{Slot:102b}]}] run function medabots_server:stage/give_obtained_item/102
-execute if entity @s[nbt={Inventory:[{Slot:103b}]}] run function medabots_server:stage/give_obtained_item/103
+execute if entity @s[nbt={Inventory:[{Slot:103b}]},nbt=!{Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:remove_knockback"}}}]}] run function medabots_server:stage/give_obtained_item/103

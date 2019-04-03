@@ -1,0 +1,2 @@
+execute if entity @a[x=-1376,y=0,z=-205,dx=62,dy=49,dz=86] run tellraw @s {"translate":"medabots_server:message.stage.already_playing","color":"green"}
+execute unless entity @a[x=-1376,y=0,z=-205,dx=62,dy=49,dz=86] run function medabots_server:stage/clean_up/lagdou_ruins_4

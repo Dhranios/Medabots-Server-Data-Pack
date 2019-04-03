@@ -1,3 +1,6 @@
+# Re-give items seen by advancements
+execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run function medabots_server:stage/give_obtained_item
+
 # Leave stage
 scoreboard players set @s[scores={LeaveStage=1}] Battle 0
 scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
@@ -11,7 +14,10 @@ execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run fu
 function medabots_server:other/random_message
 
 # Play dialogs/cutscenes
-function medabots_server:dialog
+function medabots_server:dialog_try
+
+# Make players who did nothing for 1 minute invulnerable
+function medabots_server:other/afk_system
 
 # No cheating!
 function medabots_server:anti_cheating/items
@@ -20,6 +26,9 @@ function medabots_server:anti_cheating/anti_fly_hack
 
 # Functions that run on every player on the server except mods
 execute if entity @s[scores={Moderator=0}] run function medabots_server:any_non_mod
+
+# Send a killer message depending on parts
+execute if entity @s[scores={Killer=1..}] run function medabots_server:medaparts/killer
 
 # Players are medabots
 function medabots_server:any_medabot
@@ -52,9 +61,6 @@ scoreboard players add @s[scores={Death=..-1}] Death 1
 
 # For when you respawn
 execute if entity @s[x=-285,y=55,z=-52,distance=..3,scores={Death=1..}] run function medabots_server:other/respawn
-
-# Make players who did nothing for 1 minute invulnerable
-function medabots_server:other/afk_system
 
 # Books
 function medabots_server:other/how_to

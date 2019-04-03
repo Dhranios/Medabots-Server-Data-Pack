@@ -24,7 +24,7 @@ playsound medabots_server:music.stage.mt_battle.stage music @s[scores={Music=0,M
 scoreboard players set @s[scores={Music=0,MusicType=5}] Music 1095
 playsound medabots_server:music.stage.fly_course music @s[scores={Music=0,MusicType=6}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=6}] Music 1816
-playsound medabots_server:music.stage.plains music @s[scores={Music=0,MusicType=7}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.grassland music @s[scores={Music=0,MusicType=7}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=7}] Music 1000
 playsound medabots_server:music.stage.rock music @s[scores={Music=0,MusicType=8}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=8}] Music 1285
@@ -56,3 +56,9 @@ playsound medabots_server:music.stage.boxer music @s[scores={Music=0,MusicType=2
 scoreboard players set @s[scores={Music=0,MusicType=21}] Music 1666
 playsound medabots_server:music.map_underground music @s[scores={Music=0,MusicType=22}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=22}] Music 1233
+playsound medabots_server:music.stage.pvp.lagdou_ruins3 music @s[scores={Music=0,MusicType=23}] ~ ~ ~ 100
+scoreboard players set @s[scores={Music=0,MusicType=23}] Music 900
+playsound medabots_server:music.stage.pvp.rico_harbor music @s[scores={Music=0,MusicType=24}] -1440 59 -158 5
+scoreboard players set @s[scores={Music=0,MusicType=24}] Music 2440
+playsound medabots_server:music.stage.pvp.rico_harbor_removed music @s[scores={Music=0,MusicType=25}] -1440 59 -158 5
+scoreboard players set @s[scores={Music=0,MusicType=25}] Music 3640

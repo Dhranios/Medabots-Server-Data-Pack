@@ -1,0 +1,5 @@
+tag @s[advancements={medabots_server:wave_1/story_progression={meet_max=true,see_doctor_haru=false,meet_koji=false}},x=-318,y=55,z=-107,distance=..5] add dialog_infinity_see_doctor_haru
+tag @s[advancements={medabots_server:wave_1/story_progression={meet_koji=true,see_jaxy=false,meet_director_tune=false}},x=-362,y=55,z=-120,distance=..5] add dialog_infinity_see_jaxy
+tag @s[advancements={medabots_server:wave_1/story_progression={meet_director_tune=true,see_spyke=false,meet_screws=false}},x=-361,y=55,z=-83,distance=..5] add dialog_infinity_see_spyke
+tag @s[advancements={medabots_server:wave_1/story_progression={meet_director_tune=true,see_sloan=false,meet_screws=false}},x=-302,y=55,z=-14,distance=..5] add dialog_infinity_see_sloan
+tag @s[advancements={medabots_server:wave_1/story_progression={meet_screws=true,vs_spyke_begin=false}},x=-324,y=55,z=5,distance=..10] add dialog_infinity_vs_spyke_begin

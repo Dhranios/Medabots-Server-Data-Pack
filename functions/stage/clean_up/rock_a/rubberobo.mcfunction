@@ -87,6 +87,7 @@ fill -1601 45 -176 -1601 48 -176 minecraft:air
 fill -1636 44 -180 -1573 44 -117 minecraft:water replace minecraft:oak_planks
 fill -1636 44 -180 -1573 44 -117 minecraft:grass_block replace minecraft:dirt
 fill -1636 45 -180 -1573 45 -117 minecraft:air replace minecraft:chest
+bossbar set medabots_server:rock_a/time players
 tag @e[scores={Stage=2},type=!minecraft:player] add dead
-data merge block -1605 52 -180 {Text1:"{\"text\":\"\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"function medabots_server:stage/sign/rock_a/play\"}}"}
+data merge block -1605 52 -180 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/rock_a/play"}}'}
 setblock -1605 53 -182 minecraft:redstone_block

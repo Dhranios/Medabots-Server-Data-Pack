@@ -1,0 +1,77 @@
+scoreboard players operation @s[scores={Dialog=0}] DialogNr > @a[scores={DialogNr=0..}] DialogNr
+scoreboard players add @s[scores={Dialog=0}] DialogNr 1
+scoreboard players add @s Dialog 1
+advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression vs_spyke_begin
+stopsound @s[scores={Dialog=1}] music
+playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 100
+scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] Music 62
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -324 55 5 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["samantha","cutscene"],Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:6176544}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:9123205}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:5530275}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=-324,y=55,z=5,tag=samantha,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -323 55 4 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["sloan","cutscene"],Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2435929}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:2635303}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:15515463}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=-323,y=55,z=4,tag=sloan,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -322 55 6 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["spyke","cutscene"],Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2764847}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:6176294}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:3291004}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=-322,y=55,z=6,tag=spyke,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -329 55 5 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["mugged_kid","cutscene"],Rotation:[-90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2103051}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:11454154}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:70922}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=-329,y=55,z=5,tag=mugged_kid,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute if entity @s[scores={Dialog=1}] as @e[tag=mugged_kid] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=1}] DialogNr at @e[tag=sloan] if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=sloan] DialogNr facing entity @s feet run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=sloan] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=1}] as @e[tag=mugged_kid] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=1}] DialogNr at @e[tag=spyke] if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] DialogNr facing entity @s feet run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] ~ ~ ~ ~ ~
+teleport @s[scores={Dialog=1..712}] -319 55 3.0 60 0
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.1"}]}
+tellraw @s[scores={Dialog=8}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.2"}]}
+tellraw @s[scores={Dialog=96}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.3"}]}
+tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.4"}]}
+tellraw @s[scores={Dialog=152}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.5"}]}
+tellraw @s[scores={Dialog=176}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.6"}]}
+execute if entity @s[scores={Dialog=196}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=196}] DialogNr at @e[tag=samantha] if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=samantha] DialogNr facing entity @s feet run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=samantha] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=216}] as @e[tag=samantha] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=216}] DialogNr at @e[tag=spyke] if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] DialogNr facing entity @s feet run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=232}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.7"}]}
+execute if entity @s[scores={Dialog=240}] as @e[tag=mugged_kid] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=240}] DialogNr at @e[tag=spyke] if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] DialogNr facing entity @s feet run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=240}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.8"}]}
+execute if entity @s[scores={Dialog=260}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=260}] DialogNr at @e[tag=samantha] if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=samantha] DialogNr facing entity @s feet run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=samantha] ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=272}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.9"}]}
+tellraw @s[scores={Dialog=312}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.10"}]}
+execute if entity @s[scores={Dialog=336}] at @e[tag=samantha] facing entity @s feet if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=samantha] DialogNr run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=samantha] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=336}] at @e[tag=sloan] facing entity @s feet if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=sloan] DialogNr run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=sloan] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=336}] at @e[tag=spyke] facing entity @s feet if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] DialogNr run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=336}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.11"}]}
+tellraw @s[scores={Dialog=376}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.12"}]}
+tellraw @s[scores={Dialog=400}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.13"}]}
+tellraw @s[scores={Dialog=480}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.14"}]}
+tellraw @s[scores={Dialog=536}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.15"}]}
+tellraw @s[scores={Dialog=600}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.16"}]}
+tellraw @s[scores={Dialog=624}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.17"}]}
+tellraw @s[scores={Dialog=672}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.18"}]}
+tellraw @s[scores={Dialog=704}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.19"}]}
+execute if entity @s[scores={Dialog=712}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -319 55 5.0
+execute if entity @s[scores={Dialog=713..926}] as @e[tag=spyke] facing entity @s feet if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=713..926}] DialogNr run teleport @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=713..926}] -319 55 3.0 ~ ~
+execute if entity @s[scores={Dialog=713..727}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=728}] at @e[tag=spyke] facing entity @s feet if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] DialogNr run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=spyke] ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=728}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.20"}]}
+tellraw @s[scores={Dialog=779}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.21"}]}
+tellraw @s[scores={Dialog=811}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.22"}]}
+tellraw @s[scores={Dialog=835}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.23"}]}
+tellraw @s[scores={Dialog=851}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.24"}]}
+execute if entity @s[scores={Dialog=867}] as @e[tag=samantha] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -338 55 8
+execute if entity @s[scores={Dialog=868..933}] as @e[tag=samantha] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=867}] as @e[tag=sloan] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -338 55 8
+execute if entity @s[scores={Dialog=868..950}] as @e[tag=sloan] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=867}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -338 55 8
+execute if entity @s[scores={Dialog=868..958}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=934}] as @e[tag=samantha] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -349 55 6
+execute if entity @s[scores={Dialog=935..}] as @e[tag=samantha] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=951}] as @e[tag=sloan] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -349 55 6
+execute if entity @s[scores={Dialog=952..}] as @e[tag=sloan] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=959}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -349 55 6
+execute if entity @s[scores={Dialog=960..}] as @e[tag=spyke] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+stopsound @s[scores={Dialog=927}] music
+scoreboard players set @s[scores={Dialog=927}] MusicType 1
+scoreboard players set @s[scores={Dialog=927}] Music 0
+execute if entity @s[scores={Dialog=927..991}] as @e[tag=mugged_kid] facing entity @s feet if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=927..991}] DialogNr run teleport @a[distance=..0.1,limit=1,sort=nearest,scores={Dialog=927..991}] -319 55 3.0 ~ ~
+tellraw @s[scores={Dialog=927}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.25"}]}
+tag @s[scores={Dialog=991}] remove dialog_infinity_vs_spyke_begin
+scoreboard players reset @s[scores={Dialog=991}] DialogNr
+scoreboard players set @s[scores={Dialog=991}] Dialog 0
+
+playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 100
+scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

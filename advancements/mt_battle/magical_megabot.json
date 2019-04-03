@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_pickaxe",
+            "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:12}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.mt_battle.magical_megabot"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.mt_battle.magical_megabot.description"
+        },
+        "frame": "challenge",
+        "hidden": true
+    },
+    "parent": "medabots_server:mt_battle/medabot_vs_megabot",
+    "criteria": {
+        "victory": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/mt_battle/magical_megabot"
+    }
+}
