@@ -3,8 +3,8 @@ tag @s[type=minecraft:tnt] add hostile
 tag @s[type=minecraft:item] add hostile
 
 # Make everything in battle trigger buttons
-scoreboard players add @s[tag=hostile,type=!minecraft:player] Fly 0
-scoreboard players add @s[tag=hostile,type=!minecraft:player] Float 0
+scoreboard players add @s[tag=hostile] Fly 0
+scoreboard players add @s[tag=hostile] Float 0
 
 # Mark undead so instant damage effect weapons give instant health
 tag @s[type=minecraft:husk] add undead
