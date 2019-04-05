@@ -18,7 +18,10 @@ execute if entity @s[scores={Time=40},tag=enemy_medabot] at @e[sort=nearest,type
 
 # Finish move
 scoreboard players reset @s[scores={Time=50..}] Destroy
-scoreboard players set @s[scores={Time=50..}] Time 1
+scoreboard players set @s[scores={Time=50..}] Time 0
+
+# Increase time by 1
+scoreboard players add @s[scores={Destroy=1..}] Time 1
 
 # Attacked my melee trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

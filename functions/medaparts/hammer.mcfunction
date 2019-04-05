@@ -44,7 +44,7 @@ execute unless entity @s[scores={Hammer=1..}] run scoreboard players reset @s Me
 execute unless entity @s[scores={Hammer=1..}] run scoreboard players set @s Time 0
 
 # Increase time by 1
-scoreboard players add @s Time 1
+scoreboard players add @s[scores={Hammer=1..}] Time 1
 
 # Allow dealing damage
 effect clear @s minecraft:weakness

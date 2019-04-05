@@ -16,4 +16,4 @@ scoreboard players reset @s[scores={Time=30..}] PerfectGuard
 scoreboard players set @s[scores={Time=30..}] Time 0
 
 # Increase time by 1
-scoreboard players add @s Time 1
+scoreboard players add @s[scores={PerfectGuard=1..}] Time 1

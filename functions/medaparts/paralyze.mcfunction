@@ -21,7 +21,7 @@ scoreboard players reset @s[scores={Time=30..}] Paralyze
 scoreboard players set @s[scores={Time=30..}] Time 0
 
 # Increase time by 1
-scoreboard players add @s Time 1
+scoreboard players add @s[scores={Paralyze=1..}] Time 1
 
 # Attacked by melee trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

@@ -37,4 +37,4 @@ execute unless entity @s[scores={Falling=1..}] run scoreboard players reset @s M
 execute unless entity @s[scores={Falling=1..}] run scoreboard players set @s Time 0
 
 # Increase time by 1
-scoreboard players add @s Time 1
+scoreboard players add @s[scores={Falling=1..}] Time 1

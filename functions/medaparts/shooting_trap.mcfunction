@@ -14,4 +14,4 @@ scoreboard players reset @s[scores={Time=30..}] ShootingTrap
 scoreboard players set @s[scores={Time=30..}] Time 0
 
 # Increase time by 1
-scoreboard players add @s Time 1
+scoreboard players add @s[scores={ShootingTrap=1..}] Time 1

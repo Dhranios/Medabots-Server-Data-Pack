@@ -63,7 +63,7 @@ execute unless entity @s[scores={Rifle=1..}] run scoreboard players reset @s Med
 execute unless entity @s[scores={Rifle=1..}] run scoreboard players set @s Time 0
 
 # Increase time by 1
-scoreboard players add @s Time 1
+scoreboard players add @s[scores={Rifle=1..}] Time 1
 
 # Attacked by shooting trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

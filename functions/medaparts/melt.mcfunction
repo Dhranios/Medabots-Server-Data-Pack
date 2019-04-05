@@ -45,7 +45,7 @@ execute unless entity @s[scores={Melt=1..}] run scoreboard players reset @s Meda
 execute unless entity @s[scores={Melt=1..}] run scoreboard players set @s Time 0
 
 # Increase time by 1
-scoreboard players add @s Time 1
+scoreboard players add @s[scores={Melt=1..}] Time 1
 
 # Allow dealing damage
 effect clear @s minecraft:weakness

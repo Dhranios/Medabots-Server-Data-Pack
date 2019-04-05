@@ -14,7 +14,8 @@ data merge entity @s[tag=!walking,tag=!running,tag=!sneak_pos] {Pose:{Head:[0.00
 data merge entity @s[tag=!walking,tag=!running,tag=!sneaking,tag=sneak_pos] {Pose:{Head:[-10.0f,0.0f,0.0f]}}
 data modify entity @s[tag=sneak_pos] Pose.Head[0] set value -10f
 execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{move:"two_legged"}}}]}] run function medabots_server:animations/medabot/walking/two_legged/legs
-execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[nbt=!{ArmorItems:[{tag:{medabots_server:{move:"two_legged"}}}]}] run function medabots_server:animations/medabot/walking/other/legs
+execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{move:"multi_legged"}}}]}] run function medabots_server:animations/medabot/walking/multi_legged/legs
+execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[nbt=!{ArmorItems:[{tag:{medabots_server:{move:"two_legged"}}}]},nbt=!{ArmorItems:[{tag:{medabots_server:{move:"multi_legged"}}}]}] run function medabots_server:animations/medabot/walking/other/legs
 tag @s[tag=sneak_pos] remove sneak_pos
 tag @s[tag=!in_air,tag=sneaking] remove sneaking
 tag @s[tag=!in_air,tag=walking] remove walking

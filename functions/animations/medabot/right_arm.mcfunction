@@ -23,8 +23,8 @@ execute if entity @a[tag=running,tag=this_medabot,limit=1] run tag @s add runnin
 execute if entity @a[tag=sneaking,tag=this_medabot,limit=1] run tag @s add sneaking
 execute if entity @e[nbt={OnGround:0b},tag=this_medabot,limit=1] run tag @s add in_air
 data merge entity @s[tag=!selected,tag=!walking,tag=!running,tag=!sneaking] {Pose:{Head:[0.0f,0.0f,0.001f]}}
-execute at @e[tag=legs,nbt={ArmorItems:[{tag:{medabots_server:{move:"two_legged"}}}]}] if score @e[distance=..0.1,tag=legs,limit=1] MedabotNr = @s MedabotNr run tag @s add two_legged
-execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[tag=!selected,tag=two_legged] run function medabots_server:animations/medabot/walking/two_legged/right_arm
+execute at @e[tag=medabot_model,tag=legs,nbt={ArmorItems:[{tag:{medabots_server:{move:"two_legged"}}}]}] if score @e[tag=medabot_model,tag=legs,limit=1,distance=..0.1,sort=nearest] MedabotNr = @s MedabotNr run tag @s add two_legged
+execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[tag=!selected,tag=two_legged] run function medabots_server:animations/medabot/walking/two_legged/arms
 execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[tag=!selected,tag=!two_legged] run function medabots_server:animations/medabot/walking/other/right_arm
 tag @s[tag=two_legged] remove two_legged
 tag @s[tag=sneak_pos] remove sneak_pos
