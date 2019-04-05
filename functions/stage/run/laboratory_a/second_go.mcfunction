@@ -1,3 +1,4 @@
+execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/laboratory_a/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/laboratory_a/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,scores={Medabot=0..,Battle=1..2,Stage=9},tag=enemy_medabot] run bossbar set medabots_server:laboratory_a/time players @s
@@ -175,33 +176,33 @@ execute if block -1770 44 -319 minecraft:air if block -1770 45 -319 minecraft:ba
 execute if block -1770 44 -319 minecraft:air run setblock -1770 45 -319 minecraft:air
 execute if block -1761 45 -271 minecraft:iron_door[open=true] if block -1754 45 -277 minecraft:iron_door[open=false] if entity @s[x=-1761,y=44,z=-272,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_a/second_go_battle/0
 execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[x=-1761,y=41,z=-276,dx=15,dy=7,dz=15,scores={Stage=9,Medabot=0..,Battle=1..}]
-execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] run title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1761 45 -271 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1761 44 -271 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1754 45 -277 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1754 44 -277 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1752 45 -262 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1752 44 -262 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=mission]
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:laboratory_a/robattle players
+execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] run title @s[scores={BattlingMedabots=1,Death=0}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1761 45 -271 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1,Death=0}] run setblock -1761 44 -271 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1754 45 -277 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1,Death=0}] run setblock -1754 44 -277 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if entity @e[x=-1752.5,y=44,z=-269.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1752 45 -262 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1,Death=0}] run setblock -1752 44 -262 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run kill @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:laboratory_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1799 45 -272 minecraft:iron_door[open=true] if block -1735 45 -281 minecraft:iron_door[open=false] if entity @s[x=-1801,y=44,z=-272,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_a/second_go_battle/1
 execute if entity @e[x=-1799.5,y=44,z=-261.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[x=-1808.5,y=44,z=-270,dx=20,dy=7,dz=20,scores={Stage=9,Medabot=0..,Battle=1..}]
-execute if entity @e[x=-1799.5,y=44,z=-261.5,distance=..0.7,tag=mission,scores={Dialog=81}] run title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @e[x=-1799.5,y=44,z=-261.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1799 45 -272 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1799 44 -272 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if entity @e[x=-1799.5,y=44,z=-261.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1810 45 -291 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1810 44 -291 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=mission]
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:laboratory_a/robattle players
+execute if entity @e[x=-1799.5,y=44,z=-261.5,distance=..0.7,tag=mission,scores={Dialog=81}] run title @s[scores={BattlingMedabots=1,Death=0}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @e[x=-1799.5,y=44,z=-261.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1799 45 -272 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1,Death=0}] run setblock -1799 44 -272 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if entity @e[x=-1799.5,y=44,z=-261.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1810 45 -291 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1,Death=0}] run setblock -1810 44 -291 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run kill @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:laboratory_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1772 45 -313 minecraft:iron_door[open=true] if entity @s[x=-1773.5,y=44,z=-313,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_a/second_go_battle/2
 execute if entity @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1812,y=44,z=-322,dx=80,dy=7,dz=72,scores={Stage=9,Medabot=0..,Battle=1..}]
 execute as @e[x=-1812,y=43,z=-322,dx=80,dy=7,dz=72,type=!minecraft:player] unless entity @s[scores={Stage=9}] run scoreboard players set @s Stage 9
-execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/laboratory_a/second_go
-stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1772 50 -285 14
-scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 22
-scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/wave_1/laboratory_a_second_go
-teleport @s[scores={BattlingMedabots=1}] -1772 50 -285 -180 0
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:laboratory_a/robattle players
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run function medabots_server:stage/clean_up/laboratory_a/second_go
+stopsound @s[scores={BattlingMedabots=1,Death=0}] music
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0}] -1772 50 -285 14
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] MusicType 22
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Music 299
+advancement grant @s[scores={BattlingMedabots=1,Death=0}] only medabots_server:stages/wave_1/laboratory_a_second_go
+teleport @s[scores={BattlingMedabots=1,Death=0}] -1772 50 -285 -180 0
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:laboratory_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1763 44 -271 minecraft:structure_block run setblock -1763 45 -271 minecraft:redstone_block
 execute if block -1754 44 -285 minecraft:structure_block run setblock -1754 45 -285 minecraft:redstone_block

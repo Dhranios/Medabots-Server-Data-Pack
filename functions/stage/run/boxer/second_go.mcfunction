@@ -1,3 +1,4 @@
+execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/boxer/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=29},tag=enemy_medabot] run bossbar set medabots_server:boxer/time players @s

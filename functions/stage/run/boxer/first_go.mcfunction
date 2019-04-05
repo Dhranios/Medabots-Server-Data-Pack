@@ -1,3 +1,6 @@
+execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/boxer/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=29},tag=enemy_medabot] run bossbar set medabots_server:boxer/time players @s
 execute unless entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=29},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:boxer/time value
 execute unless entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=29},tag=enemy_medabot] store result bossbar medabots_server:boxer/time value run scoreboard players operation #temp Time += #1 Constants

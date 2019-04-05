@@ -1,3 +1,4 @@
+execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/snowfield_a/rubberobo
 execute store result score #temp Time run bossbar get medabots_server:snowfield_a/time value
 execute store result bossbar medabots_server:snowfield_a/time value run scoreboard players operation #temp Time += #1 Constants
 scoreboard players reset #temp Time

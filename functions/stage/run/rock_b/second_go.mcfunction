@@ -1,3 +1,4 @@
+execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/rock_b/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/rock_b/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=11},tag=enemy_medabot] run bossbar set medabots_server:rock_b/time players @s
@@ -145,11 +146,11 @@ execute if block -1625 45 -379 minecraft:air run setblock -1625 46 -379 minecraf
 execute if block -1623 45 -380 minecraft:air run setblock -1623 46 -380 minecraft:air
 execute if block -1595 46 -344 minecraft:iron_door[open=true] if block -1583 45 -343 minecraft:iron_door[open=false] if entity @s[x=-1595,y=45,z=-345,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_b/second_go_battle/0
 execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,scores={Stage=11,Medabot=0..,Battle=1..}]
-execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] run title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1595 46 -344 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1595 45 -344 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1583 46 -343 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run setblock -1583 45 -343 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mission]
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:rock_b/robattle players
+execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] run title @s[scores={BattlingMedabots=1,Death=0}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1595 46 -344 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1,Death=0}] run setblock -1595 45 -344 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1583 46 -343 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1,Death=0}] run setblock -1583 45 -343 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run kill @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:rock_b/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1622 46 -359 minecraft:iron_door[open=true] if block -1634 42 -381 minecraft:cobblestone if entity @s[x=-1621,y=45,z=-360,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_b/second_go_battle/1
 execute if entity @e[x=-1614.5,y=45,z=-355.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,scores={Stage=11,Medabot=0..,Battle=1..}]
@@ -161,15 +162,15 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1615 46 -372 minecraft:iron_door[open=true] if entity @s[x=-1615,y=45,z=-373,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_b/second_go_battle/2
 execute if entity @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,scores={Stage=11,Medabot=0..,Battle=1..}]
 execute as @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=11}] run scoreboard players set @s Stage 11
-execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/rock_b/second_go
-stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1603 51 -351 14
-scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/wave_1/rock_b_second_go
-teleport @s[scores={BattlingMedabots=1}] -1603 51 -351 -180 0
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:rock_b/robattle players
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run function medabots_server:stage/clean_up/rock_b/second_go
+stopsound @s[scores={BattlingMedabots=1,Death=0}] music
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0}] -1603 51 -351 14
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] MusicType 1
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Music 299
+advancement grant @s[scores={BattlingMedabots=1,Death=0}] only medabots_server:stages/wave_1/rock_b_second_go
+teleport @s[scores={BattlingMedabots=1,Death=0}] -1603 51 -351 -180 0
+execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:rock_b/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1590 45 -333 minecraft:structure_block run setblock -1590 46 -333 minecraft:redstone_block
 execute if block -1614 45 -332 minecraft:structure_block run setblock -1614 46 -332 minecraft:redstone_block

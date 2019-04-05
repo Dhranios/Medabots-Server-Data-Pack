@@ -10,11 +10,11 @@ execute if block -1984 44 -623 minecraft:lime_wool run tag @e[x=-1981.5,y=45,z=-
 execute if block -1984 44 -623 minecraft:lime_wool run tag @e[x=-2013.5,y=45,z=-624.5,distance=..0.7,tag=spring_wall,tag=!enabled] add enabled
 execute as @e[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48,type=!minecraft:player] unless entity @s[scores={Stage=48}] run scoreboard players set @s Stage 48
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/icefield_battle/spring_walls
-stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1},tag=!story_battle] -1999 51 -608 14
-scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1},tag=!story_battle] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1},tag=!story_battle] Music 299
-teleport @s[scores={BattlingMedabots=1}] -1999 51 -608 -180 0
-tag @s[scores={BattlingMedabots=1}] remove story_battle
+stopsound @s[scores={BattlingMedabots=1,Death=0}] music
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] -1999 51 -608 14
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] MusicType 1
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] Music 299
+teleport @s[scores={BattlingMedabots=1,Death=0}] -1999 51 -608 -180 0
+tag @s[scores={BattlingMedabots=1,Death=0}] remove story_battle
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

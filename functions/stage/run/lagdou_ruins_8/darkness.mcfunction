@@ -2,14 +2,14 @@ execute store result score @s BattlingMedabots if entity @e[scores={Stage=43,Med
 execute if entity @s[scores={BattlingMedabots=2..}] unless entity @e[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1294 39 35 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Rotation:[-145.0f,0.0f]}
 execute as @e[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=43}] run scoreboard players set @s Stage 43
 execute as @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/lagdou_ruins_8/darkness
-stopsound @s[scores={BattlingMedabots=1}] music
-scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
+stopsound @s[scores={BattlingMedabots=1,Death=0}] music
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] MusicType 1
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Music 299
 advancement grant @s[scores={Stage=43,BattlingMedabots=1,Death=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_8_first_go=true}] only medabots_server:stages/wave_1/lagdou_ruins_8_second_go
 advancement grant @s[scores={Stage=43,BattlingMedabots=1,Death=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_8_first_go=false}] only medabots_server:stages/wave_1/lagdou_ruins_8_first_go
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1290 49 29 14
-teleport @s[scores={BattlingMedabots=1}] -1290 49 29 -180 0
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0}] -1290 49 29 14
+teleport @s[scores={BattlingMedabots=1,Death=0}] -1290 49 29 -180 0
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute unless entity @e[x=-1319,y=34,z=-2,dx=59,dy=13,dz=62,tag=bridge_timer,type=minecraft:area_effect_cloud] run fill -1319 38 -2 -1260 38 60 minecraft:water[level=0] replace minecraft:oak_slab
 execute unless entity @e[x=-1319,y=34,z=-2,dx=59,dy=13,dz=62,tag=bridge_timer,type=minecraft:area_effect_cloud] run fill -1319 36 -2 -1260 36 60 minecraft:water[level=0] replace minecraft:oak_slab

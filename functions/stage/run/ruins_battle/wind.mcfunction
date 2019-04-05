@@ -18,11 +18,11 @@ execute if block -1999 44 -576 minecraft:orange_wool run scoreboard players add 
 execute if block -1999 44 -576 minecraft:orange_wool run tag @e[x=-1998.5,y=45,z=-578.5,distance=..0.7,tag=fan,tag=changed] remove changed
 execute as @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42,type=!minecraft:player] unless entity @s[scores={Stage=49}] run scoreboard players set @s Stage 49
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/ruins_battle/wind
-stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1},tag=!story_battle] -1997 51 -560 14
-scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1},tag=!story_battle] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1},tag=!story_battle] Music 299
-teleport @s[scores={BattlingMedabots=1}] -1997 51 -560 -180 0
-tag @s[scores={BattlingMedabots=1}] remove story_battle
+stopsound @s[scores={BattlingMedabots=1,Death=0}] music
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] -1997 51 -560 14
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] MusicType 1
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] Music 299
+teleport @s[scores={BattlingMedabots=1,Death=0}] -1997 51 -560 -180 0
+tag @s[scores={BattlingMedabots=1,Death=0}] remove story_battle
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
