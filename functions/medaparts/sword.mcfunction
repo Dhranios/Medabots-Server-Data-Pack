@@ -1,24 +1,17 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:dorcus_fourvice"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:nin_ninja_ninja_sword"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:nin_ninja_ninja_dagger"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:fancyroll_magicalbit"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:blackstag_blackvice"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:darknut_darksword"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Time=2,Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:zant_usurper_scimitar"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:zant_twilight_scimitar"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:suzumega_hummer_chopper_sword"}}}]}] MedapartType 9
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:master_code_master_edges"}}}]}] MedapartType 10
-scoreboard players set @s[scores={Time=2,Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:metal_general_general_slash"}}}]}] MedapartType 11
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:smilidonad_flexor_sword"}}}]}] MedapartType 12 
-scoreboard players set @s[scores={Time=2,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rokusho_sword"}}}]}] MedapartType 13
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Sword=1}] Time 10
-scoreboard players set @s[scores={Time=2,Sword=3}] Time 20
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:dorcus_fourvice"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:nin_ninja_ninja_sword"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:nin_ninja_ninja_dagger"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:fancyroll_magicalbit"}}}]}] MedapartType 4
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:blackstag_blackvice"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:darknut_darksword"}}}]}] MedapartType 6
+scoreboard players set @s[scores={Time=20,Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:zant_usurper_scimitar"}}}]}] MedapartType 7
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:zant_twilight_scimitar"}}}]}] MedapartType 8
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:suzumega_hummer_chopper_sword"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:master_code_master_edges"}}}]}] MedapartType 10
+scoreboard players set @s[scores={Time=20,Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:metal_general_general_slash"}}}]}] MedapartType 11
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:smilidonad_flexor_sword"}}}]}] MedapartType 12 
+scoreboard players set @s[scores={Time=20,Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rokusho_sword"}}}]}] MedapartType 13
 
 # Give the weapon
 replaceitem entity @s[scores={Sword=1,Time=20..22,Drop=0}] hotbar.1 minecraft:iron_sword{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.sword"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.sword"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.strike"}']},medabots_server:{id:"medabots_server:sword"}}
@@ -54,7 +47,10 @@ scoreboard players reset @s[scores={Sword=3,Time=60..},nbt={Inventory:[{Slot:2b,
 scoreboard players reset @s[scores={Sword=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Sword
 scoreboard players reset @s[scores={Sword=1..,Time=60..},type=!minecraft:player] Sword
 execute unless entity @s[scores={Sword=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Sword=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Sword=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Allow dealing damage
 effect clear @s minecraft:weakness

@@ -1,5 +1,6 @@
 # Set the closest entity who activated a weapon to the killer
-scoreboard players set @e[limit=1,distance=0.1..30,tag=hostile,scores={Killer=0,Time=2..}] Killer 1
+scoreboard players set @e[limit=1,distance=0.1..30,tag=hostile,scores={Killer=0,Time=1..}] Killer 1
+
 # Try again
 tag @s add retry
 function medabots_server:medaparts/death_message

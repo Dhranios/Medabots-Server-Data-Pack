@@ -1,5 +1,7 @@
 scoreboard players operation @s[scores={Dialog=0}] DialogNr > @a[scores={DialogNr=0..}] DialogNr
 scoreboard players add @s[scores={Dialog=0}] DialogNr 1
+execute store result score #temp DialogNr run scoreboard players get @s DialogNr
+execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression see_jaxy
 stopsound @s[scores={Dialog=1}] music
@@ -13,16 +15,16 @@ execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -362 55
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -362 55 -120 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","jaxy","right_arm","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:41,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.potato_insect_ragingskin"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.bug"}','{"italic":false,"color":"white","translate":"medabots_server:move.bug.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"55"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.potato_insect"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.potato_insect_ragingskin.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.potato_insect_ragingskin.model"}']},medabots_server:{stage_item:0b,id:"medabots_server:potato_insect_ragingskin",gender:1b,move:"bug",part:"right_arm",armor:55,power:28,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -362 55 -120 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","jaxy","head","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:41,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.potato_insect_changedress"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.bug"}','{"italic":false,"color":"white","translate":"medabots_server:move.bug.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.more","with":[{"text":"7"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"90"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.potato_insect"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.potato_insect_changedress.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.potato_insect_changedress.model"}']},medabots_server:{stage_item:0b,id:"medabots_server:potato_insect_changedress",gender:1b,move:"bug",part:"head",armor:90,power:25,uses:7,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=1}] positioned -362 55 -120 as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=jaxy] MedabotNr
-execute at @s as @e[x=-362,y=55,z=-120,tag=jaxy,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute at @s as @e[x=-362,y=55,z=-120,tag=jaxy,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.see_jaxy.1"}]}
-execute if entity @s[scores={Dialog=20}] at @e[tag=jaxy,tag=!medabot_model] facing entity @s feet if score @s DialogNr = @e[distance=..0.1,limit=1,sort=nearest,tag=jaxy,tag=!medabot_model] DialogNr run teleport @e[distance=..0.1,limit=1,sort=nearest,tag=jaxy,tag=!medabot_model] ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=40}] as @e[tag=jaxy,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -362 55 -125
-execute if entity @s[scores={Dialog=41}] as @e[tag=jaxy,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
-execute if entity @s[scores={Dialog=41..64}] as @e[tag=jaxy,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=65}] as @e[tag=jaxy,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -371 55 -119
-execute if entity @s[scores={Dialog=66..102}] as @e[tag=jaxy,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=103}] as @e[tag=jaxy,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ facing -378 55 -109
-execute if entity @s[scores={Dialog=104..}] as @e[tag=jaxy,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=20}] at @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=40}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -362 55 -125
+execute if entity @s[scores={Dialog=41}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s add walking
+execute if entity @s[scores={Dialog=41..64}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=65}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -371 55 -119
+execute if entity @s[scores={Dialog=66..102}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=103}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -378 55 -109
+execute if entity @s[scores={Dialog=104..}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=98}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.see_jaxy.2"}]}
 tag @s[scores={Dialog=114}] remove dialog_infinity_see_jaxy
 stopsound @s[scores={Dialog=114}] music
@@ -30,6 +32,8 @@ scoreboard players set @s[scores={Dialog=114}] MusicType 1
 scoreboard players set @s[scores={Dialog=114}] Music 0
 scoreboard players reset @s[scores={Dialog=114}] DialogNr
 scoreboard players set @s[scores={Dialog=114}] Dialog 0
+scoreboard players reset #temp DialogNr
+tag @e[tag=this_dialog] remove this_dialog
 
 playsound medabots_server:music.entity.jaxy music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 1024

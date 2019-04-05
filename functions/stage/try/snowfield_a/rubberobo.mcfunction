@@ -1,2 +1,2 @@
-execute if entity @s[advancements={medabots_server:passes/robo_1=true}] run function medabots_server:stage/create/snowfield_a/rubberobo
-execute unless entity @s[advancements={medabots_server:passes/robo_1=true}] run tellraw @s {"translate":"medabots_server:message.stage.not_matching_requirement","extra":[{"translate":"medabots_server:advancements.passes.robo_1"}]}
+execute if entity @s[advancements={medabots_server:special_items/passes/robo_1=true}] run function medabots_server:stage/create/snowfield_a/rubberobo
+execute unless entity @s[advancements={medabots_server:special_items/passes/robo_1=true}] run tellraw @s {"translate":"medabots_server:message.stage.not_matching_requirement","extra":[{"translate":"medabots_server:advancements.special_items.passes.robo_1"}]}

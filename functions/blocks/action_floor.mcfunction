@@ -2,15 +2,19 @@
 execute unless entity @s[scores={Time=-100..}] run function medabots_server:blocks/action_floor/scores
 
 # Only activate when nothing's on top, and the current entity's gone
-execute at @a[scores={Battle=2}] if score @s Stage = @a[distance=..0.1,limit=1,sort=nearest,scores={Battle=2}] Stage run tag @s add no_spawning
-execute if entity @s[tag=!no_spawning] unless entity @e[distance=..0.7,tag=!action_floor,type=!minecraft:item] if block ~ ~ ~ minecraft:air as @e[tag=!action_floor] if score @s ActionFloorNr = @e[distance=..0.1,tag=action_floor,limit=1] ActionFloorNr run scoreboard players set @e[distance=..0.1,tag=action_floor,limit=1,scores={Time=0},tag=enabled] Time -1
+execute store result score #temp Stage run scoreboard players get @s Stage
+execute store result score #temp ActionFloorNr run scoreboard players get @s ActionFloorNr
+execute at @a[scores={Battle=2}] if score @s Stage = #temp Stage run tag @s add no_spawning
+execute as @e[tag=!action_floor] if score @s ActionFloorNr = #temp ActionFloorNr run scoreboard players set @e[distance=..0.1,tag=action_floor,limit=1,scores={Time=0},tag=enabled] Time -1
 execute unless block ~ ~ ~ minecraft:air run scoreboard players set @s[scores={Time=0}] Time -1
 execute if entity @e[distance=..0.7,tag=!action_floor,type=!minecraft:item] run scoreboard players set @s[scores={Time=0}] Time -1
 scoreboard players set @s[scores={Time=0},tag=!enabled] Time -1
 scoreboard players set @s[scores={Time=0},tag=no_spawning] Time -1
 scoreboard players add @s[scores={Time=0..}] Time 1
-scoreboard players add @s[scores={Time=..-1}] Time 1
+scoreboard players add @s[scores={Time=..-1},tag=!no_spawning] Time 1
 tag @s[tag=no_spawning] remove no_spawning
+scoreboard players reset #temp Stage
+scoreboard players reset #temp ActionFloorNr
 
 # Sound!
 execute if entity @s[scores={Time=1}] run playsound medabots_server:block.action_floor block @a ~ ~ ~ 1

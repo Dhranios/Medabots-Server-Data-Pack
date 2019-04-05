@@ -1,15 +1,8 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Falling=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:baroncastle_gatemonarch"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Falling=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:magicalcard_onetwotree"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Falling=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:aimflash_strobe"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Falling=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:baroncastle_king_balcony"}}}]}] MedapartType 4
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Falling=1}] Time 10
-scoreboard players set @s[scores={Time=2,Falling=3}] Time 20
+scoreboard players set @s[scores={Time=20,Falling=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:baroncastle_gatemonarch"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Falling=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:magicalcard_onetwotree"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Falling=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:aimflash_strobe"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Falling=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:baroncastle_king_balcony"}}}]}] MedapartType 4
 
 # Give the weapon
 replaceitem entity @s[scores={Falling=1,Time=20..22,Drop=0},tag=!ally_medabot,tag=!enemy_medabot] hotbar.1 minecraft:yellow_wool{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.falling"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.falling"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.drop"}']},medabots_server:{id:"medabots_server:falling",team:"none"}}
@@ -41,4 +34,7 @@ scoreboard players reset @s[scores={Falling=2,Time=60..},nbt={Inventory:[{Slot:3
 scoreboard players reset @s[scores={Falling=3,Time=60..},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"head"}}}]}] Falling
 scoreboard players reset @s[scores={Falling=1..,Time=60..},type=!minecraft:player] falling
 execute unless entity @s[scores={Falling=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Falling=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Falling=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1

@@ -74,7 +74,7 @@ scoreboard players set @s Death 0
 scoreboard players set @s Battle 0
 scoreboard players set @s UsePart 0
 scoreboard players set @s Trading 0
-scoreboard players set @s Time 1
+scoreboard players set @s Time 0
 scoreboard players set @s Medaforce 0
 scoreboard players set @s MedaforceTimer 0
 scoreboard players set @s Charge 0

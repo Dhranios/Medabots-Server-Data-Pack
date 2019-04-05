@@ -1,15 +1,8 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Sacrifice=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:bezelga_helming"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Sacrifice=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:bezelga_helmight"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Sacrifice=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:abyss_greater_pro_fence"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Sacrifice=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:abyss_greater_burst"}}}]}] MedapartType 4
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Sacrifice=1}] Time 10
-scoreboard players set @s[scores={Time=2,Sacrifice=3}] Time 20
+scoreboard players set @s[scores={Time=20,Sacrifice=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:bezelga_helming"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Sacrifice=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:bezelga_helmight"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Sacrifice=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:abyss_greater_pro_fence"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Sacrifice=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:abyss_greater_burst"}}}]}] MedapartType 4
 
 # Give the weapon
 replaceitem entity @s[scores={Time=20}] weapon.offhand minecraft:tipped_arrow{Potion:"minecraft:water",CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bullet"}'},CustomPotionEffects:[{Id:18b,Amplifier:7b,Duration:0,Ambient:1b,ShowParticles:0b}],medabots_server:{id:"medabots_server:bullet"}}
@@ -39,7 +32,10 @@ scoreboard players reset @s[scores={Sacrifice=3,Time=60..,RightArmArmor=..0},nbt
 scoreboard players reset @s[scores={Sacrifice=1,Time=60..,LeftArmArmor=..0},type=!minecraft:player] Sacrifice
 scoreboard players reset @s[scores={Sacrifice=3,Time=60..,RightArmArmor=..0},type=!minecraft:player] Sacrifice
 execute unless entity @s[scores={Sacrifice=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Sacrifice=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Sacrifice=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Attacked by shooting trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

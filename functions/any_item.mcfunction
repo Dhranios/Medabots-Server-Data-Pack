@@ -4,7 +4,7 @@ tag @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{id:"medabots_server
 tag @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{id:"medabots_server:damage_ball"}}}}] add damage_ball
 execute if entity @s[tag=break] run function medabots_server:medaparts/break_attack
 execute if entity @s[tag=falling] run function medabots_server:medaparts/falling_attack
-execute if entity @s[tag=damage_ball] run function medabots_server:medaparts/damage_ball
+execute if entity @s[tag=damage_ball] run function medabots_server:medaparts/damage_ball_attack
 
 # Kill items that get placed in the inventory anyway, as well as teleport dropped items
 function medabots_server:other/kill_items

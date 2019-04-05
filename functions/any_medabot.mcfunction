@@ -11,9 +11,6 @@ effect give @s[tag=!undead,scores={Damage=1..}] minecraft:instant_health 1 0 tru
 effect give @s[tag=undead,scores={Damage=1..}] minecraft:instant_damage 1 0 true
 data merge entity @s[type=!minecraft:player] {AbsorptionAmount:100.0f}
 
-# In combat
-execute if entity @s[tag=hostile] run function medabots_server:any_hostile_medabot
-
 # Combat
 execute if entity @s[scores={AntiFly=1..}] run function medabots_server:medaparts/anti_fly
 execute if entity @s[scores={AntiTank=1..}] run function medabots_server:medaparts/anti_tank
@@ -36,7 +33,17 @@ execute if entity @s[scores={Hold=1..}] run function medabots_server:medaparts/h
 execute if entity @s[scores={Ineffective=1..}] run function medabots_server:medaparts/ineffective
 execute if entity @s[scores={Infect=1..}] run function medabots_server:medaparts/infect
 execute if entity @s[scores={Laser=1..}] run function medabots_server:medaparts/laser
-execute if entity @s[scores={Medaforce=..-1}] run function medabots_server:medaparts/medaforce
+execute if entity @s[scores={Medaforce=-2}] run function medabots_server:medaparts/spiral_bolt
+execute if entity @s[scores={Medaforce=-3}] run function medabots_server:medaparts/ultra_shot
+execute if entity @s[scores={Medaforce=-4}] run function medabots_server:medaparts/total_recovery
+execute if entity @s[scores={Medaforce=-5}] run function medabots_server:medaparts/chaos
+execute if entity @s[scores={Medaforce=-6}] run function medabots_server:medaparts/full_body_up
+execute if entity @s[scores={Medaforce=-7}] run function medabots_server:medaparts/attack_trap
+execute if entity @s[scores={Medaforce=-8}] run function medabots_server:medaparts/question
+execute if entity @s[scores={Medaforce=-9}] run function medabots_server:medaparts/damage_ball
+execute if entity @s[scores={Medaforce=-10}] run function medabots_server:medaparts/iron_wall
+execute if entity @s[scores={Medaforce=-11}] run function medabots_server:medaparts/life_drain
+execute if entity @s[scores={Medaforce=-12}] run function medabots_server:medaparts/destroyer
 execute if entity @s[scores={MedaforceControl=1..}] run function medabots_server:medaparts/medaforce_control
 execute if entity @s[scores={MeleeTrap=1..}] run function medabots_server:medaparts/melee_trap
 execute if entity @s[scores={Melt=1..}] run function medabots_server:medaparts/melt
@@ -55,3 +62,6 @@ execute if entity @s[scores={ShootingTrap=1..}] run function medabots_server:med
 execute if entity @s[scores={StatusClear=1..}] run function medabots_server:medaparts/status_clear
 execute if entity @s[scores={Sword=1..}] run function medabots_server:medaparts/sword
 execute if entity @s[scores={Wave=1..}] run function medabots_server:medaparts/wave
+
+# In combat
+execute if entity @s[tag=hostile] run function medabots_server:any_hostile_medabot

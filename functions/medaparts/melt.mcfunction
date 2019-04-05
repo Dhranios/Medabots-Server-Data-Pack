@@ -1,22 +1,15 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part was activated
-scoreboard players set @s[scores={Time=2,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:hellphoenix_flame_gun"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:helphoenix_blast_gun"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Melt=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:hellphoenix_fire_gun"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:poison_scorpi_scorpion_rat"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Time=2,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:poison_scorpi_scorpion_dog"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Time=2,Melt=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:poison_scorpi_scorpion_cat"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Time=2,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:flame_tisara_sala_arm"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Time=2,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:flame_tisara_sala_head"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Time=2,Melt=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:flame_tisara_sala_hand"}}}]}] MedapartType 9
-scoreboard players set @s[scores={Time=2,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_breathfire"}}}]}] MedapartType 10
-scoreboard players set @s[scores={Time=2,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:sphere_doomers_fire_doomer"}}}]}] MedapartType 11
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Melt=1}] Time 10
-scoreboard players set @s[scores={Time=2,Melt=3}] Time 20
+scoreboard players set @s[scores={Time=20,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:hellphoenix_flame_gun"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:helphoenix_blast_gun"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Melt=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:hellphoenix_fire_gun"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:poison_scorpi_scorpion_rat"}}}]}] MedapartType 4
+scoreboard players set @s[scores={Time=20,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:poison_scorpi_scorpion_dog"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Time=20,Melt=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:poison_scorpi_scorpion_cat"}}}]}] MedapartType 6
+scoreboard players set @s[scores={Time=20,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:flame_tisara_sala_arm"}}}]}] MedapartType 7
+scoreboard players set @s[scores={Time=20,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:flame_tisara_sala_head"}}}]}] MedapartType 8
+scoreboard players set @s[scores={Time=20,Melt=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:flame_tisara_sala_hand"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Time=20,Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_breathfire"}}}]}] MedapartType 10
+scoreboard players set @s[scores={Time=20,Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:sphere_doomers_fire_doomer"}}}]}] MedapartType 11
 
 # Give the weapon
 replaceitem entity @s[scores={Melt=1,Time=20..22,Drop=0}] hotbar.1 minecraft:flint_and_steel{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.melt"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melt"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.strike"}']},Enchantments:[{id:"minecraft:fire_aspect",lvl:1s}],medabots_server:{id:"medabots_server:melt"}}
@@ -49,7 +42,10 @@ scoreboard players reset @s[scores={Melt=3,Time=60..},nbt={Inventory:[{Slot:2b,t
 scoreboard players reset @s[scores={Melt=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Melt
 scoreboard players reset @s[scores={Melt=1..,Time=60..},type=!minecraft:player] Melt
 execute unless entity @s[scores={Melt=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Melt=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Melt=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Allow dealing damage
 effect clear @s minecraft:weakness

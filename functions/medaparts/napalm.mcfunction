@@ -1,17 +1,10 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Napalm=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burncapsule"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Napalm=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burn_head"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Napalm=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burntube"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Napalm=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:king_pharaoh_grand_bomb"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Time=2,Napalm=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:fancyroll_let_bomb"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Time=2,Napalm=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:metal_general_produce"}}}]}] MedapartType 6
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Napalm=1}] Time 10
-scoreboard players set @s[scores={Time=2,Napalm=3}] Time 20
+scoreboard players set @s[scores={Time=20,Napalm=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burncapsule"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Napalm=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burn_head"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Napalm=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burntube"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Napalm=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:king_pharaoh_grand_bomb"}}}]}] MedapartType 4
+scoreboard players set @s[scores={Time=20,Napalm=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:fancyroll_let_bomb"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Time=20,Napalm=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:metal_general_produce"}}}]}] MedapartType 6
 
 # Give the weapon
 replaceitem entity @s[scores={Time=20}] weapon.offhand minecraft:tipped_arrow{Potion:"minecraft:water",CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bullet"}'},CustomPotionEffects:[{Id:18b,Amplifier:1b,Duration:0,Ambient:1b,ShowParticles:0b}],medabots_server:{id:"medabots_server:bullet"}}
@@ -43,7 +36,10 @@ scoreboard players reset @s[scores={Napalm=3,Time=60..},nbt={Inventory:[{Slot:2b
 scoreboard players reset @s[scores={Napalm=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Napalm
 scoreboard players reset @s[scores={Napalm=1..,Time=60..},type=!minecraft:player] Napalm
 execute unless entity @s[scores={Napalm=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Napalm=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Napalm=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Attacked by shooting trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

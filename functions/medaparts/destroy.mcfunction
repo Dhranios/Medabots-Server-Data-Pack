@@ -1,10 +1,3 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Destroy=1}] Time 10
-scoreboard players set @s[scores={Time=2,Destroy=3}] Time 20
-
 # Show particles
 execute if entity @s[scores={Time=22}] run particle minecraft:smoke ~ ~1 ~ 1 0 1 1 10
 

@@ -1,10 +1,3 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Wave=1}] Time 10
-scoreboard players set @s[scores={Time=2,Wave=3}] Time 20
-
 # Prevent self-damaging
 effect give @s[scores={Time=25}] minecraft:resistance 1 5 true
 
@@ -29,7 +22,10 @@ scoreboard players remove @s[scores={Wave=2,Time=26}] HeadUses 1
 
 # Finish the move
 scoreboard players reset @s[scores={Time=30..}] Wave
-scoreboard players set @s[scores={Time=30..}] Time 1
+scoreboard players set @s[scores={Time=30..}] Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Prevent knockback from this attack
 replaceitem entity @s armor.head minecraft:stone_button{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.remove_knockback"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.remove_knockback.wave"}']},AttributeModifiers:[{AttributeName:"generic.knockbackResistance",Name:"generic.knockbackResistance",Amount:1.0f,Operation:0,UUIDMost:93175l,UUIDLeast:132111l,Slot:"head"}],Enchantments:[{id:"minecraft:binding_curse",lvl:1s}],medabots_server:{id:"medabots_server:remove_knockback"}}

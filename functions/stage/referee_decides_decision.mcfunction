@@ -1,6 +1,6 @@
-execute if score @s HeadArmorPer >= @e[distance=..0.1,tag=enemy_medabot,limit=1] HeadArmorPer run scoreboard players set @e[distance=..0.1,tag=enemy_medabot,limit=1] Battle 0
-execute if score @s HeadArmorPer < @e[distance=..0.1,tag=enemy_medabot,limit=1] HeadArmorPer run scoreboard players set @s Battle 0
+execute if score @s HeadArmorPer >= @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] HeadArmorPer run scoreboard players set @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] Battle 0
+execute if score @s HeadArmorPer < @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] HeadArmorPer run scoreboard players set @s Battle 0
 execute if entity @s[scores={Battle=0}] run title @s title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@e[distance=..0.1,tag=enemy_medabot,limit=1]"}]}
-execute if entity @s[scores={Battle=0}] run title @a[distance=..0.1,tag=enemy_medabot,limit=1] title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@s"}]}
+execute if entity @s[scores={Battle=0}] run title @a[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@s"}]}
 execute if entity @s[scores={Battle=1..}] run title @s title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@s"}]}
-execute if entity @s[scores={Battle=1..}] as @a[distance=..0.1,tag=enemy_medabot,limit=1] run title @s title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@s"}]}
+execute if entity @s[scores={Battle=1..}] as @a[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] run title @s title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@s"}]}

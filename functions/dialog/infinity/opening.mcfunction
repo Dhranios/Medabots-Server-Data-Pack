@@ -1,5 +1,7 @@
 scoreboard players operation @s[scores={Dialog=0}] DialogNr > @a[scores={DialogNr=0..}] DialogNr
 scoreboard players add @s[scores={Dialog=0}] DialogNr 1
+execute store result score #temp DialogNr run scoreboard players get @s DialogNr
+execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression opening
 stopsound @s[scores={Dialog=1}] music
@@ -15,7 +17,7 @@ execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -53 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","brass","right_arm","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:39,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.sailor_multi_pateri_vulcan"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.gatling"}','{"italic":false,"color":"white","translate":"medabots_server:move.gatling.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"35"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.sailor_multi"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.sailor_multi_pateri_vulcan.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.sailor_multi_pateri_vulcan.model"}']},medabots_server:{id:"medabots_server:sailor_multi_pateri_vulcan",gender:1b,move:"gatling",part:"right_arm",armor:35,power:20,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -53 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","brass","head","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:39,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.sailor_multi_variablehair"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.scout"}','{"italic":false,"color":"white","translate":"medabots_server:move.scout.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.more","with":[{"text":"7"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"75"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.sailor_multi"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.sailor_multi_variablehair.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.sailor_multi_variablehair.model"}']},medabots_server:{id:"medabots_server:sailor_multi_variablehair",gender:1b,move:"scout",part:"head",armor:75,power:50,uses:7,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=1}] positioned -305 55 -53 as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=brass] MedabotNr
-execute at @s as @e[x=-305,y=55,z=-53,tag=brass,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute at @s as @e[x=-305,y=55,z=-53,tag=brass,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -284 55 -51 {Duration:1000000,Tags:["cutscene","metabee"],Rotation:[90.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-284,y=55,z=-51,distance=..1,tag=metabee] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[x=-284,y=55,z=-51,distance=..1,tag=metabee] MedabotNr 1
@@ -24,18 +26,18 @@ execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -284 55
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -284 55 -51 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","metabee","right_arm","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_fuser"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.rifle"}','{"italic":false,"color":"white","translate":"medabots_server:move.rifle.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.saikachis"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_fuser.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_fuser.model"}']},medabots_server:{id:"medabots_server:saikachis_fuser",gender:0b,move:"rifle",part:"right_arm",armor:45,power:30,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -284 55 -51 {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","metabee","head","medabot_model"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_balister"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.missile"}','{"italic":false,"color":"white","translate":"medabots_server:move.missile.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.more","with":[{"text":"6"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"75"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.saikachis"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_balister.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_balister.model"}']},medabots_server:{id:"medabots_server:saikachis_balister",gender:0b,move:"missile",part:"head",armor:75,power:28,uses:6,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=1}] positioned -284 55 -51 as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=metabee] MedabotNr
-execute at @s as @e[x=-284,y=55,z=-51,tag=metabee,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute at @s as @e[x=-284,y=55,z=-51,tag=metabee,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -305 55 -51 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["erika","cutscene"],Rotation:[-90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:6046341}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:14574460}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:10272473}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-305,y=55,z=-51,tag=erika,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute at @s as @e[x=-305,y=55,z=-51,tag=erika,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -343 55 -52 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["select_corps","cutscene"],Rotation:[-90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2437407}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:13948116}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:10473420}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-343,y=55,z=-52,tag=select_corps,distance=..1] run scoreboard players operation @s DialogNr = @a[distance=..0.1,limit=1,scores={Dialog=1}] DialogNr
+execute at @s as @e[x=-343,y=55,z=-52,tag=select_corps,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.1"}]}
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.2"}]}
-execute if entity @s[scores={Dialog=40}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
-execute if entity @s[scores={Dialog=40..129}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
-execute if entity @s[scores={Dialog=58}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~-0.5 ~
-execute if entity @s[scores={Dialog=88}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~0.5 ~
-execute if entity @s[scores={Dialog=129}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
+execute if entity @s[scores={Dialog=40}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s add walking
+execute if entity @s[scores={Dialog=40..129}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=58}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.5 ~
+execute if entity @s[scores={Dialog=88}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~0.5 ~
+execute if entity @s[scores={Dialog=129}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s remove walking
 tellraw @s[scores={Dialog=120}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.3"}]}
 tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.4"}]}
 tellraw @s[scores={Dialog=264}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.5"}]}
@@ -46,8 +48,8 @@ tellraw @s[scores={Dialog=472}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=512}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.10"}]}
 teleport @s[scores={Dialog=592..681}] ~-0.2125 ~ ~
 teleport @s[scores={Dialog=641}] ~ ~0.5 ~
-execute if entity @s[scores={Dialog=682}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
-execute if entity @s[scores={Dialog=682}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -135 0
+execute if entity @s[scores={Dialog=682}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
+execute if entity @s[scores={Dialog=682}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -135 0
 teleport @s[scores={Dialog=682..2850}] -303 55 -53
 tellraw @s[scores={Dialog=682}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.11"}]}
 tellraw @s[scores={Dialog=714}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.12","with":[{"selector":"@s"}]}]}
@@ -103,16 +105,16 @@ tellraw @s[scores={Dialog=2706}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2786}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.62"}]}
 tellraw @s[scores={Dialog=2810}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.63"}]}
 tellraw @s[scores={Dialog=2850}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.64"}]}
-execute if entity @s[scores={Dialog=2858}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=2858}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=2858}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=2859}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
-execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
-execute if entity @s[scores={Dialog=2944}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
-execute if entity @s[scores={Dialog=2859}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
-execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
-execute if entity @s[scores={Dialog=2944}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
-execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=2858}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=2858}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=2858}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=2859}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s add walking
+execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=2944}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s remove walking
+execute if entity @s[scores={Dialog=2859}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s add walking
+execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=2944}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s remove walking
+execute if entity @s[scores={Dialog=2859..2944}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~-0.2125 ~ ~
 teleport @s[scores={Dialog=2859..2944}] ~-0.2125 ~ ~
 teleport @s[scores={Dialog=2945..3935}] -321 55 -53
 tellraw @s[scores={Dialog=2943}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.65"}]}
@@ -126,35 +128,35 @@ tellraw @s[scores={Dialog=3255}] {"translate":"chat.type.text","with":[{"transla
 playsound medabots_server:entity.max.photo neutral @s[scores={Dialog=3311}] ~ ~ ~ 1000
 tellraw @s[scores={Dialog=3331}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.73"}]}
 tellraw @s[scores={Dialog=3357}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.74"}]}
-execute if entity @s[scores={Dialog=3363}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -135 0
+execute if entity @s[scores={Dialog=3363}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -135 0
 tellraw @s[scores={Dialog=3363}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.75"}]}
 tellraw @s[scores={Dialog=3379}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.76"}]}
 tellraw @s[scores={Dialog=3451}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.77"}]}
 tellraw @s[scores={Dialog=3483}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.78"}]}
-execute if entity @s[scores={Dialog=3363}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
+execute if entity @s[scores={Dialog=3363}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 tellraw @s[scores={Dialog=3603}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.79"}]}
-execute if entity @s[scores={Dialog=3627}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 0 0
+execute if entity @s[scores={Dialog=3627}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 tellraw @s[scores={Dialog=3627}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.opening.80"}]}
-execute if entity @s[scores={Dialog=3651}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 132 0
-execute if entity @s[scores={Dialog=3651}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 130 0
-execute if entity @s[scores={Dialog=3652..3842}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=3652}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s add walking
-execute if entity @s[scores={Dialog=3652..3842}] as @e[tag=brass] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=3842}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s remove walking
-execute if entity @s[scores={Dialog=3843}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s -407 55 -120 0 0
-execute if entity @s[scores={Dialog=3843}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s -405 55 -120 0 0
-execute if entity @s[scores={Dialog=3711}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
+execute if entity @s[scores={Dialog=3651}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 132 0
+execute if entity @s[scores={Dialog=3651}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 130 0
+execute if entity @s[scores={Dialog=3652..3842}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=3652}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking
+execute if entity @s[scores={Dialog=3652..3842}] as @e[tag=brass,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=3842}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s remove walking
+execute if entity @s[scores={Dialog=3843}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s -407 55 -120 0 0
+execute if entity @s[scores={Dialog=3843}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s -405 55 -120 0 0
+execute if entity @s[scores={Dialog=3711}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 tellraw @s[scores={Dialog=3711}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.81"}]}
 tellraw @s[scores={Dialog=3743}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.82"}]}
 tellraw @s[scores={Dialog=3823}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.83"}]}
 tellraw @s[scores={Dialog=3855}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.84"}]}
 tellraw @s[scores={Dialog=3879}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.85"}]}
-execute if entity @s[scores={Dialog=3935}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=3936}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s add walking
-execute if entity @s[scores={Dialog=3936..4024}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~-0.2125 ~ ~
-execute if entity @s[scores={Dialog=4024}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr run tag @s remove walking
+execute if entity @s[scores={Dialog=3935}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=3936}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s add walking
+execute if entity @s[scores={Dialog=3936..4024}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.2125 ~ ~
+execute if entity @s[scores={Dialog=4024}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] run tag @s remove walking
 teleport @s[scores={Dialog=3936..4024}] ~-0.2125 ~ ~
-execute if entity @s[scores={Dialog=4025}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 108 0
+execute if entity @s[scores={Dialog=4025}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 108 0
 teleport @s[scores={Dialog=4025..5164}] -340 55 -53
 stopsound @s[scores={Dialog=4025}] music
 scoreboard players set @s[scores={Dialog=4025}] Music 70
@@ -181,14 +183,14 @@ advancement grant @s[scores={Dialog=4756}] only medabots_server:special_items/pa
 tellraw @s[scores={Dialog=4756}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.104"}]}
 tellraw @s[scores={Dialog=4764}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.105"}]}
 tellraw @s[scores={Dialog=4836}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.106"}]}
-execute if entity @s[scores={Dialog=4900}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ -180 0
+execute if entity @s[scores={Dialog=4900}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 tellraw @s[scores={Dialog=4900}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.107","with":[{"selector":"@s"}]}]}
-execute if entity @s[scores={Dialog=4950}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 108 0
+execute if entity @s[scores={Dialog=4950}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 108 0
 tellraw @s[scores={Dialog=4940}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.108"}]}
 tellraw @s[scores={Dialog=5004}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.109"}]}
 tellraw @s[scores={Dialog=5044}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.110"}]}
 tellraw @s[scores={Dialog=5092}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.111"}]}
-execute if entity @s[scores={Dialog=5164}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s -407 55 -117 -180 0
+execute if entity @s[scores={Dialog=5164}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s -407 55 -117 -180 0
 teleport @s[scores={Dialog=5164}] -405 55 -117 -180 0
 teleport @s[scores={Dialog=5165..}] -405 55 -117
 stopsound @s[scores={Dialog=5164}] music
@@ -202,20 +204,20 @@ tellraw @s[scores={Dialog=5308}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=5348}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.118"}]}
 tellraw @s[scores={Dialog=5372}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.119"}]}
 tellraw @s[scores={Dialog=5396}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.120"}]}
-execute if entity @s[scores={Dialog=5436}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 70 0
-execute if entity @s[scores={Dialog=5436}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 80 0
-execute if entity @s[scores={Dialog=5436}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 110 0
-execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=5437}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s add walking
-execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=5437}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run tag @s add walking
-execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=5460}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=5460}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=5460}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=erika] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=brass,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=metabee,tag=!medabot_model] if score @s DialogNr = @a[distance=..0.1,limit=1,sort=nearest] DialogNr at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5436}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 70 0
+execute if entity @s[scores={Dialog=5436}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 80 0
+execute if entity @s[scores={Dialog=5436}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 110 0
+execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5437}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking
+execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5437}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking
+execute if entity @s[scores={Dialog=5437..5459}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5460}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=5460}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=5460}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
+execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=5444}] run setblock -412 53 -118 minecraft:redstone_block
 execute if entity @s[scores={Dialog=5472}] run setblock -412 53 -118 minecraft:air
 tag @s[scores={Dialog=5472}] remove dialog_infinity_opening
@@ -224,6 +226,8 @@ scoreboard players set @s[scores={Dialog=5472}] MusicType 1
 scoreboard players set @s[scores={Dialog=5472}] Music 0
 scoreboard players reset @s[scores={Dialog=5472}] DialogNr
 scoreboard players set @s[scores={Dialog=5472}] Dialog 0
+scoreboard players reset #temp DialogNr
+tag @e[tag=this_dialog] remove this_dialog
 
 playsound medabots_server:music.intro music @s[scores={Music=0,MusicType=-1,Dialog=..4024}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..4024}] Music 915

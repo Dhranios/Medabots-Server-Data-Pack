@@ -1,21 +1,14 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:dorcus_intensebeat"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_strike_hit"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Hammer=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_crab_hit"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Hammer=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:boarbooster_boartusk"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Time=2,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:blackstag_blackbeat"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Time=2,Hammer=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:amelia_silver_axe"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Time=2,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:ashton_ash_buster"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Time=2,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:smilidonad_straw_hammer"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Time=2,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:rokusho_pipo_hammer"}}}]}] MedapartType 9
-scoreboard players set @s[scores={Time=2,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:suzumega_hummer_light_hammer"}}}]}] MedapartType 10
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Hammer=1}] Time 10
-scoreboard players set @s[scores={Time=2,Hammer=3}] Time 20
+scoreboard players set @s[scores={Time=20,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:dorcus_intensebeat"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_strike_hit"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Hammer=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_crab_hit"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Hammer=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:boarbooster_boartusk"}}}]}] MedapartType 4
+scoreboard players set @s[scores={Time=20,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:blackstag_blackbeat"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Time=20,Hammer=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:amelia_silver_axe"}}}]}] MedapartType 6
+scoreboard players set @s[scores={Time=20,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:ashton_ash_buster"}}}]}] MedapartType 7
+scoreboard players set @s[scores={Time=20,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:smilidonad_straw_hammer"}}}]}] MedapartType 8
+scoreboard players set @s[scores={Time=20,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:rokusho_pipo_hammer"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Time=20,Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:suzumega_hummer_light_hammer"}}}]}] MedapartType 10
 
 # Give the weapon
 replaceitem entity @s[scores={Hammer=1,Time=20..22,Drop=0}] hotbar.1 minecraft:iron_axe{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.strike"}']},medabots_server:{id:"medabots_server:hammer"}}
@@ -48,7 +41,10 @@ scoreboard players reset @s[scores={Hammer=3,Time=60..},nbt={Inventory:[{Slot:2b
 scoreboard players reset @s[scores={Hammer=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Hammer
 scoreboard players reset @s[scores={Hammer=1..,Time=60..},type=!minecraft:player] Hammer
 execute unless entity @s[scores={Hammer=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Hammer=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Hammer=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Allow dealing damage
 effect clear @s minecraft:weakness

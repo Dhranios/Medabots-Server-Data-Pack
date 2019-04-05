@@ -1,15 +1,30 @@
-# Protect the user from getting hurt
-effect give @e[sort=nearest,limit=1,scores={Medaforce=-2},distance=..5] minecraft:resistance 9 1 true
+# Show particles
+particle minecraft:dust 1 1 0 1 ~ ~1 ~ 1 2 1 0 30
 
-# Protect teammates from getting hurt
-execute if entity @s[tag=ally_team] run effect give @e[sort=nearest,limit=1,distance=..5,tag=ally_medabot] minecraft:resistance 9 1 true
-execute if entity @s[tag=enemy_team] run effect give @e[sort=nearest,limit=1,distance=..5,tag=enemy_medabot] minecraft:resistance 9 1 true
+# Give the weapon to user
+replaceitem entity @s[scores={Time=10..12,Drop=0}] hotbar.4 minecraft:snowball{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.throw"}']},medabots_server:{id:"medabots_server:spiral_bolt"}}
+execute if entity @s[scores={Time=10},type=!minecraft:player] anchored eyes run summon minecraft:snowball ^ ^ ^1 {CustomName:'{"translate":"medabots_server:move.kuwagata"}',Tags:["spiral_bolt","cpu_owned","enemy_team"],NoGravity:1b}
 
-# Spawn lightning
-summon minecraft:lightning_bolt ~ ~-1.5 ~
+# Remove the weapon from user
+clear @s[scores={Time=50}] minecraft:snowball{medabots_server:{id:"medabots_server:spiral_bolt"}}
 
-# CPU owned simulation
-execute if entity @s[tag=cpu_owned,tag=!rotated] run teleport @s ~ ~ ~ facing entity @e[type=!minecraft:player,sort=nearest,limit=1,scores={Medaforce=-2}]
-tag @s[tag=!rotated] add rotated
-teleport @s[tag=cpu_owned] ^ ^ ^-1 ~ ~-1
-execute at @s unless block ~ ~ ~ minecraft:air unless block ~ ~ ~ minecraft:water unless block ~ ~ ~ minecraft:lava run kill @s
+# Give back the original medal
+replaceitem entity @s[scores={Time=50}] hotbar.4 minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kuwagata_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:kuwagata_medal",move:"medaforce_charge",part:"medal",activated:1b,version:1}} 50
+
+# Finish the move
+scoreboard players set @s[scores={Time=50..}] Medaforce 0
+scoreboard players set @s[scores={Medaforce=0}] Time 0
+scoreboard players set @s[scores={Time=0}] Charge 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
+
+# Give back the medal to alien user
+replaceitem entity @s[tag=random_change,scores={Medaforce=0}] hotbar.4 minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.alien_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.alien_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.alien_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:alien_medal",move:"medaforce_charge",part:"medal",activated:1b,version:1}} 50
+tag @s[tag=random_change,scores={Medaforce=0}] remove random_change
+
+# Name the attack
+#execute as run data; MC-121807
+execute if entity @s[scores={Time=10..},tag=!ally_medabot,tag=!enemy_medabot] positioned ~ ~1 ~ as @e[type=minecraft:snowball,distance=..2,tag=!spiral_bolt] run data merge entity @s {CustomName:'{"translate":"medabots_server:move.kuwagata"}',Tags:["spiral_bolt"]}
+execute if entity @s[scores={Time=10..},tag=ally_medabot] positioned ~ ~1 ~ as @e[type=minecraft:snowball,distance=..2,tag=!spiral_bolt] run data merge entity @s {CustomName:'{"translate":"medabots_server:move.kuwagata"}',Tags:["spiral_bolt","ally_team"]}
+execute if entity @s[scores={Time=10..},tag=enemy_medabot] positioned ~ ~1 ~ as @e[type=minecraft:snowball,distance=..2,tag=!spiral_bolt] run data merge entity @s {CustomName:'{"translate":"medabots_server:move.kuwagata"}',Tags:["spiral_bolt","enemy_team"]}

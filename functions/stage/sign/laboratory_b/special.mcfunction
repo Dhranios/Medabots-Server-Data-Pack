@@ -1,1 +1,1 @@
-tellraw @s {"translate":"medabots_server:message.stage.requires","extra":[{"text":" "},{"translate":"medabots_server:advancements.passes.experiment"},{"translate":"medabots_server:message.stage.requires.and"},{"translate":"medabots_server:entity.flame_tisala"}]}
+tellraw @s {"translate":"medabots_server:message.stage.requires","extra":[{"text":" "},{"translate":"medabots_server:advancements.special_items.passes.experiment"},{"translate":"medabots_server:message.stage.requires.and"},{"translate":"medabots_server:entity.flame_tisala"}]}

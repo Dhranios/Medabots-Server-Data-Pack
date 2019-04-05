@@ -36,3 +36,4 @@ scoreboard players set @s[tag=shooting_trap_right_arm] ShootingTrap 1
 scoreboard players set @s[tag=status_clear_right_arm] StatusClear 1
 scoreboard players set @s[tag=sword_right_arm] Sword 1
 scoreboard players set @s[tag=wave_right_arm] Wave 1
+scoreboard players set @s Time 20

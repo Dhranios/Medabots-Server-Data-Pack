@@ -4,10 +4,10 @@
             "item": "minecraft:paper"
         },
         "title": {
-            "translate": "medabots_server:advancements.special_item.passes.jungle_d"
+            "translate": "medabots_server:advancements.special_items.passes.jungle_d"
         },
         "description": {
-            "translate": "medabots_server:advancements.special_item.taken"
+            "translate": "medabots_server:advancements.special_items.taken"
         },
         "show_toast": false,
         "announce_to_chat": false,

@@ -14,9 +14,11 @@ execute if entity @s[scores={Time=10,CannonFire=0..},tag=detect,tag=detected] ru
 execute if entity @s[scores={Time=8,CannonFire=0..},tag=detect,tag=detected] run playsound medabots_server:entity.cannon.beep hostile @a ~ ~ ~ 1
 
 # Fire in the hole!
-execute at @a[scores={Battle=2}] if score @s Stage = @a[distance=..0.1,limit=1,sort=nearest,scores={Battle=2}] Stage run tag @s add no_fire
+execute store result score #temp Stage run scoreboard players get @s Stage
+execute as @a[scores={Battle=2}] if score @s Stage = #temp Stage run tag @e[tag=cannon,distance=..0.1] add no_fire
 execute if entity @s[scores={Time=0},tag=detected,tag=!no_fire] run function medabots_server:entities/cannon/fire
 tag @s[tag=no_fire] remove no_fire
+scoreboard players reset #temp Stage
 
 # Set anything that has detected to have not detected
 tag @s[tag=detected] remove detected

@@ -67,13 +67,13 @@ title @s actionbar {"translate":"medabots_server:scoreboard.objective.legs_armor
 function medabots_server:other/pot_breaker
 
 # Let the combat begin, activate your part
-execute if entity @s[scores={Time=1,Battle=1,UsePart=1..}] run function medabots_server:medaparts/activate_medaparts
+execute if entity @s[scores={Time=0,Battle=1,UsePart=1..}] run function medabots_server:medaparts/activate_medaparts/player
 
 # Static flying
 tag @s[scores={Battle=1,UsePart=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] add static_flying 
 tag @s[scores={Battle=1,UsePart=1..},tag=static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] remove static_fly
-tag @s[tag=static_flying] add static_fly
-tag @s[tag=static_flying] remove static_flying
+tag @s[scores={Battle=1,UsePart=1..},tag=static_flying] add static_fly
+tag @s[scores={Battle=1,UsePart=1..},tag=static_flying] remove static_flying
 
 # Check status effects
 execute if entity @s[tag=!checked_effects,nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}}] run function medabots_server:other/check_effects

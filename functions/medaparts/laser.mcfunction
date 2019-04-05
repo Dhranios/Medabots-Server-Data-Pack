@@ -1,20 +1,13 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Laser=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:aimflash_zoom"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Laser=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:keithturtle_gigalaser"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:keithturtle_tyranolaser"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Laser=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:keithturtle_megalaser"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Time=2,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:arcbeetle_prominence"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Time=2,Laser=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:god_emperor_death_laser"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Time=2,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:rob_famicom_zapper"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Time=2,Laser=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:iron_man_repulsor_beam"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Time=2,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:le_villan_grave_lane"}}}]}] MedapartType 9
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Laser=1}] Time 10
-scoreboard players set @s[scores={Time=2,Laser=3}] Time 20
+scoreboard players set @s[scores={Time=20,Laser=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:aimflash_zoom"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Laser=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:keithturtle_gigalaser"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:keithturtle_tyranolaser"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Laser=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:keithturtle_megalaser"}}}]}] MedapartType 4
+scoreboard players set @s[scores={Time=20,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:arcbeetle_prominence"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Time=20,Laser=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:god_emperor_death_laser"}}}]}] MedapartType 6
+scoreboard players set @s[scores={Time=20,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:rob_famicom_zapper"}}}]}] MedapartType 7
+scoreboard players set @s[scores={Time=20,Laser=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:iron_man_repulsor_beam"}}}]}] MedapartType 8
+scoreboard players set @s[scores={Time=20,Laser=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:le_villan_grave_lane"}}}]}] MedapartType 9
 
 # Give the weapon
 replaceitem entity @s[scores={Time=40}] weapon.offhand minecraft:tipped_arrow{Potion:"minecraft:water",CustomPotionColor:6724056,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bullet"}'},CustomPotionEffects:[{Id:18b,Amplifier:2b,Duration:0,Ambient:1b,ShowParticles:0b}],medabots_server:{id:"medabots_server:bullet"}}
@@ -49,7 +42,10 @@ scoreboard players reset @s[scores={Laser=3,Time=80..},nbt={Inventory:[{Slot:2b,
 scoreboard players reset @s[scores={Laser=2,Time=80..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Laser
 scoreboard players reset @s[scores={Laser=1..,Time=80..},type=!minecraft:player] Laser
 execute unless entity @s[scores={Laser=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Laser=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Laser=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Attacked by shooting trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

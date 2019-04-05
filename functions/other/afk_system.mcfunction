@@ -226,6 +226,8 @@ scoreboard players set @s[scores={Jump=1..}] Jump 0
 tag @s[tag=walking] remove walking
 tag @s[scores={Walk=1..}] add walking
 scoreboard players set @s[scores={Walk=1..}] Walk 0
+tag @s[tag=running] remove running
+tag @s[scores={Run=1..}] add running
 scoreboard players set @s[scores={Run=1..}] Run 0
 scoreboard players set @s[scores={Swimming=1..}] Swimming 0
 scoreboard players set @s[scores={Drop=1..}] Drop 0

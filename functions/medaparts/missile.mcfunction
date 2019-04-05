@@ -1,22 +1,15 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:saikachis_balister"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Missile=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:rhinrush_rhinoburn"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rhinorush_rhinogone"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:abyss_greater_enticed"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Time=2,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:blackbeetle_blackbalister"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Time=2,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:god_emperor_death_missile"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Time=2,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:mewtwo_shadow_ball"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Time=2,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:metabee_missile"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Time=2,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_missilebase"}}}]}] MedapartType 9
-scoreboard players set @s[scores={Time=2,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_intermissile"}}}]}] MedapartType 9
-scoreboard players set @s[scores={Time=2,Missile=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_guidemissile"}}}]}] MedapartType 10
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Missile=1}] Time 10
-scoreboard players set @s[scores={Time=2,Missile=3}] Time 20
+scoreboard players set @s[scores={Time=20,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:saikachis_balister"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Missile=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:rhinrush_rhinoburn"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rhinorush_rhinogone"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:abyss_greater_enticed"}}}]}] MedapartType 4
+scoreboard players set @s[scores={Time=20,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:blackbeetle_blackbalister"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Time=20,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:god_emperor_death_missile"}}}]}] MedapartType 6
+scoreboard players set @s[scores={Time=20,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:mewtwo_shadow_ball"}}}]}] MedapartType 7
+scoreboard players set @s[scores={Time=20,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:metabee_missile"}}}]}] MedapartType 8
+scoreboard players set @s[scores={Time=20,Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_missilebase"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Time=20,Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_intermissile"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Time=20,Missile=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_guidemissile"}}}]}] MedapartType 10
 
 # Give the weapon
 replaceitem entity @s[scores={Time=20}] weapon.offhand minecraft:tipped_arrow{Potion:"minecraft:water",CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bullet"}'},CustomPotionEffects:[{Id:18b,Amplifier:3b,Duration:0,Ambient:1b,ShowParticles:0b}],medabots_server:{id:"medabots_server:bullet"}}
@@ -53,7 +46,10 @@ scoreboard players reset @s[scores={Missile=3,Time=60..},nbt={Inventory:[{Slot:2
 scoreboard players reset @s[scores={Missile=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Missile
 scoreboard players reset @s[scores={Missile=1..,Time=60..},type=!minecraft:player] Missile
 execute unless entity @s[scores={Missile=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Missile=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Missile=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Attacked by shooting trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

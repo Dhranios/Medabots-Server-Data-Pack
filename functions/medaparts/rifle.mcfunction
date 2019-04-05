@@ -1,23 +1,16 @@
-# Increase time by 1
-scoreboard players add @s Time 1
-
 # Set which part is activated
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:baroncastle_sentineldy"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:saikachis_fuser"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Time=2,Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:bluesdog_battle_rifle"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Time=2,Rifle=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:bluesdog_headcannon"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:bluesdog_aim_rifle"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Time=2,Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:sailor_multi_short_shot"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:blackbeetle_blackfuser"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:arcbeetle_explode"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:magolor_darkness"}}}]}] MedapartType 9
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:warbonnet_shoot_barrel"}}}]}] MedapartType 10
-scoreboard players set @s[scores={Time=2,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:metabee_revolver"}}}]}] MedapartType 11
-scoreboard players set @s[scores={Time=2,Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:amelia_spear"}}}]}] MedapartType 12
-
-# Jump the time value up for right and left arm
-scoreboard players set @s[scores={Time=2,Rifle=1}] Time 10
-scoreboard players set @s[scores={Time=2,Rifle=3}] Time 20
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:baroncastle_sentineldy"}}}]}] MedapartType 1
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:saikachis_fuser"}}}]}] MedapartType 2
+scoreboard players set @s[scores={Time=20,Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:bluesdog_battle_rifle"}}}]}] MedapartType 3
+scoreboard players set @s[scores={Time=20,Rifle=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:bluesdog_headcannon"}}}]}] MedapartType 4
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:bluesdog_aim_rifle"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Time=20,Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:sailor_multi_short_shot"}}}]}] MedapartType 6
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:blackbeetle_blackfuser"}}}]}] MedapartType 7
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:arcbeetle_explode"}}}]}] MedapartType 8
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:magolor_darkness"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:warbonnet_shoot_barrel"}}}]}] MedapartType 10
+scoreboard players set @s[scores={Time=20,Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:metabee_revolver"}}}]}] MedapartType 11
+scoreboard players set @s[scores={Time=20,Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:amelia_spear"}}}]}] MedapartType 12
 
 # Give the weapon depending on charge
 replaceitem entity @s[scores={Time=20}] weapon.offhand minecraft:tipped_arrow{Potion:"minecraft:water",CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bullet"}'},CustomPotionEffects:[{Id:18b,Amplifier:5b,Duration:0,Ambient:1b,ShowParticles:0b}],medabots_server:{id:"medabots_server:bullet"}}
@@ -67,7 +60,10 @@ scoreboard players reset @s[scores={Rifle=3,Time=60..},nbt={Inventory:[{Slot:2b,
 scoreboard players reset @s[scores={Rifle=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Rifle
 scoreboard players reset @s[scores={Rifle=1..,Time=60..},type=!minecraft:player] Rifle
 execute unless entity @s[scores={Rifle=1..}] run scoreboard players reset @s MedapartType
-execute unless entity @s[scores={Rifle=1..}] run scoreboard players set @s Time 1
+execute unless entity @s[scores={Rifle=1..}] run scoreboard players set @s Time 0
+
+# Increase time by 1
+scoreboard players add @s Time 1
 
 # Attacked by shooting trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[tag=!undead] minecraft:instant_damage 1 0 true

@@ -151,4 +151,8 @@ scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt=
 scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"status_clear",part:"head"}}}]}] StatusClear 2
 scoreboard players set @s[scores={LeftArmArmor=1..},tag=!ineffective_left,nbt={SelectedItemSlot:1,Inventory:[{Slot:1b,tag:{medabots_server:{activated:1b,move:"ineffective",part:"left_arm"}}}]}] Ineffective 1
 scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt={SelectedItemSlot:2,Inventory:[{Slot:2b,tag:{medabots_server:{activated:1b,move:"ineffective",part:"right_arm"}}}]}] Ineffective 3
-scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"ineffective",part:"right_arm"}}}]}] Ineffective 2
+scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"ineffective",part:"head"}}}]}] Ineffective 2
+
+#Increase left arm and right arm speed
+scoreboard players set @s[scores={LeftArmArmor=1..},tag=!ineffective_left,nbt={SelectedItemSlot:1,Inventory:[{Slot:1b,tag:{medabots_server:{activated:1b,part:"left_arm"}}}]}] Time 10
+scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt={SelectedItemSlot:2,Inventory:[{Slot:2b,tag:{medabots_server:{activated:1b,part:"right_arm"}}}]}] Time 20

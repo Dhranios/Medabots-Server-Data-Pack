@@ -11,9 +11,11 @@ scoreboard players remove @s[scores={Time=20},tag=enabled] Time 1
 scoreboard players remove @s[scores={Time=21..}] Time 1
 
 # Fire in the hole!
-execute at @a[scores={Battle=2}] if score @s Stage = @a[distance=..0.1,limit=1,sort=nearest,scores={Battle=2}] Stage run tag @s add no_fire
+execute store result score #temp Stage run scoreboard players get @s Stage
+execute as @a[scores={Battle=2}] if score @s Stage = #temp Stage run tag @e[tag=laser_trap,distance=..0.1] add no_fire
 execute if entity @s[scores={Time=0},tag=!no_fire] run function medabots_server:blocks/laser_trap/fire
 tag @s[tag=no_fire] remove no_fire
+scoreboard players reset #temp Stage
 
 # Set the time depending on the delay
 scoreboard players set @s[tag=delay_10,scores={Time=0}] Time 200
