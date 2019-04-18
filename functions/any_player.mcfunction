@@ -19,13 +19,13 @@ function medabots_server:dialog_try
 # Make players who did nothing for 1 minute invulnerable
 function medabots_server:other/afk_system
 
+# Functions that run on every player on the server except mods
+execute if entity @s[scores={Moderator=0}] run function medabots_server:any_non_mod
+
 # No cheating!
 function medabots_server:anti_cheating/items
 function medabots_server:anti_cheating/scores
 function medabots_server:anti_cheating/anti_fly_hack
-
-# Functions that run on every player on the server except mods
-execute if entity @s[scores={Moderator=0}] run function medabots_server:any_non_mod
 
 # Send a killer message depending on parts
 execute if entity @s[scores={Killer=1..}] run function medabots_server:medaparts/killer

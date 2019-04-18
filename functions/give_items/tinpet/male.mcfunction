@@ -1,0 +1,1 @@
+give @s minecraft:diamond_pickaxe{Unbreakable:1b,Damage:4,CustomModelData:0,AttributeModifiers:[],HideFlags:4,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.male_tinpet"}'},medabots_server:{id:"medabots_server:male_tinpet",part:"tinpet",version:1}}

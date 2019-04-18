@@ -17,6 +17,6 @@ clear @s[scores={Medaforce=1}] minecraft:nether_star{medabots_server:{activated:
 scoreboard players add @s[scores={Medaforce=1}] OverheatingMedal 2
 scoreboard players remove @s[scores={OverheatingMedal=1..}] OverheatingMedal 1
 title @s[scores={OverheatingMedal=10..}] title {"translate":"medabots_server:move.overheating","color":"red"}
-effect give @s[scores={OverheatingMedal=16..},tag=!undead] minecraft:instant_damage 1 1 true
-effect give @s[scores={OverheatingMedal=16..},tag=undead] minecraft:instant_health 1 1 true
+effect give @s[scores={OverheatingMedal=16..},type=!#medabots_server:undead] minecraft:instant_damage 1 1 true
+effect give @s[scores={OverheatingMedal=16..},type=#medabots_server:undead] minecraft:instant_health 1 1 true
 scoreboard players reset @s[scores={OverheatingMedal=0}] OverheatingMedal

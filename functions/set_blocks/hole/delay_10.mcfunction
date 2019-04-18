@@ -1,0 +1,1 @@
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_10"],Duration:2147483647}

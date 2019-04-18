@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:polished_andesite"
+            "item": "minecraft:yellow_terracotta"
         },
         "title": {
             "translate": "medabots_server:location.ruins_in",

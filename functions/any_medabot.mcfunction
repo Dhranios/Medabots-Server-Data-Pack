@@ -7,8 +7,8 @@ execute if entity @s[type=!minecraft:player] store result score @s Damage run da
 scoreboard players operation @s Damage += #100 Constants
 
 # Prevent normal damage
-effect give @s[tag=!undead,scores={Damage=1..}] minecraft:instant_health 1 0 true
-effect give @s[tag=undead,scores={Damage=1..}] minecraft:instant_damage 1 0 true
+effect give @s[type=!#medabots_server:undead,scores={Damage=1..}] minecraft:instant_health 1 0 true
+effect give @s[type=#medabots_server:undead,scores={Damage=1..}] minecraft:instant_damage 1 0 true
 data merge entity @s[type=!minecraft:player] {AbsorptionAmount:100.0f}
 
 # Combat

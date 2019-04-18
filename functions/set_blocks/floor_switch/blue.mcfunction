@@ -1,0 +1,1 @@
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}

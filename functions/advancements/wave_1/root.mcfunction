@@ -97,10 +97,10 @@ experience add @s 1 levels
 experience add @s -1 levels
 effect give @s minecraft:health_boost 1000000 19 true
 effect give @s minecraft:instant_health 1 19 true
-replaceitem entity @s hotbar.5 minecraft:written_book{pages:["{\"italic\":false,\"color\":\"black\",\"translate\":\"medabots_server:item.read_me_book.page.1.1\",\"extra\":[{\"text\":\"\\n\"},{\"italic\":false,\"color\":\"black\",\"translate\":\"medabots_server:item.read_me_book.page.1.2\"}]}"],author:"FVbico",title:"Read Me",HideFlags:32,display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.read_me_book.title\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.read_me_book.author\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.read_me_book.pages\"}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.read_me_book.version\",\"with\":[{\"text\":\"16-4-2017\"}]}","{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.generic.drop_to_kill\"}"]},medabots_server:{id:"medabots_server:read_me_book",kill:1b,version:"16-4-2017"}}
-function medabots_server:give_medaparts/saikachis
-function medabots_server:give_medal/kabuto
-function medabots_server:give_tinpet/male
+function medabots_server:give_items/medaparts/saikachis
+function medabots_server:give_items/medal/kabuto
+give @s minecraft:written_book{pages:['{"italic":false,"color":"black","translate":"medabots_server:item.read_me_book.page.1.1","extra":[{"text":"\n"},{"italic":false,"color":"black","translate":"medabots_server:item.read_me_book.page.1.2"}]}'],author:"FVbico",title:"Read Me",HideFlags:32,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.read_me_book.title"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.read_me_book.author"}','{"italic":false,"color":"white","translate":"medabots_server:item.read_me_book.pages"}','{"italic":false,"color":"white","translate":"medabots_server:item.read_me_book.version","with":[{"text":"16-4-2017"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.drop_to_kill"}']},medabots_server:{id:"medabots_server:read_me_book",kill:1b,version:"16-4-2017"}}
+replaceitem entity @s inventory.7 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:4,CustomModelData:0,AttributeModifiers:[],HideFlags:4,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.male_tinpet"}'},medabots_server:{id:"medabots_server:male_tinpet",part:"tinpet",version:1}}
 stopsound @s music
 teleport @s -286 55 -52.0 -90 0
 spawnpoint @s -286 55 -52
