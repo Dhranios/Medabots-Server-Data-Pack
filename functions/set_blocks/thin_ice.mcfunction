@@ -1,0 +1,1 @@
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}

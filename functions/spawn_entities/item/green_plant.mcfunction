@@ -1,0 +1,1 @@
+summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:1,HideFlags:4,CustomModelData:3,AttributeModifiers:[],medabots_server:{id:"medabots_server:green_plant",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.green_plant"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}

@@ -1,5 +1,6 @@
 # Frappe
 summon minecraft:skeleton -1716 44 -334 {CustomName:'{"translate":"medabots_server:entity.frappe"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/ruins_in_a/first_go/frappe",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["frappe","enemy_medabot","killerable","hostile","tank_legs","freeze_left_arm","repair_right_arm","freeze_head","kuwagata_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1716,y=44,z=-334,distance=..1,tag=frappe,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1716,y=44,z=-334,distance=..1,tag=frappe] Stage 8
 scoreboard players set @e[x=-1716,y=44,z=-334,distance=..1,tag=frappe] Medabot 0
 scoreboard players set @e[x=-1716,y=44,z=-334,distance=..1,tag=frappe] Charge 0

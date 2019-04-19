@@ -1,5 +1,6 @@
 # Blackbeetle
 summon minecraft:skeleton -1889 44 -574 {CustomName:'{"translate":"medabots_server:entity.blackbeetle"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/battle_enemies/blackbeetle",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["blackbeetle","enemy_medabot","killerable","hostile","two_legged_legs","gating_left_arm","rifle_right_arm","missile_head","kabuto_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1889,y=44,z=-574,distance=..1,tag=blackbeetle,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1889,y=44,z=-574,distance=..1,tag=blackbeetle] Stage 29
 scoreboard players set @e[x=-1889,y=44,z=-574,distance=..1,tag=blackbeetle] Medabot 24
 scoreboard players set @e[x=-1889,y=44,z=-574,distance=..1,tag=blackbeetle] Charge 0

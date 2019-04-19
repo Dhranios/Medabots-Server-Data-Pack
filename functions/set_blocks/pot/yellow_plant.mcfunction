@@ -1,0 +1,3 @@
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.pot"}',Tags:["pot"],Duration:2147483647}
+setblock ~ ~ ~ minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:1,HideFlags:4,CustomModelData:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:yellow_plant",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.yellow_plant"}'}}}]}
+setblock ~ ~1 ~ minecraft:barrier

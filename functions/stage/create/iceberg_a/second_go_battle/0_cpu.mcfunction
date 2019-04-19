@@ -1,5 +1,6 @@
 # Pastel Fairy
 summon minecraft:skeleton -1702 44 -207 {CustomName:'{"translate":"medabots_server:entity.pastel_fairy"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/iceberg_a/second_go/pastel_fairy",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["pastel_fairy","enemy_medabot","killerable","hostile","float_legs","heal_left_arm","freeze_right_arm","shooting_trap_head","ghost_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Stage 6
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Medabot 0
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Charge 0

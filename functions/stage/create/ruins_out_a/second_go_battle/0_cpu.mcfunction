@@ -1,5 +1,6 @@
 # Kasou Touchu
 summon minecraft:skeleton -1611 45 -297 {CustomName:'{"translate":"medabots_server:entity.kasou_touchu"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/ruins_out_a/second_go/kasou_touchu",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["kasou_touchu","enemy_medabot","killerable","hostile","wheel_legs","infect_left_arm","scout_right_arm","no_defend_head","alien_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1611,y=45,z=-297,distance=..1,tag=kasou_touchu,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1611,y=45,z=-297,distance=..1,tag=kasou_touchu] Stage 7
 scoreboard players set @e[x=-1611,y=45,z=-297,distance=..1,tag=kasou_touchu] Medabot 0
 scoreboard players set @e[x=-1611,y=45,z=-297,distance=..1,tag=kasou_touchu] Charge 0

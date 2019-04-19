@@ -1,5 +1,6 @@
 # Shoot-Spider
 summon minecraft:skeleton -1773 44 -298 {CustomName:'{"translate":"medabots_server:entity.shoot_spider"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/laboratory_a/first_go/shoot_spider",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["shoot_spider","enemy_medabot","killerable","hostile","multi_legged_legs","confuse_left_arm","hold_right_arm","melee_trap_head","ghost_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1773,y=44,z=-298,distance=..1,tag=shoot_spider,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1773,y=44,z=-298,distance=..1,tag=shoot_spider] Stage 9
 scoreboard players set @e[x=-1773,y=44,z=-298,distance=..1,tag=shoot_spider] Medabot 0
 scoreboard players set @e[x=-1773,y=44,z=-298,distance=..1,tag=shoot_spider] Charge 0

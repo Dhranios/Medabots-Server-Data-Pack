@@ -1,4 +1,4 @@
-# Tags new hamer punches with what block they'll replace
+# Tags new holes with what block they'll replace
 execute unless entity @s[scores={Time=0..}] run function medabots_server:blocks/hole/scores
 
 # Remove when cleaning up a stage

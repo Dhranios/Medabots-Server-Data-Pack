@@ -1,2 +1,1 @@
-setblock ~ ~ ~ minecraft:structure_block[mode=load]{name:"medabots_server:stage/starting_area",mode:"LOAD"}
-setblock ~ ~1 ~ minecraft:redstone_block
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.starting_area"}',Tags:["starting_area"],Duration:2147483647}

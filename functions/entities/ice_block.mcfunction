@@ -38,9 +38,7 @@ execute at @s run teleport @s[scores={Moving=3},tag=!on_ice] ~-1 ~ ~
 execute at @s run teleport @s[scores={Moving=4},tag=!on_ice] ~ ~ ~-1
 
 # Form thin ice in water
-execute if entity @s[tag=freezing] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.thin_ice"}',Duration:2147483647,Tags:["thin_ice"]}
-execute if entity @s[tag=freezing,scores={ActionFloorNr=0..}] run scoreboard players operation @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=thin_ice] ActionFloorNr = @s ActionFloorNr
-tag @s[tag=freezing] add dead
+execute if entity @s[tag=freezing] run function medabots_server:entities/ice_block/freeze
 
 # Stop moving if not on ice
 scoreboard players set @s[scores={Moving=1..},tag=!on_ice] Moving 0

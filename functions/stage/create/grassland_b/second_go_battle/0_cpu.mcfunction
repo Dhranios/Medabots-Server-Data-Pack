@@ -1,5 +1,6 @@
 # Fly-Falcon
 summon minecraft:skeleton -1522 45 -327 {CustomName:'{"translate":"medabots_server:entity.fly_falcon"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/grassland_b/second_go/fly_falcon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["fly_falcon","enemy_medabot","killerable","hostile","fly_legs","sword_left_arm","destroy_right_arm","napalm_head","kabuto_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Stage 10
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Medabot 0
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Charge 0

@@ -1,5 +1,6 @@
 # Sailor-Multi
 summon minecraft:skeleton -1908 44 -588 {CustomName:'{"translate":"medabots_server:entity.sailor_multi"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/boxer/first_go/sailor_multi",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["sailor_multi","enemy_medabot","killerable","hostile","two_legged_legs","rifle_left_arm","gatling_right_arm","scout_head","spider_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Stage 29
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Medabot 39
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Charge 0

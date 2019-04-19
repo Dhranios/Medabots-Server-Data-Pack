@@ -1,5 +1,6 @@
 # Peppercat
 summon minecraft:skeleton -1873 44 -594 {CustomName:'{"translate":"medabots_server:entity.peppercat"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/boxer/second_go/peppercat",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["peppercat","enemy_medabot","killerable","hostile","two_legged_legs","paralyze_left_arm","paralyze_right_arm","paralyze_head","kuwagata_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1873,y=44,z=-594,distance=..1,tag=peppercat,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1873,y=44,z=-594,distance=..1,tag=peppercat] Stage 29
 scoreboard players set @e[x=-1873,y=44,z=-594,distance=..1,tag=peppercat] Medabot 27
 scoreboard players set @e[x=-1873,y=44,z=-594,distance=..1,tag=peppercat] Charge 0

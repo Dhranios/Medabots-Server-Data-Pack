@@ -5,7 +5,7 @@ execute if entity @s[type=!minecraft:item] run function medabots_server:medapart
 execute if entity @s[scores={Killer=1..}] run function medabots_server:medaparts/killer
 
 # Block effects
-execute if entity @s[type=!minecraft:item] if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator
+execute if entity @s[type=!minecraft:item] if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator/accel
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
 # A CPU

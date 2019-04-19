@@ -207,6 +207,7 @@ scoreboard objectives setdisplay belowName Level
 # Set Server stats
 scoreboard players set #0 Constants 0
 scoreboard players set #1 Constants 1
+scoreboard players set #4 Constants 4
 scoreboard players set #10 Constants 10
 scoreboard players set #20 Constants 20
 scoreboard players set #40 Constants 40

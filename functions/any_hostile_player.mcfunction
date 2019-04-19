@@ -1,5 +1,5 @@
 # Block effects
-execute if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator
+execute if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator/accel
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
 # Effects

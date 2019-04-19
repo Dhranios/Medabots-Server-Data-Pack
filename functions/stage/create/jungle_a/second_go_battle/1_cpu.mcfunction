@@ -1,5 +1,6 @@
 # Nin-Ninja
 summon minecraft:skeleton -1697 45 -167 {CustomName:'{"translate":"medabots_server:entity.nin_ninja"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/jungle_a/second_go/nin_ninja",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["nin_ninja","enemy_medabot","killerable","hostile","two_legged_legs","melt_left_arm","destroy_right_arm","melee_trap_head","knight_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1697,y=45,z=-167,distance=..1,tag=nin_ninja,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1697,y=45,z=-167,distance=..1,tag=nin_ninja] Stage 3
 scoreboard players set @e[x=-1697,y=45,z=-167,distance=..1,tag=nin_ninja] Medabot 0
 scoreboard players set @e[x=-1697,y=45,z=-167,distance=..1,tag=nin_ninja] Charge 0

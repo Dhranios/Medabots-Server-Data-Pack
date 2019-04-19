@@ -1,5 +1,6 @@
-# Doctor Study
+# Dondoguu
 summon minecraft:skeleton -1610 45 -464 {CustomName:'{"translate":"medabots_server:entity.dondoguu"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/jungle_b/second_go/dondoguu",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["dondoguu","enemy_medabot","killerable","hostile","float_legs","confuse_left_arm","melt_right_arm","guard_gunpowder_head","mermaid_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Stage 12
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Medabot 0
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Charge 0

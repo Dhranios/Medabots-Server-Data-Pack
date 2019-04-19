@@ -1,0 +1,1 @@
+summon minecraft:tnt ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:600s,Tags:["bomb","hostile","killerable"]}
