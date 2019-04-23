@@ -56,8 +56,8 @@ scoreboard players set @s[scores={Time=-1}] Time 20
 tag @s[tag=!dead,nbt={AbsorptionAmount:0.0f}] add dead
 
 # Place part of self
-execute if entity @s[tag=!dead] run fill ~ ~2 ~ ~ ~2 ~ minecraft:barrier replace minecraft:air
-execute if entity @s[tag=!dead] run fill ~ ~ ~ ~ ~ ~ minecraft:iron_block replace minecraft:air
+execute at @s[tag=!dead] run fill ~ ~2 ~ ~ ~2 ~ minecraft:barrier replace minecraft:air
+execute at @s[tag=!dead] run fill ~ ~ ~ ~ ~ ~ minecraft:iron_block replace minecraft:air
 
 # Prevent death animation if stage clean up
 teleport @s[tag=dead,nbt=!{AbsorptionAmount:0.0f}] ~ -1000 ~
