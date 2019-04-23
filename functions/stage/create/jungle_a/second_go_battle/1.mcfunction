@@ -1,13 +1,13 @@
 execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=1] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
 execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=1] run function medabots_server:stage/create/jungle_a/second_go_battle/1_cpu
-summon minecraft:area_effect_cloud -1690 45 -169 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1692 45 -172 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1695 45 -165 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1695 45 -176 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1697 45 -169 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1700 45 -166 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1700 45 -173 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-setblock -1687 45 -173 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
+execute positioned -1690 45 -169 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1692 45 -172 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1695 45 -165 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1695 45 -176 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1697 45 -169 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1700 45 -166 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1700 45 -173 run function medabots_server:set_blocks/hole/delay_5
+tag @e[x=-1686.5,y=45,z=-172.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

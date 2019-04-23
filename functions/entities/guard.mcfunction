@@ -16,6 +16,7 @@ execute if entity @s[scores={Time=0},tag=!alarm_ringing] run function medabots_s
 
 # Fall
 execute if block ~ ~-0.2 ~ minecraft:air run teleport @s ~ ~-0.2 ~
+execute if block ~ ~-0.2 ~ minecraft:black_carpet run teleport @s ~ ~-0.2 ~
 
 # Attacked by melee trap
 execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run effect give @s minecraft:instant_damage 1 0 true

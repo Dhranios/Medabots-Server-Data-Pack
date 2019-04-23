@@ -18,7 +18,7 @@ execute if entity @s[tag=thin_ice] run function medabots_server:blocks/thin_ice
 execute if entity @s[tag=drawbridge] run function medabots_server:blocks/drawbridge
 execute if entity @s[tag=fan] run function medabots_server:blocks/fan
 execute if entity @s[tag=action_floor] run function medabots_server:blocks/action_floor
-execute if entity @s[tag=balloon_bomb,tag=!action_floor] run function medabots_server:entities/balloon_bomb
+execute if entity @s[tag=balloon_bomb,tag=!action_floor,tag=!pot] run function medabots_server:entities/balloon_bomb
 execute if entity @s[tag=press_wall] run function medabots_server:blocks/press_wall
 execute if entity @s[tag=laser_trap] run function medabots_server:blocks/laser_trap
 execute if entity @s[tag=gas_floor] run function medabots_server:blocks/gas_floor
@@ -31,7 +31,7 @@ execute if entity @s[tag=pot] run function medabots_server:blocks/pot
 execute if entity @s[tag=door] run function medabots_server:blocks/door
 execute if entity @s[tag=starting_area] run function medabots_server:blocks/starting_area
 execute if entity @s[tag=goal_area] run function medabots_server:blocks/goal_area
-execute if entity @s[tag=algea] run function medabots_server:blocks/algea
+execute if entity @s[tag=algae] run function medabots_server:blocks/algae
 execute if entity @s[tag=bridge] run function medabots_server:blocks/bridge
 execute if entity @s[tag=stone] run function medabots_server:blocks/stone
 execute if entity @s[tag=accelerator] run function medabots_server:blocks/accelerator

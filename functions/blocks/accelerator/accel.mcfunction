@@ -8,4 +8,5 @@ execute if block ~ ~ ~ minecraft:comparator[facing=south,mode=compare,powered=fa
 execute if block ~ ~ ~ minecraft:comparator[facing=west,mode=compare,powered=false] run data merge entity @s {Motion:[2.0d,0.1d,0.0d]}
 
 # Player's nbt cannot be edited :(
-execute if entity @s[type=minecraft:player] run function medabots_server:blocks/accelerator/player
+execute if entity @s[type=minecraft:player] run function medabots_server:blocks/accelerator/teleport
+execute if entity @s[tag=guard] run function medabots_server:blocks/accelerator/teleport

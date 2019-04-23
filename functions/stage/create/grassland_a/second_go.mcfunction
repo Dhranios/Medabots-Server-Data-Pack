@@ -115,7 +115,7 @@ execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/cl
 execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1535 45 -158 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/closed/west
-execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/closed/west
+execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/closed/east/positive_x
 execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/closed/east/positive_z

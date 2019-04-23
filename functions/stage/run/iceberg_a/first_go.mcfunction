@@ -1,7 +1,7 @@
 execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/iceberg_a/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/iceberg_a/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] run bossbar set medabots_server:iceberg_a/time players @s
+execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] run bossbar set medabots_server:iceberg_a/time players @s[scores={Death=0,Battle=1..}]
 execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:iceberg_a/time value
 execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result bossbar medabots_server:iceberg_a/time value run scoreboard players operation #temp Time += #1 Constants
 execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:iceberg_a/robattle value

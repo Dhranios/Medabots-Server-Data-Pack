@@ -1,6 +1,6 @@
 execute unless entity @a[x=-1636,y=51,z=-180,dx=63,dy=4,dz=63,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
 execute unless entity @a[x=-1636,y=51,z=-180,dx=63,dy=4,dz=63,tag=0] run function medabots_server:stage/create/rock_a/first_go_battle/0_cpu
-setblock -1616 45 -167 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
+tag @e[x=-1615.5,y=45,z=-166.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

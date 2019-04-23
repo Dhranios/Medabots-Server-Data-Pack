@@ -10,7 +10,7 @@ execute unless block ~ ~ ~ minecraft:air run scoreboard players set @s[scores={T
 execute if entity @e[distance=..0.7,tag=!action_floor,type=!minecraft:item] run scoreboard players set @s[scores={Time=0}] Time -1
 scoreboard players set @s[scores={Time=0},tag=!enabled] Time -1
 scoreboard players set @s[scores={Time=0},tag=no_spawning] Time -1
-scoreboard players add @s[scores={Time=0..}] Time 1
+scoreboard players add @s[scores={Time=0..},tag=!dead] Time 1
 scoreboard players add @s[scores={Time=..-1},tag=!no_spawning] Time 1
 tag @s[tag=no_spawning] remove no_spawning
 scoreboard players reset #temp Stage
