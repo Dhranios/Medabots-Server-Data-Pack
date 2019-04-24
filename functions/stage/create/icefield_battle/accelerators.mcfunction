@@ -1,19 +1,19 @@
-setblock -1989 45 -622 minecraft:comparator[facing=south,mode=compare,powered=false]
-setblock -1994 45 -624 minecraft:comparator[facing=south,mode=compare,powered=false]
-setblock -2003 45 -624 minecraft:comparator[facing=south,mode=compare,powered=false]
-setblock -2008 45 -622 minecraft:comparator[facing=south,mode=compare,powered=false]
-setblock -2012 45 -618 minecraft:comparator[facing=east,mode=compare,powered=false]
-setblock -2014 45 -613 minecraft:comparator[facing=east,mode=compare,powered=false]
-setblock -2014 45 -604 minecraft:comparator[facing=east,mode=compare,powered=false]
-setblock -2012 45 -599 minecraft:comparator[facing=east,mode=compare,powered=false]
-setblock -2008 45 -595 minecraft:comparator[facing=north,mode=compare,powered=false]
-setblock -2003 45 -593 minecraft:comparator[facing=north,mode=compare,powered=false]
-setblock -1994 45 -593 minecraft:comparator[facing=north,mode=compare,powered=false]
-setblock -1989 45 -595 minecraft:comparator[facing=north,mode=compare,powered=false]
-setblock -1985 45 -599 minecraft:comparator[facing=west,mode=compare,powered=false]
-setblock -1983 45 -604 minecraft:comparator[facing=west,mode=compare,powered=false]
-setblock -1983 45 -613 minecraft:comparator[facing=west,mode=compare,powered=false]
-setblock -1985 45 -618 minecraft:comparator[facing=west,mode=compare,powered=false]
+execute positioned -1989 45 -622 run function medabots_server:set_blocks/accelerator/north
+execute positioned -1994 45 -624 run function medabots_server:set_blocks/accelerator/north
+execute positioned -2003 45 -624 run function medabots_server:set_blocks/accelerator/north
+execute positioned -2008 45 -622 run function medabots_server:set_blocks/accelerator/north
+execute positioned -2012 45 -618 run function medabots_server:set_blocks/accelerator/west
+execute positioned -2014 45 -613 run function medabots_server:set_blocks/accelerator/west
+execute positioned -2014 45 -604 run function medabots_server:set_blocks/accelerator/west
+execute positioned -2012 45 -599 run function medabots_server:set_blocks/accelerator/west
+execute positioned -2008 45 -595 run function medabots_server:set_blocks/accelerator/south
+execute positioned -2003 45 -593 run function medabots_server:set_blocks/accelerator/south
+execute positioned -1994 45 -593 run function medabots_server:set_blocks/accelerator/south
+execute positioned -1989 45 -595 run function medabots_server:set_blocks/accelerator/south
+execute positioned -1985 45 -599 run function medabots_server:set_blocks/accelerator/east
+execute positioned -1983 45 -604 run function medabots_server:set_blocks/accelerator/east
+execute positioned -1983 45 -613 run function medabots_server:set_blocks/accelerator/east
+execute positioned -1985 45 -618 run function medabots_server:set_blocks/accelerator/east
 teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=-1] -1999 45 -605
 teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=0] -1998 45 -612
 teleport @s[tag=-1] -1999 45 -605

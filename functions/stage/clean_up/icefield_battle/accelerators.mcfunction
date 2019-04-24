@@ -1,4 +1,3 @@
-fill -2022 45 -632 -1975 45 -585 minecraft:air replace minecraft:comparator
 scoreboard players set @a[scores={Stage=48}] Music 0
 scoreboard players set @a[scores={Stage=48}] MusicType 1
 scoreboard players set @a[scores={Stage=48}] Battle 0

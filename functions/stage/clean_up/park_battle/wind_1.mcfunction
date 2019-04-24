@@ -1,9 +1,3 @@
-fill -1945 45 -563 -1945 48 -563 minecraft:air
-fill -1946 45 -562 -1946 48 -562 minecraft:air
-fill -1947 45 -561 -1947 48 -561 minecraft:air
-fill -1973 45 -589 -1924 45 -540 minecraft:air replace minecraft:stone_slab
-fill -1973 45 -589 -1924 45 -540 minecraft:air replace minecraft:comparator
-fill -1973 45 -589 -1924 45 -540 minecraft:grass_block replace minecraft:dirt
 scoreboard players set @a[scores={Stage=50}] Music 0
 scoreboard players set @a[scores={Stage=50}] MusicType 1
 scoreboard players set @a[scores={Stage=50}] Battle 0

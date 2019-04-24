@@ -1,5 +1,3 @@
-fill -1996 45 -608 -1996 48 -608 minecraft:air
-fill -2001 45 -609 -2001 48 -609 minecraft:air
 scoreboard players set @a[scores={Stage=48}] Music 0
 scoreboard players set @a[scores={Stage=48}] MusicType 1
 scoreboard players set @a[scores={Stage=48}] Battle 0

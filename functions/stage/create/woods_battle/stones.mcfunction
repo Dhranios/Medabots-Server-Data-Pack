@@ -1,19 +1,19 @@
-setblock -1939 45 -621 minecraft:stone_slab
-setblock -1939 45 -612 minecraft:stone_slab
-setblock -1944 45 -607 minecraft:stone_slab
-setblock -1953 45 -607 minecraft:stone_slab
-setblock -1958 45 -612 minecraft:stone_slab
-setblock -1958 45 -621 minecraft:stone_slab
-setblock -1953 45 -626 minecraft:stone_slab
-setblock -1944 45 -626 minecraft:stone_slab
-setblock -1931 45 -608 minecraft:stone_slab
-setblock -1940 45 -599 minecraft:stone_slab
-setblock -1957 45 -599 minecraft:stone_slab
-setblock -1966 45 -608 minecraft:stone_slab
-setblock -1966 45 -625 minecraft:stone_slab
-setblock -1957 45 -634 minecraft:stone_slab
-setblock -1940 45 -634 minecraft:stone_slab
-setblock -1931 45 -625 minecraft:stone_slab
+execute positioned -1939 45 -621 run function medabots_server:set_blocks/stone
+execute positioned -1939 45 -612 run function medabots_server:set_blocks/stone
+execute positioned -1944 45 -607 run function medabots_server:set_blocks/stone
+execute positioned -1953 45 -607 run function medabots_server:set_blocks/stone
+execute positioned -1958 45 -612 run function medabots_server:set_blocks/stone
+execute positioned -1958 45 -621 run function medabots_server:set_blocks/stone
+execute positioned -1953 45 -626 run function medabots_server:set_blocks/stone
+execute positioned -1944 45 -626 run function medabots_server:set_blocks/stone
+execute positioned -1931 45 -608 run function medabots_server:set_blocks/stone
+execute positioned -1940 45 -599 run function medabots_server:set_blocks/stone
+execute positioned -1957 45 -599 run function medabots_server:set_blocks/stone
+execute positioned -1966 45 -608 run function medabots_server:set_blocks/stone
+execute positioned -1966 45 -625 run function medabots_server:set_blocks/stone
+execute positioned -1957 45 -634 run function medabots_server:set_blocks/stone
+execute positioned -1940 45 -634 run function medabots_server:set_blocks/stone
+execute positioned -1931 45 -625 run function medabots_server:set_blocks/stone
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=-1] -1954 45 -616
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=0] -1943 45 -617
 teleport @s[tag=-1] -1954 45 -616

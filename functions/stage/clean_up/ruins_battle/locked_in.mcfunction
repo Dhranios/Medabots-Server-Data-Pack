@@ -1,8 +1,3 @@
-fill -1996 45 -569 -1997 48 -569 minecraft:air
-fill -1988 45 -560 -1988 48 -561 minecraft:air
-fill -1997 45 -552 -1996 48 -552 minecraft:air
-fill -2005 45 -561 -2005 48 -560 minecraft:air
-fill -2017 44 -581 -1976 44 -540 minecraft:grass_block replace minecraft:dirt
 scoreboard players set @a[scores={Stage=49}] Music 0
 scoreboard players set @a[scores={Stage=49}] MusicType 1
 scoreboard players set @a[scores={Stage=49}] Battle 0

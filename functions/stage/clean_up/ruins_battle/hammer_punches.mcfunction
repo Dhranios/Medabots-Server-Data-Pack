@@ -1,4 +1,3 @@
-fill -2017 44 -581 -1976 44 -540 minecraft:grass_block replace minecraft:dirt
 scoreboard players set @a[scores={Stage=49}] Music 0
 scoreboard players set @a[scores={Stage=49}] MusicType 1
 scoreboard players set @a[scores={Stage=49}] Battle 0

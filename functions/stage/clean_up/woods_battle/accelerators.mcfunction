@@ -1,5 +1,3 @@
-fill -1972 44 -640 -1925 44 -593 minecraft:grass_block replace minecraft:dirt
-fill -1972 45 -640 -1925 45 -593 minecraft:air replace minecraft:comparator
 scoreboard players set @a[scores={Stage=47}] Music 0
 scoreboard players set @a[scores={Stage=47}] MusicType 1
 scoreboard players set @a[scores={Stage=47}] Battle 0
