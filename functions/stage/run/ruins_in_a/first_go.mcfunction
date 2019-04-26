@@ -54,12 +54,9 @@ execute if block -1682 43 -254 minecraft:blue_wool run tag @e[x=-1682.5,y=44,z=-
 execute if block -1683 43 -253 minecraft:blue_wool run tag @e[x=-1682.5,y=44,z=-256,tag=alarm] add enabled
 execute if block -1684 43 -254 minecraft:blue_wool run tag @e[x=-1682.5,y=44,z=-256,tag=alarm] add enabled
 execute if block -1683 43 -255 minecraft:blue_wool if block -1682 43 -254 minecraft:blue_wool if block -1683 43 -253 minecraft:blue_wool if block -1684 43 -254 minecraft:blue_wool run tag @e[x=-1682.5,y=44,z=-256,tag=alarm] remove enabled
-execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1656.5,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add extend
-execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1656.5,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove retract
-execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1642.5,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add extend
-execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1642.5,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove retract
-execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1725,y=43,z=-323,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add retract
-execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1725,y=43,z=-323,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove extend
+execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1656.5,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add enabled
+execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1642.5,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add enabled
+execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1725,y=43,z=-323,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove enabled
 execute if block -1656 43 -304 minecraft:light_blue_wool run scoreboard players add @e[x=-1655,y=43,z=-318,dx=1,dy=3,dz=4,type=minecraft:area_effect_cloud,tag=fan,tag=!changed] Moving 1
 execute if block -1656 43 -304 minecraft:light_blue_wool run tag @e[x=-1655,y=43,z=-318,dx=1,dy=3,dz=4,type=minecraft:area_effect_cloud,tag=fan,tag=!changed] add changed
 execute if block -1656 43 -304 minecraft:blue_wool run scoreboard players remove @e[x=-1655,y=43,z=-318,dx=1,dy=3,dz=4,type=minecraft:area_effect_cloud,tag=fan,tag=changed] Moving 1

@@ -12,10 +12,8 @@ scoreboard players reset #temp Time
 execute if block -1903 44 -561 minecraft:quartz_pillar unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=press_wall_timer] run summon minecraft:area_effect_cloud -1906 44 -555 {CustomName:'{"translate":"medabots_server:block.press_wall"}',Tags:["press_wall_timer"],Duration:2147483647}
 scoreboard players add @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer] Time 1
 scoreboard players set @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,scores={Time=400}] Time 0
-execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,scores={Time=0}] run tag @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall] add extend
-execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,scores={Time=0}] run tag @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall] remove retract
-execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,scores={Time=80}] run tag @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall] remove extend
-execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,scores={Time=80}] run tag @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall] add retract
+execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,scores={Time=0}] run tag @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall] add enabled
+execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,scores={Time=80}] run tag @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall] remove enabled
 execute if block -1878 45 -561 minecraft:iron_door[open=true] if block -1876 45 -571 minecraft:iron_door[open=false] if entity @s[x=-1880,y=44,z=-561,dx=3,dy=3,dz=3] run function medabots_server:stage/create/boxer/first_go_battle/0
 execute if entity @e[x=-1871.5,y=44,z=-553.5,distance=..0.7,tag=mission,scores={Time=81}] store result score @s BattlingMedabots if entity @e[x=-1880,y=42,z=-562,dx=15,dy=7,dz=15,scores={Stage=29,Medabot=0..,Battle=1..}]
 execute if entity @e[x=-1871.5,y=44,z=-553.5,distance=..0.7,tag=mission,scores={Time=81}] run title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}

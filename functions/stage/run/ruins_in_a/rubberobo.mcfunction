@@ -36,12 +36,9 @@ execute if block -1724 45 -287 minecraft:iron_door[open=true] if block -1723 43 
 execute if block -1717 45 -299 minecraft:iron_door[open=false] if block -1716 43 -297 minecraft:yellow_wool run setblock -1717 44 -299 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
 execute if block -1717 45 -299 minecraft:iron_door[open=true] if block -1716 43 -297 minecraft:orange_wool run setblock -1717 44 -299 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
 execute if block -1717 45 -317 minecraft:iron_door[open=false] if block -1727 43 -303 minecraft:lime_wool run setblock -1717 44 -317 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add extend
-execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove retract
-execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add extend
-execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove retract
-execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add retract
-execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove extend
+execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add enabled
+execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add enabled
+execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove enabled
 execute if block -1694 45 -259 minecraft:iron_door[open=true] run tag @e[x=-1646.5,y=44,z=-289.5,distance=..0.7,tag=action_floor] add enabled
 execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1707.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled
 execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1707.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] remove enabled
