@@ -14,10 +14,14 @@ teleport @s[scores={Moving=4}] ~ ~ ~-1
 # Move entities on top
 execute if entity @s[scores={Moving=1..}] if entity @e[distance=..0.7,tag=cannon] run fill ~ ~2 ~ ~ ~2 ~ minecraft:air replace minecraft:barrier
 execute if entity @s[scores={Moving=1..}] if entity @e[distance=..0.7,tag=cannon] run fill ~ ~ ~ ~ ~ ~ minecraft:air replace minecraft:iron_block
-execute if entity @s[scores={Moving=1}] run teleport @e[distance=..0.7,tag=hostile] ~1 ~ ~
-execute if entity @s[scores={Moving=2}] run teleport @e[distance=..0.7,tag=hostile] ~ ~ ~1
-execute if entity @s[scores={Moving=3}] run teleport @e[distance=..0.7,tag=hostile] ~-1 ~ ~
-execute if entity @s[scores={Moving=4}] run teleport @e[distance=..0.7,tag=hostile] ~ ~ ~-1
+execute if entity @s[scores={Moving=1}] run teleport @e[distance=..0.7,tag=hostile,type=!minecraft:player] ~1 ~ ~
+execute if entity @s[scores={Moving=2}] run teleport @e[distance=..0.7,tag=hostile,type=!minecraft:player] ~ ~ ~1
+execute if entity @s[scores={Moving=3}] run teleport @e[distance=..0.7,tag=hostile,type=!minecraft:player] ~-1 ~ ~
+execute if entity @s[scores={Moving=4}] run teleport @e[distance=..0.7,tag=hostile,type=!minecraft:player] ~ ~ ~-1
+execute if entity @s[scores={Moving=1}] run teleport @a[distance=..0.7,tag=hostile] ~1 ~0.1 ~
+execute if entity @s[scores={Moving=2}] run teleport @a[distance=..0.7,tag=hostile] ~ ~0.1 ~1
+execute if entity @s[scores={Moving=3}] run teleport @a[distance=..0.7,tag=hostile] ~-1 ~0.1 ~
+execute if entity @s[scores={Moving=4}] run teleport @a[distance=..0.7,tag=hostile] ~ ~0.1 ~-1
 
 # Remove old block
 execute at @s[scores={Moving=1..}] run fill ~-1 ~-1 ~-1 ~1 ~-1 ~1 minecraft:water replace minecraft:acacia_planks

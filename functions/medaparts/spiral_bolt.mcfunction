@@ -6,10 +6,10 @@ replaceitem entity @s[scores={Time=10..12,Drop=0}] hotbar.4 minecraft:snowball{d
 execute if entity @s[scores={Time=10},type=!minecraft:player] anchored eyes run summon minecraft:snowball ^ ^ ^1 {CustomName:'{"translate":"medabots_server:move.kuwagata"}',Tags:["spiral_bolt","cpu_owned","enemy_team"],NoGravity:1b}
 
 # Remove the weapon from user
-clear @s[scores={Time=50}] minecraft:snowball{medabots_server:{id:"medabots_server:spiral_bolt"}}
+clear @s[scores={Time=50..}] minecraft:snowball{medabots_server:{id:"medabots_server:spiral_bolt"}}
 
 # Give back the original medal
-replaceitem entity @s[scores={Time=50}] hotbar.4 minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kuwagata_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:kuwagata_medal",move:"medaforce_charge",part:"medal",activated:1b,version:1}} 50
+replaceitem entity @s[scores={Time=50..}] hotbar.4 minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kuwagata_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:kuwagata_medal",move:"medaforce_charge",part:"medal",activated:1b,version:1}} 50
 
 # Finish the move
 scoreboard players set @s[scores={Time=50..}] Medaforce 0

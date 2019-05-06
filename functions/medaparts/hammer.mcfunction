@@ -20,8 +20,8 @@ replaceitem entity @s[scores={Hammer=1..,Time=20..22},type=!minecraft:player] we
 scoreboard players remove @s[scores={Hammer=2,Time=22}] HeadUses 1
 
 # Remove the weapon
-clear @s[scores={Time=60}] minecraft:iron_axe{medabots_server:{id:"medabots_server:hammer"}}
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.mainhand minecraft:air
+clear @s[scores={Time=60..}] minecraft:iron_axe{medabots_server:{id:"medabots_server:hammer"}}
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.mainhand minecraft:air
 
 # Give back the original part
 replaceitem entity @s[scores={MedapartType=1,Time=60..,Drop=0}] hotbar.1 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:32,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.dorcus_intensebeat"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}','{"italic":false,"color":"white","translate":"medabots_server:move.hammer.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.dorcus"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.dorcus_intensebeat.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.dorcus_intensebeat.model"}']},medabots_server:{id:"medabots_server:dorcus_intensebeat",gender:0b,move:"hammer",part:"left_arm",armor:45,power:52,activated:1b,version:1}}

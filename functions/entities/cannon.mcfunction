@@ -40,14 +40,14 @@ scoreboard players set @s[scores={CannonFire=-1},tag=!detected] CannonFire 0
 scoreboard players set @s[scores={CannonFire=1..},tag=!detected] CannonFire 0
 
 # Rotate cannon
-execute if entity @s[tag=rotate_over_x_negative,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
-execute if entity @s[tag=rotate_over_z_negative,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
-execute if entity @s[tag=rotate_over_x_positive,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
-execute if entity @s[tag=rotate_over_z_positive,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
-execute if entity @s[tag=rotate_over_x_negative,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
-execute if entity @s[tag=rotate_over_z_negative,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
-execute if entity @s[tag=rotate_over_x_positive,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
-execute if entity @s[tag=rotate_over_z_positive,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_x_negative,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_z_negative,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_x_positive,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_z_positive,scores={CannonFire=-1..0,Time=0..},tag=!detect] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_x_negative,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_z_negative,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_x_positive,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotate_over_z_positive,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected] run function medabots_server:entities/cannon/turn
 
 # Allow rotating only on the second tick
 scoreboard players set @s[scores={Time=-1}] Time 20

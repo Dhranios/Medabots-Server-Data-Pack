@@ -25,3 +25,5 @@ execute if block ~ ~-1 ~ minecraft:black_glazed_terracotta[facing=west] run tag 
 execute if block ~ ~-1 ~ minecraft:stone_bricks run tag @s add stone_bricks
 execute if block ~ ~-1 ~ minecraft:cyan_terracotta run tag @s add cyan_terracotta
 scoreboard players add @s Time 20
+setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=false]
+setblock ~ ~2 ~ minecraft:stone_button[face=floor,facing=south]

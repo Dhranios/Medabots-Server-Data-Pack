@@ -3,6 +3,7 @@ execute unless entity @s[scores={Time=0..}] run scoreboard players add @s Time 2
 
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
+execute if entity @s[tag=dead] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
 kill @s[tag=dead]
 
 # Coundown shooting

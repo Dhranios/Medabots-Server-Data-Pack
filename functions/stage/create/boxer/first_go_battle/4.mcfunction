@@ -1,22 +1,22 @@
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=4] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=4] run function medabots_server:stage/create/boxer/first_go_battle/4_cpu
-summon minecraft:item -1914 44 -588 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
-setblock -1902 44 -585 minecraft:stone_slab
-setblock -1904 44 -583 minecraft:stone_slab
-setblock -1906 44 -581 minecraft:stone_slab
-setblock -1908 44 -584 minecraft:stone_slab
-setblock -1911 44 -583 minecraft:stone_slab
-setblock -1911 44 -586 minecraft:stone_slab
-setblock -1913 44 -587 minecraft:stone_slab
-setblock -1911 44 -590 minecraft:stone_slab
-setblock -1911 44 -592 minecraft:stone_slab
-setblock -1909 44 -595 minecraft:stone_slab
-setblock -1906 44 -593 minecraft:stone_slab
-setblock -1903 44 -594 minecraft:stone_slab
-setblock -1902 44 -592 minecraft:stone_slab
-setblock -1900 44 -590 minecraft:stone_slab
-setblock -1900 44 -587 minecraft:stone_slab
-setblock -1900 44 -581 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/door",mode:"LOAD"}
+execute positioned -1914 44 -588 run function medabots_server:spawn_entities/item/10_medallar_cents
+execute positioned -1902 44 -585 run function medabots_server:set_blocks/stone
+execute positioned -1904 44 -583 run function medabots_server:set_blocks/stone
+execute positioned -1906 44 -581 run function medabots_server:set_blocks/stone
+execute positioned -1908 44 -584 run function medabots_server:set_blocks/stone
+execute positioned -1911 44 -583 run function medabots_server:set_blocks/stone
+execute positioned -1911 44 -586 run function medabots_server:set_blocks/stone
+execute positioned -1913 44 -587 run function medabots_server:set_blocks/stone
+execute positioned -1911 44 -590 run function medabots_server:set_blocks/stone
+execute positioned -1911 44 -592 run function medabots_server:set_blocks/stone
+execute positioned -1909 44 -595 run function medabots_server:set_blocks/stone
+execute positioned -1906 44 -593 run function medabots_server:set_blocks/stone
+execute positioned -1903 44 -594 run function medabots_server:set_blocks/stone
+execute positioned -1902 44 -592 run function medabots_server:set_blocks/stone
+execute positioned -1900 44 -590 run function medabots_server:set_blocks/stone
+execute positioned -1900 44 -587 run function medabots_server:set_blocks/stone
+tag @e[x=-1899.5,y=44,z=-580.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

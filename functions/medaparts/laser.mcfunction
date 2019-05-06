@@ -20,10 +20,10 @@ replaceitem entity @s[scores={Laser=1..,Time=40..42},type=!minecraft:player] wea
 scoreboard players remove @s[scores={Laser=2,Time=42}] HeadUses 1
 
 # Remove the weapon
-clear @s[scores={Time=80}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
-clear @s[scores={Time=80}] minecraft:bow{medabots_server:{id:"medabots_server:laser"}}
-replaceitem entity @s[scores={Time=80},type=!minecraft:player] weapon.offhand minecraft:air
-replaceitem entity @s[scores={Time=80},type=!minecraft:player] weapon.mainhand minecraft:air
+clear @s[scores={Time=80..}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
+clear @s[scores={Time=80..}] minecraft:bow{medabots_server:{id:"medabots_server:laser"}}
+replaceitem entity @s[scores={Time=80..},type=!minecraft:player] weapon.offhand minecraft:air
+replaceitem entity @s[scores={Time=80..},type=!minecraft:player] weapon.mainhand minecraft:air
 
 # Give back the original part
 replaceitem entity @s[scores={MedapartType=1,Time=80..,Drop=0}] hotbar.2 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:26,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.aimflash_zoom"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.laser"}','{"italic":false,"color":"white","translate":"medabots_server:move.laser.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"20"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.aimflash"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.aimflash_zoom.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.aimflash_zoom.model"}']},medabots_server:{id:"medabots_server:aimflash_zoom",gender:0b,move:"laser",part:"right_arm",armor:20,power:27,activated:1b,version:1}}

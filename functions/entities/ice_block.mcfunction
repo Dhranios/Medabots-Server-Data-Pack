@@ -25,24 +25,20 @@ execute if entity @s[scores={Moving=1..}] run function medabots_server:entities/
 scoreboard players set @s[tag=!valid_move,scores={Moving=0..}] Moving 0
 execute if entity @s[scores={Moving=1..}] if block ~ ~-1 ~ #minecraft:ice run tag @s add on_ice
 
-# Move bit by bit if on ice
-execute at @s run teleport @s[scores={Moving=1},tag=on_ice] ~0.2 ~ ~
-execute at @s run teleport @s[scores={Moving=2},tag=on_ice] ~ ~ ~0.2
-execute at @s run teleport @s[scores={Moving=3},tag=on_ice] ~-0.2 ~ ~
-execute at @s run teleport @s[scores={Moving=4},tag=on_ice] ~ ~ ~-0.2
-
-# Move whole block if not on ice
-execute at @s run teleport @s[scores={Moving=1},tag=!on_ice] ~1 ~ ~
-execute at @s run teleport @s[scores={Moving=2},tag=!on_ice] ~ ~ ~1
-execute at @s run teleport @s[scores={Moving=3},tag=!on_ice] ~-1 ~ ~
-execute at @s run teleport @s[scores={Moving=4},tag=!on_ice] ~ ~ ~-1
+# Move
+execute at @s run teleport @s[scores={Moving=1}] ~0.2 ~ ~
+execute at @s run teleport @s[scores={Moving=2}] ~ ~ ~0.2
+execute at @s run teleport @s[scores={Moving=3}] ~-0.2 ~ ~
+execute at @s run teleport @s[scores={Moving=4}] ~ ~ ~-0.2
+scoreboard players add @s[scores={Moving=1..,Steps=0..3}] Steps 1
 
 # Form thin ice in water
 execute if entity @s[tag=freezing] run function medabots_server:entities/ice_block/freeze
 
 # Stop moving if not on ice
-scoreboard players set @s[scores={Moving=1..},tag=!on_ice] Moving 0
+scoreboard players set @s[scores={Moving=1..,Steps=4},tag=!on_ice] Moving 0
 tag @s remove on_ice
+scoreboard players set @s[scores={Moving=0}] Steps 0
 
 # Fall
 execute if entity @s[scores={Time=1}] if block ~ ~-0.2 ~ minecraft:air run playsound medabots_server:block.moving_block.fall block @a ~ ~ ~ 1

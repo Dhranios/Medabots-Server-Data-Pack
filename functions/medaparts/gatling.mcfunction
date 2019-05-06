@@ -27,10 +27,10 @@ replaceitem entity @s[scores={Charge=50,Time=20}] weapon.offhand minecraft:tippe
 scoreboard players remove @s[scores={Gatling=2,Time=22}] HeadUses 1
 
 # Remove the weapon
-clear @s[scores={Time=140}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
-clear @s[scores={Time=140}] minecraft:bow{medabots_server:{id:"medabots_server:gatling"}}
-replaceitem entity @s[scores={Time=140},type=!minecraft:player] weapon.offhand minecraft:air
-replaceitem entity @s[scores={Time=140},type=!minecraft:player] weapon.mainhand minecraft:air
+clear @s[scores={Time=140..}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
+clear @s[scores={Time=140..}] minecraft:bow{medabots_server:{id:"medabots_server:gatling"}}
+replaceitem entity @s[scores={Time=140..},type=!minecraft:player] weapon.offhand minecraft:air
+replaceitem entity @s[scores={Time=140..},type=!minecraft:player] weapon.mainhand minecraft:air
 
 # Give back the original part
 replaceitem entity @s[scores={MedapartType=1,Time=140..,Drop=0}] hotbar.1 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_blaster"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.gatling"}','{"italic":false,"color":"white","translate":"medabots_server:move.gatling.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.saikachis"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_blaster.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_blaster.model"}']},medabots_server:{id:"medabots_server:saikachis_blaster",gender:0b,move:"gatling",part:"left_arm",armor:45,power:26,activated:1b,version:1}}

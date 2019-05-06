@@ -26,9 +26,9 @@ execute positioned -1931 45 -580 run function medabots_server:set_blocks/wall
 execute positioned -1931 45 -579 run function medabots_server:set_blocks/wall
 execute positioned -1934 45 -573 run function medabots_server:set_blocks/wall
 execute positioned -1933 45 -573 run function medabots_server:set_blocks/wall
-execute positioned -1947 45 run function medabots_server:set_blocks/wall
-execute positioned -1946 45 run function medabots_server:set_blocks/wall
-execute positioned -1945 45 run function medabots_server:set_blocks/wall
+execute positioned -1947 45 -568 run function medabots_server:set_blocks/wall
+execute positioned -1946 45 -567 run function medabots_server:set_blocks/wall
+execute positioned -1945 45 -566 run function medabots_server:set_blocks/wall
 teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,tag=-1] -1929 45 -577
 teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,tag=0] -1942 45 -578
 teleport @s[tag=-1] -1929 45 -577

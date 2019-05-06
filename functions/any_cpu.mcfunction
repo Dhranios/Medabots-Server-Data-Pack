@@ -3,14 +3,15 @@ function medabots_server:any_medabot
 
 # Select random part
 scoreboard players set @s[scores={Dialog=60}] Dialog 0
+execute unless entity @s[scores={Dialog=-200..}] run scoreboard players add @s Sound 0
 execute unless entity @s[scores={Dialog=-200..}] run scoreboard players add @s Dialog 0
-execute if entity @s[scores={Time=0,Dialog=0}] run tag @s remove legs_selected
-execute if entity @s[scores={Time=0,Dialog=0}] run tag @s remove left_arm_selected
-execute if entity @s[scores={Time=0,Dialog=0}] run tag @s remove right_arm_selected
-execute if entity @s[scores={Time=0,Dialog=0}] run tag @s remove head_selected
-execute if entity @s[scores={Time=0,Dialog=0}] run tag @s remove medaforce_selected
-execute unless entity @s[scores={Medaforce=1..}] if entity @a[distance=..16,scores={Battle=1}] run scoreboard players add @s[scores={Battle=1,Time=0,Dialog=0}] Dialog 1
-execute unless entity @s[scores={Medaforce=1..}] run scoreboard players add @s[scores={Dialog=1..59}] Dialog 1
+execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove legs_selected
+execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove left_arm_selected
+execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove right_arm_selected
+execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove head_selected
+execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove medaforce_selected
+execute unless entity @s[scores={Medaforce=1}] if entity @a[distance=..16,scores={Battle=1}] run scoreboard players add @s[scores={Battle=1,Time=0,Dialog=0}] Dialog 1
+execute unless entity @s[scores={Medaforce=1}] run scoreboard players add @s[scores={Dialog=1..59}] Dialog 1
 scoreboard players add @s[scores={Dialog=-200..-1}] Dialog 1
 execute if entity @s[scores={Dialog=60,LegsArmor=1..},tag=fly_legs] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","legs"],Duration:1}
 execute if entity @s[scores={Dialog=60,LeftArmArmor=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","left"],Duration:1}
@@ -47,11 +48,11 @@ clear @s[tag=medal_damage] minecraft:nether_star 1
 tag @s[tag=medal_damage] remove medal_damage
 
 # Activate appropriate medapart
-execute if entity @s[tag=right_arm_selected,scores={Time=0,Dialog=60}] run function medabots_server:medaparts/cpu_right_arm
-execute if entity @s[tag=head_selected,scores={Time=0,Dialog=60}] run function medabots_server:medaparts/cpu_head
-execute if entity @s[tag=left_arm_selected,scores={Time=0,Dialog=60}] run function medabots_server:medaparts/cpu_left_arm
+execute if entity @s[tag=right_arm_selected,scores={Time=0,Dialog=60}] run function medabots_server:medaparts/activate_medaparts/cpu_right_arm
+execute if entity @s[tag=head_selected,scores={Time=0,Dialog=60}] run function medabots_server:medaparts/activate_medaparts/cpu_head
+execute if entity @s[tag=left_arm_selected,scores={Time=0,Dialog=60}] run function medabots_server:medaparts/activate_medaparts/cpu_left_arm
 execute if entity @s[tag=medaforce_selected,scores={Time=0,Dialog=60}] unless entity @s[scores={Medaforce=2..}] run scoreboard players set @s Medaforce 1
-execute if entity @s[scores={Medaforce=2..,Time=0,Dialog=60},tag=medaforce_selected] run function medabots_server:medaparts/cpu_medaforce
+execute if entity @s[scores={Medaforce=2..,Time=0,Dialog=60},tag=medaforce_selected] run function medabots_server:medaparts/activate_medaparts/cpu_medaforce
 
 # Play walking sound and animation
 tag @s remove walking

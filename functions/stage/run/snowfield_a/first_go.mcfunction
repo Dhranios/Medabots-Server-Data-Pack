@@ -32,13 +32,13 @@ execute if entity @s[scores={BattlingMedabots=1,Death=0}] run kill @e[x=-1668,y=
 execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:snowfield_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1652 46 -229 minecraft:iron_door[open=true] if entity @s[x=-1655,y=45,z=-231,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_a/first_go_battle/1
-execute if entity @e[x=-1582.5,y=45,z=-196.5,distance=..0.7,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1667,y=42,z=-246,dx=18,dy=7,dz=28,scores={Stage=5,Medabot=0..,Battle=1..}]
+execute if entity @e[x=-1668,y=42,z=-247,dx=105,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1667,y=42,z=-246,dx=18,dy=7,dz=28,scores={Stage=5,Medabot=0..,Battle=1..}]
 execute as @e[x=-1668,y=42,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
 execute if entity @s[scores={BattlingMedabots=1,Death=0}] run function medabots_server:stage/clean_up/snowfield_a/first_go
 stopsound @s[scores={BattlingMedabots=1,Death=0}] music
 playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0}] -1620 51 -216 14
 scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] MusicType 22
+scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Music 299
 advancement grant @s[scores={BattlingMedabots=1,Death=0}] only medabots_server:stages/wave_1/snowfield_a_first_go
 teleport @s[scores={BattlingMedabots=1,Death=0}] -1620 51 -216 -180 0

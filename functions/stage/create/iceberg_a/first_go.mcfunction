@@ -32,11 +32,11 @@ execute positioned -1690 44 -189 run function medabots_server:set_blocks/floor_s
 execute positioned -1689 44 -190 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1689 44 -189 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1688 44 -190 run function medabots_server:set_blocks/floor_switch/blue
-execute positioned -1748 44 -242 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1688 44 -189 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1691 44 -240 run function medabots_server:set_blocks/drawbridge/south
 execute positioned -1688 44 -240 run function medabots_server:set_blocks/drawbridge/west
 execute positioned -1713 44 -226 run function medabots_server:set_blocks/drawbridge/east
-execute positioned -1713 44 -227 run function medabots_server:set_blocks/drawbridge/east
+execute positioned -1713 44 -225 run function medabots_server:set_blocks/drawbridge/east
 execute positioned -1721 44 -237 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1723 44 -241 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1726 44 -239 run function medabots_server:set_blocks/hole/delay_5
@@ -117,6 +117,10 @@ execute positioned -1680 44 -194 run function medabots_server:set_blocks/pot/bom
 execute positioned -1680 44 -188 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1695 44 -240 run function medabots_server:set_blocks/bridge
 execute positioned -1694 44 -240 run function medabots_server:set_blocks/bridge
+execute positioned -1693 44 -240 run function medabots_server:set_blocks/bridge
+execute positioned -1692 44 -240 run function medabots_server:set_blocks/bridge
+execute positioned -1695 44 -239 run function medabots_server:set_blocks/bridge
+execute positioned -1694 44 -239 run function medabots_server:set_blocks/bridge
 execute positioned -1693 44 -239 run function medabots_server:set_blocks/bridge
 execute positioned -1692 44 -239 run function medabots_server:set_blocks/bridge
 execute positioned -1689 44 -239 run function medabots_server:set_blocks/bridge

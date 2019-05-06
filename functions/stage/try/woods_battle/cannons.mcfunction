@@ -1,2 +1,1 @@
-execute if entity @s[tag=!vs_cpus] run function medabots_server:stage/create/woods_battle/cannons_initialization
-execute if entity @s[tag=vs_cpus] run tellraw @s {"text":"Sorry, but versus computer enemies is not supported for non-story battle versions of this stage yet."}
+function medabots_server:stage/create/woods_battle/cannons_initialization

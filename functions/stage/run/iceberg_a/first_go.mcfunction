@@ -22,15 +22,15 @@ execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switc
 execute if block -1751 43 -212 minecraft:light_blue_wool run tag @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1751 43 -212 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=30..70}] run tag @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,tag=open] remove open
 execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=40..80}] run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1696 43 -239 minecraft:lime_wool run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1740 43 -192 minecraft:lime_wool run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1744 43 -192 minecraft:yellow_wool run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1740 43 -192 minecraft:green_wool if block -1744 43 -192 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=40..80}] run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
 execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=50..90}] run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1698 43 -239 minecraft:lime_wool run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1738 43 -192 minecraft:lime_wool run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1725 43 -207 minecraft:yellow_wool run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1738 43 -192 minecraft:green_wool if block -1725 43 -207 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=50..90}] run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
 execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=60..100}] run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1698 43 -239 minecraft:lime_wool run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1736 43 -192 minecraft:lime_wool run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1727 43 -222 minecraft:yellow_wool run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1736 43 -192 minecraft:green_wool if block -1727 43 -222 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=60..100}] run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
 execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=70..110}] run tag @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open

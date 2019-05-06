@@ -35,3 +35,4 @@ execute if entity @s[tag=algae] run function medabots_server:blocks/algae
 execute if entity @s[tag=bridge] run function medabots_server:blocks/bridge
 execute if entity @s[tag=stone] run function medabots_server:blocks/stone
 execute if entity @s[tag=accelerator] run function medabots_server:blocks/accelerator
+execute if entity @s[tag=whrilpool] run function medabots_server:blocks/whrilpool

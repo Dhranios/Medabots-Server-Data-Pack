@@ -15,10 +15,10 @@ scoreboard players set @s[scores={Sacrifice=1,Time=60}] LeftArmArmor 0
 scoreboard players set @s[scores={Sacrifice=3,Time=60}] RightArmArmor 0
 
 # Remove the weapon
-clear @s[scores={Time=60}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
-clear @s[scores={Time=60}] minecraft:bow{medabots_server:{id:"medabots_server:sacrifice"}}
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.offhand minecraft:air
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.mainhand minecraft:air
+clear @s[scores={Time=60..}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
+clear @s[scores={Time=60..}] minecraft:bow{medabots_server:{id:"medabots_server:sacrifice"}}
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.offhand minecraft:air
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.mainhand minecraft:air
 
 # Give back the original part
 replaceitem entity @s[scores={MedapartType=1,Time=60..,Drop=0}] hotbar.1 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:16,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bezelga_helming"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice"}','{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.1"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"15"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.bezelga"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.bezelga_helming.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.bezelga_helming.model"}']},medabots_server:{id:"medabots_server:bezelga_helming",gender:0b,move:"sacrifice",part:"left_arm",armor:15,power:85,activated:1b,version:1}}

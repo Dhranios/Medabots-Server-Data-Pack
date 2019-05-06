@@ -22,10 +22,10 @@ replaceitem entity @s[scores={Missile=2,Time=20..22},type=!minecraft:player] wea
 scoreboard players remove @s[scores={Missile=2,Time=22}] HeadUses 1
 
 # Remove the weapon
-clear @s[scores={Time=60}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
-clear @s[scores={Time=60}] minecraft:bow{medabots_server:{id:"medabots_server:laser"}}
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.offhand minecraft:air
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.mainhand minecraft:air
+clear @s[scores={Time=60..}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
+clear @s[scores={Time=60..}] minecraft:bow{medabots_server:{id:"medabots_server:laser"}}
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.offhand minecraft:air
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.mainhand minecraft:air
 
 # Give back the original part
 replaceitem entity @s[scores={MedapartType=1,Time=60..,Drop=0}] hotbar.3 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_balister"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.missile"}','{"italic":false,"color":"white","translate":"medabots_server:move.missile.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.more","with":[{"text":"6"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"75"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.saikachis"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_balister.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_balister.model"}']},medabots_server:{id:"medabots_server:saikachis_balister",gender:0b,move:"missile",part:"head",armor:75,power:28,uses:6,activated:1b,version:1}}

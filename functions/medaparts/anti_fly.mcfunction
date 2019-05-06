@@ -12,10 +12,10 @@ replaceitem entity @s[scores={AntiFly=1..,Time=20},type=!minecraft:player] weapo
 scoreboard players remove @s[scores={AntiFly=2,Time=22}] HeadUses 1
 
 # Remove the weapon
-clear @s[scores={Time=60}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
-clear @s[scores={Time=60}] minecraft:bow{medabots_server:{id:"medabots_server:anti_fly"}}
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.offhand minecraft:air
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.mainhand minecraft:air
+clear @s[scores={Time=60..}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
+clear @s[scores={Time=60..}] minecraft:bow{medabots_server:{id:"medabots_server:anti_fly"}}
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.offhand minecraft:air
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.mainhand minecraft:air
 
 # Give back the original part
 replaceitem entity @s[scores={MedapartType=1,Time=60..,Drop=0}] hotbar.2 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:53,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.sphere_doomers_electric_doomer"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.anti_fly"}','{"italic":false,"color":"white","translate":"medabots_server:move.anti_fly.description"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.neutral"}','{"italic":false,"color":"white","translate":"medabots_server:entity.sphere_doomers"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.sphere_doomers_electric_doomer.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.sphere_doomers_electric_doomer.model"}']},medabots_server:{id:"medabots_server:sphere_doomers_electric_doomer",gender:2b,move:"anti_fly",part:"right_arm",armor:40,power:24,activated:1b,version:1}}

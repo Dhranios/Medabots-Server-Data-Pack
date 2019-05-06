@@ -8,6 +8,6 @@ scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1,Death=0},tag=!story_battle] Music 299
 teleport @s[scores={BattlingMedabots=1,Death=0}] -1999 51 -608 -180 0
-tag @s[scores={BattlingMedabots=1,Dead=0},tag=story_battle,advancements={medabots_server:wave_1/story_progression={vs_spyke=true,vs_spyke_battle=false}}] add dialog_infinity_vs_spyke_battle
+tag @s[scores={BattlingMedabots=1,Death=0},tag=story_battle,advancements={medabots_server:wave_1/story_progression={vs_spyke=true,vs_spyke_battle=false}}] add dialog_infinity_vs_spyke_battle
 tag @s[scores={BattlingMedabots=1,Death=0}] remove story_battle
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

@@ -156,8 +156,8 @@ execute if entity @s[scores={AFKTime=1200..,Attack=1..}] run tellraw @a {"transl
 scoreboard players set @s[scores={Attack=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Drop=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
 scoreboard players set @s[scores={Drop=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Medaforce=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Medaforce=1..,AFKTime=1..}] AFKTime 0
+execute if entity @s[scores={AFKTime=1200..,Medaforce=1}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
+scoreboard players set @s[scores={Medaforce=1,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Jump=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
 scoreboard players set @s[scores={Jump=1..,AFKTime=1..}] AFKTime 0
 execute if entity @s[scores={AFKTime=1200..,Fall=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}

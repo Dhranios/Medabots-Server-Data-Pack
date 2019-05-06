@@ -1,2 +1,1 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.accelerator"}',Tags:["accelerator"],Duration:2147483647}
-setblock ~ ~ ~ minecraft:comparator[facing=south,mode=compare,powered=false]
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.accelerator"}',Tags:["accelerator","north"],Duration:2147483647}

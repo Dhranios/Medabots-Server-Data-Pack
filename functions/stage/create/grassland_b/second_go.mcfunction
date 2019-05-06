@@ -1,180 +1,161 @@
-summon minecraft:creeper -1558 45 -339 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1563 45 -360 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1552 45 -364 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1550 45 -363 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1547 45 -361 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1538 45 -366 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/2_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1534 45 -366 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/2_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1518 45 -367 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1514 45 -367 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1516 45 -370 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1512 45 -371 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:creeper -1515 45 -373 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-summon minecraft:zombie -1547 45 -341 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1557 45 -351 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon/2_medallar_cents",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1552 45 -352 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon/2_medallar_cents",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1565 45 -353 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon/2_medallar_cents",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1560 45 -354 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon/2_medallar_cents",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1538 45 -338 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1535 45 -342 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1526 45 -345 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","hostile","killerable","rotate_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1525 45 -362 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","hostile","killerable","look_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1525 45 -363 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","hostile","killerable","look_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1513 45 -383 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1548 45 -375 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1544 45 -377 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1543 45 -379 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1538 45 -382 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","rotate_over_x_negative","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1564 45 -374 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1566 45 -376 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1569 45 -378 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1569 45 -380 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_3","hostile","killerable","look_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1542 45 -390 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","hostile","killerable","rotate_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1542 45 -395 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","hostile","killerable","rotate_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1550 45 -405 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","hostile","killerable","rotate_over_z_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:zombie -1560 45 -410 {NoAI:1b,Silent:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:dispenser",Count:1b}],CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["delay_4","detect","hostile","killerable","rotate_over_x_positive","cannon"],DeathLootTable:"medabots_server:entities/cannon/4_medallar_cents",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"zombie.spawnReinforcements",Base:0.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,AbsorptionAmount:20.0f,Health:100.0f}
-summon minecraft:item -1553 45 -328 {Item:{id:"minecraft:lapis_lazuli",Count:4b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
-summon minecraft:item -1560 45 -331 {Item:{id:"minecraft:lapis_lazuli",Count:4b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
-summon minecraft:item -1534 45 -358 {Item:{id:"minecraft:lapis_lazuli",Count:10b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
-summon minecraft:item -1510 45 -387 {Item:{id:"minecraft:lapis_lazuli",Count:6b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
-summon minecraft:item -1533 45 -382 {Item:{id:"minecraft:lapis_lazuli",Count:4b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
-summon minecraft:area_effect_cloud -1559 45 -344 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","green_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1544 45 -374 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","green_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1541 45 -327 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","yellow_floor_switch","delay_20"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1564 45 -336 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","yellow_floor_switch","delay_20"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1522 45 -365 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","yellow_floor_switch","delay_20"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1522 45 -366 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","yellow_floor_switch","delay_20"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1522 45 -367 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","yellow_floor_switch","delay_20"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1555 45 -351 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1550 45 -352 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1563 45 -353 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1558 45 -354 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1566 45 -366 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","blue_floor_switch"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1562 45 -361 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1559 45 -363 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1553 45 -362 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1549 45 -359 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1513 45 -382 {CustomName:'{"translate":"medabots_server:entity.balloon_bomb"}',Tags:["balloon_bomb"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1540 45 -336 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1535 45 -338 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1539 45 -342 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1535 45 -345 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1529 45 -344 {CustomName:'{"translate":"medabots_server:block.hole"}',Tags:["hole","delay_5"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1554 44 -321 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1548 44 -341 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1547 44 -341 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1546 44 -341 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1534 44 -358 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1533 44 -359 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1513 44 -382 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1513 44 -383 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1510 44 -387 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1533 44 -382 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1542 44 -395 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1560 44 -410 {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1520 45 -368 {CustomName:'{"translate":"medabots_server:block.alarm"}',Tags:["alarm"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1520 45 -364 {CustomName:'{"translate":"medabots_server:block.alarm"}',Tags:["alarm"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1547 45 -336 {CustomName:'{"translate":"medabots_server:block.fan"}',Tags:["fan"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1568 45 -351 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","round_stone","moving_1"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1569 45 -352 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","round_stone","moving_1"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1569 45 -353 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","round_stone","moving_1"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1569 45 -354 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","round_stone","moving_1"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1521 45 -348 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","guard","slow","1_medallar_cent","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1526 45 -351 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","guard","slow","1_medallar_cent","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1517 45 -352 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","guard","slow","1_medallar_cent","enabled"],Duration:2147483647}
-summon minecraft:area_effect_cloud -1523 45 -355 {CustomName:'{"translate":"medabots_server:block.action_floor"}',Tags:["action_floor","guard","slow","1_medallar_cent","enabled"],Duration:2147483647}
-scoreboard players set @e[x=-1546.5,y=45,z=-335.5,distance=..0.7,tag=fan] Moving 0
-scoreboard players set @e[x=-1546.5,y=45,z=-335.5,distance=..0.7,tag=fan] Range 11
-setblock -1534 45 -324 minecraft:chest[facing=south,type=single]
-setblock -1546 45 -324 minecraft:chest[facing=south,type=single]
-setblock -1554 45 -321 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:4b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1548 45 -341 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1546 45 -341 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1553 45 -329 minecraft:chest[facing=south,type=single]
-setblock -1553 45 -327 minecraft:chest[facing=south,type=single]
-setblock -1554 45 -328 minecraft:chest[facing=south,type=single]
-setblock -1552 45 -328 minecraft:chest[facing=south,type=single]
-setblock -1560 45 -332 minecraft:chest[facing=south,type=single]
-setblock -1560 45 -330 minecraft:chest[facing=south,type=single]
-setblock -1561 45 -331 minecraft:chest[facing=south,type=single]
-setblock -1559 45 -331 minecraft:chest[facing=south,type=single]
-setblock -1564 45 -337 minecraft:chest[facing=south,type=single]
-setblock -1564 45 -335 minecraft:chest[facing=south,type=single]
-setblock -1565 45 -336 minecraft:chest[facing=south,type=single]
-setblock -1563 45 -336 minecraft:chest[facing=south,type=single]
-setblock -1558 45 -346 minecraft:chest[facing=south,type=single]
-setblock -1553 45 -347 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1562 45 -349 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1566 45 -366 minecraft:chest[facing=south,type=single]
-setblock -1524 45 -348 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1522 45 -352 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1518 45 -365 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1517 45 -363 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1516 45 -368 minecraft:chest[facing=south,type=single]
-setblock -1515 45 -365 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1514 45 -363 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1543 45 -373 minecraft:chest[facing=south,type=single]
-setblock -1552 45 -409 minecraft:chest[facing=south,type=single]
-setblock -1553 45 -408 minecraft:chest[facing=south,type=single]
-# Object: Cannon
-setblock -1553 45 -409 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b}]}
-setblock -1553 45 -410 minecraft:chest[facing=south,type=single]
-setblock -1554 45 -409 minecraft:chest[facing=south,type=single]
-setblock -1519 45 -384 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1522 45 -384 minecraft:chest[facing=south,type=single]
-setblock -1521 45 -382 minecraft:chest[facing=south,type=single]
-setblock -1525 45 -382 minecraft:chest[facing=south,type=single]
-setblock -1523 45 -381 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:lapis_lazuli",Count:2b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:medallar_cent"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.medallar_cent"}'}}}]}
-setblock -1521 45 -379 minecraft:chest[facing=south,type=single]
-setblock -1525 45 -379 minecraft:chest[facing=south,type=single]{Items:[{Slot:0b,id:"minecraft:fishing_rod",Count:1b,tag:{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:move.napalm.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.fly_falcon"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:fly_falcon_burncapsule",gender:0b,move:"napalm",part:"left_arm",armor:50,power:24,activated:0b,version:1}}}]}
-setblock -1523 45 -377 minecraft:chest[facing=south,type=single]
-setblock -1547 44 -336 minecraft:oak_planks
-fill -1543 45 -326 -1543 48 -326 minecraft:bedrock
-fill -1554 44 -322 -1554 48 -322 minecraft:bedrock
-fill -1558 45 -341 -1558 48 -341 minecraft:bedrock
-fill -1554 45 -368 -1554 48 -368 minecraft:bedrock
-fill -1523 45 -340 -1523 48 -340 minecraft:bedrock
-fill -1522 45 -375 -1522 48 -375 minecraft:bedrock
-fill -1521 45 -376 -1520 48 -376 minecraft:bedrock
-fill -1519 45 -377 -1519 48 -377 minecraft:bedrock
-fill -1518 45 -378 -1518 48 -378 minecraft:bedrock
-fill -1552 45 -374 -1552 48 -374 minecraft:bedrock
-fill -1558 45 -375 -1558 48 -375 minecraft:bedrock
-fill -1555 45 -376 -1555 48 -376 minecraft:bedrock
-fill -1560 45 -378 -1560 48 -378 minecraft:bedrock
-fill -1557 45 -380 -1557 48 -380 minecraft:bedrock
-fill -1538 45 -404 -1538 48 -404 minecraft:bedrock
-setblock -1547 45 -336 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/fan",mode:"LOAD"}
-setblock -1547 46 -336 minecraft:redstone_block
-setblock -1520 45 -368 minecraft:structure_block[mode=load]{name:"medabots_server:stage/alarm",mode:"LOAD"}
-setblock -1520 45 -364 minecraft:structure_block[mode=load]{name:"medabots_server:stage/alarm",mode:"LOAD"}
-setblock -1520 46 -368 minecraft:redstone_block
-setblock -1520 46 -364 minecraft:redstone_block
-setblock -1543 45 -327 minecraft:structure_block[mode=load]{rotation:"COUNTERCLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
-setblock -1560 45 -341 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
-setblock -1556 45 -368 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
-setblock -1521 45 -340 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/open_door",mode:"LOAD"}
-setblock -1544 45 -361 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
-setblock -1544 45 -363 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/door",mode:"LOAD"}
-setblock -1559 45 -385 minecraft:structure_block[mode=load]{name:"medabots_server:stage/door",mode:"LOAD"}
-setblock -1559 45 -386 minecraft:structure_block[mode=load]{name:"medabots_server:stage/open_door",mode:"LOAD"}
-setblock -1538 45 -403 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_90",name:"medabots_server:stage/open_door",mode:"LOAD"}
-setblock -1520 45 -389 minecraft:structure_block[mode=load]{rotation:"CLOCKWISE_180",name:"medabots_server:stage/door",mode:"LOAD"}
-setblock -1543 46 -327 minecraft:redstone_block
-setblock -1560 46 -341 minecraft:redstone_block
-setblock -1556 46 -368 minecraft:redstone_block
-setblock -1521 46 -340 minecraft:redstone_block
-setblock -1543 45 -361 minecraft:redstone_block
-setblock -1543 45 -361 minecraft:air
-setblock -1544 46 -363 minecraft:redstone_block
-setblock -1559 45 -384 minecraft:redstone_block
-setblock -1559 45 -384 minecraft:air
-setblock -1559 45 -387 minecraft:redstone_block
-setblock -1559 45 -387 minecraft:air
-setblock -1538 46 -403 minecraft:redstone_block
-setblock -1520 46 -389 minecraft:redstone_block
-setblock -1538 44 -326 minecraft:structure_block[mode=load]{name:"medabots_server:stage/starting_area",mode:"LOAD"}
-setblock -1538 45 -326 minecraft:redstone_block
+execute positioned -1558 45 -339 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1563 45 -360 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1552 45 -364 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1550 45 -363 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1547 45 -361 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1538 45 -366 run function medabot_sever:spawn_entities/guard/slow/2_medallar_cents
+execute positioned -1534 45 -366 run function medabot_sever:spawn_entities/guard/slow/2_medallar_cents
+execute positioned -1518 45 -367 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1514 45 -367 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1516 45 -370 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1512 45 -371 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1515 45 -373 run function medabot_sever:spawn_entities/guard/slow
+execute positioned -1547 45 -341 run function medabot_sever:spawn_entities/cannon/no_detect/looking/south/delay_3
+execute positioned -1557 45 -351 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4/2_medallar_cents
+execute positioned -1552 45 -352 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4/2_medallar_cents
+execute positioned -1565 45 -353 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4/2_medallar_cents
+execute positioned -1560 45 -354 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4/2_medallar_cents
+execute positioned -1538 45 -338 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4
+execute positioned -1535 45 -342 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4
+execute positioned -1526 45 -345 run function medabot_sever:spawn_entities/cannon/no_detect/rotating/east/delay_4
+execute positioned -1525 45 -362 run function medabot_sever:spawn_entities/cannon/no_detect/looking/west/delay_4
+execute positioned -1525 45 -363 run function medabot_sever:spawn_entities/cannon/no_detect/looking/west/delay_4
+execute positioned -1513 45 -383 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4
+execute positioned -1548 45 -375 run function medabot_sever:spawn_entities/cannon/no_detect/looking/west/delay_3
+execute positioned -1544 45 -377 run function medabot_sever:spawn_entities/cannon/no_detect/looking/west/delay_3
+execute positioned -1543 45 -379 run function medabot_sever:spawn_entities/cannon/no_detect/looking/west/delay_3
+execute positioned -1538 45 -382 run function medabot_sever:spawn_entities/cannon/no_detect/rotating/west/delay_3
+execute positioned -1564 45 -374 run function medabot_sever:spawn_entities/cannon/no_detect/looking/east/delay_3
+execute positioned -1566 45 -376 run function medabot_sever:spawn_entities/cannon/no_detect/looking/east/delay_3
+execute positioned -1569 45 -378 run function medabot_sever:spawn_entities/cannon/no_detect/looking/east/delay_3
+execute positioned -1569 45 -380 run function medabot_sever:spawn_entities/cannon/no_detect/looking/east/delay_3
+execute positioned -1542 45 -390 run function medabot_sever:spawn_entities/cannon/no_detect/rotating/east/delay_4
+execute positioned -1542 45 -395 run function medabot_sever:spawn_entities/cannon/no_detect/rotating/east/delay_4
+execute positioned -1550 45 -405 run function medabot_sever:spawn_entities/cannon/no_detect/rotating/south/delay_4
+execute positioned -1560 45 -410 run function medabot_sever:spawn_entities/cannon/detect/rotating/east/delay_4/4_medallar_cents
+execute positioned -1553 45 -328 run function medabots_server:spawn_entities/item/4_medallar_cents
+execute positioned -1560 45 -331 run function medabots_server:spawn_entities/item/4_medallar_cents
+execute positioned -1534 45 -358 run function medabots_server:spawn_entities/item/10_medallar_cents
+execute positioned -1510 45 -387 run function medabots_server:spawn_entities/item/6_medallar_cents
+execute positioned -1533 45 -382 run function medabots_server:spawn_entities/item/4_medallar_cents
+execute positioned -1559 45 -344 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1544 45 -374 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1541 45 -327 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
+execute positioned -1564 45 -336 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
+execute positioned -1522 45 -365 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
+execute positioned -1522 45 -366 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
+execute positioned -1522 45 -367 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
+execute positioned -1555 45 -351 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1550 45 -352 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1563 45 -353 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1558 45 -354 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1566 45 -366 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1562 45 -361 run function medabots_server:spawn_entities/balloon_bomb
+execute positioned -1559 45 -363 run function medabots_server:spawn_entities/balloon_bomb
+execute positioned -1553 45 -362 run function medabots_server:spawn_entities/balloon_bomb
+execute positioned -1549 45 -359 run function medabots_server:spawn_entities/balloon_bomb
+execute positioned -1513 45 -382 run function medabots_server:spawn_entities/balloon_bomb
+execute positioned -1540 45 -336 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1535 45 -338 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1539 45 -342 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1535 45 -345 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1529 45 -344 run function medabots_server:set_blocks/hole/delay_5
+execute positioned -1554 45 -321 run function medabots_server:spawn_entities/raft
+execute positioned -1548 45 -341 run function medabots_server:spawn_entities/raft
+execute positioned -1547 45 -341 run function medabots_server:spawn_entities/raft
+execute positioned -1546 45 -341 run function medabots_server:spawn_entities/raft
+execute positioned -1534 45 -358 run function medabots_server:spawn_entities/raft
+execute positioned -1533 45 -359 run function medabots_server:spawn_entities/raft
+execute positioned -1513 45 -382 run function medabots_server:spawn_entities/raft
+execute positioned -1513 45 -383 run function medabots_server:spawn_entities/raft
+execute positioned -1510 45 -387 run function medabots_server:spawn_entities/raft
+execute positioned -1533 45 -382 run function medabots_server:spawn_entities/raft
+execute positioned -1542 45 -395 run function medabots_server:spawn_entities/raft
+execute positioned -1560 45 -410 run function medabots_server:spawn_entities/raft
+execute positioned -1520 45 -368 run function medabots_server:set_blocks/alarm
+execute positioned -1520 45 -364 run function medabots_server:set_blocks/alarm
+execute positioned -1547 45 -336 run function medabots_server:set_blocks/fan/off/north/range_11
+execute positioned -1568 45 -351 run function medabots_server:set_blocks/action_floor/enabled/round_stone/east
+execute positioned -1569 45 -352 run function medabots_server:set_blocks/action_floor/enabled/round_stone/east
+execute positioned -1569 45 -353 run function medabots_server:set_blocks/action_floor/enabled/round_stone/east
+execute positioned -1569 45 -354 run function medabots_server:set_blocks/action_floor/enabled/round_stone/east
+execute positioned -1521 45 -348 run function medabots_server:set_blocks/action_floor/enabled/guard/slow/1_medallar_cent
+execute positioned -1526 45 -351 run function medabots_server:set_blocks/action_floor/enabled/guard/slow/1_medallar_cent
+execute positioned -1517 45 -352 run function medabots_server:set_blocks/action_floor/enabled/guard/slow/1_medallar_cent
+execute positioned -1523 45 -355 run function medabots_server:set_blocks/action_floor/enabled/guard/slow/1_medallar_cent
+execute positioned -1534 45 -324 run function medabots_server:set_blocks/pot
+execute positioned -1546 45 -324 run function medabots_server:set_blocks/pot
+execute positioned -1554 45 -321 run function medabots_server:set_blocks/pot/4_medallar_cents
+execute positioned -1548 45 -341 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1546 45 -341 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1553 45 -329 run function medabots_server:set_blocks/pot
+execute positioned -1553 45 -327 run function medabots_server:set_blocks/pot
+execute positioned -1554 45 -328 run function medabots_server:set_blocks/pot
+execute positioned -1552 45 -328 run function medabots_server:set_blocks/pot
+execute positioned -1560 45 -332 run function medabots_server:set_blocks/pot
+execute positioned -1560 45 -330 run function medabots_server:set_blocks/pot
+execute positioned -1561 45 -331 run function medabots_server:set_blocks/pot
+execute positioned -1559 45 -331 run function medabots_server:set_blocks/pot
+execute positioned -1564 45 -337 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1564 45 -335 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1565 45 -336 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1563 45 -336 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1558 45 -346 run function medabots_server:set_blocks/pot/guard/slow/2_medallar_cents
+execute positioned -1553 45 -347 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1562 45 -349 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1566 45 -366 run function medabots_server:set_blocks/pot
+execute positioned -1524 45 -348 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1522 45 -352 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1518 45 -365 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1517 45 -363 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1516 45 -368 run function medabots_server:set_blocks/pot
+execute positioned -1515 45 -365 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1514 45 -363 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1543 45 -373 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1552 45 -409 run function medabots_server:set_blocks/pot/bomb/delay_5
+execute positioned -1553 45 -408 run function medabots_server:set_blocks/pot
+# Object: Cannon -1553 45 -409
+execute positioned -1553 45 -409 run function medabots_server:set_blocks/pot
+execute positioned -1553 45 -410 run function medabots_server:set_blocks/pot
+execute positioned -1554 45 -409 run function medabots_server:set_blocks/pot
+execute positioned -1519 45 -384 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1522 45 -384 run function medabots_server:set_blocks/pot/bomb/delay_5
+execute positioned -1521 45 -382 run function medabots_server:set_blocks/pot
+execute positioned -1525 45 -382 run function medabots_server:set_blocks/pot
+execute positioned -1523 45 -381 run function medabots_server:set_blocks/pot/2_medallar_cents
+execute positioned -1521 45 -379 run function medabots_server:set_blocks/pot
+# Medapart pot
+execute positioned -1525 45 -379 run function medabots_server:set_blocks/pot
+replaceitem block -1525 45 -379 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:move.napalm.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.fly_falcon"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:fly_falcon_burncapsule",gender:0b,move:"napalm",part:"left_arm",armor:50,power:24,activated:0b,version:1}}
+execute positioned -1523 45 -377 run function medabots_server:set_blocks/pot/cannon/detect/rotating/north/delay_4/2_medallar_cents
+execute positioned -1547 45 -336 run function medabots_server:set_blocks/bridge
+execute positioned -1543 45 -326 run function medabots_server:set_blocks/wall
+execute positioned -1554 45 -322 run function medabots_server:set_blocks/wall
+execute positioned -1558 45 -341 run function medabots_server:set_blocks/wall
+execute positioned -1554 45 -368 run function medabots_server:set_blocks/wall
+execute positioned -1523 45 -340 run function medabots_server:set_blocks/wall
+execute positioned -1522 45 -375 run function medabots_server:set_blocks/wall
+execute positioned -1521 45 -376 run function medabots_server:set_blocks/wall
+execute positioned -1520 45 -376 run function medabots_server:set_blocks/wall
+execute positioned -1519 45 -377 run function medabots_server:set_blocks/wall
+execute positioned -1518 45 -378 run function medabots_server:set_blocks/wall
+execute positioned -1552 45 -374 run function medabots_server:set_blocks/wall
+execute positioned -1558 45 -375 run function medabots_server:set_blocks/wall
+execute positioned -1555 45 -376 run function medabots_server:set_blocks/wall
+execute positioned -1560 45 -378 run function medabots_server:set_blocks/wall
+execute positioned -1557 45 -380 run function medabots_server:set_blocks/wall
+execute positioned -1538 45 -404 run function medabots_server:set_blocks/wall
+execute positioned -1543 45 -327 run function medabots_server:set_blocks/door/closed/east
+execute positioned -1560 45 -341 run function medabots_server:set_blocks/door/closed/south
+execute positioned -1556 45 -368 run function medabots_server:set_blocks/door/closed/south
+execute positioned -1521 45 -340 run function medabots_server:set_blocks/door/open/north
+execute positioned -1544 45 -361 run function medabots_server:set_blocks/door/closed/west/positive_x
+execute positioned -1544 45 -363 run function medabots_server:set_blocks/door/closed/west
+execute positioned -1559 45 -385 run function medabots_server:set_blocks/door/closed/south
+execute positioned -1559 45 -386 run function medabots_server:set_blocks/door/open/south
+execute positioned -1538 45 -403 run function medabots_server:set_blocks/door/open/west
+execute positioned -1520 45 -389 run function medabots_server:set_blocks/door/closed/north
+execute positioned -1538 45 -326 run function medabots_server:set_blocks/starting_area
 teleport @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=-1] -1538 45 -326
 teleport @s[tag=-1] -1538 45 -326
 tag @a[x=-1538,y=45,z=-326,distance=..1] remove -1

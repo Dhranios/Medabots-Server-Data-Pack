@@ -197,7 +197,7 @@ execute positioned -1514 45 -296 run function medabots_server:set_blocks/door/cl
 execute positioned -1568 45 -310 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1568 45 -264 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1622 45 -300 run function medabots_server:set_blocks/door/closed/north
-execute positioned -1610 45 -308 run function medabots_server:set_blocks/door/closed/north
+execute positioned -1610 45 -308 run function medabots_server:set_blocks/door/open/north
 execute positioned -1567 45 -312 run function medabots_server:set_blocks/goal_area
 execute positioned -1568 45 -256 run function medabots_server:set_blocks/starting_area
 teleport @a[x=-1634,y=51,z=-315,dx=127,dy=4,dz=64,tag=-1] -1568 45 -256

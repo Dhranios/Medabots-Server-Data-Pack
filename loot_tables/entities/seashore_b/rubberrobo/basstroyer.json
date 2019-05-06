@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:20,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_lakeduster\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.swim\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.swim.description\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"50\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.basstroyer\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_lakeduster.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_lakeduster.model\"}']},medabots_server:{stage_item:0b,id:\"medabots_server:basstroyer_lakeduster\",gender:0b,move:\"swim\",part:\"legs\",armor:50,defense:52,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:18,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.shoot_spider_cheaptrap\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.melee_trap\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.melee_trap.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"45\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.shoot_spider\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.shoot_spider_cheaptrap.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.shoot_spider_cheaptrap.model\"}']},medabots_server:{stage_item:0b,id:\"medabots_server:shoot_spider_cheaptrap\",gender:0b,move:\"melee_trap\",part:\"left_arm\",armor:45,power:30,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:12,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.hellphoenix_fire_gun\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.melt\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.melt.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"45\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.hellphoenix\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.hellphoenix_fire_gun.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.hellphoenix_fire_gun.model\"}']},medabots_server:{stage_item:0b,id:\"medabots_server:hellphoenix_fire_gun\",gender:0b,move:\"melt\",part:\"right_arm\",armor:45,power:18,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:20,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_great_swallow\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.destroy\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.destroy.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"7\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"50\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.basstroyer\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_great_swallow.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_great_swallow.model\"}']},medabots_server:{stage_item:0b,id:\"medabots_server:basstroyer_great_swallow\",gender:0b,move:\"destroy\",part:\"head\",armor:50,power:85,uses:7,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

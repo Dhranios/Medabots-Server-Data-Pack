@@ -17,10 +17,10 @@ replaceitem entity @s[scores={Napalm=2,Time=20..22},type=!minecraft:player] weap
 scoreboard players remove @s[scores={Napalm=2,Time=22}] HeadUses 1
 
 # Remove the weapon
-clear @s[scores={Time=60}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
-clear @s[scores={Time=60}] minecraft:bow{medabots_server:{id:"medabots_server:napalm"}}
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.offhand minecraft:air
-replaceitem entity @s[scores={Time=60},type=!minecraft:player] weapon.mainhand minecraft:air
+clear @s[scores={Time=60..}] minecraft:tipped_arrow{medabots_server:{id:"medabots_server:bullet"}}
+clear @s[scores={Time=60..}] minecraft:bow{medabots_server:{id:"medabots_server:napalm"}}
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.offhand minecraft:air
+replaceitem entity @s[scores={Time=60..},type=!minecraft:player] weapon.mainhand minecraft:air
 
 # Give back the original part
 replaceitem entity @s[scores={MedapartType=1,Time=60..,Drop=0}] hotbar.1 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:move.napalm.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.fly_falcon"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burncapsule.model"}']},medabots_server:{id:"medabots_server:fly_falcon_burncapsule",gender:0b,move:"napalm",part:"left_arm",armor:50,power:24,activated:1b,version:1}}

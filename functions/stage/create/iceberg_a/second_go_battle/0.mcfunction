@@ -4,9 +4,9 @@ execute positioned -1686 44 -207 run function medabots_server:spawn_entities/gua
 execute positioned -1681 44 -207 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1689 44 -216 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
 execute positioned -1684 44 -218 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
-execute positioned -1734 44 -230 run function medabots_server:set_blocks/pot
-execute positioned -1735 44 -229 run function medabots_server:set_blocks/pot
-execute positioned -1732 44 -229 run function medabots_server:set_blocks/pot/6_medallar_cents
+execute positioned -1702 44 -202 run function medabots_server:set_blocks/pot
+execute positioned -1703 44 -201 run function medabots_server:set_blocks/pot
+execute positioned -1706 44 -201 run function medabots_server:set_blocks/pot/6_medallar_cents
 tag @e[x=-1709.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
