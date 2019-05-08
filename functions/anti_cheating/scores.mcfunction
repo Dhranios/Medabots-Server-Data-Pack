@@ -29,7 +29,7 @@ tag @s[team=Moderator,tag=!bug_tester] add bug_tester
 
 
 # Don't allow combat for creative players and spectators
-scoreboard players set @s[gamemode=!adventure,gamemode=!survival,scores={Battle=1..}] Battle 0
+scoreboard players set @s[gamemode=creative,scores={Battle=1..}] Battle 0
 
 # Prevent spawn point from moving
 spawnpoint @s -286 55 -52

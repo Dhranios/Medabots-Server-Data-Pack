@@ -16,4 +16,4 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=1,t
 execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,tag=selected] run summon minecraft:armor_stand -1892 44 -572 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Invisible:1b,Rotation:[-90.0f,0.0f]}
 kill @e[type=minecraft:area_effect_cloud,tag=referee_marker]
 bossbar set medabots_server:boxer/robattle value 3600
-bossbar set medabots_server:boxer/robattle players @a[scores={Stage=79}]
+bossbar set medabots_server:boxer/robattle players @a[scores={Stage=29}]

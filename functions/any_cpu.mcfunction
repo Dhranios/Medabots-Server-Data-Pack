@@ -10,7 +10,7 @@ execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove left_arm_select
 execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove right_arm_selected
 execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove head_selected
 execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove medaforce_selected
-execute unless entity @s[scores={Medaforce=1}] if entity @a[distance=..16,scores={Battle=1}] run scoreboard players add @s[scores={Battle=1,Time=0,Dialog=0}] Dialog 1
+execute unless entity @s[scores={Medaforce=1}] if entity @a[distance=..16,scores={Battle=1}] run scoreboard players add @s[scores={Battle=1,Time=0,Dialog=0},tag=!dying] Dialog 1
 execute unless entity @s[scores={Medaforce=1}] run scoreboard players add @s[scores={Dialog=1..59}] Dialog 1
 scoreboard players add @s[scores={Dialog=-200..-1}] Dialog 1
 execute if entity @s[scores={Dialog=60,LegsArmor=1..},tag=fly_legs] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","legs"],Duration:1}
@@ -64,6 +64,5 @@ execute if entity @s[tag=!dead] run summon minecraft:area_effect_cloud ~ ~ ~ {Cu
 
 # CPU only things
 execute if entity @s[tag=dead] as @e[scores={MedabotNr=1..}] if score @s MedabotNr > @e[distance=..0.1,tag=hostile,limit=1] MedabotNr run scoreboard players remove @s MedabotNr 1
-execute if entity @s[tag=dead] run playsound medabots_server:entity.medabot.death player @a ~ ~ ~ 0.7
 teleport @s[tag=dead] ~ -1000 ~
 execute unless entity @s[scores={Wave=1..}] if entity @s[nbt=!{ArmorItems:[{id:"minecraft:structure_void"}]},nbt=!{ArmorItems:[{id:"minecraft:stone_button"}]}] run replaceitem entity @s armor.head minecraft:structure_void

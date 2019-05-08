@@ -8,6 +8,10 @@ execute if entity @s[scores={Killer=1..}] run function medabots_server:medaparts
 execute if entity @s[type=!minecraft:item] if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator/accel
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
+# Instant death if you fall in the void
+tag @s[y=-80,dy=79,tag=!enemy_medabot] add dead
+tag @s[y=-80,dy=79,tag=enemy_medabot] add dying
+
 # A CPU
 execute if entity @s[tag=enemy_medabot] run function medabots_server:any_cpu
 

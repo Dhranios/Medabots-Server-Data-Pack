@@ -1,10 +1,10 @@
 execute unless entity @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=0] run function medabots_server:stage/create/seashore_b/first_go_battle/0_cpu
-execute positioned -1760 45 -368 run function medabots_server:spawn_entities/cannon/detecting/rotating/south/delay_4
-execute positioned -1758 45 -355 run function medabots_server:spawn_entities/cannon/detecting/rotating/north/delay_4
-execute positioned -1757 45 -354 run function medabots_server:spawn_entities/cannon/detecting/rotating/north/delay_4
-execute positioned -1756 45 -353 run function medabots_server:spawn_entities/cannon/detecting/rotating/north/delay_4
-execute positioned -1755 45 -352 run function medabots_server:spawn_entities/cannon/detecting/rotating/north/delay_4
+execute unless entity @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=0] run function medabots_server:stage/create/seashore_b/second_go_battle/0_cpu
+execute positioned -1760 45 -368 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/south/delay_4
+execute positioned -1758 45 -355 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/north/delay_4
+execute positioned -1757 45 -354 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/north/delay_4
+execute positioned -1756 45 -353 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/north/delay_4
+execute positioned -1755 45 -352 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/north/delay_4
 execute positioned -1753 45 -361 run function medabots_server:spawn_entities/raft
 execute positioned -1755 45 -364 run function medabots_server:spawn_entities/raft
 execute positioned -1759 45 -357 run function medabots_server:spawn_entities/raft

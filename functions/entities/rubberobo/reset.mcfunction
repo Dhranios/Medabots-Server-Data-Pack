@@ -15,4 +15,5 @@ tag @s remove move_1_block
 tag @s remove hurt
 tag @s remove downed
 tag @s remove turn_left
+tag @s remove dying
 tag @s add respawning

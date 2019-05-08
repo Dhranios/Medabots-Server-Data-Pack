@@ -5,6 +5,7 @@ execute if entity @s[scores={Dialog=0,Error=0}] run setblock -1998 53 -634 minec
 execute if entity @s[scores={Dialog=0,Error=0}] run data merge block -2000 52 -632 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/icefield_battle/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if entity @s[scores={Dialog=0,Error=0}] run setblock -2000 53 -634 minecraft:red_wool
 tag @s[scores={Dialog=0,Error=0}] add enemy_medabot
+tag @s[scores={Dialog=0,Error=0}] add accelerators
 tag @s[scores={Dialog=0,Error=0}] add 0
 execute if entity @s[scores={Dialog=0,Error=0}] run function medabots_server:stage/create/icefield_battle/accelerators
 scoreboard players set @s[scores={Error=1..}] PreviousError 0

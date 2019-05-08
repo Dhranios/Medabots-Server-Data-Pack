@@ -1,3 +1,6 @@
+# Death animation
+execute if entity @s[tag=dying] run function medabots_server:animations/medabot_entity/death
+
 # No vanilla combat
 effect give @s minecraft:weakness 1000000 127 true
 

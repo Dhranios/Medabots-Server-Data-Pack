@@ -28,7 +28,7 @@ scoreboard objectives add Confuse dummy
 scoreboard objectives add ConfuseTime dummy
 scoreboard objectives add Constants dummy
 scoreboard objectives add Damage dummy
-scoreboard objectives add Death deathCount
+scoreboard objectives add DeathTime dummy
 scoreboard objectives add Defense dummy
 scoreboard objectives add DefenseTime dummy
 scoreboard objectives add Destroy dummy
@@ -92,7 +92,7 @@ scoreboard objectives add Infect dummy
 scoreboard objectives add InfectTime dummy
 scoreboard objectives add InfectTimer dummy
 scoreboard objectives add Jump minecraft.custom:minecraft.jump
-scoreboard objectives add Killer playerKillCount
+scoreboard objectives add Killer dummy
 scoreboard objectives add Laser dummy
 scoreboard objectives add LastPlaceTime dummy
 scoreboard objectives add LeaveStage trigger

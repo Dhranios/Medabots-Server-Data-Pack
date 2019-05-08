@@ -8,6 +8,7 @@ scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
 # Run stage
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=0},tag=!murder_mystery] run function medabots_server:stage/left_server
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=!enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/run
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/enemy_run
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run function medabots_server:stage/run_fly_course
 
 # Make the random server messages appear
@@ -50,7 +51,6 @@ execute if entity @s[scores={TaskCheck=2..}] run function medabots_server:other/
 
 # Death
 execute if entity @s[scores={Death=1}] run function medabots_server:other/death
-tag @s[scores={Death=0},tag=retry] remove retry
 
 # Remove player from the world
 teleport @s[scores={Death=20}] ~ -4096 ~

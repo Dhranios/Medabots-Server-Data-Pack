@@ -62,3 +62,11 @@ playsound medabots_server:music.stage.pvp.rico_harbor music @s[scores={Music=0,M
 scoreboard players set @s[scores={Music=0,MusicType=24}] Music 2440
 playsound medabots_server:music.stage.pvp.rico_harbor_removed music @s[scores={Music=0,MusicType=25}] -1440 59 -158 5
 scoreboard players set @s[scores={Music=0,MusicType=25}] Music 3640
+playsound medabots_server:music.battle.0 music @s[scores={Music=0,MusicType=26,RobattleMusic=0}] ~ ~ ~ 14
+scoreboard players set @s[scores={Music=0,MusicType=26,RobattleMusic=0}] Music 1044
+playsound medabots_server:music.battle.1 music @s[scores={Music=0,MusicType=26,RobattleMusic=1}] ~ ~ ~ 14
+scoreboard players set @s[scores={Music=0,MusicType=26,RobattleMusic=1}] Music 689
+playsound medabots_server:music.battle.2 music @s[scores={Music=0,MusicType=26,RobattleMusic=2}] ~ ~ ~ 14
+scoreboard players set @s[scores={Music=0,MusicType=26,RobattleMusic=2}] Music 990
+playsound medabots_server:music.battle.3 music @s[scores={Music=0,MusicType=26,RobattleMusic=3}] ~ ~ ~ 14
+scoreboard players set @s[scores={Music=0,MusicType=26,RobattleMusic=3}] Music 3941

@@ -5,6 +5,7 @@ execute if entity @s[scores={Dialog=0,Error=0}] run setblock -1297 53 -117 minec
 execute if entity @s[scores={Dialog=0,Error=0}] run data merge block -1299 52 -115 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_1/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if entity @s[scores={Dialog=0,Error=0}] run setblock -1299 53 -117 minecraft:red_wool
 tag @s[scores={Dialog=0,Error=0}] add enemy_medabot
+tag @s[scores={Dialog=0,Error=0}] add empty
 tag @s[scores={Dialog=0,Error=0}] add 0
 execute if entity @s[scores={Dialog=0,Error=0}] run function medabots_server:stage/create/lagdou_ruins_1/empty
 scoreboard players set @s[scores={Error=1..}] PreviousError 0

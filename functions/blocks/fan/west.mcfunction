@@ -1,5 +1,5 @@
 # Show the wind
-execute if entity @s[scores={Time=10,Range=1}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-.5 ~1 ~ 0.5 0 0 0 1
+execute if entity @s[scores={Time=10,Range=1}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-0.5 ~1 ~ 0.5 0 0 0 1
 execute if entity @s[scores={Time=10,Range=2}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-1 ~1 ~ 1 0 0 0 2
 execute if entity @s[scores={Time=10,Range=3}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-1.5 ~1 ~ 1.5 0 0 0 3
 execute if entity @s[scores={Time=10,Range=4}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-2 ~1 ~ 2 0 0 0 4
@@ -39,6 +39,26 @@ execute if entity @s[scores={Time=10,Range=37}] positioned ~0.5 ~0.5 ~0.5 run pa
 execute if entity @s[scores={Time=10,Range=38}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-19 ~1 ~ 19 0 0 0 38
 execute if entity @s[scores={Time=10,Range=39}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-19.5 ~1 ~ 19.5 0 0 0 39
 execute if entity @s[scores={Time=10,Range=40}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-20 ~1 ~ 20 0 0 0 40
+execute if entity @s[scores={Time=10,Range=41}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-20.5 ~1 ~ 20.5 0 0 0 21
+execute if entity @s[scores={Time=10,Range=42}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-21 ~1 ~ 21 0 0 0 22
+execute if entity @s[scores={Time=10,Range=43}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-21.5 ~1 ~ 21.5 0 0 0 23
+execute if entity @s[scores={Time=10,Range=44}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-22 ~1 ~ 22 0 0 0 24
+execute if entity @s[scores={Time=10,Range=45}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-22.5 ~1 ~ 22.5 0 0 0 25
+execute if entity @s[scores={Time=10,Range=46}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-23 ~1 ~ 23 0 0 0 26
+execute if entity @s[scores={Time=10,Range=47}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-23.5 ~1 ~ 23.5 0 0 0 27
+execute if entity @s[scores={Time=10,Range=48}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-24 ~1 ~ 24 0 0 0 28
+execute if entity @s[scores={Time=10,Range=49}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-24.5 ~1 ~ 24.5 0 0 0 29
+execute if entity @s[scores={Time=10,Range=50}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-25 ~1 ~ 25 0 0 0 30
+execute if entity @s[scores={Time=10,Range=51}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-25.5 ~1 ~ 25.5 0 0 0 31
+execute if entity @s[scores={Time=10,Range=52}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-26 ~1 ~ 26 0 0 0 32
+execute if entity @s[scores={Time=10,Range=53}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-26.5 ~1 ~ 26.5 0 0 0 33
+execute if entity @s[scores={Time=10,Range=54}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-27 ~1 ~ 27 0 0 0 34
+execute if entity @s[scores={Time=10,Range=55}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-27.5 ~1 ~ 27.5 0 0 0 35
+execute if entity @s[scores={Time=10,Range=56}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-28 ~1 ~ 28 0 0 0 36
+execute if entity @s[scores={Time=10,Range=57}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-28.5 ~1 ~ 28.5 0 0 0 37
+execute if entity @s[scores={Time=10,Range=58}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-29 ~1 ~ 29 0 0 0 38
+execute if entity @s[scores={Time=10,Range=59}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-29.5 ~1 ~ 29.5 0 0 0 39
+execute if entity @s[scores={Time=10,Range=60}] positioned ~0.5 ~0.5 ~0.5 run particle minecraft:cloud ~-30 ~1 ~ 30 0 0 0 40
 
 # Move balloon bombs
 execute if entity @s[scores={Time=10,Range=1,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-1,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
@@ -81,6 +101,26 @@ execute if entity @s[scores={Time=10,Range=37,Moving=1}] positioned ~ ~-3 ~ run 
 execute if entity @s[scores={Time=10,Range=38,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-38,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
 execute if entity @s[scores={Time=10,Range=39,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-39,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
 execute if entity @s[scores={Time=10,Range=40,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-40,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=41,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-41,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=42,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-42,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=43,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-43,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=44,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-44,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=45,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-45,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=46,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-46,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=47,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-47,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=48,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-48,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=49,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-49,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=50,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-50,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=51,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-51,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=52,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-52,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=53,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-53,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=54,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-54,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=55,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-55,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=56,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-56,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=57,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-57,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=58,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-58,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=59,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-59,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=60,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-60,tag=balloon_bomb,tag=!action_floor,scores={Moving=0}] Moving 3
 execute if entity @s[scores={Time=10,Range=1,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-1,tag=balloon_bomb,tag=!action_floor] Moving 3
 execute if entity @s[scores={Time=10,Range=2,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-2,tag=balloon_bomb,tag=!action_floor] Moving 3
 execute if entity @s[scores={Time=10,Range=3,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-3,tag=balloon_bomb,tag=!action_floor] Moving 3
@@ -121,6 +161,26 @@ execute if entity @s[scores={Time=10,Range=37,Moving=2}] positioned ~ ~-3 ~ run 
 execute if entity @s[scores={Time=10,Range=38,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-38,tag=balloon_bomb,tag=!action_floor] Moving 3
 execute if entity @s[scores={Time=10,Range=39,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-39,tag=balloon_bomb,tag=!action_floor] Moving 3
 execute if entity @s[scores={Time=10,Range=40,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-40,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=41,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-41,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=42,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-42,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=43,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-43,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=44,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-44,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=45,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-45,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=46,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-46,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=47,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-47,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=48,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-48,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=49,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-49,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=50,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-50,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=51,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-51,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=52,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-52,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=53,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-53,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=54,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-54,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=55,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-55,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=56,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-56,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=57,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-57,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=58,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-58,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=59,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-59,tag=balloon_bomb,tag=!action_floor] Moving 3
+execute if entity @s[scores={Time=10,Range=60,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-60,tag=balloon_bomb,tag=!action_floor] Moving 3
 
 # Move rafts
 execute if entity @s[scores={Time=10,Range=1,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-1,tag=raft,scores={Moving=0}] Moving 3
@@ -163,6 +223,26 @@ execute if entity @s[scores={Time=10,Range=37,Moving=1}] positioned ~ ~-3 ~ run 
 execute if entity @s[scores={Time=10,Range=38,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-38,tag=raft,scores={Moving=0}] Moving 3
 execute if entity @s[scores={Time=10,Range=39,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-39,tag=raft,scores={Moving=0}] Moving 3
 execute if entity @s[scores={Time=10,Range=40,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-40,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=41,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-41,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=42,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-42,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=43,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-43,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=44,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-44,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=45,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-45,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=46,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-46,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=47,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-47,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=48,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-48,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=49,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-49,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=50,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-50,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=51,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-51,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=52,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-52,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=53,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-53,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=54,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-54,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=55,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-55,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=56,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-56,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=57,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-57,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=58,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-58,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=59,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-59,tag=raft,scores={Moving=0}] Moving 3
+execute if entity @s[scores={Time=10,Range=60,Moving=1}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-60,tag=raft,scores={Moving=0}] Moving 3
 execute if entity @s[scores={Time=10,Range=1,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-1,tag=raft] Moving 3
 execute if entity @s[scores={Time=10,Range=2,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-2,tag=raft] Moving 3
 execute if entity @s[scores={Time=10,Range=3,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-3,tag=raft] Moving 3
@@ -203,10 +283,30 @@ execute if entity @s[scores={Time=10,Range=37,Moving=2}] positioned ~ ~-3 ~ run 
 execute if entity @s[scores={Time=10,Range=38,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-38,tag=raft] Moving 3
 execute if entity @s[scores={Time=10,Range=39,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-39,tag=raft] Moving 3
 execute if entity @s[scores={Time=10,Range=40,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-40,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=41,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-41,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=42,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-42,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=43,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-43,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=44,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-44,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=45,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-45,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=46,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-46,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=47,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-47,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=48,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-48,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=49,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-49,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=50,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-50,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=51,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-51,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=52,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-52,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=53,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-53,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=54,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-54,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=55,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-55,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=56,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-56,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=57,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-57,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=58,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-58,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=59,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-59,tag=raft] Moving 3
+execute if entity @s[scores={Time=10,Range=60,Moving=2}] positioned ~ ~-3 ~ run scoreboard players set @e[dy=6,dx=-60,tag=raft] Moving 3
 
 # Stop fliers
-execute if entity @s[scores={Moving=1..2,Range=1}] run fill ~ ~2 ~ ~-3 ~4 ~ minecraft:black_stained_glass replace minecraft:air
-execute if entity @s[scores={Moving=1..2,Range=2}] run fill ~ ~2 ~ ~-3 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=1}] run fill ~ ~2 ~ ~-1 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=2}] run fill ~ ~2 ~ ~-2 ~4 ~ minecraft:black_stained_glass replace minecraft:air
 execute if entity @s[scores={Moving=1..2,Range=3}] run fill ~ ~2 ~ ~-3 ~4 ~ minecraft:black_stained_glass replace minecraft:air
 execute if entity @s[scores={Moving=1..2,Range=4}] run fill ~ ~2 ~ ~-4 ~4 ~ minecraft:black_stained_glass replace minecraft:air
 execute if entity @s[scores={Moving=1..2,Range=5}] run fill ~ ~2 ~ ~-5 ~4 ~ minecraft:black_stained_glass replace minecraft:air
@@ -245,10 +345,30 @@ execute if entity @s[scores={Moving=1..2,Range=37}] run fill ~ ~2 ~ ~-37 ~4 ~ mi
 execute if entity @s[scores={Moving=1..2,Range=38}] run fill ~ ~2 ~ ~-38 ~4 ~ minecraft:black_stained_glass replace minecraft:air
 execute if entity @s[scores={Moving=1..2,Range=39}] run fill ~ ~2 ~ ~-39 ~4 ~ minecraft:black_stained_glass replace minecraft:air
 execute if entity @s[scores={Moving=1..2,Range=40}] run fill ~ ~2 ~ ~-40 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=41}] run fill ~ ~2 ~ ~-41 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=42}] run fill ~ ~2 ~ ~-42 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=43}] run fill ~ ~2 ~ ~-43 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=44}] run fill ~ ~2 ~ ~-44 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=45}] run fill ~ ~2 ~ ~-45 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=46}] run fill ~ ~2 ~ ~-46 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=47}] run fill ~ ~2 ~ ~-47 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=48}] run fill ~ ~2 ~ ~-48 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=49}] run fill ~ ~2 ~ ~-49 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=50}] run fill ~ ~2 ~ ~-50 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=51}] run fill ~ ~2 ~ ~-51 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=52}] run fill ~ ~2 ~ ~-52 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=53}] run fill ~ ~2 ~ ~-53 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=54}] run fill ~ ~2 ~ ~-54 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=55}] run fill ~ ~2 ~ ~-55 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=56}] run fill ~ ~2 ~ ~-56 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=57}] run fill ~ ~2 ~ ~-57 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=58}] run fill ~ ~2 ~ ~-58 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=59}] run fill ~ ~2 ~ ~-59 ~4 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[scores={Moving=1..2,Range=60}] run fill ~ ~2 ~ ~-60 ~4 ~ minecraft:black_stained_glass replace minecraft:air
 
 # Allow fliers again
-execute if entity @s[scores={Moving=0,Range=1}] run fill ~ ~2 ~ ~-3 ~4 ~ minecraft:air replace minecraft:black_stained_glass
-execute if entity @s[scores={Moving=0,Range=2}] run fill ~ ~2 ~ ~-3 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=1}] run fill ~ ~2 ~ ~-1 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=2}] run fill ~ ~2 ~ ~-2 ~4 ~ minecraft:air replace minecraft:black_stained_glass
 execute if entity @s[scores={Moving=0,Range=3}] run fill ~ ~2 ~ ~-3 ~4 ~ minecraft:air replace minecraft:black_stained_glass
 execute if entity @s[scores={Moving=0,Range=4}] run fill ~ ~2 ~ ~-4 ~4 ~ minecraft:air replace minecraft:black_stained_glass
 execute if entity @s[scores={Moving=0,Range=5}] run fill ~ ~2 ~ ~-5 ~4 ~ minecraft:air replace minecraft:black_stained_glass
@@ -287,3 +407,23 @@ execute if entity @s[scores={Moving=0,Range=37}] run fill ~ ~2 ~ ~-37 ~4 ~ minec
 execute if entity @s[scores={Moving=0,Range=38}] run fill ~ ~2 ~ ~-38 ~4 ~ minecraft:air replace minecraft:black_stained_glass
 execute if entity @s[scores={Moving=0,Range=39}] run fill ~ ~2 ~ ~-39 ~4 ~ minecraft:air replace minecraft:black_stained_glass
 execute if entity @s[scores={Moving=0,Range=40}] run fill ~ ~2 ~ ~-40 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=41}] run fill ~ ~2 ~ ~-41 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=42}] run fill ~ ~2 ~ ~-42 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=43}] run fill ~ ~2 ~ ~-43 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=44}] run fill ~ ~2 ~ ~-44 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=45}] run fill ~ ~2 ~ ~-45 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=46}] run fill ~ ~2 ~ ~-46 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=47}] run fill ~ ~2 ~ ~-47 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=48}] run fill ~ ~2 ~ ~-48 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=49}] run fill ~ ~2 ~ ~-49 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=50}] run fill ~ ~2 ~ ~-50 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=51}] run fill ~ ~2 ~ ~-51 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=52}] run fill ~ ~2 ~ ~-52 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=53}] run fill ~ ~2 ~ ~-53 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=54}] run fill ~ ~2 ~ ~-54 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=55}] run fill ~ ~2 ~ ~-55 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=56}] run fill ~ ~2 ~ ~-56 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=57}] run fill ~ ~2 ~ ~-57 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=58}] run fill ~ ~2 ~ ~-58 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=59}] run fill ~ ~2 ~ ~-59 ~4 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[scores={Moving=0,Range=60}] run fill ~ ~2 ~ ~-60 ~4 ~ minecraft:air replace minecraft:black_stained_glass

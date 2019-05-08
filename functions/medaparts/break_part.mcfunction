@@ -15,5 +15,5 @@ scoreboard players set @s[scores={RightArmArmor=0}] RightArmArmor -1
 
 # Break head
 execute if entity @s[scores={HeadArmor=0}] run particle minecraft:cloud ~ ~ ~ 0 0 0 0.2 50
-kill @s[scores={HeadArmor=0}]
+tag @s[scores={HeadArmor=0}] add dying
 scoreboard players set @s[scores={HeadArmor=0}] HeadArmor -1

@@ -1,7 +1,7 @@
 execute at @e[tag=move_target] if score @s GuardNr = @e[distance=..0.2,limit=1,sort=nearest,tag=move_target] GuardNr run tag @s add has_move_target
 effect give @s minecraft:resistance 9 1 true
 tag @s[tag=can_move] remove can_move
-execute positioned ^ ^ ^5.5 run tag @a[tag=hostile,distance=..5.5,tag=!enemy_medabot,scores={Battle=1}] add possible_targets
+execute positioned ^ ^ ^5.5 run tag @a[tag=hostile,distance=..5.5,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] add possible_targets
 tag @a[tag=possible_targets,sort=nearest,limit=1] add target
 execute if entity @a[tag=target] facing entity @a[tag=target] feet rotated ~ 0 positioned ^ ^ ^0.4 unless entity @e[distance=..0.2,type=!minecraft:area_effect_cloud] positioned as @s unless block ~ ~ ~ minecraft:water run function medabots_server:entities/guard/can_move
 execute if entity @a[tag=target] facing entity @a[tag=target] feet rotated ~ 0 positioned ^ ^ ^0.4 unless entity @e[distance=..0.2,type=!minecraft:area_effect_cloud] positioned as @s if block ~ ~ ~ minecraft:water positioned ~ ~1 ~ run function medabots_server:entities/guard/can_move

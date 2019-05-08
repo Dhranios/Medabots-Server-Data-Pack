@@ -22,4 +22,4 @@ scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] Battle 2
 teleport @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] -1752 44 -271
 summon minecraft:area_effect_cloud -1521 45 -329 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","defeat_the_enemy"],Duration:2147483647}
 bossbar set medabots_server:grassland_b/robattle value 3600
-bossbar set medabots_server:grassland_b/robattle players @a[scores={Stage=30}]
+bossbar set medabots_server:grassland_b/robattle players @a[scores={Stage=10}]

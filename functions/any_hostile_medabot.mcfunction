@@ -11,10 +11,10 @@ function medabots_server:medaparts/two_legged
 function medabots_server:medaparts/wheel
 
 # Get a boost by jumping on another player
-function medabots_server:medaparts/footstool
+execute if entity @s[tag=!dying] run function medabots_server:medaparts/footstool
 
 # Grab ledges and pull yourself up
-function medabots_server:medaparts/edge_grab
+execute if entity @s[tag=!dying] run function medabots_server:medaparts/edge_grab
 
 # Charge up the medaforce
 execute if entity @s[scores={MedaforceTimer=3,Battle=1}] run function medabots_server:medaparts/charge_medaforce

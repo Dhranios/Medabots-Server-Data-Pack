@@ -5,6 +5,7 @@ execute if entity @s[scores={Dialog=0,Error=0}] run setblock -1996 53 -583 minec
 execute if entity @s[scores={Dialog=0,Error=0}] run data merge block -1998 52 -581 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/ruins_battle/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if entity @s[scores={Dialog=0,Error=0}] run setblock -1998 53 -583 minecraft:red_wool
 tag @s[scores={Dialog=0,Error=0}] add enemy_medabot
+tag @s[scores={Dialog=0,Error=0}] add hammer_punches
 tag @s[scores={Dialog=0,Error=0}] add 0
 execute if entity @s[scores={Dialog=0,Error=0}] run function medabots_server:stage/create/ruins_battle/hammer_punches
 scoreboard players set @s[scores={Error=1..}] PreviousError 0

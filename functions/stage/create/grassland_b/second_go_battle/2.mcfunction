@@ -24,8 +24,8 @@ tag @e[sort=random,type=minecraft:area_effect_cloud,tag=referee_marker,limit=1] 
 execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=1,tag=selected] run summon minecraft:armor_stand -1555 45 -394 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Invisible:1b,Rotation:[90.0f,0.0f]}
 execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,tag=selected] run summon minecraft:armor_stand -1559 45 -395 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Invisible:1b,Rotation:[-90.0f,0.0f]}
 kill @e[type=minecraft:area_effect_cloud,tag=referee_marker]
-scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,scores={Stage=30}] Music 0
-scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,scores={Stage=30}] MusicType 1
-scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,scores={Stage=30}] Battle 0
+scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,scores={Stage=10}] Music 0
+scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,scores={Stage=10}] MusicType 1
+scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,scores={Stage=10}] Battle 0
 bossbar set medabots_server:grassland_b/robattle value 3600
-bossbar set medabots_server:grassland_b/robattle players @a[scores={Stage=30}]
+bossbar set medabots_server:grassland_b/robattle players @a[scores={Stage=10}]

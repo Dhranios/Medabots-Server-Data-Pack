@@ -2,6 +2,11 @@
 execute if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator/accel
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
+# Instant death if you fall in the void
+execute if entity @s[y=-80,dy=79,tag=!had_death] run tellraw @a {"translate":"medabots_server:death.void","with":[{"selector":"@s"}]}
+tag @s[y=-80,dy=79] add had_death
+tag @s[y=-80,dy=79] add dying
+
 # Effects
 execute if entity @s[scores={AuxiliaryTime=1..}] run function medabots_server:medaparts/auxiliary_charge_effect
 execute if entity @s[scores={BugTime=1..}] run function medabots_server:medaparts/bug_effect
@@ -15,11 +20,6 @@ execute if entity @s[scores={InfectTime=1..}] run function medabots_server:medap
 execute if entity @s[scores={ParalyzeTime=1..}] run function medabots_server:medaparts/paralyze_effect
 execute if entity @s[scores={PerfectGuardTime=1..}] run function medabots_server:medaparts/perfect_guard_effect
 execute if entity @s[scores={ScoutTime=1..}] run function medabots_server:medaparts/scout_effect
-
-# Instant death if you fall in the void
-execute if entity @s[y=-80,dy=79] run tellraw @a {"translate":"medabots_server:death.void","with":[{"selector":"@s"}]}
-tag @s[y=-80,dy=79] add had_death
-kill @s[y=-80,dy=79]
 
 # Get Armor %
 scoreboard players operation @s LegsPer = @s LegsArmor

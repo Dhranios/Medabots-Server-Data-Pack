@@ -18,10 +18,6 @@ fill -1292 36 25 -1290 36 30 minecraft:oak_slab[waterlogged=true,type=bottom]
 fill -1286 36 22 -1275 36 24 minecraft:oak_slab[waterlogged=true,type=bottom]
 fill -1292 36 16 -1287 36 18 minecraft:oak_slab[waterlogged=true,type=bottom]
 fill -1304 36 19 -1293 36 21 minecraft:oak_slab[waterlogged=true,type=bottom]
-scoreboard players set @a[scores={Stage=43}] Music 0
-scoreboard players set @a[scores={Stage=43}] MusicType 1
-scoreboard players set @a[scores={Stage=43}] Battle 0
-teleport @a[scores={Stage=43}] -1290 49 29 -180 0
 tag @e[scores={Stage=43},type=!minecraft:player] add dead
 data merge block -1291 50 1 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/lagdou_ruins_8/play"}}'}
 setblock -1291 51 -1 minecraft:redstone_block

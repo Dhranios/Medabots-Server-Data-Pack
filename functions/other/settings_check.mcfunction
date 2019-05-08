@@ -6,6 +6,7 @@ tellraw @s[scores={SettingsCheck=3},tag=action_mode] {"translate":"medabots_serv
 tellraw @s[scores={SettingsCheck=3},tag=!action_mode] {"translate":"medabots_server:settings.action_mode","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 6"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
 tellraw @s[scores={SettingsCheck=3},tag=practice_battle] {"translate":"medabots_server:settings.practice_battle","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
 tellraw @s[scores={SettingsCheck=3},tag=!practice_battle] {"translate":"medabots_server:settings.practice_battle","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
+tellraw @s[scores={SettingsCheck=3}] {"translate":"medabots_server:settings.robattle_music","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 11"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"extra":[{"text":" "},{"score":{"name":"@s","objective":"RobattleMusic"}}]}
 tellraw @s[scores={SettingsCheck=3}] {"text":""}
 tellraw @s[scores={SettingsCheck=3}] {"translate":"medabots_server:settings.fly_course","color":"blue"}
 tellraw @s[scores={SettingsCheck=3},tag=fly_course_force_fallout] {"translate":"medabots_server:settings.fly_course.force_fallout","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 8"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
@@ -81,6 +82,14 @@ scoreboard players add @s[scores={SettingsCheck=10},tag=!racer] FlyCourseFee 10
 scoreboard players set @s[scores={SettingsCheck=10,FlyCourseFee=60},tag=!racer] FlyCourseFee 0
 tellraw @s[scores={SettingsCheck=10,FlyCourseFee=1..},tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"FlyCourseFee"}}]}
 tellraw @s[scores={SettingsCheck=10,FlyCourseFee=0},tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.fly_course.no_fee"}]}
+
+# Toggle robattle music
+tellraw @s[scores={SettingsCheck=11},tag=hostile] {"translate":"medabots_server:settings.in_stage","color":"blue"}
+tellraw @s[scores={SettingsCheck=11},tag=enemy_medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
+tellraw @s[scores={SettingsCheck=11},tag=-1] {"translate":"medabots_server:settings.in_stage","color":"blue"}
+scoreboard players add @s[scores={SettingsCheck=11},tag=!hostile,tag=!enemy_medabot,tag=!-1] RobattleMusic 1
+scoreboard players set @s[scores={SettingsCheck=11,RobattleMusic=4},tag=!hostile,tag=!enemy_medabot,tag=!-1] RobattleMusic 0
+tellraw @s[scores={SettingsCheck=11},tag=!hostile,tag=!enemy_medabot,tag=!-1] {"translate":"medabots_server:settings.modified.robattle_music","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 11"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"RobattleMusic"}}]}
 
 
 scoreboard players reset @s[scores={SettingsCheck=3..}] SettingsCheck

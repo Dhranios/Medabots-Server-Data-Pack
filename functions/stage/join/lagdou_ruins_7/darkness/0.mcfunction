@@ -5,6 +5,7 @@ execute if entity @s[scores={Level=35..,Dialog=0,Error=0},advancements={medabots
 execute if entity @s[scores={Level=35..,Dialog=0,Error=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_6_second_go=true}] run data merge block -1281 52 -178 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_7/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if entity @s[scores={Level=35..,Dialog=0,Error=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_6_second_go=true}] run setblock -1281 53 -180 minecraft:red_wool
 tag @s[scores={Level=35..,Dialog=0,Error=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_6_second_go=true}] add enemy_medabot
+tag @s[scores={Level=35..,Dialog=0,Error=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_6_second_go=true}] add darkness
 tag @s[scores={Level=35..,Dialog=0,Error=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_6_second_go=true}] add 0
 execute if entity @s[scores={Level=35..,Dialog=0,Error=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_6_second_go=true}] run function medabots_server:stage/create/lagdou_ruins_7/darkness
 scoreboard players set @s[scores={Error=1..}] PreviousError 0

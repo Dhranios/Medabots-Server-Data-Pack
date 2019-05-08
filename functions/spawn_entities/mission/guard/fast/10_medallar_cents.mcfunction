@@ -1,0 +1,1 @@
+summon minecraft:creeper ~ ~ ~ {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","mission_entity","guard","fast"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard/10_medallar_cents",AbsorptionAmount:10.0f,Health:100.0f}

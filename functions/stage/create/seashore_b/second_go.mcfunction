@@ -84,7 +84,7 @@ execute positioned -1675 45 -433 run function medabots_server:spawn_entities/raf
 execute positioned -1676 45 -435 run function medabots_server:spawn_entities/raft
 execute positioned -1675 45 -438 run function medabots_server:spawn_entities/raft
 execute positioned -1676 45 -438 run function medabots_server:spawn_entities/raft
-execute positioned -1743 44 -411 run function medabots_server:spawn_entities/raft
+execute positioned -1743 45 -411 run function medabots_server:spawn_entities/raft
 execute positioned -1753 45 -375 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1759 45 -378 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1729 45 -386 run function medabots_server:spawn_entities/balloon_bomb
@@ -96,6 +96,8 @@ execute positioned -1738 45 -392 run function medabots_server:spawn_entities/bal
 execute positioned -1760 45 -387 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1684 45 -354 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1674 45 -374 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1702 45 -366 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1672 45 -438 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1743 45 -354 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
 execute positioned -1697 45 -411 run function medabots_server:set_blocks/floor_switch/yellow/delay_30
 execute positioned -1744 45 -411 run function medabots_server:set_blocks/floor_switch/yellow/delay_30
@@ -103,6 +105,7 @@ execute positioned -1711 45 -417 run function medabots_server:set_blocks/floor_s
 execute positioned -1712 45 -418 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1674 45 -417 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1675 45 -417 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1676 45 -417 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1679 45 -411 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1679 45 -412 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1715 45 -370 run function medabots_server:set_blocks/hole/delay_5
@@ -144,7 +147,7 @@ execute positioned -1726 45 -352 run function medabots_server:set_blocks/pot
 execute positioned -1736 45 -353 run function medabots_server:set_blocks/pot
 execute positioned -1741 45 -352 run function medabots_server:set_blocks/pot
 execute positioned -1730 45 -386 run function medabots_server:set_blocks/pot/guard/slow
-execute positioned -1731 45 -390 run function medabots_server:set_blocks/pot/cannon/detecting/rotating/east/delay_4
+execute positioned -1731 45 -390 run function medabots_server:set_blocks/pot/cannon/detect/rotating/east/delay_4
 # Medapart pot
 execute positioned -1737 45 -392 run function medabots_server:set_blocks/pot
 replaceitem block -1737 45 -392 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:31,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.dragonbeetle_flyfly"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.fly"}','{"italic":false,"color":"white","translate":"medabots_server:move.fly.description"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.dragonbeetle"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.dragonbeetle_flyfly.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.dragonbeetle_flyfly.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:dragonbeetle_flyfly",gender:0b,move:"fly",part:"legs",armor:40,defense:28,activated:0b,version:1}}
@@ -241,13 +244,13 @@ execute positioned -1716 45 -356 run function medabots_server:set_blocks/startin
 teleport @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=-1] -1716 45 -356
 teleport @s[tag=-1] -1716 45 -356
 tag @a[x=-1716,y=45,z=-356,distance=..1] remove -1
-bossbar set medabots_server:seashore_a/time value 0
-bossbar set medabots_server:seashore_a/time players @a[x=-1716,y=45,z=-356,distance=..1]
-scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Battle 1
-scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Stage 4
-scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Music 0
-scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] MusicType 10
+bossbar set medabots_server:seashore_b/time value 0
+bossbar set medabots_server:seashore_b/time players @a[x=-1716,y=45,z=-356,distance=..1]
+scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] Battle 1
+scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] Stage 13
+scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] Music 0
+scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] MusicType 10
 scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] Battle 1
-scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] Stage 4
+scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] Stage 13
 scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] Music 0
 scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] MusicType 10

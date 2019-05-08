@@ -52,8 +52,8 @@ tellraw @s[scores={Dialog=704}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=776}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune"},{"translate":"medabots_server:dialog.infinity.kuwagata_medal.21"}]}
 tellraw @s[scores={Dialog=792}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune"},{"translate":"medabots_server:dialog.infinity.kuwagata_medal.22"}]}
 tellraw @s[scores={Dialog=824}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune"},{"translate":"medabots_server:dialog.infinity.kuwagata_medal.23"}]}
-give @s[scores={Dialog=920},tag=!already_gave_items] minecraft:diamond_pickaxe{Unbreakable:1b,Damage:4,CustomModelData:1,AttributeModifiers:[],HideFlags:4,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.female_tinpet"}'},medabots_server:{id:"medabots_server:female_tinpet",part:"tinpet",version:1}}
-give @s[scores={Dialog=920},tag=!already_gave_items] minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kuwagata_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:kuwagata_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}
+execute if entity @s[scores={Dialog=920},tag=!already_gave_items] run function medabots_server:give_items/tinpet/female
+execute if entity @s[scores={Dialog=920},tag=!already_gave_items] run function medabots_server:give_items/medal/kuwagata
 tag @s[scores={Dialog=920}] add already_gave_items
 tellraw @s[scores={Dialog=940}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.kuwagata_medal.24"}]}
 tellraw @s[scores={Dialog=980}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.kuwagata_medal.25"}]}

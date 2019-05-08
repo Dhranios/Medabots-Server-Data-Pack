@@ -1,4 +1,3 @@
-execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/iceberg_a/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/iceberg_a/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] run bossbar set medabots_server:iceberg_a/time players @s[scores={Death=0,Battle=1..}]
@@ -103,14 +102,14 @@ execute if block -1680 44 -188 minecraft:air run setblock -1680 45 -188 minecraf
 execute if block -1710 45 -209 minecraft:iron_door[open=true] if entity @s[x=-1709,y=44,z=-210,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_a/first_go_battle/0
 execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Stage=6,Medabot=0..,Battle=1..}]
 execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=6}] run scoreboard players set @s Stage 6
-execute if entity @s[scores={BattlingMedabots=1,Death=0}] run function medabots_server:stage/clean_up/iceberg_a/first_go
-stopsound @s[scores={BattlingMedabots=1,Death=0}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0}] -1704 50 -221 14
-scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Music 299
-advancement grant @s[scores={BattlingMedabots=1,Death=0}] only medabots_server:stages/wave_1/iceberg_a_first_go
-teleport @s[scores={BattlingMedabots=1,Death=0}] -1704 50 -221 -180 0
-execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:iceberg_a/robattle players
-tag @s[scores={BattlingMedabots=1,Death=0},advancements={medabots_server:wave_1/story_progression={kuwagata_medal=true,meet_jaxy=false}}] add dialog_infinity_meet_jaxy
+execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/iceberg_a/first_go
+stopsound @s[scores={BattlingMedabots=1}] music
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1704 50 -221 14
+scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
+scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
+scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
+advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/wave_1/iceberg_a_first_go
+teleport @s[scores={BattlingMedabots=1}] -1704 50 -221 -180 0
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:iceberg_a/robattle players
+tag @s[scores={BattlingMedabots=1},advancements={medabots_server:wave_1/story_progression={kuwagata_medal=true,meet_jaxy=false}}] add dialog_infinity_meet_jaxy
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

@@ -91,6 +91,8 @@ scoreboard players set @s StreetPassCool 0
 scoreboard players set @s StreetPassTime 0
 scoreboard players set @s Verified 2
 scoreboard players set @s Dialog 0
+scoreboard players set @s Killer 0
+tag @s add killerable
 execute unless entity @s[scores={FlyCourseLaps=0..}] run scoreboard players set @s FlyCourseLaps 3
 execute unless entity @s[scores={FlyCourseFee=0..}] run scoreboard players set @s FlyCourseFee 10
 experience add @s 1 levels

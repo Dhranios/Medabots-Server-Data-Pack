@@ -1,4 +1,3 @@
-execute if entity @s[scores={Death=1..}] run function medabots_server:stage/clean_up/rock_a/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/rock_a/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=2},tag=enemy_medabot] run bossbar set medabots_server:rock_a/time players @s[scores={Death=0,Battle=1..}]
@@ -13,13 +12,13 @@ execute if block -1617 44 -156 minecraft:lime_wool run tag @e[x=-1616.5,y=45,z=-
 execute if block -1616 46 -167 minecraft:iron_door[open=true] if entity @s[x=-1616,y=45,z=-168,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_a/first_go_battle/0
 execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,scores={Stage=2,Medabot=0..,Battle=1..}]
 execute as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=2}] run scoreboard players set @s Stage 2
-execute if entity @s[scores={BattlingMedabots=1,Death=0}] run function medabots_server:stage/clean_up/rock_a/first_go
-stopsound @s[scores={BattlingMedabots=1,Death=0}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Death=0}] -1603 51 -149 14
-scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Battle 0
-scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1,Death=0}] Music 299
-advancement grant @s[scores={BattlingMedabots=1,Death=0}] only medabots_server:stages/wave_1/rock_a_first_go
-teleport @s[scores={BattlingMedabots=1,Death=0}] -1603 51 -149 -180 0
-execute if entity @s[scores={BattlingMedabots=1,Death=0}] run bossbar set medabots_server:rock_a/robattle players
+execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/rock_a/first_go
+stopsound @s[scores={BattlingMedabots=1}] music
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1603 51 -149 14
+scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
+scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
+scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
+advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/wave_1/rock_a_first_go
+teleport @s[scores={BattlingMedabots=1}] -1603 51 -149 -180 0
+execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:rock_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
