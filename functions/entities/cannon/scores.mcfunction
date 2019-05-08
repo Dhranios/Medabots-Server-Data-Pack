@@ -12,3 +12,4 @@ tag @s[tag=rotate_over_x_positive,tag=detect] add cannon_4
 tag @s[tag=rotate_over_z_negative,tag=detect] add cannon_4
 tag @s[tag=rotate_over_z_positive,tag=detect] add cannon_4
 scoreboard players set @s Time -1
+scoreboard players set @s Killer 0

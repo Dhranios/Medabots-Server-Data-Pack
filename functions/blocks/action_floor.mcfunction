@@ -43,7 +43,7 @@ execute if entity @s[scores={Time=100},tag=cannon,tag=detect] run tag @e[distanc
 execute if entity @s[scores={Time=100},tag=cannon] run tag @e[distance=..0.7,type=minecraft:zombie,tag=cannon] remove no_processing
 
 # Ice Block
-execute if entity @s[scores={Time=50},tag=ice_block] run summon minecraft:area_effect_cloud ~ ~-1.77 ~ {CustomName:'{"translate":"medabots_server:entity.ice_block"}',Tags:["ice_block","hostile","killerable","no_processing"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile","killerable"]}]}
+execute if entity @s[scores={Time=50},tag=ice_block] run summon minecraft:area_effect_cloud ~ ~-1.77 ~ {CustomName:'{"translate":"medabots_server:entity.ice_block"}',Tags:["ice_block","hostile","no_processing"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:ice"},NoGravity:1b,Tags:["ice_block","hostile"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["ice_block","hostile"]}]}
 execute if entity @s[scores={Time=100},tag=ice_block] run scoreboard players operation @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=ice_block] ActionFloorNr = @s ActionFloorNr
 execute if entity @s[scores={Time=100},tag=ice_block,tag=!moving_1,tag=!moving_2,tag=!moving_3,tag=!moving_4] run scoreboard players set @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=ice_block] Moving 0
 execute if entity @s[scores={Time=100},tag=ice_block,tag=moving_1] run scoreboard players set @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=ice_block] Moving 1
@@ -53,7 +53,7 @@ execute if entity @s[scores={Time=100},tag=ice_block,tag=moving_4] run scoreboar
 execute if entity @s[scores={Time=100},tag=ice_block] run tag @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=ice_block] remove no_processing
 
 # Round Stone
-execute if entity @s[scores={Time=50},tag=round_stone] run summon minecraft:area_effect_cloud ~ ~-1.77 ~ {CustomName:'{"translate":"medabots_server:entity.round_stone"}',Tags:["round_stone","hostile","killerable","no_processing"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:diorite"},NoGravity:1b,Tags:["round_stone","hostile","killerable"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["round_stone","hostile","killerable"]}]}
+execute if entity @s[scores={Time=50},tag=round_stone] run summon minecraft:area_effect_cloud ~ ~-1.77 ~ {CustomName:'{"translate":"medabots_server:entity.round_stone"}',Tags:["round_stone","hostile","no_processing"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:diorite"},NoGravity:1b,Tags:["round_stone","hostile"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["round_stone","hostile"]}]}
 execute if entity @s[scores={Time=100},tag=round_stone] run scoreboard players operation @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=round_stone] ActionFloorNr = @s ActionFloorNr
 execute if entity @s[scores={Time=100},tag=round_stone,tag=!moving_1,tag=!moving_2,tag=!moving_3,tag=!moving_4] run scoreboard players set @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=round_stone] Moving 0
 execute if entity @s[scores={Time=100},tag=round_stone,tag=moving_1] run scoreboard players set @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=round_stone] Moving 1
@@ -70,7 +70,7 @@ execute if entity @s[scores={Time=100},tag=balloon_bomb] run scoreboard players 
 execute if entity @s[scores={Time=100},tag=balloon_bomb] run tag @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=balloon_bomb] remove no_processing
 
 # Bomb
-execute if entity @s[scores={Time=100},tag=bomb] run summon minecraft:tnt ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:600s,Tags:["bomb","hostile","killerable","no_processing"]}
+execute if entity @s[scores={Time=100},tag=bomb] run summon minecraft:tnt ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:600s,Tags:["bomb","hostile","no_processing"]}
 execute if entity @s[scores={Time=70},tag=bomb] run setblock ~ ~ ~ minecraft:tnt
 execute if entity @s[scores={Time=100},tag=bomb] run setblock ~ ~ ~ minecraft:air
 execute if entity @s[scores={Time=100},tag=bomb,tag=delay_0] as @e[distance=..0.7,type=minecraft:tnt,tag=bomb] run data merge entity @s {Fuse:2s}
