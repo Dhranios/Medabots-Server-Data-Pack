@@ -15,16 +15,10 @@ execute if entity @s[tag=laser] run function medabots_server:medaparts/laser_arr
 
 scoreboard players add @s[tag=life_time] LifeTime 1
 
-# Trigger Balloon Bombs
+# Trigger balloon bombs
 execute if entity @s[tag=in_ground,nbt={inBlockState:{Name:"minecraft:sponge"}}] run function medabots_server:entities/balloon_bomb/shot
 
 # Destroy pots
-# setblock ones are deprecated
-execute if entity @s[tag=in_ground] if block ~ ~ ~ minecraft:chest run setblock ~ ~ ~ minecraft:air destroy
-execute if entity @s[tag=in_ground] if block ~0.1 ~-1 ~ minecraft:chest run setblock ~0.1 ~-1 ~ minecraft:air destroy
-execute if entity @s[tag=in_ground] if block ~-0.1 ~-1 ~ minecraft:chest run setblock ~-0.1 ~-1 ~ minecraft:air destroy
-execute if entity @s[tag=in_ground] if block ~ ~-1 ~0.1 minecraft:chest run setblock ~ ~-1 ~0.1 minecraft:air destroy
-execute if entity @s[tag=in_ground] if block ~ ~-1 ~-0.1 minecraft:chest run setblock ~ ~-1 ~-0.1 minecraft:air destroy
 execute if entity @s[tag=in_ground] if block ~ ~ ~ minecraft:chest run tag @e[distance=..0.7,tag=pot] add broken
 execute if entity @s[tag=in_ground] if block ~0.1 ~-1 ~ minecraft:chest positioned ~0.1 ~-1 ~ run tag @e[distance=..0.7,tag=pot] add broken
 execute if entity @s[tag=in_ground] if block ~-0.1 ~-1 ~ minecraft:chest positioned ~-0.1 ~-1 ~ run tag @e[distance=..0.7,tag=pot] add broken
