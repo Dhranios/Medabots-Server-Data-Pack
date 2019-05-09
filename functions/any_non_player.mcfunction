@@ -29,6 +29,9 @@ execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_ser
 # Make the cannons do things
 execute if entity @s[type=minecraft:zombie,tag=cannon] run function medabots_server:entities/cannon
 
+# Make the jammy do things
+execute if entity @s[type=minecraft:pig,tag=jammy] run function medabots_server:blocks/jammy
+
 # Functions that run on every arrow
 execute if entity @s[type=minecraft:arrow] run function medabots_server:any_arrow
 

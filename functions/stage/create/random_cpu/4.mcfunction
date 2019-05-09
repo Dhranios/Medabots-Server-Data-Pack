@@ -2,6 +2,7 @@
 summon minecraft:skeleton ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.ka_o_lantern"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/random_cpu/4",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["ka_o_lantern","enemy_medabot","killerable","hostile","multi_legged_legs","no_defend_left_arm","melt_right_arm","no_defend_head","chameleon_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
 execute if entity @s[tag=practice_battle] run data merge entity @e[distance=..1,tag=ka_o_lantern,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[distance=..1,tag=ka_o_lantern] Medabot 0
+scoreboard players set @e[distance=..1,tag=ka_o_lantern] Killer 0
 scoreboard players set @e[distance=..1,tag=ka_o_lantern] Charge 0
 scoreboard players set @e[distance=..1,tag=ka_o_lantern] Battle 2
 scoreboard players set @e[distance=..1,tag=ka_o_lantern] MaxHeadUses 4

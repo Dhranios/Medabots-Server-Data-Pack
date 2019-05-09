@@ -3,6 +3,7 @@ summon minecraft:skeleton -1702 44 -207 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Stage 6
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Medabot 0
+scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Killer 0
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Charge 0
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] Battle 2
 scoreboard players set @e[x=-1702,y=44,z=-207,distance=..1,tag=pastel_fairy] MaxHeadUses 12

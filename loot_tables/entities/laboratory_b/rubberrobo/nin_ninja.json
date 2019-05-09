@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nin_ninja_tiptoe\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged.description\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"45\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.nin_ninja\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nin_ninja_tiptoe.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nin_ninja_tiptoe.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:nin_ninja_tiptoe\",gender:0b,move:\"two_legged\",part:\"legs\",armor:45,defense:60,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:21,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kanehachi_mk2_twist\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hold\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hold.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.kanehachi_mk2\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kanehachi_mk2_twist.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kanehachi_mk2_twist.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:kanehachi_mk2_twist\",gender:0b,move:\"hold\",part:\"left_arm\",armor:40,power:19,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:5,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kasou_touchu_shitake\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.no_defend\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.no_defend.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"60\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.kasou_touchu\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kasou_touchu_shitake.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kasou_touchu_shitake.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:kasou_touchu_shitake\",gender:0b,move:\"no_defend\",part:\"right_arm\",armor:60,power:16,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nin_ninja_cover_up\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.melee_trap\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.melee_trap.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"18\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"70\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.nin_ninja\"}',\"\",'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nin_ninja_cover_up.quote\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nin_ninja_cover_up.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:nin_ninja_cover_up\",gender:0b,move:\"melee_trap\",part:\"head\",armor:70,power:22,uses:8,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

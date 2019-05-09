@@ -3,6 +3,7 @@ summon minecraft:skeleton -1908 44 -588 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Stage 29
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Medabot 39
+scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Killer 0
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Charge 0
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] Battle 2
 scoreboard players set @e[x=-1908,y=44,z=-588,distance=..1,tag=sailor_multi] MaxHeadUses 7

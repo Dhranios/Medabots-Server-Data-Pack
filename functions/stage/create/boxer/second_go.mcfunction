@@ -24,7 +24,7 @@ scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Battle 1
 scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Stage 29
 scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] Music 0
 scoreboard players set @a[x=-1890,y=44,z=-548,distance=..1] MusicType 21
-scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] Battle 1
+scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] Battle 3
 scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] Stage 29
 scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] Music 0
 scoreboard players set @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=enemy_medabot] MusicType 21

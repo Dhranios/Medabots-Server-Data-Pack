@@ -3,6 +3,7 @@ summon minecraft:skeleton -1918 44 -572 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1918,y=44,z=-572,distance=..1,tag=dorcus,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1918,y=44,z=-572,distance=..1,tag=dorcus] Stage 29
 scoreboard players set @e[x=-1918,y=44,z=-572,distance=..1,tag=dorcus] Medabot 32
+scoreboard players set @e[x=-1918,y=44,z=-572,distance=..1,tag=dorcus] Killer 0
 scoreboard players set @e[x=-1918,y=44,z=-572,distance=..1,tag=dorcus] Charge 0
 scoreboard players set @e[x=-1918,y=44,z=-572,distance=..1,tag=dorcus] Battle 2
 scoreboard players set @e[x=-1918,y=44,z=-572,distance=..1,tag=dorcus] MaxHeadUses 6

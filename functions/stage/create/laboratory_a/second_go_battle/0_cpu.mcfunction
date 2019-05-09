@@ -3,6 +3,7 @@ summon minecraft:skeleton -1752 44 -271 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Stage 9
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Medabot 0
+scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Killer 0
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Charge 0
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] Battle 2
 scoreboard players set @e[x=-1752,y=44,z=-271,distance=..1,tag=dragonbeetle] MaxHeadUses 15

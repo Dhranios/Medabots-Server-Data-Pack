@@ -163,7 +163,7 @@ tag @s add second_go
 teleport @s -1509 45 -196
 bossbar set medabots_server:seashore_a/time value 0
 bossbar set medabots_server:seashore_a/time players @s
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] Stage 4
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] Music 0
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] MusicType 10
+scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Battle 1
+scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Stage 4
+scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Music 0
+scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] MusicType 10

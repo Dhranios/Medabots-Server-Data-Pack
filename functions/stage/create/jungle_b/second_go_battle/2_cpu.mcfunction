@@ -3,6 +3,7 @@ summon minecraft:skeleton -1651 45 -466 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1651,y=45,z=-466,distance=..1,tag=baroncastle,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1651,y=45,z=-466,distance=..1,tag=baroncastle] Stage 12
 scoreboard players set @e[x=-1651,y=45,z=-466,distance=..1,tag=baroncastle] Medabot 0
+scoreboard players set @e[x=-1651,y=45,z=-466,distance=..1,tag=baroncastle] Killer 0
 scoreboard players set @e[x=-1651,y=45,z=-466,distance=..1,tag=baroncastle] Charge 0
 scoreboard players set @e[x=-1651,y=45,z=-466,distance=..1,tag=baroncastle] Battle 2
 scoreboard players set @e[x=-1651,y=45,z=-466,distance=..1,tag=baroncastle] MaxHeadUses 8

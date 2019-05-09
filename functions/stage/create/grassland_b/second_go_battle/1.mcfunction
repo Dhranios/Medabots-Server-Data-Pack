@@ -28,3 +28,4 @@ teleport @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] -1529 45 -400
 summon minecraft:area_effect_cloud -1524 45 -399 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","open_the_exit_door"],Duration:2147483647}
 bossbar set medabots_server:grassland_b/robattle value 3600
 bossbar set medabots_server:grassland_b/robattle players @a[scores={Stage=10}]
+bossbar set medabots_server:grassland_b/time players

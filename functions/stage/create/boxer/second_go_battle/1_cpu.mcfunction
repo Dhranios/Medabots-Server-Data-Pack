@@ -3,6 +3,7 @@ summon minecraft:skeleton -1861 44 -571 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Stage 29
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Medabot 1
+scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Killer 0
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Charge 0
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Battle 2
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] MaxHeadUses 5

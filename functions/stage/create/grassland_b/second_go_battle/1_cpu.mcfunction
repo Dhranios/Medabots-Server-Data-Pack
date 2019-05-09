@@ -3,6 +3,7 @@ summon minecraft:skeleton -1529 45 -400 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1529,y=45,z=-400,distance=..1,tag=pinguen,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1529,y=45,z=-400,distance=..1,tag=pinguen] Stage 10
 scoreboard players set @e[x=-1529,y=45,z=-400,distance=..1,tag=pinguen] Medabot 0
+scoreboard players set @e[x=-1529,y=45,z=-400,distance=..1,tag=pinguen] Killer 0
 scoreboard players set @e[x=-1529,y=45,z=-400,distance=..1,tag=pinguen] Charge 0
 scoreboard players set @e[x=-1529,y=45,z=-400,distance=..1,tag=pinguen] Battle 2
 scoreboard players set @e[x=-1529,y=45,z=-400,distance=..1,tag=pinguen] MaxHeadUses 5

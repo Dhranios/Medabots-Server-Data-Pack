@@ -22,3 +22,4 @@ teleport @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=0] -1756 44 -360
 summon minecraft:area_effect_cloud -1755 44 -361 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","destroy_all_cannons"],Duration:2147483647}
 bossbar set medabots_server:seashore_b/robattle value 3600
 bossbar set medabots_server:seashore_b/robattle players @a[scores={Stage=13}]
+bossbar set medabots_server:seashore_b/time players

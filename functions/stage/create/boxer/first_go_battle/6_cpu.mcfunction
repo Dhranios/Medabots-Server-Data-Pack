@@ -3,6 +3,7 @@ summon minecraft:skeleton -1906 43 -553 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1906,y=43,z=-553,distance=..1,tag=potato_insect,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1906,y=43,z=-553,distance=..1,tag=potato_insect] Stage 29
 scoreboard players set @e[x=-1906,y=43,z=-553,distance=..1,tag=potato_insect] Medabot 0
+scoreboard players set @e[x=-1906,y=43,z=-553,distance=..1,tag=potato_insect] Killer 0
 scoreboard players set @e[x=-1906,y=43,z=-553,distance=..1,tag=potato_insect] Charge 0
 scoreboard players set @e[x=-1906,y=43,z=-553,distance=..1,tag=potato_insect] Battle 2
 scoreboard players set @e[x=-1906,y=43,z=-553,distance=..1,tag=potato_insect] MaxHeadUses 7

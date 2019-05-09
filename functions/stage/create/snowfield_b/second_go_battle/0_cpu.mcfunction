@@ -3,6 +3,7 @@ summon minecraft:skeleton -1746 45 -460 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1746,y=45,z=-460,distance=..1,tag=grade_kabuki,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1746,y=45,z=-460,distance=..1,tag=grade_kabuki] Stage 14
 scoreboard players set @e[x=-1746,y=45,z=-460,distance=..1,tag=grade_kabuki] Medabot 0
+scoreboard players set @e[x=-1746,y=45,z=-460,distance=..1,tag=grade_kabuki] Killer 0
 scoreboard players set @e[x=-1746,y=45,z=-460,distance=..1,tag=grade_kabuki] Charge 0
 scoreboard players set @e[x=-1746,y=45,z=-460,distance=..1,tag=grade_kabuki] Battle 2
 scoreboard players set @e[x=-1746,y=45,z=-460,distance=..1,tag=grade_kabuki] MaxHeadUses 6

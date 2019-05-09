@@ -23,3 +23,4 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,t
 kill @e[type=minecraft:area_effect_cloud,tag=referee_marker]
 bossbar set medabots_server:iceberg_a/robattle value 3600
 bossbar set medabots_server:iceberg_a/robattle players @a[scores={Stage=6}]
+bossbar set medabots_server:iceberg_a/time players

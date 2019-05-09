@@ -3,6 +3,7 @@ summon minecraft:skeleton -1612 45 -355 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1612,y=45,z=-355,distance=..1,tag=kasou_touchu,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1612,y=45,z=-355,distance=..1,tag=kasou_touchu] Stage 11
 scoreboard players set @e[x=-1612,y=45,z=-355,distance=..1,tag=kasou_touchu] Medabot 0
+scoreboard players set @e[x=-1612,y=45,z=-355,distance=..1,tag=kasou_touchu] Killer 0
 scoreboard players set @e[x=-1612,y=45,z=-355,distance=..1,tag=kasou_touchu] Charge 0
 scoreboard players set @e[x=-1612,y=45,z=-355,distance=..1,tag=kasou_touchu] Battle 2
 scoreboard players set @e[x=-1612,y=45,z=-355,distance=..1,tag=kasou_touchu] MaxHeadUses 8

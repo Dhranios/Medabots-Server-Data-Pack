@@ -3,6 +3,7 @@ summon minecraft:skeleton -1522 45 -327 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Stage 10
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Medabot 0
+scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Killer 0
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Charge 0
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] Battle 2
 scoreboard players set @e[x=-1522,y=45,z=-327,distance=..1,tag=fly_falcon] MaxHeadUses 7

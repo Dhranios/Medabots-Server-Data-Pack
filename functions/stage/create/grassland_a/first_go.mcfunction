@@ -71,7 +71,7 @@ execute positioned -1526 45 -136 run function medabots_server:set_blocks/pot
 execute positioned -1525 45 -137 run function medabots_server:set_blocks/pot
 execute positioned -1527 45 -137 run function medabots_server:set_blocks/pot
 execute positioned -1526 45 -138 run function medabots_server:set_blocks/pot
-execute positioned -1524 45 -143 run function medabots_server:set_blocks/pot/2_medalar_cents
+execute positioned -1524 45 -143 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1530 45 -141 run function medabots_server:set_blocks/pot
 execute positioned -1529 45 -142 run function medabots_server:set_blocks/pot
 execute positioned -1531 45 -142 run function medabots_server:set_blocks/pot
@@ -147,7 +147,7 @@ tag @s add first_go
 teleport @s -1516 45 -123
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @s
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Stage 1
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Music 0
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] MusicType 7
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Battle 1
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Stage 1
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Music 0
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] MusicType 7

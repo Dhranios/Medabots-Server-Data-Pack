@@ -3,6 +3,7 @@ summon minecraft:skeleton -1610 45 -464 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Stage 12
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Medabot 0
+scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Killer 0
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Charge 0
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] Battle 2
 scoreboard players set @e[x=-1610,y=45,z=-464,distance=..1,tag=dondoguu] MaxHeadUses 6

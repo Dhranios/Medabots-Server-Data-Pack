@@ -3,6 +3,7 @@ summon minecraft:skeleton -1538 45 -230 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Stage 4
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Medabot 0
+scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Killer 0
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Charge 0
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] Battle 2
 scoreboard players set @e[x=-1538,y=45,z=-230,distance=..1,tag=pure_mermaid] MaxHeadUses 10

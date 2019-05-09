@@ -126,7 +126,7 @@ tag @s add second_go
 teleport @s -1516 45 -123
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @s
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Stage 1
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Music 0
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] MusicType 7
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Battle 1
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Stage 1
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Music 0
+scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] MusicType 7

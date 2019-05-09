@@ -2,6 +2,7 @@
 summon minecraft:skeleton ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.primity_baby"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/random_cpu/7",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["primity_baby","enemy_medabot","killerable","hostile","float_legs","scout_left_arm","sword_right_arm","medaforce_control_head","alien_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
 execute if entity @s[tag=practice_battle] run data merge entity @e[distance=..1,tag=primity_baby,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[distance=..1,tag=primity_baby] Medabot 0
+scoreboard players set @e[distance=..1,tag=primity_baby] Killer 0
 scoreboard players set @e[distance=..1,tag=primity_baby] Charge 0
 scoreboard players set @e[distance=..1,tag=primity_baby] Battle 2
 scoreboard players set @e[distance=..1,tag=primity_baby] MaxHeadUses 2

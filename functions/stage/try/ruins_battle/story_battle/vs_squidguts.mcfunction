@@ -5,6 +5,7 @@ summon minecraft:skeleton -1996 45 -557 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1996,y=45,z=-557,distance=..0.7,tag=abyss_greater,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1996,y=45,z=-557,distance=..0.7,tag=abyss_greater] Stage 49
 scoreboard players set @e[x=-1996,y=45,z=-557,distance=..0.7,tag=abyss_greater] Medabot 22
+scoreboard players set @e[x=-1996,y=45,z=-557,distance=..0.7,tag=abyss_greater] Killer 0
 scoreboard players set @e[x=-1996,y=45,z=-557,distance=..0.7,tag=abyss_greater] Charge 0
 scoreboard players set @e[x=-1996,y=45,z=-557,distance=..0.7,tag=abyss_greater] Battle 1
 scoreboard players set @e[x=-1996,y=45,z=-557,distance=..0.7,tag=abyss_greater] MaxHeadUses 5

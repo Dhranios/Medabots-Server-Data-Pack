@@ -36,3 +36,4 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,t
 kill @e[type=minecraft:area_effect_cloud,tag=referee_marker]
 bossbar set medabots_server:boxer/robattle value 3600
 bossbar set medabots_server:boxer/robattle players @a[scores={Stage=29}]
+bossbar set medabots_server:boxer/time players

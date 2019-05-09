@@ -28,3 +28,4 @@ scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,scores={Stage=11}
 scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,scores={Stage=11}] Battle 0
 bossbar set medabots_server:rock_b/robattle value 3600
 bossbar set medabots_server:rock_b/robattle players @a[scores={Stage=11}]
+bossbar set medabots_server:rock_b/time players

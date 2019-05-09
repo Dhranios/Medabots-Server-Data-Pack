@@ -3,6 +3,7 @@ summon minecraft:skeleton -1799 44 -259 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1799,y=44,z=-259,distance=..1,tag=knight_armor,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1799,y=44,z=-259,distance=..1,tag=knight_armor] Stage 9
 scoreboard players set @e[x=-1799,y=44,z=-259,distance=..1,tag=knight_armor] Medabot 0
+scoreboard players set @e[x=-1799,y=44,z=-259,distance=..1,tag=knight_armor] Killer 0
 scoreboard players set @e[x=-1799,y=44,z=-259,distance=..1,tag=knight_armor] Charge 0
 scoreboard players set @e[x=-1799,y=44,z=-259,distance=..1,tag=knight_armor] Battle 2
 scoreboard players set @e[x=-1799,y=44,z=-259,distance=..1,tag=knight_armor] MaxHeadUses 8

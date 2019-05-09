@@ -22,3 +22,4 @@ teleport @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] -1610 45 -464
 summon minecraft:area_effect_cloud -1609 45 -463 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","defeat_the_enemy"],Duration:2147483647}
 bossbar set medabots_server:jungle_b/robattle value 3600
 bossbar set medabots_server:jungle_b/robattle players @a[scores={Stage=12}]
+bossbar set medabots_server:jungle_b/time players

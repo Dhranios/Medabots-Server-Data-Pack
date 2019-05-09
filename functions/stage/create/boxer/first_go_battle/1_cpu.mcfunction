@@ -4,6 +4,7 @@ execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1861,y=44,
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Stage 29
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Medabot 1
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Charge 0
+scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Killer 0
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] Battle 2
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] MaxHeadUses 5
 scoreboard players set @e[x=-1861,y=44,z=-571,distance=..1,tag=keithturtle] MaxHeadArmor 50

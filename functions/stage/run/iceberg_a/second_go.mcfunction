@@ -1,6 +1,6 @@
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/iceberg_a/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] run bossbar set medabots_server:iceberg_a/time players @s[scores={Death=0,Battle=1..}]
+execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] run bossbar set medabots_server:iceberg_a/time players @s[scores={Battle=1..}]
 execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:iceberg_a/time value
 execute unless entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result bossbar medabots_server:iceberg_a/time value run scoreboard players operation #temp Time += #1 Constants
 execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Medabot=0..,Battle=1..2,Stage=6},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:iceberg_a/robattle value
@@ -59,9 +59,8 @@ execute if block -1690 43 -189 minecraft:light_blue_wool run tag @e[x=-1700.5,y=
 execute if block -1689 43 -190 minecraft:light_blue_wool run tag @e[x=-1700.5,y=44,z=-189.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1688 43 -189 minecraft:light_blue_wool run tag @e[x=-1700.5,y=44,z=-189.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1690 43 -189 minecraft:blue_wool if block -1689 43 -190 minecraft:blue_wool if block -1688 43 -189 minecraft:blue_wool run tag @e[x=-1700.5,y=44,z=-189.5,distance=..0.7,tag=laser_trap] remove enabled
-execute if block -1711 43 -220 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer] run summon minecraft:area_effect_cloud -1711 44 -220 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["blue_floor_switch_timer"],Duration:2147483647}
+execute if block -1711 43 -220 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer] run summon minecraft:area_effect_cloud -1711 44 -220 {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["blue_floor_switch_timer"],Duration:220}
 scoreboard players add @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer] FloorSwitchTime 1
-scoreboard players set @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=220}] FloorSwitchTime 0
 execute if block -1737 45 -222 minecraft:iron_door[open=true] run tag @e[x=-1732.5,y=44,z=-220.5,distance=..0.7,tag=action_floor] add enabled
 execute if block -1737 45 -222 minecraft:iron_door[open=false] run tag @e[x=-1732.5,y=44,z=-220.5,distance=..0.7,tag=action_floor] remove enabled
 execute if block -1737 45 -222 minecraft:iron_door[open=true] run tag @e[x=-1730.5,y=44,z=-224.5,distance=..0.7,tag=action_floor] add enabled
@@ -81,7 +80,7 @@ execute if block -1741 45 -206 minecraft:iron_door[open=false] run tag @e[x=-175
 execute if block -1741 45 -206 minecraft:iron_door[open=true] run tag @e[x=-1750.5,y=44,z=-192.5,distance=..0.7,tag=action_floor] add enabled
 execute if block -1741 45 -206 minecraft:iron_door[open=false] run tag @e[x=-1750.5,y=44,z=-192.5,distance=..0.7,tag=action_floor] remove enabled
 execute if block -1710 45 -209 minecraft:iron_door[open=true] if entity @s[x=-1709,y=44,z=-210,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_a/second_go_battle/0
-execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,scores={Stage=6,Medabot=0..,Battle=1..}]
+execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=6,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=6}] run scoreboard players set @s Stage 6
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/iceberg_a/second_go
 stopsound @s[scores={BattlingMedabots=1}] music

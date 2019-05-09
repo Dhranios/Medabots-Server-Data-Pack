@@ -3,6 +3,7 @@ summon minecraft:skeleton -1651 44 -338 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1651,y=44,z=-338,distance=..1,tag=maxsnake,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1651,y=44,z=-338,distance=..1,tag=maxsnake] Stage 8
 scoreboard players set @e[x=-1651,y=44,z=-338,distance=..1,tag=maxsnake] Medabot 0
+scoreboard players set @e[x=-1651,y=44,z=-338,distance=..1,tag=maxsnake] Killer 0
 scoreboard players set @e[x=-1651,y=44,z=-338,distance=..1,tag=maxsnake] Charge 0
 scoreboard players set @e[x=-1651,y=44,z=-338,distance=..1,tag=maxsnake] Battle 2
 scoreboard players set @e[x=-1651,y=44,z=-338,distance=..1,tag=maxsnake] MaxHeadUses 6

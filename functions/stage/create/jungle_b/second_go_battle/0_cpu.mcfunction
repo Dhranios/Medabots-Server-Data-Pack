@@ -3,6 +3,7 @@ summon minecraft:skeleton -1583 45 -407 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1583,y=45,z=-407,distance=..1,tag=attack_tyrano,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1583,y=45,z=-407,distance=..1,tag=attack_tyrano] Stage 12
 scoreboard players set @e[x=-1583,y=45,z=-407,distance=..1,tag=attack_tyrano] Medabot 0
+scoreboard players set @e[x=-1583,y=45,z=-407,distance=..1,tag=attack_tyrano] Killer 0
 scoreboard players set @e[x=-1583,y=45,z=-407,distance=..1,tag=attack_tyrano] Charge 0
 scoreboard players set @e[x=-1583,y=45,z=-407,distance=..1,tag=attack_tyrano] Battle 2
 scoreboard players set @e[x=-1583,y=45,z=-407,distance=..1,tag=attack_tyrano] MaxHeadUses 7

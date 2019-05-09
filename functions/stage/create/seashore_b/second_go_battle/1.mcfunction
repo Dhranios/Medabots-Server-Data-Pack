@@ -29,6 +29,7 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,t
 kill @e[type=minecraft:area_effect_cloud,tag=referee_marker]
 bossbar set medabots_server:seashore_b/robattle value 3600
 bossbar set medabots_server:seashore_b/robattle players @a[scores={Stage=13}]
+bossbar set medabots_server:seashore_b/time players
 scoreboard players set @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,scores={Stage=13}] Music 0
 scoreboard players set @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,scores={Stage=13}] MusicType 1
 scoreboard players set @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,scores={Stage=13}] Battle 0

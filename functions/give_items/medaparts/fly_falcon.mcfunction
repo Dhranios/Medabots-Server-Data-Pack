@@ -1,4 +1,4 @@
-function medabots_server:give_items/medaparts/fly_falcon/fly_phone
+function medabots_server:give_items/medaparts/fly_falcon/flyphone
 function medabots_server:give_items/medaparts/fly_falcon/burncapsule
 function medabots_server:give_items/medaparts/fly_falcon/burntube
 function medabots_server:give_items/medaparts/fly_falcon/burn_head

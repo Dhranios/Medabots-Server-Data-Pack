@@ -27,3 +27,4 @@ scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,scores={Stage=3}]
 scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,scores={Stage=3}] Battle 0
 bossbar set medabots_server:jungle_a/robattle value 3600
 bossbar set medabots_server:jungle_a/robattle players @a[scores={Stage=3}]
+bossbar set medabots_server:jungle_a/time players

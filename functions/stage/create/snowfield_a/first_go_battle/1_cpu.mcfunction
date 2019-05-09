@@ -3,6 +3,7 @@ summon minecraft:skeleton -1660 45 -233 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1660,y=45,z=-233,distance=..1,tag=hellphoenix,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1660,y=45,z=-233,distance=..1,tag=hellphoenix] Stage 5
 scoreboard players set @e[x=-1660,y=45,z=-233,distance=..1,tag=hellphoenix] Medabot 0
+scoreboard players set @e[x=-1660,y=45,z=-233,distance=..1,tag=hellphoenix] Killer 0
 scoreboard players set @e[x=-1660,y=45,z=-233,distance=..1,tag=hellphoenix] Charge 0
 scoreboard players set @e[x=-1660,y=45,z=-233,distance=..1,tag=hellphoenix] Battle 2
 scoreboard players set @e[x=-1660,y=45,z=-233,distance=..1,tag=hellphoenix] MaxHeadUses 7

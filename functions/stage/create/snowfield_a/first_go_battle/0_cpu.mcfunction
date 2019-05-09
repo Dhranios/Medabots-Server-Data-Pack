@@ -3,6 +3,7 @@ summon minecraft:skeleton -1630 45 -208 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Stage 5
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Medabot 0
+scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Killer 0
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Charge 0
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] Battle 2
 scoreboard players set @e[x=-1630,y=45,z=-208,distance=..1,tag=kanehachi_mk2] MaxHeadUses 9

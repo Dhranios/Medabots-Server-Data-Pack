@@ -3,6 +3,7 @@ summon minecraft:skeleton -1604 45 -170 {CustomName:'{"translate":"medabots_serv
 execute if entity @s[tag=practice_battle] run data merge entity @e[x=-1604,y=45,z=-170,distance=..1,tag=poison_scorpi,limit=1] {DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}
 scoreboard players set @e[x=-1604,y=45,z=-170,distance=..1,tag=poison_scorpi] Stage 2
 scoreboard players set @e[x=-1604,y=45,z=-170,distance=..1,tag=poison_scorpi] Medabot 0
+scoreboard players set @e[x=-1604,y=45,z=-170,distance=..1,tag=poison_scorpi] Killer 0
 scoreboard players set @e[x=-1604,y=45,z=-170,distance=..1,tag=poison_scorpi] Charge 0
 scoreboard players set @e[x=-1604,y=45,z=-170,distance=..1,tag=poison_scorpi] Battle 2
 scoreboard players set @e[x=-1604,y=45,z=-170,distance=..1,tag=poison_scorpi] MaxHeadUses 6
