@@ -16,6 +16,7 @@ tag @s[tag=dead] add dying
 tag @s[tag=dead] remove enabled
 tag @s[tag=dead] remove dead
 execute if entity @s[tag=dying,scores={Time=..0}] run fill ~ ~ ~ ~ ~3 ~ minecraft:air
+execute if entity @s[tag=dying,scores={Time=..0}] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
 kill @s[tag=dying,scores={Time=..0}]
 
 # Takes time
@@ -29,8 +30,8 @@ tag @s[scores={Time=70,Range=8},tag=enabled] add cannot_extend
 tag @s[scores={Time=80,Range=9},tag=enabled] add cannot_extend
 tag @s[scores={Time=90,Range=10},tag=enabled] add cannot_extend
 scoreboard players add @s[tag=enabled,tag=!cannot_extend,tag=!extending_blocked] Time 1
-scoreboard players remove @s[tag=dying] Time 10
-scoreboard players remove @s[scores={Time=1..},tag=!enabled] Time 1
+scoreboard players remove @s[tag=dying] Time 1
+scoreboard players remove @s[scores={Time=1..},tag=!enabled,tag=!dying] Time 1
 execute if entity @s[tag=!enabled,scores={Time=1}] run playsound medabots_server:block.press_wall.stop block @a ~ ~ ~ 1
 execute if entity @s[tag=enabled,tag=!stop_sound_played] unless entity @s[tag=!cannot_extend,tag=!extending_blocked] run playsound medabots_server:block.press_wall.stop block @a ~ ~ ~ 1
 tag @s[tag=stop_sound_played] remove stop_sound_played

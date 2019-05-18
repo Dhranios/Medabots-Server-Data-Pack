@@ -69,7 +69,7 @@ execute positioned -1543 45 -149 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1530 45 -151 run function medabots_server:set_blocks/pot/1_medallar_cent
 # Medapart pot
 execute positioned -1511 45 -147 run function medabots_server:set_blocks/pot
-replaceitem block -1511 45 -147 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_ninja_dagger"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.sword"}','{"italic":false,"color":"white","translate":"medabots_server:move.sword.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.nin_ninja"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_ninja_dagger.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_ninja_dagger.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:nin_ninja_ninja_dagger",gender:0b,move:"sword",part:"right_arm",armor:40,power:20,activated:0b,version:1}}
+replaceitem block -1511 45 -147 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_ninja_dagger"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.sword"}','{"italic":false,"color":"white","translate":"medabots_server:move.sword.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.nin_ninja"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_ninja_dagger.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:nin_ninja_ninja_dagger",gender:0b,move:"sword",part:"right_arm",armor:40,power:20,activated:0b,version:1}}
 execute positioned -1511 45 -145 run function medabots_server:set_blocks/pot
 execute positioned -1510 45 -146 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1509 45 -147 run function medabots_server:set_blocks/pot
@@ -117,9 +117,9 @@ execute positioned -1535 45 -158 run function medabots_server:set_blocks/door/cl
 execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/closed/east
-execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/closed/east/positive_x
-execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/closed/east/positive_z
-execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/closed/east/negative_x
+execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/closed/east
+execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/closed/east
+execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1551 45 -171 run function medabots_server:set_blocks/goal_area
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area
 tag @s add second_go

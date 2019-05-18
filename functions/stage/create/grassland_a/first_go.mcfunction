@@ -79,7 +79,7 @@ execute positioned -1530 45 -143 run function medabots_server:set_blocks/pot
 execute positioned -1535 45 -122 run function medabots_server:set_blocks/pot
 # Medapart pot
 execute positioned -1533 45 -125 run function medabots_server:set_blocks/pot
-replaceitem block -1533 45 -125 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_tiptoe"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.two_legged"}','{"italic":false,"color":"white","translate":"medabots_server:move.two_legged.description"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.nin_ninja"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_tiptoe.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_tiptoe.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:nin_ninja_tiptoe",gender:0b,move:"two_legged",part:"legs",armor:45,defense:60,activated:0b,version:1}}
+replaceitem block -1533 45 -125 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_tiptoe"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.two_legged"}','{"italic":false,"color":"white","translate":"medabots_server:move.two_legged.description"}','{"text":""}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.nin_ninja"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.nin_ninja_tiptoe.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:nin_ninja_tiptoe",gender:0b,move:"two_legged",part:"legs",armor:45,defense:60,activated:0b,version:1}}
 execute positioned -1532 45 -129 run function medabots_server:set_blocks/pot
 execute positioned -1556 45 -125 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1565 45 -126 run function medabots_server:set_blocks/pot
@@ -138,9 +138,9 @@ execute positioned -1535 45 -158 run function medabots_server:set_blocks/door/cl
 execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/closed/east
-execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/closed/east/positive_x
-execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/closed/east/positive_z
-execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/closed/east/negative_x
+execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/closed/east
+execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/closed/east
+execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1551 45 -171 run function medabots_server:set_blocks/goal_area
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area
 tag @s add first_go

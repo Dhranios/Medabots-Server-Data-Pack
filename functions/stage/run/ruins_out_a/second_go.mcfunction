@@ -32,13 +32,13 @@ execute if block -1578 44 -301 minecraft:orange_wool run tag @e[x=-1577.5,y=45,z
 execute if block -1578 44 -301 minecraft:orange_wool run scoreboard players remove @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1578 44 -301 minecraft:orange_wool run tag @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=changed] remove changed
 execute if block -1595 44 -264 minecraft:lime_wool run tag @e[x=-1599.5,y=45,z=-263.5,distance=..0.7,tag=spring_wall] add enabled
-execute if block -1624 46 -284 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] add enabled
-execute if block -1624 46 -284 minecraft:iron_door[open=true] run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] remove enabled
-execute if block -1624 46 -284 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] add enabled
-execute if block -1624 46 -284 minecraft:iron_door[open=true] run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] remove enabled
+execute if block -1624 45 -284 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] add enabled
+execute if block -1624 45 -284 minecraft:iron_door[open=true] run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] remove enabled
+execute if block -1624 45 -284 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] add enabled
+execute if block -1624 45 -284 minecraft:iron_door[open=true] run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] remove enabled
 execute if block -1609 44 -283 minecraft:orange_wool run tag @e[x=-1620.5,y=45,z=-253.5,distance=..0.7,tag=press_wall] add enabled
 execute if block -1609 44 -283 minecraft:yellow_wool run tag @e[x=-1620.5,y=45,z=-253.5,distance=..0.7,tag=press_wall] remove enabled
-execute if block -1610 46 -308 minecraft:iron_door[open=true] if block -1624 46 -284 minecraft:iron_door[open=false] if entity @s[x=-1612,y=45,z=-308,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_a/second_go_battle/0
+execute if block -1610 45 -308 minecraft:iron_door[open=true] if block -1624 45 -284 minecraft:iron_door[open=false] if entity @s[x=-1612,y=45,z=-308,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_a/second_go_battle/0
 execute if entity @e[x=-1608.5,y=45,z=-299.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=7,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1609.5,y=45,z=-307.5,distance=..0.7,tag=door,tag=!open] add open

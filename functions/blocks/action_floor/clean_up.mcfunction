@@ -16,6 +16,7 @@ execute if entity @s[tag=polished_granite] run setblock ~ ~-1 ~ minecraft:polish
 execute if entity @s[tag=red_wool] run setblock ~ ~-1 ~ minecraft:red_wool
 execute if entity @s[tag=quartz_block] run setblock ~ ~-1 ~ minecraft:quartz_block
 execute if entity @s[tag=terracotta] run setblock ~ ~-1 ~ minecraft:terracotta
+execute if entity @s[tag=polished_andesite] run setblock ~ ~-1 ~ minecraft:polished_andesite
 execute if entity @s[tag=smooth_red_sandstone] run setblock ~ ~-1 ~ minecraft:smooth_red_sandstone
 execute if entity @s[tag=red_nether_bricks] run setblock ~ ~-1 ~ minecraft:red_nether_bricks
 execute if entity @s[tag=iron_block] run setblock ~ ~-1 ~ minecraft:iron_block

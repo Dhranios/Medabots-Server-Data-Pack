@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.kanehachi_mk2"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.kanehachi_mk2"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/god_emperor",

@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.doctor_study"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.doctor_study"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/aimflash",

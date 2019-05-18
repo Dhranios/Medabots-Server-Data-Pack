@@ -12,7 +12,7 @@
         },
         "frame": "challenge"
     },
-    "parent": "medabots_server:wave_1/the_basics_of_battle",
+    "parent": "medabots_server:wave_1/root",
     "criteria": {
         "dragonbeetle": {
             "trigger": "minecraft:impossible"

@@ -60,10 +60,13 @@
 		"medanappings": {
             "trigger": "minecraft:impossible"
         },
-		"jaxy_talks": {
+		"tune_observes": {
             "trigger": "minecraft:impossible"
         },
-		"rubberobo_breakout": {
+		"jaxy_speaks": {
+            "trigger": "minecraft:impossible"
+        },
+		"rubberobos": {
             "trigger": "minecraft:impossible"
         },
 		"rock_a_rubberobo_start": {

@@ -99,7 +99,7 @@ execute positioned -1801 44 -407 run function medabots_server:set_blocks/pot/4_m
 execute positioned -1800 44 -403 run function medabots_server:set_blocks/pot
 # Medapart pot
 execute positioned -1800 44 -405 run function medabots_server:set_blocks/pot
-replaceitem block -1800 44 -405 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:6,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_virus"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.infect"}','{"italic":false,"color":"white","translate":"medabots_server:move.infect.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.maxsnake"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_virus.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_virus.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:maxsnake_virus",gender:0b,move:"infect",part:"right_arm",armor:45,power:30,activated:0b,version:1}}
+replaceitem block -1800 44 -405 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:6,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_virus"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.infect"}','{"italic":false,"color":"white","translate":"medabots_server:move.infect.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.maxsnake"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_virus.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:maxsnake_virus",gender:0b,move:"infect",part:"right_arm",armor:45,power:30,activated:0b,version:1}}
 execute positioned -1800 44 -406 run function medabots_server:set_blocks/pot
 execute positioned -1799 44 -405 run function medabots_server:set_blocks/pot/cannon/detect/rotating/west/delay_4
 execute positioned -1821 44 -400 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -146,8 +146,8 @@ execute positioned -1797 44 -360 run function medabots_server:set_blocks/door/cl
 execute positioned -1785 44 -357 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1775 44 -369 run function medabots_server:set_blocks/door/open/south
 execute positioned -1795 44 -383 run function medabots_server:set_blocks/door/closed/east
-execute positioned -1805 44 -406 run function medabots_server:set_blocks/door/closed/west/negative_x
-execute positioned -1804 44 -406 run function medabots_server:set_blocks/door/closed/west/positive_x
+execute positioned -1805 44 -406 run function medabots_server:set_blocks/door/closed/west
+execute positioned -1804 44 -406 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1809 44 -424 run function medabots_server:set_blocks/door/open/south
 execute positioned -1807 44 -435 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1773 44 -391 run function medabots_server:set_blocks/door/open/west

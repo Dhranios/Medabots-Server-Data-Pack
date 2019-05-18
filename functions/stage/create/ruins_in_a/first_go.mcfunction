@@ -154,7 +154,7 @@ execute positioned -1658 44 -261 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1659 44 -262 run function medabots_server:set_blocks/pot/bomb/delay_5
 # Medapart pot
 execute positioned -1660 44 -262 run function medabots_server:set_blocks/pot
-replaceitem block -1660 44 -262 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:37,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_flower_fly"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.float"}','{"italic":false,"color":"white","translate":"medabots_server:move.float.description"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"55"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pastel_fairy"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_flower_fly.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_flower_fly.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:pastel_fairy_flower_fly",gender:1b,move:"float",part:"legs",armor:55,defense:29,activated:0b,version:1}}
+replaceitem block -1660 44 -262 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:37,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_flower_fly"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.float"}','{"italic":false,"color":"white","translate":"medabots_server:move.float.description"}','{"text":""}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"55"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pastel_fairy"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_flower_fly.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:pastel_fairy_flower_fly",gender:1b,move:"float",part:"legs",armor:55,defense:29,activated:0b,version:1}}
 execute positioned -1661 44 -263 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1701 44 -273 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1699 44 -273 run function medabots_server:set_blocks/pot/guard/slow
@@ -213,8 +213,8 @@ execute positioned -1724 44 -287 run function medabots_server:set_blocks/door/cl
 execute positioned -1717 44 -299 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1717 44 -317 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1717 44 -320 run function medabots_server:set_blocks/door/open/south
-execute positioned -1683 44 -275 run function medabots_server:set_blocks/door/closed/south/negative_z
-execute positioned -1683 44 -274 run function medabots_server:set_blocks/door/closed/south/positive_z
+execute positioned -1683 44 -275 run function medabots_server:set_blocks/door/closed/south
+execute positioned -1683 44 -274 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1682 44 -276 run function medabots_server:set_blocks/goal_area
 execute positioned -1683 44 -254 run function medabots_server:set_blocks/starting_area
 setblock -1651 46 -286 minecraft:wall_torch[facing=east]

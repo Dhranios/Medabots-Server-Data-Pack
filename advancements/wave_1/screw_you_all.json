@@ -10,7 +10,7 @@
             "translate": "medabots_server:advancements.wave_1.screw_you_all.description"
         }
     },
-    "parent": "medabots_server:wave_1/the_basics_of_battle",
+    "parent": "medabots_server:wave_1/root",
     "criteria": {
         "give": {
             "trigger": "minecraft:impossible"

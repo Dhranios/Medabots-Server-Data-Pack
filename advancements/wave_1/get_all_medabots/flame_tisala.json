@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.flame_tisala"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.flame_tisala"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/dondoguu",

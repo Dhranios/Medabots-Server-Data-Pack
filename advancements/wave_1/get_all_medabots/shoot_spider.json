@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.shoot_spider"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.shoot_spider"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/seven_colors",

@@ -17,6 +17,7 @@ execute if entity @s[scores={HideTime=1..}] run function medabots_server:medapar
 execute if entity @s[scores={HoldTime=1..}] run function medabots_server:medaparts/hold_effect
 execute if entity @s[scores={IneffectiveTime=1..}] run function medabots_server:medaparts/ineffective_effect
 execute if entity @s[scores={InfectTime=1..}] run function medabots_server:medaparts/infect_effect
+execute if entity @s[scores={NoDefendTime=1..}] run function medabots_server:medaparts/no_defend_effect
 execute if entity @s[scores={ParalyzeTime=1..}] run function medabots_server:medaparts/paralyze_effect
 execute if entity @s[scores={PerfectGuardTime=1..}] run function medabots_server:medaparts/perfect_guard_effect
 execute if entity @s[scores={ScoutTime=1..}] run function medabots_server:medaparts/scout_effect

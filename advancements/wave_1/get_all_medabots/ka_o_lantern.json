@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.ka_o_lantern"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.ka_o_lantern"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/grade_kabuki",

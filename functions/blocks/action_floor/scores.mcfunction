@@ -13,6 +13,7 @@ execute if block ~ ~-1 ~ minecraft:polished_granite run tag @s add polished_gran
 execute if block ~ ~-1 ~ minecraft:red_wool run tag @s add red_wool
 execute if block ~ ~-1 ~ minecraft:quartz_block run tag @s add quartz_block
 execute if block ~ ~-1 ~ minecraft:terracotta run tag @s add terracotta
+execute if block ~ ~-1 ~ minecraft:polished_andesite run tag @s add polished_andesite
 execute if block ~ ~-1 ~ minecraft:smooth_red_sandstone run tag @s add smooth_red_sandstone
 execute if block ~ ~-1 ~ minecraft:red_nether_bricks run tag @s add red_nether_bricks
 execute if block ~ ~-1 ~ minecraft:iron_block run tag @s add iron_block

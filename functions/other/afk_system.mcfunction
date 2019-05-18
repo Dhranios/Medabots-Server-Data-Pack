@@ -200,7 +200,7 @@ execute if entity @s[scores={Damage=1..}] run playsound medabots_server:entity.m
 execute if entity @s[scores={Run=0,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ .05
 execute if entity @s[scores={Run=1..,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ .1
 execute if entity @s[scores={Run=5..,Jump=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
-execute if entity @s[scores={Walk=5..,Jump=0},tag=action_mode,tag=!hostile] if block ~ ~-1 ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Walk=5..,Jump=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
 execute if entity @s[scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ .1
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ .025
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 8

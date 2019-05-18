@@ -7,7 +7,7 @@
             "translate": "medabots_server:advancements.special_items.passes.robo_1"
         },
         "description": {
-            "translate": "medabots_server:advancements.special_items.taken"
+            "translate": "medabots_server:advancements.special_items.passes.robo_1.description"
         },
         "show_toast": false,
         "announce_to_chat": false,

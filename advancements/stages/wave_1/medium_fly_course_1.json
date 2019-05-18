@@ -38,6 +38,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/wave_1/medium_fly_course"
+        "function": "medabots_server:advancements/stages/wave_1/medium_fly_course_1"
     }
 }

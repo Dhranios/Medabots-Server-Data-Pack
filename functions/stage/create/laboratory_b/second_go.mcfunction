@@ -72,7 +72,7 @@ execute positioned -1722 44 -584 run function medabots_server:set_blocks/pot
 execute positioned -1720 44 -584 run function medabots_server:set_blocks/pot/bomb/delay_5
 # Medapart pot
 execute positioned -1716 44 -584 run function medabots_server:set_blocks/pot
-replaceitem block -1716 44 -584 container.0 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:37,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_field_barrier"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.shooting_trap"}','{"italic":false,"color":"white","translate":"medabots_server:move.shooting_trap.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.more","with":[{"text":"12"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"70"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pastel_fairy"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_field_barrier.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_field_barrier.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:pastel_fairy_field_barrier",gender:1b,move:"shooting_trap",part:"head",armor:70,power:43,uses:12,activated:0b,version:1}}
+replaceitem block -1716 44 -584 container.0 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:37,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_field_barrier"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.shooting_trap"}','{"italic":false,"color":"white","translate":"medabots_server:move.shooting_trap.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.more","with":[{"text":"12"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"70"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pastel_fairy"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_field_barrier.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:pastel_fairy_field_barrier",gender:1b,move:"shooting_trap",part:"head",armor:70,power:43,uses:12,activated:0b,version:1}}
 execute positioned -1718 44 -587 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1718 44 -588 run function medabots_server:set_blocks/pot
 execute positioned -1719 44 -587 run function medabots_server:set_blocks/pot
@@ -143,12 +143,12 @@ execute positioned -1743 44 -577 run function medabots_server:set_blocks/door/op
 execute positioned -1743 44 -601 run function medabots_server:set_blocks/door/closed/north
 execute positioned -1743 44 -605 run function medabots_server:set_blocks/door/open/south
 execute positioned -1743 44 -629 run function medabots_server:set_blocks/door/closed/north
-execute positioned -1702 44 -632 run function medabots_server:set_blocks/door/closed/west/negative_z
-execute positioned -1701 44 -632 run function medabots_server:set_blocks/door/closed/west/positive_x
-execute positioned -1704 44 -632 run function medabots_server:set_blocks/door/closed/west/negative_x
-execute positioned -1703 44 -632 run function medabots_server:set_blocks/door/closed/west/negative_z
-execute positioned -1679 44 -613 run function medabots_server:set_blocks/door/closed/south/positive_z
-execute positioned -1679 44 -614 run function medabots_server:set_blocks/door/open/south/negative_z
+execute positioned -1702 44 -632 run function medabots_server:set_blocks/door/closed/west
+execute positioned -1701 44 -632 run function medabots_server:set_blocks/door/closed/west
+execute positioned -1704 44 -632 run function medabots_server:set_blocks/door/closed/west
+execute positioned -1703 44 -632 run function medabots_server:set_blocks/door/closed/west
+execute positioned -1679 44 -613 run function medabots_server:set_blocks/door/closed/south
+execute positioned -1679 44 -614 run function medabots_server:set_blocks/door/open/south
 execute positioned -1754 44 -549 run function medabots_server:set_blocks/starting_area
 teleport @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=-1] -1754 44 -549
 teleport @s[tag=-1] -1754 44 -549

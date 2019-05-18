@@ -29,30 +29,12 @@ scoreboard players set @s[scores={Charge=1..}] Charge 0
 # Deactivate parts
 execute store result entity @s Inventory[{tag:{medabots_server:{activated:1b}}}].tag.medabots_server.activated byte 1 run scoreboard players get #0 Constants
 
-# Remove status effects
-scoreboard players set @s[scores={AuxiliaryTime=1..}] AuxiliaryTime 1
-scoreboard players set @s[scores={BugTime=1..}] BugTime 1
-scoreboard players set @s[scores={ConfuseTime=1..}] ConfuseTime 1
-scoreboard players set @s[scores={DefenseTime=1..}] DefenseTime 1
-scoreboard players set @s[scores={FreezeTime=1..}] FreezeTime 1
-scoreboard players set @s[scores={HideTime=1..}] HideTime 1
-scoreboard players set @s[scores={HoldTime=1..}] HoldTime 1
-scoreboard players set @s[scores={IneffectiveTime=1..}] IneffectiveTime 1
-scoreboard players set @s[scores={InfectTime=1..}] InfectTime 1
-scoreboard players set @s[scores={NoDefendTime=1..}] NoDefendTime 1
-scoreboard players set @s[scores={OverHeatingFly=1..}] OverHeatingFly 1
-scoreboard players set @s[scores={OverheatingMedal=1..}] OverheatingMedal 1
-scoreboard players set @s[scores={ParalyzeTime=1..}] ParalyzeTime 1
-scoreboard players set @s[scores={PerfectGuardTime=1..}] PerfectGuardTime 1
-scoreboard players set @s[scores={ScoutTime=1..}] ScoutTime 1
-tag @s[tag=static_fly] remove static_fly
-tag @s[tag=blocked_medaforce] remove blocked_medaforce
-
 # Un-set combat
 execute at @e[tag=medabot_model] if score @s MedabotNr = @e[distance=..0.1,tag=medabot_model,limit=1] MedabotNr run kill @e[distance=..0.1,tag=medabot_model,limit=1]
 execute as @e[scores={MedabotNr=1..}] if score @s MedabotNr > @e[distance=..0.1,tag=hostile,limit=1] MedabotNr run scoreboard players remove @s MedabotNr 1
 scoreboard players reset @s MedabotNr
 effect clear @s minecraft:invisibility
+clear @s minecraft:tipped_arrow
 tag @s remove hostile
 scoreboard players reset @s[scores={Death=0}] Stage
 scoreboard players set @s[scores={Death=1..}] LeaveStage 1
@@ -108,6 +90,8 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:yellow_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/yellow_plant
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:orange_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/orange_plant
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:red_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/red_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar_cent",stage_item:1b}}}]}] run function medabots_server:other/put_medallar_cents_on_bank
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar",stage_item:1b}}}]}] run function medabots_server:other/put_medallars_on_bank
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:stage/give_obtained_item
 
 # Re-equip headgear

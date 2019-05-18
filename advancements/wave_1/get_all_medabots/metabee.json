@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.metabee"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.metabee"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/dorcus",

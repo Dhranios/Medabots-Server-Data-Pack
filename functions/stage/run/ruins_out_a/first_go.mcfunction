@@ -32,19 +32,19 @@ execute if block -1578 44 -301 minecraft:yellow_wool run scoreboard players remo
 execute if block -1578 44 -301 minecraft:yellow_wool run tag @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=!changed] add changed
 execute if block -1578 44 -301 minecraft:orange_wool run scoreboard players add @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1578 44 -301 minecraft:orange_wool run tag @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=changed] remove changed
-execute if block -1622 46 -300 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] add enabled
-execute if block -1622 46 -300 minecraft:iron_door[open=true] run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] remove enabled
-execute if block -1622 46 -300 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] add enabled
-execute if block -1622 46 -300 minecraft:iron_door[open=true] run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] remove enabled
+execute if block -1622 45 -300 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] add enabled
+execute if block -1622 45 -300 minecraft:iron_door[open=true] run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] remove enabled
+execute if block -1622 45 -300 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] add enabled
+execute if block -1622 45 -300 minecraft:iron_door[open=true] run tag @e[x=-1596.5,y=45,z=-284.5,distance=..0.7,tag=press_wall] remove enabled
 execute if block -1606 44 -281 minecraft:orange_wool run tag @e[x=-1620.5,y=45,z=-253.5,distance=..0.7,tag=press_wall] add enabled
 execute if block -1606 44 -281 minecraft:yellow_wool run tag @e[x=-1620.5,y=45,z=-253.5,distance=..0.7,tag=press_wall] remove enabled
 execute if block -1604 44 -300 minecraft:lime_wool run tag @e[x=-1604.5,y=45,z=-299.5,distance=..0.7,tag=gas_floor] add enabled
 execute if block -1611 44 -293 minecraft:lime_wool run tag @e[x=-1610.5,y=45,z=-293.5,distance=..0.7,tag=gas_floor] add enabled
-execute if block -1610 46 -308 minecraft:iron_door[open=true] if block -1622 46 -300 minecraft:iron_door[open=false] if entity @s[x=-1612,y=45,z=-307,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_a/first_go_battle/0
+execute if block -1610 45 -308 minecraft:iron_door[open=true] if block -1622 45 -300 minecraft:iron_door[open=false] if entity @s[x=-1612,y=45,z=-307,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_a/first_go_battle/0
 execute if entity @e[x=-1609.5,y=45,z=-298.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=7,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if block -1610 46 -308 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1609.5,y=45,z=-307.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1622 46 -300 minecraft:iron_door[open=false] if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1609.5,y=45,z=-307.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,tag=!open] add open
 execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,tag=mission]
 execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:ruins_out_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
@@ -56,4 +56,5 @@ scoreboard players set @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gam
 scoreboard players set @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
 scoreboard players set @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
 advancement grant @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_out_a_first_go
+tag @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={meet_doctor_haru=true,tunes_order=false}}] add dialog_infinity_tunes_order
 teleport @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] -1570 51 -284 -180 0

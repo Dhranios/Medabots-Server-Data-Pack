@@ -1,7 +1,7 @@
 # Open the door
 execute if entity @s[tag=open] if block ~ ~ ~ minecraft:iron_door[open=false] run function medabots_server:blocks/door/open
 
-# Open the door
+# Close the door
 execute if entity @s[tag=!open] if block ~ ~ ~ minecraft:iron_door[open=true] run function medabots_server:blocks/door/close
 
 # Remove when cleaning up a stage

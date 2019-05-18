@@ -63,7 +63,7 @@ execute if block -1808 44 -490 minecraft:lime_wool run tag @e[x=-1806.5,y=45,z=-
 execute if block -1808 44 -490 minecraft:lime_wool run tag @e[x=-1807.5,y=45,z=-490.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
 execute if block -1767 44 -490 minecraft:lime_wool run tag @e[x=-1765.5,y=45,z=-489.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
 execute if block -1767 44 -490 minecraft:lime_wool run tag @e[x=-1766.5,y=45,z=-490.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1843 46 -511 minecraft:iron_door[open=true] if block -1842 46 -521 minecraft:iron_door[open=false] if entity @s[x=-1846,y=45,z=-513,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_b/second_go_battle/0
+execute if block -1843 45 -511 minecraft:iron_door[open=true] if block -1842 45 -521 minecraft:iron_door[open=false] if entity @s[x=-1846,y=45,z=-513,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_b/second_go_battle/0
 execute if entity @e[x=-1849.5,y=45,z=-509.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=16,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1849.5,y=45,z=-509.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=16},tag=cannon,tag=mission_entity] run tag @s add mission_success
 title @s[tag=mission_success] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
@@ -75,7 +75,7 @@ execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:ruins_out_a/robattle players
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block -1788 46 -511 minecraft:iron_door[open=true] if entity @s[x=-1789,y=45,z=-514,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_b/second_go_battle/1
+execute if block -1788 45 -511 minecraft:iron_door[open=true] if entity @s[x=-1789,y=45,z=-514,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_b/second_go_battle/1
 execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=16,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1858,y=0,z=-536,dx=94,dy=50,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=16}] run scoreboard players set @s Stage 16
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/ruins_out_b/second_go

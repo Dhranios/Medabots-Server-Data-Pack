@@ -10,7 +10,7 @@
             "translate": "medabots_server:advancements.wave_1.hero_of_magvel.description"
         }
     },
-    "parent": "medabots_server:wave_1/the_basics_of_battle",
+    "parent": "medabots_server:wave_1/root",
     "criteria": {
         "cleared_lagdou_ruins_10_a_second_time": {
             "trigger": "minecraft:impossible"

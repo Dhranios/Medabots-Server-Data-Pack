@@ -176,8 +176,9 @@ execute positioned -1724 44 -289 run function medabots_server:set_blocks/pot/gua
 execute positioned -1720 44 -310 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1720 44 -305 run function medabots_server:set_blocks/pot
 execute positioned -1713 44 -305 run function medabots_server:set_blocks/pot/2_medallar_cents
+# Medapart pot
 execute positioned -1707 44 -309 run function medabots_server:set_blocks/pot
-replaceitem block -1707 44 -309 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:44,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pinguen_new_arm"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.repair"}','{"italic":false,"color":"white","translate":"medabots_server:move.repair.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"25"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pinguen"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.pinguen_new_arm.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pinguen_new_arm.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:pinguen_new_arm",gender:1b,move:"repair",part:"left_arm",armor:25,power:20,activated:0b,version:1}}
+replaceitem block -1707 44 -309 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:44,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pinguen_new_arm"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.repair"}','{"italic":false,"color":"white","translate":"medabots_server:move.repair.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"25"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pinguen"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pinguen_new_arm.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:pinguen_new_arm",gender:1b,move:"repair",part:"left_arm",armor:25,power:20,activated:0b,version:1}}
 execute positioned -1705 44 -310 run function medabots_server:set_blocks/pot/6_medallar_cents
 execute positioned -1661 44 -272 run function medabots_server:set_blocks/wall
 execute positioned -1653 44 -284 run function medabots_server:set_blocks/wall
@@ -225,8 +226,8 @@ execute positioned -1724 44 -287 run function medabots_server:set_blocks/door/cl
 execute positioned -1717 44 -299 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1717 44 -317 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1717 44 -320 run function medabots_server:set_blocks/door/open/south
-execute positioned -1683 44 -275 run function medabots_server:set_blocks/door/closed/south/negative_z
-execute positioned -1683 44 -274 run function medabots_server:set_blocks/door/closed/south/positive_z
+execute positioned -1683 44 -275 run function medabots_server:set_blocks/door/closed/south
+execute positioned -1683 44 -274 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1682 44 -276 run function medabots_server:set_blocks/goal_area
 execute positioned -1683 44 -254 run function medabots_server:set_blocks/starting_area
 setblock -1651 46 -286 minecraft:wall_torch[facing=east]

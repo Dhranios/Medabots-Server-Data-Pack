@@ -3,3 +3,7 @@ tag @s[advancements={medabots_server:wave_1/story_progression={meet_koji=true,se
 tag @s[advancements={medabots_server:wave_1/story_progression={meet_director_tune=true,see_spyke=false,meet_screws=false}},x=-361,y=55,z=-83,distance=..5] add dialog_infinity_see_spyke
 tag @s[advancements={medabots_server:wave_1/story_progression={meet_director_tune=true,see_sloan=false,meet_screws=false}},x=-302,y=55,z=-14,distance=..5] add dialog_infinity_see_sloan
 tag @s[advancements={medabots_server:wave_1/story_progression={meet_screws=true,vs_spyke_begin=false}},x=-324,y=55,z=5,distance=..10] add dialog_infinity_vs_spyke_begin
+tag @s[advancements={medabots_server:wave_1/story_progression={meet_jaxy=true,maxs_first_love=false}},x=-317,y=55,z=-30,distance=..5] add dialog_infinity_maxs_first_love
+tag @s[advancements={medabots_server:wave_1/story_progression={maxs_first_love=true,meet_doctor_haru=false}},x=-398,y=55,z=-52,distance=..5] add dialog_infinity_meet_doctor_haru
+tag @s[advancements={medabots_server:wave_1/story_progression={tune_observes=false,jaxy_speaks=false},medabots_server:stages/wave_1/ruins_in_a_first_go=true},x=-411,y=55,z=-31,distance=..3] add dialog_infinity_tune_observes
+tag @s[advancements={medabots_server:wave_1/story_progression={jaxy_speaks=false},medabots_server:stages/wave_1/ruins_in_a_first_go=true},x=-410,y=55,z=-42,distance=..6] add dialog_infinity_jaxy_speaks

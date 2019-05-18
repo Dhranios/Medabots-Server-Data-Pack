@@ -36,7 +36,7 @@ execute if block -1640 43 -544 minecraft:light_blue_wool run tag @e[x=-1639.5,y=
 execute if block -1640 43 -544 minecraft:blue_wool run tag @e[x=-1639.5,y=44,z=-544.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
 execute if block -1638 43 -544 minecraft:light_blue_wool run tag @e[x=-1637.5,y=44,z=-544.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
 execute if block -1638 43 -544 minecraft:blue_wool run tag @e[x=-1637.5,y=44,z=-544.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
-execute if block -1621 45 -552 minecraft:iron_door[open=true] if entity @s[x=-1622,y=44,z=-555,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/second_go_battle/0
+execute if block -1621 44 -552 minecraft:iron_door[open=true] if entity @s[x=-1622,y=44,z=-555,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/second_go_battle/0
 execute if entity @e[x=-1666,y=0,z=-572,dx=92,dy=49,dz=92,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1666,y=0,z=-572,dx=92,dy=49,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=17}] run scoreboard players set @s Stage 17
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/ruins_in_b/second_go

@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.seven_colors"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.seven_colors"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/poison_scorpi",

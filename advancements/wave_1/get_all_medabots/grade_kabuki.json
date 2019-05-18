@@ -8,7 +8,7 @@
             "translate": "medabots_server:entity.grade_kabuki"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.grade_kabuki"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/doctor_study",

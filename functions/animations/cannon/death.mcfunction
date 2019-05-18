@@ -14,5 +14,5 @@ execute if entity @s[scores={DeathTime=60}] run particle minecraft:cloud ~ ~4 ~ 
 tag @s[scores={DeathTime=60}] add dead
 execute if entity @s[scores={DeathTime=60}] positioned ~ ~1 ~ run tag @e[type=minecraft:falling_block,distance=..0.7,tag=cannon_base] add dead
 
-execute positioned ~ ~1 ~ as @e[type=minecraft:falling_block,distance=..0.7,tag=cannon_base] run data merge entity @s {Air:1}
-execute positioned ~ ~1 ~ as @e[type=minecraft:falling_block,distance=..0.7,tag=cannon_base] run data merge entity @s {Air:0}
+execute positioned ~ ~1 ~ as @e[type=minecraft:falling_block,distance=..5,tag=cannon_base] run data merge entity @s {Air:1,Motion:[0.0d,0.0d,0.0d]}
+execute positioned ~ ~1 ~ as @e[type=minecraft:falling_block,distance=..5,tag=cannon_base] run data merge entity @s {Air:0,Motion:[0.0d,0.0d,0.0d]}

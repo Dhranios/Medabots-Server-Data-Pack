@@ -10,7 +10,7 @@
             "translate": "medabots_server:advancements.wave_1.you_you_traitor.description"
         }
     },
-    "parent": "medabots_server:wave_1/the_basics_of_battle",
+    "parent": "medabots_server:wave_1/root",
     "criteria": {
         "bought_unknown_crown": {
             "trigger": "minecraft:impossible"

@@ -4,7 +4,7 @@ execute positioned -1704 44 -222 run function medabots_server:spawn_entities/can
 execute positioned -1729 44 -241 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
 execute positioned -1755 44 -232 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4
 execute positioned -1698 44 -190 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4
-execute positioned -1694 44 -189 run function medabots_server:set_blocks/mirror/-45cannon/no_detect/rotating/north/delay_4
+execute positioned -1694 44 -189 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4
 execute positioned -1740 44 -192 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1738 44 -192 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1736 44 -192 run function medabots_server:set_blocks/floor_switch/green
@@ -64,9 +64,9 @@ execute positioned -1741 44 -237 run function medabots_server:set_blocks/mirror/
 execute positioned -1741 44 -238 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1758 44 -237 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1759 44 -238 run function medabots_server:set_blocks/mirror/-45
-execute positioned -1741 46 -238 run function medabots_server:set_blocks/mirror/-45item/mirror_help
-execute positioned -1741 46 -237 run function medabots_server:set_blocks/mirror/-45item/mirror_help
-execute positioned -1725 44 -193 run function medabots_server:set_blocks/mirror/-45item/glass_help
+execute positioned -1741 46 -238 run function medabots_server:set_blocks/item/mirror_help
+execute positioned -1741 46 -237 run function medabots_server:set_blocks/item/mirror_help
+execute positioned -1725 44 -193 run function medabots_server:set_blocks/item/glass_help
 execute positioned -1692 44 -243 run function medabots_server:set_blocks/pot
 execute positioned -1691 44 -243 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1686 44 -239 run function medabots_server:set_blocks/pot
@@ -75,7 +75,7 @@ execute positioned -1680 44 -237 run function medabots_server:set_blocks/pot/bom
 execute positioned -1677 44 -235 run function medabots_server:set_blocks/pot/6_medallar_cents
 # Medapart pot
 execute positioned -1685 44 -228 run function medabots_server:set_blocks/pot
-replaceitem block -1685 44 -228 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:42,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.uglyduck_feathermend"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.break"}','{"italic":false,"color":"white","translate":"medabots_server:move.break.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"65"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.uglyduck"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.uglyduck_feathermend.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.uglyduck_feathermend.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:uglyduck_feathermend",gender:1b,move:"break",part:"right_arm",armor:65,power:26,activated:0b,version:1}}
+replaceitem block -1685 44 -228 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:42,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.uglyduck_feathermend"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.break"}','{"italic":false,"color":"white","translate":"medabots_server:move.break.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"65"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.uglyduck"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.uglyduck_feathermend.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:uglyduck_feathermend",gender:1b,move:"break",part:"right_arm",armor:65,power:26,activated:0b,version:1}}
 execute positioned -1706 44 -232 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1698 44 -222 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1698 44 -221 run function medabots_server:set_blocks/pot

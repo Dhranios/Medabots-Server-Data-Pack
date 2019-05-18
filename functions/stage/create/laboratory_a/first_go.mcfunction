@@ -123,7 +123,7 @@ execute positioned -1753 44 -252 run function medabots_server:set_blocks/pot/can
 execute positioned -1751 44 -254 run function medabots_server:set_blocks/pot
 # Medapart pot
 execute positioned -1750 44 -254 run function medabots_server:set_blocks/pot
-replaceitem block -1750 44 -254 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:18,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheapertrap"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap"}','{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.shoot_spider"}',"",'{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheapertrap.quote"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheapertrap.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:shoot_spider_cheapertrap",gender:0b,move:"melee_trap",part:"right_arm",armor:45,power:23,activated:0b,version:1}}
+replaceitem block -1750 44 -254 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:18,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheapertrap"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap"}','{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.shoot_spider"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheapertrap.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:shoot_spider_cheapertrap",gender:0b,move:"melee_trap",part:"right_arm",armor:45,power:23,activated:0b,version:1}}
 execute positioned -1749 44 -253 run function medabots_server:set_blocks/pot
 execute positioned -1750 44 -252 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1754 44 -282 run function medabots_server:set_blocks/pot
@@ -137,22 +137,22 @@ execute positioned -1760 44 -281 run function medabots_server:set_blocks/pot/20_
 execute positioned -1760 44 -280 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1762 44 -298 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1761 44 -298 run function medabots_server:set_blocks/pot/guard/slow
-execute positioned -1795 44 -313 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/east/delay_4
-execute positioned -1795 44 -316 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/east/delay_4
+execute positioned -1795 44 -313 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/west/delay_4
+execute positioned -1795 44 -316 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/west/delay_4
 execute positioned -1795 44 -319 run function medabots_server:set_blocks/pot
 execute positioned -1798 44 -310 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1798 44 -313 run function medabots_server:set_blocks/pot
 execute positioned -1798 44 -316 run function medabots_server:set_blocks/pot/2_medallar_cents
-execute positioned -1798 44 -319 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/north/delay_4
-execute positioned -1801 44 -310 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/south/delay_4
+execute positioned -1798 44 -319 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/south/delay_4
+execute positioned -1801 44 -310 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/north/delay_4
 execute positioned -1801 44 -313 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1801 44 -316 run function medabots_server:set_blocks/pot
 execute positioned -1801 44 -319 run function medabots_server:set_blocks/pot
 execute positioned -1804 44 -310 run function medabots_server:set_blocks/pot
 execute positioned -1804 44 -313 run function medabots_server:set_blocks/pot
 execute positioned -1804 44 -316 run function medabots_server:set_blocks/pot/2_medallar_cents
-execute positioned -1804 44 -319 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/north/delay_4
-execute positioned -1807 44 -310 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/south/delay_4
+execute positioned -1804 44 -319 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/south/delay_4
+execute positioned -1807 44 -310 run function medabots_server:set_blocks/pot/cannon/no_detect/rotating/north/delay_4
 execute positioned -1807 44 -313 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1807 44 -316 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1807 44 -319 run function medabots_server:set_blocks/pot
