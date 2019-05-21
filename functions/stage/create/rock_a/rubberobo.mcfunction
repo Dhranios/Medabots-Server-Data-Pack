@@ -6,9 +6,9 @@ execute positioned -1628 45 -144 run function medabots_server:spawn_entities/gua
 execute positioned -1625 45 -154 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1592 45 -130 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
 execute positioned -1592 45 -132 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
-execute positioned -1592 45 -140 run function medabots_server:spawn_entities/cannon/detect/looking/west/delay_4
+execute positioned -1592 45 -140 run function medabots_server:spawn_entities/cannon/detect/looking/east/delay_4
 execute positioned -1577 45 -145 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_3
-execute positioned -1591 45 -151 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
+execute positioned -1591 45 -151 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
 execute positioned -1607 45 -154 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4/2_medallar_cents
 execute positioned -1624 45 -168 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1620 45 -155 run function medabots_server:spawn_entities/cannon/no_detect/looking/north/delay_3
@@ -154,13 +154,13 @@ execute positioned -1599 45 -170 run function medabots_server:set_blocks/wall
 execute positioned -1597 45 -166 run function medabots_server:set_blocks/wall
 execute positioned -1586 45 -165 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1617 45 -167 run function medabots_server:set_blocks/door/closed/west
-execute positioned -1626 45 -127 run function medabots_server:set_blocks/goal_area
+execute positioned -1601 45 -175 run function medabots_server:set_blocks/goal_area
 execute positioned -1629 45 -127 run function medabots_server:set_blocks/starting_area
 tag @s add rubberobo
 teleport @s -1629 45 -127
 bossbar set medabots_server:rock_a/time value 0
 bossbar set medabots_server:rock_a/time players @s
-scoreboard players set @a[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] Stage 2
-scoreboard players set @a[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] Music 0
-scoreboard players set @a[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63] MusicType 8
+scoreboard players set @s Battle 1
+scoreboard players set @s Stage 2
+scoreboard players set @s Music 0
+scoreboard players set @s MusicType 8

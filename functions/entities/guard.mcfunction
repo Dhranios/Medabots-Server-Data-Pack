@@ -2,9 +2,6 @@
 tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
 execute if entity @s[tag=dying,tag=!dead] run function medabots_server:animations/guard/death
 
-# new guards need a new guard number
-execute unless entity @s[scores={Time=-30..}] run function medabots_server:entities/guard/scores
-
 # If hurt, freezes
 scoreboard players set @s[nbt={HurtTime:9s}] Time 40
 

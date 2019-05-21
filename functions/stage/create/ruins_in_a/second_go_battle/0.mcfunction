@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] run function medabots_server:stage/create/ruins_in_a/second_go_battle/0_cpu
+execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] positioned -1651 44 -339 run function medabots_server:spawn_entities/enemy_medabot/maxsnake/hellphoenix/seven_colors/maxsnake/kuwagata
+execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] positioned -1651 44 -339 run scoreboard players set @e[distance=..1] Stage 8
 execute positioned -1641 44 -328 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
 execute positioned -1639 44 -332 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
 execute positioned -1639 44 -335 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4

@@ -4,5 +4,6 @@ execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run setblock 
 scoreboard players set @s[scores={Error=0,Dialog=0},gamemode=adventure] Music 0
 scoreboard players set @s[scores={Error=0,Dialog=0},gamemode=adventure] MusicType 4
 execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run function medabots_server:stage/sign/generic/stage_settings
+execute if entity @s[advancements={medabots_server:wave_1/story_progression={vs_spyke=true,vs_spyke_battle=false}},scores={Error=0,Dialog=0},gamemode=adventure] run function medabots_server:stage/sign/generic/story_battle
 scoreboard players set @s[scores={Error=1..}] PreviousError 0
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}

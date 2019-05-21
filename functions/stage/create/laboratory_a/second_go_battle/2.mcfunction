@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=2] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=2] run function medabots_server:stage/create/laboratory_a/second_go_battle/2_cpu
+execute unless entity @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=2] positioned -1773 44 -298 run function medabots_server:spawn_entities/enemy_medabot/shoot_spider/kanehachi_mk2/grade_kabuki/shoot_spider/chameleon
+execute unless entity @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=2] positioned -1773 44 -298 run scoreboard players set @e[distance=..1] Stage 9
 execute positioned -1764 44 -302 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1766 44 -300 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1768 44 -298 run function medabots_server:set_blocks/mirror/-45

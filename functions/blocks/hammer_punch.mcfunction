@@ -1,6 +1,3 @@
-# Tags new hamer punches with what block they'll replace
-execute unless entity @s[scores={Time=-20..}] run function medabots_server:blocks/hammer_punch/scores
-
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run function medabots_server:blocks/hammer_punch/clean_up
 

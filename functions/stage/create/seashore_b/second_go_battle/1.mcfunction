@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=1] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=1] run function medabots_server:stage/create/seashore_b/second_go_battle/1_cpu
+execute unless entity @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=1] positioned -1747 45 -430 run function medabots_server:spawn_entities/enemy_medabot/keithturtle/keithturtle/dragonbeetle/keithturtle/kabuto
+execute unless entity @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=1] positioned -1747 45 -430 run scoreboard players set @e[distance=..1] Stage 13
 execute positioned -1741 45 -433 run function medabots_server:set_blocks/mirror/45
 execute positioned -1743 45 -431 run function medabots_server:set_blocks/mirror/45
 execute positioned -1745 45 -429 run function medabots_server:set_blocks/mirror/45

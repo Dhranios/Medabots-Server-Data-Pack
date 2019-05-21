@@ -75,5 +75,3 @@ advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/wa
 teleport @s[scores={BattlingMedabots=1}] -1727 50 -575 -180 0
 execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:laboratory_b/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block -1702 44 -633 minecraft:barrier run setblock -1702 44 -633 minecraft:cyan_terracotta
-execute if block -1703 44 -633 minecraft:barrier run setblock -1703 44 -633 minecraft:cyan_terracotta

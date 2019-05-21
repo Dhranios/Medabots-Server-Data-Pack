@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] run function medabots_server:stage/create/jungle_a/second_go_battle/0_cpu
+execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] positioned -1652 45 -129 run function medabots_server:spawn_entities/enemy_medabot/doctor_study/maxsnake/dondoguu/doctor_study/chameleon
+execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] positioned -1652 45 -129 run scoreboard players set @e[distance=..1] Stage 3
 tag @e[x=-1661.5,y=45,z=-123.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true

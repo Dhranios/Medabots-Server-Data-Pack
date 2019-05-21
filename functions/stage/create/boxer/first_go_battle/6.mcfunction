@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] run function medabots_server:stage/create/boxer/first_go_battle/6_cpu
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned -1906 43 -553 run function medabots_server:spawn_entities/enemy_medabot/potato_insect/pretty_prime/peppercat/potato_insect/monkey
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned -1906 43 -553 run scoreboard players set @e[distance=..1] Stage 29
 execute positioned -1906 44 -547 run function medabots_server:spawn_entities/item/10_medallar_cents
 tag @e[x=-1898.5,y=44,z=-560.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true

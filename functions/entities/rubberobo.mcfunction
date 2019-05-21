@@ -1,6 +1,3 @@
-# New rubberobos need scores
-execute unless entity @s[scores={Time=-200..}] run function medabots_server:entities/rubberobo/scores
-
 # Respawn after death
 execute if entity @s[tag=respawning,scores={Time=0}] run function medabots_server:entities/rubberobo/respawn
 

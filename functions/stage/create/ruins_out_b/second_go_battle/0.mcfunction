@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=0] run function medabots_server:stage/create/ruins_out_b/second_go_battle/0_cpu
+execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=0] positioned -1853 45 -512 run function medabots_server:spawn_entities/enemy_medabot/knight_armor/doctor_study/attack_tyano/knight_armor/chameleon
+execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=0] positioned -1853 45 -512 run scoreboard players set @e[distance=..1] Stage 16
 execute positioned -1846 45 -508 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1846 45 -516 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1855 45 -507 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/east/delay_4

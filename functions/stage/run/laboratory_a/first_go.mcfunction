@@ -78,4 +78,5 @@ scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
 advancement grant @s[scores={BattlingMedabots=1}] only medabots_server:stages/wave_1/laboratory_a_first_go
 teleport @s[scores={BattlingMedabots=1}] -1772 50 -285 -180 0
 execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:laboratory_a/robattle players
+tag @s[scores={BattlingMedabots=1},advancements={medabots_server:wave_1/story_progression={jaxy_speaks=true,rubberobo_breakout=false}}] add dialog_infinity_rubberobo_breakout
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

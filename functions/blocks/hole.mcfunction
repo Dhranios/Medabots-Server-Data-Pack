@@ -1,8 +1,5 @@
-# Tags new holes with what block they'll replace
-execute unless entity @s[scores={Time=0..}] run function medabots_server:blocks/hole/scores
-
 # Remove when cleaning up a stage
-execute if entity @s[tag=dead] run function medabots_server:blocks/hole/clean_up
+execute if entity @s[tag=dead] run function medabots_server:blocks/put_block_back
 
 # Countdown punching
 scoreboard players remove @s[scores={Time=1..}] Time 1

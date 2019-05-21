@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] run function medabots_server:stage/create/grassland_b/second_go_battle/1_cpu
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1529 45 -400 run function medabots_server:spawn_entities/enemy_medabot/pinguen/pure_mermaid/frappe/pinguen/mermaid
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1529 45 -400 run scoreboard players set @e[distance=..1] Stage 10
 execute positioned -1533 45 -404 run function medabot_sever:spawn_entities/cannon/detect/rotating/east/delay_4
 execute positioned -1532 45 -399 run function medabot_sever:spawn_entities/cannon/detect/rotating/east/delay_4
 execute positioned -1526 45 -393 run function medabot_sever:spawn_entities/cannon/detect/rotating/north/delay_4

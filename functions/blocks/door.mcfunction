@@ -9,4 +9,3 @@ execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=east] r
 execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=north] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air
 execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=south] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air
 execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=west] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air
-kill @s[tag=dead]

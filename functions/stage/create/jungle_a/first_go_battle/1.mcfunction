@@ -1,5 +1,6 @@
 execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=1] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=1] run function medabots_server:stage/create/jungle_a/first_go_battle/1_cpu
+execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=1] positioned -1697 45 -167 run function medabots_server:spawn_entities/enemy_medabot/nin_ninja/basstroyer/poison_scorpi/nin_ninja/knight
+execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=1] positioned -1697 45 -167 run scoreboard players set @e[distance=..1] Stage 3
 execute positioned -1690 45 -169 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1692 45 -172 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1695 45 -165 run function medabots_server:set_blocks/hole/delay_5

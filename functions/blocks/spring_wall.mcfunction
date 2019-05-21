@@ -1,6 +1,3 @@
-# Tags new spring walls with what block they'll replace
-execute unless entity @s[scores={Time=-3..}] run function medabots_server:blocks/spring_wall/scores
-
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run function medabots_server:blocks/spring_wall/clean_up
 

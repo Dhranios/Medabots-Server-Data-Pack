@@ -66,31 +66,37 @@
 		"jaxy_speaks": {
             "trigger": "minecraft:impossible"
         },
-		"rubberobos": {
+		"rubberobo_breakout": {
             "trigger": "minecraft:impossible"
         },
-		"rock_a_rubberobo_start": {
+		"neutranurse_helps": {
             "trigger": "minecraft:impossible"
         },
-		"rock_a_rubberobo_end": {
+		"rubberobo_scoop": {
             "trigger": "minecraft:impossible"
         },
-		"snowfield_a_rubberobo_start": {
+		"rubberobo_enters_rock_a": {
             "trigger": "minecraft:impossible"
         },
-		"snowfield_a_rubberobo_end": {
+		"rubberobo_leaves_rock_a": {
             "trigger": "minecraft:impossible"
         },
-		"ruins_in_a_rubberobo_start": {
+		"rubberobo_enters_snowfield_a": {
             "trigger": "minecraft:impossible"
         },
-		"ruins_in_a_rubberobo_end": {
+		"rubberobo_leaves_snowfield_a": {
             "trigger": "minecraft:impossible"
         },
-		"seashore_a_rubberobo_start": {
+		"rubberobo_enters_ruins_in_a": {
             "trigger": "minecraft:impossible"
         },
-		"seashore_a_rubberobo_end": {
+		"rubberobo_leaves_ruins_in_a": {
+            "trigger": "minecraft:impossible"
+        },
+		"rubberobo_enters_seashore_a": {
+            "trigger": "minecraft:impossible"
+        },
+		"rubberobo_leaves_seashore_a": {
             "trigger": "minecraft:impossible"
         },
 		"vs_squidguts": {

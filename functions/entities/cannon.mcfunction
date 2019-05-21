@@ -2,9 +2,6 @@
 tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
 execute if entity @s[tag=dying] run function medabots_server:animations/cannon/death
 
-# New cannons need scores and rotation
-execute unless entity @s[scores={Time=-1..}] run function medabots_server:entities/cannon/scores
-
 # Coundown shooting
 scoreboard players remove @s[scores={Time=1..9}] Time 1
 scoreboard players remove @s[scores={Time=10},tag=detected] Time 1
@@ -44,14 +41,8 @@ scoreboard players set @s[scores={CannonFire=-1},tag=!detected,tag=!dying] Canno
 scoreboard players set @s[scores={CannonFire=1..},tag=!detected,tag=!dying] CannonFire 0
 
 # Rotate cannon
-execute at @s[tag=rotate_over_x_negative,scores={CannonFire=-1..0,Time=0..},tag=!detect,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotate_over_z_negative,scores={CannonFire=-1..0,Time=0..},tag=!detect,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotate_over_x_positive,scores={CannonFire=-1..0,Time=0..},tag=!detect,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotate_over_z_positive,scores={CannonFire=-1..0,Time=0..},tag=!detect,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotate_over_x_negative,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotate_over_z_negative,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotate_over_x_positive,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotate_over_z_positive,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected,tag=!dying] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotating,scores={CannonFire=-1..0,Time=0..},tag=!detect,tag=!dying] run function medabots_server:entities/cannon/turn
+execute at @s[tag=rotating,scores={CannonFire=-1..0,Time=0..},tag=detect,tag=!detected,tag=!dying] run function medabots_server:entities/cannon/turn
 
 # Allow rotating only on the second tick
 scoreboard players set @s[scores={Time=-1}] Time 20

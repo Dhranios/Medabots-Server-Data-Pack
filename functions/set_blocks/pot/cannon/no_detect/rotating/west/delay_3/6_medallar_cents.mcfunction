@@ -1,3 +1,3 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.pot"}',Tags:["pot","cannon","delay_3","rotate_over_x_negative","6_medallar_cents"],Duration:2147483647}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.pot"}',Tags:["pot","cannon","delay_3","rotating","west","6_medallar_cents"],Duration:2147483647}
 setblock ~ ~ ~ minecraft:chest[facing=south,type=single]
 setblock ~ ~1 ~ minecraft:barrier

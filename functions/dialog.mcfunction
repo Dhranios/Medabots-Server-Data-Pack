@@ -21,6 +21,11 @@ execute if entity @s[tag=dialog_infinity_tunes_order,tag=loaded_chunk_10] run fu
 execute if entity @s[tag=dialog_infinity_medanappings,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/medanappings
 execute if entity @s[tag=dialog_infinity_tune_observes,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/tune_observes
 execute if entity @s[tag=dialog_infinity_jaxy_speaks,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/jaxy_speaks
+execute if entity @s[tag=dialog_infinity_rubberobo_breakout,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/rubberobo_breakout
+#execute if entity @s[tag=dialog_infinity_neutranurse_helps,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/neutranurse_helps
+#execute if entity @s[tag=dialog_infinity_rubberobo_scoop,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/rubberobo_scoop
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_rock_a,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/rubberobo_enters_rock_a
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_rock_a,tag=loaded_chunk_10] run function medabots_server:dialog/infinity/rubberobo_leaves_rock_a
 
 # Other
 execute if entity @s[tag=dialog_magolor] run function medabots_server:dialog/magolor
