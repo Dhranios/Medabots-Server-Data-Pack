@@ -23,14 +23,14 @@ tag @a[tag=target] remove target
 tag @s[tag=has_move_target] remove has_move_target
 
 # Prevent suffocation
-execute at @s unless block ~ ~ ~0.33 minecraft:air unless block ~ ~ ~0.33 minecraft:comparator unless block ~ ~ ~0.33 minecraft:black_carpet unless block ~ ~ ~0.33 #minecraft:slabs run teleport @s ~ ~ ~-0.2
-execute at @s unless block ~ ~ ~-0.33 minecraft:air unless block ~ ~ ~-0.33 minecraft:comparator unless block ~ ~ ~-0.33 minecraft:black_carpet unless block ~ ~ ~-0.33 #minecraft:slabs run teleport @s ~ ~ ~0.2
-execute at @s unless block ~0.33 ~ ~ minecraft:air unless block ~0.33 ~ ~ minecraft:comparator unless block ~0.33 ~ ~ minecraft:black_carpet unless block ~0.33 ~ ~ #minecraft:slabs run teleport @s ~-0.2 ~ ~
-execute at @s unless block ~-0.33 ~ ~ minecraft:air unless block ~-0.33 ~ ~ minecraft:comparator unless block ~-0.33 ~ ~ minecraft:black_carpet unless block ~-0.33 ~ ~ #minecraft:slabs run teleport @s ~0.2 ~ ~
-execute at @s unless block ~0.33 ~ ~0.33 minecraft:air unless block ~0.33 ~ ~0.33 minecraft:comparator unless block ~0.33 ~ ~0.33 minecraft:black_carpet unless block ~0.33 ~ ~0.33 #minecraft:slabs run teleport @s ~-0.2 ~ ~-0.2
-execute at @s unless block ~0.33 ~ ~-0.33 minecraft:air unless block ~0.33 ~ ~-0.33 minecraft:comparator unless block ~0.33 ~ ~-0.33 minecraft:black_carpet unless block ~0.33 ~ ~-0.33 #minecraft:slabs run teleport @s ~-0.2 ~ ~0.2
-execute at @s unless block ~-0.33 ~ ~0.33 minecraft:air unless block ~-0.33 ~ ~0.33 minecraft:comparator unless block ~-0.33 ~ ~0.33 minecraft:black_carpet unless block ~-0.33 ~ ~0.33 #minecraft:slabs run teleport @s ~0.2 ~ ~-0.2
-execute at @s unless block ~-0.33 ~ ~-0.33 minecraft:air unless block ~-0.33 ~ ~-0.33 minecraft:comparator unless block ~-0.33 ~ ~-0.33 minecraft:black_carpet unless block ~-0.33 ~ ~-0.33 #minecraft:slabs run teleport @s ~0.2 ~ ~0.2
+execute at @s unless block ~ ~ ~0.33 minecraft:air unless block ~ ~ ~0.33 minecraft:comparator unless block ~ ~ ~0.33 minecraft:black_carpet unless block ~ ~ ~0.33 #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~-0.2
+execute at @s unless block ~ ~ ~-0.33 minecraft:air unless block ~ ~ ~-0.33 minecraft:comparator unless block ~ ~ ~-0.33 minecraft:black_carpet unless block ~ ~ ~-0.33 #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~0.2
+execute at @s unless block ~0.33 ~ ~ minecraft:air unless block ~0.33 ~ ~ minecraft:comparator unless block ~0.33 ~ ~ minecraft:black_carpet unless block ~0.33 ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~-0.2 ~ ~
+execute at @s unless block ~-0.33 ~ ~ minecraft:air unless block ~-0.33 ~ ~ minecraft:comparator unless block ~-0.33 ~ ~ minecraft:black_carpet unless block ~-0.33 ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~0.2 ~ ~
+execute at @s unless block ~0.33 ~ ~0.33 minecraft:air unless block ~0.33 ~ ~0.33 minecraft:comparator unless block ~0.33 ~ ~0.33 minecraft:black_carpet unless block ~0.33 ~ ~0.33 #minecraft:slabs[type=bottom] run teleport @s ~-0.2 ~ ~-0.2
+execute at @s unless block ~0.33 ~ ~-0.33 minecraft:air unless block ~0.33 ~ ~-0.33 minecraft:comparator unless block ~0.33 ~ ~-0.33 minecraft:black_carpet unless block ~0.33 ~ ~-0.33 #minecraft:slabs[type=bottom] run teleport @s ~-0.2 ~ ~0.2
+execute at @s unless block ~-0.33 ~ ~0.33 minecraft:air unless block ~-0.33 ~ ~0.33 minecraft:comparator unless block ~-0.33 ~ ~0.33 minecraft:black_carpet unless block ~-0.33 ~ ~0.33 #minecraft:slabs[type=bottom] run teleport @s ~0.2 ~ ~-0.2
+execute at @s unless block ~-0.33 ~ ~-0.33 minecraft:air unless block ~-0.33 ~ ~-0.33 minecraft:comparator unless block ~-0.33 ~ ~-0.33 minecraft:black_carpet unless block ~-0.33 ~ ~-0.33 #minecraft:slabs[type=bottom] run teleport @s ~0.2 ~ ~0.2
 execute at @s unless block ~ ~1 ~0.33 minecraft:air run teleport @s ~ ~ ~-0.2
 execute at @s unless block ~ ~1 ~-0.33 minecraft:air run teleport @s ~ ~ ~0.2
 execute at @s unless block ~0.33 ~1 ~ minecraft:air run teleport @s ~-0.2 ~ ~

@@ -5,12 +5,18 @@ particle minecraft:dust 1 1 0 1 ~ ~1 ~ 1 2 1 0 30
 execute if entity @s[scores={Time=10}] run particle minecraft:witch ~ ~1.55 ~ 0 0 0 3
 
 # Give confusion and bug effect to enemies
-execute if entity @s[scores={Time=10},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 4000
-execute if entity @s[scores={Time=10},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 4000
-execute if entity @s[scores={Time=10},tag=ally_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 4000
-execute if entity @s[scores={Time=10},tag=ally_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 4000
-execute if entity @s[scores={Time=10},tag=enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 4000
-execute if entity @s[scores={Time=10},tag=enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 4000
+execute unless entity @s[scores={ScoutTime=1..}] if entity @s[scores={Time=10},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 1000
+execute unless entity @s[scores={ScoutTime=1..}] if entity @s[scores={Time=10},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 1000
+execute unless entity @s[scores={ScoutTime=1..}] if entity @s[scores={Time=10},tag=ally_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 1000
+execute unless entity @s[scores={ScoutTime=1..}] if entity @s[scores={Time=10},tag=ally_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 1000
+execute unless entity @s[scores={ScoutTime=1..}] if entity @s[scores={Time=10},tag=enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 1000
+execute unless entity @s[scores={ScoutTime=1..}] if entity @s[scores={Time=10},tag=enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 1000
+execute if entity @s[scores={Time=10,ScoutTime=1..},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 1500
+execute if entity @s[scores={Time=10,ScoutTime=1..},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 1500
+execute if entity @s[scores={Time=10,ScoutTime=1..},tag=ally_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 1500
+execute if entity @s[scores={Time=10,ScoutTime=1..},tag=ally_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 1500
+execute if entity @s[scores={Time=10,ScoutTime=1..},tag=enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s BugTime 1500
+execute if entity @s[scores={Time=10,ScoutTime=1..},tag=enemy_medabot] positioned ^ ^ ^10 as @e[distance=..10,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=10}] run scoreboard players set @s ConfuseTime 1500
 
 # Give weapon to chameleon user
 replaceitem entity @s[scores={Time=10..12},tag=!ally_medabot,tag=!enemy_medabot] hotbar.4 minecraft:purple_wool{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.chameleon"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.chameleon"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.drop"}']},medabots_server:{id:"medabots_server:damage_ball",team:"none"}}

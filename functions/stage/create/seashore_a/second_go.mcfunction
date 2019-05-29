@@ -157,7 +157,7 @@ execute positioned -1533 45 -196 run function medabots_server:set_blocks/door/cl
 execute positioned -1551 45 -194 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1534 45 -207 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1569 45 -207 run function medabots_server:set_blocks/door/closed/south
-execute positioned -1538 45 -229 run function medabots_server:set_blocks/goal_area
+execute positioned -1538 45 -228 run function medabots_server:set_blocks/goal_area
 execute positioned -1509 45 -196 run function medabots_server:set_blocks/starting_area
 tag @s add second_go
 teleport @s -1509 45 -196

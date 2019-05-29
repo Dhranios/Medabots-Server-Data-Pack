@@ -11,7 +11,7 @@ replaceitem entity @s[scores={Time=20}] weapon.offhand minecraft:tipped_arrow{Po
 replaceitem entity @s[scores={Napalm=1,Time=20..22,Drop=0}] hotbar.1 minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},medabots_server:{id:"medabots_server:napalm"}}
 replaceitem entity @s[scores={Napalm=3,Time=20..22,Drop=0}] hotbar.2 minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},medabots_server:{id:"medabots_server:napalm"}}
 replaceitem entity @s[scores={Napalm=2,Time=20..22,Drop=0}] hotbar.3 minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},medabots_server:{id:"medabots_server:napalm"}}
-replaceitem entity @s[scores={Napalm=2,Time=20..22},type=!minecraft:player] weapon.mainhand minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},medabots_server:{id:"medabots_server:napalm"}}
+replaceitem entity @s[scores={Napalm=1..,Time=20..22},type=!minecraft:player] weapon.mainhand minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},medabots_server:{id:"medabots_server:napalm"}}
 
 # Remove from head uses if this was the head part
 scoreboard players remove @s[scores={Napalm=2,Time=22}] HeadUses 1
@@ -42,21 +42,6 @@ execute unless entity @s[scores={Napalm=1..}] run scoreboard players set @s Time
 scoreboard players add @s[scores={Napalm=1..}] Time 1
 
 # Attacked by shooting trap
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[type=!#medabots_server:undead] minecraft:instant_damage 1 0 true
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run effect give @s[type=#medabots_server:undead] minecraft:instant_health 1 0 true
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] if entity @s[scores={Death=1..},type=minecraft:player] run tellraw @a {"translate":"medabots_server:death.shooting_trap","with":[{"selector":"@s"}]}
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run tag @s[scores={Death=1..}] add had_death
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run playsound medabots_server:entity.medabot.attack.trap_hit player @a ~ ~ ~ 1
-kill @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team]
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=ally_team] run effect give @s[type=!#medabots_server:undead,tag=!ally_medabot] minecraft:instant_damage 1 0 true
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=ally_team] run effect give @s[type=#medabots_server:undead,tag=!ally_medabot] minecraft:instant_health 1 0 true
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=ally_team] if entity @s[scores={Death=1..},type=minecraft:player,tag=!ally_medabot] run tellraw @a {"translate":"medabots_server:death.shooting_trap","with":[{"selector":"@s"}]}
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=ally_team] run tag @s[scores={Death=1..},tag=!ally_medabot] add had_death
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=ally_team] if entity @s[tag=!ally_medabot] run playsound medabots_server:entity.medabot.attack.trap_hit player @a ~ ~ ~ 1
-kill @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=ally_team]
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=enemy_team] run effect give @s[type=!#medabots_server:undead,tag=!enemy_medabot] minecraft:instant_damage 1 0 true
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=enemy_team] run effect give @s[type=#medabots_server:undead,tag=!enemy_medabot] minecraft:instant_health 1 0 true
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=enemy_team] if entity @s[scores={Death=1..},type=minecraft:player,tag=!enemy_medabot] run tellraw @a {"translate":"medabots_server:death.shooting_trap","with":[{"selector":"@s"}]}
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=enemy_team] run tag @s[scores={Death=1..},tag=!enemy_medabot] add had_death
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=enemy_team] if entity @s[tag=!enemy_medabot] run playsound medabots_server:entity.medabot.attack.trap_hit player @a ~ ~ ~ 1
-kill @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=enemy_team]
+execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run function medabots_server:medaparts/shooting_trap_hit
+execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=ally_team] if entity @s[tag=!ally_team] run function medabots_server:medaparts/shooting_trap_hit
+execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=enemy_team] if entity @s[tag=!enemy_team] run function medabots_server:medaparts/shooting_trap_hit

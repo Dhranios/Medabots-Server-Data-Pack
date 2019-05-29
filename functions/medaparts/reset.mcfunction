@@ -1,4 +1,16 @@
 # Reset medaforce
+scoreboard players set @s Time 950
+execute if entity @s[scores={Medaforce=-2}] run function medabots_server:medaparts/spiral_bolt
+execute if entity @s[scores={Medaforce=-3}] run function medabots_server:medaparts/ultra_shot
+execute if entity @s[scores={Medaforce=-4}] run function medabots_server:medaparts/total_recovery
+execute if entity @s[scores={Medaforce=-5}] run function medabots_server:medaparts/chaos
+execute if entity @s[scores={Medaforce=-6}] run function medabots_server:medaparts/full_body_up
+execute if entity @s[scores={Medaforce=-7}] run function medabots_server:medaparts/attack_trap
+execute if entity @s[scores={Medaforce=-8}] run function medabots_server:medaparts/question
+execute if entity @s[scores={Medaforce=-9}] run function medabots_server:medaparts/damage_ball
+execute if entity @s[scores={Medaforce=-10}] run function medabots_server:medaparts/iron_wall
+execute if entity @s[scores={Medaforce=-11}] run function medabots_server:medaparts/life_drain
+execute if entity @s[scores={Medaforce=-12}] run function medabots_server:medaparts/destroyer
 replaceitem entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{id:"medabots_server:kuwagata_medal",activated:1b}}}]}] hotbar.4 minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kuwagata_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:kuwagata_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}
 replaceitem entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{id:"medabots_server:kabuto_medal",activated:1b}}}]}] hotbar.4 minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kabuto_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kabuto_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.kabuto_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:kabuto_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}
 replaceitem entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{id:"medabots_server:mermaid_medal",activated:1b}}}]}] hotbar.4 minecraft:nether_star{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.mermaid_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.mermaid_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.mermaid_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:mermaid_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}
@@ -81,6 +93,10 @@ tag @s remove walls
 tag @s remove wind
 tag @s remove wind_1
 tag @s remove wind_2
+
+# Prevent health from ever dropping to the default 20, which'll cause severe issues
+effect give @s minecraft:health_boost 1000000 19 true
+effect give @s minecraft:instant_health 1 19 true
 
 # Re-give items who have stage_item:1b
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:purple_plant",stage_item:1b}}}]}] run function medabots_server:other/obtained_special_item/purple_plant

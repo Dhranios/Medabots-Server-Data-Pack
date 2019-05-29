@@ -9,8 +9,8 @@ execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function me
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function medabots_server:other/lose_medallars
 execute if entity @s[scores={DeathTime=1},type=minecraft:player,tag=!practice_battle] if entity @a[scores={Killer=1..},tag=!practice_battle] run function medabots_server:medaparts/drop
 execute if entity @s[scores={DeathTime=1},type=minecraft:player,tag=!practice_battle] if entity @e[tag=enemy_medabot,nbt=!{DeathLootTable:"medabots_server:entities/battle_enemies/practice_round"}] run function medabots_server:medaparts/drop
-execute if entity @s[scores={DeathTime=1},type=!minecraft:player] run loot spawn ~ ~ ~ kill @s
-execute if entity @s[scores={DeathTime=1}] run tag @e[distance=..1,type=minecraft:item] add medabot_loot
+execute if entity @s[scores={DeathTime=1},type=!minecraft:player] run loot spawn ~ ~3 ~ kill @s
+execute if entity @s[scores={DeathTime=1}] positioned ~ ~3 ~ run tag @e[distance=..1,type=minecraft:item] add medabot_loot
 execute if entity @s[scores={DeathTime=1}] rotated ~ 0 run teleport @s ^ ^2 ^-1.5 facing entity @e[tag=this_medabot,limit=1]
 execute if entity @s[scores={DeathTime=2..99}] run teleport @s ^0.105 ^ ^ facing entity @e[tag=this_medabot,limit=1]
 scoreboard players set @s[y=-80,dy=79,scores={DeathTime=2}] DeathTime 99
@@ -27,6 +27,8 @@ tag @s[scores={DeathTime=101}] remove enemy
 tag @s[scores={DeathTime=101}] remove story_battle
 tellraw @s[scores={DeathTime=101}] {"translate":"medabots_server:message.defeat.1","color":"gold","extra":[{"text":"\n"},{"translate":"medabots_server:message.defeat.2"}]}
 tag @s[scores={DeathTime=101},type=!minecraft:player] add dead
+execute if entity @s[scores={DeathTime=101}] run tag @e[tag=this_medabot] add dead
+execute if entity @s[scores={DeathTime=101}] at @e[tag=this_medabot] positioned ~ ~0.7 ~ run particle minecraft:cloud ~ ~ ~ 1 1 1 0 30
 scoreboard players reset @s[scores={DeathTime=101}] DeathTime
 scoreboard players reset #temp MedabotNr
 tag @e[tag=this_medabot] remove this_medabot

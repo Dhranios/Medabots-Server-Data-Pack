@@ -199,8 +199,8 @@ tellraw @s[scores={AFKTime=2400}] {"translate":"chat.type.text","with":[{"transl
 execute if entity @s[scores={Damage=1..}] run playsound medabots_server:entity.medabot.damage player @s ~ ~ ~ .5
 execute if entity @s[scores={Run=0,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ .05
 execute if entity @s[scores={Run=1..,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ .1
-execute if entity @s[scores={Run=5..,Jump=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
-execute if entity @s[scores={Walk=5..,Jump=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
 execute if entity @s[scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ .1
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ .025
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 8
@@ -215,9 +215,6 @@ execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run scoreboard players
 execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.on_water player @s ~ ~ ~ .1
 execute if entity @s[scores={Swimming=5..,Sound=0}] run scoreboard players set @s Sound 2
 execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run scoreboard players set @s Sound 17
-
-# Fast falling
-execute if entity @s[scores={Sneaking=1..},tag=hostile] if block ~ ~-1 ~ minecraft:air if block ~1 ~-1 ~ minecraft:air if block ~-1 ~-1 ~ minecraft:air if block ~ ~-1 ~1 minecraft:air if block ~ ~-1 ~-1 minecraft:air if block ~1 ~-1 ~1 minecraft:air if block ~1 ~-1 ~-1 minecraft:air if block ~-1 ~-1 ~1 minecraft:air if block ~-1 ~-1 ~-1 minecraft:air run teleport @s ~ ~-0.6 ~
 
 # Reset movement checks
 tag @s[tag=jumping] remove jumping
@@ -247,7 +244,7 @@ tag @s[scores={Sneak=1..}] add sneaking
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
 scoreboard players set @s[scores={Trading=1..},tag=!trading] Trading 2
 scoreboard players set @s[scores={Trading=1..},tag=trading] Trading 0
-execute unless entity @e[tag=shop,distance=..10,limit=1] run tag @s[tag=trading] remove trading
+execute unless entity @e[tag=shop,distance=..4,limit=1] run tag @s[tag=trading] remove trading
 tag @s[scores={Trading=1..}] add trading
 
 # Count up

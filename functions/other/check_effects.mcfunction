@@ -68,9 +68,9 @@ execute if entity @s[scores={NoDefendTime=1..}] run scoreboard players operation
 execute if entity @s[scores={NoDefendTime=1..}] run tellraw @s {"color":"red","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.no_defending"},{"score":{"objective":"EffectTimer","name":"@s"}}]}
 
 # Overheating Legs
-execute if entity @s[scores={OverheatingFly=1..}] run scoreboard players operation @s EffectTimer = @s OverheatingFly
-execute if entity @s[scores={OverheatingFly=1..}] run scoreboard players operation @s EffectTimer /= #20 Constants
-execute if entity @s[scores={OverheatingFly=1..}] run tellraw @s {"color":"red","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.overheating_legs"},{"score":{"objective":"EffectTimer","name":"@s"}}]}
+execute if entity @s[scores={FlyTime=1..}] run scoreboard players operation @s EffectTimer = @s FlyTime
+execute if entity @s[scores={FlyTime=1..}] run scoreboard players operation @s EffectTimer /= #20 Constants
+execute if entity @s[scores={FlyTime=1..}] run tellraw @s {"color":"red","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.overheating_legs"},{"score":{"objective":"EffectTimer","name":"@s"}}]}
 
 # Overheating Medal
 execute if entity @s[scores={OverheatingMedal=1..}] run scoreboard players operation @s EffectTimer = @s OverheatingMedal

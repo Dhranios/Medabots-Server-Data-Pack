@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:34,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.hippopojamas_hipporet\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.tank\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.tank.description\"}','{\"text\":\"\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"80\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.hippopojamas\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.hippopojamas_hipporet.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:hippopojamas_hipporet\",gender:0b,move:\"tank\",part:\"legs\",armor:80,defense:80,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:11,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_gatemonarch\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.falling\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.falling.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.baroncastle\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_gatemonarch.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:baroncastle_gatemonarch\",gender:0b,move:\"falling\",part:\"left_arm\",armor:40,power:20,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:11,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_sentineldy\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"45\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.baroncastle\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.baroncastle_sentineldy.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:baroncastle_sentineldy\",gender:0b,move:\"rifle\",part:\"right_arm\",armor:45,power:16,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:34,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.hippopojamas_hippotent\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.defense\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.defense.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"4\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"85\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.hippopojamas\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.hippopojamas_hippotent.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:hippopojamas_hippotent\",gender:0b,move:\"defense\",part:\"head\",armor:85,power:88,uses:4,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

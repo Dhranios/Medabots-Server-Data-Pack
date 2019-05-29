@@ -22,23 +22,6 @@ execute if entity @s[scores={ParalyzeTime=1..}] run function medabots_server:med
 execute if entity @s[scores={PerfectGuardTime=1..}] run function medabots_server:medaparts/perfect_guard_effect
 execute if entity @s[scores={ScoutTime=1..}] run function medabots_server:medaparts/scout_effect
 
-# Get Armor %
-scoreboard players operation @s LegsPer = @s LegsArmor
-scoreboard players operation @s LeftArmPer = @s LeftArmArmor
-scoreboard players operation @s RightArmPer = @s RightArmArmor
-scoreboard players operation @s HeadPer = @s HeadArmor
-scoreboard players operation @s HeadUsesPer = @s HeadUses
-scoreboard players operation @s LegsPer *= #100 Constants
-scoreboard players operation @s LeftArmPer *= #100 Constants
-scoreboard players operation @s RightArmPer *= #100 Constants
-scoreboard players operation @s HeadPer *= #100 Constants
-scoreboard players operation @s HeadUsesPer *= #100 Constants
-scoreboard players operation @s LegsPer /= @s MaxLegsArmor
-scoreboard players operation @s LeftArmPer /= @s MaxLeftArmArmor
-scoreboard players operation @s RightArmPer /= @s MaxRightArmArmor
-scoreboard players operation @s HeadPer /= @s MaxHeadArmor
-scoreboard players operation @s HeadUsesPer /= @s MaxHeadUses
-
 # Set Armor colors
 scoreboard players set @s[scores={LegsArmor=..0}] LegsDanger 3
 scoreboard players set @s[scores={LeftArmArmor=..0}] LeftArmDanger 3
@@ -100,10 +83,6 @@ execute if entity @s[tag=!murder_mystery,scores={Damage=1..,RightArmArmor=..-1},
 execute if entity @s[tag=!murder_mystery,scores={Damage=1..,RightArmArmor=..-1},nbt={SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
 execute if entity @s[tag=!murder_mystery,scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
 execute if entity @s[tag=!murder_mystery,scores={Damage=1..},nbt=!{SelectedItemSlot:0},nbt=!{SelectedItemSlot:1},nbt=!{SelectedItemSlot:2}] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-tag @s[tag=!murder_mystery,scores={Damage=1..},nbt={SelectedItemSlot:4,Inventory:[{tag:{medabots_server:{move:"medaforce_charge",activated:1b}}}]}] add medal_damage
-scoreboard players add @s[tag=medal_damage] Charge 1
-clear @s[tag=medal_damage] minecraft:nether_star 1
-tag @s[tag=medal_damage] remove medal_damage
 
 # No armor
 execute if entity @s[nbt={Inventory:[{Slot:100b}]}] run function medabots_server:stage/give_obtained_item/100

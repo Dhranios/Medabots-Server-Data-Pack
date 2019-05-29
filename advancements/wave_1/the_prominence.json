@@ -18,9 +18,6 @@
         }
     },
     "rewards": {
-        "loot": [
-            "medabots_server:advancements/wave_1/the_prominence"
-        ],
         "function": "medabots_server:advancements/wave_1/the_prominence"
     }
 }

@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:21,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kanehachi_mk2_swick\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.multi_legged\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.multi_legged.description\"}','{\"text\":\"\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.kanehachi_mk2\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kanehachi_mk2_swick.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:kanehachi_mk2_swick\",gender:0b,move:\"multi_legged\",part:\"legs\",armor:40,defense:40,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:20,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_srounding\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.destroy\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.destroy.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"35\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.basstroyer\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.basstroyer_srounding.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:basstroyer_srounding\",gender:0b,move:\"destroy\",part:\"left_arm\",armor:35,power:59,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:31,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dragonbeetle_heavyweighter\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"70\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.dragonbeetle\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dragonbeetle_heavyweighter.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:dragonbeetle_heavyweighter\",gender:0b,move:\"press\",part:\"right_arm\",armor:70,power:18,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:21,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kanehachi_mk2_hatchin\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hold\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hold.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"9\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"55\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.kanehachi_mk2\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.kanehachi_mk2_hatchin.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:kanehachi_mk2_hatchin\",gender:0b,move:\"hold\",part:\"head\",armor:55,power:28,uses:9,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

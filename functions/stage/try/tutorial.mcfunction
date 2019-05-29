@@ -1,0 +1,1 @@
+execute unless entity @a[x=-1888,y=42,z=-633,dx=31,dy=7,dz=27] run function medabots_server:stage/create/tutorial

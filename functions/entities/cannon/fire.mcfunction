@@ -15,5 +15,5 @@ execute as @e[type=minecraft:arrow,tag=missile,distance=..6,sort=nearest,limit=1
 execute as @e[type=minecraft:arrow,tag=missile,distance=..6,sort=nearest,limit=1,tag=new] store result entity @s Motion[2] double 0.01 run scoreboard players get @s OtherZ
 tag @e[type=minecraft:arrow,tag=missile,distance=..6,sort=nearest,limit=1,tag=new] remove new
 kill @e[type=minecraft:area_effect_cloud,tag=missile]
-scoreboard players set @s[tag=detect] CannonFire -1
+tag @s[tag=detect] add already_targetted
 scoreboard players set @s CannonFire 0

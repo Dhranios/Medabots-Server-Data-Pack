@@ -17,9 +17,6 @@
         }
     },
     "rewards": {
-        "loot": [
-            "medabots_server:advancements/wave_1/how_to_tame_the_twilight_dragon"
-        ],
         "function": "medabots_server:advancements/wave_1/how_to_tame_the_twilight_dragon"
     }
 }

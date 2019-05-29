@@ -1,4 +1,5 @@
 scoreboard players remove @s[scores={FloorSwitchTime=0..}] FloorSwitchTime 1
+scoreboard players set @s[tag=delay_1,tag=trigger] FloorSwitchTime 20
 scoreboard players set @s[tag=delay_2,tag=trigger] FloorSwitchTime 40
 scoreboard players set @s[tag=delay_5,tag=trigger] FloorSwitchTime 100
 scoreboard players set @s[tag=delay_10,tag=trigger] FloorSwitchTime 200

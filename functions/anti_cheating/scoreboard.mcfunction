@@ -182,6 +182,7 @@ scoreboard objectives add Sound dummy
 scoreboard objectives add Stage dummy
 scoreboard objectives add Stars dummy
 scoreboard objectives add StatusClear dummy
+scoreboard objectives add Steps dummy
 scoreboard objectives add StreetPassCool dummy
 scoreboard objectives add StreetPassHits dummy
 scoreboard objectives add StreetPassTime dummy
@@ -205,6 +206,7 @@ scoreboard objectives setdisplay list Stars
 scoreboard objectives setdisplay belowName Level
 
 # Set Server stats
+scoreboard players set #-1 Constants -1
 scoreboard players set #0 Constants 0
 scoreboard players set #1 Constants 1
 scoreboard players set #4 Constants 4

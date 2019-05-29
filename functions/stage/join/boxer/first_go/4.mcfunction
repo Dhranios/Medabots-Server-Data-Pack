@@ -1,5 +1,5 @@
 tellraw @s[scores={Dialog=0,Error=0}] {"translate":"medabots_server:message.stage.player.mandatory","color":"green","extra":[{"text":" "},{"translate":"medabots_server:message.stage.player.wait","color":"green"}]}
-execute if entity @s[scores={Dialog=0,Error=0}] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.laboratory"},{"text":"3"}]}
+execute if entity @s[scores={Dialog=0,Error=0}] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.boxer"},{"text":"3"}]}
 execute if entity @s[scores={Dialog=0,Error=0}] run data merge block -1889 51 -603 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!enemy_medabot,tag=!-1] run function medabots_server:stage/join/boxer/first_go/5"}}'}
 tag @s[scores={Dialog=0,Error=0}] add enemy_medabot
 tag @s[scores={Dialog=0,Error=0}] add 4

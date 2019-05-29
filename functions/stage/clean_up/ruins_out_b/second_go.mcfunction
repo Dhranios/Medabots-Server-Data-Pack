@@ -12,6 +12,10 @@ scoreboard players set @a[scores={Stage=16},tag=enemy_medabot] Music 0
 scoreboard players set @a[scores={Stage=16},tag=enemy_medabot] MusicType 1
 scoreboard players set @a[scores={Stage=16},tag=enemy_medabot] Battle 0
 teleport @a[scores={Stage=16},tag=enemy_medabot] -1812 51 -489 -180 0
+scoreboard players set @s[scores={Stage=16,Battle=0}] Music 0
+scoreboard players set @s[scores={Stage=16,Battle=0}] MusicType 1
+scoreboard players set @s[scores={Stage=16,Battle=0}] Battle 0
+teleport @s[scores={Stage=16,Battle=0}] -1812 51 -489 -180 0
 tag @e[scores={Stage=16},type=!minecraft:player] add dead
 data merge block -1813 52 -536 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_out_b/play"}}'}
 setblock -1813 53 -538 minecraft:redstone_block

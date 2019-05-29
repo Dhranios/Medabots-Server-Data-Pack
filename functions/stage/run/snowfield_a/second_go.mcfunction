@@ -16,11 +16,11 @@ execute if block -1663 44 -187 minecraft:light_blue_wool run tag @e[x=-1656.5,y=
 execute if block -1663 44 -187 minecraft:blue_wool run tag @e[x=-1656.5,y=45,z=-210.5,distance=..0.7,tag=spring_wall] remove enabled
 execute if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecraft:lime_wool if block -1627 44 -232 minecraft:lime_wool if block -1643 44 -236 minecraft:lime_wool run tag @e[x=-1660.5,y=45,z=-242,dx=6,dy=1,dz=19,tag=laser_trap] add enabled
 execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
-execute if entity @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/snowfield_a/second_go
-stopsound @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] music
-playsound medabots_server:music.stage.stage_end music @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 14
-scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] Battle 0
-scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
-scoreboard players set @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
-advancement grant @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/snowfield_a_second_go
-teleport @s[x=-1659.5,y=45,z=-233.5,distance=..0.7,tag=hostile,gamemode=adventure] -1620 51 -216 -180 0
+execute if entity @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/snowfield_a/second_go
+stopsound @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] music
+playsound medabots_server:music.stage.stage_end music @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] -1620 51 -216 14
+scoreboard players set @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] Battle 0
+scoreboard players set @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] MusicType 1
+scoreboard players set @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] Music 299
+advancement grant @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/snowfield_a_second_go
+teleport @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] -1620 51 -216 -180 0

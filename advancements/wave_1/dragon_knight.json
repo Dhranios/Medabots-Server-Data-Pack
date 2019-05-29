@@ -23,9 +23,6 @@
         }
     },
     "rewards": {
-        "loot": [
-            "medabots_server:advancements/wave_1/dragon_knight"
-        ],
         "function": "medabots_server:advancements/wave_1/dragon_knight"
     }
 }

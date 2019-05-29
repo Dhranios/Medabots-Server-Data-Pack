@@ -291,9 +291,6 @@
         }
     },
     "rewards": {
-        "loot": [
-            "medabots_server:advancements/wave_1/medabot_master"
-        ],
         "function": "medabots_server:advancements/wave_1/medabot_master"
     }
 }

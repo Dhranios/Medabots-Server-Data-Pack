@@ -54,7 +54,7 @@ execute as @e[distance=..0.4,tag=round_stone,type=minecraft:shulker] run data me
 execute as @e[distance=..0.4,tag=round_stone,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
 
 # Position correcion (else it floats above the ground)
-execute unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava at @s positioned ~ ~1 ~ align y run teleport @s ~ ~-0.37 ~
+execute unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava at @s positioned ~ ~1 ~ align y run teleport @s ~ ~-0.375 ~
 execute if entity @s[scores={Moving=0}] at @s align xz run teleport @s ~0.5 ~ ~0.5
 execute unless entity @s[scores={Moving=0..}] run teleport @s ~ ~-0.75 ~
 execute unless entity @s[scores={Moving=0..}] run scoreboard players set @s Moving 0

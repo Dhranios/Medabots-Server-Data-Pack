@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:27,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_quick_alert\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged.description\"}','{\"text\":\"\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.peppercat\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_quick_alert.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:peppercat_quick_alert\",gender:1b,move:\"two_legged\",part:\"legs\",armor:40,defense:40,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:42,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.uglyduck_featherdone\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"65\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.uglyduck\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.uglyduck_featherdone.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:uglyduck_featherdone\",gender:1b,move:\"press\",part:\"left_arm\",armor:65,power:26,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:27,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_lightjump\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.paralyze\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.paralyze.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.peppercat\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_lightjump.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:peppercat_lightjump\",gender:1b,move:\"paralyze\",part:\"right_arm\",armor:40,power:24,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:27,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_lightcircuit\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.paralyze\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.paralyze.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"7\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"60\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.peppercat\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_lightcurcuit.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:peppercat_lightcurcuit\",gender:1b,move:\"paralyze\",part:\"head\",armor:60,power:44,uses:7,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

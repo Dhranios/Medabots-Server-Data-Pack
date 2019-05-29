@@ -1,0 +1,2 @@
+execute if entity @a[x=-1570,y=0,z=-545,dx=62,dy=49,dz=62] run tellraw @s {"translate":"medabots_server:message.stage.already_playing","color":"green"}
+execute unless entity @a[x=-1570,y=0,z=-545,dx=62,dy=49,dz=62] run function medabots_server:stage/clean_up/jungle_c

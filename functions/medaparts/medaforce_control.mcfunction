@@ -2,9 +2,12 @@
 execute if entity @s[scores={Time=20}] run particle minecraft:angry_villager ~ ~1 ~ 1 0 1 1 10
 
 # Set to toggle allowing medaforce
-execute if entity @s[scores={Time=20},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!medaforce_block] add medaforce_block
-execute if entity @s[scores={Time=20},tag=ally_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!medaforce_block] add medaforce_block
-execute if entity @s[scores={Time=20},tag=enemy_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!medaforce_block] add medaforce_block
+execute unless entity @s[scores={ScoutTime=1..}] run execute if entity @s[scores={Time=20},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!medaforce_block] add medaforce_block
+execute unless entity @s[scores={ScoutTime=1..}] run execute if entity @s[scores={Time=20},tag=ally_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!medaforce_block] add medaforce_block
+execute unless entity @s[scores={ScoutTime=1..}] run execute if entity @s[scores={Time=20},tag=enemy_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!medaforce_block] add medaforce_block
+execute if entity @s[scores={Time=20,ScoutTime=1..},tag=!ally_medabot,tag=!enemy_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!blocked_medaforce] add blocked_medaforce
+execute if entity @s[scores={Time=20,ScoutTime=1..},tag=ally_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile,tag=!ally_medabot] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!blocked_medaforce] add blocked_medaforce
+execute if entity @s[scores={Time=20,ScoutTime=1..},tag=enemy_medabot] positioned ^ ^ ^3.5 as @e[distance=..3.5,tag=hostile,tag=!enemy_medabot] unless entity @s[scores={Time=20,MedaforceControl=1..3}] run tag @s[tag=!blocked_medaforce] add blocked_medaforce
 
 # Toggle medaforce
 tag @e[tag=medaforce_block,tag=!blocked_medaforce] add blocking

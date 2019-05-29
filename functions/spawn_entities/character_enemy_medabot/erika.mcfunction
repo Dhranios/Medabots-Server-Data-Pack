@@ -1,10 +1,10 @@
 # Erika
-summon minecraft:skeleton ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.erika"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/character_enemy_medabot/erika",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["sailor_multi","enemy_medabot","killerable","hostile","two_legged_legs","rifle_left_arm","gatling_right_arm","scout_head","kabuto_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+summon minecraft:skeleton ~ ~ ~ {Silent:1b,CustomName:'{"translate":"medabots_server:entity.erika"}',CustomNameVisisble:1b,Team:"StageEnemy",ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/character_enemy_medabot/erika",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["sailor_multi","enemy_medabot","killerable","hostile","two_legged_legs","rifle_left_arm","gatling_right_arm","scout_head","kabuto_medal"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
 execute if entity @s[tag=practice_battle] run data merge entity @e[distance=..1,tag=sailor_multi,limit=1] {DeathLootTable:"medabots_server:entities/medabot"}
 scoreboard players set @e[distance=..1,tag=sailor_multi] Medabot 39
 scoreboard players set @e[distance=..1,tag=sailor_multi] Killer 0
 scoreboard players set @e[distance=..1,tag=sailor_multi] Charge 0
-scoreboard players set @e[distance=..1,tag=sailor_multi] Battle 1
+scoreboard players set @e[distance=..1,tag=sailor_multi] Battle 2
 scoreboard players set @e[distance=..1,tag=sailor_multi] MaxHeadUses 7
 scoreboard players set @e[distance=..1,tag=sailor_multi] MaxHeadArmor 75
 scoreboard players set @e[distance=..1,tag=sailor_multi] MaxRightArmArmor 35

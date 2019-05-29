@@ -1,5 +1,3 @@
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/ruins_out_a/first_go
-execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=7},tag=enemy_medabot] run bossbar set medabots_server:ruins_out_a/time players @s[scores={Battle=1..}]
 execute unless entity @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=7},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:ruins_out_a/time value
 execute unless entity @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=7},tag=enemy_medabot] store result bossbar medabots_server:ruins_out_a/time value run scoreboard players operation #temp Time += #1 Constants
@@ -7,6 +5,8 @@ execute if entity @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,scores={Medabot=0..,B
 execute if entity @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=7},tag=enemy_medabot] store result bossbar medabots_server:ruins_out_a/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,scores={Medabot=0..,Battle=1..2,Stage=7},tag=enemy_medabot] if score #temp Time matches 0 as @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,tag=mission] at @s run function medabots_server:stage/mission_time_up
 scoreboard players reset #temp Time
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/ruins_out_a/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1554 44 -284 minecraft:lime_wool run tag @e[x=-1512.5,y=45,z=-295.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1581 44 -284 minecraft:lime_wool run tag @e[x=-1513.5,y=45,z=-295.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1511 44 -296 minecraft:lime_wool run tag @e[x=-1567.5,y=45,z=-309.5,distance=..0.7,tag=door,tag=!open] add open
@@ -42,19 +42,19 @@ execute if block -1604 44 -300 minecraft:lime_wool run tag @e[x=-1604.5,y=45,z=-
 execute if block -1611 44 -293 minecraft:lime_wool run tag @e[x=-1610.5,y=45,z=-293.5,distance=..0.7,tag=gas_floor] add enabled
 execute if block -1610 45 -308 minecraft:iron_door[open=true] if block -1622 45 -300 minecraft:iron_door[open=false] if entity @s[x=-1612,y=45,z=-307,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_a/first_go_battle/0
 execute if entity @e[x=-1609.5,y=45,z=-298.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=7,Medabot=0..,Battle=1..2}]
-title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1609.5,y=45,z=-307.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,tag=mission]
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:ruins_out_a/robattle players
+title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1609.5,y=45,z=-307.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:ruins_out_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=7}] run scoreboard players set @s Stage 7
-execute if entity @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_out_a/first_go
-stopsound @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] music
-playsound medabots_server:music.stage.stage_end music @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] -1570 51 -284 14
-scoreboard players set @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] Battle 0
-scoreboard players set @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
-scoreboard players set @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
-advancement grant @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_out_a_first_go
-tag @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={meet_doctor_haru=true,tunes_order=false}}] add dialog_infinity_tunes_order
-teleport @s[x=-1566.5,y=45,z=-311.5,distance=..0.7,tag=hostile,gamemode=adventure] -1570 51 -284 -180 0
+execute if entity @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_out_a/first_go
+stopsound @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] music
+playsound medabots_server:music.stage.stage_end music @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] -1570 51 -284 14
+scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] MusicType 1
+scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] Music 299
+advancement grant @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_out_a_first_go
+tag @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={meet_doctor_haru=true,tunes_order=false}}] add dialog_infinity_tunes_order
+scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] Battle 0
+teleport @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] -1570 51 -284 -180 0

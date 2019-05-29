@@ -11,9 +11,9 @@ scoreboard players add @s[scores={Time=10}] HeadArmor 20
 execute if score @s[scores={Time=10}] HeadArmor > @s MaxHeadArmor run scoreboard players operation @s HeadArmor = @s MaxHeadArmor
 
 # Affect teammates
-execute if entity @s[scores={Time=10},tag=ally_medabot] run scoreboard players add @a[distance=..16,tag=ally_medabot] HeadArmor 20
+execute if entity @s[scores={Time=10},tag=ally_medabot] run scoreboard players add @a[distance=..16,tag=ally_medabot] HeadArmor 10
 execute if entity @s[scores={Time=10},tag=ally_medabot] as @a[distance=..16,tag=ally_medabot] if score @s HeadArmor > @s MaxHeadArmor run scoreboard players operation @s HeadArmor = @s MaxHeadArmor
-execute if entity @s[scores={Time=10},tag=enemy_medabot] run scoreboard players add @e[distance=..16,tag=enemy_medabot] HeadArmor 20
+execute if entity @s[scores={Time=10},tag=enemy_medabot] run scoreboard players add @e[distance=..16,tag=enemy_medabot] HeadArmor 10
 execute if entity @s[scores={Time=10},tag=enemy_medabot] as @e[distance=..16,tag=enemy_medabot] if score @s HeadArmor > @s MaxHeadArmor run scoreboard players operation @s HeadArmor = @s MaxHeadArmor
 
 # Give back the original medal

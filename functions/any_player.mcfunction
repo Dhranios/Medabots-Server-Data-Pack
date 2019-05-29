@@ -7,7 +7,7 @@ scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
 
 # Run stage
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=0},tag=!murder_mystery] run function medabots_server:stage/left_server
-execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=!enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/run
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=0..,Battle=1..},tag=!enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/run
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/enemy_run
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run function medabots_server:stage/run_fly_course
 
@@ -79,7 +79,7 @@ execute if entity @s[tag=street_pass] run function medabots_server:other/streetp
 
 # Verify resource pack
 execute if entity @s[scores={Offline=1..}] run function medabots_server:other/verify_resource_pack
-execute unless entity @s[scores={Verified=0..}] run function medabots_server:other/resource_pack_verification
+execute unless entity @s[scores={Verified=0..}] run function medabots_server:other/verify_resource_pack
 execute if entity @s[scores={Verified=1}] run function medabots_server:other/awaiting_resource_pack_verification
 execute if entity @s[scores={Verified=2}] run function medabots_server:other/resource_pack_verified
 

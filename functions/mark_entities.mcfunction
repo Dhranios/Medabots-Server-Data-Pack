@@ -4,7 +4,6 @@ tag @s[type=minecraft:item] add hostile
 
 # Make everything in battle trigger buttons
 scoreboard players add @s[tag=hostile] Fly 0
-scoreboard players add @s[tag=hostile] Float 0
 
 kill @s[type=minecraft:fishing_bobber]
 

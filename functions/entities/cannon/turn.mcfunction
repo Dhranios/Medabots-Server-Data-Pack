@@ -14,7 +14,7 @@ tag @s[tag=rotating,tag=west,y_rotation=-90..40] add rotate_right
 
 # Rotate cannon switching direction for x positive
 tag @s[tag=rotating,tag=east,y_rotation=-40..90] remove rotate_right
-tag @s[tag=rotating,tag=wast,y_rotation=90..-140] add rotate_right
+tag @s[tag=rotating,tag=east,y_rotation=90..-140] add rotate_right
 
 # Rotate cannon switching direction for z negative
 tag @s[tag=rotating,tag=north,y_rotation=-130..0] remove rotate_right

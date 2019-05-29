@@ -1,5 +1,3 @@
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/ruins_in_a/rubberobo
-execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute unless entity @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,scores={Medabot=0..,Battle=1..2,Stage=8},tag=enemy_medabot] run bossbar set medabots_server:ruins_in_a/time players @s[scores={Battle=1..}]
 execute unless entity @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,scores={Medabot=0..,Battle=1..2,Stage=8},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:ruins_in_a/time value
 execute unless entity @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,scores={Medabot=0..,Battle=1..2,Stage=8},tag=enemy_medabot] store result bossbar medabots_server:ruins_in_a/time value run scoreboard players operation #temp Time += #1 Constants
@@ -7,6 +5,8 @@ execute if entity @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,scores={Medabot=0..,Ba
 execute if entity @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,scores={Medabot=0..,Battle=1..2,Stage=8},tag=enemy_medabot] store result bossbar medabots_server:ruins_in_a/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,scores={Medabot=0..,Battle=1..2,Stage=8},tag=enemy_medabot] if score #temp Time matches 0 as @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,tag=mission] at @s run function medabots_server:stage/mission_time_up
 scoreboard players reset #temp Time
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/ruins_in_a/rubberobo
+execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1687 43 -272 minecraft:yellow_wool run tag @e[x=-1659.5,y=44,z=-254.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1687 43 -272 minecraft:yellow_wool run tag @e[x=-1659.5,y=44,z=-254.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1687 43 -272 minecraft:orange_wool if block -1678 43 -272 minecraft:orange_wool run tag @e[x=-1659.5,y=44,z=-254.5,distance=..0.7,tag=door,tag=open] remove open
@@ -60,18 +60,18 @@ execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1725.5,y=44,z=-
 execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1726.5,y=44,z=-315.5,distance=..0.7,tag=spring_wall] add enabled
 execute if block -1651 44 -326 minecraft:iron_door[open=true] if block -1683 44 -275 minecraft:iron_door[open=false] if entity @s[x=-1652,y=44,z=-329,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_a/rubberobo_battle/0
 execute if entity @e[x=-1649.5,y=44,z=-336.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=8,Medabot=0..,Battle=1..2}]
-title @s[scores={BattlingMedabots=1}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1650.5,y=44,z=-325.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[scores={BattlingMedabots=1}] run tag @e[x=-1693.5,y=44,z=-258.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[scores={BattlingMedabots=1}] run kill @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,tag=mission]
-execute if entity @s[scores={BattlingMedabots=1}] run bossbar set medabots_server:ruins_in_a/robattle players
+title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1650.5,y=44,z=-325.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1693.5,y=44,z=-258.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,tag=mission]
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:ruins_in_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=8}] run scoreboard players set @s Stage 8
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] if entity @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_in_a/rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run stopsound @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] music
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run playsound medabots_server:music.stage.stage_end music @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] -1683 50 -259 14
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] Battle 0
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] MusicType 1
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] Music 299
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run advancement grant @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_in_a_rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run teleport @s[x=-1716.5,y=43,z=-324.5,distance=..0.7,tag=hostile,gamemode=adventure] -1683 50 -259 -180 0
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] if entity @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_in_a/rubberobo
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run stopsound @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] music
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run playsound medabots_server:music.stage.stage_end music @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 14
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Battle 0
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] MusicType 1
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Music 299
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run advancement grant @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_in_a_rubberobo
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run teleport @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 -180 0

@@ -1,1 +1,1 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft"],Duration:2147483647}
+summon minecraft:area_effect_cloud ~ ~-1 ~ {CustomName:'{"translate":"medabots_server:entity.raft"}',Tags:["raft","hostile"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:acacia_planks"},NoGravity:1b,Tags:["raft","hostile"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Tags:["raft","hostile"]}]}

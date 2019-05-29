@@ -3,6 +3,7 @@ execute if blocks -167 121 -34 -165 124 -32 ~-1 ~-1 ~-1 all run scoreboard playe
 
 # Ignore players who use fly parts
 scoreboard players set @s[scores={Fly=1..}] FlyHackTime 0
+scoreboard players set @s[tag=float] FlyHackTime 0
 scoreboard players set @s[scores={FlyCourse=1..}] FlyHackTime 0
 
 # Reset timer if player lands

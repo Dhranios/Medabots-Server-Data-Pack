@@ -19,6 +19,15 @@ tag @s[tag=no_fire] remove no_fire
 scoreboard players reset #temp Stage
 
 # Set the time depending on the delay
+scoreboard players set @s[tag=delay_1,scores={Time=0}] Time 20
+scoreboard players set @s[tag=delay_2,scores={Time=0}] Time 40
+scoreboard players set @s[tag=delay_3,scores={Time=0}] Time 60
+scoreboard players set @s[tag=delay_4,scores={Time=0}] Time 80
+scoreboard players set @s[tag=delay_5,scores={Time=0}] Time 100
+scoreboard players set @s[tag=delay_6,scores={Time=0}] Time 120
+scoreboard players set @s[tag=delay_7,scores={Time=0}] Time 140
+scoreboard players set @s[tag=delay_8,scores={Time=0}] Time 160
+scoreboard players set @s[tag=delay_9,scores={Time=0}] Time 180
 scoreboard players set @s[tag=delay_10,scores={Time=0}] Time 200
 scoreboard players set @s[tag=delay_11,scores={Time=0}] Time 220
 scoreboard players set @s[tag=delay_12,scores={Time=0}] Time 240

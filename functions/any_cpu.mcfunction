@@ -5,22 +5,27 @@ function medabots_server:any_medabot
 scoreboard players set @s[scores={Dialog=60}] Dialog 0
 execute unless entity @s[scores={Dialog=-200..}] run scoreboard players add @s Sound 0
 execute unless entity @s[scores={Dialog=-200..}] run scoreboard players add @s Dialog 0
-execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove legs_selected
-execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove left_arm_selected
-execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove right_arm_selected
-execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove head_selected
-execute if entity @s[scores={Time=0,Dialog=2}] run tag @s remove medaforce_selected
+tag @s[scores={Time=0,Dialog=2}] remove no_legs
+tag @s[scores={Time=0,Dialog=2}] remove legs_selected
+tag @s[scores={Time=0,Dialog=2}] remove left_arm_selected
+tag @s[scores={Time=0,Dialog=2}] remove right_arm_selected
+tag @s[scores={Time=0,Dialog=2}] remove head_selected
+tag @s[scores={Time=0,Dialog=2}] remove medaforce_selected
 execute unless entity @s[scores={Medaforce=1}] if entity @a[distance=..16,scores={Battle=1}] run scoreboard players add @s[scores={Battle=1,Time=0,Dialog=0},tag=!dying] Dialog 1
 execute unless entity @s[scores={Medaforce=1}] run scoreboard players add @s[scores={Dialog=1..59}] Dialog 1
 scoreboard players add @s[scores={Dialog=-200..-1}] Dialog 1
-execute if entity @s[scores={Dialog=60,LegsArmor=1..},tag=fly_legs] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","legs"],Duration:1}
+execute if entity @s[scores={Dialog=60,LegsArmor=1..},tag=fly_legs,tag=!can_guard,tag=!no_legs] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","legs"],Duration:1}
+execute if entity @s[scores={Dialog=60,LegsArmor=1..},tag=can_guard,tag=!no_legs] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","legs"],Duration:1}
 execute if entity @s[scores={Dialog=60,LeftArmArmor=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","left"],Duration:1}
 execute if entity @s[scores={Dialog=60,RightArmArmor=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","right"],Duration:1}
 execute if entity @s[scores={Dialog=60,HeadUses=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","head"],Duration:1}
-execute if entity @s[scores={Dialog=60}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","medaforce"],Duration:1}
+execute if entity @s[scores={Dialog=60},tag=!medaforce_blocked] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","medaforce"],Duration:1}
 execute if entity @s[scores={Dialog=60}] run tag @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_select] add success
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run tag @s add legs_selected
-execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run scoreboard players set @s Dialog -200
+execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run scoreboard players set @s[tag=!fly_legs] Dialog -60
+execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run scoreboard players set @s[tag=!static_fly,tag=fly_legs] Dialog -90
+execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run scoreboard players set @s[tag=static_fly] Dialog 59
+execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run tag @s[tag=static_fly] add no_legs
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=left] run tag @s add left_arm_selected
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=right] run tag @s add right_arm_selected
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=head] run tag @s add head_selected
@@ -42,10 +47,6 @@ execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},tag=right_arm_select
 execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},tag=right_arm_selected] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
 execute if entity @s[scores={Damage=1..},tag=!legs_selected,tag=!left_arm_selected,tag=!right_arm_selected] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
 execute if entity @s[scores={Damage=1..},tag=!legs_selected,tag=!left_arm_selected,tag=!right_arm_selected] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-tag @s[scores={Damage=1..},tag=medaforce_selected] add medal_damage
-scoreboard players add @s[tag=medal_damage] Charge 1
-clear @s[tag=medal_damage] minecraft:nether_star 1
-tag @s[tag=medal_damage] remove medal_damage
 
 # Activate appropriate medapart
 execute if entity @s[tag=right_arm_selected,scores={Time=0,Dialog=60}] run function medabots_server:medaparts/activate_medaparts/cpu_right_arm

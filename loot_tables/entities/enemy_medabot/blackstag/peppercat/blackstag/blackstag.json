@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:14,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.blackstag_blackfluke\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.two_legged.description\"}','{\"text\":\"\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.blackstag\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.blackstag_blackfluke.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:blackstag_blackfluke\",gender:1b,move:\"two_legged\",part:\"legs\",armor:40,defense:40,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:14,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.blackstag_blackbeat\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"35\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.blackstag\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.blackstag_blackbeat.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:blackstag_blackbeat\",gender:1b,move:\"hammer\",part:\"left_arm\",armor:35,power:36,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:27,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_lightjump\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.paralyze\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.paralyze.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.peppercat\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.peppercat_lightjump.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:peppercat_lightjump\",gender:1b,move:\"paralyze\",part:\"right_arm\",armor:40,power:24,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:14,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.blackstag_blackincome\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.scout\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.scout.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"4\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"75\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.blackstag\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.blackstag_blackincome.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:blackstag_blackincome\",gender:1b,move:\"scout\",part:\"head\",armor:75,power:95,uses:4,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

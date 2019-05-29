@@ -2,6 +2,7 @@
 tag @s[tag=swim] remove swim
 tag @s[scores={LegsArmor=1..},type=!minecraft:player,tag=swim_legs] add swim
 tag @s[scores={LegsArmor=1..},type=minecraft:player,nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"swim"}}}]}] add swim
+execute if entity @s[type=!minecraft:player,tag=swim] if block ~ ~1.1 ~ minecraft:water run data modify entity @s Motion[1] set value 0.0824d
 
 # Kill unequipped users in deep water
 execute if entity @s[tag=!swim,type=minecraft:player,tag=!had_death] anchored eyes if block ^ ^ ^ minecraft:water run tellraw @a {"translate":"medabots_server:death.water","with":[{"selector":"@s"}]}

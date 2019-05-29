@@ -1,3 +1,4 @@
+execute if entity @s[scores={Stage=0}] run function medabots_server:stage/run/tutorial
 execute if entity @s[scores={Stage=1},tag=first_go] run function medabots_server:stage/run/grassland_a/first_go
 execute if entity @s[scores={Stage=1},tag=second_go] run function medabots_server:stage/run/grassland_a/second_go
 execute if entity @s[scores={Stage=1},tag=rubberobo] run function medabots_server:stage/run/grassland_a/rubberobo

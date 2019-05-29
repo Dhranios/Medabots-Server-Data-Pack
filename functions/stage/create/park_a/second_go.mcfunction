@@ -52,7 +52,7 @@ execute positioned -1812 45 -549 run function medabots_server:set_blocks/floor_s
 execute positioned -1769 45 -569 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1775 45 -583 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1800 45 -568 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
-execute positioned -1796 45 -568 run function medabots_server:set_blocks/press_wall/disabled/range_7
+execute positioned -1796 45 -568 run function medabots_server:set_blocks/press_wall/disabled/west/range_7
 execute positioned -1780 45 -568 run function medabots_server:set_blocks/hammer_punch/enabled/west/delay_10
 execute positioned -1808 45 -570 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
 execute positioned -1805 45 -570 run function medabots_server:set_blocks/action_floor/enabled/guard/slow

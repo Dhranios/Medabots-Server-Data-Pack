@@ -10,6 +10,23 @@ function medabots_server:medaparts/tank
 function medabots_server:medaparts/two_legged
 function medabots_server:medaparts/wheel
 
+# Get Armor %
+scoreboard players operation @s LegsPer = @s LegsArmor
+scoreboard players operation @s LeftArmPer = @s LeftArmArmor
+scoreboard players operation @s RightArmPer = @s RightArmArmor
+scoreboard players operation @s HeadPer = @s HeadArmor
+scoreboard players operation @s HeadUsesPer = @s HeadUses
+scoreboard players operation @s LegsPer *= #100 Constants
+scoreboard players operation @s LeftArmPer *= #100 Constants
+scoreboard players operation @s RightArmPer *= #100 Constants
+scoreboard players operation @s HeadPer *= #100 Constants
+scoreboard players operation @s HeadUsesPer *= #100 Constants
+scoreboard players operation @s LegsPer /= @s MaxLegsArmor
+scoreboard players operation @s LeftArmPer /= @s MaxLeftArmArmor
+scoreboard players operation @s RightArmPer /= @s MaxRightArmArmor
+scoreboard players operation @s HeadPer /= @s MaxHeadArmor
+scoreboard players operation @s HeadUsesPer /= @s MaxHeadUses
+
 # Get a boost by jumping on another player
 execute if entity @s[tag=!dying] run function medabots_server:medaparts/footstool
 

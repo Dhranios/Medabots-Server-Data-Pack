@@ -17,9 +17,6 @@
         }
     },
     "rewards": {
-        "loot": [
-            "medabots_server:advancements/wave_1/kamikaze_bomber"
-        ],
         "function": "medabots_server:advancements/wave_1/kamikaze_bomber"
     }
 }
