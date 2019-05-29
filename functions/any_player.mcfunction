@@ -91,11 +91,7 @@ execute if entity @s[scores={Verified=2}] run function medabots_server:other/res
 execute if entity @s[scores={FlyCourse=0..}] run function medabots_server:stage/fly_course
 
 # Buy items from shops
-execute if entity @s[tag=trading] run function medabots_server:shopping/gui/inventory
 execute if entity @s[scores={Shopping=1..}] run function medabots_server:shopping/buy_item
-execute if entity @s[tag=stop_trading] run function medabots_server:shopping/gui/restore_inv
-tag @s[tag=stop_trading] remove trading
-tag @s remove stop_trading
 
 # Enable chosing options
 scoreboard players enable @s TaskCheck

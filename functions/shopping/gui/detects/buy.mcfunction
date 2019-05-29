@@ -7,5 +7,5 @@
 
 execute unless entity @s[nbt={Inventory:[{tag:{gui:{expresso:1b}}}]}] run function medabots_server:shopping/gui/actions/expresso
 execute unless entity @s[nbt={Inventory:[{tag:{gui:{sunglasses:1b}}}]}] run function medabots_server:shopping/gui/actions/sunglasses
-execute unless entity @s[nbt={Inventory:[{tag:{gui:{crown:1b}}}]}] run function medabots_server:shopping/gui/actions/unknown_crown
+execute unless entity @s[nbt={Inventory:[{tag:{gui:{crown:1b}}}]}] run function medabots_server:shopping/gui/actions/crown
 

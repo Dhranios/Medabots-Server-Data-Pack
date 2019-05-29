@@ -9,4 +9,4 @@
 # Note: File specific for btn for easy access to changes
 
 #~ Home Item
-execute unless entity @s[nbt={Inventory:[{tag:{gui:{home:1b}}}]}] run function medabots_server:shopping/gui/actions/home
+execute unless entity @s[nbt={Inventory:[{tag:{gui:{home:1b}}}]}] run function lobby:gui/actions/home

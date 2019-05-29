@@ -1,1 +1,1 @@
-function medabots_server:shopping/gui/click_sound
+function lobby:gui/click_sound

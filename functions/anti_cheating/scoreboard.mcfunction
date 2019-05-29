@@ -64,9 +64,6 @@ scoreboard objectives add GuardGravity dummy
 scoreboard objectives add GuardGunpowder dummy
 scoreboard objectives add GuardNr dummy
 scoreboard objectives add GuardOptical dummy
-scoreboard objectives add GuiPage dummy
-scoreboard objectives add GuiPrevSlots dummy
-scoreboard objectives add GuiSlots dummy
 scoreboard objectives add Hammer dummy
 scoreboard objectives add HeadArmor dummy
 scoreboard objectives add HeadDanger dummy

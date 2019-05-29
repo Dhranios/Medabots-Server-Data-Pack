@@ -244,7 +244,6 @@ tag @s[scores={Sneak=1..}] add sneaking
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
 scoreboard players set @s[scores={Trading=1..},tag=!trading] Trading 2
 scoreboard players set @s[scores={Trading=1..},tag=trading] Trading 0
-execute unless entity @e[tag=shop,distance=..4,limit=1] if entity @s[tag=trading] run function medabots_server:shopping/gui/restore_inv
 execute unless entity @e[tag=shop,distance=..4,limit=1] run tag @s[tag=trading] remove trading
 tag @s[scores={Trading=1..}] add trading
 

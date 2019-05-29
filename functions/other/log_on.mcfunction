@@ -26,10 +26,6 @@ execute if entity @s[tag=hostile] run tellraw @a[team=Moderator] {"translate":"m
 scoreboard players add @s[tag=hostile] Warning 1
 scoreboard players set @s[tag=hostile] Batte 0
 
-# Stop trading
-execute if entity @s[tag=trading] run function medabots_server:shopping/gui/restore_inv
-tag @s remove trading
-
 # That's it
 tag @s remove returner
 scoreboard players set @s Verified 2

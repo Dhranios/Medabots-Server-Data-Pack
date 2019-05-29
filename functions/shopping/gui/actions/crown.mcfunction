@@ -1,2 +1,2 @@
-say Bought Expresso
+say Bought Crown ???
 function medabots_server:shopping/gui/click_sound
