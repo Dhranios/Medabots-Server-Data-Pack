@@ -35,4 +35,5 @@ scoreboard players set @s[tag=scout_head] Scout 2
 scoreboard players set @s[tag=shooting_trap_head] ShootingTrap 2
 scoreboard players set @s[tag=status_clear_head] StatusClear 2
 scoreboard players set @s[tag=sword_head] Sword 2
+scoreboard players set @s[tag=transform_head] Transform 2
 scoreboard players set @s[tag=wave_head] Wave 2

@@ -1,5 +1,8 @@
 # Reset medaforce
 scoreboard players set @s Time 950
+scoreboard players set @s TransformLTime 2
+scoreboard players set @s TransformRTime 2
+scoreboard players set @s TransformHTime 2
 execute if entity @s[scores={Medaforce=-2}] run function medabots_server:medaparts/spiral_bolt
 execute if entity @s[scores={Medaforce=-3}] run function medabots_server:medaparts/ultra_shot
 execute if entity @s[scores={Medaforce=-4}] run function medabots_server:medaparts/total_recovery

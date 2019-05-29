@@ -35,5 +35,6 @@ scoreboard players set @s[gamemode=creative,scores={Battle=1..}] Battle 0
 spawnpoint @s -286 55 -52
 
 # Deactivate parts
-execute unless entity @s[scores={FlyCourse=0..}] run scoreboard players reset @s[tag=!hostile,scores={Stage=1..},tag=!add_hostile] Stage
+execute unless entity @s[scores={FlyCourse=0..}] run scoreboard players reset @s[tag=!hostile,scores={Stage=0..},tag=!add_hostile] Stage
 execute if entity @s[scores={Battle=0},tag=hostile] run function medabots_server:medaparts/reset
+execute if entity @s[tag=!hostile,nbt={Inventory:[{tag:{medabots_server:{activated:1b}}}]}] store result entity @s Inventory[{tag:{medabots_server:{activated:1b}}}].tag.medabots_server.activated byte 1 run scoreboard players get #0 Constants

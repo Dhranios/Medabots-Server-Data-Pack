@@ -50,8 +50,8 @@ replaceitem entity @s[scores={MedapartType=9,Time=60..,Drop=0}] hotbar.3 minecra
 
 # Finish move
 scoreboard players reset @s[scores={Break=1,Time=60..},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"left_arm"}}}]}] Break
-scoreboard players reset @s[scores={Break=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"right_arm"}}}]}] Break
-scoreboard players reset @s[scores={Break=3,Time=60..},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"head"}}}]}] Break
+scoreboard players reset @s[scores={Break=2,Time=60..},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] Break
+scoreboard players reset @s[scores={Break=3,Time=60..},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"right_arm"}}}]}] Break
 scoreboard players reset @s[scores={Break=1..,Time=60..},type=!minecraft:player] Break
 execute unless entity @s[scores={Break=1..}] run scoreboard players reset @s MedapartType
 execute unless entity @s[scores={Break=1..}] run scoreboard players set @s Time 0

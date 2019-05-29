@@ -36,9 +36,6 @@ execute if entity @s[tag=!dying] run function medabots_server:medaparts/edge_gra
 # Charge up the medaforce
 execute if entity @s[scores={MedaforceTimer=3,Battle=1}] run function medabots_server:medaparts/charge_medaforce
 
-# Forget the part
-scoreboard players set @s[scores={Time=900..950}] Time 0
-
 # No combat if waiting for the player
 scoreboard players set @s[scores={Time=1..},tag=0] Time 950
 scoreboard players set @s[scores={Time=1..},tag=1] Time 950

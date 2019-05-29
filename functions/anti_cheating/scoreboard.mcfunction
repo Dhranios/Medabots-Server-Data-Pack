@@ -43,7 +43,6 @@ scoreboard objectives add EffectTimer dummy
 scoreboard objectives add Error dummy
 scoreboard objectives add Fall minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add Falling dummy
-scoreboard objectives add Float dummy
 scoreboard objectives add FloorSwitchTime dummy
 scoreboard objectives add Fly dummy
 scoreboard objectives add FlyCourse dummy
@@ -191,6 +190,13 @@ scoreboard objectives add Sword dummy
 scoreboard objectives add TaskCheck trigger
 scoreboard objectives add Time dummy
 scoreboard objectives add Trading minecraft.custom:minecraft.talked_to_villager
+scoreboard objectives add Transform dummy
+scoreboard objectives add TransformHID dummy
+scoreboard objectives add TransformHTime dummy
+scoreboard objectives add TransformLID dummy
+scoreboard objectives add TransformLTime dummy
+scoreboard objectives add TransformRID dummy
+scoreboard objectives add TransformRTime dummy
 scoreboard objectives add UpToDate dummy
 scoreboard objectives add UsePart minecraft.used:minecraft.fishing_rod
 scoreboard objectives add Verified trigger
