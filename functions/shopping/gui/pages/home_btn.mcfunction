@@ -1,0 +1,1 @@
+replaceitem entity @s hotbar.0 stone_button{gui:{home:1b},display:{Name:'{"text":"Go Home","color":"dark_purple","italic":False}',Lore:['{"text":"Click!","color":"light_purple","italic":false}']}}
