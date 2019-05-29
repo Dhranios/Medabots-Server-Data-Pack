@@ -1,9 +1,0 @@
-Page #: Page - Icons
-
-0: Empty
-
-1: Trading Home - Buy and Sell
-  11: Buy - CTF, FFA, Duels, Staff
-    111: Staff - Staff Heads
-  12: Sell - Unfinished
-  13: Duels - Unfinished

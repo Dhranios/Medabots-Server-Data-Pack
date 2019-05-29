@@ -5,4 +5,4 @@
 
 scoreboard players set @s Gui_Page 1
 tellraw @s {"text": "gui loaded"}
-function lobby:gui/clear
+function medabots_server:shopping/gui/clear

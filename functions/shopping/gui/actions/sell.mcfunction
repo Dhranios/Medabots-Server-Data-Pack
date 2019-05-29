@@ -3,6 +3,6 @@
 # 
 
 function medabots_server:shopping/gui/click_sound
-scoreboard players set @s gui.page 12
+scoreboard players set @s GuiPage 12
 
 function medabots_server:shopping/gui/pages/sell

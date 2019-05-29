@@ -6,6 +6,7 @@ execute store result score @s GuiSlots run data get entity @s Inventory
 execute if score @s GuiSlots < @s GuiPrevSlots run function medabots_server:shopping/gui/detect
 
 # I didn't implement the medabots page so it's commented out
+execute if entity @s[tag=salesman_trades] run function medabots_server:shopping/gui/pages/salesman
 execute if score @s GuiPage matches 1 run function medabots_server:shopping/gui/pages/home
   execute if score @s GuiPage matches 11 run function medabots_server:shopping/gui/pages/buy
 #   execute if score @s GuiPage matches 111 run function medabots_server:shopping/gui/pages/medabots
