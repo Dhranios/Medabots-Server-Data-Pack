@@ -5,7 +5,7 @@ execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression vs_spyke_begin
 stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 100
+playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Dialog=1}] MusicType -1
 scoreboard players set @s[scores={Dialog=1}] Music 62
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -324 55 5 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["samantha","cutscene"],Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:6176544}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:9123205}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:5530275}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
@@ -77,5 +77,5 @@ scoreboard players set @s[scores={Dialog=991}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 100
+playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

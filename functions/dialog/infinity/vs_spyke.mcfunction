@@ -5,7 +5,7 @@ execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression vs_spyke
 stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 100
+playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Dialog=1}] MusicType -1
 scoreboard players set @s[scores={Dialog=1}] Music 62
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -2001 51 -609 {Duration:1000000,Tags:["cutscene","metabee"],Rotation:[-121.0f,0.0f]}
@@ -63,5 +63,5 @@ scoreboard players set @s[scores={Dialog=400}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 100
+playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

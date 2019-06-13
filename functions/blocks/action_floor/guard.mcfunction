@@ -19,5 +19,5 @@ execute if entity @s[tag=fast,tag=4_medallar_cents] positioned ~ ~-1.3999 ~ run 
 execute if entity @s[tag=fast,tag=6_medallar_cents] positioned ~ ~-1.3999 ~ run function medabots_server:spawn_entities/guard/fast/6_medallar_cents
 execute if entity @s[tag=fast,tag=10_medallar_cents] positioned ~ ~-1.3999 ~ run function medabots_server:spawn_entities/guard/fast/10_medallar_cents
 execute if entity @s[tag=fast,tag=20_medallar_cents] positioned ~ ~-1.3999 ~ run function medabots_server:spawn_entities/guard/fast/20_medallar_cents
-execute positioned ~ ~-1.3999 ~ run tag @e[distance=..0.7] add no_processing
+execute positioned ~ ~-1.3999 ~ run tag @e[distance=..0.7,tag=!action_floor] add no_processing
 execute positioned ~ ~-1.3999 ~ as @e[distance=..0.7] run data merge entity @s {Invulnerable:1b}

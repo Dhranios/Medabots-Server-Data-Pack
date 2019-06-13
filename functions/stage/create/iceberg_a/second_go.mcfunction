@@ -46,7 +46,7 @@ execute positioned -1729 44 -237 run function medabots_server:set_blocks/hole/de
 execute positioned -1684 44 -241 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_10
 execute positioned -1678 44 -240 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
 execute positioned -1687 44 -233 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
-execute positioned -1681 44 -227 run function medabots_server:set_blocks/laser_trap/disabled/east/delay_10
+execute positioned -1681 44 -227 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
 execute positioned -1759 44 -218 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1758 44 -218 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1730 44 -193 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10

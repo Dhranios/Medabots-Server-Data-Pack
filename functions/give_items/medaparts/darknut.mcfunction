@@ -1,4 +1,4 @@
 function medabots_server:give_items/medaparts/darknut/darkarmor
 function medabots_server:give_items/medaparts/darknut/darkshield
 function medabots_server:give_items/medaparts/darknut/darksword
-function medabots_server:give_items/medaparts/darknut/darkhemet
+function medabots_server:give_items/medaparts/darknut/darkhelmet

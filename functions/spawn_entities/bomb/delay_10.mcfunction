@@ -1,1 +1,2 @@
-summon minecraft:tnt ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:200s,Tags:["bomb","hostile"]}
+summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.bomb"}',Tags:["bomb","hostile"],Duration:2147483647,Passengers:[{id:"minecraft:falling_block",Time:1,BlockState:{Name:"minecraft:tnt"},NoGravity:1b,Tags:["bomb","hostile"]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,DeathLootTable:"minecraft:empty",Peek:1b,Tags:["bomb","hostile"],ActiveEffect:[{Id:14b,Duration:1000000,Ambient:1b,Amplifier:0b,ShowParticles:0b}]}]}
+scoreboard players set @e[distance=..0.7,tag=bomb] Dialog 200

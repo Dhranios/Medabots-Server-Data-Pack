@@ -5,7 +5,15 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:53}"
         },
         "title": {
-            "translate": "medabots_server:entity.sphere_doomers"
+            "translate": "medabots_server:model.sphere_doomers",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.sphere_doomers"
+                }
+            ]
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.sphere_doomers"

@@ -13,17 +13,19 @@ execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] positioned ^
 execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] run function medabots_server:entities/guard/wander
 
 # Fall
-execute if block ~ ~-0.2 ~ minecraft:air run teleport @s ~ ~-0.2 ~
-execute if block ~ ~-0.2 ~ minecraft:black_carpet run teleport @s ~ ~-0.2 ~
-execute positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,distance=..0.7] at @s run teleport @s ~ ~-0.2 ~
-execute positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:bubble_column unless entity @e[tag=raft,distance=..0.7] at @s run teleport @s ~ ~-0.2 ~
-execute if block ~ ~-0.2 ~ minecraft:lava run teleport @s ~ ~-0.2 ~
-execute if entity @s[y=0,dy=1] run tag @s add dead
+execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
+execute at @s if block ~ ~-0.2 ~ minecraft:black_carpet run tag @s add fall
+execute at @s positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,distance=..0.7] at @s run tag @s add fall
+execute at @s positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:bubble_column unless entity @e[tag=raft,distance=..0.7] at @s run tag @s add fall
+execute at @s if block ~ ~-0.2 ~ minecraft:lava run tag @s add fall
+execute at @s[tag=fall] run teleport @s ~ ~-0.2 ~
+execute at @s[tag=!fall] align y unless block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~
+execute at @s[tag=!fall] align y if block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~0.5 ~
+tag @s remove fall
+execute at @s if entity @s[y=0,dy=1] run tag @s add dead
 
 # Attacked by melee trap
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run effect give @s[tag=!dying] minecraft:instant_damage 1 0 true
-execute if entity @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run playsound medabots_server:entity.medabot.attack.trap_hit player @a[tag=!dying] ~ ~ ~ 1
-execute if entity @s[tag=!dying] run kill @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap]
+execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run function medabots_server:items/medapart/melee_trap/hit
 
 # Clean up
 teleport @s[tag=dead] ~ -1000 ~

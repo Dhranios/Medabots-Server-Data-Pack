@@ -111,9 +111,9 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=8}] run scoreboard players set @s Stage 8
 execute if entity @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_in_a/first_go
 stopsound @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] music
-playsound medabots_server:music.stage.stage_end music @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 14
+playsound medabots_server:music.stage.stage_end music @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 1000
+scoreboard players set @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] Battle 0
 scoreboard players set @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] MusicType 1
 scoreboard players set @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] Music 299
 advancement grant @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_in_a_first_go
 teleport @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 -180 0
-scoreboard players set @s[x=-1682,y=44,z=-276,dy=4,tag=hostile,gamemode=adventure] Battle 0

@@ -5,7 +5,15 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:3}"
         },
         "title": {
-            "translate": "medabots_server:entity.doctor_study"
+            "translate": "medabots_server:model.doctor_study",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.doctor_study"
+                }
+            ]
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.doctor_study"

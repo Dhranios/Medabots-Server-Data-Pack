@@ -1,7 +1,7 @@
 execute store result score @s BattlingMedabots if entity @e[scores={Stage=50,Medabot=0..,Battle=1..}]
 execute if entity @s[scores={BattlingMedabots=1}] run function medabots_server:stage/clean_up/park_battle/wind_1
 stopsound @s[scores={BattlingMedabots=1}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1949 51 -564 14
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1949 51 -564 1000
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299

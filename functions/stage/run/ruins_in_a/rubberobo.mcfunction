@@ -30,7 +30,7 @@ execute if block -1700 43 -273 minecraft:lime_wool if block -1723 43 -289 minecr
 execute if block -1712 43 -289 minecraft:yellow_wool run tag @e[x=-1711.5,y=44,z=-286.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1712 43 -289 minecraft:orange_wool run tag @e[x=-1711.5,y=44,z=-286.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1723 43 -289 minecraft:yellow_wool run tag @e[x=-1723.5,y=44,z=-286.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1723 43 -286 minecraft:yellow_wool run tag @e[x=-1722.5,y=44,z=-286.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1723 43 -286 minecraft:yellow_wool run tag @e[x=-1723.5,y=44,z=-286.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1723 43 -289 minecraft:orange_wool if block -1723 43 -286 minecraft:orange_wool run tag @e[x=-1723.5,y=44,z=-286.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1716 43 -297 minecraft:yellow_wool run tag @e[x=-1716.5,y=44,z=-298.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1716 43 -297 minecraft:orange_wool run tag @e[x=-1716.5,y=44,z=-298.5,distance=..0.7,tag=door,tag=open] remove open
@@ -39,8 +39,8 @@ execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1657,y=44,z=-28
 execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add enabled
 execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove enabled
 execute if block -1694 44 -259 minecraft:iron_door[open=true] run tag @e[x=-1646.5,y=44,z=-289.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1707.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1707.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] remove enabled
+execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled
+execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] remove enabled
 execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1709.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] add enabled
 execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1709.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] remove enabled
 execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1712.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] add enabled
@@ -58,7 +58,7 @@ execute if block -1723 43 -289 minecraft:orange_wool run tag @e[x=-1719.5,y=44,z
 execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1727.5,y=44,z=-302.5,distance=..0.7,tag=spring_wall] add enabled
 execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1725.5,y=44,z=-302.5,distance=..0.7,tag=spring_wall] add enabled
 execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1726.5,y=44,z=-315.5,distance=..0.7,tag=spring_wall] add enabled
-execute if block -1651 44 -326 minecraft:iron_door[open=true] if block -1683 44 -275 minecraft:iron_door[open=false] if entity @s[x=-1652,y=44,z=-329,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_a/rubberobo_battle/0
+execute if block -1651 44 -326 minecraft:iron_door[open=true] if block -1694 44 -259 minecraft:iron_door[open=false] if entity @s[x=-1652,y=44,z=-329,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_a/rubberobo_battle/0
 execute if entity @e[x=-1649.5,y=44,z=-336.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=8,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1650.5,y=44,z=-325.5,distance=..0.7,tag=door,tag=!open] add open
@@ -67,11 +67,12 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1729
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:ruins_in_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=8}] run scoreboard players set @s Stage 8
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] if entity @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_in_a/rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run stopsound @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] music
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run playsound medabots_server:music.stage.stage_end music @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 14
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Battle 0
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] MusicType 1
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Music 299
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run advancement grant @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_in_a_rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=!minecraft:player] run teleport @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 -180 0
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] if entity @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_in_a/rubberobo
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run stopsound @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] music
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run playsound medabots_server:music.stage.stage_end music @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 1000
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Battle 0
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] MusicType 1
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Music 299
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run advancement grant @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_in_a_rubberobo
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run tag @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={rubberobo_enters_ruins_in_a=true,rubberobo_leaves_ruins_in_a=false}}] add dialog_infinity_rubberobo_leaves_ruins_in_a
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run teleport @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 -180 0

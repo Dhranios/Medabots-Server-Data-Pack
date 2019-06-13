@@ -5,7 +5,15 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:61}"
         },
         "title": {
-            "translate": "medabots_server:entity.crimson_king"
+            "translate": "medabots_server:model.crimson_king",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.crimson_king"
+                }
+            ]
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.crimson_king"

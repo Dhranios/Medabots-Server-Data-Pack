@@ -1,2 +1,3 @@
 teleport @s[scores={Dialog=0,Verified=3}] -1539 51 -216 -180 0
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
+execute if entity @s[advancements={medabots_server:wave_1/story_progression={rubberobo_enters_seashore_a=false},medabots_server:stages/wave_1/rock_a_rubberobo=true,medabots_server:stages/wave_1/snowfield_a_rubberobo=true,medabots_server:stages/wave_1/ruins_in_a_rubberobo=true}] run tag @s add dialog_infinity_rubberobo_enters_seashore_a

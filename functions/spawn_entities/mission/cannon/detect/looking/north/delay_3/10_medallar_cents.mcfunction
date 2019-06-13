@@ -2,3 +2,5 @@ summon minecraft:zombie ~ ~ ~ {ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1
 scoreboard players set @e[distance=..0.7] CannonFire 0
 scoreboard players set @e[distance=..0.7] Time -1
 scoreboard players set @e[distance=..0.7] Killer 0
+fill ~ ~2 ~ ~ ~2 ~ minecraft:barrier replace minecraft:air
+fill ~ ~ ~ ~ ~ ~ minecraft:iron_block replace minecraft:air
