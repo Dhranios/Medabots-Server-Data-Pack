@@ -36,7 +36,7 @@ execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switc
 execute if block -1750 43 -221 minecraft:yellow_wool run tag @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1750 43 -221 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=70..110}] run tag @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
 execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=80..120}] run tag @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1707 43 -191 minecraft:lime_wool run tag @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1707 43 -191 minecraft:lime_wool run tag @e[x=-171.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1707 43 -191 minecraft:green_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=80..120}] run tag @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1681 43 -232 minecraft:yellow_wool run tag @e[x=-1687,y=43,z=-241,dx=10,dy=2,dz=15,tag=laser_trap] add enabled
 execute if block -1681 43 -232 minecraft:orange_wool run tag @e[x=-1687,y=43,z=-241,dx=10,dy=2,dz=15,tag=laser_trap] remove enabled
@@ -103,7 +103,7 @@ execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store 
 execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=6}] run scoreboard players set @s Stage 6
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/iceberg_a/first_go
 stopsound @s[scores={BattlingMedabots=1,Battle=1..}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1704 50 -221 1000
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1704 50 -221 14
 scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Music 299
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/iceberg_a_first_go

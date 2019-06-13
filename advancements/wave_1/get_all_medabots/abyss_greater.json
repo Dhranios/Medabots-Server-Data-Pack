@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:22}"
         },
         "title": {
-            "translate": "medabots_server:model.abyss_greater",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.abyss_greater"
-                }
-            ]
+            "translate": "medabots_server:entity.abyss_greater"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.abyss_greater"

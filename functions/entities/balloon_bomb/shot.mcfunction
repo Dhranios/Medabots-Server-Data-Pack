@@ -1,0 +1,6 @@
+execute if block ~ ~0.3 ~ minecraft:sponge positioned ~ ~-0.8 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb,tag=!action_floor] add burst
+execute if block ~ ~-0.3 ~ minecraft:sponge positioned ~ ~-1.3 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb,tag=!action_floor] add burst
+execute if block ~0.3 ~ ~ minecraft:sponge positioned ~0.3 ~-1 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb,tag=!action_floor] add burst
+execute if block ~-0.3 ~ ~ minecraft:sponge positioned ~-0.3 ~-1 ~ run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb,tag=!action_floor] add burst
+execute if block ~ ~ ~0.3 minecraft:sponge positioned ~ ~-1 ~0.3 run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb,tag=!action_floor] add burst
+execute if block ~ ~ ~-0.3 minecraft:sponge positioned ~ ~-1 ~-0.3 run tag @e[sort=nearest,distance=..1,limit=1,type=minecraft:area_effect_cloud,tag=balloon_bomb,tag=!action_floor] add burst

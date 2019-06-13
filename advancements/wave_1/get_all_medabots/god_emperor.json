@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:17}"
         },
         "title": {
-            "translate": "medabots_server:model.god_emperor",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.god_emperor"
-                }
-            ]
+            "translate": "medabots_server:entity.god_emperor"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.god_emperor"

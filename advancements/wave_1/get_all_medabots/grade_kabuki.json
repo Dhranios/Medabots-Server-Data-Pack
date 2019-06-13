@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:4}"
         },
         "title": {
-            "translate": "medabots_server:model.grade_kabuki",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.grade_kabuki"
-                }
-            ]
+            "translate": "medabots_server:entity.grade_kabuki"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.grade_kabuki"

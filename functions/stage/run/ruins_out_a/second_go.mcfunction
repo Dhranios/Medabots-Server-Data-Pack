@@ -27,9 +27,9 @@ execute if block -1578 44 -301 minecraft:yellow_wool run scoreboard players remo
 execute if block -1578 44 -301 minecraft:yellow_wool run tag @e[x=-1577.5,y=45,z=-301.5,distance=..0.7,tag=fan,tag=!changed] add changed
 execute if block -1578 44 -301 minecraft:yellow_wool run scoreboard players add @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1578 44 -301 minecraft:yellow_wool run tag @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=!changed] add changed
-execute if block -1578 44 -301 minecraft:orange_wool run scoreboard players remove @e[x=-1577.5,y=45,z=-301.5,distance=..0.7,tag=fan,tag=changed] Moving 1
+execute if block -1578 44 -301 minecraft:orange_wool run scoreboard players add @e[x=-1577.5,y=45,z=-301.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1578 44 -301 minecraft:orange_wool run tag @e[x=-1577.5,y=45,z=-301.5,distance=..0.7,tag=fan,tag=changed] remove changed
-execute if block -1578 44 -301 minecraft:orange_wool run scoreboard players add @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=changed] Moving 1
+execute if block -1578 44 -301 minecraft:orange_wool run scoreboard players remove @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1578 44 -301 minecraft:orange_wool run tag @e[x=-1577.5,y=45,z=-282.5,distance=..0.7,tag=fan,tag=changed] remove changed
 execute if block -1595 44 -264 minecraft:lime_wool run tag @e[x=-1599.5,y=45,z=-263.5,distance=..0.7,tag=spring_wall] add enabled
 execute if block -1624 45 -284 minecraft:iron_door[open=false] if block -1602 44 -286 minecraft:lime_wool run tag @e[x=-1601.5,y=45,z=-301.5,distance=..0.7,tag=press_wall] add enabled
@@ -49,7 +49,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=7}] run scoreboard players set @s Stage 7
 execute if entity @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_out_a/second_go
 stopsound @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] music
-playsound medabots_server:music.stage.stage_end music @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] -1570 51 -284 1000
+playsound medabots_server:music.stage.stage_end music @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] -1570 51 -284 14
 scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] MusicType 1
 scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] Music 299
 advancement grant @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_out_a_second_go

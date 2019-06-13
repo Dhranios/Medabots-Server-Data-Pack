@@ -104,12 +104,6 @@
         },
         "vs_squidguts_battle": {
             "trigger": "minecraft:impossible"
-        },
-		"vs_koji": {
-            "trigger": "minecraft:impossible"
-        },
-        "vs_koji_battle": {
-            "trigger": "minecraft:impossible"
         }
     }
 }

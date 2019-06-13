@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:56}"
         },
         "title": {
-            "translate": "medabots_server:model.warbonnet",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.warbonnet"
-                }
-            ]
+            "translate": "medabots_server:entity.warbonnet"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.warbonnet"
@@ -56,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:warbonnet_abduction\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:warbonnet_abductor\"}}"
                     }
                 ]
             }

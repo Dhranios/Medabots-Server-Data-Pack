@@ -1,8 +1,0 @@
-execute if entity @s[scores={Time=10}] run function medabots_server:items/medapart/life_drain/10
-execute if entity @s[scores={Time=30..}] run function medabots_server:items/medapart/life_drain/30..
-
-# Show particles
-particle minecraft:dust 1 1 0 1 ~ ~1 ~ 1 2 1 0 30
-
-# Increase time by 1
-scoreboard players add @s[scores={Medaforce=-11}] Time 1

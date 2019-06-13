@@ -7,7 +7,7 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progre
 stopsound @s[scores={Dialog=1}] music
 scoreboard players set @s[scores={Dialog=1}] MusicType -1
 scoreboard players set @s[scores={Dialog=1}] Music 136
-playsound medabots_server:music.entity.koji_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
+playsound medabots_server:music.entity.koji_intro music @s[scores={Dialog=1}] ~ ~ ~ 100
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1605 51 -147 {Duration:1000000,Tags:["cutscene","metabee"],Rotation:[-90.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-1605,y=51,z=-147,distance=..1,tag=metabee] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[x=-1605,y=51,z=-147,distance=..1,tag=metabee] MedabotNr 1
@@ -109,7 +109,7 @@ scoreboard players set @s[scores={Dialog=1711}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 
-playsound medabots_server:music.entity.koji music @s[scores={Music=0,MusicType=-1,Dialog=..944}] ~ ~ ~ 1000
+playsound medabots_server:music.entity.koji music @s[scores={Music=0,MusicType=-1,Dialog=..944}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..944}] Music 274
-playsound medabots_server:music.entity.max music @s[scores={Music=0,MusicType=-1,Dialog=945..1566}] ~ ~ ~ 1000
+playsound medabots_server:music.entity.max music @s[scores={Music=0,MusicType=-1,Dialog=945..1566}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=945..1566}] Music 578

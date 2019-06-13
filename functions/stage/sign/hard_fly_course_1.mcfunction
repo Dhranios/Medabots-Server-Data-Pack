@@ -1,7 +1,9 @@
 tellraw @s {"translate":"medabots_server:message.stage.description.hard_fly_course_1"}
 tellraw @s {"translate":"medabots_server:message.stage.score.fly_course.normal"}
 tellraw @s {"translate":"medabots_server:message.stage.score.calculate","extra":[{"translate":"medabots_server:message.stage.score.rings"}]}
-function medabots_server:stage/sign/hard_fly_course_1/scoreboard
+tellraw @s[name=!"FVbico"] {"translate":"medabots_server:message.stage.score.high_score","color":"gold","with":[{"text":"356"},{"text":"FVbico"}]}
+tellraw @s[name="FVbico"] {"translate":"medabots_server:message.stage.score.scoreholder.high_score","color":"gold","with":[{"text":"356"}]}
 tellraw @s {"translate":"medabots_server:message.stage.score.fly_course.challenge"}
 tellraw @s {"translate":"medabots_server:message.stage.score.calculate","extra":[{"translate":"medabots_server:message.stage.score.rings"}]}
-function medabots_server:stage/sign/hard_fly_course_1/challenge_scoreboard
+tellraw @s[name=!"FVbico"] {"translate":"medabots_server:message.stage.score.high_score","color":"gold","with":[{"text":"114"},{"text":"FVbico"}]}
+tellraw @s[name="FVbico"] {"translate":"medabots_server:message.stage.score.scoreholder.high_score","color":"gold","with":[{"text":"114"}]}

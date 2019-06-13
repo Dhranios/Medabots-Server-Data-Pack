@@ -1,0 +1,2 @@
+execute if entity @s[scores={Medabot=1..}] run function medabots_server:medaparts/killer_message_medabot
+execute unless entity @s[scores={Medabot=0..}] run function medabots_server:medaparts/killer_message_stage_enemy

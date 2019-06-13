@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:65}"
         },
         "title": {
-            "translate": "medabots_server:model.pururun_jelly",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.pururun_jelly"
-                }
-            ]
+            "translate": "medabots_server:entity.pururun_jelly"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.pururun_jelly"

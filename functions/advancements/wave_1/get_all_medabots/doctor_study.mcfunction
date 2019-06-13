@@ -1,1 +1,1 @@
-advancement grant @s only medabots_server:wave_1/get_all_medabots doctor_study
+advancement grant @s only medabots_server:wave_1/get_all_medabots docotr_study

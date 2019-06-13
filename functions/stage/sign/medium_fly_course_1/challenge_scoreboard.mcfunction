@@ -1,2 +1,0 @@
-tellraw @s[name=!"FVbico"] {"translate":"medabots_server:message.stage.score.high_score","color":"gold","with":[{"text":"188"},{"text":"FVbico"}]}
-tellraw @s[name="FVbico"] {"translate":"medabots_server:message.stage.score.scoreholder.high_score","color":"gold","with":[{"text":"188"}]}

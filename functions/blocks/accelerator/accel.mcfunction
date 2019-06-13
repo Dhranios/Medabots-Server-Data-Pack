@@ -9,6 +9,4 @@ execute if block ~ ~ ~ minecraft:comparator[facing=west,mode=compare,powered=fal
 
 # Player's nbt cannot be edited :(
 execute if entity @s[type=minecraft:player] run function medabots_server:blocks/accelerator/teleport
-
-# Guards can't have Motion applied
 execute if entity @s[tag=guard] run function medabots_server:blocks/accelerator/teleport

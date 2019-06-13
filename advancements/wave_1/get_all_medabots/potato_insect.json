@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:41}"
         },
         "title": {
-            "translate": "medabots_server:model.potato_insect",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.potato_insect"
-                }
-            ]
+            "translate": "medabots_server:entity.potato_insect"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.potato_insect"

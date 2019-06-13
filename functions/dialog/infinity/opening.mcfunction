@@ -229,9 +229,9 @@ scoreboard players set @s[scores={Dialog=5472}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 
-playsound medabots_server:music.intro music @s[scores={Music=0,MusicType=-1,Dialog=..4024}] ~ ~ ~ 1000
+playsound medabots_server:music.intro music @s[scores={Music=0,MusicType=-1,Dialog=..4024}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..4024}] Music 915
-playsound medabots_server:music.entity.select_corps music @s[scores={Music=0,MusicType=-1,Dialog=4025..5163}] ~ ~ ~ 1000
+playsound medabots_server:music.entity.select_corps music @s[scores={Music=0,MusicType=-1,Dialog=4025..5163}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=4081..5163}] Music 720
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=5164..}] ~ ~ ~ 1000
+playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=5164..}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=5164..}] Music 502

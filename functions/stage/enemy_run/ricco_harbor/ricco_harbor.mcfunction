@@ -4,7 +4,7 @@ stopsound @s[scores={BattlingMedabots=1}] music
 scoreboard players set @s[scores={BattlingMedabots=1}] Battle 0
 scoreboard players set @s[scores={BattlingMedabots=1}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1}] Music 299
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1440 51 -158 1000
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1}] -1440 51 -158 14
 teleport @s[scores={BattlingMedabots=1}] -1440 51 -158 -180 0
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block ~ ~-1 ~ minecraft:white_wool run effect give @s minecraft:jump_boost 1 3 true

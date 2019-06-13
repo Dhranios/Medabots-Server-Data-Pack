@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:18}"
         },
         "title": {
-            "translate": "medabots_server:model.shoot_spider",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.shoot_spider"
-                }
-            ]
+            "translate": "medabots_server:entity.shoot_spider"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.shoot_spider"

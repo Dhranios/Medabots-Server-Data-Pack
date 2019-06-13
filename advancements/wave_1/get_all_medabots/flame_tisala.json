@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:38}"
         },
         "title": {
-            "translate": "medabots_server:model.flame_tisala",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.flame_tisala"
-                }
-            ]
+            "translate": "medabots_server:entity.flame_tisala"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.flame_tisala"

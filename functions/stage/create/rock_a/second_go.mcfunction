@@ -131,6 +131,7 @@ execute positioned -1626 45 -176 run function medabots_server:set_blocks/bridge
 execute positioned -1626 45 -177 run function medabots_server:set_blocks/bridge
 execute positioned -1626 45 -178 run function medabots_server:set_blocks/bridge
 execute positioned -1625 45 -177 run function medabots_server:set_blocks/bridge
+execute positioned -1626 45 -177 run function medabots_server:set_blocks/bridge
 execute positioned -1627 45 -177 run function medabots_server:set_blocks/bridge
 execute positioned -1620 45 -155 run function medabots_server:set_blocks/bridge
 execute positioned -1618 45 -151 run function medabots_server:set_blocks/bridge

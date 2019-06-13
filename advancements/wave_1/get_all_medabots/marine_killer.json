@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:64}"
         },
         "title": {
-            "translate": "medabots_server:model.marine_killer",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.marine_killer"
-                }
-            ]
+            "translate": "medabots_server:entity.marine_killer"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.marine_killer"

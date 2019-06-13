@@ -44,7 +44,7 @@ execute positioned -1729 44 -237 run function medabots_server:set_blocks/hole/de
 execute positioned -1684 44 -241 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_10
 execute positioned -1678 44 -240 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
 execute positioned -1687 44 -233 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
-execute positioned -1681 44 -227 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
+execute positioned -1681 44 -227 run function medabots_server:set_blocks/laser_trap/disabled/east/delay_10
 execute positioned -1759 44 -218 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1758 44 -218 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1730 44 -193 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10
@@ -64,9 +64,9 @@ execute positioned -1741 44 -237 run function medabots_server:set_blocks/mirror/
 execute positioned -1741 44 -238 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1758 44 -237 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1759 44 -238 run function medabots_server:set_blocks/mirror/-45
-execute positioned -1741 46 -238 run function medabots_server:spawn_entities/item/mirror_help
-execute positioned -1741 46 -237 run function medabots_server:spawn_entities/item/mirror_help
-execute positioned -1725 44 -193 run function medabots_server:spawn_entities/item/glass_help
+execute positioned -1741 46 -238 run function medabots_server:set_blocks/item/mirror_help
+execute positioned -1741 46 -237 run function medabots_server:set_blocks/item/mirror_help
+execute positioned -1725 44 -193 run function medabots_server:set_blocks/item/glass_help
 execute positioned -1692 44 -243 run function medabots_server:set_blocks/pot
 execute positioned -1691 44 -243 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1686 44 -239 run function medabots_server:set_blocks/pot

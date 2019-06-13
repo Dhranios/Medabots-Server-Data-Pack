@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:21}"
         },
         "title": {
-            "translate": "medabots_server:model.kanehachi_mk2",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.kanehachi_mk2"
-                }
-            ]
+            "translate": "medabots_server:entity.kanehachi_mk2"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.kanehachi_mk2"

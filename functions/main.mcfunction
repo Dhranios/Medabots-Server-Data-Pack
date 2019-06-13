@@ -4,10 +4,10 @@
 #############################
 
 # Functions that run on every player
-execute as @a at @s run function medabots_server:main/players
+execute as @a at @s run function medabots_server:any_player
 
 # Functions that run on every non-player entity
-execute as @e[type=!minecraft:player,tag=!no_processing] at @s run function medabots_server:main/non_players
+execute as @e[type=!minecraft:player,tag=!no_processing] at @s run function medabots_server:any_non_player
 
 # Make the sound cooldown cool down
 scoreboard players remove @e[scores={Sound=1..}] Sound 1

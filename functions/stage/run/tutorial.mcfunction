@@ -18,7 +18,6 @@ tellraw @s[scores={Dialog=895}] {"translate":"medabots_server:dialog.tutorial.11
 execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run function medabots_server:spawn_entities/enemy_medabot/saikachis/saikachis/saikachis/saikachis/kabuto
 execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run tag @e[distance=..0.7,tag=saikachis] add blocked_medaforce
 execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run scoreboard players set @e[distance=..0.7,tag=saikachis] HeadUses 0
-execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run effect give @e[distance=..0.7,tag=saikachis] minecraft:resistance 1000000 9 true
 execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run scoreboard players set @e[distance=..0.7,tag=saikachis] LeftArmArmor -1
 execute if entity @s[scores={Dialog=896}] if entity @e[tag=saikachis,scores={Stage=0},nbt={HurtTime:9s}] run scoreboard players add @s Dialog 1
 scoreboard players add @s[scores={Dialog=897..1102}] Dialog 1

@@ -5,15 +5,7 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:7}"
         },
         "title": {
-            "translate": "medabots_server:model.poison_scorpi",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.poison_scorpi"
-                }
-            ]
+            "translate": "medabots_server:entity.poison_scorpi"
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.poison_scorpi"

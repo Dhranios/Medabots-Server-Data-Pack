@@ -1,8 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:gold_ingot",
-            "nbt": "{CustomModelData:1}"
+            "item": "minecraft:nether_star"
         },
         "title": {
             "translate": "medabots_server:item.part.wave",

@@ -21,9 +21,7 @@ scoreboard objectives add Break dummy
 scoreboard objectives add Bug dummy
 scoreboard objectives add BugTime dummy
 scoreboard objectives add BugTimer dummy
-scoreboard objectives add BuyMedapart trigger
 scoreboard objectives add CannonFire dummy
-scoreboard objectives add ChaosTime dummy
 scoreboard objectives add Charge dummy
 scoreboard objectives add Cloud dummy
 scoreboard objectives add Confuse dummy
@@ -176,10 +174,6 @@ scoreboard objectives add SelfDestructTime dummy
 scoreboard objectives add ServerStats dummy {"translate":"medabots_server:scoreboard.objective.server_stats"}
 scoreboard objectives add SettingsCheck trigger
 scoreboard objectives add ShootingTrap dummy
-scoreboard objectives add ShopIndex1 trigger
-scoreboard objectives add ShopIndex2 trigger
-scoreboard objectives add ShopIndex3 trigger
-scoreboard objectives add ShopIndex4 trigger
 scoreboard objectives add Shopping trigger
 scoreboard objectives add Sneak minecraft.custom:minecraft.crouch_one_cm
 scoreboard objectives add Sneaking minecraft.custom:minecraft.sneak_time

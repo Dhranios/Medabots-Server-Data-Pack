@@ -35,5 +35,5 @@ scoreboard players set @s[scores={Dialog=114}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 
-playsound medabots_server:music.entity.jaxy music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
+playsound medabots_server:music.entity.jaxy music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 100
 scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 1024

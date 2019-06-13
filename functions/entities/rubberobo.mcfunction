@@ -23,12 +23,12 @@ tag @s[tag=toggle_turn_left,scores={Time=..40}] remove toggle_turn_left
 
 # Rubberobo death
 execute if entity @s[nbt={AbsorptionAmount:0.0f},tag=!dead] run function medabots_server:entities/rubberobo/reset
-execute at @s if block ~ ~ ~ minecraft:water run function medabots_server:entities/rubberobo/reset
-execute at @s if block ~ ~ ~ minecraft:lava run function medabots_server:entities/rubberobo/reset
-execute at @s if block ~ ~ ~1 minecraft:black_wool run function medabots_server:entities/rubberobo/reset
-execute at @s if block ~ ~ ~-1 minecraft:black_wool run function medabots_server:entities/rubberobo/reset
-execute at @s if block ~1 ~ ~ minecraft:black_wool run function medabots_server:entities/rubberobo/reset
-execute at @s if block ~-1 ~ ~ minecraft:black_wool run function medabots_server:entities/rubberobo/reset
+execute if block ~ ~ ~ minecraft:water run function medabots_server:entities/rubberobo/reset
+execute if block ~ ~ ~ minecraft:lava run function medabots_server:entities/rubberobo/reset
+execute if block ~ ~ ~1 minecraft:black_wool run function medabots_server:entities/rubberobo/reset
+execute if block ~ ~ ~-1 minecraft:black_wool run function medabots_server:entities/rubberobo/reset
+execute if block ~1 ~ ~ minecraft:black_wool run function medabots_server:entities/rubberobo/reset
+execute if block ~-1 ~ ~ minecraft:black_wool run function medabots_server:entities/rubberobo/reset
 
 # Search for the goal
 execute if entity @s[tag=!see_goal_area,scores={Time=0}] rotated as @s rotated ~ 0 run function medabots_server:entities/rubberobo/search_goal
@@ -85,10 +85,10 @@ teleport @s[tag=dead] ~ -100 ~
 kill @s[tag=dead]
 
 # Fall in holes, lava, water and craters
-execute at @s if block ~ ~-1 ~ minecraft:air run teleport @s ~ ~-0.2 ~
-execute at @s positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,distance=..0.7] at @s run teleport @s ~ ~-0.2 ~
-execute at @s if block ~ ~-1 ~ minecraft:lava run teleport @s ~ ~-0.2 ~
-execute at @s if block ~ ~-1 ~ minecraft:black_carpet run teleport @s ~ ~-0.2 ~
+execute if block ~ ~-1 ~ minecraft:air run teleport @s ~ ~-0.2 ~
+execute if block ~ ~-1 ~ minecraft:water run teleport @s ~ ~-0.2 ~
+execute if block ~ ~-1 ~ minecraft:lava run teleport @s ~ ~-0.2 ~
+execute if block ~ ~-1 ~ minecraft:black_carpet run teleport @s ~ ~-0.2 ~
 
 # Reset scores
 execute store result score @s Health run data get entity @s AbsorptionAmount
