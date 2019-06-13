@@ -187,12 +187,12 @@ scoreboard players set @s[scores={Sneaking=1..,AFKTime=1..}] AFKTime 0
 
 # Now AFK
 execute if entity @s[scores={AFKTime=1200}] run tellraw @a {"translate":"medabots_server:message.afk.yes","with":[{"selector":"@s"}]}
-execute if entity @s[scores={AFKTime=1200}] run playsound medabots_server:entity.metabee.forgetting_me voice @s ~ ~ ~ 2
+execute if entity @s[scores={AFKTime=1200}] run playsound medabots_server:entity.metabee.forgetting_me voice @s ~ ~ ~ 1
 tellraw @s[scores={AFKTime=1200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.forgetting_me"}]}
 team join AFK @s[scores={AFKTime=1200..},team=!AFK]
 
 # Friendly reminder
-execute if entity @s[scores={AFKTime=2400}] run playsound medabots_server:entity.metabee.hurry_up voice @s ~ ~ ~ 2
+execute if entity @s[scores={AFKTime=2400}] run playsound medabots_server:entity.metabee.hurry_up voice @s ~ ~ ~ 1
 tellraw @s[scores={AFKTime=2400}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.hurry_up"}]}
 
 # Make sounds
@@ -242,7 +242,10 @@ scoreboard players set @s[scores={Sneaking=1..}] Sneaking 0
 tag @s[tag=sneaking] remove sneaking
 tag @s[scores={Sneak=1..}] add sneaking
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
-scoreboard players set @s[scores={Trading=1..},tag=!trading] Trading 2
+execute if entity @s[scores={Trading=1},tag=trading] run function medabots_server:shopping/reset
+scoreboard players set @s[scores={Trading=1..}] Trading 2
+tellraw @s[scores={Trading=1..},tag=!trading] {"translate":"medabots_server:message.shop.chat_setting","color":"green"}
+execute if entity @s[scores={Trading=1..},tag=!trading] run function medabots_server:shopping/target_villager
 scoreboard players set @s[scores={Trading=1..},tag=trading] Trading 0
 execute unless entity @e[tag=shop,distance=..4,limit=1] run tag @s[tag=trading] remove trading
 tag @s[scores={Trading=1..}] add trading

@@ -16,7 +16,7 @@ execute if block -1543 44 -174 minecraft:lime_wool run tag @e[x=-1548.5,y=45,z=-
 execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1}] run scoreboard players set @s Stage 1
 execute if entity @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/grassland_a/second_go
 stopsound @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] music
-playsound medabots_server:music.stage.stage_end music @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] -1539 51 -151 14
+playsound medabots_server:music.stage.stage_end music @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] -1539 51 -151 1000
 scoreboard players set @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] Battle 0
 scoreboard players set @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] MusicType 1
 scoreboard players set @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] Music 299

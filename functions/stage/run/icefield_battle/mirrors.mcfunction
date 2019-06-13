@@ -3,9 +3,9 @@ execute if entity @s[scores={BattlingMedabots=2..}] unless entity @e[x=-2022,y=4
 execute as @e[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48,type=!minecraft:player] unless entity @s[scores={Stage=48}] run scoreboard players set @s Stage 48
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/icefield_battle/balloon_bombs
 stopsound @s[scores={BattlingMedabots=1,Battle=1..}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..},tag=!story_battle] -1999 51 -608 14
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..},tag=!story_battle] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..},tag=!story_battle] Music 299
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1999 51 -608 1000
+scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] MusicType 1
+scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Music 299
 teleport @s[scores={BattlingMedabots=1,Battle=1..}] -1999 51 -608 -180 0
 tag @s[scores={BattlingMedabots=1,Battle=1..}] remove story_battle
 scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Battle 0

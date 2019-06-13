@@ -23,6 +23,7 @@ execute if entity @s[scores={Moving=1..}] run function medabots_server:entities/
 
 # Keep moving only if on ice
 scoreboard players set @s[tag=!valid_move,scores={Moving=0..}] Moving 0
+tag @s[scores={Moving=1..}] add has_moved
 execute if entity @s[scores={Moving=1..}] if block ~ ~-1 ~ #minecraft:ice run tag @s add on_ice
 
 # Move
@@ -30,13 +31,13 @@ execute at @s run teleport @s[scores={Moving=1}] ~0.2 ~ ~
 execute at @s run teleport @s[scores={Moving=2}] ~ ~ ~0.2
 execute at @s run teleport @s[scores={Moving=3}] ~-0.2 ~ ~
 execute at @s run teleport @s[scores={Moving=4}] ~ ~ ~-0.2
-scoreboard players add @s[scores={Moving=1..,Steps=0..3}] Steps 1
+scoreboard players add @s[scores={Moving=1..,Steps=0..4}] Steps 1
 
 # Form thin ice in water
 execute if entity @s[tag=freezing] run function medabots_server:entities/ice_block/freeze
 
 # Stop moving if not on ice
-scoreboard players set @s[scores={Moving=1..,Steps=4},tag=!on_ice] Moving 0
+scoreboard players set @s[scores={Moving=1..,Steps=5},tag=!on_ice] Moving 0
 tag @s remove on_ice
 scoreboard players set @s[scores={Moving=0}] Steps 0
 
@@ -67,13 +68,13 @@ execute if entity @s[tag=dead] run function medabots_server:entities/ice_block/d
 # Prevent model and collision from messing up
 execute as @e[distance=..0.4,tag=ice_block] run data merge entity @s {Rotation:[0.0d,0.0d]}
 execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
-execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run data merge entity @s {Invulnerable:1b}
+execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run data merge entity @s {Health:20.0f,Peek:1b,AbsorptionAmount:1000.0f}
 execute as @e[distance=..0.4,tag=ice_block,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
 
 # Position correcion
-execute unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava at @s positioned ~ ~1 ~ align y run teleport @s ~ ~-0.375 ~
-execute if entity @s[scores={Moving=0}] at @s align xz run teleport @s ~0.5 ~ ~0.5
-execute unless entity @s[scores={Moving=0..}] run teleport @s ~ ~-0.75 ~
+execute unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava at @s positioned ~ ~0.8 ~ align y run teleport @s ~ ~-0.375 ~
+execute if entity @s[scores={Moving=0},tag=has_moved] at @s align xz run teleport @s ~0.5 ~ ~0.5
+tag @s[scores={Moving=0},tag=has_moved] remove has_moved
 execute unless entity @s[scores={Moving=0..}] run scoreboard players set @s Moving 0
 
 # Refresh clients

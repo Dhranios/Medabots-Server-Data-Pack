@@ -7,7 +7,7 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progre
 stopsound @s[scores={Dialog=1}] music
 scoreboard players set @s[scores={Dialog=1}] MusicType -1
 scoreboard players set @s[scores={Dialog=1}] Music 62
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 100
+playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1604 51 -147 {Duration:1000000,Tags:["cutscene","metabee"],Rotation:[140.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-1604,y=51,z=-147,distance=..1,tag=metabee] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[x=-1604,y=51,z=-147,distance=..1,tag=metabee] MedabotNr 1
@@ -22,6 +22,7 @@ execute at @s as @e[x=-1607,y=51,z=-150,tag=rubberobo,distance=..1] run scoreboa
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -1607 51 -147 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["winner_kid","cutscene"],Rotation:[-180.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2103051}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:11454154}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:70922}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
 execute at @s as @e[x=-1607,y=51,z=-147,tag=winner_kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 teleport @s[scores={Dialog=1}] -1604 51 -149 90 0
+execute if entity @s[scores={Dialog=1..406}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @e[distance=..0.1,tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_rock_a.1"}]}
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_rock_a.2"}]}
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_rock_a.3"}]}
@@ -62,5 +63,5 @@ scoreboard players set @s[scores={Dialog=1064}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 100
+playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

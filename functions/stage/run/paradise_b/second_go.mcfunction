@@ -54,7 +54,7 @@ execute if entity @e[x=-1665,y=42,z=-637,dx=64,dy=7,dz=63,tag=mr_referee] store 
 execute as @e[x=-1665,y=42,z=-637,dx=64,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=22}] run scoreboard players set @s Stage 22
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/paradise_b/second_go
 stopsound @s[scores={BattlingMedabots=1,Battle=1..}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1634 51 -606 14
+playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1634 51 -606 1000
 scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] MusicType 1
 scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Music 299
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/paradise_b_second_go

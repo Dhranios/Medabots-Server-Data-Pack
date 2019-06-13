@@ -5,7 +5,15 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:19}"
         },
         "title": {
-            "translate": "medabots_server:entity.pretty_prime"
+            "translate": "medabots_server:model.pretty_prime",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.pretty_prime"
+                }
+            ]
         },
         "description": {
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.pretty_prime"

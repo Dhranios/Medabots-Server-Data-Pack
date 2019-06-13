@@ -81,17 +81,11 @@ execute if entity @s[scores={Stage=28},tag=second_go] run function medabots_serv
 execute if entity @s[scores={Stage=29},tag=first_go] run function medabots_server:stage/run/boxer/first_go
 execute if entity @s[scores={Stage=29},tag=second_go] run function medabots_server:stage/run/boxer/second_go
 execute if entity @s[scores={Stage=30},tag=first_go] run function medabots_server:stage/run/grassland_d/first_go
-execute if entity @s[scores={Stage=30},tag=second_go] run function medabots_server:stage/run/grassland_d/second_go
 execute if entity @s[scores={Stage=31},tag=first_go] run function medabots_server:stage/run/jungle_d/first_go
-execute if entity @s[scores={Stage=31},tag=second_go] run function medabots_server:stage/run/jungle_d/second_go
 execute if entity @s[scores={Stage=32},tag=first_go] run function medabots_server:stage/run/snowfield_d/first_go
-execute if entity @s[scores={Stage=32},tag=second_go] run function medabots_server:stage/run/snowfield_d/second_go
 execute if entity @s[scores={Stage=33},tag=first_go] run function medabots_server:stage/run/iceberg_d/first_go
-execute if entity @s[scores={Stage=33},tag=second_go] run function medabots_server:stage/run/iceberg_d/second_go
 execute if entity @s[scores={Stage=34},tag=first_go] run function medabots_server:stage/run/ruins_in_d/first_go
-execute if entity @s[scores={Stage=34},tag=second_go] run function medabots_server:stage/run/ruins_in_d/second_go
 execute if entity @s[scores={Stage=35},tag=first_go] run function medabots_server:stage/run/laboratory_d/first_go
-execute if entity @s[scores={Stage=35},tag=second_go] run function medabots_server:stage/run/laboratory_d/second_go
 execute if entity @s[scores={Stage=36},tag=empty] run function medabots_server:stage/run/lagdou_ruins_1/empty
 execute if entity @s[scores={Stage=37},tag=empty] run function medabots_server:stage/run/lagdou_ruins_2/empty
 execute if entity @s[scores={Stage=38},tag=empty] run function medabots_server:stage/run/lagdou_ruins_3/empty

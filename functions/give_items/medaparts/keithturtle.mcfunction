@@ -1,4 +1,4 @@
 function medabots_server:give_items/medaparts/keithturtle/rollertank
-function medabots_server:give_items/medaparts/keithturtle/gigalser
+function medabots_server:give_items/medaparts/keithturtle/gigalaser
 function medabots_server:give_items/medaparts/keithturtle/megalaser
 function medabots_server:give_items/medaparts/keithturtle/tyranolaser

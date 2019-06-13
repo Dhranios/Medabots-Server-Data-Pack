@@ -53,7 +53,7 @@ tellraw @s[scores={Dialog=696}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=728}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.20"}]}
 tellraw @s[scores={Dialog=760}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.21"}]}
 tellraw @s[scores={Dialog=808}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.22"}]}
-tellraw @s[scores={Dialog=864}] {"translate":"chat.type.text","with":[{"selector":"@a"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.23"}]}
+tellraw @s[scores={Dialog=864}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.23"}]}
 tellraw @s[scores={Dialog=888}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.24"}]}
 tellraw @s[scores={Dialog=920}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.25"}]}
 tellraw @s[scores={Dialog=952}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.26"}]}
@@ -176,7 +176,7 @@ scoreboard players set @s[scores={Dialog=3860}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=..2655}] ~ ~ ~ 100
+playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=..2655}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..2655}] Music 502
-playsound medabots_server:music.entity.max music @s[scores={Music=0,MusicType=-1,Dialog=2656..}] ~ ~ ~ 100
+playsound medabots_server:music.entity.max music @s[scores={Music=0,MusicType=-1,Dialog=2656..}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=2656..}] Music 578

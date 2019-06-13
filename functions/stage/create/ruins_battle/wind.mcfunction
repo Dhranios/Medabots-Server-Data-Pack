@@ -7,10 +7,10 @@ execute positioned -1980 45 -576 run function medabots_server:set_blocks/wall
 execute positioned -1981 45 -544 run function medabots_server:set_blocks/wall
 execute positioned -2013 45 -545 run function medabots_server:set_blocks/wall
 execute positioned -2012 45 -577 run function medabots_server:set_blocks/wall
-execute positioned -1981 45 -577 run function medabots_server:set_blocks/spring_wall/disabled/south/delay_10
-execute positioned -1980 45 -545 run function medabots_server:set_blocks/spring_wall/disabled/west/delay_10
-execute positioned -2012 45 -544 run function medabots_server:set_blocks/spring_wall/disabled/north/delay_10
-execute positioned -2013 45 -576 run function medabots_server:set_blocks/spring_wall/disabled/east/delay_10
+execute positioned -1981 45 -577 run function medabots_server:set_blocks/spring_wall/enabled/south/delay_10
+execute positioned -1980 45 -545 run function medabots_server:set_blocks/spring_wall/enabled/west/delay_10
+execute positioned -2012 45 -544 run function medabots_server:set_blocks/spring_wall/enabled/north/delay_10
+execute positioned -2013 45 -576 run function medabots_server:set_blocks/spring_wall/enabled/east/delay_10
 execute positioned -1999 45 -579 run function medabots_server:set_blocks/fan/off/south/range_37
 execute positioned -1978 45 -563 run function medabots_server:set_blocks/fan/off/west/range_37
 execute positioned -1994 45 -542 run function medabots_server:set_blocks/fan/off/north/range_37

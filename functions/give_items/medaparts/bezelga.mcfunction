@@ -1,4 +1,4 @@
-function medabots_server:give_items/medaparts/bezelga/helchaos
+function medabots_server:give_items/medaparts/bezelga/helcaos
 function medabots_server:give_items/medaparts/bezelga/helming
 function medabots_server:give_items/medaparts/bezelga/helmight
 function medabots_server:give_items/medaparts/bezelga/helmet

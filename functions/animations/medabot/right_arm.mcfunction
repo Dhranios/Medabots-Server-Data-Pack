@@ -3,6 +3,7 @@ execute if entity @a[nbt={SelectedItemSlot:0},tag=this_medabot,limit=1] run tag 
 execute if entity @a[nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]},tag=!static_fly,tag=this_medabot,limit=1] run tag @s remove guarding
 execute if entity @e[type=!minecraft:player,tag=this_medabot,limit=1,tag=legs_selected] run tag @s add guarding
 execute if entity @e[type=!minecraft:player,tag=fly_legs,tag=!static_fly,tag=this_medabot,limit=1,tag=legs_selected] run tag @s remove guarding
+execute if entity @e[scores={NoDefendTime=1..}] run tag @s remove guarding
 data merge entity @s[tag=!guarding,tag=was_guarding] {Pose:{Head:[0.0f,0.0f,0.001f]}}
 data merge entity @s[tag=guarding] {Pose:{Head:[-50.0f,-38.0f,0.001f]}}
 

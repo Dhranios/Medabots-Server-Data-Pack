@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_falcon_flyphone\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.fly\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.fly.description\"}','{\"text\":\"\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.fly_falcon\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_falcon_flyphone.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:fly_falcon_flyphone\",gender:0b,move:\"fly\",part:\"legs\",armor:40,defense:20,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:8,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.bluesdog_battle_rifle\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.bluesdog\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.bluesdog_battle_rifle.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:bluesdog_battle_rifle\",gender:0b,move:\"rifle\",part:\"left_arm\",armor:40,power:20,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:8,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.bluesdog_aim_rifle\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.rifle.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.bluesdog\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.bluesdog_aim_rifle.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:bluesdog_aim_rifle\",gender:0b,move:\"rifle\",part:\"right_arm\",armor:40,power:16,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:56,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.warbonnet_tension_up\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.auxiliary_charge\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.auxiliary_charge.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"3\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"60\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.warbonnet\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.warbonnet_tension_up.model\"}']},medabots_server:{stage_item:0b,id:\"medabots_server:warbonnet_tension_up\",gender:0b,move:\"auxiliary_charge\",part:\"head\",armor:60,power:29,uses:3,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

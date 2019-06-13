@@ -1,0 +1,1 @@
+execute anchored eyes unless block ^ ^ ^ minecraft:water anchored feet unless block ~ ~-1 ~ minecraft:water run function medabots_server:other/music/hub/set_2

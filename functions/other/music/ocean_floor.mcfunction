@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ minecraft:sand run function medabots_server:other/music/hub/set_3
+execute unless block ~ ~-1 ~ minecraft:sand if block ~ ~-1 ~ minecraft:water positioned ~ ~-1 ~ run function medabots_server:other/ocean_floor

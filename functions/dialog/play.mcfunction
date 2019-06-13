@@ -1,0 +1,41 @@
+# Infinity
+execute if entity @s[tag=dialog_infinity_opening] run function medabots_server:dialog/infinity/opening
+execute if entity @s[tag=dialog_infinity_opening_battle] run function medabots_server:dialog/infinity/opening_battle
+execute if entity @s[tag=dialog_infinity_meet_karin] run function medabots_server:dialog/infinity/meet_karin
+execute if entity @s[tag=dialog_infinity_meet_max] run function medabots_server:dialog/infinity/meet_max
+execute if entity @s[tag=dialog_infinity_see_doctor_haru] run function medabots_server:dialog/infinity/see_doctor_haru
+execute if entity @s[tag=dialog_infinity_meet_koji] run function medabots_server:dialog/infinity/meet_koji
+execute if entity @s[tag=dialog_infinity_see_jaxy] run function medabots_server:dialog/infinity/see_jaxy
+execute if entity @s[tag=dialog_infinity_meet_director_tune] run function medabots_server:dialog/infinity/meet_director_tune
+execute if entity @s[tag=dialog_infinity_see_spyke] run function medabots_server:dialog/infinity/see_spyke
+execute if entity @s[tag=dialog_infinity_see_sloan] run function medabots_server:dialog/infinity/see_sloan
+execute if entity @s[tag=dialog_infinity_meet_screws] run function medabots_server:dialog/infinity/meet_screws
+execute if entity @s[tag=dialog_infinity_vs_spyke_begin] run function medabots_server:dialog/infinity/vs_spyke_begin
+execute if entity @s[tag=dialog_infinity_vs_spyke] run function medabots_server:dialog/infinity/vs_spyke
+execute if entity @s[tag=dialog_infinity_vs_spyke_battle] run function medabots_server:dialog/infinity/vs_spyke_battle
+execute if entity @s[tag=dialog_infinity_kuwagata_medal] run function medabots_server:dialog/infinity/kuwagata_medal
+execute if entity @s[tag=dialog_infinity_meet_jaxy] run function medabots_server:dialog/infinity/meet_jaxy
+execute if entity @s[tag=dialog_infinity_maxs_first_love] run function medabots_server:dialog/infinity/maxs_first_love
+execute if entity @s[tag=dialog_infinity_meet_doctor_haru] run function medabots_server:dialog/infinity/meet_doctor_haru
+execute if entity @s[tag=dialog_infinity_tunes_order] run function medabots_server:dialog/infinity/tunes_order
+execute if entity @s[tag=dialog_infinity_medanappings] run function medabots_server:dialog/infinity/medanappings
+execute if entity @s[tag=dialog_infinity_tune_observes] run function medabots_server:dialog/infinity/tune_observes
+execute if entity @s[tag=dialog_infinity_jaxy_speaks] run function medabots_server:dialog/infinity/jaxy_speaks
+execute if entity @s[tag=dialog_infinity_rubberobo_breakout] run function medabots_server:dialog/infinity/rubberobo_breakout
+execute if entity @s[tag=dialog_infinity_neutranurse_helps] run function medabots_server:dialog/infinity/neutranurse_helps
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_rock_a] run function medabots_server:dialog/infinity/rubberobo_enters_rock_a
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_rock_a] run function medabots_server:dialog/infinity/rubberobo_leaves_rock_a
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_snowfield_a] run function medabots_server:dialog/infinity/rubberobo_enters_snowfield_a
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_snowfield_a] run function medabots_server:dialog/infinity/rubberobo_leaves_snowfield_a
+execute if entity @s[tag=dialog_infinity_rubberobo_scoop] run function medabots_server:dialog/infinity/rubberobo_scoop
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_ruins_in_a] run function medabots_server:dialog/infinity/rubberobo_enters_ruins_in_a
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_ruins_in_a] run function medabots_server:dialog/infinity/rubberobo_leaves_ruins_in_a
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_seashore_a] run function medabots_server:dialog/infinity/rubberobo_enters_seashore_a
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_seashore_a] run function medabots_server:dialog/infinity/rubberobo_leaves_seashore_a
+execute if entity @s[tag=dialog_infinity_vs_squidguts] run function medabots_server:dialog/infinity/vs_squidguts
+execute if entity @s[tag=dialog_infinity_vs_squidguts_battle] run function medabots_server:dialog/infinity/vs_squidguts_battle
+execute if entity @s[tag=dialog_infinity_vs_koji] run function medabots_server:dialog/infinity/vs_koji
+execute if entity @s[tag=dialog_infinity_vs_koji_battle] run function medabots_server:dialog/infinity/vs_koji_battle
+
+# Other
+execute if entity @s[tag=dialog_magolor] run function medabots_server:dialog/magolor

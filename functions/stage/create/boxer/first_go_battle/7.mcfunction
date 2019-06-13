@@ -1,6 +1,8 @@
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] positioned -1889 44 -574 run function medabots_server:spawn_entities/character_enemy_medabot/caroline
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] positioned -1889 44 -574 run scoreboard players set @e[distance=..1] Stage 29
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] positioned -1889 44 -574 run scoreboard players set @e[distance=..1] MusicType 28
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] positioned -1889 44 -574 run tag @e[distance=..1] add overwrite_robattle_music
 tag @e[x=-1890.5,y=44,z=-557.5,distance=..0.7,tag=door,tag=!open] add open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
