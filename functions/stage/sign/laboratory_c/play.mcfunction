@@ -1,4 +1,4 @@
-teleport @s[scores={Error=0,Dialog=0},gamemode=adventure] -1579 29 -594
+teleport @s[scores={Error=0,Dialog=0},gamemode=adventure] -1579 29 -594 90 0
 execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run data merge block -1587 51 -617 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/laboratory_c/enter"}}'}
 execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run setblock -1587 52 -619 minecraft:red_wool
 scoreboard players set @s[scores={Error=0,Dialog=0},gamemode=adventure] Music 0

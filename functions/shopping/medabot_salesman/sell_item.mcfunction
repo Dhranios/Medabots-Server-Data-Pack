@@ -1,5 +1,5 @@
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.sold"}]}
-scoreboard players add @s Money 100
+scoreboard players add @s Money 25
 execute if entity @s[scores={ShopIndex1=1}] run replaceitem entity @s hotbar.0 minecraft:air
 execute if entity @s[scores={ShopIndex1=2}] run replaceitem entity @s hotbar.1 minecraft:air
 execute if entity @s[scores={ShopIndex1=3}] run replaceitem entity @s hotbar.2 minecraft:air

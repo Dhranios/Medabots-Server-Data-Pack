@@ -5,15 +5,18 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:7}"
         },
         "title": {
-            "translate": "medabots_server:entity.crazy_hand"
+            "translate": "medabots_server:advancements.bosses.crazy_hand",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.crazy_hand"
+                }
+            ]
         },
         "description": {
-            "translate": "medabots_server:advancements.bosses.defeated",
-			"with": [
-				{
-					"translate": "medabots_server:entity.crazy_hand"
-				}
-			]
+            "translate": "medabots_server:advancements.bosses.crazy_hand.description"
         },
         "hidden": true
     },
@@ -24,6 +27,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/crazy_hand"
+        "function": "medabots_server:advancements/bosses/wave_1/crazy_hand"
     }
 }

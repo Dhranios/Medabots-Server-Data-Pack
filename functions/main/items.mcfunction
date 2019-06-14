@@ -7,8 +7,7 @@ execute if entity @s[tag=falling] run function medabots_server:items/medapart/fa
 execute if entity @s[tag=damage_ball] run function medabots_server:items/medapart/damage_ball/attack
 
 # Kill items that get placed in the inventory anyway, as well as teleport dropped items
-function medabots_server:items/kill
-function medabots_server:items/teleport
+function #medabots_server:all_items
 
 # Prevent items from being destroyed by fire, lava, etc.
 data merge entity @s[nbt={Invulnerable:0b}] {Invulnerable:1b}

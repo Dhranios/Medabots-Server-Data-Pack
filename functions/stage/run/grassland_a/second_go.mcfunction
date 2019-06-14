@@ -15,10 +15,5 @@ execute if block -1538 44 -169 minecraft:lime_wool run tag @e[x=-1547.5,y=45,z=-
 execute if block -1543 44 -174 minecraft:lime_wool run tag @e[x=-1548.5,y=45,z=-171.5,distance=..0.7,tag=door,tag=!open] add open
 execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1}] run scoreboard players set @s Stage 1
 execute if entity @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/grassland_a/second_go
-stopsound @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] music
-playsound medabots_server:music.stage.stage_end music @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] -1539 51 -151 1000
-scoreboard players set @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] Battle 0
-scoreboard players set @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] MusicType 1
-scoreboard players set @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] Music 299
 advancement grant @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/grassland_a_second_go
-teleport @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] -1539 51 -151 -180 0
+execute if entity @s[x=-1551,y=45,z=-171,dy=4,tag=hostile,gamemode=adventure] positioned -1539 51 -151 run function medabots_server:stage/clear

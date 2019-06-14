@@ -171,7 +171,7 @@ scoreboard objectives add Run minecraft.custom:minecraft.sprint_one_cm
 scoreboard objectives add Sacrifice dummy
 scoreboard objectives add Scout dummy
 scoreboard objectives add ScoutTime dummy
-scoreboard objectives add SelfDestruct minecraft.dropped:minecraft.nether_star
+scoreboard objectives add SelfDestruct minecraft.dropped:minecraft.gold_ingot
 scoreboard objectives add SelfDestructTime dummy
 scoreboard objectives add ServerStats dummy {"translate":"medabots_server:scoreboard.objective.server_stats"}
 scoreboard objectives add SettingsCheck trigger
@@ -416,6 +416,7 @@ bossbar add medabots_server:galleom/mt_battle {"translate":"medabots_server:enti
 bossbar add medabots_server:galleom/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.galleom","color":"green"}]}
 bossbar add medabots_server:dimentio/mt_battle {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.dimentio","color":"green"}]}
 bossbar add medabots_server:dimentio/arena {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.dimentio","color":"green"}]}
+bossbar add medabots_server:landia {"translate":"medabots_server:entity.team.boss","color":"green","extra":[{"text":" "},{"translate":"medabots_server:entity.landia","color":"green"}]}
 
 # Set bossbar data
 bossbar set medabots_server:grassland_a/time style notched_6
@@ -724,6 +725,7 @@ bossbar set medabots_server:galleom/mt_battle style progress
 bossbar set medabots_server:galleom/arena style progress
 bossbar set medabots_server:dimentio/mt_battle style progress
 bossbar set medabots_server:dimentio/arena style progress
+bossbar set medabots_server:landia style progress
 bossbar set medabots_server:argorok color red
 bossbar set medabots_server:argorok/mt_battle color red
 bossbar set medabots_server:argorok/arena color red
@@ -766,3 +768,4 @@ bossbar set medabots_server:galleom/mt_battle color red
 bossbar set medabots_server:galleom/arena color red
 bossbar set medabots_server:dimentio/mt_battle color red
 bossbar set medabots_server:dimentio/arena color red
+bossbar set medabots_server:landia color red

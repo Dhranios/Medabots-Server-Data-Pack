@@ -17,11 +17,6 @@ execute if block -1663 44 -187 minecraft:blue_wool run tag @e[x=-1656.5,y=45,z=-
 execute if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecraft:lime_wool if block -1627 44 -232 minecraft:lime_wool if block -1643 44 -236 minecraft:lime_wool run tag @e[x=-1660.5,y=45,z=-242,dx=6,dy=1,dz=19,type=minecraft:area_effect_cloud,tag=laser_trap] add enabled
 execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
 execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] if entity @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/snowfield_a/rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run stopsound @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] music
-execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run playsound medabots_server:music.stage.stage_end music @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] -1620 51 -216 1000
-execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run scoreboard players set @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] Battle 0
-execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run scoreboard players set @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] MusicType 1
-execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run scoreboard players set @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] Music 299
 execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run advancement grant @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/snowfield_a_rubberobo
 execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run tag @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={rubberobo_enters_snowfield_a=true,rubberobo_leaves_snowfield_a=false}}] add dialog_infinity_rubberobo_leaves_snowfield_a
-execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] run teleport @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] -1620 51 -216 -180 0
+execute unless entity @e[tag=rubberobo,scores={Stage=5},type=minecraft:zombie] if entity @s[x=-1660,y=45,z=-234,dy=4,tag=hostile,gamemode=adventure] positioned -1620 51 -216 run function medabots_server:stage/clear

@@ -110,6 +110,18 @@
         },
         "vs_koji_battle": {
             "trigger": "minecraft:impossible"
+        },
+		"vs_sloan_begin": {
+            "trigger": "minecraft:impossible"
+        },
+		"vs_sloan": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_sloan_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "jaxy_follows_doctor_haru": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

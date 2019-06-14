@@ -5,15 +5,18 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:3}"
         },
         "title": {
-            "translate": "medabots_server:entity.lor_starcutter"
+            "translate": "medabots_server:advancements.bosses.lor_starcutter",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.lor_starcutter"
+                }
+            ]
         },
         "description": {
-            "translate": "medabots_server:advancements.bosses.defeated",
-			"with": [
-				{
-					"translate": "medabots_server:entity.lor_starcutter"
-				}
-			]
+            "translate": "medabots_server:advancements.bosses.lor_starcutter.description"
         },
         "hidden": true
     },
@@ -24,6 +27,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/lor_starcutter"
+        "function": "medabots_server:advancements/bosses/wave_1/lor_starcutter"
     }
 }

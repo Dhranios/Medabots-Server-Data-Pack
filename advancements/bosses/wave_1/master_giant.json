@@ -5,15 +5,18 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:8}"
         },
         "title": {
-            "translate": "medabots_server:entity.master_giant"
+            "translate": "medabots_server:advancements.bosses.master_giant",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.master_giant"
+                }
+            ]
         },
         "description": {
-            "translate": "medabots_server:advancements.bosses.defeated",
-			"with": [
-				{
-					"translate": "medabots_server:entity.master_giant"
-				}
-			]
+            "translate": "medabots_server:advancements.bosses.master_giant.description"
         },
         "hidden": true
     },
@@ -24,6 +27,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/master_giant"
+        "function": "medabots_server:advancements/bosses/wave_1/master_giant"
     }
 }

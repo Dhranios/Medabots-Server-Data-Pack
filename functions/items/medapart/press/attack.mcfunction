@@ -2,8 +2,8 @@
 summon minecraft:armor_stand ~ ~-1.5 ~ {Invisible:1b,CustomName:'{"translate":"medabots_server:move.press"}',NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:coal_block",Count:1b}],Marker:1b,Tags:["life_time"]}
 
 # CPU owned simulation
-execute if entity @s[tag=cpu_owned,tag=!rotated] run teleport @s ~ ~ ~ facing entity @e[type=!minecraft:player,tag=enemy_medabot,sort=nearest,limit=1,scores={Press=1..}]
-teleport @s[tag=cpu_owned,tag=rotated] ^ ^ ^-1 ~ ~-1
+execute if entity @s[tag=cpu_owned,tag=!rotated] rotated as @e[type=!minecraft:player,tag=enemy_medabot,sort=nearest,limit=1,scores={Press=1..}] run teleport @s ~ ~ ~ ~ ~
+teleport @s[tag=cpu_owned,tag=rotated] ^ ^ ^1 ~ ~-1
 tag @s[tag=cpu_owned,tag=!rotated] add rotated
 execute at @s unless block ~ ~ ~ minecraft:air unless block ~ ~ ~ minecraft:water unless block ~ ~ ~ minecraft:lava run kill @s
 

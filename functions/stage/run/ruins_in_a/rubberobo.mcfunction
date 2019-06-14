@@ -68,11 +68,6 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set med
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=8}] run scoreboard players set @s Stage 8
 execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] if entity @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_in_a/rubberobo
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run stopsound @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] music
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run playsound medabots_server:music.stage.stage_end music @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 1000
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Battle 0
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] MusicType 1
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run scoreboard players set @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] Music 299
 execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run advancement grant @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_in_a_rubberobo
 execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run tag @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={rubberobo_enters_ruins_in_a=true,rubberobo_leaves_ruins_in_a=false}}] add dialog_infinity_rubberobo_leaves_ruins_in_a
-execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] run teleport @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] -1683 50 -259 -180 0
+execute unless entity @e[tag=rubberobo,scores={Stage=8},type=minecraft:zombie] if entity @s[x=-1717,y=44,z=-325,dy=4,tag=hostile,gamemode=adventure] positioned -1683 50 -259 run function medabots_server:stage/clear

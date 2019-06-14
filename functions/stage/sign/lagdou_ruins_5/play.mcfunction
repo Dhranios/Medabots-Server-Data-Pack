@@ -1,4 +1,4 @@
-teleport @s[scores={Error=0,Dialog=0,Level=25..},advancements={medabots_server:stages/wave_1/lagdou_ruins_4_second_go=true},gamemode=adventure] -1342 25 -244
+teleport @s[scores={Error=0,Dialog=0,Level=25..},advancements={medabots_server:stages/wave_1/lagdou_ruins_4_second_go=true},gamemode=adventure] -1342 25 -244 90 0
 execute if entity @s[scores={Error=0,Dialog=0,Level=25..},advancements={medabots_server:stages/wave_1/lagdou_ruins_4_second_go=true},gamemode=adventure] run data merge block -1347 51 -228 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_5/enter"}}'}
 execute if entity @s[scores={Error=0,Dialog=0,Level=25..},advancements={medabots_server:stages/wave_1/lagdou_ruins_4_second_go=true},gamemode=adventure] run setblock -1347 52 -230 minecraft:red_wool
 scoreboard players set @s[scores={Error=0,Dialog=0,Level=25..},advancements={medabots_server:stages/wave_1/lagdou_ruins_4_second_go=true},gamemode=adventure] Music 0

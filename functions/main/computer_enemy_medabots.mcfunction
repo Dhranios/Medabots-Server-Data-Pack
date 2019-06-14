@@ -20,6 +20,7 @@ execute if entity @s[scores={Dialog=60,LeftArmArmor=1..}] run summon minecraft:a
 execute if entity @s[scores={Dialog=60,RightArmArmor=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","right"],Duration:1}
 execute if entity @s[scores={Dialog=60,HeadUses=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","head"],Duration:1}
 execute if entity @s[scores={Dialog=60},tag=!blocked_medaforce] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","medaforce"],Duration:1}
+execute if entity @s[scores={Dialog=60,HeadUses=0,LeftArmArmor=..0,RightArmArmor=..0},tag=blocked_medaforce] if entity @a[distance=..5,scores={Battle=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","self_destruct"],Duration:1}
 execute if entity @s[scores={Dialog=60}] run tag @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_select] add success
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run tag @s add legs_selected
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run scoreboard players set @s[tag=!fly_legs] Dialog -60
@@ -27,6 +28,7 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=succ
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=right] run tag @s add right_arm_selected
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=head] run tag @s add head_selected
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=medaforce] run tag @s add medaforce_selected
+execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=self_destruct] run scoreboard players set @s SelfDestruct 1
 kill @e[type=minecraft:area_effect_cloud,tag=random_select]
 
 # Damage the selected part

@@ -1,0 +1,7 @@
+{
+    "values": [
+        "medabots_server:anti_cheating/items",
+        "medabots_server:anti_cheating/scores",
+        "medabots_server:anti_cheating/anti_fly_hack"
+    ]
+}

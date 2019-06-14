@@ -102,13 +102,8 @@ execute if block -1710 44 -209 minecraft:iron_door[open=true] if entity @s[x=-17
 execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=6,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=6}] run scoreboard players set @s Stage 6
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/iceberg_a/first_go
-stopsound @s[scores={BattlingMedabots=1,Battle=1..}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1704 50 -221 1000
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Music 299
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/iceberg_a_first_go
-teleport @s[scores={BattlingMedabots=1,Battle=1..}] -1704 50 -221 -180 0
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:iceberg_a/robattle players
 tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:wave_1/story_progression={kuwagata_medal=true,meet_jaxy=false}}] add dialog_infinity_meet_jaxy
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Battle 0
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1704 50 -221 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

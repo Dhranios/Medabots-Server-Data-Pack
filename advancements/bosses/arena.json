@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_sword"
+        },
+        "title": {
+            "translate": "medabots_server:location.arena"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.bosses.arena"
+        }
+    },
+	"parent": "medabots_server:bosses/root",
+    "rewards": {
+        "function": "medabots_server:advancements/bosses/arena"
+    },
+    "criteria": {
+        "always": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -10,7 +10,7 @@ execute positioned -1553 45 -397 run function medabots_server:set_blocks/action_
 execute positioned -1566 45 -399 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1557 45 -400 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1562 45 -403 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-tag @e[x=-1558.5,y=45,z=-385.5,distance=..0.7,tag=door,tag=open] remove open
+tag @e[x=-1558.5,y=45,z=-384.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

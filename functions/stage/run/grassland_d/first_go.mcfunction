@@ -91,12 +91,7 @@ execute if block -1588 45 -730 minecraft:iron_door[open=true] if entity @s[x=-15
 execute if entity @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=30,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=30}] run scoreboard players set @s Stage 30
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/grassland_d/first_go
-stopsound @s[scores={BattlingMedabots=1,Battle=1..}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1570 51 -720 1000
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Music 299
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/grassland_d_first_go
-teleport @s[scores={BattlingMedabots=1,Battle=1..}] -1570 51 -720 -180 0
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:grassland_d/robattle players
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Battle 0
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1570 51 -720 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

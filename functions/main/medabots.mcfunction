@@ -19,9 +19,6 @@ execute if entity @s[scores={Damage=11..15}] run playsound medabots_server:entit
 execute if entity @s[scores={Damage=16..20}] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 1.5
 execute if entity @s[scores={Damage=21..}] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 2
 
-# Forget the part
-scoreboard players set @s[scores={Time=900..950}] Time 0
-
 # Combat
 execute if entity @s[scores={AntiFly=1..}] run function medabots_server:items/medapart/anti_fly
 execute if entity @s[scores={AntiTank=1..}] run function medabots_server:items/medapart/anti_tank
@@ -74,6 +71,9 @@ execute if entity @s[scores={StatusClear=1..}] run function medabots_server:item
 execute if entity @s[scores={Transform=1..}] run function medabots_server:items/medapart/transform
 execute if entity @s[scores={Sword=1..}] run function medabots_server:items/medapart/sword
 execute if entity @s[scores={Wave=1..}] run function medabots_server:items/medapart/wave
+
+# Forget the part
+scoreboard players set @s[scores={Time=900..950}] Time 0
 
 # In combat
 execute if entity @s[tag=hostile,tag=!dying] run function medabots_server:main/hostile_medabots

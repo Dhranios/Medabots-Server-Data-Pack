@@ -2,7 +2,7 @@
 tag @s[tag=!damage_balled,nbt={Item:{tag:{medabots_server:{id:"medabots_server:damage_ball",team:"ally"}}}}] add ally_team
 tag @s[tag=!damage_balled,nbt={Item:{tag:{medabots_server:{id:"medabots_server:damage_ball",team:"enemy"}}}}] add enemy_team
 tag @s[tag=!damage_balled,nbt={Item:{tag:{medabots_server:{id:"medabots_server:damage_ball",strong:1b}}}}] add strong
-data merge entity @s[tag=damage_ball,tag=!damage_balled] {NoGravity:1b,Tags:["hostile","do_not_teleport","damage_balled"],PickupDelay:32767s,Age:3600s}
+data merge entity @s[tag=damage_ball,tag=!damage_balled] {NoGravity:1b,Tags:["hostile","do_not_teleport","damage_ball","damage_balled"],PickupDelay:32767s,Age:3600s}
 
 # Summon purple mass
 summon minecraft:armor_stand ~ ~-1.3 ~ {Invisible:1b,CustomName:'{"translate":"medabots_server:move.chameleon"}',NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:purple_wool",Count:1b}],Marker:1b,Tags:["life_time"]}

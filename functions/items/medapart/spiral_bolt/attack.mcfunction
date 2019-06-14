@@ -10,7 +10,7 @@ summon minecraft:lightning_bolt ~ ~-1.5 ~
 execute if entity @s[tag=strong] run summon minecraft:lightning_bolt ~ ~-1.5 ~
 
 # CPU owned simulation
-execute if entity @s[tag=cpu_owned,tag=!rotated] run teleport @s ~ ~ ~ facing entity @e[type=!minecraft:player,tag=enemy_medabot,sort=nearest,limit=1,scores={Medaforce=-2}]
-teleport @s[tag=cpu_owned,tag=rotated] ^ ^ ^-1 ~ ~-1
+execute if entity @s[tag=cpu_owned,tag=!rotated] rotated as @e[type=!minecraft:player,tag=enemy_medabot,sort=nearest,limit=1,scores={Medaforce=-2}] run teleport @s ~ ~ ~ ~ ~
+teleport @s[tag=cpu_owned,tag=rotated] ^ ^ ^1 ~ ~-1
 tag @s[tag=!rotated] add rotated
 execute at @s unless block ~ ~ ~ minecraft:air unless block ~ ~ ~ minecraft:water unless block ~ ~ ~ minecraft:lava run kill @s

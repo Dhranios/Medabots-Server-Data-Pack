@@ -1,0 +1,11 @@
+{
+    "values": [
+        "medabots_server:items/medapart/float",
+        "medabots_server:items/medapart/fly",
+        "medabots_server:items/medapart/multi_legged",
+        "medabots_server:items/medapart/swim",
+        "medabots_server:items/medapart/tank",
+        "medabots_server:items/medapart/two_legged",
+        "medabots_server:items/medapart/wheel"
+    ]
+}

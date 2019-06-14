@@ -1,14 +1,14 @@
 execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
 execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1529 45 -400 run function medabots_server:spawn_entities/enemy_medabot/pinguen/pure_mermaid/frappe/pinguen/mermaid
 execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1529 45 -400 run scoreboard players set @e[distance=..1] Stage 10
-execute positioned -1533 45 -404 run function medabot_sever:spawn_entities/cannon/detect/rotating/east/delay_4
-execute positioned -1532 45 -399 run function medabot_sever:spawn_entities/cannon/detect/rotating/east/delay_4
-execute positioned -1526 45 -393 run function medabot_sever:spawn_entities/cannon/detect/rotating/north/delay_4
-execute positioned -1519 45 -393 run function medabot_sever:spawn_entities/cannon/detect/rotating/north/delay_4
-execute positioned -1514 45 -398 run function medabot_sever:spawn_entities/cannon/detect/rotating/west/delay_4
-execute positioned -1515 45 -403 run function medabot_sever:spawn_entities/cannon/detect/rotating/west/delay_4
-execute positioned -1521 45 -410 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4
-execute positioned -1527 45 -409 run function medabot_sever:spawn_entities/cannon/detect/rotating/south/delay_4
+execute positioned -1533 45 -404 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
+execute positioned -1532 45 -399 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
+execute positioned -1526 45 -393 run function medabots_server:spawn_entities/cannon/detect/rotating/north/delay_4
+execute positioned -1519 45 -393 run function medabots_server:spawn_entities/cannon/detect/rotating/north/delay_4
+execute positioned -1514 45 -398 run function medabots_server:spawn_entities/cannon/detect/rotating/west/delay_4
+execute positioned -1515 45 -403 run function medabots_server:spawn_entities/cannon/detect/rotating/west/delay_4
+execute positioned -1521 45 -410 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
+execute positioned -1527 45 -409 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1531 45 -404 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
 execute positioned -1530 45 -399 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
 execute positioned -1526 45 -395 run function medabots_server:set_blocks/floor_switch/yellow/delay_20

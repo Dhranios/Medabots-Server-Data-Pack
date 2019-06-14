@@ -1,0 +1,6 @@
+{
+    "values": [
+        "medabots_server:items/kill",
+        "medabots_server:items/teleport"
+    ]
+}

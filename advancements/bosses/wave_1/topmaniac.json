@@ -5,15 +5,18 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:2}"
         },
         "title": {
-            "translate": "medabots_server:entity.topmaniac"
+            "translate": "medabots_server:advancements.bosses.topmaniac",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.topmaniac"
+                }
+            ]
         },
         "description": {
-            "translate": "medabots_server:advancements.bosses.defeated",
-			"with": [
-				{
-					"translate": "medabots_server:entity.topmaniac"
-				}
-			]
+            "translate": "medabots_server:advancements.bosses.topmaniac.description"
         },
         "hidden": true
     },
@@ -24,6 +27,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/topmaniac"
+        "function": "medabots_server:advancements/bosses/wave_1/topmaniac"
     }
 }

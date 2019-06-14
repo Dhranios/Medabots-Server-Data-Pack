@@ -18,11 +18,5 @@ execute if block -2002 44 -563 minecraft:light_blue_wool run tag @e[x=-2014.5,y=
 execute if block -2002 44 -563 minecraft:blue_wool run tag @e[x=-2002.5,y=45,z=-568.5,distance=..0.7,tag=laser_trap] remove enabled
 execute as @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42,type=!minecraft:player] unless entity @s[scores={Stage=4}] run scoreboard players set @s Stage 49
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/ruins_battle/lasers
-stopsound @s[scores={BattlingMedabots=1,Battle=1..}] music
-playsound medabots_server:music.stage.stage_end music @s[scores={BattlingMedabots=1,Battle=1..}] -1997 51 -560 1000
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] MusicType 1
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Music 299
-teleport @s[scores={BattlingMedabots=1,Battle=1..}] -1997 51 -560 -180 0
-tag @s[scores={BattlingMedabots=1,Battle=1..}] remove story_battle
-scoreboard players set @s[scores={BattlingMedabots=1,Battle=1..}] Battle 0
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1997 51 -560 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

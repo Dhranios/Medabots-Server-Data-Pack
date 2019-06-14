@@ -5,15 +5,18 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:1}"
         },
         "title": {
-            "translate": "medabots_server:entity.hr_d3"
+            "translate": "medabots_server:advancements.bosses.hr_d3",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.hr_d3"
+                }
+            ]
         },
         "description": {
-            "translate": "medabots_server:advancements.bosses.defeated",
-			"with": [
-				{
-					"translate": "medabots_server:entity.hr_d3"
-				}
-			]
+            "translate": "medabots_server:advancements.bosses.hr_d3.description"
         },
         "hidden": true
     },
@@ -24,6 +27,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/hr_d3"
+        "function": "medabots_server:advancements/bosses/wave_1/hr_d3"
     }
 }

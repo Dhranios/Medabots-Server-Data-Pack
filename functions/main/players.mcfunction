@@ -22,9 +22,7 @@ function medabots_server:other/afk_system
 execute if entity @s[scores={Moderator=0}] run function medabots_server:main/non_mods
 
 # No cheating!
-function medabots_server:anti_cheating/items
-function medabots_server:anti_cheating/scores
-function medabots_server:anti_cheating/anti_fly_hack
+function #medabots_server:anti_cheating
 
 # Send a killer message depending on parts
 execute if entity @s[scores={Killer=1..}] run function medabots_server:other/killer
@@ -58,10 +56,7 @@ scoreboard players add @s[scores={Death=1..}] Death 1
 scoreboard players add @s[scores={Death=..-1}] Death 1
 
 # Books
-function medabots_server:items/book/how_to
-function medabots_server:items/book/important
-function medabots_server:items/book/medaparts
-function medabots_server:items/book/rules
+function #medabots_server:books
 
 # Don't move for power, no combat for power
 function medabots_server:effects/recharge
@@ -73,10 +68,10 @@ function medabots_server:other/music
 execute if entity @s[tag=street_pass] run function medabots_server:items/streetpass
 
 # Verify resource pack
-execute if entity @s[scores={Offline=1..}] run function medabots_server:settings/resource_pack_verifiecation/ask
-execute unless entity @s[scores={Verified=0..}] run function medabots_server:settings/resource_pack_verifiecation/ask
-execute if entity @s[scores={Verified=1}] run function medabots_server:settings/resource_pack_verifiecation/waiting
-execute if entity @s[scores={Verified=2}] run function medabots_server:settings/resource_pack_verifiecation/verified
+execute if entity @s[scores={Offline=1..}] run function medabots_server:settings/resource_pack_verification/ask
+execute unless entity @s[scores={Verified=0..}] run function medabots_server:settings/resource_pack_verification/ask
+execute if entity @s[scores={Verified=1}] run function medabots_server:settings/resource_pack_verification/waiting
+execute if entity @s[scores={Verified=2}] run function medabots_server:settings/resource_pack_verification/verified
 
 # Upgrade path, not used yet as the server is still in development
 #execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{version:1}}}]}] run function medabots_server:update/upgrade_path/1

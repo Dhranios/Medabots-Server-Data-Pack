@@ -1,2 +1,2 @@
-execute anchored eyes if block ^ ^ ^ minecraft:water anchored feet positioned ~ ~1 ~ run function medabots_server:other/ocean_floor
+execute anchored eyes if block ^ ^ ^ minecraft:water anchored feet positioned ~ ~1 ~ run function medabots_server:other/music/ocean_floor
 execute anchored eyes unless block ^ ^ ^ minecraft:water anchored feet if block ~ ~-0.8 ~ minecraft:sand if block ~ ~-1.8 ~ minecraft:sand run function medabots_server:other/music/hub/set_2

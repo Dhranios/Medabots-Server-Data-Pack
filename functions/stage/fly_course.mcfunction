@@ -4,7 +4,7 @@ clear @s[scores={FlyCourse=0}] minecraft:firework_rocket{medabots_server:{id:"me
 scoreboard players reset @s[scores={FlyCourse=0}] Stage
 scoreboard players reset @s[scores={FlyCourse=0}] FlyTime
 scoreboard players reset @s[scores={FlyCourse=0}] FlyCourseLapTime
-scoreboard players set @s[scores={FlyCourse=0}] Time 1
+scoreboard players set @s[scores={FlyCourse=0}] Time 0
 scoreboard players set @s[scores={FlyCourse=0}] MusicType 1
 scoreboard players set @s[scores={FlyCourse=0}] Music 0
 scoreboard players reset @s[scores={FlyCourse=0}] FlyCourse

@@ -50,11 +50,6 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set med
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=7}] run scoreboard players set @s Stage 7
 execute if entity @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] run function medabots_server:stage/clean_up/ruins_out_a/first_go
-stopsound @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] music
-playsound medabots_server:music.stage.stage_end music @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] -1570 51 -284 1000
-scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] MusicType 1
-scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] Music 299
 advancement grant @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] only medabots_server:stages/wave_1/ruins_out_a_first_go
 tag @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={meet_doctor_haru=true,tunes_order=false}}] add dialog_infinity_tunes_order
-scoreboard players set @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] Battle 0
-teleport @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] -1570 51 -284 -180 0
+execute if entity @s[x=-1567,y=45,z=-312,dy=4,tag=hostile,gamemode=adventure] positioned -1570 51 -284 run function medabots_server:stage/clear

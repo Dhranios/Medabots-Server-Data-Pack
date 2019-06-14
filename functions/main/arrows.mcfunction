@@ -1,3 +1,8 @@
+# Save old motion for freeze check
+execute store result score @s OtherX run scoreboard players get @s MotionX
+execute store result score @s OtherY run scoreboard players get @s MotionY
+execute store result score @s OtherZ run scoreboard players get @s MotionZ
+
 # tag all arrows that sit in the ground
 tag @s[nbt={inGround:1b}] add in_ground
 
@@ -15,6 +20,9 @@ execute if entity @s[tag=laser] run function medabots_server:items/medapart/lase
 
 scoreboard players add @s[tag=life_time] LifeTime 1
 
+# Tag to potentially burst balloon bombs
+tag @e[distance=..10,tag=balloon_bomb] add potential_burst
+
 # Destroy pots
 execute if entity @s[tag=in_ground] if block ~ ~ ~ minecraft:chest run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
 execute if entity @s[tag=in_ground] if block ~0.1 ~ ~ minecraft:chest positioned ~0.5 ~ ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
@@ -30,13 +38,8 @@ execute if entity @s[tag=in_ground] if block ~ ~-1 ~-0.1 minecraft:chest positio
 kill @s[tag=in_ground]
 
 # Refresh clients
-data merge entity @s {Air:1}
+data merge entity @s {Air:1,Color:-1}
 data merge entity @s {Air:0}
-
-# Save old motion for freeze check
-execute store result score @s OtherX run scoreboard players get @s MotionX
-execute store result score @s OtherY run scoreboard players get @s MotionY
-execute store result score @s OtherZ run scoreboard players get @s MotionZ
 
 # Save previous motion
 execute store result score @s MotionX run data get entity @s Motion[0] 1000

@@ -5,15 +5,18 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:10}"
         },
         "title": {
-            "translate": "medabots_server:entity.master_edges"
+            "translate": "medabots_server:advancements.bosses.master_edges",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.master_edges"
+                }
+            ]
         },
         "description": {
-            "translate": "medabots_server:advancements.bosses.defeated",
-			"with": [
-				{
-					"translate": "medabots_server:entity.master_edges"
-				}
-			]
+            "translate": "medabots_server:advancements.bosses.master_edges.description"
         },
         "hidden": true
     },
@@ -24,6 +27,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/master_edges"
+        "function": "medabots_server:advancements/bosses/wave_1/master_edges"
     }
 }

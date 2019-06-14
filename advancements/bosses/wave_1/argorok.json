@@ -5,15 +5,18 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:0}"
         },
         "title": {
-            "translate": "medabots_server:entity.argorok"
+            "translate": "medabots_server:advancements.bosses.argorok",
+            "extra": [
+                {
+                    "translate": "medabots_server:message.stage.requires.version"
+                },
+                {
+                    "translate": "medabots_server:entity.argorok"
+                }
+            ]
         },
         "description": {
-            "translate": "medabots_server:advancements.bosses.defeated",
-			"with": [
-				{
-					"translate": "medabots_server:entity.argorok"
-				}
-			]
+            "translate": "medabots_server:advancements.bosses.argorok.description"
         },
         "hidden": true
     },
@@ -24,6 +27,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/bosses/argorok"
+        "function": "medabots_server:advancements/bosses/wave_1/argorok"
     }
 }
