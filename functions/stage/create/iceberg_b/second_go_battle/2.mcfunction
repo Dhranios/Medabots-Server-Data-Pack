@@ -5,7 +5,7 @@ execute positioned -1771 44 -391 run function medabots_server:spawn_entities/mis
 execute positioned -1769 44 -393 run function medabots_server:spawn_entities/mission/guard/slow
 execute positioned -1767 44 -409 run function medabots_server:spawn_entities/mission/guard/slow
 execute positioned -1768 44 -411 run function medabots_server:spawn_entities/mission/guard/slow
-execute positioned -1773 44 -400 run function medabots_server:set_blocks/whrilpool
+execute positioned -1773 44 -400 run function medabots_server:set_blocks/whirlpool
 tag @e[x=-1772.5,y=44,z=-390.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true

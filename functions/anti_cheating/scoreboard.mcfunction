@@ -11,6 +11,7 @@ scoreboard objectives add AFKTime dummy
 scoreboard objectives add ActionFloorNr dummy
 scoreboard objectives add AntiFly dummy
 scoreboard objectives add AntiTank dummy
+scoreboard objectives add ArrowID dummy
 scoreboard objectives add Attack minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add AuxiliaryCharge dummy
 scoreboard objectives add AuxiliaryTime dummy

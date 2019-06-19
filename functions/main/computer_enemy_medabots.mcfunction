@@ -60,8 +60,8 @@ execute if entity @s[scores={Medaforce=2..,Time=0,Dialog=60},tag=medaforce_selec
 tag @s remove walking
 execute unless entity @e[distance=..0.001,type=minecraft:area_effect_cloud,tag=cpu_walk_detection] run tag @s add walking
 kill @e[distance=..1,type=minecraft:area_effect_cloud,tag=cpu_walk_detection]
-execute if entity @s[scores={Sound=0},tag=walking,nbt={OnGround:1b}] run playsound medabots_server:entity.medabot.move.walk hostile @a ~ ~ ~ .025
-scoreboard players set @s[scores={Sound=0},tag=walking,tag=!dead] Sound 8
+execute if entity @s[scores={Sound=0},tag=walking,tag=!dying,nbt={OnGround:1b}] run playsound medabots_server:entity.medabot.move.walk hostile @a ~ ~ ~ .025
+scoreboard players set @s[scores={Sound=0},tag=walking,tag=!dying] Sound 8
 execute if entity @s[tag=!dead] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.walk_detection","with":[{"text":"CPU"}]}',Tags:["cpu_walk_detection"],Duration:2}
 
 # CPU only things

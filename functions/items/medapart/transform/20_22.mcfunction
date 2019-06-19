@@ -8,6 +8,15 @@ loot replace entity @s[scores={Transform=2,Drop=0},nbt={Inventory:[{tag:{medabot
 loot replace entity @s[scores={Transform=1,Drop=0},nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:neutral_tinpet",activated:1b}}}]}] hotbar.1 loot medabots_server:gameplay/transform/left_arm/neutral_tinpet
 loot replace entity @s[scores={Transform=3,Drop=0},nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:neutral_tinpet",activated:1b}}}]}] hotbar.2 loot medabots_server:gameplay/transform/right_arm/neutral_tinpet
 loot replace entity @s[scores={Transform=2,Drop=0},nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:neutral_tinpet",activated:1b}}}]}] hotbar.3 loot medabots_server:gameplay/transform/head/neutral_tinpet
+loot replace entity @s[scores={Transform=1,Drop=0},type=!minecraft:player,tag=male_tinpet] hotbar.1 loot medabots_server:gameplay/transform/left_arm/male_tinpet
+loot replace entity @s[scores={Transform=3,Drop=0},type=!minecraft:player,tag=male_tinpet] hotbar.2 loot medabots_server:gameplay/transform/right_arm/male_tinpet
+loot replace entity @s[scores={Transform=2,Drop=0},type=!minecraft:player,tag=male_tinpet] hotbar.3 loot medabots_server:gameplay/transform/head/male_tinpet
+loot replace entity @s[scores={Transform=1,Drop=0},type=!minecraft:player,tag=female_tinpet] hotbar.1 loot medabots_server:gameplay/transform/left_arm/female_tinpet
+loot replace entity @s[scores={Transform=3,Drop=0},type=!minecraft:player,tag=female_tinpet] hotbar.2 loot medabots_server:gameplay/transform/right_arm/female_tinpet
+loot replace entity @s[scores={Transform=2,Drop=0},type=!minecraft:player,tag=female_tinpet] hotbar.3 loot medabots_server:gameplay/transform/head/female_tinpet
+loot replace entity @s[scores={Transform=1,Drop=0},type=!minecraft:player,tag=neutral_tinpet] hotbar.1 loot medabots_server:gameplay/transform/left_arm/neutral_tinpet
+loot replace entity @s[scores={Transform=3,Drop=0},type=!minecraft:player,tag=neutral_tinpet] hotbar.2 loot medabots_server:gameplay/transform/right_arm/neutral_tinpet
+loot replace entity @s[scores={Transform=2,Drop=0},type=!minecraft:player,tag=neutral_tinpet] hotbar.3 loot medabots_server:gameplay/transform/head/neutral_tinpet
 
 # Update model
 execute if entity @s[scores={Drop=0}] store result score #temp MedabotNr run scoreboard players get @s MedabotNr

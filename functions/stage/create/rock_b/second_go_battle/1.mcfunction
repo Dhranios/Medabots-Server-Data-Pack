@@ -5,12 +5,12 @@ execute positioned -1607 45 -356 run function medabots_server:spawn_entities/mis
 execute positioned -1607 45 -352 run function medabots_server:spawn_entities/mission/guard/slow
 execute positioned -1604 45 -352 run function medabots_server:spawn_entities/mission/guard/slow
 execute positioned -1604 45 -356 run function medabots_server:spawn_entities/mission/guard/slow
-execute positioned -1634 45 -381 run function medabots_server:set_blocks/whrilpool
+execute positioned -1634 45 -381 run function medabots_server:set_blocks/whirlpool
 tag @e[x=-1621.5,y=45,z=-358.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2
-teleport @s -1617 45 -354
+teleport @s -1616 45 -354
 effect give @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] minecraft:night_vision 2 0 true
 effect give @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] minecraft:blindness 2 0 true
 scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] Battle 2

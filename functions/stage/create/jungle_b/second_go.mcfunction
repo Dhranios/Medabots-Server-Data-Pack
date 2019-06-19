@@ -19,7 +19,7 @@ execute positioned -1592 45 -472 run function medabots_server:spawn_entities/can
 execute positioned -1583 45 -472 run function medabots_server:spawn_entities/cannon/detect/rotating/west/delay_4
 execute positioned -1616 45 -474 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1621 45 -471 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
-execute positioned -1624 45 -463 run function medabots_server:spawn_entities/cannon/detect/rotating/west/delay_4
+execute positioned -1624 45 -463 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
 execute positioned -1611 45 -453 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_2
 execute positioned -1611 45 -452 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_2
 execute positioned -1626 45 -447 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
@@ -104,7 +104,7 @@ execute positioned -1630 45 -474 run function medabots_server:set_blocks/pot
 execute positioned -1629 45 -475 run function medabots_server:set_blocks/pot/bomb/delay_5
 # Medapart pot
 execute positioned -1630 45 -475 run function medabots_server:set_blocks/pot
-replaceitem block -1630 45 -475 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_knightshield"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.defense"}','{"italic":false,"color":"white","translate":"medabots_server:move.defense.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"65"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.knight_armor"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_knightshield.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:kight_armor_knightshield",gender:0b,move:"defense",part:"right_arm",armor:65,power:28,activated:0b,version:1}}
+replaceitem block -1630 45 -475 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_knightshield"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.defense"}','{"italic":false,"color":"white","translate":"medabots_server:move.defense.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"65"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.knight_armor"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_knightshield.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:knight_armor_knightshield",gender:0b,move:"defense",part:"right_arm",armor:65,power:28,activated:0b,version:1}}
 execute positioned -1631 45 -475 run function medabots_server:set_blocks/pot
 execute positioned -1609 45 -437 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1650 45 -397 run function medabots_server:set_blocks/stone
@@ -157,13 +157,13 @@ execute positioned -1631 45 -475 run function medabots_server:set_blocks/bridge
 execute positioned -1643 45 -451 run function medabots_server:set_blocks/bridge
 execute positioned -1660 45 -457 run function medabots_server:set_blocks/bridge
 execute positioned -1646 45 -473 run function medabots_server:set_blocks/bridge
-execute positioned -1658 45 -402 run function medabots_server:set_blocks/whrilpool
-execute positioned -1655 45 -405 run function medabots_server:set_blocks/whrilpool
-execute positioned -1656 45 -410 run function medabots_server:set_blocks/whrilpool
-execute positioned -1659 45 -411 run function medabots_server:set_blocks/whrilpool
-execute positioned -1616 45 -419 run function medabots_server:set_blocks/whrilpool
-execute positioned -1609 45 -412 run function medabots_server:set_blocks/whrilpool
-execute positioned -1589 45 -420 run function medabots_server:set_blocks/whrilpool
+execute positioned -1658 45 -402 run function medabots_server:set_blocks/whirlpool
+execute positioned -1655 45 -405 run function medabots_server:set_blocks/whirlpool
+execute positioned -1656 45 -410 run function medabots_server:set_blocks/whirlpool
+execute positioned -1659 45 -411 run function medabots_server:set_blocks/whirlpool
+execute positioned -1616 45 -419 run function medabots_server:set_blocks/whirlpool
+execute positioned -1609 45 -412 run function medabots_server:set_blocks/whirlpool
+execute positioned -1589 45 -420 run function medabots_server:set_blocks/whirlpool
 execute positioned -1648 45 -396 run function medabots_server:set_blocks/wall
 execute positioned -1648 45 -395 run function medabots_server:set_blocks/wall
 execute positioned -1628 45 -411 run function medabots_server:set_blocks/wall
@@ -176,7 +176,7 @@ execute positioned -1579 45 -406 run function medabots_server:set_blocks/wall
 execute positioned -1590 45 -412 run function medabots_server:set_blocks/door/open/north
 execute positioned -1579 45 -417 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1601 45 -468 run function medabots_server:set_blocks/door/open/east
-execute positioned -1606 45 -457 run function medabots_server:set_blocks/door/closed/north
+execute positioned -1606 45 -456 run function medabots_server:set_blocks/door/closed/north
 execute positioned -1616 45 -464 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1635 45 -451 run function medabots_server:set_blocks/door/open/east
 execute positioned -1658 45 -392 run function medabots_server:set_blocks/starting_area

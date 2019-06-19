@@ -122,6 +122,12 @@
         },
         "jaxy_follows_doctor_haru": {
             "trigger": "minecraft:impossible"
+        },
+        "jammy_discovered": {
+            "trigger": "minecraft:impossible"
+        },
+        "kojis_mistake": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

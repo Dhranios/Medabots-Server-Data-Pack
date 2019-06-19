@@ -142,11 +142,11 @@ execute positioned -1660 45 -632 run function medabots_server:set_blocks/bridge
 execute positioned -1636 45 -628 run function medabots_server:set_blocks/wall
 execute positioned -1638 45 -629 run function medabots_server:set_blocks/wall
 execute positioned -1658 45 -627 run function medabots_server:set_blocks/wall
-execute positioned -1649 45 -588 run function medabots_server:set_blocks/whrilpool
-execute positioned -1639 45 -594 run function medabots_server:set_blocks/whrilpool
-execute positioned -1631 45 -598 run function medabots_server:set_blocks/whrilpool
-execute positioned -1626 45 -613 run function medabots_server:set_blocks/whrilpool
-execute positioned -1636 45 -631 run function medabots_server:set_blocks/whrilpool
+execute positioned -1649 45 -588 run function medabots_server:set_blocks/whirlpool
+execute positioned -1639 45 -594 run function medabots_server:set_blocks/whirlpool
+execute positioned -1631 45 -598 run function medabots_server:set_blocks/whirlpool
+execute positioned -1626 45 -613 run function medabots_server:set_blocks/whirlpool
+execute positioned -1636 45 -631 run function medabots_server:set_blocks/whirlpool
 execute positioned -1618 45 -588 run function medabots_server:set_blocks/door/open/south
 execute positioned -1656 45 -588 run function medabots_server:set_blocks/door/open/north
 execute positioned -1650 45 -599 run function medabots_server:set_blocks/door/open/south

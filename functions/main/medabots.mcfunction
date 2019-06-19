@@ -13,11 +13,11 @@ scoreboard players operation @s Damage += #100 Constants
 effect give @s[type=!#medabots_server:undead,scores={Damage=1..}] minecraft:instant_health 1 19 true
 effect give @s[type=#medabots_server:undead,scores={Damage=1..}] minecraft:instant_damage 1 19 true
 data merge entity @s[type=!minecraft:player] {AbsorptionAmount:100.0f}
-execute if entity @s[scores={Damage=1..5}] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 0.25
-execute if entity @s[scores={Damage=6..10}] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 0.5
-execute if entity @s[scores={Damage=11..15}] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 1
-execute if entity @s[scores={Damage=16..20}] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 1.5
-execute if entity @s[scores={Damage=21..}] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 2
+execute if entity @s[scores={Damage=1..5},tag=!dying] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 0.25
+execute if entity @s[scores={Damage=6..10},tag=!dying] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 0.5
+execute if entity @s[scores={Damage=11..15},tag=!dying] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 1
+execute if entity @s[scores={Damage=16..20},tag=!dying] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 1.5
+execute if entity @s[scores={Damage=21..},tag=!dying] run playsound medabots_server:entity.medabot.damage player @a ~ ~ ~ 2
 
 # Combat
 execute if entity @s[scores={AntiFly=1..}] run function medabots_server:items/medapart/anti_fly

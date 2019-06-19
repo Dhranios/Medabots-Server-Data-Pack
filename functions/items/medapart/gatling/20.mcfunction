@@ -5,9 +5,8 @@ scoreboard players set @s[scores={Gatling=3},nbt={Inventory:[{Slot:2b,tag:{medab
 scoreboard players set @s[scores={Gatling=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:blackbeetle_blackblaster"}}}]}] MedapartType 4
 scoreboard players set @s[scores={Gatling=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:arcbeetle_ignition"}}}]}] MedapartType 5
 scoreboard players set @s[scores={Gatling=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:zant_zant_helmet"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Gatling=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:magolor_darkhand"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Gatling=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:warbonnet_range_shooter"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Gatling=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:metabee_sub_machie_gun"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Gatling=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:warbonnet_range_shooter"}}}]}] MedapartType 7
+scoreboard players set @s[scores={Gatling=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:metabee_sub_machie_gun"}}}]}] MedapartType 8
 
 # Give the weapon and ammo depending on charge
 execute unless entity @s[scores={ScoutTime=1..}] run replaceitem entity @s[scores={Gatling=1..},type=!minecraft:player] weapon.mainhand minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.gatling"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.gatling"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},medabots_server:{id:"medabots_server:gatling"}}

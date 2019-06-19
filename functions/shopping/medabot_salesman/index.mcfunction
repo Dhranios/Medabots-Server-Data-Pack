@@ -66,6 +66,7 @@ execute if entity @s[scores={ShopIndex1=19,ShopIndex2=16,ShopIndex3=9}] run func
 execute if entity @s[scores={ShopIndex1=19,ShopIndex2=19,ShopIndex3=2}] run function medabots_server:shopping/medabot_salesman/ssb
 execute if entity @s[scores={ShopIndex1=19,ShopIndex2=20,ShopIndex3=7}] run function medabots_server:shopping/medabot_salesman/stg
 execute if entity @s[scores={ShopIndex1=19,ShopIndex2=26,ShopIndex3=13}] run function medabots_server:shopping/medabot_salesman/szm
+execute if entity @s[scores={ShopIndex1=20,ShopIndex2=15,ShopIndex3=20}] run function medabots_server:shopping/medabot_salesman/tot
 execute if entity @s[scores={ShopIndex1=20,ShopIndex2=18,ShopIndex3=9}] run function medabots_server:shopping/medabot_salesman/tri
 execute if entity @s[scores={ShopIndex1=20,ShopIndex2=23,ShopIndex3=9}] run function medabots_server:shopping/medabot_salesman/twi
 execute if entity @s[scores={ShopIndex1=21,ShopIndex2=14,ShopIndex3=9}] run function medabots_server:shopping/medabot_salesman/uni
@@ -75,4 +76,5 @@ execute if entity @s[scores={ShopIndex1=23,ShopIndex2=5,ShopIndex3=1}] run funct
 tellraw @s[tag=!success] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.no_medabot"}]}
 scoreboard players reset @s ShopIndex2
 tag @s remove success
-tag @s remove trading
+tag @s[tag=final] remove trading
+tag @s remove final

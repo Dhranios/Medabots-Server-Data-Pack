@@ -1,8 +1,10 @@
 # The small timer so that you can jump on other entities
 execute if entity @s[tag=footstool] run function medabots_server:items/medapart/footstool/cloud
 
-# Make the anti-tank attack do something
+# Make the anti-tank, anti-fly and napalm attack do something
 execute if entity @s[tag=anti_tank] run function medabots_server:items/medapart/anti_tank/attack
+execute if entity @s[tag=anti_fly] run function medabots_server:items/medapart/anti_fly/cloud
+execute if entity @s[tag=napalm] run function medabots_server:items/medapart/napalm/cloud
 
 # The small timer so that you can grab ledges
 execute if entity @s[tag=edge_grab] run function medabots_server:items/medapart/edge_grab/cloud
@@ -36,4 +38,4 @@ execute if entity @s[tag=algae] run function medabots_server:blocks/algae
 execute if entity @s[tag=bridge] run function medabots_server:blocks/bridge
 execute if entity @s[tag=stone] run function medabots_server:blocks/stone
 execute if entity @s[tag=accelerator] run function medabots_server:blocks/accelerator
-execute if entity @s[tag=whrilpool] run function medabots_server:blocks/whrilpool
+execute if entity @s[tag=whirlpool] run function medabots_server:blocks/whirlpool

@@ -1,8 +1,11 @@
 tag @s add success
-tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.medapart.several"}]}
-tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 4"},"translate":"medabots_server:entity.arcbeetle"}}
-tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 2"},"translate":"medabots_server:entity.blackbeetle"}}
-tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 3"},"translate":"medabots_server:entity.metabee"}}
-tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 1"},"translate":"medabots_server:entity.saikachis"}}
+execute if entity @s[advancements={medabots_server:wave_1/get_all_medabots/arcbeetle={legs=false,left_arm=false,right_arm=false,head=false},medabots_server:wave_1/get_all_medabots/blackbeetle={legs=false,left_arm=false,right_arm=false,head=false},medabots_server:wave_1/get_all_medabots/blackbeetle={legs=false,left_arm=false,right_arm=false,head=false},medabots_server:wave_1/get_all_medabots/saikachis={legs=false,left_arm=false,right_arm=false,head=false}}] run tag @s add out_of_stock
+tellraw @s[tag=out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.not_available"}]}
+tellraw @s[tag=!out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.medapart.several"}]}
+tag @s remove out_of_stock
+execute unless entity @s[advancements={medabots_server:wave_1/get_all_medabots/arcbeetle={legs=false,left_arm=false,right_arm=false,head=false}}] run tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 4"},"translate":"medabots_server:entity.arcbeetle"}}
+execute unless entity @s[advancements={medabots_server:wave_1/get_all_medabots/blackbeetle={legs=false,left_arm=false,right_arm=false,head=false}}] run tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 2"},"translate":"medabots_server:entity.blackbeetle"}}
+execute unless entity @s[advancements={medabots_server:wave_1/get_all_medabots/metabee={legs=false,left_arm=false,right_arm=false,head=false}}] run tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 3"},"translate":"medabots_server:entity.metabee"}}
+execute unless entity @s[advancements={medabots_server:wave_1/get_all_medabots/saikachis={legs=false,left_arm=false,right_arm=false,head=false}}] run tellraw @s {"clickEvent":{"action":"run_command","value":"/trigger ShopIndex4 set 1"},"translate":"medabots_server:entity.saikachis"}}
 scoreboard players set @s ShopIndex4 -1
 scoreboard players enable @s ShopIndex4

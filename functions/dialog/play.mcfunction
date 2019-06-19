@@ -40,6 +40,8 @@ execute if entity @s[tag=dialog_infinity_vs_sloan_begin] run function medabots_s
 execute if entity @s[tag=dialog_infinity_vs_sloan] run function medabots_server:dialog/infinity/vs_sloan
 execute if entity @s[tag=dialog_infinity_vs_sloan_battle] run function medabots_server:dialog/infinity/vs_sloan_battle
 execute if entity @s[tag=dialog_infinity_jaxy_follows_doctor_haru] run function medabots_server:dialog/infinity/jaxy_follows_doctor_haru
+execute if entity @s[tag=dialog_infinity_jammy_discovered] run function medabots_server:dialog/infinity/jammy_discovered
+execute if entity @s[tag=dialog_infinity_kojis_mistake] run function medabots_server:dialog/infinity/kojis_mistake
 
 # Other
 execute if entity @s[tag=dialog_magolor] run function medabots_server:dialog/magolor
