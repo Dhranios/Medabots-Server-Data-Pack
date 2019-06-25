@@ -1,10 +1,10 @@
-execute unless entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Medabot=0..,Battle=1..2,Stage=14},tag=enemy_medabot] run bossbar set medabots_server:snowfield_b/time players @s[scores={Battle=1..}]
-execute unless entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Medabot=0..,Battle=1..2,Stage=14},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:snowfield_b/time value
-execute unless entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Medabot=0..,Battle=1..2,Stage=14},tag=enemy_medabot] store result bossbar medabots_server:snowfield_b/time value run scoreboard players operation #temp Time += #1 Constants
-execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Medabot=0..,Battle=1..2,Stage=14},tag=enemy_medabot] store result score #temp Time run bossbar get medabots_server:snowfield_b/robattle value
-execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Medabot=0..,Battle=1..2,Stage=14},tag=enemy_medabot] store result bossbar medabots_server:snowfield_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
-execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Medabot=0..,Battle=1..2,Stage=14},tag=enemy_medabot] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mission] at @s run function medabots_server:stage/mission_time_up
-execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Medabot=0..,Battle=1..2,Stage=14},tag=enemy_medabot] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute unless entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Stage=14},tag=hide_normal_time] run bossbar set medabots_server:snowfield_b/time players @s[scores={Battle=1..}]
+execute unless entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Stage=14},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:snowfield_b/time value
+execute unless entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Stage=14},tag=hide_normal_time] store result bossbar medabots_server:snowfield_b/time value run scoreboard players operation #temp Time += #1 Constants
+execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Stage=14},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:snowfield_b/robattle value
+execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Stage=14},tag=hide_normal_time] store result bossbar medabots_server:snowfield_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Stage=14},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mission] at @s run function medabots_server:stage/mission_time_up
+execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,scores={Stage=14},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/snowfield_b/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
@@ -54,7 +54,7 @@ execute if entity @s[tag=mission_success] run bossbar set medabots_server:snowfi
 execute if entity @s[tag=mission_success] run kill @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,type=minecraft:area_effect_cloud,tag=mission]
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block -1751 45 -488 minecraft:iron_door[open=true] unless block -1673 44 -481 minecraft:lime_wool if entity @s[x=-1684,y=45,z=-488,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/second_go_battle/2
+execute if block -1684 45 -487 minecraft:iron_door[open=true] unless block -1673 44 -481 minecraft:lime_wool if entity @s[x=-1684,y=45,z=-488,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/second_go_battle/2
 execute if entity @e[x=-1675.5,y=45,z=-484.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1675.5,y=45,z=-484.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1673 44 -481 minecraft:lime_wool run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
@@ -78,7 +78,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1747 45 -514 minecraft:iron_door[open=true] if entity @s[x=-1748,y=45,z=-517,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/second_go_battle/4
 execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,Battle=1..2}]
-execute as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,type=!minecraft:player] unless entity @s[scores={Stage=14}] run scoreboard players set @s Stage 1000
+execute as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,type=!minecraft:player] unless entity @s[scores={Stage=14}] run scoreboard players set @s Stage 14
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/snowfield_b/second_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/snowfield_b_second_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:snowfield_b/robattle players

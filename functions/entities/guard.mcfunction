@@ -2,12 +2,23 @@
 tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
 execute if entity @s[tag=dying,tag=!dead] run function medabots_server:animations/guard/death
 
+# Count down the freeze timer
+scoreboard players remove @s[scores={Time=1..}] Time 1
+
 # If hurt, freezes
 scoreboard players set @s[nbt={HurtTime:9s}] Time 40
 
+# Effects
+scoreboard players set @s[scores={FreezeTime=1..}] Time 40
+scoreboard players set @s[scores={ParalyzeTime=1..}] Time 40
+scoreboard players set @s[scores={ChaosTime=1..}] Time 40
+scoreboard players set @s[scores={BugTimer=40,ConfuseTime=..20}] ConfuseTime 20
+execute unless entity @s[scores={ConfuseTime=1..}] run scoreboard players set @s[scores={BugTimer=40}] ConfuseTime 20
+scoreboard players set @s[scores={ConfuseTime=1..}] Time 40
+teleport @s[tag=!dying,scores={ConfuseTime=1..}] ~ ~ ~ ~-18 ~
+
 # Attack
-scoreboard players remove @s[scores={Time=1..}] Time 1
-execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] positioned ^ ^ ^1 if entity @a[tag=hostile,distance=..1.05,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] run function medabots_server:entities/guard/attack
+execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^1 if entity @a[tag=hostile,distance=..1.05,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] run function medabots_server:entities/guard/attack
 
 # Walk to target or random location
 execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] run function medabots_server:entities/guard/wander

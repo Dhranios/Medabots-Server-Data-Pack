@@ -3,9 +3,9 @@ tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
 execute if entity @s[tag=dying] run function medabots_server:animations/cannon/death
 
 # Coundown shooting
-scoreboard players remove @s[scores={Time=1..9}] Time 1
-scoreboard players remove @s[scores={Time=10},tag=detected] Time 1
-scoreboard players remove @s[scores={Time=11..}] Time 1
+execute unless entity @s[scores={FreezeTime=1..}] run scoreboard players remove @s[scores={Time=1..9}] Time 1
+execute unless entity @s[scores={FreezeTime=1..}] run scoreboard players remove @s[scores={Time=10},tag=detected] Time 1
+execute unless entity @s[scores={FreezeTime=1..}] run scoreboard players remove @s[scores={Time=11..}] Time 1
 
 # Stop rotating
 scoreboard players set @s[scores={Time=9},tag=detected] CannonFire 1
@@ -17,7 +17,8 @@ execute if entity @s[scores={Time=7,CannonFire=0..},tag=detect,tag=detected,tag=
 # Fire in the hole!
 execute store result score #temp Stage run scoreboard players get @s Stage
 execute as @a[scores={Battle=2}] if score @s Stage = #temp Stage run tag @e[tag=cannon,distance=..0.1] add no_fire
-execute if entity @s[scores={Time=0,CannonFire=1..},tag=!no_fire,tag=!dying] run function medabots_server:entities/cannon/fire
+execute if entity @s[scores={Time=0,CannonFire=1..},tag=!no_fire,tag=!dying] unless entity @s[scores={IneffectiveTime=1..}] run function medabots_server:entities/cannon/fire
+scoreboard players set @s[scores={Time=0,CannonFire=1..,IneffectiveTime=1..},tag=!no_fire,tag=!dying] CannonFire 0
 tag @s[tag=no_fire] remove no_fire
 scoreboard players reset #temp Stage
 
@@ -29,6 +30,7 @@ tag @s[tag=!detect] add detected
 tag @s[tag=!detected] remove already_targetted
 
 # Set the time depending on the delay
+scoreboard players set @s[scores={ParalyzeTime=1..}] Time 0
 scoreboard players set @s[tag=delay_4,scores={Time=0}] Time 80
 scoreboard players set @s[tag=delay_3,scores={Time=0}] Time 60
 scoreboard players set @s[tag=delay_2,scores={Time=0}] Time 40
@@ -41,8 +43,8 @@ execute if entity @s[tag=detect,tag=!dying] run function medabots_server:entitie
 scoreboard players set @s[scores={CannonFire=1..,Time=10},tag=!detected,tag=!dying] CannonFire 0
 
 # Rotate cannon
-execute at @s[tag=rotating,scores={CannonFire=0,Time=0..},tag=!detect,tag=!dying] run function medabots_server:entities/cannon/turn
-execute at @s[tag=rotating,scores={CannonFire=0,Time=0..},tag=detect,tag=!detected,tag=!dying] run function medabots_server:entities/cannon/turn
+execute unless entity @s[scores={FreezeTime=1..}] unless entity @s[scores={ParalyzeTime=1..}] at @s[tag=rotating,scores={CannonFire=0,Time=0..},tag=!detect,tag=!dying] run function medabots_server:entities/cannon/turn
+execute unless entity @s[scores={FreezeTime=1..}] unless entity @s[scores={ParalyzeTime=1..}] at @s[tag=rotating,scores={CannonFire=0,Time=0..},tag=detect,tag=!detected,tag=!dying] run function medabots_server:entities/cannon/turn
 
 # Allow rotating only on the second tick
 scoreboard players set @s[scores={Time=-1}] Time 20

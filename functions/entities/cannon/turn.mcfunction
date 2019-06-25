@@ -1,6 +1,10 @@
 # Rotate cannons
 teleport @s[tag=!rotate_right] ~ ~ ~ ~-1 ~
 teleport @s[tag=rotate_right] ~ ~ ~ ~1 ~
+teleport @s[tag=!rotate_right,scores={BugTimer=80..88}] ~ ~ ~ ~2 ~
+teleport @s[tag=rotate_right,scores={BugTimer=80..88}] ~ ~ ~ ~-2 ~
+teleport @s[tag=!rotate_right,scores={BugTimer=32..40}] ~ ~ ~ ~2 ~
+teleport @s[tag=rotate_right,scores={BugTimer=32..40}] ~ ~ ~ ~-2 ~
 
 # Remove decimals
 execute store result entity @s Rotation[0] float 1 run data get entity @s Rotation[0]

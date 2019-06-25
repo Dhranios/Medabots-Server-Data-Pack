@@ -1,5 +1,5 @@
 execute store result score @s BattlingMedabots if entity @e[scores={Stage=40,Medabot=0..,Battle=1..}]
-execute if entity @s[scores={BattlingMedabots=2..}] unless entity @e[x=-1376,y=39,z=-276,dx=58,dy=10,dz=68,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1348 44 -241 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","no_overwrite"],Rotation:[0.0f,0.0f]}
+execute if entity @s[scores={BattlingMedabots=2..}] unless entity @e[x=-1376,y=39,z=-276,dx=58,dy=10,dz=68,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1348 44 -241 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[0.0f,0.0f]}
 execute as @e[x=-1376,y=39,z=-276,dx=58,dy=10,dz=68,type=!minecraft:player] unless entity @s[scores={Stage=40}] run scoreboard players set @s Stage 40
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/lagdou_ruins_5/darkness
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_first_go=true}] only medabots_server:stages/wave_1/lagdou_ruins_5_second_go

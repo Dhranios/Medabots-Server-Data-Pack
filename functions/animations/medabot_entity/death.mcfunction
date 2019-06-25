@@ -24,14 +24,13 @@ execute if entity @s[y=-80,dy=79,scores={DeathTime=1},type=!minecraft:player] ru
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add medabot_loot
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=enemy_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add enemy_loot
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=ally_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add ally_loot
-execute if entity @s[y=0,dy=255,scores={DeathTime=1},type=minecraft:player] run function medabots_server:items/lose_medallars
-execute if entity @s[y=0,dy=255,scores={DeathTime=1},type=!minecraft:player] run loot spawn ~ ~ ~ kill @s
-execute if entity @s[y=0,dy=255,scores={DeathTime=1}] run tag @e[distance=..1,type=minecraft:item] add medabot_loot
-execute if entity @s[y=0,dy=255,scores={DeathTime=1},tag=enemy_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add enemy_loot
-execute if entity @s[y=0,dy=255,scores={DeathTime=1},tag=ally_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add ally_loot
+execute if entity @s[y=1,dy=255,scores={DeathTime=1},type=minecraft:player] run function medabots_server:items/lose_medallars
+execute if entity @s[y=1,dy=255,scores={DeathTime=1},type=!minecraft:player] run loot spawn ~ ~ ~ kill @s
+execute if entity @s[y=1,dy=255,scores={DeathTime=1}] run tag @e[distance=..1,type=minecraft:item] add medabot_loot
+execute if entity @s[y=1,dy=255,scores={DeathTime=1},tag=enemy_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add enemy_loot
+execute if entity @s[y=1,dy=255,scores={DeathTime=1},tag=ally_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add ally_loot
 scoreboard players set @s[y=-80,dy=79,scores={DeathTime=1}] DeathTime 99
 execute if entity @s[scores={DeathTime=1..99}] positioned as @e[tag=this_medabot,limit=1] rotated as @s rotated ~ 0 run teleport @s ^0.105 ^2 ^-1.5 facing entity @e[tag=this_medabot,limit=1]
-teleport @s[y=-80,dy=79,scores={DeathTime=99}] ~ 51 ~
 scoreboard players set @s[scores={DeathTime=100}] Battle 0
 scoreboard players set @s[scores={DeathTime=100,Stage=1..}] Battle 3
 scoreboard players set @s[scores={DeathTime=100}] LeaveStage 1

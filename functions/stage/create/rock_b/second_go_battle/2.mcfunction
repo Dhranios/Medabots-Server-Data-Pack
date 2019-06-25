@@ -21,8 +21,8 @@ teleport @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] -1604 45 -374
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}
 tag @e[sort=random,type=minecraft:area_effect_cloud,tag=referee_marker,limit=1] add selected
-execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=1,tag=selected] run summon minecraft:armor_stand -1606 45 -375 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Invisible:1b,Rotation:[0.0f,0.0f]}
-execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,tag=selected] run summon minecraft:armor_stand -1606 45 -372 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Invisible:1b,Rotation:[-180.0f,0.0f]}
+execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=1,tag=selected] run summon minecraft:armor_stand -1606 45 -375 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","hide_normal_time"],Invisible:1b,Rotation:[0.0f,0.0f]}
+execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,tag=selected] run summon minecraft:armor_stand -1606 45 -372 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","hide_normal_time"],Invisible:1b,Rotation:[-180.0f,0.0f]}
 kill @e[type=minecraft:area_effect_cloud,tag=referee_marker]
 scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,scores={Stage=11}] Music 0
 scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,scores={Stage=11}] MusicType 1

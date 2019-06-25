@@ -128,6 +128,12 @@
         },
         "kojis_mistake": {
             "trigger": "minecraft:impossible"
+        },
+        "max_got_ditched": {
+            "trigger": "minecraft:impossible"
+        },
+        "kojis_issue": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

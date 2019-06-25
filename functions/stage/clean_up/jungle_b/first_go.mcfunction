@@ -1,3 +1,4 @@
+setblock -1601 47 -468 minecraft:oak_leaves[distance=2,persistent=true]
 bossbar set medabots_server:jungle_b/time players
 bossbar set medabots_server:jungle_b/robattle players
 scoreboard players set @a[scores={Stage=12},tag=enemy_medabot] Music 0

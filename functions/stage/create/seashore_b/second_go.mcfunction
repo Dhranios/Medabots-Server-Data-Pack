@@ -61,7 +61,7 @@ execute positioned -1721 45 -431 run function medabots_server:spawn_entities/can
 execute positioned -1722 45 -436 run function medabots_server:spawn_entities/cannon/detect/rotating/west/delay_4
 execute positioned -1724 45 -440 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1727 45 -352 run function medabots_server:spawn_entities/item/4_medallar_cents
-execute positioned -1688 45 -436 run function medabots_server:spawn_entities/item/20_medallar_cents
+execute positioned -1687 45 -436 run function medabots_server:spawn_entities/item/20_medallar_cents
 execute positioned -1706 45 -354 run function medabots_server:spawn_entities/round_stone/east
 execute positioned -1708 45 -394 run function medabots_server:spawn_entities/ice_block
 execute positioned -1708 45 -395 run function medabots_server:spawn_entities/ice_block
@@ -176,11 +176,11 @@ execute positioned -1679 45 -411 run function medabots_server:set_blocks/pot
 execute positioned -1679 45 -412 run function medabots_server:set_blocks/pot
 execute positioned -1675 45 -438 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1676 45 -438 run function medabots_server:set_blocks/pot/4_medallar_cents
-# Object: Bomb -1689 45 -435
-execute positioned -1689 45 -435 run function medabots_server:set_blocks/pot
-execute positioned -1687 45 -435 run function medabots_server:set_blocks/pot/bomb/delay_5
-execute positioned -1687 45 -437 run function medabots_server:set_blocks/pot
-execute positioned -1689 45 -437 run function medabots_server:set_blocks/pot
+execute positioned -1688 45 -435 run function medabots_server:set_blocks/pot
+execute positioned -1686 45 -435 run function medabots_server:set_blocks/pot/bomb/delay_5
+# Object: Bomb -1686 45 -437
+execute positioned -1686 45 -437 run function medabots_server:set_blocks/pot
+execute positioned -1688 45 -437 run function medabots_server:set_blocks/pot
 execute positioned -1711 45 -417 run function medabots_server:set_blocks/pot
 execute positioned -1712 45 -418 run function medabots_server:set_blocks/pot
 execute positioned -1717 45 -440 run function medabots_server:set_blocks/pot

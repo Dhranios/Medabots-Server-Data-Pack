@@ -18,7 +18,7 @@ effect give @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] minecraft:night_visio
 effect give @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] minecraft:blindness 2 0 true
 scoreboard players set @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] Battle 2
 teleport @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] -1651 44 -339
-summon minecraft:area_effect_cloud -1650 44 -337 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","defeat_the_enemy"],Duration:2147483647}
+summon minecraft:area_effect_cloud -1650 44 -337 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","hide_normal_time","defeat_the_enemy"],Duration:2147483647}
 bossbar set medabots_server:ruins_in_a/robattle value 3600
 bossbar set medabots_server:ruins_in_a/robattle players @a[scores={Stage=8}]
 bossbar set medabots_server:ruins_in_a/time players

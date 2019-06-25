@@ -1,6 +1,6 @@
 execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] positioned -1681 45 -529 run function medabots_server:spawn_entities/enemy_medabot/maxsnake/dragonbeetle/grade_kabuki/maxsnake/kuwagata
-execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] positioned -1681 45 -529 run scoreboard players set @e[distance=..1] Stage 14
+execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] positioned -1682 45 -528 run function medabots_server:spawn_entities/enemy_medabot/maxsnake/dragonbeetle/grade_kabuki/maxsnake/kuwagata
+execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] positioned -1682 45 -528 run scoreboard players set @e[distance=..1] Stage 14
 execute positioned -1686 45 -535 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1686 45 -535 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1689 45 -529 run function medabots_server:spawn_entities/ice_block
@@ -23,12 +23,12 @@ tag @e[x=-1680.5,y=45,z=-516.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2
-teleport @s -1680 45 -524
+teleport @s -1681 45 -524
 effect give @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] minecraft:night_vision 2 0 true
 effect give @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] minecraft:blindness 2 0 true
 scoreboard players set @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] Battle 2
-teleport @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] -1681 45 -529
-summon minecraft:area_effect_cloud -1679 45 -527 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","open_the_exit_door"],Duration:2147483647}
+teleport @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=3] -1682 45 -528
+summon minecraft:area_effect_cloud -1679 45 -527 {CustomName:'{"translate":"medabots_server:message.stage.mission"}',Tags:["mission","hide_normal_time","open_the_exit_door"],Duration:2147483647}
 bossbar set medabots_server:snowfield_b/robattle value 3600
 bossbar set medabots_server:snowfield_b/robattle players @a[scores={Stage=14}]
 bossbar set medabots_server:snowfield_b/time players

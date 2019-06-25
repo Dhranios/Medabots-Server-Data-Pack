@@ -5,10 +5,10 @@ scoreboard players remove @s BugTime 1
 scoreboard players add @s[scores={BugTime=1..}] BugTimer 1
 
 # move vision dpending on the mover timer
-teleport @s[scores={BugTimer=24}] ~ ~ ~ ~ ~-40
-teleport @s[scores={BugTimer=48}] ~ ~ ~ ~60 ~
-teleport @s[scores={BugTimer=72}] ~ ~ ~ ~ ~40
-teleport @s[scores={BugTimer=96}] ~ ~ ~ ~-60 ~
+teleport @s[scores={BugTimer=24},tag=!cannon,tag=!guard] ~ ~ ~ ~ ~-40
+teleport @s[scores={BugTimer=48},tag=!cannon,tag=!guard] ~ ~ ~ ~60 ~
+teleport @s[scores={BugTimer=72},tag=!cannon,tag=!guard] ~ ~ ~ ~ ~40
+teleport @s[scores={BugTimer=96},tag=!cannon,tag=!guard] ~ ~ ~ ~-60 ~
 scoreboard players set @s[scores={BugTimer=96}] BugTimer 0
 
 # Remove timers

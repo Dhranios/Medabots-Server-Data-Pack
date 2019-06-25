@@ -11,5 +11,6 @@ execute if entity @s[scores={Dialog=82},tag=run_until_the_time_is_up] as @e[type
 execute if entity @s[scores={Dialog=82},tag=run_until_the_time_is_up] as @a[tag=hostile,tag=enemy_medabot,tag=this_mission] run scoreboard players set @s Battle 3
 execute if entity @s[scores={Dialog=82},tag=run_until_the_time_is_up] as @a[tag=hostile,tag=enemy_medabot,tag=this_mission] run scoreboard players set @s LeaveStage 1
 execute if entity @s[scores={Dialog=82},tag=run_until_the_time_is_up] as @e[type=!minecraft:player,tag=mission_entity,tag=this_mission] run tag @s remove mission_entity
+tag @s[scores={Dialog=82},tag=run_until_the_time_is_up] remove run_until_the_time_is_up
 scoreboard players reset #temp Stage
 tag @e[tag=this_mission] remove this_mission
