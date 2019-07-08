@@ -2,12 +2,15 @@
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run function medabots_server:items/give_obtained_item
 
 # Run stage
-execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..},tag=!murder_mystery] run function medabots_server:stage/left_server
-execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=3},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=1..2},tag=!murder_mystery] run function medabots_server:stage/left_server
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=3..4},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=0..,Battle=1..},tag=!enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/run
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/enemy_run
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run function medabots_server:stage/run_fly_course
 scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
+
+# Stage builder
+execute if entity @s[scores={Battle=4}] run function medabots_server:stage/builder
 
 # Make the random server messages appear
 function medabots_server:other/random_message

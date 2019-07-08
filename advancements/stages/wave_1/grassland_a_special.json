@@ -36,7 +36,7 @@
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1/grassland_a_rubberobo",
+	"parent": "medabots_server:stages/wave_1/park_b_first_go",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

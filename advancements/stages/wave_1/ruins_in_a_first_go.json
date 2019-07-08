@@ -36,7 +36,7 @@
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1",
+	"parent": "medabots_server:stages/wave_1/ruins_out_a_first_go",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

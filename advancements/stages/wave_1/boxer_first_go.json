@@ -26,7 +26,7 @@
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1",
+	"parent": "medabots_server:stages/wave_1/laboratory_c_first_go",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

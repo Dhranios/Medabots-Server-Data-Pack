@@ -24,6 +24,7 @@ execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:black_glazed_terracot
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:black_glazed_terracotta[facing=south] run tag @s add south_black_glazed_terracotta_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:black_glazed_terracotta[facing=east] run tag @s add east_black_glazed_terracotta_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:black_glazed_terracotta[facing=west] run tag @s add west_black_glazed_terracotta_1
+execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:barrier run tag @s add barrier_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:air run tag @s add air_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:water run tag @s add water_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:grass_block run tag @s add grass_block_1
@@ -49,6 +50,7 @@ execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:black_glazed_terraco
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:black_glazed_terracotta[facing=south] run tag @s add south_black_glazed_terracotta_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:black_glazed_terracotta[facing=east] run tag @s add east_black_glazed_terracotta_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:black_glazed_terracotta[facing=west] run tag @s add west_black_glazed_terracotta_1
+execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:barrier run tag @s add barrier_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:air run tag @s add air_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:water run tag @s add water_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:grass_block run tag @s add grass_block_1
@@ -74,6 +76,7 @@ execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:black_glazed_terrac
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:black_glazed_terracotta[facing=south] run tag @s add south_black_glazed_terracotta_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:black_glazed_terracotta[facing=east] run tag @s add east_black_glazed_terracotta_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:black_glazed_terracotta[facing=west] run tag @s add west_black_glazed_terracotta_1
+execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:barrier run tag @s add barrier_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:air run tag @s add air_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:water run tag @s add water_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:grass_block run tag @s add grass_block_1
@@ -99,6 +102,7 @@ execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:black_glazed_terraco
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=south] run tag @s add south_black_glazed_terracotta_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=east] run tag @s add east_black_glazed_terracotta_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=west] run tag @s add west_black_glazed_terracotta_1
+execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:barrier run tag @s add barrier_1
 # Delete this
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:cyan_terracotta run tag @s add cyan_terracotta_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:cyan_terracotta run tag @s add cyan_terracotta_1

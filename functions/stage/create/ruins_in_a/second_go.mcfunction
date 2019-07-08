@@ -164,8 +164,9 @@ execute positioned -1649 44 -274 run function medabots_server:set_blocks/pot/4_m
 execute positioned -1653 44 -322 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1658 44 -261 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1659 44 -262 run function medabots_server:set_blocks/pot/bomb/delay_5
-# Object -1660 44 -262
+# Stage build item pot
 execute positioned -1660 44 -262 run function medabots_server:set_blocks/pot
+replaceitem block -1660 44 -262 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"press_wall",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.press_wall"}]}'}}
 execute positioned -1661 44 -263 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1701 44 -273 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1699 44 -273 run function medabots_server:set_blocks/pot/guard/slow
@@ -230,10 +231,8 @@ execute positioned -1683 44 -275 run function medabots_server:set_blocks/door/cl
 execute positioned -1683 44 -274 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1682 44 -276 run function medabots_server:set_blocks/goal_area
 execute positioned -1683 44 -254 run function medabots_server:set_blocks/starting_area
-setblock -1651 46 -286 minecraft:wall_torch[facing=east]
-setblock -1650 46 -286 minecraft:wall_torch[facing=west]
-teleport @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=-1] -1683 44 -254
-teleport @s[tag=-1] -1683 44 -254
+teleport @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=-1] -1683 44 -254 0 0
+teleport @s[tag=-1] -1683 44 -254 0 0
 tag @a[x=-1683,y=44,z=-254,distance=..1] remove -1
 bossbar set medabots_server:ruins_in_a/time value 0
 bossbar set medabots_server:ruins_in_a/time players @a[x=-1683,y=44,z=-254,distance=..1]

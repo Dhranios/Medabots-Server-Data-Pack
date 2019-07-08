@@ -1,10 +1,10 @@
-execute unless entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,scores={Stage=9},tag=hide_normal_time] run bossbar set medabots_server:laboratory_a/time players @s[scores={Battle=1..}]
-execute unless entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,scores={Stage=9},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:laboratory_a/time value
-execute unless entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,scores={Stage=9},tag=hide_normal_time] store result bossbar medabots_server:laboratory_a/time value run scoreboard players operation #temp Time += #1 Constants
-execute if entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,scores={Stage=9},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:laboratory_a/robattle value
-execute if entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,scores={Stage=9},tag=hide_normal_time] store result bossbar medabots_server:laboratory_a/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
-execute if entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,scores={Stage=9},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,tag=mission] at @s run function medabots_server:stage/mission_time_up
-execute if entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,scores={Stage=9},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute unless entity @e[scores={Stage=9},tag=hide_normal_time] run bossbar set medabots_server:laboratory_a/time players @s[scores={Battle=1..}]
+execute unless entity @e[scores={Stage=9},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:laboratory_a/time value
+execute unless entity @e[scores={Stage=9},tag=hide_normal_time] store result bossbar medabots_server:laboratory_a/time value run scoreboard players operation #temp Time += #1 Constants
+execute if entity @e[scores={Stage=9},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:laboratory_a/robattle value
+execute if entity @e[scores={Stage=9},tag=hide_normal_time] if entity @e[scores={Stage=9,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:laboratory_a/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[scores={Stage=9},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,tag=mission] at @s run function medabots_server:stage/mission_time_up
+execute if entity @e[scores={Stage=9},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/laboratory_a/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
@@ -33,6 +33,21 @@ execute if block -1760 43 -293 minecraft:lime_wool if block -1760 43 -296 minecr
 execute if block -1807 43 -319 minecraft:blue_wool run tag @e[x=-1792.5,y=44,z=-313.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1807 43 -319 minecraft:light_blue_wool run tag @e[x=-1792.5,y=44,z=-313.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1781 43 -319 minecraft:lime_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1810 43 -310 minecraft:blue_wool if block -1810 43 -313 minecraft:blue_wool if block -1810 43 -316 minecraft:blue_wool if block -1807 43 -310 minecraft:blue_wool if block -1807 43 -319 minecraft:blue_wool if block -1804 43 -310 minecraft:blue_wool if block -1804 43 -319 minecraft:blue_wool if block -1801 43 -310 minecraft:blue_wool if block -1801 43 -319 minecraft:blue_wool if block -1798 43 -310 minecraft:blue_wool if block -1798 43 -319 minecraft:blue_wool if block -1795 43 -313 minecraft:blue_wool if block -1795 43 -316 minecraft:blue_wool if block -1795 43 -319 minecraft:blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1781 43 -319 minecraft:green_wool if block -1810 43 -310 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1810 43 -313 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1810 43 -316 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1807 43 -310 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1807 43 -319 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1804 43 -310 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1804 43 -319 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1801 43 -310 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1801 43 -319 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1798 43 -310 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1798 43 -319 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1795 43 -313 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1795 43 -316 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1781 43 -319 minecraft:green_wool if block -1795 43 -319 minecraft:light_blue_wool run tag @e[x=-1771.5,y=44,z=-314.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1740 43 -265 minecraft:light_blue_wool run tag @e[x=-1739.5,y=44,z=-265.5,distance=..0.7,tag=spring_wall] add enabled
 execute if block -1740 43 -265 minecraft:blue_wool run tag @e[x=-1739.5,y=44,z=-265.5,distance=..0.7,tag=spring_wall] remove enabled
 execute if block -1739 43 -279 minecraft:lime_wool run tag @e[x=-1738.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled

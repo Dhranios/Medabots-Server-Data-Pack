@@ -2,8 +2,8 @@
 scoreboard players set @s EdgeGrabAble 0
 
 # Check for grabbing a ledge for certain users
-execute if block ~ ~-1 ~ minecraft:air run scoreboard players set @s[gamemode=survival,scores={Sneaking=0}] EdgeGrabAble 1
-execute if block ~ ~-1 ~ minecraft:air run scoreboard players set @s[gamemode=adventure,scores={Sneaking=0}] EdgeGrabAble 1
+execute if block ~ ~-1 ~ minecraft:air run scoreboard players set @s[gamemode=survival,tag=!sneak_pos] EdgeGrabAble 1
+execute if block ~ ~-1 ~ minecraft:air run scoreboard players set @s[gamemode=adventure,tag=!sneak_pos] EdgeGrabAble 1
 
 # Check blocks depending on rotation
 execute if entity @s[y_rotation=-135..-45,scores={EdgeGrabAble=1}] run function medabots_server:items/medapart/edge_grab/east
@@ -19,4 +19,4 @@ execute if entity @s[scores={EdgeGrabAble=2,Sneaking=0}] if block ~ ~-1 ~ minecr
 
 # Sneak to let go
 #execute as run data; MC-121807
-execute if entity @s[scores={Sneaking=1..}] as @e[distance=..1,type=minecraft:area_effect_cloud,tag=edge_grab] run data merge entity @s {Age:30}
+execute if entity @s[tag=sneak_pos] as @e[distance=..1,type=minecraft:area_effect_cloud,tag=edge_grab] run data merge entity @s {Age:30}

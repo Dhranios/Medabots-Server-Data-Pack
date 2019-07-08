@@ -44,6 +44,22 @@ execute if entity @s[tag=dialog_infinity_jammy_discovered] run function medabots
 execute if entity @s[tag=dialog_infinity_kojis_mistake] run function medabots_server:dialog/infinity/kojis_mistake
 execute if entity @s[tag=dialog_infinity_max_got_ditched] run function medabots_server:dialog/infinity/max_got_ditched
 execute if entity @s[tag=dialog_infinity_kojis_issue] run function medabots_server:dialog/infinity/kojis_issue
+execute if entity @s[tag=dialog_infinity_lone_sloan] run function medabots_server:dialog/infinity/lone_sloan
+execute if entity @s[tag=dialog_infinity_roks_vs_max] run function medabots_server:dialog/infinity/roks_vs_max
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_ruins_out_a] run function medabots_server:dialog/infinity/rubberobo_enters_ruins_out_a
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_ruins_out_a] run function medabots_server:dialog/infinity/rubberobo_leaves_ruins_out_a
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_laboratory_a] run function medabots_server:dialog/infinity/rubberobo_enters_laboratory_a
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_laboratory_a] run function medabots_server:dialog/infinity/rubberobo_leaves_laboratory_a
+execute if entity @s[tag=dialog_infinity_rubberobo_enters_jungle_b] run function medabots_server:dialog/infinity/rubberobo_enters_jungle_b
+execute if entity @s[tag=dialog_infinity_rubberobo_leaves_jungle_b] run function medabots_server:dialog/infinity/rubberobo_leaves_jungle_b
+#execute if entity @s[tag=dialog_infinity_rubberobo_enters_snowfield_b] run function medabots_server:dialog/infinity/rubberobo_enters_snowfield_b
+#execute if entity @s[tag=dialog_infinity_rubberobo_leaves_snowfield_b] run function medabots_server:dialog/infinity/rubberobo_leaves_snowfield_b
+#execute if entity @s[tag=dialog_infinity_vs_gillgirl] run function medabots_server:dialog/infinity/vs_gillgirl
+#execute if entity @s[tag=dialog_infinity_vs_gillgirl_battle] run function medabots_server:dialog/infinity/vs_gillgirl_battle
+#execute if entity @s[tag=dialog_infinity_the_picture] run function medabots_server:dialog/infinity/the_picture
+#execute if entity @s[tag=dialog_infinity_rubberobo_interview] run function medabots_server:dialog/infinity/rubberobo_interview
+#execute if entity @s[tag=dialog_infinity_where_is_karin] run function medabots_server:dialog/infinity/where_is_karin
+#execute if entity @s[tag=dialog_infinity_the_prominence] run function medabots_server:dialog/infinity/the_prominence
 
 # Other
 execute if entity @s[tag=dialog_magolor] run function medabots_server:dialog/magolor

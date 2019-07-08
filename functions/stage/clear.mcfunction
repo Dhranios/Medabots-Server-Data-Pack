@@ -6,3 +6,4 @@ scoreboard players set @s[scores={Stage=23..29}] MusicType 22
 scoreboard players set @s Music 299
 teleport @s ~ ~ ~ -180 0
 tag @s remove story_battle
+tag @s remove clear_stage

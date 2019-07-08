@@ -9,7 +9,11 @@ execute if entity @s[scores={FloorSwitchTime=0},tag=trigger,tag=green_floor_swit
 execute if entity @s[tag=green_floor_switch] run function medabots_server:blocks/floor_switch/green
 execute if entity @s[tag=yellow_floor_switch] run function medabots_server:blocks/floor_switch/yellow
 execute if entity @s[tag=blue_floor_switch] run function medabots_server:blocks/floor_switch/blue
+tag @s[tag=trigger] add toggle
 tag @s[tag=trigger] remove trigger
+
+# Custom stage object powering
+execute if entity @s[tag=custom_stage,tag=toggle] run function medabots_server:blocks/floor_switch/custom_stage
 
 # Remove when cleaning up stage
 execute if entity @s[tag=dead] run function medabots_server:blocks/put_block_back

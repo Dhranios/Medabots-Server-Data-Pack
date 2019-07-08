@@ -36,7 +36,7 @@
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1/grassland_a_special",
+	"parent": "medabots_server:stages/wave_1/seashore_a_rubberobo",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

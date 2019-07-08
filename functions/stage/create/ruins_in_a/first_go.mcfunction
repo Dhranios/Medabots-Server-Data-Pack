@@ -217,12 +217,8 @@ execute positioned -1683 44 -275 run function medabots_server:set_blocks/door/cl
 execute positioned -1683 44 -274 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1682 44 -276 run function medabots_server:set_blocks/goal_area
 execute positioned -1683 44 -254 run function medabots_server:set_blocks/starting_area
-setblock -1651 46 -286 minecraft:wall_torch[facing=east]
-setblock -1650 46 -286 minecraft:wall_torch[facing=west]
-setblock -1662 46 -336 minecraft:air
-setblock -1662 47 -336 minecraft:wall_torch[facing=east]
-teleport @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=-1] -1683 44 -254
-teleport @s[tag=-1] -1683 44 -254
+teleport @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=-1] -1683 44 -254 0 0
+teleport @s[tag=-1] -1683 44 -254 0 0
 tag @a[x=-1683,y=44,z=-254,distance=..1] remove -1
 bossbar set medabots_server:ruins_in_a/time value 0
 bossbar set medabots_server:ruins_in_a/time players @a[x=-1683,y=44,z=-254,distance=..1]

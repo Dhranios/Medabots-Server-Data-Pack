@@ -134,6 +134,54 @@
         },
         "kojis_issue": {
             "trigger": "minecraft:impossible"
+        },
+        "lone_sloan": {
+            "trigger": "minecraft:impossible"
+        },
+        "roks_vs_max": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_ruins_out_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_ruins_out_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_laboratory_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_laboratory_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_jungle_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_jungle_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_snowfield_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_snowfield_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_gillgirl": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_gillgirl_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "the_picture": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_interview": {
+            "trigger": "minecraft:impossible"
+        },
+        "where_is_karin": {
+            "trigger": "minecraft:impossible"
+        },
+        "the_prominence": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

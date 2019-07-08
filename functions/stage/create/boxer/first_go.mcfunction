@@ -23,8 +23,8 @@ execute positioned -1900 44 -581 run function medabots_server:set_blocks/door/cl
 execute positioned -1903 44 -572 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1899 44 -561 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1890 44 -548 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=-1] -1890 44 -548
-teleport @s[tag=-1] -1890 44 -548
+teleport @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=-1] -1890 44 -548 0 0
+teleport @s[tag=-1] -1890 44 -548 0 0
 tag @a[x=-1890,y=44,z=-548,distance=..1] remove -1
 bossbar set medabots_server:boxer/time value 0
 bossbar set medabots_server:boxer/time players @a[x=-1890,y=44,z=-548,distance=..1]

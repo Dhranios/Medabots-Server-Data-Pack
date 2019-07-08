@@ -175,8 +175,8 @@ execute positioned -1735 44 -193 run function medabots_server:set_blocks/door/cl
 execute positioned -1712 44 -209 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1710 44 -209 run function medabots_server:set_blocks/door/open/west
 execute positioned -1701 44 -240 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1764,y=50,z=-247,dx=88,dy=4,dz=63,tag=-1] -1701 44 -240
-teleport @s[tag=-1] -1701 44 -240
+teleport @a[x=-1764,y=50,z=-247,dx=88,dy=4,dz=63,tag=-1] -1701 44 -240 0 0
+teleport @s[tag=-1] -1701 44 -240 0 0
 tag @a[x=-1701,y=44,z=-240,distance=..1] remove -1
 bossbar set medabots_server:iceberg_a/time value 0
 bossbar set medabots_server:iceberg_a/time players @a[x=-1701,y=44,z=-240,distance=..1]

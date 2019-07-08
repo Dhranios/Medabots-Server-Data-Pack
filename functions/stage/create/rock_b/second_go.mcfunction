@@ -57,8 +57,9 @@ execute positioned -1578 45 -323 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1576 45 -323 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1616 45 -329 run function medabots_server:set_blocks/pot/balloon_bomb
 execute positioned -1625 45 -325 run function medabots_server:set_blocks/pot/guard/slow/2_medallar_cents
-# Object: Guard -1631 45 -326
+# Stage build item pot
 execute positioned -1631 45 -326 run function medabots_server:set_blocks/pot
+replaceitem block -1631 45 -326 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"guard",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:entity.guard"}]}'}}
 execute positioned -1602 45 -345 run function medabots_server:set_blocks/pot
 execute positioned -1601 45 -345 run function medabots_server:set_blocks/pot
 execute positioned -1601 45 -346 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -149,16 +150,20 @@ execute positioned -1577 45 -358 run function medabots_server:set_blocks/door/cl
 execute positioned -1622 45 -359 run function medabots_server:set_blocks/door/open/west
 execute positioned -1615 45 -372 run function medabots_server:set_blocks/door/open/west
 execute positioned -1605 45 -323 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=-1] -1605 45 -323
-teleport @s[tag=-1] -1605 45 -323
+teleport @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=-1] -1605 45 -323 0 0
+teleport @s[tag=-1] -1605 45 -323 0 0
 tag @a[x=-1605,y=45,z=-323,distance=..1] remove -1
 bossbar set medabots_server:rock_b/time value 0
 bossbar set medabots_server:rock_b/time players @a[x=-1605,y=45,z=-323,distance=..1]
 scoreboard players set @a[x=-1605,y=45,z=-323,distance=..1] Battle 1
 scoreboard players set @a[x=-1605,y=45,z=-323,distance=..1] Stage 11
-scoreboard players set @a[x=-1605,y=45,z=-323,distance=..1] Music 0
+stopsound @a[x=-1605,y=45,z=-323,distance=..1] music
+playsound medabots_server:music.stage.rock_intro music @a[x=-1605,y=45,z=-323,distance=..1] ~ ~ ~ 1000
+scoreboard players set @a[x=-1605,y=45,z=-323,distance=..1] Music 24
 scoreboard players set @a[x=-1605,y=45,z=-323,distance=..1] MusicType 8
 scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=enemy_medabot] Battle 3
 scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=enemy_medabot] Stage 11
-scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=enemy_medabot] Music 0
+stopsound @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=enemy_medabot] music
+playsound medabots_server:music.stage.rock_intro music @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=enemy_medabot] ~ ~ ~ 1000
+scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=enemy_medabot] Music 24
 scoreboard players set @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=enemy_medabot] MusicType 8

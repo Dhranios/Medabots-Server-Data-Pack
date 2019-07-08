@@ -1,4 +1,4 @@
-teleport @s -1954 45 -616
+teleport @s -1954 45 -616 -90 0
 tag @s add stones
 tag @s add story_battle
 execute positioned -1943 45 -617 run function medabots_server:spawn_entities/character_enemy_medabot/erika

@@ -126,8 +126,9 @@ execute positioned -1544 45 -286 run function medabots_server:set_blocks/pot
 execute positioned -1543 45 -300 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1541 45 -293 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1544 45 -293 run function medabots_server:set_blocks/pot
-# Object hammer punch -1543 45 -309
+# Stage build item pot
 execute positioned -1543 45 -309 run function medabots_server:set_blocks/pot
+replaceitem block -1543 45 -309 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"hammer_punch",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.hammer_punch"}]}'}}
 execute positioned -1542 45 -310 run function medabots_server:set_blocks/pot
 execute positioned -1541 45 -309 run function medabots_server:set_blocks/pot
 execute positioned -1594 45 -309 run function medabots_server:set_blocks/pot
@@ -200,8 +201,8 @@ execute positioned -1622 45 -300 run function medabots_server:set_blocks/door/cl
 execute positioned -1610 45 -308 run function medabots_server:set_blocks/door/open/north
 execute positioned -1567 45 -312 run function medabots_server:set_blocks/goal_area
 execute positioned -1568 45 -256 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1634,y=51,z=-315,dx=127,dy=4,dz=64,tag=-1] -1568 45 -256
-teleport @s[tag=-1] -1568 45 -256
+teleport @a[x=-1634,y=51,z=-315,dx=127,dy=4,dz=64,tag=-1] -1568 45 -256 0 0
+teleport @s[tag=-1] -1568 45 -256 0 0
 tag @a[x=-1568,y=45,z=-256,distance=..1] remove -1
 bossbar set medabots_server:ruins_out_a/time value 0
 bossbar set medabots_server:ruins_out_a/time players @a[x=-1568,y=45,z=-256,distance=..1]

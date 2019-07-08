@@ -1,4 +1,4 @@
-teleport @s -1862 45 -611
+teleport @s -1862 45 -611 0 0
 scoreboard players set @s Battle 1
 scoreboard players set @s Stage 0
 scoreboard players set @s Music 0

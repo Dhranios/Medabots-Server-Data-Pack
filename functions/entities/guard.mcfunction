@@ -26,8 +26,8 @@ execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] run function
 # Fall
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
 execute at @s if block ~ ~-0.2 ~ minecraft:black_carpet run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water positioned ~ ~-0.5 ~ unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column positioned ~ ~-0.5 ~ unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
 execute at @s if block ~ ~-0.2 ~ minecraft:lava run tag @s add fall
 execute at @s[tag=fall] run teleport @s ~ ~-0.2 ~
 execute at @s[tag=!fall] align y unless block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~

@@ -1,6 +1,6 @@
 tag @s[advancements={medabots_server:wave_1/story_progression={opening=false}},x=-304,y=55,z=-52,distance=..7] add dialog_infinity_opening
 tag @s[advancements={medabots_server:wave_1/story_progression={meet_max=true,see_doctor_haru=false,meet_koji=false}},x=-318,y=55,z=-107,distance=..5] add dialog_infinity_see_doctor_haru
-tag @s[advancements={medabots_server:wave_1/story_progression={meet_koji=true,see_jaxy=false,meet_director_tune=false}},x=-362,y=55,z=-120,distance=..5] add dialog_infinity_see_jaxy
+tag @s[advancements={medabots_server:wave_1/story_progression={see_jaxy=false,meet_director_tune=false},medabots_server:stages/wave_1/rock_a_first_go=true},x=-362,y=55,z=-120,distance=..5] add dialog_infinity_see_jaxy
 tag @s[advancements={medabots_server:wave_1/story_progression={meet_director_tune=true,see_spyke=false,meet_screws=false}},x=-361,y=55,z=-83,distance=..5] add dialog_infinity_see_spyke
 tag @s[advancements={medabots_server:wave_1/story_progression={meet_director_tune=true,see_sloan=false,meet_screws=false}},x=-302,y=55,z=-14,distance=..5] add dialog_infinity_see_sloan
 tag @s[advancements={medabots_server:wave_1/story_progression={meet_screws=true,vs_spyke_begin=false}},x=-324,y=55,z=5,distance=..10] add dialog_infinity_vs_spyke_begin
@@ -14,4 +14,7 @@ tag @s[advancements={medabots_server:wave_1/story_progression={rubberobo_scoop=f
 tag @s[advancements={medabots_server:wave_1/story_progression={rubberobo_scoop=false},medabots_server:stages/wave_1/rock_a_rubberobo=false,medabots_server:stages/wave_1/snowfield_a_rubberobo=true,medabots_server:stages/wave_1/ruins_in_a_rubberobo=true},x=-354,y=55,z=-36,distance=..5] add dialog_infinity_rubberobo_scoop
 tag @s[advancements={medabots_server:wave_1/story_progression={vs_squidguts_battle=true,vs_koji=false}},x=-355,y=55,z=-78,distance=..5] add dialog_infinity_vs_koji
 tag @s[advancements={medabots_server:wave_1/story_progression={vs_sloan_battle=true,jaxy_follows_doctor_haru=false,jammy_discovered=false}},x=-470,y=55,z=-68,distance=..15] add dialog_infinity_jaxy_follows_doctor_haru
-tag @s[advancements={medabots_server:wave_1/story_progression={jammy_discovered=true,kojis_mistake=false}},x=-388,y=55,z=-107,distance=..5] add dialog_infinity_kojis_mistake
+tag @s[advancements={medabots_server:wave_1/story_progression={jammy_discovered=true,kojis_mistake=false},medabots_server:stages/wave_1/jungle_b_first_go=false},x=-388,y=55,z=-107,distance=..5] add dialog_infinity_kojis_mistake
+tag @s[advancements={medabots_server:wave_1/story_progression={lone_sloan=false},medabots_server:stages/wave_1/snowfield_b_first_go=true,medabots_server:stages/wave_1/iceberg_b_first_go=false},x=-384,y=55,z=-9,distance=..5] add dialog_infinity_lone_sloan
+tag @s[advancements={medabots_server:wave_1/story_progression={roks_vs_max=false},medabots_server:stages/wave_1/iceberg_b_first_go=true},x=-303,y=55,z=-5,distance=..5] add dialog_infinity_roks_vs_max
+tag @s[advancements={medabots_server:wave_1/story_progression={roks_vs_max=true,rubberobo_enters_ruins_out_a=false}},x=-411,y=55,z=-40,distance=..7] add dialog_infinity_rubberobo_enters_ruins_out_a

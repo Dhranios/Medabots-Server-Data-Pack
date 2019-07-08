@@ -13,7 +13,8 @@ execute if entity @s[nbt={Age:0}] positioned ~ ~1 ~ at @a[distance=..1] run play
 # Make fall
 tag @s[tag=dead] add drop
 execute if entity @s[tag=drop] positioned ~ ~1 ~ at @a[distance=..1] run playsound medabots_server:entity.medabot.move.edge_grab_drop player @a ~ ~ ~ 1
-execute if entity @s[tag=drop] positioned ~ ~1 ~ as @a[distance=..1] at @s run teleport @s ~ ~-0.1 ~
+execute if entity @s[tag=drop,tag=only_top] positioned ~ ~1 ~ as @a[distance=..1] at @s run teleport @s ~ ~-1 ~
+execute if entity @s[tag=drop,tag=!only_top] positioned ~ ~1 ~ as @a[distance=..1] at @s run teleport @s ~ ~-1.3 ~
 execute if entity @s[tag=drop,tag=!only_top] run fill ~ ~ ~ ~ ~-1 ~ minecraft:air replace minecraft:barrier
 execute if entity @s[tag=drop,tag=only_top] run fill ~ ~ ~ ~ ~ ~ minecraft:air replace minecraft:barrier
 kill @s[tag=drop]

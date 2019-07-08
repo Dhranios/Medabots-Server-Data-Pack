@@ -39,7 +39,7 @@ execute as @e[distance=..0.4,tag=raft,type=minecraft:shulker] run data merge ent
 execute as @e[distance=..0.4,tag=raft,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
 
 # Position correcion
-execute at @s[tag=has_moved] positioned ~ ~0.8 ~ align y run teleport @s ~ ~-0.375 ~
+execute at @s[tag=has_moved] positioned ~ ~0.6 ~ align y run teleport @s ~ ~-0.375 ~
 execute if entity @s[scores={Moving=0},tag=has_moved] at @s align xz run teleport @s ~0.5 ~ ~0.5
 tag @s[scores={Moving=0},tag=has_moved] remove has_moved
 execute unless entity @s[scores={Moving=0..}] run tag @s add has_moved

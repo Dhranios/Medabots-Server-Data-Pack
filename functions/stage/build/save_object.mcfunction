@@ -1,0 +1,19 @@
+data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data append value {position:[0,0,0],object:[""],additional_data:[0,0,0,0,0,0]}
+
+teleport @s[tag=bomb] ~ ~1 ~
+teleport @s[tag=balloon_bomb] ~ ~1 ~
+teleport @s[tag=ice_block] ~ ~1 ~
+teleport @s[tag=raft] ~ ~1 ~
+teleport @s[tag=round_stone] ~ ~1 ~
+
+execute store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].position[0] int 1 run data get entity @s Pos[0]
+execute store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].position[1] int 1 run data get entity @s Pos[1]
+execute store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].position[2] int 1 run data get entity @s Pos[2]
+data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].object set from entity @s Tags
+
+execute if entity @s[tag=fan] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[0] int 1 run scoreboard players get @s Moving
+execute if entity @s[tag=fan] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[1] int 1 run scoreboard players get @s Range
+execute if entity @s[tag=press_wall] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[0] int 1 run scoreboard players get @s Range
+execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[0] int 1 run scoreboard players get @s HomeX
+execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[1] int 1 run scoreboard players get @s HomeY
+execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[2] int 1 run scoreboard players get @s HomeZ

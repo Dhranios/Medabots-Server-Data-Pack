@@ -36,7 +36,7 @@
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1/jungle_a_rubberobo",
+	"parent": "medabots_server:stages/wave_1/rock_b_first_go",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

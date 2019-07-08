@@ -1,2 +1,2 @@
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.whirlpool"}',Tags:["whirlpool"],Duration:2147483647}
-execute as @e[distance=..0.7] run function medabots_server:blocks/whirlpool/depth_mark
+execute as @e[distance=..0.7,tag=whirlpool] run function medabots_server:blocks/whirlpool/depth_mark

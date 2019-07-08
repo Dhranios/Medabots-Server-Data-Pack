@@ -20,6 +20,7 @@ execute positioned -1767 45 -594 run function medabots_server:spawn_entities/ite
 execute positioned -1769 45 -603 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1771 45 -610 run function medabots_server:spawn_entities/item/2_medallar_cents
 summon minecraft:item -1772 45 -613 {Item:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:6,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_musk"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.multi_legged"}','{"italic":false,"color":"white","translate":"medabots_server:move.multi_legged.description"}','{"text":""}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.maxsnake"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_musk.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:maxsnake_musk",gender:0b,move:"multi_legged",part:"legs",armor:40,defense:16,activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
+summon minecraft:item -1771 45 -551 {Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"whirlpool",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.whirlpool"}]}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 execute positioned -1784 45 -622 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1800 45 -629 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1812 45 -632 run function medabots_server:spawn_entities/item/2_medallar_cents
@@ -209,8 +210,8 @@ execute positioned -1775 45 -584 run function medabots_server:set_blocks/door/cl
 execute positioned -1791 45 -585 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1794 45 -585 run function medabots_server:set_blocks/door/open/east
 execute positioned -1807 45 -555 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=-1] -1807 45 -555
-teleport @s[tag=-1] -1807 45 -555
+teleport @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=-1] -1807 45 -555 0 0
+teleport @s[tag=-1] -1807 45 -555 0 0
 tag @a[x=-1807,y=45,z=-555,distance=..1] remove -1
 bossbar set medabots_server:park_a/time value 0
 bossbar set medabots_server:park_a/time players @a[x=-1807,y=45,z=-555,distance=..1]

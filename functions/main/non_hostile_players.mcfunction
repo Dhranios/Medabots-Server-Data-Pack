@@ -17,3 +17,6 @@ scoreboard players reset @s SelfDestruct
 # Invalid medabot = no combat start
 execute if entity @s[gamemode=!creative,gamemode=!spectator,scores={Battle=0,Time=0}] run function medabots_server:items/medapart_error
 scoreboard players set @s[gamemode=!survival,gamemode=!adventure] PreviousError 0
+
+# Remove stage builder
+clear @s[scores={Battle=0}] minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}

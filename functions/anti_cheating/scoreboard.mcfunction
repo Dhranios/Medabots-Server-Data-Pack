@@ -186,6 +186,7 @@ scoreboard objectives add Sneak minecraft.custom:minecraft.crouch_one_cm
 scoreboard objectives add Sneaking minecraft.custom:minecraft.sneak_time
 scoreboard objectives add Sound dummy
 scoreboard objectives add Stage dummy
+scoreboard objectives add StageBuild trigger
 scoreboard objectives add Stars dummy
 scoreboard objectives add StatusClear dummy
 scoreboard objectives add Steps dummy

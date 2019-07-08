@@ -79,7 +79,9 @@ execute positioned -1550 45 -206 run function medabots_server:set_blocks/pot/gua
 execute positioned -1551 45 -207 run function medabots_server:set_blocks/pot/6_medallar_cents
 execute positioned -1551 45 -205 run function medabots_server:set_blocks/pot/6_medallar_cents
 execute positioned -1556 45 -193 run function medabots_server:set_blocks/pot/4_medallar_cents
+# Stage build item pot
 execute positioned -1565 45 -239 run function medabots_server:set_blocks/pot
+replaceitem block -1565 45 -239 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"drawbridge",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.drawbridge"}]}'}}
 execute positioned -1562 45 -235 run function medabots_server:set_blocks/pot
 execute positioned -1564 45 -231 run function medabots_server:set_blocks/pot
 execute positioned -1567 45 -236 run function medabots_server:set_blocks/pot/6_medallar_cents
@@ -160,7 +162,7 @@ execute positioned -1569 45 -207 run function medabots_server:set_blocks/door/cl
 execute positioned -1538 45 -228 run function medabots_server:set_blocks/goal_area
 execute positioned -1509 45 -196 run function medabots_server:set_blocks/starting_area
 tag @s add second_go
-teleport @s -1509 45 -196
+teleport @s -1509 45 -196 0 0
 bossbar set medabots_server:seashore_a/time value 0
 bossbar set medabots_server:seashore_a/time players @s
 scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Battle 1

@@ -13,7 +13,7 @@ tag @e[x=-1808.5,y=44,z=-423.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2
-teleport @s -1814 44 -433
+teleport @s -1816 44 -433
 effect give @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=1] minecraft:night_vision 2 0 true
 effect give @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=1] minecraft:blindness 2 0 true
 scoreboard players set @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=1] Battle 2

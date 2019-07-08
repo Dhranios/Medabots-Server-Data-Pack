@@ -22,7 +22,7 @@ execute positioned -1621 45 -471 run function medabots_server:spawn_entities/can
 execute positioned -1624 45 -463 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
 execute positioned -1611 45 -453 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_2
 execute positioned -1611 45 -452 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_2
-execute positioned -1626 45 -447 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
+execute positioned -1627 45 -447 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
 execute positioned -1660 45 -406 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1660 45 -407 run function medabots_server:spawn_entities/item/1_medallar_cent
 execute positioned -1655 45 -413 run function medabots_server:spawn_entities/item/1_medallar_cent
@@ -31,7 +31,7 @@ execute positioned -1576 45 -466 run function medabots_server:spawn_entities/ite
 execute positioned -1631 45 -457 run function medabots_server:spawn_entities/item/10_medallar_cents
 execute positioned -1599 45 -453 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1629 45 -421 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
-execute positioned -1645 45 -409 run function medabots_server:set_blocks/floor_switch/blue
+execute positioned -1645 45 -408 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1629 45 -420 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1579 45 -434 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1580 45 -441 run function medabots_server:set_blocks/floor_switch/blue
@@ -180,8 +180,8 @@ execute positioned -1606 45 -456 run function medabots_server:set_blocks/door/cl
 execute positioned -1616 45 -464 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1635 45 -451 run function medabots_server:set_blocks/door/open/east
 execute positioned -1658 45 -392 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=-1] -1658 45 -392
-teleport @s[tag=-1] -1658 45 -392
+teleport @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=-1] -1658 45 -392 0 0
+teleport @s[tag=-1] -1658 45 -392 0 0
 tag @a[x=-1658,y=45,z=-392,distance=..1] remove -1
 bossbar set medabots_server:jungle_b/time value 0
 bossbar set medabots_server:jungle_b/time players @a[x=-1658,y=45,z=-392,distance=..1]

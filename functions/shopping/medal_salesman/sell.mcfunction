@@ -41,4 +41,5 @@ execute if entity @s[nbt={Inventory:[{Slot:102b,tag:{medabots_server:{part:"meda
 execute if entity @s[nbt={Inventory:[{Slot:103b,tag:{medabots_server:{part:"medal"}}}]}] run tellraw @s {"translate":"medabots_server:message.shop.sell.more.1","clickEvent":{"action":"run_command","value":"/trigger ShopIndex1 set 103"},"with":[{"text":"125"},{"nbt":"Inventory[{Slot:103b}].tag.display.Name","entity":"@s","interpret":true}]}
 execute if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{part:"medal"}}}]}] run tellraw @s {"translate":"medabots_server:message.shop.sell.more.1","clickEvent":{"action":"run_command","value":"/trigger ShopIndex1 set 150"},"with":[{"text":"125"},{"nbt":"Inventory[{Slot:-106b}].tag.display.Name","entity":"@s","interpret":true}]}
 scoreboard players set @s ShopIndex1 -1
+scoreboard players set @s ShopIndex2 -1
 scoreboard players enable @s ShopIndex1

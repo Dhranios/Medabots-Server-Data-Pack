@@ -172,7 +172,7 @@ execute positioned -1652 45 -229 run function medabots_server:set_blocks/door/cl
 execute positioned -1660 45 -234 run function medabots_server:set_blocks/goal_area
 execute positioned -1594 45 -243 run function medabots_server:set_blocks/starting_area
 tag @s add rubberobo
-teleport @s -1594 45 -243
+teleport @s -1594 45 -243 0 0
 bossbar set medabots_server:snowfield_a/time value 0
 bossbar set medabots_server:snowfield_a/time players @s
 scoreboard players set @a[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63] Battle 1

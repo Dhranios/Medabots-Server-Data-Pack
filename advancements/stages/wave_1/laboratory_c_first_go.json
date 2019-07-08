@@ -36,7 +36,7 @@
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1/laboratory_b_special",
+	"parent": "medabots_server:stages/wave_1/ruins_out_c_first_go",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

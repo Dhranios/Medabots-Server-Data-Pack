@@ -45,21 +45,22 @@ title @s[scores={FlyTime=100..160,MedaforceTimer=2,Fly=3}] title {"translate":"m
 scoreboard players remove @s[scores={OverheatingFly=1,MedaforceTimer=2}] LegsArmor 1
 
 # Prevent standing on ground
-execute unless block ~ ~-1.2 ~ minecraft:air run effect give @s[scores={Fly=1..2},tag=!sneak_pos] minecraft:levitation 1 0 true
-execute unless block ~ ~-0.5 ~ minecraft:air run effect give @s[scores={Fly=1..2}] minecraft:levitation 1 0 true
+execute unless block ~ ~-1.2 ~ minecraft:air run effect give @s[scores={Fly=1..2}] minecraft:levitation 1 0 true
+execute rotated ~ 0 anchored eyes unless block ^ ^0.4 ^1 minecraft:barrier unless block ^ ^0.4 ^1 minecraft:black_stained_glass unless block ^ ^0.4 ^1 minecraft:air run effect clear @s[scores={Fly=1..2}] minecraft:levitation
+execute unless block ~ ~-0.4 ~ minecraft:air run effect give @s[scores={Fly=1..2}] minecraft:levitation 1 0 true
 
 # No flying if not in battle
 scoreboard players set @s[scores={Fly=1..},tag=!hostile] Fly 0
 
 # Instantly fall if not selected
-execute if block ~ ~-1.2 ~ minecraft:air if block ~ ~-0.5 ~ minecraft:air run effect clear @s[scores={Fly=..2},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] minecraft:levitation
-execute if block ~ ~-0.5 ~ minecraft:air run effect clear @s[scores={Fly=..2},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]},tag=sneak_pos] minecraft:levitation
+execute if block ~ ~-1.2 ~ minecraft:air if block ~ ~-0.4 ~ minecraft:air run effect clear @s[scores={Fly=..2},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] minecraft:levitation
+execute if block ~ ~-0.4 ~ minecraft:air rotated ~ 0 anchored eyes unless block ^ ^0.3 ^1 minecraft:barrier unless block ^ ^0.4 ^1 minecraft:black_stained_glass unless block ^ ^0.4 ^1 minecraft:air run effect clear @s[scores={Fly=..2},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] minecraft:levitation
 
 # Static floating when used
-effect give @s[scores={Fly=1..2},tag=static_fly_move_up] minecraft:levitation 1 2 true
-execute if block ~ ~-0.7 ~ minecraft:air run effect clear @s[scores={Fly=1..2},tag=!static_fly_move_up] minecraft:levitation
-effect give @s[scores={Fly=1..2,LegsArmor=1..},tag=!static_fly_move_up] minecraft:slow_falling 1 0 true
-effect clear @s[scores={Fly=1..2},tag=static_fly_move_up] minecraft:slow_falling
+effect give @s[scores={Fly=1..2},tag=static_fly,tag=static_fly_move_up] minecraft:levitation 1 2 true
+execute if block ~ ~-0.7 ~ minecraft:air run effect clear @s[scores={Fly=1..2},tag=static_fly,tag=!static_fly_move_up] minecraft:levitation
+effect give @s[scores={Fly=1..2,LegsArmor=1..},tag=static_fly,tag=!static_fly_move_up] minecraft:slow_falling 1 0 true
+effect clear @s[scores={Fly=1..2},tag=static_fly,tag=static_fly_move_up] minecraft:slow_falling
 
 # Switch between levitation and slow falling
 tag @s[tag=static_fly_move_up] add static_fly_move_down

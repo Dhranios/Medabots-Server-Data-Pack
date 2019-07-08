@@ -1,6 +1,6 @@
 # Timer countdown
 scoreboard players remove @s[scores={Dialog=1..}] Dialog 1
-execute if entity @s[scores={Dialog=0}] run function medabots_server:entities/bomb/explode
+execute if entity @s[scores={Dialog=0},tag=!dead] run function medabots_server:entities/bomb/explode
 
 # Push away
 execute if entity @s[scores={Moving=0}] run function medabots_server:entities/bomb/hit
@@ -66,7 +66,7 @@ execute as @e[distance=..0.4,tag=bomb,type=minecraft:falling_block] run data mer
 
 # Position correcion (else it floats above the ground)
 execute at @s unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:bubble_column unless block ~ ~-0.2 ~ minecraft:black_carpet unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava run tag @s add align_y
-execute at @s positioned ~ ~0.8 ~ align y run teleport @s[tag=align_y] ~ ~-0.375 ~
+execute at @s positioned ~ ~0.6 ~ align y run teleport @s[tag=align_y] ~ ~-0.375 ~
 execute if entity @s[scores={Moving=0},tag=has_moved] at @s align xz run teleport @s ~0.5 ~ ~0.5
 tag @s[scores={Moving=0},tag=has_moved] remove has_moved
 execute unless entity @s[scores={Steps=0..}] run scoreboard players set @s Steps 0

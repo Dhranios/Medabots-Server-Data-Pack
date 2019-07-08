@@ -9,6 +9,9 @@ execute if entity @s[type=minecraft:player] store result score @s Damage run dat
 execute if entity @s[type=!minecraft:player] store result score @s Damage run data get entity @s AbsorptionAmount -1
 scoreboard players operation @s Damage += #100 Constants
 
+# Prevent earrape when not verified and when leaving stage
+scoreboard players set @s[nbt={HurtTime:0s}] Damage 0
+
 # Prevent normal damage
 effect give @s[type=!#medabots_server:undead,scores={Damage=1..}] minecraft:instant_health 1 19 true
 effect give @s[type=#medabots_server:undead,scores={Damage=1..}] minecraft:instant_damage 1 19 true

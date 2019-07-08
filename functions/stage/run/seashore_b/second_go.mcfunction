@@ -1,9 +1,10 @@
-execute unless entity @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,scores={Stage=13},tag=hide_normal_time] run bossbar set medabots_server:seashore_b/time players @s[scores={Battle=1..}]
-execute unless entity @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,scores={Stage=13},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:seashore_b/time value
-execute unless entity @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,scores={Stage=13},tag=hide_normal_time] store result bossbar medabots_server:seashore_b/time value run scoreboard players operation #temp Time += #1 Constants
-execute if entity @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,scores={Stage=13},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:seashore_b/robattle value
-execute if entity @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,scores={Stage=13},tag=hide_normal_time] store result bossbar medabots_server:seashore_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
-execute if entity @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,scores={Stage=13},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute unless entity @e[scores={Stage=13},tag=hide_normal_time] run bossbar set medabots_server:seashore_b/time players @s[scores={Battle=1..}]
+execute unless entity @e[scores={Stage=13},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:seashore_b/time value
+execute unless entity @e[scores={Stage=13},tag=hide_normal_time] store result bossbar medabots_server:seashore_b/time value run scoreboard players operation #temp Time += #1 Constants
+execute if entity @e[scores={Stage=13},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:seashore_b/robattle value
+execute if entity @e[scores={Stage=13},tag=hide_normal_time] if entity @e[scores={Stage=13,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:seashore_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[scores={Stage=13},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mission] at @s run function medabots_server:stage/mission_time_up
+execute if entity @e[scores={Stage=13},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/seashore_b/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death

@@ -33,7 +33,7 @@ execute positioned -1792 44 -382 run function medabots_server:set_blocks/floor_s
 execute positioned -1789 44 -383 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1786 44 -381 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1786 44 -378 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1808 44 -411 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1808 44 -412 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1801 44 -396 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1793 44 -434 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1793 44 -435 run function medabots_server:set_blocks/floor_switch/blue
@@ -67,7 +67,7 @@ execute positioned -1808 44 -402 run function medabots_server:set_blocks/action_
 execute positioned -1807 44 -405 run function medabots_server:set_blocks/action_floor/disabled/bomb/delay_5
 execute positioned -1812 44 -405 run function medabots_server:set_blocks/action_floor/disabled/bomb/delay_5
 execute positioned -1798 44 -415 run function medabots_server:set_blocks/action_floor/enabled/ice_block/west
-execute positioned -1804 44 -412 run function medabots_server:set_blocks/action_floor/enabled/ice_block/west
+execute positioned -1804 44 -413 run function medabots_server:set_blocks/action_floor/enabled/ice_block/west
 execute positioned -1791 44 -407 run function medabots_server:set_blocks/action_floor/enabled/ice_block/north
 execute positioned -1790 44 -402 run function medabots_server:set_blocks/action_floor/enabled/ice_block/west
 execute positioned -1792 44 -401 run function medabots_server:set_blocks/action_floor/enabled/ice_block/north
@@ -87,7 +87,7 @@ execute positioned -1816 44 -378 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1802 44 -365 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1798 44 -367 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1790 44 -360 run function medabots_server:set_blocks/pot/2_medallar_cents
-execute positioned -1787 44 -359 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1787 44 -359 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1777 44 -362 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1791 44 -379 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1788 44 -384 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -112,12 +112,14 @@ execute positioned -1821 44 -413 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1802 44 -437 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1793 44 -434 run function medabots_server:set_blocks/pot
 execute positioned -1793 44 -435 run function medabots_server:set_blocks/pot
-execute positioned -1804 44 -413 run function medabots_server:set_blocks/pot
+execute positioned -1804 44 -414 run function medabots_server:set_blocks/pot
 execute positioned -1790 44 -404 run function medabots_server:set_blocks/pot
 execute positioned -1784 44 -398 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1797 44 -391 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1796 44 -391 run function medabots_server:set_blocks/pot
+# Stage build item pot
 execute positioned -1795 44 -391 run function medabots_server:set_blocks/pot
+replaceitem block -1795 44 -391 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"glass",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.glass"}]}'}}
 execute positioned -1778 44 -412 run function medabots_server:set_blocks/pot
 execute positioned -1815 44 -406 run function medabots_server:set_blocks/bridge
 execute positioned -1820 44 -428 run function medabots_server:set_blocks/bridge
@@ -153,8 +155,8 @@ execute positioned -1807 44 -435 run function medabots_server:set_blocks/door/cl
 execute positioned -1773 44 -391 run function medabots_server:set_blocks/door/open/west
 execute positioned -1779 44 -415 run function medabots_server:set_blocks/door/open/south
 execute positioned -1817 44 -352 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=-1] -1817 44 -352
-teleport @s[tag=-1] -1817 44 -352
+teleport @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=-1] -1817 44 -352 0 0
+teleport @s[tag=-1] -1817 44 -352 0 0
 tag @a[x=-1817,y=44,z=-352,distance=..1] remove -1
 bossbar set medabots_server:iceberg_b/time value 0
 bossbar set medabots_server:iceberg_b/time players @a[x=-1817,y=44,z=-352,distance=..1]

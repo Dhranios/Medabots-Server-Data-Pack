@@ -28,6 +28,7 @@ execute if entity @s[tag=east,tag=north_black_glazed_terracotta_1] run fill ~1 ~
 execute if entity @s[tag=east,tag=south_black_glazed_terracotta_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:black_glazed_terracotta[facing=south] replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=east_black_glazed_terracotta_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:black_glazed_terracotta[facing=east] replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=west_black_glazed_terracotta_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:black_glazed_terracotta[facing=west] replace minecraft:oak_planks
+execute if entity @s[tag=east,tag=barrier_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:barrier replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=air_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:air replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=water_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:water replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=grass_block_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:grass_block replace minecraft:oak_planks
@@ -53,6 +54,7 @@ execute if entity @s[tag=west,tag=north_black_glazed_terracotta_1] run fill ~-1 
 execute if entity @s[tag=west,tag=south_black_glazed_terracotta_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:black_glazed_terracotta[facing=south] replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=east_black_glazed_terracotta_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:black_glazed_terracotta[facing=east] replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=west_black_glazed_terracotta_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:black_glazed_terracotta[facing=west] replace minecraft:oak_planks
+execute if entity @s[tag=west,tag=barrier_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:barrier replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=air_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:air replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=water_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:water replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=grass_block_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:grass_block replace minecraft:oak_planks
@@ -78,6 +80,7 @@ execute if entity @s[tag=north,tag=north_black_glazed_terracotta_1] run fill ~ ~
 execute if entity @s[tag=north,tag=south_black_glazed_terracotta_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:black_glazed_terracotta[facing=south] replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=east_black_glazed_terracotta_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:black_glazed_terracotta[facing=east] replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=west_black_glazed_terracotta_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:black_glazed_terracotta[facing=west] replace minecraft:oak_planks
+execute if entity @s[tag=north,tag=barrier_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:barrier replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=air_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:air replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=water_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:water replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=grass_block_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:grass_block replace minecraft:oak_planks
@@ -103,6 +106,7 @@ execute if entity @s[tag=south,tag=north_black_glazed_terracotta_1] run fill ~ ~
 execute if entity @s[tag=south,tag=south_black_glazed_terracotta_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=south] replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=east_black_glazed_terracotta_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=east] replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=west_black_glazed_terracotta_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=west] replace minecraft:oak_planks
+execute if entity @s[tag=south,tag=barrier_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:barrier replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=cyan_terracotta_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:cyan_terracotta replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=cyan_terracotta_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:cyan_terracotta replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=cyan_terracotta_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:cyan_terracotta replace minecraft:oak_planks

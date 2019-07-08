@@ -1,6 +1,6 @@
-teleport @a[x=-1504,y=51,z=-210,dx=275,dy=4,dz=93,tag=-1] -1476 14 -176
-teleport @a[x=-1504,y=51,z=-210,dx=275,dy=4,dz=93,tag=0] -1387 19 -194
-teleport @s[tag=-1] -1476 14 -176
+teleport @a[x=-1504,y=51,z=-210,dx=275,dy=4,dz=93,tag=-1] -1476 14 -176 -90 0
+teleport @a[x=-1504,y=51,z=-210,dx=275,dy=4,dz=93,tag=0] -1387 19 -194 90 0
+teleport @s[tag=-1] -1476 14 -176 -90 0
 tag @a[x=-1476,y=14,z=-176,distance=..1] remove -1
 tag @a[x=-1387,y=19,z=-194,distance=..1] remove 0
 scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] Stage 46

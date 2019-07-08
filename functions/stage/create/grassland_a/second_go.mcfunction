@@ -82,8 +82,9 @@ execute positioned -1534 45 -175 run function medabots_server:set_blocks/pot/4_m
 execute positioned -1539 45 -169 run function medabots_server:set_blocks/pot
 execute positioned -1542 45 -173 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1565 45 -174 run function medabots_server:set_blocks/pot/guard/slow/1_medallar_cent
-# Object: stone -1565 45 -172
+# Stage buid item pot
 execute positioned -1565 45 -172 run function medabots_server:set_blocks/pot
+replaceitem block -1565 45 -172 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"stone",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.stone"}]}'}}
 execute positioned -1565 45 -171 run function medabots_server:set_blocks/pot/guard/slow/1_medallar_cent
 execute positioned -1566 45 -172 run function medabots_server:set_blocks/pot/20_medallar_cents
 execute positioned -1534 45 -142 run function medabots_server:set_blocks/stone
@@ -123,7 +124,7 @@ execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/cl
 execute positioned -1551 45 -171 run function medabots_server:set_blocks/goal_area
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area
 tag @s add second_go
-teleport @s -1516 45 -123
+teleport @s -1516 45 -123 0 0
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @s
 scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Battle 1

@@ -1,1 +1,2 @@
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.accelerator"}',Tags:["accelerator","east"],Duration:2147483647}
+fill ~ ~ ~ ~ ~ ~ minecraft:comparator[powered=false,mode=compare,facing=west] replace minecraft:air

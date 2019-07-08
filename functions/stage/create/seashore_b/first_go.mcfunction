@@ -154,8 +154,9 @@ execute positioned -1712 45 -418 run function medabots_server:set_blocks/pot
 execute positioned -1688 45 -435 run function medabots_server:set_blocks/pot
 execute positioned -1688 45 -437 run function medabots_server:set_blocks/pot
 execute positioned -1686 45 -435 run function medabots_server:set_blocks/pot/bomb/delay_5
-# Object: Bomb -1686 45 -437
+# Stage build item pot
 execute positioned -1686 45 -437 run function medabots_server:set_blocks/pot
+replaceitem block -1686 45 -437 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"bomb",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:entity.bomb"}]}'}}
 execute positioned -1717 45 -440 run function medabots_server:set_blocks/pot/yellow_plant
 execute positioned -1717 45 -435 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1716 45 -432 run function medabots_server:set_blocks/pot/balloon_bomb
@@ -212,8 +213,8 @@ execute positioned -1695 45 -411 run function medabots_server:set_blocks/door/cl
 execute positioned -1694 45 -434 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1747 45 -413 run function medabots_server:set_blocks/door/open/south
 execute positioned -1716 45 -356 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=-1] -1716 45 -356
-teleport @s[tag=-1] -1716 45 -356
+teleport @a[x=-1762,y=51,z=-442,dx=94,dy=4,dz=94,tag=-1] -1716 45 -356 0 0
+teleport @s[tag=-1] -1716 45 -356 0 0
 tag @a[x=-1716,y=45,z=-356,distance=..1] remove -1
 bossbar set medabots_server:seashore_b/time value 0
 bossbar set medabots_server:seashore_b/time players @a[x=-1716,y=45,z=-356,distance=..1]

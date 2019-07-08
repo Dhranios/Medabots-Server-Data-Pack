@@ -1,0 +1,1 @@
+tellraw @s {"translate":"medabots_server:message.stage.custom_stage"}

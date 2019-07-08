@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_pickaxe",
+			"nbt": "{Unbreakable:1b,Damage:7}"
+        },
+        "title": {
+            "translate": "medabots_server:block.laser_trap"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.taken"
+        },
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "medabots_server:special_items/fan",
+    "criteria": {
+        "obtained": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/special_items/laser_trap"
+    }
+}

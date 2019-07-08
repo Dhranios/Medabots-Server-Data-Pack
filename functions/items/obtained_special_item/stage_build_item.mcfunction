@@ -1,0 +1,25 @@
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"stone"}}}]}] run function medabots_server:items/obtained_special_item/stone
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"hole"}}}]}] run function medabots_server:items/obtained_special_item/hole
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"drawbridge"}}}]}] run function medabots_server:items/obtained_special_item/drawbridge
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"accelerator"}}}]}] run function medabots_server:items/obtained_special_item/accelerator
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"ice_block"}}}]}] run function medabots_server:items/obtained_special_item/ice_block
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"hammer_punch"}}}]}] run function medabots_server:items/obtained_special_item/hammer_punch
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"press_wall"}}}]}] run function medabots_server:items/obtained_special_item/press_wall
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"cannon"}}}]}] run function medabots_server:items/obtained_special_item/cannon
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"guard"}}}]}] run function medabots_server:items/obtained_special_item/guard
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"bomb"}}}]}] run function medabots_server:items/obtained_special_item/bomb
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"glass"}}}]}] run function medabots_server:items/obtained_special_item/glass
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"gas_floor"}}}]}] run function medabots_server:items/obtained_special_item/gas_floor
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"spring_wall"}}}]}] run function medabots_server:items/obtained_special_item/spring_wall
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"whirlpool"}}}]}] run function medabots_server:items/obtained_special_item/whirlpool
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"mirror"}}}]}] run function medabots_server:items/obtained_special_item/mirror
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"action_floor"}}}]}] run function medabots_server:items/obtained_special_item/action_floor
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"algae"}}}]}] run function medabots_server:items/obtained_special_item/algae
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"raft"}}}]}] run function medabots_server:items/obtained_special_item/raft
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"fan"}}}]}] run function medabots_server:items/obtained_special_item/fan
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"laser_trap"}}}]}] run function medabots_server:items/obtained_special_item/laser_trap
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"balloon_bomb"}}}]}] run function medabots_server:items/obtained_special_item/balloon_bomb
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"alarm"}}}]}] run function medabots_server:items/obtained_special_item/alarm
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"rubberobo"}}}]}] run function medabots_server:items/obtained_special_item/rubberobo
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"jammy"}}}]}] run function medabots_server:items/obtained_special_item/jammy
+

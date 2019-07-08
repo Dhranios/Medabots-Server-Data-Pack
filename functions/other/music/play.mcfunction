@@ -5,9 +5,9 @@ scoreboard players set @s[scores={Level=..59,MusicType=1}] Music 1256
 playsound medabots_server:music.map_finished music @s[scores={Level=60..,MusicType=1}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Level=60..,MusicType=1}] Music 1118
 playsound medabots_server:music.map_beach music @s[scores={MusicType=2}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=2}] Music 3820
+scoreboard players set @s[scores={MusicType=2}] Music 1746
 playsound medabots_server:music.map_sea music @s[scores={MusicType=3}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=3}] Music 2320
+scoreboard players set @s[scores={MusicType=3}] Music 1035
 playsound medabots_server:music.stage.selection music @s[scores={MusicType=4}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=4}] Music 384
 playsound medabots_server:music.stage.mt_battle.stage music @s[scores={MusicType=5}] ~ ~ ~ 1000
@@ -59,3 +59,5 @@ playsound medabots_server:music.battle.corruption music @s[scores={MusicType=28}
 scoreboard players set @s[scores={MusicType=28}] Music 1780
 playsound medabots_server:music.battle.under music @s[scores={MusicType=29}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=29}] Music 1310
+playsound medabots_server:music.edit music @s[scores={MusicType=30}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=30}] Music 488

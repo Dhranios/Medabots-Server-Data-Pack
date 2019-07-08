@@ -150,8 +150,8 @@ execute positioned -1699 45 -145 run function medabots_server:set_blocks/door/cl
 execute positioned -1686 45 -173 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1687 45 -173 run function medabots_server:set_blocks/door/open/east
 execute positioned -1698 45 -122 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=-1] -1698 45 -122
-teleport @s[tag=-1] -1698 45 -122
+teleport @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=-1] -1698 45 -122 0 0
+teleport @s[tag=-1] -1698 45 -122 0 0
 tag @a[x=-1698,y=45,z=-122,distance=..1] remove -1
 bossbar set medabots_server:jungle_a/time value 0
 bossbar set medabots_server:jungle_a/time players @a[x=-1698,y=45,z=-122,distance=..1]

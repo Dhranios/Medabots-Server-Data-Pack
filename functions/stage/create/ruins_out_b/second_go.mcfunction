@@ -7,9 +7,9 @@ execute positioned -1824 45 -526 run function medabots_server:spawn_entities/gua
 execute positioned -1824 45 -531 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1834 45 -526 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1834 45 -531 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1843 45 -534 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1850 45 -528 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1856 45 -522 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1843 45 -534 run function medabots_server:spawn_entities/guard/fast
+execute positioned -1850 45 -528 run function medabots_server:spawn_entities/guard/fast
+execute positioned -1856 45 -522 run function medabots_server:spawn_entities/guard/fast
 execute positioned -1784 45 -481 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4/2_medallar_cents
 execute positioned -1791 45 -481 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4/2_medallar_cents
 execute positioned -1809 45 -479 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
@@ -196,8 +196,8 @@ execute positioned -1788 45 -488 run function medabots_server:set_blocks/door/cl
 execute positioned -1788 45 -510 run function medabots_server:set_blocks/door/closed/south
 execute positioned -1788 45 -511 run function medabots_server:set_blocks/door/open/south
 execute positioned -1788 45 -480 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=-1] -1788 45 -480
-teleport @s[tag=-1] -1788 45 -480
+teleport @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=-1] -1788 45 -480 0 0
+teleport @s[tag=-1] -1788 45 -480 0 0
 tag @a[x=-1788,y=45,z=-480,distance=..1] remove -1
 bossbar set medabots_server:ruins_out_b/time value 0
 bossbar set medabots_server:ruins_out_b/time players @a[x=-1788,y=45,z=-480,distance=..1]

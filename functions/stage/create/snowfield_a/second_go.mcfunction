@@ -28,6 +28,7 @@ execute positioned -1616 45 -240 run function medabots_server:spawn_entities/can
 execute positioned -1651 45.2 -215 run function medabots_server:spawn_entities/item/4_medallar_cents
 summon minecraft:item -1660 45 -212 {Item:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:37,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_energy_barrier"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.shooting_trap"}','{"italic":false,"color":"white","translate":"medabots_server:move.shooting_trap.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pastel_fairy"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pastel_fairy_energy_barrier.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:pastel_fairy_energy_barrier",gender:1b,move:"shooting_trap",part:"right_arm",armor:45,power:25,activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 execute positioned -1610 45 -235 run function medabots_server:spawn_entities/item/4_medallar_cents
+summon minecraft:item -1609 45 -231 {Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"accelerator",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.accelerator"}]}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 execute positioned -1583 45 -230 run function medabots_server:spawn_entities/ice_block
 execute positioned -1578 45 -231 run function medabots_server:spawn_entities/ice_block
 execute positioned -1579 45 -227 run function medabots_server:spawn_entities/ice_block
@@ -164,7 +165,7 @@ execute positioned -1652 45 -229 run function medabots_server:set_blocks/door/cl
 execute positioned -1660 45 -234 run function medabots_server:set_blocks/goal_area
 execute positioned -1594 45 -243 run function medabots_server:set_blocks/starting_area
 tag @s add second_go
-teleport @s -1594 45 -243
+teleport @s -1594 45 -243 0 0
 bossbar set medabots_server:snowfield_a/time value 0
 bossbar set medabots_server:snowfield_a/time players @s
 scoreboard players set @a[x=-1594,y=45,z=-243,distance=..1] Battle 1

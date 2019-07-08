@@ -1,15 +1,15 @@
-execute unless entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,scores={Stage=12},tag=hide_normal_time] run bossbar set medabots_server:jungle_b/time players @s[scores={Battle=1..}]
-execute unless entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,scores={Stage=12},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:jungle_b/time value
-execute unless entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,scores={Stage=12},tag=hide_normal_time] store result bossbar medabots_server:jungle_b/time value run scoreboard players operation #temp Time += #1 Constants
-execute if entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,scores={Stage=12},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:jungle_b/robattle value
-execute if entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,scores={Stage=12},tag=hide_normal_time] store result bossbar medabots_server:jungle_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
-execute if entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,scores={Stage=12},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,tag=mission] at @s run function medabots_server:stage/mission_time_up
-execute if entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,scores={Stage=12},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute unless entity @e[scores={Stage=12},tag=hide_normal_time] run bossbar set medabots_server:jungle_b/time players @s[scores={Battle=1..}]
+execute unless entity @e[scores={Stage=12},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:jungle_b/time value
+execute unless entity @e[scores={Stage=12},tag=hide_normal_time] store result bossbar medabots_server:jungle_b/time value run scoreboard players operation #temp Time += #1 Constants
+execute if entity @e[scores={Stage=12},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:jungle_b/robattle value
+execute if entity @e[scores={Stage=12},tag=hide_normal_time] if entity @e[scores={Stage=12,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:jungle_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[scores={Stage=12},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,tag=mission] at @s run function medabots_server:stage/mission_time_up
+execute if entity @e[scores={Stage=12},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/jungle_b/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1645 44 -409 minecraft:blue_wool if block -1629 44 -420 minecraft:blue_wool if block -1629 44 -421 minecraft:yellow_wool run tag @e[x=-1626.5,y=45,z=-424.5,distance=..0.7,tag=alarm,tag=!enabled] add enabled
-execute if block -1645 44 -409 minecraft:light_blue_wool run tag @e[x=-1626.5,y=45,z=-424.5,distance=..0.7,tag=alarm,tag=enabled] remove enabled
+execute if block -1645 44 -408 minecraft:blue_wool if block -1629 44 -420 minecraft:blue_wool if block -1629 44 -421 minecraft:yellow_wool run tag @e[x=-1626.5,y=45,z=-424.5,distance=..0.7,tag=alarm,tag=!enabled] add enabled
+execute if block -1645 44 -408 minecraft:light_blue_wool run tag @e[x=-1626.5,y=45,z=-424.5,distance=..0.7,tag=alarm,tag=enabled] remove enabled
 execute if block -1629 44 -420 minecraft:light_blue_wool run tag @e[x=-1626.5,y=45,z=-424.5,distance=..0.7,tag=alarm,tag=enabled] remove enabled
 execute if block -1629 44 -421 minecraft:orange_wool run tag @e[x=-1627.5,y=45,z=-419.5,distance=..0.7,tag=alarm,tag=enabled] remove enabled
 execute if block -1579 44 -434 minecraft:light_blue_wool run tag @e[x=-1579.5,y=45,z=-459.5,distance=..0.7,tag=action_floor,tag=!enabled] add enabled

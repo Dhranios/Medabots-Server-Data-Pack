@@ -16,9 +16,9 @@ execute positioned -1999 45 -621 run function medabots_server:set_blocks/door/cl
 execute positioned -1986 45 -609 run function medabots_server:set_blocks/door/closed/west
 execute positioned -1998 45 -596 run function medabots_server:set_blocks/door/closed/north
 execute positioned -2011 45 -608 run function medabots_server:set_blocks/door/closed/east
-teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=-1] -1999 45 -605
-teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=0] -1998 45 -612
-teleport @s[tag=-1] -1999 45 -605
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=-1] -1999 45 -605 -180 0
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=0] -1998 45 -612 0 0
+teleport @s[tag=-1] -1999 45 -605 -180 0
 tag @a[x=-1999,y=45,z=-605,distance=..1] remove -1
 tag @a[x=-1998,y=45,z=-612,distance=..1] remove 0
 scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Stage 48

@@ -1,6 +1,3 @@
-fill -1651 46 -286 -1650 46 -286 minecraft:air
-setblock -1651 46 -287 minecraft:wall_torch[facing=east]
-setblock -1650 46 -287 minecraft:wall_torch[facing=west]
 bossbar set medabots_server:ruins_in_a/time players
 bossbar set medabots_server:ruins_in_a/robattle players
 scoreboard players set @a[scores={Stage=8},tag=enemy_medabot] Music 0

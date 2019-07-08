@@ -205,8 +205,8 @@ setblock -1650 46 -493 minecraft:air
 setblock -1650 47 -493 minecraft:wall_torch[facing=west]
 setblock -1656 46 -504 minecraft:air
 setblock -1656 47 -504 minecraft:wall_torch[facing=south]
-teleport @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=-1] -1620 44 -486
-teleport @s[tag=-1] -1620 44 -486
+teleport @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=-1] -1620 44 -486 0 0
+teleport @s[tag=-1] -1620 44 -486 0 0
 tag @a[x=-1620,y=44,z=-486,distance=..1] remove -1
 bossbar set medabots_server:ruins_in_b/time value 0
 bossbar set medabots_server:ruins_in_b/time players @a[x=-1683,y=44,z=-254,distance=..1]

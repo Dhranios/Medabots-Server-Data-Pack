@@ -82,7 +82,9 @@ execute positioned -1574 45 -697 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1567 45 -693 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1552 45 -691 run function medabots_server:set_blocks/pot
 execute positioned -1551 45 -691 run function medabots_server:set_blocks/pot/2_medallar_cents
+# Stage build item pot
 execute positioned -1550 45 -692 run function medabots_server:set_blocks/pot
+replaceitem block -1550 45 -692 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"algae",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.algae"}]}'}}
 execute positioned -1569 45 -708 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1569 45 -707 run function medabots_server:set_blocks/pot
 execute positioned -1563 45 -704 run function medabots_server:set_blocks/pot
@@ -153,8 +155,8 @@ execute positioned -1544 45 -740 run function medabots_server:set_blocks/door/cl
 execute positioned -1542 45 -728 run function medabots_server:set_blocks/door/closed/north
 execute positioned -1588 45 -730 run function medabots_server:set_blocks/door/open/south
 execute positioned -1574 45 -693 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=-1] -1574 45 -693
-teleport @s[tag=-1] -1574 45 -693
+teleport @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=-1] -1574 45 -693 0 0
+teleport @s[tag=-1] -1574 45 -693 0 0
 tag @a[x=-1574,y=45,z=-693,distance=..1] remove -1
 bossbar set medabots_server:grassland_d/time value 0
 bossbar set medabots_server:grassland_d/time players @a[x=-1574,y=45,z=-693,distance=..1]
