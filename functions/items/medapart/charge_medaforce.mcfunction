@@ -1,6 +1,6 @@
 # Un-set charging
 scoreboard players set @s[scores={Medaforce=1},type=minecraft:player] Medaforce 0
-scoreboard players set @s[scores={Medaforce=1,OverheatingMedal=10..},type=!minecraft:player] Medaforce 0
+scoreboard players set @s[scores={Medaforce=1,OverheatingMedal=15..},type=!minecraft:player] Medaforce 0
 scoreboard players set @s[scores={Medaforce=1},tag=blocked_medaforce,type=!minecraft:player] Medaforce 0
 
 # Set charging
@@ -19,7 +19,7 @@ clear @s[scores={Medaforce=1}] minecraft:gold_ingot{medabots_server:{activated:1
 # Overheating charging
 scoreboard players add @s[scores={Medaforce=1}] OverheatingMedal 2
 scoreboard players remove @s[scores={OverheatingMedal=1..}] OverheatingMedal 1
-title @s[scores={OverheatingMedal=10..}] title {"translate":"medabots_server:move.overheating","color":"red"}
+title @s[scores={OverheatingMedal=11..}] title {"translate":"medabots_server:move.overheating","color":"red"}
 effect give @s[scores={OverheatingMedal=16..},type=!#medabots_server:undead] minecraft:instant_damage 1 1 true
 effect give @s[scores={OverheatingMedal=16..},type=#medabots_server:undead] minecraft:instant_health 1 1 true
 scoreboard players reset @s[scores={OverheatingMedal=0}] OverheatingMedal

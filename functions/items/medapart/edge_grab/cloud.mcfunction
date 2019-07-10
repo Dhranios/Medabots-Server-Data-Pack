@@ -6,7 +6,7 @@ execute if entity @s[nbt={Age:0}] run teleport @a[distance=..1] ~ ~1.2 ~
 execute if entity @s[nbt={Age:1}] positioned ~ ~1 ~ run effect clear @a[distance=..1] minecraft:resistance
 
 # Place barrier
-execute if entity @s[nbt={Age:0}] if block ~ ~-1 ~ minecraft:barrier run tag @s add only_top
+execute if entity @s[nbt={Age:0}] unless block ~ ~-1 ~ minecraft:air run tag @s add only_top
 execute if entity @s[nbt={Age:0}] run fill ~ ~ ~ ~ ~-1 ~ minecraft:barrier replace minecraft:air
 execute if entity @s[nbt={Age:0}] positioned ~ ~1 ~ at @a[distance=..1] run playsound medabots_server:entity.medabot.move.edge_grab player @a ~ ~ ~ 1
 

@@ -7,6 +7,7 @@ execute if entity @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] run t
 execute if entity @e[distance=..0.7,tag=guard,tag=!pot,tag=!action_floor] run tag @s add allowed
 execute if block ~ ~-1 ~ minecraft:air run tag @s remove allowed
 execute if block ~ ~-1 ~ minecraft:water positioned ~ ~-0.6 ~ unless entity @e[distance=..0.7,tag=raft] run tag @s remove allowed
+execute if block ~ ~-1 ~ minecraft:barrier run tag @s remove allowed
 
 execute if block ~ ~ ~ minecraft:comparator run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.pot.accelerator"}
 execute if entity @e[distance=..0.7,tag=jammy,tag=!pot] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.pot.jammy"}

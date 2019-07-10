@@ -22,8 +22,8 @@ execute if block -1705 44 -509 minecraft:orange_wool run tag @e[x=-1702.5,y=45,z
 execute if block -1705 44 -509 minecraft:yellow_wool run tag @e[x=-1702.5,y=45,z=-508.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1718 44 -463 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 1
 execute if block -1729 44 -491 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 1
-execute if block -1703 44 -514 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 1
 execute if block -1711 44 -510 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 1
+execute if block -1703 44 -514 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 1
 execute if block -1751 44 -455 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 2
 execute if block -1746 44 -497 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 2
 execute if block -1673 44 -481 minecraft:lime_wool run scoreboard players add #temp FloorSwitchTime 2

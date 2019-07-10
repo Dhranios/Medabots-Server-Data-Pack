@@ -1,6 +1,7 @@
 execute if block ~ ~ ~ minecraft:chest run tag @s add allowed
 execute if block ~ ~-1 ~ minecraft:air run tag @s remove allowed
 execute if block ~ ~-1 ~ minecraft:water run tag @s remove allowed
+execute if block ~ ~-1 ~ minecraft:barrier run tag @s remove allowed
 execute if entity @e[distance=..0.7,tag=floor_switch] run tag @s remove allowed
 execute if entity @e[distance=..0.7,tag=accelerator] run tag @s remove allowed
 

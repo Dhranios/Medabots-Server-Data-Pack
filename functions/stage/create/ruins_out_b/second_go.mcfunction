@@ -35,7 +35,7 @@ execute positioned -1835 45 -502 run function medabots_server:spawn_entities/ite
 execute positioned -1835 45 -506 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1816 45 -519 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1819 45 -527 run function medabots_server:spawn_entities/item/2_medallar_cents
-summon minecraft:item -1828 45 -535 {Item:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_flyphone"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.fly"}','{"italic":false,"color":"white","translate":"medabots_server:move.fly.description"}','{"text":""}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.fly_falcon"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_flyphone.model"}']},medabots_server:{stage_item:0b,id:"medabots_server:fly_falcon_flyphone",gender:0b,move:"fly",part:"legs",armor:40,defense:20,activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
+summon minecraft:item -1829 45 -535 {Item:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_flyphone"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.fly"}','{"italic":false,"color":"white","translate":"medabots_server:move.fly.description"}','{"text":""}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.fly_falcon"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_flyphone.model"}']},medabots_server:{stage_item:0b,id:"medabots_server:fly_falcon_flyphone",gender:0b,move:"fly",part:"legs",armor:40,defense:20,activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 execute positioned -1828 45 -535 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1797 45 -508 run function medabots_server:spawn_entities/raft
 execute positioned -1778 45 -508 run function medabots_server:spawn_entities/raft
@@ -70,7 +70,7 @@ execute positioned -1829 45 -497 run function medabots_server:set_blocks/mirror/
 execute positioned -1829 45 -502 run function medabots_server:set_blocks/mirror/45
 execute positioned -1831 45 -502 run function medabots_server:set_blocks/mirror/45
 execute positioned -1819 45 -504 run function medabots_server:set_blocks/mirror/45
-execute positioned -1818 45 -502 run function medabots_server:set_blocks/mirror/45
+execute positioned -1819 45 -502 run function medabots_server:set_blocks/mirror/45
 execute positioned -1816 45 -509 run function medabots_server:set_blocks/mirror/45
 execute positioned -1818 45 -509 run function medabots_server:set_blocks/mirror/45
 execute positioned -1778 45 -490 run function medabots_server:set_blocks/mirror/45
@@ -78,7 +78,7 @@ execute positioned -1767 45 -499 run function medabots_server:set_blocks/mirror/
 execute positioned -1831 45 -503 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1825 45 -503 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1825 45 -504 run function medabots_server:set_blocks/mirror/-45
-execute positioned -1819 45 -502 run function medabots_server:set_blocks/mirror/-45
+execute positioned -1818 45 -502 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1818 45 -508 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1816 45 -508 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1818 45 -512 run function medabots_server:set_blocks/mirror/-45

@@ -1,5 +1,6 @@
 execute if block ~ ~-1 ~ minecraft:air run tag @s remove allowed
 execute if block ~ ~-1 ~ minecraft:water run tag @s remove allowed
+execute if block ~ ~-1 ~ minecraft:barrier run tag @s remove allowed
 
 execute if entity @s[y_rotation=45..135,tag=allowed,scores={StageBuild=37}] run function medabots_server:set_blocks/hammer_punch/disabled/east/delay_10
 execute if entity @s[y_rotation=-45..45,tag=allowed,scores={StageBuild=37}] run function medabots_server:set_blocks/hammer_punch/disabled/north/delay_10

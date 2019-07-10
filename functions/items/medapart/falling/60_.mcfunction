@@ -11,6 +11,6 @@ replaceitem entity @s[scores={MedapartType=4,Drop=0}] hotbar.3 minecraft:fishing
 scoreboard players reset @s[scores={Falling=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"left_arm"}}}]}] Falling
 scoreboard players reset @s[scores={Falling=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"right_arm"}}}]}] Falling
 scoreboard players reset @s[scores={Falling=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"head"}}}]}] Falling
-scoreboard players reset @s[scores={Falling=1..},type=!minecraft:player] falling
+scoreboard players reset @s[scores={Falling=1..},type=!minecraft:player] Falling
 execute unless entity @s[scores={Falling=1..}] run scoreboard players reset @s MedapartType
 execute unless entity @s[scores={Falling=1..}] run scoreboard players set @s Time 0
