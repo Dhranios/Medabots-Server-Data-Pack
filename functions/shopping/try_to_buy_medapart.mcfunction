@@ -150,9 +150,9 @@ execute if entity @s[scores={BuyMedapart=149},advancements={medabots_server:wave
 execute if entity @s[scores={BuyMedapart=150},advancements={medabots_server:wave_1/get_all_medabots/magicalcard={left_arm=true}}] run function medabots_server:give_items/medaparts/magicalcard/lookme
 execute if entity @s[scores={BuyMedapart=151},advancements={medabots_server:wave_1/get_all_medabots/magicalcard={right_arm=true}}] run function medabots_server:give_items/medaparts/magicalcard/onetwothree
 execute if entity @s[scores={BuyMedapart=152},advancements={medabots_server:wave_1/get_all_medabots/magicalcard={head=true}}] run function medabots_server:give_items/medaparts/magicalcard/magitech
-execute if entity @s[scores={BuyMedapart=153},advancements={medabots_server:wave_1/get_all_medabots/magolor={legs=true}}] run function medabots_server:give_items/medaparts/magolor/darkmatter
-execute if entity @s[scores={BuyMedapart=154},advancements={medabots_server:wave_1/get_all_medabots/magolor={left_arm=true}}] run function medabots_server:give_items/medaparts/magolor/darkhand
-execute if entity @s[scores={BuyMedapart=155},advancements={medabots_server:wave_1/get_all_medabots/magolor={right_arm=true}}] run function medabots_server:give_items/medaparts/magolor/darkness
+execute if entity @s[scores={BuyMedapart=153},advancements={medabots_server:wave_1/get_all_medabots/magolor={legs=true}}] run function medabots_server:give_items/medaparts/magolor/halcandran_cape
+execute if entity @s[scores={BuyMedapart=154},advancements={medabots_server:wave_1/get_all_medabots/magolor={left_arm=true}}] run function medabots_server:give_items/medaparts/magolor/magic_hand
+execute if entity @s[scores={BuyMedapart=155},advancements={medabots_server:wave_1/get_all_medabots/magolor={right_arm=true}}] run function medabots_server:give_items/medaparts/magolor/tech_hand
 execute if entity @s[scores={BuyMedapart=156},advancements={medabots_server:wave_1/get_all_medabots/magolor={head=true}}] run function medabots_server:give_items/medaparts/magolor/master_crown
 execute if entity @s[scores={BuyMedapart=157},advancements={medabots_server:wave_1/get_all_medabots/marine_killer={legs=true}}] run function medabots_server:give_items/medaparts/marine_killer/fishtail
 execute if entity @s[scores={BuyMedapart=158},advancements={medabots_server:wave_1/get_all_medabots/marine_killer={left_arm=true}}] run function medabots_server:give_items/medaparts/marine_killer/nibble_wave

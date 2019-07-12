@@ -223,11 +223,14 @@ scoreboard objectives setdisplay belowName Level
 scoreboard players set #-1 Constants -1
 scoreboard players set #0 Constants 0
 scoreboard players set #1 Constants 1
+scoreboard players set #2 Constants 2
 scoreboard players set #4 Constants 4
+scoreboard players set #5 Constants 5
 scoreboard players set #10 Constants 10
 scoreboard players set #20 Constants 20
 scoreboard players set #40 Constants 40
 scoreboard players set #70 Constants 70
+scoreboard players set #80 Constants 80
 scoreboard players set #100 Constants 100
 scoreboard players set #1000 Constants 1000
 scoreboard players set #1005 Constants 1005

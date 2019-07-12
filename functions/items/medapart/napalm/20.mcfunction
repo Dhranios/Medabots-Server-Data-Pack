@@ -3,7 +3,7 @@ scoreboard players set @s[scores={Napalm=1},nbt={Inventory:[{Slot:1b,tag:{medabo
 scoreboard players set @s[scores={Napalm=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burn_head"}}}]}] MedapartType 2
 scoreboard players set @s[scores={Napalm=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:fly_falcon_burntube"}}}]}] MedapartType 3
 scoreboard players set @s[scores={Napalm=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:king_pharaoh_grand_bomb"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Napalm=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:fancyroll_let_bomb"}}}]}] MedapartType 5
+scoreboard players set @s[scores={Napalm=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:fancyroll_letbomb"}}}]}] MedapartType 5
 scoreboard players set @s[scores={Napalm=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:metal_general_produce"}}}]}] MedapartType 6
 
 # Give the weapon

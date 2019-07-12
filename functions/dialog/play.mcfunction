@@ -56,9 +56,9 @@ execute if entity @s[tag=dialog_infinity_rubberobo_enters_snowfield_b] run funct
 execute if entity @s[tag=dialog_infinity_rubberobo_leaves_snowfield_b] run function medabots_server:dialog/infinity/rubberobo_leaves_snowfield_b
 execute if entity @s[tag=dialog_infinity_vs_gillgirl] run function medabots_server:dialog/infinity/vs_gillgirl
 execute if entity @s[tag=dialog_infinity_vs_gillgirl_battle] run function medabots_server:dialog/infinity/vs_gillgirl_battle
-#execute if entity @s[tag=dialog_infinity_the_picture] run function medabots_server:dialog/infinity/the_picture
-#execute if entity @s[tag=dialog_infinity_rubberobo_interview] run function medabots_server:dialog/infinity/rubberobo_interview
-#execute if entity @s[tag=dialog_infinity_where_is_karin] run function medabots_server:dialog/infinity/where_is_karin
+execute if entity @s[tag=dialog_infinity_the_picture] run function medabots_server:dialog/infinity/the_picture
+execute if entity @s[tag=dialog_infinity_rubberobo_interview] run function medabots_server:dialog/infinity/rubberobo_interview
+execute if entity @s[tag=dialog_infinity_where_is_karin] run function medabots_server:dialog/infinity/where_is_karin
 #execute if entity @s[tag=dialog_infinity_the_prominence] run function medabots_server:dialog/infinity/the_prominence
 
 # Other

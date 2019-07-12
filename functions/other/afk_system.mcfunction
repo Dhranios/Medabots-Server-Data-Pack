@@ -222,18 +222,21 @@ tag @s[scores={Jump=1..}] add jumping
 scoreboard players set @s[scores={Jump=1..}] Jump 0
 tag @s[tag=walking] remove walking
 tag @s[scores={Walk=1..}] add walking
+tag @s[scores={WalkOnWater=1..}] add walking
+tag @s[scores={WalkUnderWater=1..}] add walking
+tag @s[scores={Swimming=1..}] add walking
 scoreboard players set @s[scores={Walk=1..}] Walk 0
+scoreboard players set @s[scores={WalkOnWater=1..}] WalkOnWater 0
+scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0
+scoreboard players set @s[scores={Swimming=1..}] Swimming 0
 tag @s[tag=running] remove running
 tag @s[scores={Run=1..}] add running
 scoreboard players set @s[scores={Run=1..}] Run 0
-scoreboard players set @s[scores={Swimming=1..}] Swimming 0
 scoreboard players set @s[scores={Drop=1..}] Drop 0
 scoreboard players set @s[scores={Boat=1..}] Boat 0
 scoreboard players set @s[scores={Flying=1..}] Flying 0
 scoreboard players set @s[scores={Minecart=1..}] Minecart 0
 scoreboard players set @s[scores={Horse=1..}] Horse 0
-scoreboard players set @s[scores={WalkOnWater=1..}] WalkOnWater 0
-scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0
 scoreboard players set @s[scores={Pig=1..}] Pig 0
 scoreboard players set @s[scores={Fall=1..}] Fall 0
 tag @s[tag=sneak_pos] remove sneak_pos

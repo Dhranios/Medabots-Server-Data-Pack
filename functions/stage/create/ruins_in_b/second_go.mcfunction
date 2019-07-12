@@ -99,14 +99,14 @@ execute positioned -1641 44 -484 run function medabots_server:set_blocks/mirror/
 execute positioned -1634 44 -498 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1643 44 -498 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1632 44 -528 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
-execute positioned -1633 44 -528 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_10
+execute positioned -1633 44 -528 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1634 44 -527 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
 execute positioned -1634 44 -526 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
-execute positioned -1634 44 -489 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_4
-execute positioned -1641 44 -489 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_2
-execute positioned -1634 44 -493 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_8
-execute positioned -1641 44 -493 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_4
-execute positioned -1653 44 -530 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
+execute positioned -1634 44 -489 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_4
+execute positioned -1641 44 -489 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_2
+execute positioned -1634 44 -493 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_8
+execute positioned -1641 44 -493 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_4
+execute positioned -1653 44 -530 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1640 44 -545 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1638 44 -545 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1649 44 -519 run function medabots_server:set_blocks/spring_wall/disabled/west/delay_10
@@ -197,23 +197,15 @@ execute positioned -1621 44 -532 run function medabots_server:set_blocks/door/cl
 execute positioned -1645 44 -566 run function medabots_server:set_blocks/door/closed/east
 execute positioned -1621 44 -552 run function medabots_server:set_blocks/door/open/south
 execute positioned -1620 44 -486 run function medabots_server:set_blocks/starting_area
-setblock -1650 46 -482 minecraft:air
-setblock -1650 47 -482 minecraft:wall_torch[facing=west]
-setblock -1659 46 -504 minecraft:air
-setblock -1659 47 -504 minecraft:wall_torch[facing=south]
-setblock -1650 46 -493 minecraft:air
-setblock -1650 47 -493 minecraft:wall_torch[facing=west]
-setblock -1656 46 -504 minecraft:air
-setblock -1656 47 -504 minecraft:wall_torch[facing=south]
 teleport @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=-1] -1620 44 -486 0 0
 teleport @s[tag=-1] -1620 44 -486 0 0
 tag @a[x=-1620,y=44,z=-486,distance=..1] remove -1
 bossbar set medabots_server:ruins_in_b/time value 0
-bossbar set medabots_server:ruins_in_b/time players @a[x=-1683,y=44,z=-254,distance=..1]
-scoreboard players set @a[x=-1683,y=44,z=-254,distance=..1] Battle 1
-scoreboard players set @a[x=-1683,y=44,z=-254,distance=..1] Stage 17
-scoreboard players set @a[x=-1683,y=44,z=-254,distance=..1] Music 0
-scoreboard players set @a[x=-1683,y=44,z=-254,distance=..1] MusicType 14
+bossbar set medabots_server:ruins_in_b/time players @a[x=-1620,y=44,z=-486,distance=..1]
+scoreboard players set @a[x=-1620,y=44,z=-486,distance=..1] Battle 1
+scoreboard players set @a[x=-1620,y=44,z=-486,distance=..1] Stage 17
+scoreboard players set @a[x=-1620,y=44,z=-486,distance=..1] Music 0
+scoreboard players set @a[x=-1620,y=44,z=-486,distance=..1] MusicType 14
 scoreboard players set @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=enemy_medabot] Battle 3
 scoreboard players set @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=enemy_medabot] Stage 17
 scoreboard players set @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=enemy_medabot] Music 0

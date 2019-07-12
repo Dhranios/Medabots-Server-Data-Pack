@@ -6,7 +6,7 @@ scoreboard players set @s[scores={Press=1},nbt={Inventory:[{Slot:1b,tag:{medabot
 scoreboard players set @s[scores={Press=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:uglyduck_featherdone"}}}]}] MedapartType 5
 scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rob_stack_arm"}}}]}] MedapartType 6
 scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:ashton_ash_breaker"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:magolor_darkhand"}}}]}] MedapartType 8
+scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:magolor_magic_hand"}}}]}] MedapartType 8
 
 # Give the weapon
 # Give the weapon to user

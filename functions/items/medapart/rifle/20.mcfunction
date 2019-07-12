@@ -7,7 +7,7 @@ scoreboard players set @s[scores={Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabot
 scoreboard players set @s[scores={Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:sailor_multi_short_shot"}}}]}] MedapartType 6
 scoreboard players set @s[scores={Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:blackbeetle_blackfuser"}}}]}] MedapartType 7
 scoreboard players set @s[scores={Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:arcbeetle_explode"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:magolor_darkness"}}}]}] MedapartType 9
+scoreboard players set @s[scores={Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:magolor_tech_hand"}}}]}] MedapartType 9
 scoreboard players set @s[scores={Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:warbonnet_shoot_barrel"}}}]}] MedapartType 10
 scoreboard players set @s[scores={Rifle=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:metabee_revolver"}}}]}] MedapartType 11
 scoreboard players set @s[scores={Rifle=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:amelia_spear"}}}]}] MedapartType 12

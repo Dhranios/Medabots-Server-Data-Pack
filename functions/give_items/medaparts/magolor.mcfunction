@@ -1,4 +1,4 @@
-function medabots_server:give_items/medaparts/magolor/darkmatter
-function medabots_server:give_items/medaparts/magolor/darkhand
-function medabots_server:give_items/medaparts/magolor/darkness
+function medabots_server:give_items/medaparts/magolor/halcandran_cape
+function medabots_server:give_items/medaparts/magolor/magic_hand
+function medabots_server:give_items/medaparts/magolor/tech_hand
 function medabots_server:give_items/medaparts/magolor/master_crown

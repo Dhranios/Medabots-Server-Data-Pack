@@ -36,7 +36,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:magolor_darkness\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:magolor_tech_hand\"}}"
                     }
                 ]
             }
@@ -46,7 +46,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:magolor_darkhand\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:magolor_magic_hand\"}}"
                     }
                 ]
             }
@@ -56,7 +56,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:magolor_darkmatter\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:magolor_halcandran_cape\"}}"
                     }
                 ]
             }

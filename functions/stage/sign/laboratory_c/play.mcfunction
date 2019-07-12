@@ -1,6 +1,6 @@
 teleport @s[scores={Error=0,Dialog=0},gamemode=adventure] -1579 29 -595 90 0
-execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run data merge block -1587 51 -617 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/laboratory_c/enter"}}'}
-execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run setblock -1587 52 -619 minecraft:red_wool
+execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run data merge block -1587 51 -619 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/laboratory_c/enter"}}'}
+execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run setblock -1587 52 -621 minecraft:red_wool
 scoreboard players set @s[scores={Error=0,Dialog=0},gamemode=adventure] Music 0
 scoreboard players set @s[scores={Error=0,Dialog=0},gamemode=adventure] MusicType 4
 execute if entity @s[scores={Error=0,Dialog=0},gamemode=adventure] run function medabots_server:stage/sign/generic/stage_settings

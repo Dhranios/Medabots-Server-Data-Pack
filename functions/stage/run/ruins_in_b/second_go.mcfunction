@@ -1,35 +1,38 @@
-execute unless entity @e[scores={Stage=8},tag=hide_normal_time] run bossbar set medabots_server:ruins_in_b/time players @s[scores={Battle=1..}]
-execute unless entity @e[scores={Stage=8},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:ruins_in_b/time value
-execute unless entity @e[scores={Stage=8},tag=hide_normal_time] store result bossbar medabots_server:ruins_in_b/time value run scoreboard players operation #temp Time += #1 Constants
-execute if entity @e[scores={Stage=8},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:ruins_in_b/robattle value
-execute if entity @e[scores={Stage=8},tag=hide_normal_time] if entity @e[scores={Stage=8,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:ruins_in_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
-execute if entity @e[scores={Stage=8},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1666,y=0,z=-572,dx=92,dy=49,dz=92,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute unless entity @e[scores={Stage=17},tag=hide_normal_time] run bossbar set medabots_server:ruins_in_b/time players @s[scores={Battle=1..}]
+execute unless entity @e[scores={Stage=17},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:ruins_in_b/time value
+execute unless entity @e[scores={Stage=17},tag=hide_normal_time] store result bossbar medabots_server:ruins_in_b/time value run scoreboard players operation #temp Time += #1 Constants
+execute if entity @e[scores={Stage=17},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:ruins_in_b/robattle value
+execute if entity @e[scores={Stage=17},tag=hide_normal_time] if entity @e[scores={Stage=17,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:ruins_in_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[scores={Stage=17},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1666,y=0,z=-572,dx=92,dy=49,dz=92,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/ruins_in_b/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1641 43 -506 minecraft:blue_wool run tag @e[x=-1662.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1641 43 -505 minecraft:blue_wool run tag @e[x=-1662.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1640 43 -506 minecraft:blue_wool run tag @e[x=-1662.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1640 43 -505 minecraft:blue_wool run tag @e[x=-1662.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1641 43 -506 minecraft:light_blue_wool if block -1641 43 -505 minecraft:light_blue_wool if block -1640 43 -505 minecraft:light_blue_wool if block -1640 43 -505 minecraft:light_blue_wool run tag @e[x=-1662.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1641 43 -505 minecraft:light_blue_wool run tag @e[x=-1662.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1641 43 -535 minecraft:blue_wool run tag @e[x=-1652.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1641 43 -534 minecraft:blue_wool run tag @e[x=-1652.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1640 43 -535 minecraft:blue_wool run tag @e[x=-1652.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1640 43 -534 minecraft:blue_wool run tag @e[x=-1652.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1641 43 -535 minecraft:light_blue_wool if block -1641 43 -534 minecraft:light_blue_wool if block -1640 43 -535 minecraft:light_blue_wool if block -164 43 -534 minecraft:light_blue_wool run tag @e[x=-1652.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=open] remove open
+execute if block -1641 43 -535 minecraft:light_blue_wool run tag @e[x=-1652.5,y=44,z=-507.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1653 43 -541 minecraft:lime_wool run tag @e[x=-1620.5,y=44,z=-531.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1653 43 -562 minecraft:lime_wool if block -1650 43 -562 minecraft:lime_wool if block -1653 43 -571 minecraft:lime_wool if block -1650 43 -571 minecraft:lime_wool run tag @e[x=-1644.5,y=44,z=-565.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1653 43 -562 minecraft:lime_wool run tag @e[x=-1644.5,y=44,z=-565.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1650 43 -562 minecraft:lime_wool run tag @e[x=-1644.5,y=44,z=-565.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1653 43 -571 minecraft:lime_wool run tag @e[x=-1644.5,y=44,z=-565.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1650 43 -571 minecraft:lime_wool run tag @e[x=-1644.5,y=44,z=-565.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1639 43 -571 minecraft:lime_wool run tag @e[x=-1644.5,y=44,z=-565.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1641 43 -506 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-513,distance=..4,tag=action_floor,tag=!enabled] add enabled
-execute if block -1641 43 -505 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-513,distance=..4,tag=action_floor,tag=!enabled] add enabled
 execute if block -1640 43 -506 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-513,distance=..4,tag=action_floor,tag=!enabled] add enabled
 execute if block -1640 43 -505 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-513,distance=..4,tag=action_floor,tag=!enabled] add enabled
-execute if block -1641 43 -506 minecraft:light_blue_wool if block -1641 43 -505 minecraft:light_blue_wool if block -1640 43 -505 minecraft:light_blue_wool if block -1640 43 -505 minecraft:light_blue_wool run tag @e[x=-1633,y=44,z=-513,distance=..4,tag=action_floor,tag=enabled] remove enabled
-execute if block -1641 43 -535 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-527,distance=..4,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1641 43 -506 minecraft:light_blue_wool if block -1640 43 -506 minecraft:light_blue_wool if block -1640 43 -505 minecraft:light_blue_wool run tag @e[x=-1633,y=44,z=-513,distance=..4,tag=action_floor,tag=enabled] remove enabled
 execute if block -1641 43 -534 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-527,distance=..4,tag=laser_trap,tag=!enabled] add enabled
 execute if block -1640 43 -535 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-527,distance=..4,tag=laser_trap,tag=!enabled] add enabled
 execute if block -1640 43 -534 minecraft:blue_wool run tag @e[x=-1633,y=44,z=-527,distance=..4,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1641 43 -535 minecraft:light_blue_wool if block -1641 43 -534 minecraft:light_blue_wool if block -1640 43 -535 minecraft:light_blue_wool if block -164 43 -534 minecraft:light_blue_wool run tag @e[x=-1633,y=44,z=-527,distance=..4,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1641 43 -534 minecraft:light_blue_wool if block -1640 43 -535 minecraft:light_blue_wool if block -164 43 -534 minecraft:light_blue_wool run tag @e[x=-1633,y=44,z=-527,distance=..4,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1641 43 -505 minecraft:blue_wool run tag @e[x=-1633.5,y=44,z=-488,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1641 43 -505 minecraft:light_blue_wool run tag @e[x=-1633.5,y=44,z=-488.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1641 43 -505 minecraft:blue_wool run tag @e[x=-1640.5,y=44,z=-488,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1641 43 -505 minecraft:light_blue_wool run tag @e[x=-1640.5,y=44,z=-488.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1641 43 -535 minecraft:blue_wool run tag @e[x=-1633.5,y=44,z=-492.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1641 43 -535 minecraft:light_blue_wool run tag @e[x=-1633.5,y=44,z=-492.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1641 43 -535 minecraft:blue_wool run tag @e[x=-1640.5,y=44,z=-492,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1641 43 -535 minecraft:light_blue_wool run tag @e[x=-1640.5,y=44,z=-492.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
 execute if block -1653 43 -541 minecraft:lime_wool run tag @e[x=-1652.5,y=44,z=-529.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
 execute if block -1640 43 -544 minecraft:light_blue_wool run tag @e[x=-1639.5,y=44,z=-544.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
 execute if block -1640 43 -544 minecraft:blue_wool run tag @e[x=-1639.5,y=44,z=-544.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled

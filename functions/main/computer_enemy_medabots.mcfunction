@@ -58,7 +58,8 @@ execute if entity @s[scores={Medaforce=2..,Time=0,Dialog=60},tag=medaforce_selec
 
 # Play walking sound and animation
 tag @s remove walking
-execute unless entity @e[distance=..0.001,type=minecraft:area_effect_cloud,tag=cpu_walk_detection] run tag @s add walking
+execute if entity @s[tag=!tank_legs] unless entity @e[distance=..0.1,type=minecraft:area_effect_cloud,tag=cpu_walk_detection] run tag @s add walking
+execute if entity @s[tag=tank_legs] unless entity @e[distance=..0.01,type=minecraft:area_effect_cloud,tag=cpu_walk_detection] run tag @s add walking
 kill @e[distance=..1,type=minecraft:area_effect_cloud,tag=cpu_walk_detection]
 execute if entity @s[scores={Sound=0},tag=walking,tag=!dying,nbt={OnGround:1b}] run playsound medabots_server:entity.medabot.move.walk hostile @a ~ ~ ~ .025
 scoreboard players set @s[scores={Sound=0},tag=walking,tag=!dying] Sound 8
