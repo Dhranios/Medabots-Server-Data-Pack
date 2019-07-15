@@ -1,11 +1,9 @@
-# Unused task numbers: 11, 12, 14
+# Unused task numbers: 4, 11, 12, 14
 
 # Bug Testers
-execute if entity @s[scores={TaskCheck=4}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"All implemented stages need a couple of test runs, to make sure everything is functioning well."]}
-execute if entity @s[scores={TaskCheck=4}] run data merge block -293 18 -60 {auto:0b}
 
 # Moderators
-execute if entity @s[scores={TaskCheck=5}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"Palace of Twilight needs building."]}
+execute if entity @s[scores={TaskCheck=5}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"Palace of Twilight, Egg Engines and Final Destinations needs building."]}
 execute if entity @s[scores={TaskCheck=5}] run data merge block -292 18 -60 {auto:0b}
 execute if entity @s[scores={TaskCheck=6}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"Mt. Battle's mountain look needs (a lot of) work."]}
 execute if entity @s[scores={TaskCheck=6}] run data merge block -292 18 -59 {auto:0b}
@@ -14,7 +12,7 @@ execute if entity @s[scores={TaskCheck=6}] run data merge block -292 18 -59 {aut
 # FVbico
 execute if entity @s[scores={TaskCheck=7}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"Stage versions need implementing."]}
 execute if entity @s[scores={TaskCheck=7}] run data merge block -291 18 -60 {auto:0b}
-execute if entity @s[scores={TaskCheck=8}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"Update the design of Park and Paradise A, and all B, C, D, E and F stages."]}
+execute if entity @s[scores={TaskCheck=8}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"Update the design of Park and Paradise A and B, and all C, D, E and F stages."]}
 execute if entity @s[scores={TaskCheck=8}] run data merge block -291 18 -59 {auto:0b}
 execute if entity @s[scores={TaskCheck=9}] run tellraw @a[tag=bug_tester] {"translate":"medabots_server:message.pending_tasks.done","with":[{"selector":"@s"},"Re-create Ricco Harbor."]}
 execute if entity @s[scores={TaskCheck=9}] run data merge block -291 18 -58 {auto:0b}

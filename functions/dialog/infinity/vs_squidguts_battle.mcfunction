@@ -98,11 +98,11 @@ execute if entity @s[scores={Dialog=3350}] run tag @e[tag=rubberobo,tag=this_dia
 execute if entity @s[scores={Dialog=3274}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=3275..3350}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3350}] run teleport @e[tag=squidguts,tag=this_dialog,limit=1] ~ -100 ~
-execute if entity @s[scores={Dialog=3290}] run summon minecraft:item -1998 51 -553 {PickupDelay:212s,Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:6,CustomModelData:5,HideFlags:4,AttributeModifiers:[],display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.spider_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.spider_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.spider_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:spider_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s,Invulnerable:1b}
+execute if entity @s[scores={Dialog=3290},tag=!already_gave_items] run summon minecraft:item -1998 51 -553 {PickupDelay:212s,Tags:["cutscene"],Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:6,CustomModelData:5,HideFlags:4,AttributeModifiers:[],display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.spider_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.spider_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.spider_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:spider_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s,Invulnerable:1b}
 execute at @s as @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=3290}] run data modify entity @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] Owner.L set from entity @s UUIDLeast
 execute if entity @s[scores={Dialog=3290}] run data modify entity @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] Owner.M set from entity @s UUIDMost
-execute if entity @s[scores={Dialog=3305}] run summon minecraft:item -1996 51 -550 {PickupDelay:197s,Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:6,CustomModelData:9,HideFlags:4,AttributeModifiers:[],display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.knight_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.knight_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:knight_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s,Invulnerable:1b}
+execute if entity @s[scores={Dialog=3305},tag=!already_gave_items] run summon minecraft:item -1996 51 -550 {PickupDelay:197s,Tags:["cutscene"],Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:6,CustomModelData:9,HideFlags:4,AttributeModifiers:[],display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.knight_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.knight_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:knight_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s,Invulnerable:1b}
 execute at @s as @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=3305}] run data modify entity @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1] Owner.L set from entity @s UUIDLeast
 execute if entity @s[scores={Dialog=3305}] run data modify entity @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1] Owner.M set from entity @s UUIDMost
@@ -113,8 +113,10 @@ execute if entity @s[scores={Dialog=3350..3900}] at @e[tag=metabee,tag=!medabot_
 tellraw @s[scores={Dialog=3350}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_squidguts_battle.62"}]}
 tellraw @s[scores={Dialog=3358}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_squidguts_battle.63"}]}
 tellraw @s[scores={Dialog=3382}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_squidguts_battle.64"}]}
+execute if entity @s[scores={Dialog=3454},tag=already_gave_items] run scoreboard players set @s Dialog 4030
 tellraw @s[scores={Dialog=3454}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_squidguts_battle.65"}]}
 tellraw @s[scores={Dialog=3462}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_squidguts_battle.66"}]}
+tag @s[scores={Dialog=3502}] add already_gave_items
 execute if entity @s[scores={Dialog=3502..3901}] unless entity @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players set @s Dialog 3901
 execute if entity @s[scores={Dialog=3502..3901}] unless entity @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players set @s Dialog 3901
 execute if entity @s[scores={Dialog=3901..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @e[distance=..0.1,tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -147,9 +149,10 @@ execute if entity @s[scores={Dialog=3969..4015}] as @e[tag=rubberobo,tag=this_di
 execute if entity @s[scores={Dialog=4015}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=!spider] ~ -100 ~
 execute if entity @s[scores={Dialog=4015}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=!spider] add dead
 tag @s[scores={Dialog=4030}] remove dialog_infinity_vs_squidguts_battle
-stopsound @s[scores={Dialog=4030}] music
-scoreboard players set @s[scores={Dialog=4030}] MusicType 1
-scoreboard players set @s[scores={Dialog=4030}] Music 0
+stopsound @s[scores={Dialog=4030,MusicType=-1}] music
+scoreboard players set @s[scores={Dialog=4030,MusicType=-1}] Music 0
+scoreboard players set @s[scores={Dialog=4030,MusicType=-1}] MusicType 1
+tag @s[scores={Dialog=4030}] remove already_gave_items
 scoreboard players reset @s[scores={Dialog=4030}] DialogNr
 scoreboard players set @s[scores={Dialog=4030}] Dialog 0
 scoreboard players reset #temp DialogNr

@@ -182,6 +182,108 @@
         },
         "the_prominence": {
             "trigger": "minecraft:impossible"
+        },
+        "spykes_insperation": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_samantha": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_samantha_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "select_corps_warning": {
+            "trigger": "minecraft:impossible"
+        },
+        "shrimplips_is_recruiting": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_rock_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_rock_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_seashore_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_seashore_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_ruins_in_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_ruins_in_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_laboratory_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_laboratory_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_shrimplips": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_shrimplips_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "smug_seaslug": {
+            "trigger": "minecraft:impossible"
+        },
+        "jammy_test": {
+            "trigger": "minecraft:impossible"
+        },
+        "jammy_explained": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_grassland_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_grassland_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_jungle_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_jungle_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_iceberg_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_iceberg_a": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_enters_runs_out_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "rubberobo_leaves_ruins_out_b": {
+            "trigger": "minecraft:impossible"
+        },
+        "squidguts_jammy": {
+            "trigger": "minecraft:impossible"
+        },
+        "squidguts_jammy_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "gillgirls_jammy": {
+            "trigger": "minecraft:impossible"
+        },
+        "gillgirls_jammy_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "shrimplips_jammy": {
+            "trigger": "minecraft:impossible"
+        },
+        "shrimplips_jammy_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_seaslug": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_seaslug_battle": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

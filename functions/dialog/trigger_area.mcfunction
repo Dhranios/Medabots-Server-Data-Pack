@@ -20,4 +20,9 @@ tag @s[advancements={medabots_server:wave_1/story_progression={roks_vs_max=false
 tag @s[advancements={medabots_server:wave_1/story_progression={roks_vs_max=true,rubberobo_enters_ruins_out_a=false}},x=-411,y=55,z=-40,distance=..7] add dialog_infinity_rubberobo_enters_ruins_out_a
 tag @s[advancements={medabots_server:wave_1/story_progression={rubberobo_enters_snowfield_b=false},medabots_server:stages/wave_1/laboratory_a_rubberobo=true,medabots_server:stages/wave_1/jungle_b_rubberobo=true,medabots_server:stages/wave_1/snowfield_b_rubberobo=false},x=-349,y=55,z=-13,distance=..13] add dialog_infinity_rubberobo_enters_snowfield_b
 tag @s[advancements={medabots_server:wave_1/story_progression={vs_gillgirl_battle=true,the_picture=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_the_picture
-#tag @s[advancements={medabots_server:wave_1/story_progression={the_prominence=false},medabots_server:stages/wave_1/ruins_in_b_first_go=true},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_the_prominence
+tag @s[advancements={medabots_server:wave_1/story_progression={the_prominence=false},medabots_server:stages/wave_1/ruins_in_b_first_go=true},x=-451,y=55,z=6,distance=..4] add dialog_infinity_the_prominence
+tag @s[advancements={medabots_server:wave_1/story_progression={vs_samantha_battle=true,select_corps_warning=false}},x=-414,y=55,z=-52,distance=..5] add dialog_infinity_select_corps_warning
+tag @s[advancements={medabots_server:wave_1/story_progression={select_corps_warning=true,shrimplips_is_recruiting=false}},x=-394,y=55,z=-52,distance=..4] add dialog_infinity_shrimplips_is_recruiting
+#tag @s[advancements={medabots_server:wave_1/story_progression={vs_shrimplips_battle=true,smug_seaslug=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_smug_seaslug
+#tag @s[advancements={medabots_server:wave_1/story_progression={smug_seaslug=true,jammy_test=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_jammy_test
+#tag @s[advancements={medabots_server:wave_1/story_progression={jammy_test=true,jammy_explained=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_jammy_explained

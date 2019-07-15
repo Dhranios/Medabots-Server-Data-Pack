@@ -3,7 +3,7 @@ execute unless score @s Money >= @s FlyCourseFee run tellraw @s {"translate":"me
 execute if score @s Money >= @s FlyCourseFee run tag @s add 0
 execute if score @s Money >= @s FlyCourseFee run tag @s add racer
 execute if score @s Money >= @s FlyCourseFee run setblock -90 122 -79 minecraft:sea_lantern
-execute if score @s Money >= @s FlyCourseFee run data merge block -89 121 -79 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/join/medium_fly_course_1/1"}}'}
+execute if score @s Money >= @s FlyCourseFee run data merge block -89 121 -79 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!racer,tag=!0] run function medabots_server:stage/join/medium_fly_course_1/1"}}'}
 execute if score @s Money >= @s FlyCourseFee run execute if entity @s[scores={FlyCourseLaps=0,FlyCourseFee=0}] run tellraw @a {"translate":"medabots_server:message.stage.fly_course.start_race.fallout","color":"green","with":[{"translate":"medabots_server:location.fly_course.medium"},{"text":"1"}]}
 execute if score @s Money >= @s FlyCourseFee run execute if entity @s[scores={FlyCourseLaps=0,FlyCourseFee=2..}] run tellraw @a {"translate":"medabots_server:message.stage.fly_course.start_race.fallout.money","color":"green","with":[{"translate":"medabots_server:location.fly_course.medium"},{"text":"1"},{"score":{"objective":"FlyCourseFee","name":"@s"}}]}
 execute if score @s Money >= @s FlyCourseFee run execute if entity @s[scores={FlyCourseLaps=1..,FlyCourseFee=0}] run tellraw @a {"translate":"medabots_server:message.stage.fly_course.start_race.laps","color":"green","with":[{"score":{"objective":"FlyCourseLaps","name":"@s"}},{"translate":"medabots_server:location.fly_course.medium"},{"text":"1"}]}

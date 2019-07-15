@@ -3,8 +3,8 @@ execute unless entity @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=3] positioned 
 execute unless entity @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=3] positioned -1743 44 -619 run scoreboard players set @e[distance=..1] Stage 18
 execute positioned -1732 44 -612 run function medabots_server:spawn_entities/guard/normal
 execute positioned -1750 44 -613 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/east/delay_4
-execute positioned -1735 44 -606 run function medabots_server:spawn_entities/mission/cannon/detect/looking/north/delay_4
-execute positioned -1756 44 -623 run function medabots_server:spawn_entities/mission/cannon/detect/looking/east/delay_4
+execute positioned -1735 44 -606 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/north/delay_4
+execute positioned -1756 44 -623 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/east/delay_4
 execute positioned -1736 44 -624 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/south/delay_4
 execute positioned -1743 44 -627 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1733 44 -624 run function medabots_server:spawn_entities/ice_block

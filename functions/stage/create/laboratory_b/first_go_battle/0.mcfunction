@@ -9,7 +9,7 @@ execute positioned -1715 44 -569 run function medabots_server:spawn_entities/mis
 execute positioned -1719 44 -550 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/north/delay_4
 execute positioned -1708 44 -550 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/north/delay_4
 execute positioned -1703 44 -559 run function medabots_server:spawn_entities/item/6_medallar_cents
-execute positioned -1710 44 -567 run function medabots_server:spawn_entities/round_stone
+execute positioned -1710 44 -572 run function medabots_server:spawn_entities/round_stone
 execute positioned -1717 44 -552 run function medabots_server:spawn_entities/ice_block
 execute positioned -1718 44 -552 run function medabots_server:spawn_entities/ice_block
 execute positioned -1719 44 -552 run function medabots_server:spawn_entities/ice_block
