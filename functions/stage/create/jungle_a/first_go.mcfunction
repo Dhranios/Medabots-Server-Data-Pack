@@ -137,9 +137,9 @@ execute positioned -1649 45 -161 run function medabots_server:set_blocks/algae
 execute positioned -1646 45 -163 run function medabots_server:set_blocks/algae
 execute positioned -1645 45 -163 run function medabots_server:set_blocks/algae
 execute positioned -1645 45 -166 run function medabots_server:set_blocks/algae
-execute positioned -1643 45 -168 run function medabots_server:set_blocks/algae
-execute positioned -1643 45 -174 run function medabots_server:set_blocks/algae
-execute positioned -1644 45 -171 run function medabots_server:set_blocks/algae
+execute positioned -1643 45 -169 run function medabots_server:set_blocks/algae
+execute positioned -1643 45 -175 run function medabots_server:set_blocks/algae
+execute positioned -1644 45 -172 run function medabots_server:set_blocks/algae
 execute positioned -1682 45 -129 run function medabots_server:set_blocks/wall
 execute positioned -1680 45 -129 run function medabots_server:set_blocks/door/closed/north
 execute positioned -1662 45 -124 run function medabots_server:set_blocks/door/open/west
@@ -159,7 +159,7 @@ scoreboard players set @a[x=-1698,y=45,z=-122,distance=..1] Battle 1
 scoreboard players set @a[x=-1698,y=45,z=-122,distance=..1] Stage 3
 scoreboard players set @a[x=-1698,y=45,z=-122,distance=..1] Music 0
 scoreboard players set @a[x=-1698,y=45,z=-122,distance=..1] MusicType 9
-scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=enemy_medabot] Stage 3
-scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=enemy_medabot] MusicType 9
+scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=medabot] Battle 3
+scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=medabot] Stage 3
+scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=medabot] Music 0
+scoreboard players set @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=medabot] MusicType 9

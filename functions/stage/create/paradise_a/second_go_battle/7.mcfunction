@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=7] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=7] positioned -1715 45 -651 run function medabots_server:spawn_entities/enemy_medabot/basstroyer/fly_falcon/poison_scorpi/basstroyer/kuwagata
+execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=7] positioned -1715 45 -651 run function medabots_server:spawn_entities/medabot/basstroyer/fly_falcon/poison_scorpi/basstroyer/kuwagata
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=7] positioned -1715 45 -651 run scoreboard players set @e[distance=..1] Stage 21
+execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=7] positioned -1715 45 -651 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1721 45 -658 run function medabots_server:set_blocks/accelerator/north
 execute positioned -1720 45 -659 run function medabots_server:set_blocks/accelerator/north
 execute positioned -1719 45 -660 run function medabots_server:set_blocks/accelerator/north

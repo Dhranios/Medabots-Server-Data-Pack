@@ -503,6 +503,16 @@
                             "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:25,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.zant_zant_helmet\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.gatling\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.gatling.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"11\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"60\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.zant\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.zant_zant_helmet.model\"}']},medabots_server:{id:\"medabots_server:zant_zant_helmet\",gender:0b,move:\"gatling\",part:\"head\",armor:60,power:35,uses:11,activated:1b,version:1}}"
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:23,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_armored_body\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.missile\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.missile.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"20\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"200\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.galleom\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_armored_body.model\"}']},medabots_server:{id:\"medabots_server:galleom_armored_body\",gender:0b,move:\"missile\",part:\"head\",armor:200,power:80,uses:20,activated:1b,version:1}}"
+                        }
+                    ]
                 }
             ]
         }

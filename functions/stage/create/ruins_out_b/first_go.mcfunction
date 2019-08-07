@@ -89,6 +89,7 @@ execute positioned -1842 45 -486 run function medabots_server:set_blocks/hole/de
 execute positioned -1845 45 -480 run function medabots_server:set_blocks/hammer_punch/enabled/north/delay_10
 execute positioned -1839 45 -483 run function medabots_server:set_blocks/hammer_punch/enabled/west/delay_10
 execute positioned -1842 45 -498 run function medabots_server:set_blocks/hammer_punch/enabled/south/delay_10
+execute positioned -1831 45 -482 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
 execute positioned -1817 45 -520 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_5
 execute positioned -1808 45 -491 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
 execute positioned -1807 45 -490 run function medabots_server:set_blocks/laser_trap/disabled/east/delay_10
@@ -227,7 +228,7 @@ scoreboard players set @a[x=-1811,y=45,z=-454,distance=..1] Battle 1
 scoreboard players set @a[x=-1811,y=45,z=-454,distance=..1] Stage 16
 scoreboard players set @a[x=-1811,y=45,z=-454,distance=..1] Music 0
 scoreboard players set @a[x=-1811,y=45,z=-454,distance=..1] MusicType 13
-scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=enemy_medabot] Stage 16
-scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=enemy_medabot] MusicType 13
+scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=medabot] Battle 3
+scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=medabot] Stage 16
+scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=medabot] Music 0
+scoreboard players set @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=medabot] MusicType 13

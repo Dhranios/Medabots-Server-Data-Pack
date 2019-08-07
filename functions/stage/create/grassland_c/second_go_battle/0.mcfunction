@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] positioned -1557 44 -474 run function medabots_server:spawn_entities/enemy_medabot/pure_mermaid/frappe/pure_mermaid/pure_mermaid/mermaid
+execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] positioned -1557 44 -474 run function medabots_server:spawn_entities/medabot/pure_mermaid/frappe/pure_mermaid/pure_mermaid/mermaid
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] positioned -1557 44 -474 run scoreboard players set @e[distance=..1] Stage 23
+execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] positioned -1557 44 -474 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1554 44 -474 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/south/delay_4
 execute positioned -1556 44 -476 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/south/delay_4
 execute positioned -1558 44 -476 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/south/delay_4

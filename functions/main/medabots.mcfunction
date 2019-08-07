@@ -83,5 +83,5 @@ execute if entity @s[tag=hostile,tag=!dying] run function medabots_server:main/h
 
 # Transform timers
 execute unless entity @s[scores={TransformLTime=1..}] unless entity @s[scores={TransformRTime=1..}] unless entity @s[scores={TransformHTime=1..}] run tag @s add no_transform
-execute if entity @s[tag=!no_transform] run function medabots_server:items/medapart/transformed
+execute if entity @s[tag=!no_transform] run function medabots_server:effects/transformed
 tag @s remove no_transform

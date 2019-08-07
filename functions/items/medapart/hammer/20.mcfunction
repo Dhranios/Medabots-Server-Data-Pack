@@ -9,6 +9,7 @@ scoreboard players set @s[scores={Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabo
 scoreboard players set @s[scores={Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:smilidonad_straw_hammer"}}}]}] MedapartType 8
 scoreboard players set @s[scores={Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:rokusho_pipo_hammer"}}}]}] MedapartType 9
 scoreboard players set @s[scores={Hammer=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:suzumega_hummer_light_hammer"}}}]}] MedapartType 10
+scoreboard players set @s[scores={Hammer=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:galleom_jet_engine"}}}]}] MedapartType 11
 
 # Give the weapon
 execute unless entity @s[scores={ScoutTime=1..}] run replaceitem entity @s[scores={Hammer=1..},type=!minecraft:player] weapon.mainhand minecraft:iron_axe{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.strike"}']},medabots_server:{id:"medabots_server:hammer"}}

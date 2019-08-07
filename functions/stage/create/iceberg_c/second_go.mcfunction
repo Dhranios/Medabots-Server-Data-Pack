@@ -1,14 +1,14 @@
-execute positioned -1565 44 -661 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1568 44 -681 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1524 44 -634 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1522 44 -655 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1522 44 -658 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1518 44 -658 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1516 44 -672 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1514 44 -678 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1535 44 -643 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1537 44 -640 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1539 44 -643 run function medabots_server:spawn_entities/guard/slow
+execute positioned -1565 44 -661 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1568 44 -681 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1524 44 -634 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1522 44 -655 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1522 44 -658 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1518 44 -658 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1516 44 -672 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1514 44 -678 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1535 44 -643 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1537 44 -640 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1539 44 -643 run function medabots_server:spawn_entities/guard/normal
 execute positioned -1544 44 -628 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1554 44 -630 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1558 44 -628 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
@@ -84,10 +84,10 @@ execute positioned -1516 44 -629 run function medabots_server:set_blocks/action_
 execute positioned -1539 44 -618 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1543 44 -618 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1543 44 -624 run function medabots_server:set_blocks/pot
-execute positioned -1542 44 -624 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1542 44 -624 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1541 44 -624 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1546 44 -633 run function medabots_server:set_blocks/pot/1_medallar_cent
-execute positioned -1547 44 -635 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1547 44 -635 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1549 44 -635 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1565 44 -627 run function medabots_server:set_blocks/pot
 execute positioned -1563 44 -621 run function medabots_server:set_blocks/pot
@@ -102,7 +102,7 @@ execute positioned -1569 44 -681 run function medabots_server:set_blocks/pot/bom
 execute positioned -1569 44 -682 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1537 44 -625 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1536 44 -624 run function medabots_server:set_blocks/pot
-execute positioned -1535 44 -624 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1535 44 -624 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1534 44 -624 run function medabots_server:set_blocks/pot
 execute positioned -1531 44 -623 run function medabots_server:set_blocks/pot
 execute positioned -1530 44 -622 run function medabots_server:set_blocks/pot/1_medallar_cent
@@ -110,15 +110,15 @@ execute positioned -1529 44 -621 run function medabots_server:set_blocks/pot
 execute positioned -1527 44 -619 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1528 44 -618 run function medabots_server:set_blocks/pot
 execute positioned -1526 44 -618 run function medabots_server:set_blocks/pot
-execute positioned -1527 44 -617 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1527 44 -617 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1519 44 -626 run function medabots_server:set_blocks/pot
 execute positioned -1515 44 -623 run function medabots_server:set_blocks/pot
-execute positioned -1516 44 -617 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1516 44 -617 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1515 44 -618 run function medabots_server:set_blocks/pot/6_medallar_cents
 # Medapart pot
 execute positioned -1514 44 -619 run function medabots_server:set_blocks/pot
 replaceitem block -1514 44 -619 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:47,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_blaster"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.gatling"}','{"italic":false,"color":"white","translate":"medabots_server:move.gatling.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.saikachis"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.saikachis_blaster.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:saikachis_blaster",gender:0b,move:"gatling",part:"left_arm",armor:45,power:26,activated:0b,version:1}}
-execute positioned -1512 44 -634 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1512 44 -634 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1522 44 -635 run function medabots_server:set_blocks/pot
 execute positioned -1520 44 -656 run function medabots_server:set_blocks/pot
 execute positioned -1514 44 -669 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -197,7 +197,7 @@ scoreboard players set @a[x=-1541,y=44,z=-616,distance=..1] Battle 1
 scoreboard players set @a[x=-1541,y=44,z=-616,distance=..1] Stage 26
 scoreboard players set @a[x=-1541,y=44,z=-616,distance=..1] Music 0
 scoreboard players set @a[x=-1541,y=44,z=-616,distance=..1] MusicType 18
-scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=enemy_medabot] Stage 26
-scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=enemy_medabot] MusicType 18
+scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=medabot] Battle 3
+scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=medabot] Stage 26
+scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=medabot] Music 0
+scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=medabot] MusicType 18

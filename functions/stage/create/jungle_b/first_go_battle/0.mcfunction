@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] positioned -1583 45 -407 run function medabots_server:spawn_entities/enemy_medabot/attack_tyrano/maxsnake/dragonbeetle/attack_tyrano/kuwagata
+execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] positioned -1583 45 -407 run function medabots_server:spawn_entities/medabot/attack_tyrano/maxsnake/dragonbeetle/attack_tyrano/kuwagata
 execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] positioned -1583 45 -407 run scoreboard players set @e[distance=..1] Stage 12
+execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] positioned -1583 45 -407 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1593 45 -408 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/east/delay_4
 execute positioned -1593 45 -406 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/east/delay_4
 execute positioned -1586 45 -402 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/north/delay_4

@@ -206,3 +206,9 @@ execute if entity @s[scores={Medabot=68,Message=2}] run tellraw @a {"translate":
 execute if entity @s[scores={Medabot=69,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.nin_ninja.kill.1"}]}
 execute if entity @s[scores={Medabot=69,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.nin_ninja.kill.2"}]}
 execute if entity @s[scores={Medabot=69,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.nin_ninja.kill.3"}]}
+execute if entity @s[scores={Medabot=70,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.nino.kill.1"}]}
+execute if entity @s[scores={Medabot=70,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.nino.kill.2"}]}
+execute if entity @s[scores={Medabot=70,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.nino.kill.3"}]}
+execute if entity @s[scores={Medabot=71,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.galleom.kill.1"}]}
+execute if entity @s[scores={Medabot=71,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.galleom.kill.2"}]}
+execute if entity @s[scores={Medabot=71,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.galleom.kill.3"}]}

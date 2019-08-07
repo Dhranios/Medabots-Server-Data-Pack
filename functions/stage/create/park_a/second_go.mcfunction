@@ -1,8 +1,8 @@
-execute positioned -1794 45 -560 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1786 45 -562 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1794 45 -564 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1790 45 -578 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1782 45 -570 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
+execute positioned -1794 45 -560 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1786 45 -562 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1794 45 -564 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1790 45 -578 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1782 45 -570 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
 execute positioned -1794 45 -568 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
 execute positioned -1796 45 -566 run function medabots_server:spawn_entities/cannon/no_detect/looking/south/delay_4
 execute positioned -1798 45 -562 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
@@ -55,12 +55,12 @@ execute positioned -1775 45 -583 run function medabots_server:set_blocks/floor_s
 execute positioned -1800 45 -568 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
 execute positioned -1796 45 -568 run function medabots_server:set_blocks/press_wall/disabled/west/range_7
 execute positioned -1780 45 -568 run function medabots_server:set_blocks/hammer_punch/enabled/west/delay_10
-execute positioned -1808 45 -570 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1805 45 -570 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1786 45 -595 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1781 45 -600 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1786 45 -605 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1786 45 -609 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
+execute positioned -1808 45 -570 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1805 45 -570 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1786 45 -595 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1781 45 -600 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1786 45 -605 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1786 45 -609 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
 execute positioned -1781 45 -594 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_5
 execute positioned -1781 45 -604 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_5
 execute positioned -1789 45 -607 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_5
@@ -221,9 +221,9 @@ stopsound @a[x=-1807,y=45,z=-555,distance=..1] music
 playsound medabots_server:music.stage.park_intro music @a[x=-1807,y=45,z=-555,distance=..1] ~ ~ ~ 1000
 scoreboard players set @a[x=-1807,y=45,z=-555,distance=..1] Music 160
 scoreboard players set @a[x=-1807,y=45,z=-555,distance=..1] MusicType 16
-scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=enemy_medabot] Stage 19
-stopsound @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=enemy_medabot] music
-playsound medabots_server:music.stage.park_intro music @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=enemy_medabot] ~ ~ ~ 1000
-scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=enemy_medabot] Music 160
-scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=enemy_medabot] MusicType 16
+scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=medabot] Battle 3
+scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=medabot] Stage 19
+stopsound @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=medabot] music
+playsound medabots_server:music.stage.park_intro music @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=medabot] ~ ~ ~ 1000
+scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=medabot] Music 160
+scoreboard players set @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=medabot] MusicType 16

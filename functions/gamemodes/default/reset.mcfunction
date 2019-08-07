@@ -1,8 +1,8 @@
 # Remove effects
 scoreboard players set @s Time 950
-scoreboard players set @s TransformLTime 2
-scoreboard players set @s TransformRTime 2
-scoreboard players set @s TransformHTime 2
+scoreboard players set @s[scores={TransformLTime=2..}] TransformLTime 2
+scoreboard players set @s[scores={TransformRTime=2..}] TransformRTime 2
+scoreboard players set @s[scores={TransformHTime=2..}] TransformHTime 2
 scoreboard players set @s[scores={Fly=1..}] Fly 0
 tag @s[tag=float] remove float
 tag @s[tag=multi_legged] remove multi_legged
@@ -65,7 +65,9 @@ scoreboard players reset @s[scores={Death=0}] Stage
 scoreboard players set @s[scores={Death=1..}] LeaveStage 1
 
 # Remove medabot indexing
+tag @s remove medabot
 tag @s remove enemy_medabot
+tag @s remove ally_medabot
 tag @s remove 1
 tag @s remove 2
 tag @s remove 3
@@ -82,6 +84,7 @@ tag @s remove second_go
 tag @s remove rubberobo
 tag @s remove special
 tag @s remove object_test
+tag @s remove sloan_challenge
 tag @s remove custom
 tag @s remove wave_1
 tag @s remove player

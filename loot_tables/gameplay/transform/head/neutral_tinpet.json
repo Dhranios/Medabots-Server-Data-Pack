@@ -6,15 +6,18 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "medabots_server:gameplay/transform/head/male"
+                    "name": "medabots_server:gameplay/transform/head/male",
+                    "weight": 51
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "medabots_server:gameplay/transform/head/female"
+                    "name": "medabots_server:gameplay/transform/head/female",
+                    "weight": 14
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "medabots_server:gameplay/transform/head/neutral"
+                    "name": "medabots_server:gameplay/transform/head/neutral",
+                    "weight": 2
                 }
             ]
         }

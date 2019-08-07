@@ -1,13 +1,13 @@
-execute positioned -1701 45 -711 run function medabots_server:spawn_entities/guard/slow/6_medallar_cents
-execute positioned -1698 45 -714 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1697 45 -714 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1732 45 -710 run function medabots_server:spawn_entities/guard/slow/6_medallar_cents
-execute positioned -1730 45 -713 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1729 45 -713 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1756 45 -690 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1751 45 -692 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1744 45 -696 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1748 45 -704 run function medabots_server:spawn_entities/guard/slow
+execute positioned -1701 45 -711 run function medabots_server:spawn_entities/guard/normal/6_medallar_cents
+execute positioned -1698 45 -714 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1697 45 -714 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1732 45 -710 run function medabots_server:spawn_entities/guard/normal/6_medallar_cents
+execute positioned -1730 45 -713 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1729 45 -713 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1756 45 -690 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1751 45 -692 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1744 45 -696 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1748 45 -704 run function medabots_server:spawn_entities/guard/normal
 execute positioned -1697 45 -697 run function medabots_server:spawn_entities/cannon/detect/rotating/north/delay_4
 execute positioned -1699 45 -697 run function medabots_server:spawn_entities/cannon/detect/rotating/north/delay_4
 execute positioned -1732 45 -697 run function medabots_server:spawn_entities/cannon/detect/rotating/north/delay_4
@@ -42,10 +42,10 @@ execute positioned -1698 45 -728 run function medabots_server:set_blocks/pot
 # Stage build item pot
 execute positioned -1697 45 -727 run function medabots_server:set_blocks/pot
 replaceitem block -1697 45 -727 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"action_floor",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.action_floor"}]}'}}
-execute positioned -1711 45 -692 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1711 45 -692 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1713 45 -692 run function medabots_server:set_blocks/pot/6_medallar_cents
 execute positioned -1716 45 -692 run function medabots_server:set_blocks/pot/4_medallar_cents
-execute positioned -1718 45 -692 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1718 45 -692 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1728 45 -713 run function medabots_server:set_blocks/pot
 execute positioned -1728 45 -714 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1729 45 -714 run function medabots_server:set_blocks/pot
@@ -145,7 +145,7 @@ scoreboard players set @a[x=-1715,y=45,z=-709,distance=..1] Battle 1
 scoreboard players set @a[x=-1715,y=45,z=-709,distance=..1] Stage 21
 scoreboard players set @a[x=-1715,y=45,z=-709,distance=..1] Music 0
 scoreboard players set @a[x=-1715,y=45,z=-709,distance=..1] MusicType 17
-scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] Stage 21
-scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] MusicType 17
+scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] Battle 3
+scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] Stage 21
+scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] Music 0
+scoreboard players set @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] MusicType 17

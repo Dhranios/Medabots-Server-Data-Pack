@@ -1,4 +1,4 @@
-teleport @s -1540 50 -578 -180 0
+teleport @s -1541 50 -578 -180 0
 stopsound @s music
 scoreboard players set @s Music 0
 scoreboard players set @s MusicType 22

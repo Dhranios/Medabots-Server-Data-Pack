@@ -29,6 +29,21 @@ execute if entity @s[scores={ScoutTime=1..}] run scoreboard players operation @s
 execute if entity @s[scores={ScoutTime=1..}] run scoreboard players operation @s EffectTimer /= #20 Constants
 execute if entity @s[scores={ScoutTime=1..}] run tellraw @s {"color":"green","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.scouting"},{"score":{"objective":"EffectTimer","name":"@s"}}]}
 
+# Transformed
+execute if entity @s[scores={TransformHTime=1..}] run scoreboard players operation @s EffectTimer = @s TransformHTime
+execute if entity @s[scores={TransformHTime=1..}] run scoreboard players operation @s EffectTimer /= #20 Constants
+execute if entity @s[scores={TransformHTime=1..}] run tellraw @s {"color":"green","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.transformed","with":[{"translate":"medabots_server:item.head"}]},{"score":{"objective":"EffectTimer","name":"@s"}}]}
+
+# Transformed
+execute if entity @s[scores={TransformLTime=1..}] run scoreboard players operation @s EffectTimer = @s TransformLTime
+execute if entity @s[scores={TransformLTime=1..}] run scoreboard players operation @s EffectTimer /= #20 Constants
+execute if entity @s[scores={TransformLTime=1..}] run tellraw @s {"color":"green","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.transformed","with":[{"translate":"medabots_server:item.left_arm"}]},{"score":{"objective":"EffectTimer","name":"@s"}}]}
+
+# Transformed
+execute if entity @s[scores={TransformRTime=1..}] run scoreboard players operation @s EffectTimer = @s TransformRTime
+execute if entity @s[scores={TransformRTime=1..}] run scoreboard players operation @s EffectTimer /= #20 Constants
+execute if entity @s[scores={TransformRTime=1..}] run tellraw @s {"color":"green","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.transformed","with":[{"translate":"medabots_server:item.right_arm"}]},{"score":{"objective":"EffectTimer","name":"@s"}}]}
+
 # Blocked Medaforce
 execute if entity @s[tag=blocked_medaforce] run tellraw @s {"color":"red","translate":"medabots_server:effect.blocked_medaforce"}
 

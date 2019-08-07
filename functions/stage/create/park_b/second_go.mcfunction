@@ -1,10 +1,10 @@
-execute positioned -1797 45 -652 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1788 45 -645 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1788 45 -670 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1776 45 -656 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1778 45 -685 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1778 45 -683 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1780 45 -684 run function medabots_server:spawn_entities/guard/slow
+execute positioned -1797 45 -652 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1788 45 -645 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1788 45 -670 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1776 45 -656 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1778 45 -685 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1778 45 -683 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1780 45 -684 run function medabots_server:spawn_entities/guard/normal
 execute positioned -1795 45 -660 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4/2_medallar_cents
 execute positioned -1796 45 -655 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4/2_medallar_cents
 execute positioned -1790 45 -645 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4/2_medallar_cents
@@ -141,7 +141,7 @@ execute positioned -1785 45 -644 run function medabots_server:set_blocks/pot
 replaceitem block -1785 45 -644 container.0 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_clearshield"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.defense"}','{"italic":false,"color":"white","translate":"medabots_server:move.defense.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.uses.more","with":[{"text":"8"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.armor","with":[{"text":"100"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.part.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.knight_armor"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_clearshield.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:knight_armor_clearshield",gender:0b,move:"defense",part:"head",armor:100,power:52,uses:8,activated:0b,version:1}}
 execute positioned -1816 45 -705 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1805 45 -705 run function medabots_server:set_blocks/pot/2_medallar_cents
-execute positioned -1805 45 -716 run function medabots_server:set_blocks/pot
+execute positioned -1805 45 -716 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1811 45 -710 run function medabots_server:set_blocks/pot
 execute positioned -1810 45 -711 run function medabots_server:set_blocks/pot
 execute positioned -1766 45 -706 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -258,9 +258,9 @@ stopsound @a[x=-1811,y=45,z=-678,distance=..1] music
 playsound medabots_server:music.stage.park_intro music @a[x=-1811,y=45,z=-678,distance=..1] ~ ~ ~ 1000
 scoreboard players set @a[x=-1811,y=45,z=-678,distance=..1] Music 160
 scoreboard players set @a[x=-1811,y=45,z=-678,distance=..1] MusicType 16
-scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] Stage 20
-stopsound @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] music
-playsound medabots_server:music.stage.park_intro music @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] ~ ~ ~ 1000
-scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] Music 160
-scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=enemy_medabot] MusicType 16
+scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] Battle 3
+scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] Stage 20
+stopsound @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] music
+playsound medabots_server:music.stage.park_intro music @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] ~ ~ ~ 1000
+scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] Music 160
+scoreboard players set @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=medabot] MusicType 16

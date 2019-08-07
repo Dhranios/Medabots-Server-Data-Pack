@@ -1,7 +1,7 @@
 execute if entity @s[tag=loaded_chunk_10] run function medabots_server:dialog/play
 
 # Trigger areas
-execute if entity @s[scores={Dialog=0},gamemode=!creative] run function medabots_server:dialog/trigger_area
+execute if entity @s[scores={Dialog=0},gamemode=!creative,gamemode=!spectator] run function medabots_server:dialog/trigger_area
 
 # Require loaded chunks
 tag @s[tag=!loaded_chunk_10,tag=loaded_chunk_9] add loaded_chunk_10

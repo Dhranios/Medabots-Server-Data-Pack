@@ -6,11 +6,13 @@
             "entries": [
                 {
                     "type": "minecraft:loot_table",
-                    "name": "medabots_server:gameplay/transform/right_arm/male"
+                    "name": "medabots_server:gameplay/transform/right_arm/male",
+                    "weight": 51
                 },
                 {
                     "type": "minecraft:loot_table",
-                    "name": "medabots_server:gameplay/transform/right_arm/neutral"
+                    "name": "medabots_server:gameplay/transform/right_arm/neutral",
+                    "weight": 2
                 }
             ]
         }

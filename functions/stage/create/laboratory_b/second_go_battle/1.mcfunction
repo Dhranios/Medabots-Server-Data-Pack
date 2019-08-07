@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=1] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=1] positioned -1683 44 -559 run function medabots_server:spawn_entities/enemy_medabot/pastel_fairy/pure_mermaid/frappe/pastel_fairy/chameleon
+execute unless entity @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=1] positioned -1683 44 -559 run function medabots_server:spawn_entities/medabot/pastel_fairy/pure_mermaid/frappe/pastel_fairy/chameleon
 execute unless entity @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=1] positioned -1683 44 -559 run scoreboard players set @e[distance=..1] Stage 18
+execute unless entity @a[x=-1760,y=51,z=-633,dx=92,dy=4,dz=92,tag=1] positioned -1683 44 -559 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1690 44 -571 run function medabots_server:spawn_entities/mission/guard/normal
 execute positioned -1693 44 -551 run function medabots_server:spawn_entities/mission/guard/normal
 execute positioned -1679 44 -567 run function medabots_server:spawn_entities/mission/guard/normal
@@ -15,7 +16,7 @@ execute positioned -1689 44 -570 run function medabots_server:set_blocks/mirror/
 execute positioned -1689 44 -554 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1680 44 -554 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1688 44 -551 run function medabots_server:set_blocks/glass
-tag @e[x=-1750.5,y=45,z=-487.5,distance=..0.7,tag=door,tag=open] remove open
+tag @e[x=-1696.5,y=44,z=-599.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

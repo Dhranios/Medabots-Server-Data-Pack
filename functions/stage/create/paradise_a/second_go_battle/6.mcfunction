@@ -1,10 +1,11 @@
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] positioned -1743 45 -652 run function medabots_server:spawn_entities/enemy_medabot/seven_colors/kasou_touchu/poison_scorpi/seven_colors/chameleon
+execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] positioned -1743 45 -652 run function medabots_server:spawn_entities/medabot/seven_colors/kasou_touchu/poison_scorpi/seven_colors/chameleon
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] positioned -1743 45 -652 run scoreboard players set @e[distance=..1] Stage 21
-execute positioned -1744 45 -652 run function medabots_server:spawn_entities/mission/guard/slow
-execute positioned -1749 45 -646 run function medabots_server:spawn_entities/mission/guard/slow
-execute positioned -1739 45 -650 run function medabots_server:spawn_entities/mission/guard/slow
-execute positioned -1738 45 -642 run function medabots_server:spawn_entities/mission/guard/slow
+execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] positioned -1743 45 -652 run tag @e[distance=..1] add enemy_medabot
+execute positioned -1744 45 -652 run function medabots_server:spawn_entities/mission/guard/normal
+execute positioned -1749 45 -646 run function medabots_server:spawn_entities/mission/guard/normal
+execute positioned -1739 45 -650 run function medabots_server:spawn_entities/mission/guard/normal
+execute positioned -1738 45 -642 run function medabots_server:spawn_entities/mission/guard/normal
 tag @e[x=-1741.5,y=45,z=-661.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true

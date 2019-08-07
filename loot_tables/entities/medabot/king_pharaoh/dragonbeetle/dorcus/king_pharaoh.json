@@ -1,0 +1,59 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/medabot"
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:33,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.king_pharaoh_sit_down\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.tank\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.tank.description\"}','{\"text\":\"\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"110\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.king_pharaoh\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.king_pharaoh_sit_down.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:king_pharaoh_sit_down\",gender:0b,move:\"tank\",part:\"legs\",armor:110,defense:52,activated:0b,model_data:{leg_count:0},version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:32,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dorcus_intensebeat\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"45\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.dorcus\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dorcus_intensebeat.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:dorcus_intensebeat\",gender:0b,move:\"hammer\",part:\"left_arm\",armor:45,power:52,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:31,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dragonbeetle_heavyweighter\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"70\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.dragonbeetle\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.dragonbeetle_heavyweighter.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:dragonbeetle_heavyweighter\",gender:0b,move:\"press\",part:\"right_arm\",armor:70,power:18,activated:0b,version:1}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:33,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.king_pharaoh_grand_bomb\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.napalm\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.napalm.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.more\",\"with\":[{\"text\":\"7\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"110\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.king_pharaoh\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.king_pharaoh_grand_bomb.model\"}']},medabots_server:{stage_item:1b,id:\"medabots_server:king_pharaoh_grand_bomb\",gender:0b,move:\"napalm\",part:\"head\",armor:110,power:23,uses:7,activated:0b,version:1}}"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

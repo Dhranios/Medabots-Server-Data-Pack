@@ -21,7 +21,7 @@ teleport @s[tag=!dying,scores={ConfuseTime=1..}] ~ ~ ~ ~-18 ~
 execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^1 if entity @a[tag=hostile,distance=..1.05,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] run function medabots_server:entities/guard/attack
 
 # Walk to target or random location
-execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] run function medabots_server:entities/guard/wander
+execute at @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] run function medabots_server:entities/guard/wander
 
 # Fall
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall

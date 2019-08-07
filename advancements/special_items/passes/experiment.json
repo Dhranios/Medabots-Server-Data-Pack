@@ -13,7 +13,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "medabots_server:special_items/passes",
+    "parent": "medabots_server:special_items/passes/explain",
     "criteria": {
         "give": {
             "trigger": "minecraft:impossible"

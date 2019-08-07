@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1559 45 -397 run function medabots_server:spawn_entities/enemy_medabot/attack_tyrano/attack_tyrano/attack_tyrano/attack_tyrano/kuwagata
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1559 45 -397 run function medabots_server:spawn_entities/medabot/attack_tyrano/attack_tyrano/attack_tyrano/attack_tyrano/kuwagata
 execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1559 45 -397 run scoreboard players set @e[distance=..1] Stage 10
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1559 45 -397 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1560 45 -390 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1556 45 -392 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1551 45 -391 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb

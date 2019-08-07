@@ -284,6 +284,210 @@
         },
         "vs_seaslug_battle": {
             "trigger": "minecraft:impossible"
+        },
+        "gut_feeling": {
+            "trigger": "minecraft:impossible"
+        },
+        "desperate_for_love": {
+            "trigger": "minecraft:impossible"
+        },
+        "desperate_for_love_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "jaxys_new_look": {
+            "trigger": "minecraft:impossible"
+        },
+        "motivated_fight": {
+            "trigger": "minecraft:impossible"
+        },
+        "motivated_fight_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "new_look_new_chances": {
+            "trigger": "minecraft:impossible"
+        },
+        "new_look_new_chances_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "haru_and_tune": {
+            "trigger": "minecraft:impossible"
+        },
+        "teach_sloan": {
+            "trigger": "minecraft:impossible"
+        },
+        "sloan_goes_elsewhere": {
+            "trigger": "minecraft:impossible"
+        },
+        "suspicious_tune": {
+            "trigger": "minecraft:impossible"
+        },
+        "harus_expirement": {
+            "trigger": "minecraft:impossible"
+        },
+        "flame_tisala_is_yours": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_karin": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_karin_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "death_break": {
+            "trigger": "minecraft:impossible"
+        },
+        "erikas_article": {
+            "trigger": "minecraft:impossible"
+        },
+        "erika_is_out_of_the_race": {
+            "trigger": "minecraft:impossible"
+        },
+        "three_colors": {
+            "trigger": "minecraft:impossible"
+        },
+        "blue_man_defeated": {
+            "trigger": "minecraft:impossible"
+        },
+        "peace_kiss": {
+            "trigger": "minecraft:impossible"
+        },
+        "peace_kiss_defeated": {
+            "trigger": "minecraft:impossible"
+        },
+        "red_pepper": {
+            "trigger": "minecraft:impossible"
+        },
+        "red_pepper_defeated": {
+            "trigger": "minecraft:impossible"
+        },
+        "three_colors_defeated": {
+            "trigger": "minecraft:impossible"
+        },
+        "suspicious_haru": {
+            "trigger": "minecraft:impossible"
+        },
+        "tunes_tinpet": {
+            "trigger": "minecraft:impossible"
+        },
+        "harus_tinpet": {
+            "trigger": "minecraft:impossible"
+        },
+        "seaslug_returns": {
+            "trigger": "minecraft:impossible"
+        },
+        "seaslug_eliminated": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_jaxy": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_jaxy_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "the_final_stage": {
+            "trigger": "minecraft:impossible"
+        },
+        "jaxy_is_gone": {
+            "trigger": "minecraft:impossible"
+        },
+        "krosserdog_taken": {
+            "trigger": "minecraft:impossible"
+        },
+        "totalizer_taken": {
+            "trigger": "minecraft:impossible"
+        },
+        "peppercat_taken": {
+            "trigger": "minecraft:impossible"
+        },
+        "brass_taken": {
+            "trigger": "minecraft:impossible"
+        },
+        "roks_taken": {
+            "trigger": "minecraft:impossible"
+        },
+        "into_the_underground_arena": {
+            "trigger": "minecraft:impossible"
+        },
+        "the_underground_arena": {
+            "trigger": "minecraft:impossible"
+        },
+        "krosserdog_saved": {
+            "trigger": "minecraft:impossible"
+        },
+        "totalizer_saved": {
+            "trigger": "minecraft:impossible"
+        },
+        "peppercat_saved": {
+            "trigger": "minecraft:impossible"
+        },
+        "brass_saved": {
+            "trigger": "minecraft:impossible"
+        },
+        "kojis_worried": {
+            "trigger": "minecraft:impossible"
+        },
+        "roks_saved": {
+            "trigger": "minecraft:impossible"
+        },
+        "doctor_harus_research": {
+            "trigger": "minecraft:impossible"
+        },
+        "doctor_haru_defeated": {
+            "trigger": "minecraft:impossible"
+        },
+        "karin_saved": {
+            "trigger": "minecraft:impossible"
+        },
+        "the_final_battle": {
+            "trigger": "minecraft:impossible"
+        },
+        "victory": {
+            "trigger": "minecraft:impossible"
+        },
+        "extra_area_pass": {
+            "trigger": "minecraft:impossible"
+        },
+        "jaxys_happy": {
+            "trigger": "minecraft:impossible"
+        },
+        "spykes_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "spykes_pass": {
+            "trigger": "minecraft:impossible"
+        },
+        "sloans_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "sloans_pass": {
+            "trigger": "minecraft:impossible"
+        },
+        "samanthas_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "samanthas_pass": {
+            "trigger": "minecraft:impossible"
+        },
+        "karins_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "karins_pass": {
+            "trigger": "minecraft:impossible"
+        },
+        "erikas_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "vas_max": {
+            "trigger": "minecraft:impossible"
+        },
+        "erikas_pass": {
+            "trigger": "minecraft:impossible"
+        },
+        "kojis_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "kojis_pass": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

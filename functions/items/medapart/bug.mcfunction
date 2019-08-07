@@ -1,5 +1,5 @@
 execute if entity @s[scores={Time=20}] run function medabots_server:items/medapart/bug/20
-execute if entity @s[scores={Time=30..}] run function medabots_server:items/medapart/bug/30_
+execute if entity @s[scores={Time=60..}] run function medabots_server:items/medapart/bug/60_
 
 # Increase time by 1
 scoreboard players add @s[scores={Bug=1..}] Time 1

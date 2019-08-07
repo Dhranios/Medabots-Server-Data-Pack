@@ -91,7 +91,7 @@ execute if entity @s[tag=!murder_mystery,scores={Damage=1..,LegsArmor=1..,NoDefe
 execute if entity @s[tag=!running,tag=!sneak_pos] unless entity @e[distance=..0.1,type=minecraft:area_effect_cloud,tag=medabot_walk_detection] run tag @s add walking
 execute if entity @s[tag=!running,tag=sneak_pos] unless entity @e[distance=..0.1,type=minecraft:area_effect_cloud,tag=medabot_walk_detection] run tag @s add sneaking
 kill @e[distance=..1,type=minecraft:area_effect_cloud,tag=medabot_walk_detection]
-execute if entity @s[tag=!dead,tag=!running,tag=!sneaking] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.walk_detection","with":[{"text":"Medabot"}]}',Tags:["medabot_walk_detection"],Duration:2}
+execute if entity @s[tag=!dead,tag=!running] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.walk_detection","with":[{"text":"Medabot"}]}',Tags:["medabot_walk_detection"],Duration:2}
 
 # No armor
 execute if entity @s[nbt={Inventory:[{Slot:100b}]}] run function medabots_server:items/give_obtained_item/100

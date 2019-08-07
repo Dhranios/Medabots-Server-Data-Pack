@@ -1,4 +1,4 @@
 function medabots_server:give_items/medaparts/boarbooster/mashglow
-function medabots_server:give_items/medaparts/boarbooster/wollybond
-function medabots_server:give_items/medaparts/boarbooster/drillrill
+function medabots_server:give_items/medaparts/boarbooster/woolybond
+function medabots_server:give_items/medaparts/boarbooster/drillril
 function medabots_server:give_items/medaparts/boarbooster/boartusk

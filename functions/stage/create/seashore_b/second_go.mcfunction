@@ -94,9 +94,9 @@ execute positioned -1731 45 -391 run function medabots_server:spawn_entities/bal
 execute positioned -1736 45 -392 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1738 45 -392 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1760 45 -387 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1684 45 -354 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1684 45 -353 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1674 45 -374 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1702 45 -366 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1702 45 -365 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1672 45 -438 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1743 45 -354 run function medabots_server:set_blocks/floor_switch/yellow/delay_20
 execute positioned -1697 45 -411 run function medabots_server:set_blocks/floor_switch/yellow/delay_30
@@ -230,7 +230,7 @@ execute positioned -1744 45 -410 run function medabots_server:set_blocks/bridge
 execute positioned -1745 45 -410 run function medabots_server:set_blocks/bridge
 execute positioned -1746 45 -410 run function medabots_server:set_blocks/bridge
 execute positioned -1683 45 -359 run function medabots_server:set_blocks/wall
-execute positioned -1682 45 -355 run function medabots_server:set_blocks/wall
+execute positioned -1682 45 -354 run function medabots_server:set_blocks/wall
 execute positioned -1674 45 -357 run function medabots_server:set_blocks/wall
 execute positioned -1674 45 -364 run function medabots_server:set_blocks/wall
 execute positioned -1673 45 -370 run function medabots_server:set_blocks/wall
@@ -251,7 +251,7 @@ scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] Battle 1
 scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] Stage 13
 scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] Music 0
 scoreboard players set @a[x=-1716,y=45,z=-356,distance=..1] MusicType 10
-scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] Stage 13
-scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=enemy_medabot] MusicType 10
+scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=medabot] Battle 3
+scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=medabot] Stage 13
+scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=medabot] Music 0
+scoreboard players set @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=medabot] MusicType 10

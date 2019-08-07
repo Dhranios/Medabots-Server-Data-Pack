@@ -1,6 +1,6 @@
 execute if entity @s[scores={Time=20}] run function medabots_server:items/medapart/paralyze/20
 execute if entity @s[scores={Time=25}] run function medabots_server:items/medapart/paralyze/25
-execute if entity @s[scores={Time=30..}] run function medabots_server:items/medapart/paralyze/30_
+execute if entity @s[scores={Time=70..}] run function medabots_server:items/medapart/paralyze/70_
 
 # Increase time by 1
 scoreboard players add @s[scores={Paralyze=1..}] Time 1

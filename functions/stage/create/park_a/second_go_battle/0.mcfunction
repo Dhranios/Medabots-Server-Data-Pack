@@ -1,9 +1,10 @@
 execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=0] positioned -1811 45 -586 run function medabots_server:spawn_entities/enemy_medabot/shoot_spider/maxsnake/basstroyer/shoot_spider/chameleon
+execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=0] positioned -1811 45 -586 run function medabots_server:spawn_entities/medabot/shoot_spider/maxsnake/basstroyer/shoot_spider/chameleon
 execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=0] positioned -1811 45 -586 run scoreboard players set @e[distance=..1] Stage 19
-execute positioned -1802 45 -575 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1818 45 -585 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1802 45 -596 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
+execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=0] positioned -1811 45 -586 run tag @e[distance=..1] add enemy_medabot
+execute positioned -1802 45 -575 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1818 45 -585 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1802 45 -596 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
 execute positioned -1795 45 -587 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/west/delay_4
 execute positioned -1795 45 -584 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/west/delay_4
 execute positioned -1808 45 -577 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/north/delay_4

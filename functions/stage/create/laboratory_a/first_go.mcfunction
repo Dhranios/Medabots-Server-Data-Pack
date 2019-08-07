@@ -224,9 +224,9 @@ stopsound @a[x=-1773,y=44,z=-255,distance=..1] music
 playsound medabots_server:music.stage.laboratory_intro music @a[x=-1773,y=44,z=-255,distance=..1] ~ ~ ~ 1000
 scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] Music 109
 scoreboard players set @a[x=-1773,y=44,z=-255,distance=..1] MusicType 15
-scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Stage 9
-stopsound @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] music
-playsound medabots_server:music.stage.laboratory_intro music @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] ~ ~ ~ 1000
-scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] Music 109
-scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=enemy_medabot] MusicType 15
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=medabot] Battle 3
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=medabot] Stage 9
+stopsound @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=medabot] music
+playsound medabots_server:music.stage.laboratory_intro music @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=medabot] ~ ~ ~ 1000
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=medabot] Music 109
+scoreboard players set @a[x=-1812,y=50,z=-322,dx=80,dy=4,dz=72,tag=medabot] MusicType 15

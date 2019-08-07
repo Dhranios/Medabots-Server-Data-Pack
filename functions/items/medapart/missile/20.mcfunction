@@ -10,6 +10,7 @@ scoreboard players set @s[scores={Missile=2},nbt={Inventory:[{Slot:3b,tag:{medab
 scoreboard players set @s[scores={Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_missilebase"}}}]}] MedapartType 9
 scoreboard players set @s[scores={Missile=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_intermissile"}}}]}] MedapartType 9
 scoreboard players set @s[scores={Missile=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:pururun_jelly_guidemissile"}}}]}] MedapartType 10
+scoreboard players set @s[scores={Missile=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:galleom_armored_body"}}}]}] MedapartType 11
 
 # Give the weapon
 replaceitem entity @s weapon.offhand minecraft:tipped_arrow{Potion:"minecraft:water",CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bullet"}'},CustomPotionEffects:[{Id:18b,Amplifier:3b,Duration:0,Ambient:1b,ShowParticles:0b}],medabots_server:{id:"medabots_server:bullet"}}

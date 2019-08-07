@@ -58,3 +58,6 @@ execute if entity @s[tag=select_corps,tag=talk] run function medabots_server:dia
 tag @s[tag=talked,tag=!talk] remove talked
 tag @s[tag=!talked,tag=talk] add talked
 tag @s[tag=talk] remove talk
+
+# Prevent scoreboard clutter from removed entities
+scoreboard players reset @s[tag=dead]

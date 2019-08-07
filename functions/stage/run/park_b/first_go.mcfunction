@@ -1,0 +1,37 @@
+execute unless entity @e[scores={Stage=20},tag=hide_normal_time] run bossbar set medabots_server:park_b/time players @s[scores={Battle=1..}]
+execute unless entity @e[scores={Stage=20},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:park_b/time value
+execute unless entity @e[scores={Stage=20},tag=hide_normal_time] store result bossbar medabots_server:park_b/time value run scoreboard players operation #temp Time += #1 Constants
+execute if entity @e[scores={Stage=20},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:park_b/robattle value
+execute if entity @e[scores={Stage=20},tag=hide_normal_time] if entity @e[scores={Stage=20,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:park_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[scores={Stage=20},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+scoreboard players reset #temp Time
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/park_b/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
+execute if block -1818 44 -678 minecraft:lime_wool run tag @e[x=-1818.5,y=45,z=-674.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1822 44 -662 minecraft:lime_wool if block -1822 44 -656 minecraft:lime_wool if block -1822 44 -647 minecraft:lime_wool if block -1830 44 -643 minecraft:lime_wool if block -1837 44 -643 minecraft:lime_wool if block -1848 44 -645 minecraft:lime_wool if block -1849 44 -653 minecraft:lime_wool if block -1849 44 -659 minecraft:lime_wool if block -1842 44 -670 minecraft:lime_wool run tag @e[x=-1818.5,y=45,z=-691.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1825 44 -718 minecraft:lime_wool if block -1844 44 -717 minecraft:lime_wool if block -1844 44 -697 minecraft:lime_wool if block -1835 44 -711 minecraft:lime_wool if block -1834 44 -704 minecraft:lime_wool run tag @e[x=-1801.5,y=45,z=-691.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1777 44 -717 minecraft:light_blue_wool run tag @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1774 44 -679 minecraft:lime_wool run tag @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1774 44 -679 minecraft:green_wool if block -1777 44 -717 minecraft:blue_wool run tag @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1784 44 -689 minecraft:lime_wool if block -1774 44 -725 minecraft:lime_wool if block -1817 44 -729 minecraft:lime_wool if block -1851 44 -719 minecraft:lime_wool if block -1855 44 -699 minecraft:lime_wool if block -1851 44 -672 minecraft:lime_wool if block -1851 44 -641 minecraft:lime_wool if block -1839 44 -640 minecraft:lime_wool if block -1829 44 -638 minecraft:lime_wool if block -1812 44 -639 minecraft:lime_wool if block -1770 44 -643 minecraft:lime_wool if block -1774 44 -679 minecraft:lime_wool run tag @e[x=-1773.5,y=45,z=-680.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1774 44 -679 minecraft:lime_wool run tag @e[x=-1809.5,y=45,z=-671.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1794 44 -700 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1791 44 -703 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1781 44 -703 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1785 44 -705 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1789 44 -709 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1793 44 -711 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1791 44 -715 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1784 44 -714 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1784 44 -710 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1779 44 -710 minecraft:light_blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=!enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s add enabled
+execute if block -1794 44 -700 minecraft:blue_wool if block -1791 44 -703 minecraft:blue_wool if block -1781 44 -703 minecraft:blue_wool if block -1785 44 -705 minecraft:blue_wool if block -1789 44 -709 minecraft:blue_wool if block -1793 44 -711 minecraft:blue_wool if block -1791 44 -715 minecraft:blue_wool if block -1784 44 -714 minecraft:blue_wool if block -1784 44 -710 minecraft:blue_wool if block -1779 44 -710 minecraft:blue_wool as @e[x=-1796,y=43,z=-717,dx=20,dy=4,dz=17,type=minecraft:area_effect_cloud,tag=enabled] unless entity @s[tag=!action_floor,tag=!spring_wall] run tag @s remove enabled
+execute if block -1810 45 -668 minecraft:iron_door[open=true] if entity @s[x=-1812,y=45,z=-668,dx=3,dy=3,dz=3] run function medabots_server:stage/create/park_b/first_go_battle/0
+execute if entity @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=20,Medabot=0..,Battle=1..2}]
+execute as @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=20}] run scoreboard players set @s Stage 20
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/park_b/first_go
+advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/park_b_first_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:park_b/robattle players
+tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:wave_1/story_progression={erikas_article=true,erika_is_out_of_the_race=false}}] add dialog_infinity_erika_is_out_of_the_race
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1811 51 -683 run function medabots_server:stage/clear
+scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

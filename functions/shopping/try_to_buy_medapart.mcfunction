@@ -270,6 +270,14 @@ execute if entity @s[scores={BuyMedapart=269},advancements={medabots_server:wave
 execute if entity @s[scores={BuyMedapart=270},advancements={medabots_server:wave_1/get_all_medabots/zant={left_arm=true}}] run function medabots_server:give_items/medaparts/zant/usurper_scimitar
 execute if entity @s[scores={BuyMedapart=271},advancements={medabots_server:wave_1/get_all_medabots/zant={right_arm=true}}] run function medabots_server:give_items/medaparts/zant/twilight_scimitar
 execute if entity @s[scores={BuyMedapart=272},advancements={medabots_server:wave_1/get_all_medabots/zant={head=true}}] run function medabots_server:give_items/medaparts/zant/zant_helmet
+execute if entity @s[scores={BuyMedapart=273},advancements={medabots_server:wave_1/get_all_medabots/nino={legs=true}}] run function medabots_server:give_items/medaparts/nino/sand_proof_boots
+execute if entity @s[scores={BuyMedapart=274},advancements={medabots_server:wave_1/get_all_medabots/nino={left_arm=true}}] run function medabots_server:give_items/medaparts/nino/excalibur
+execute if entity @s[scores={BuyMedapart=275},advancements={medabots_server:wave_1/get_all_medabots/nino={right_arm=true}}] run function medabots_server:give_items/medaparts/nino/ragnarok
+execute if entity @s[scores={BuyMedapart=276},advancements={medabots_server:wave_1/get_all_medabots/nino={head=true}}] run function medabots_server:give_items/medaparts/nino/bolganone
+execute if entity @s[scores={BuyMedapart=277},advancements={medabots_server:wave_1/get_all_medabots/galleom={legs=true}}] run function medabots_server:give_items/medaparts/galleom/subspace_crusader
+execute if entity @s[scores={BuyMedapart=278},advancements={medabots_server:wave_1/get_all_medabots/galleom={left_arm=true}}] run function medabots_server:give_items/medaparts/galleom/flaming_engine
+execute if entity @s[scores={BuyMedapart=279},advancements={medabots_server:wave_1/get_all_medabots/galleom={right_arm=true}}] run function medabots_server:give_items/medaparts/galleom/jet_engine
+execute if entity @s[scores={BuyMedapart=280},advancements={medabots_server:wave_1/get_all_medabots/galleom={head=true}}] run function medabots_server:give_items/medaparts/galleom/armored_body
 
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman"},{"translate":"medabots_server:message.shop.thank_you.medapart"}]}
 scoreboard players remove @s Money 100

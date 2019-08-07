@@ -19,7 +19,7 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.rob"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots/mewtwo",
+    "parent": "medabots_server:wave_1/get_all_medabots/nino",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",

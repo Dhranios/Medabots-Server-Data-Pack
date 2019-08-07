@@ -1,6 +1,7 @@
-execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1557 45 -397 run function medabots_server:spawn_entities/enemy_medabot/attack_tyrano/attack_tyrano/attack_tyrano/attack_tyrano/kuwagata
-execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] positioned -1557 45 -397 run scoreboard players set @e[distance=..1] Stage 10
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] positioned -1557 45 -397 run function medabots_server:spawn_entities/medabot/attack_tyrano/attack_tyrano/attack_tyrano/attack_tyrano/kuwagata
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] positioned -1557 45 -397 run scoreboard players set @e[distance=..1] Stage 10
+execute unless entity @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] positioned -1557 45 -397 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1561 45 -391 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1549 45 -391 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1554 45 -393 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
@@ -15,10 +16,10 @@ effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2
 teleport @s -1557 45 -392
-effect give @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] minecraft:night_vision 2 0 true
-effect give @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] minecraft:blindness 2 0 true
-scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] Battle 2
-teleport @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=0] -1557 45 -397
+effect give @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] minecraft:night_vision 2 0 true
+effect give @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] minecraft:blindness 2 0 true
+scoreboard players set @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] Battle 2
+teleport @a[x=-1570,y=51,z=-414,dx=62,dy=4,dz=95,tag=2] -1557 45 -397
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}
 tag @e[sort=random,type=minecraft:area_effect_cloud,tag=referee_marker,limit=1] add selected

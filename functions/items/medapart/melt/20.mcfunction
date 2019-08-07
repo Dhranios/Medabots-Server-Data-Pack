@@ -10,6 +10,7 @@ scoreboard players set @s[scores={Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots
 scoreboard players set @s[scores={Melt=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:flame_tisara_sala_hand"}}}]}] MedapartType 9
 scoreboard players set @s[scores={Melt=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_breathfire"}}}]}] MedapartType 10
 scoreboard players set @s[scores={Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:sphere_doomers_fire_doomer"}}}]}] MedapartType 11
+scoreboard players set @s[scores={Melt=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:galleom_flaming_engine"}}}]}] MedapartType 12
 
 # Give the weapon
 execute unless entity @s[scores={ScoutTime=1..}] run replaceitem entity @s[scores={Melt=1..},type=!minecraft:player] weapon.mainhand minecraft:fire_charge{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.melt"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melt"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.strike"}']},Enchantments:[{id:"minecraft:fire_aspect",lvl:1s}],medabots_server:{id:"medabots_server:melt"}}

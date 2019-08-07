@@ -8,7 +8,7 @@ scoreboard players set @s[scores={Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabot
 scoreboard players set @s[scores={Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:zant_usurper_scimitar"}}}]}] MedapartType 7
 scoreboard players set @s[scores={Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:zant_twilight_scimitar"}}}]}] MedapartType 8
 scoreboard players set @s[scores={Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:suzumega_hummer_chopper_sword"}}}]}] MedapartType 9
-scoreboard players set @s[scores={Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:master_code_master_edges"}}}]}] MedapartType 10
+scoreboard players set @s[scores={Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:master_core_master_edges"}}}]}] MedapartType 10
 scoreboard players set @s[scores={Sword=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:metal_general_general_slash"}}}]}] MedapartType 11
 scoreboard players set @s[scores={Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:smilidonad_flexor_sword"}}}]}] MedapartType 12 
 scoreboard players set @s[scores={Sword=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rokusho_sword"}}}]}] MedapartType 13

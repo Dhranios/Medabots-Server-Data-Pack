@@ -1,0 +1,4 @@
+function medabots_server:give_items/medaparts/nino/sand_proof_boots
+function medabots_server:give_items/medaparts/nino/excalibur
+function medabots_server:give_items/medaparts/nino/ragnarok
+function medabots_server:give_items/medaparts/nino/bolganone

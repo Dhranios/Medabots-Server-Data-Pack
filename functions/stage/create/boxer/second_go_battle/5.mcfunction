@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] positioned -1918 44 -572 run function medabots_server:spawn_entities/enemy_medabot/dorcus/dorcus/dorcus/dorcus/kuwagata
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] positioned -1918 44 -572 run function medabots_server:spawn_entities/medabot/dorcus/dorcus/dorcus/dorcus/kuwagata
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] positioned -1918 44 -572 run scoreboard players set @e[distance=..1] Stage 29
+execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] positioned -1918 44 -572 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1920 44 -572 run function medabots_server:spawn_entities/item/10_medallar_cents
 execute positioned -1916 44 -578 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
 execute positioned -1918 44 -577 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10

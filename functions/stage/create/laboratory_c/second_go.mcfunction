@@ -1,5 +1,5 @@
-execute positioned -1592 44 -589 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1579 44 -589 run function medabots_server:spawn_entities/guard/slow
+execute positioned -1592 44 -589 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1579 44 -589 run function medabots_server:spawn_entities/guard/normal
 execute positioned -1593 44 -587 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4/10_medallar_cents
 execute positioned -1593 44 -591 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4/10_medallar_cents
 execute positioned -1578 44 -587 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4/10_medallar_cents
@@ -23,7 +23,7 @@ scoreboard players set @a[x=-1586,y=44,z=-579,distance=..1] Battle 1
 scoreboard players set @a[x=-1586,y=44,z=-579,distance=..1] Stage 28
 scoreboard players set @a[x=-1586,y=44,z=-579,distance=..1] Music 0
 scoreboard players set @a[x=-1586,y=44,z=-579,distance=..1] MusicType 18
-scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=enemy_medabot] Stage 28
-scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=enemy_medabot] MusicType 18
+scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=medabot] Battle 3
+scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=medabot] Stage 28
+scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=medabot] Music 0
+scoreboard players set @a[x=-1596,y=50,z=-620,dx=22,dy=4,dz=44,tag=medabot] MusicType 18

@@ -31,6 +31,10 @@ tag @s[tag=!detected] remove already_targetted
 
 # Set the time depending on the delay
 scoreboard players set @s[scores={ParalyzeTime=1..}] Time 0
+scoreboard players set @s[tag=delay_8,scores={Time=0}] Time 160
+scoreboard players set @s[tag=delay_7,scores={Time=0}] Time 140
+scoreboard players set @s[tag=delay_6,scores={Time=0}] Time 120
+scoreboard players set @s[tag=delay_5,scores={Time=0}] Time 100
 scoreboard players set @s[tag=delay_4,scores={Time=0}] Time 80
 scoreboard players set @s[tag=delay_3,scores={Time=0}] Time 60
 scoreboard players set @s[tag=delay_2,scores={Time=0}] Time 40

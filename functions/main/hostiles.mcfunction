@@ -9,8 +9,8 @@ execute if entity @s[type=!minecraft:item] if block ~ ~ ~ minecraft:comparator r
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
 # Instant death if you fall in the void
-tag @s[y=-80,dy=79,tag=!enemy_medabot] add dead
-tag @s[y=-80,dy=79,tag=enemy_medabot] add dying
+tag @s[y=-80,dy=79,tag=!medabot] add dead
+tag @s[y=-80,dy=79,tag=medabot] add dying
 
 # Effects
 execute if entity @s[scores={AuxiliaryTime=1..}] run function medabots_server:effects/auxiliary_charged
@@ -29,4 +29,4 @@ execute if entity @s[scores={PerfectGuardTime=1..}] run function medabots_server
 execute if entity @s[scores={ScoutTime=1..}] run function medabots_server:effects/scouting
 
 # A CPU
-execute if entity @s[tag=enemy_medabot] run function medabots_server:main/computer_enemy_medabots
+execute if entity @s[tag=medabot] run function medabots_server:main/computer_medabots

@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1665,y=51,z=-768,dx=61,dy=4,dz=61,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1665,y=51,z=-768,dx=61,dy=4,dz=61,tag=0] positioned -1643 45 -715 run function medabots_server:spawn_entities/enemy_medabot/pastel_fairy/frappe/pinguen/pastel_fairy/mermaid
+execute unless entity @a[x=-1665,y=51,z=-768,dx=61,dy=4,dz=61,tag=0] positioned -1643 45 -715 run function medabots_server:spawn_entities/medabot/pastel_fairy/frappe/pinguen/pastel_fairy/chameleon
 execute unless entity @a[x=-1665,y=51,z=-768,dx=61,dy=4,dz=61,tag=0] positioned -1643 45 -715 run scoreboard players set @e[distance=..1] Stage 31
+execute unless entity @a[x=-1665,y=51,z=-768,dx=61,dy=4,dz=61,tag=0] positioned -1643 45 -715 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1642 45 -718 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1640 45 -716 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1638 45 -712 run function medabots_server:set_blocks/hole/delay_5

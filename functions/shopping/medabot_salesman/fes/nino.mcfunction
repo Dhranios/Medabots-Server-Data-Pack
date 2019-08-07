@@ -1,0 +1,10 @@
+tag @s add success
+execute if entity @s[advancements={medabots_server:wave_1/get_all_medabots/nino={legs=false,left_arm=false,right_arm=false,head=false}}] run tag @s add out_of_stock
+tellraw @s[tag=out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.not_available"}]}
+tellraw @s[tag=!out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.medapart"}]}
+tag @s remove out_of_stock
+tellraw @s[advancements={medabots_server:wave_1/get_all_medabots/nino={legs=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 273"},"with":[{"translate":"medabots_server:entity.nino","extra":[{"text":" "},{"translate":"medabots_server:item.nino_sand_proof_boots"}]},{"text":"100"}]}
+tellraw @s[advancements={medabots_server:wave_1/get_all_medabots/nino={left_arm=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 274"},"with":[{"translate":"medabots_server:entity.nino","extra":[{"text":" "},{"translate":"medabots_server:item.nino_excalibur"}]},{"text":"100"}]}
+tellraw @s[advancements={medabots_server:wave_1/get_all_medabots/nino={right_arm=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 275"},"with":[{"translate":"medabots_server:entity.nino","extra":[{"text":" "},{"translate":"medabots_server:item.nino_ragnarok"}]},{"text":"100"}]}
+tellraw @s[advancements={medabots_server:wave_1/get_all_medabots/nino={head=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 276"},"with":[{"translate":"medabots_server:entity.nino","extra":[{"text":" "},{"translate":"medabots_server:item.nino_bolganone"}]},{"text":"100"}]}
+tag @s add final

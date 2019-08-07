@@ -38,4 +38,8 @@ execute if entity @s[y_rotation=45..135,tag=allowed,scores={StageBuild=99}] run 
 execute if entity @s[y_rotation=-45..45,tag=allowed,scores={StageBuild=99}] run function medabots_server:set_blocks/spring_wall/disabled/north/delay_2
 execute if entity @s[y_rotation=135..-135,tag=allowed,scores={StageBuild=99}] run function medabots_server:set_blocks/spring_wall/disabled/south/delay_2
 execute if entity @s[y_rotation=-135..-45,tag=allowed,scores={StageBuild=99}] run function medabots_server:set_blocks/spring_wall/disabled/west/delay_2
+execute if entity @s[y_rotation=45..135,tag=allowed,scores={StageBuild=100}] run function medabots_server:set_blocks/spring_wall/disabled/east/delay_1
+execute if entity @s[y_rotation=-45..45,tag=allowed,scores={StageBuild=100}] run function medabots_server:set_blocks/spring_wall/disabled/north/delay_1
+execute if entity @s[y_rotation=135..-135,tag=allowed,scores={StageBuild=100}] run function medabots_server:set_blocks/spring_wall/disabled/south/delay_1
+execute if entity @s[y_rotation=-135..-45,tag=allowed,scores={StageBuild=100}] run function medabots_server:set_blocks/spring_wall/disabled/west/delay_1
 tag @e[distance=..0.7,tag=spring_wall] add no_ticking

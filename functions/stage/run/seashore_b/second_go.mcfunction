@@ -9,7 +9,7 @@ scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/seashore_b/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1760 44 -387 minecraft:lime_wool run tag @e[x=-1686.5,y=45,z=-358.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1684 44 -354 minecraft:lime_wool if block -1674 44 -374 minecraft:lime_wool if block -1702 44 -366 minecraft:lime_wool run tag @e[x=-1672.5,y=45,z=-387.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1684 44 -353 minecraft:lime_wool if block -1674 44 -374 minecraft:lime_wool if block -1702 44 -365 minecraft:lime_wool run tag @e[x=-1672.5,y=45,z=-387.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1672 44 -438 minecraft:lime_wool run tag @e[x=-1694.5,y=45,z=-410.5,distance=..0.7,tag=door,tag=!open] add open
 execute if block -1711 44 -417 minecraft:blue_wool run tag @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,tag=open] remove open
 execute if block -1712 44 -418 minecraft:light_blue_wool run tag @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,tag=open] remove open

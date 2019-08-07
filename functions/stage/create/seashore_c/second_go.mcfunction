@@ -1,13 +1,13 @@
-execute positioned -1549 44 -572 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1551 44 -572 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1551 44 -604 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1543 44 -554 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1551 44 -558 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1559 44 -554 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1562 44 -565 run function medabots_server:spawn_entities/guard/slow/1_medallar_cent
-execute positioned -1564 44 -568 run function medabots_server:spawn_entities/guard/slow/1_medallar_cent
-execute positioned -1560 44 -572 run function medabots_server:spawn_entities/guard/slow/1_medallar_cent
-execute positioned -1565 44 -575 run function medabots_server:spawn_entities/guard/slow/1_medallar_cent
+execute positioned -1549 44 -572 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1551 44 -572 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1551 44 -604 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1543 44 -554 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1551 44 -558 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1559 44 -554 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1562 44 -565 run function medabots_server:spawn_entities/guard/normal/1_medallar_cent
+execute positioned -1564 44 -568 run function medabots_server:spawn_entities/guard/normal/1_medallar_cent
+execute positioned -1560 44 -572 run function medabots_server:spawn_entities/guard/normal/1_medallar_cent
+execute positioned -1565 44 -575 run function medabots_server:spawn_entities/guard/normal/1_medallar_cent
 execute positioned -1558 44 -604 run function medabots_server:spawn_entities/cannon/no_detect/looking/south/delay_4
 execute positioned -1568 44 -599 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1553 44 -598 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
@@ -85,7 +85,7 @@ execute positioned -1517 44 -564 run function medabots_server:set_blocks/pot/bom
 execute positioned -1519 44 -564 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1520 44 -564 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1521 44 -566 run function medabots_server:set_blocks/pot/4_medallar_cents
-execute positioned -1527 44 -572 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1527 44 -572 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1524 44 -573 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1528 44 -582 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1528 44 -583 run function medabots_server:set_blocks/pot/1_medallar_cent
@@ -208,7 +208,7 @@ scoreboard players set @a[x=-1541,y=44,z=-570,distance=..1] Battle 1
 scoreboard players set @a[x=-1541,y=44,z=-570,distance=..1] Stage 25
 scoreboard players set @a[x=-1541,y=44,z=-570,distance=..1] Music 0
 scoreboard players set @a[x=-1541,y=44,z=-570,distance=..1] MusicType 18
-scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=enemy_medabot] Stage 25
-scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=enemy_medabot] MusicType 18
+scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=medabot] Battle 3
+scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=medabot] Stage 25
+scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=medabot] Music 0
+scoreboard players set @a[x=-1570,y=50,z=-608,dx=60,dy=4,dz=60,tag=medabot] MusicType 18

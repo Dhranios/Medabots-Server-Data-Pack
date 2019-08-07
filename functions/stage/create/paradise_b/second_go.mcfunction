@@ -1,9 +1,9 @@
-execute positioned -1615 45 -587 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1620 45 -587 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1638 45 -599 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1634 45 -601 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1637 45 -629 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1639 45 -630 run function medabots_server:spawn_entities/guard/slow
+execute positioned -1615 45 -587 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1620 45 -587 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1638 45 -599 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1634 45 -601 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1637 45 -629 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1639 45 -630 run function medabots_server:spawn_entities/guard/normal
 execute positioned -1661 45 -601 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1617 45 -611 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
 execute positioned -1617 45 -617 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
@@ -29,7 +29,7 @@ execute positioned -1616 45 -608 run function medabots_server:set_blocks/action_
 execute positioned -1614 45 -610 run function medabots_server:set_blocks/action_floor/enabled/round_stone/north
 execute positioned -1619 45 -613 run function medabots_server:set_blocks/action_floor/enabled/round_stone/south
 execute positioned -1615 45 -620 run function medabots_server:set_blocks/action_floor/enabled/round_stone/south
-execute positioned -1615 45 -580 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1615 45 -580 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1618 45 -584 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1621 45 -580 run function medabots_server:set_blocks/pot
 execute positioned -1622 45 -585 run function medabots_server:set_blocks/pot
@@ -44,7 +44,7 @@ execute positioned -1646 45 -578 run function medabots_server:set_blocks/pot
 execute positioned -1647 45 -579 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1648 45 -580 run function medabots_server:set_blocks/pot
 execute positioned -1649 45 -579 run function medabots_server:set_blocks/pot
-execute positioned -1645 45 -586 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1645 45 -586 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1642 45 -589 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1649 45 -592 run function medabots_server:set_blocks/pot
 execute positioned -1650 45 -594 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -52,26 +52,26 @@ execute positioned -1651 45 -594 run function medabots_server:set_blocks/pot
 execute positioned -1649 45 -596 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1652 45 -596 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1653 45 -595 run function medabots_server:set_blocks/pot
-execute positioned -1654 45 -597 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1654 45 -597 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1662 45 -602 run function medabots_server:set_blocks/pot
 execute positioned -1663 45 -603 run function medabots_server:set_blocks/pot
 execute positioned -1660 45 -594 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1658 45 -592 run function medabots_server:set_blocks/pot/2_medallar_cents
-execute positioned -1637 45 -590 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1637 45 -590 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1634 45 -593 run function medabots_server:set_blocks/pot
 execute positioned -1629 45 -593 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1628 45 -596 run function medabots_server:set_blocks/pot
-execute positioned -1642 45 -598 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1642 45 -598 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1639 45 -602 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1636 45 -603 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1632 45 -605 run function medabots_server:set_blocks/pot/cannon/detect/rotating/south/delay_4
-execute positioned -1632 45 -610 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1632 45 -610 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1630 45 -615 run function medabots_server:set_blocks/pot
 execute positioned -1633 45 -617 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1636 45 -617 run function medabots_server:set_blocks/pot
 execute positioned -1629 45 -619 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1634 45 -620 run function medabots_server:set_blocks/pot/2_medallar_cents
-execute positioned -1633 45 -623 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1633 45 -623 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1636 45 -623 run function medabots_server:set_blocks/pot
 execute positioned -1633 45 -627 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1642 45 -632 run function medabots_server:set_blocks/pot/4_medallar_cents
@@ -87,7 +87,7 @@ execute positioned -1650 45 -609 run function medabots_server:set_blocks/pot/4_m
 execute positioned -1652 45 -611 run function medabots_server:set_blocks/pot
 execute positioned -1654 45 -611 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1624 45 -602 run function medabots_server:set_blocks/pot
-execute positioned -1621 45 -601 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1621 45 -601 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1618 45 -598 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1614 45 -602 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1610 45 -604 run function medabots_server:set_blocks/pot
@@ -99,7 +99,7 @@ execute positioned -1624 45 -626 run function medabots_server:set_blocks/pot
 execute positioned -1626 45 -626 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1617 45 -629 run function medabots_server:set_blocks/pot/cannon/detect/rotating/south/delay_4
 execute positioned -1620 45 -629 run function medabots_server:set_blocks/pot/2_medallar_cents
-execute positioned -1623 45 -629 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1623 45 -629 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1621 45 -632 run function medabots_server:set_blocks/pot
 execute positioned -1624 45 -632 run function medabots_server:set_blocks/pot
 execute positioned -1626 45 -630 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -164,7 +164,7 @@ scoreboard players set @a[x=-1611,y=45,z=-582,distance=..1] Battle 1
 scoreboard players set @a[x=-1611,y=45,z=-582,distance=..1] Stage 22
 scoreboard players set @a[x=-1611,y=45,z=-582,distance=..1] Music 0
 scoreboard players set @a[x=-1611,y=45,z=-582,distance=..1] MusicType 17
-scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=enemy_medabot] Stage 22
-scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=enemy_medabot] MusicType 17
+scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=medabot] Battle 3
+scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=medabot] Stage 22
+scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=medabot] Music 0
+scoreboard players set @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=medabot] MusicType 17

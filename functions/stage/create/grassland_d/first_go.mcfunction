@@ -1,18 +1,18 @@
-execute positioned -1586 45 -707 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1586 45 -709 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1582 45 -707 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1582 45 -709 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1560 45 -708 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1548 45 -698 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1548 45 -700 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1548 45 -702 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1585 45 -726 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1568 45 -724 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1566 45 -746 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1560 45 -745 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1553 45 -747 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1543 45 -742 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1542 45 -726 run function medabots_server:spawn_entities/guard/slow
+execute positioned -1586 45 -707 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1586 45 -709 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1582 45 -707 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1582 45 -709 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1560 45 -708 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1548 45 -698 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1548 45 -700 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1548 45 -702 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1585 45 -726 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1568 45 -724 run function medabots_server:spawn_entities/guard/normal/2_medallar_cents
+execute positioned -1566 45 -746 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1560 45 -745 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1553 45 -747 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1543 45 -742 run function medabots_server:spawn_entities/guard/normal
+execute positioned -1542 45 -726 run function medabots_server:spawn_entities/guard/normal
 execute positioned -1592 45 -702 run function medabots_server:spawn_entities/cannon/no_detect/looking/south/delay_4
 execute positioned -1589 45 -700 run function medabots_server:spawn_entities/cannon/no_detect/looking/south/delay_4
 execute positioned -1586 45 -700 run function medabots_server:spawn_entities/cannon/no_detect/looking/south/delay_4
@@ -57,10 +57,10 @@ execute positioned -1552 45 -711 run function medabots_server:set_blocks/floor_s
 execute positioned -1584 45 -707 run function medabots_server:set_blocks/floor_switch/yellow/delay_100
 execute positioned -1586 45 -710 run function medabots_server:set_blocks/floor_switch/yellow/delay_100
 execute positioned -1582 45 -710 run function medabots_server:set_blocks/floor_switch/yellow/delay_100
-execute positioned -1562 45 -723 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1556 45 -722 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1554 45 -711 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
-execute positioned -1548 45 -737 run function medabots_server:set_blocks/action_floor/enabled/guard/slow
+execute positioned -1562 45 -723 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1556 45 -722 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1554 45 -711 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
+execute positioned -1548 45 -737 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
 execute positioned -1578 45 -718 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1575 45 -724 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1572 45 -718 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
@@ -164,7 +164,7 @@ scoreboard players set @a[x=-1574,y=45,z=-693,distance=..1] Battle 1
 scoreboard players set @a[x=-1574,y=45,z=-693,distance=..1] Stage 30
 scoreboard players set @a[x=-1574,y=45,z=-693,distance=..1] Music 0
 scoreboard players set @a[x=-1574,y=45,z=-693,distance=..1] MusicType 7
-scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=enemy_medabot] Battle 3
-scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=enemy_medabot] Stage 30
-scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=enemy_medabot] Music 0
-scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=enemy_medabot] MusicType 7
+scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=medabot] Battle 3
+scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=medabot] Stage 30
+scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=medabot] Music 0
+scoreboard players set @a[x=-1600,y=50,z=-750,dx=62,dy=4,dz=62,tag=medabot] MusicType 7

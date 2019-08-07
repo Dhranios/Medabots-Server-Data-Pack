@@ -7,5 +7,5 @@ execute if block ~ ~1 ~ minecraft:piston[facing=east] positioned ~1 ~ ~ run tag 
 execute if block ~ ~1 ~ minecraft:piston[facing=east] positioned ~1 ~ ~ run tag @e[distance=..0.7,tag=hostile] add hammer_punch_hit
 execute if block ~ ~1 ~ minecraft:piston[facing=west] positioned ~-1 ~ ~ run tag @e[distance=..0.7,tag=hostile] add hit_to_west
 execute if block ~ ~1 ~ minecraft:piston[facing=west] positioned ~-1 ~ ~ run tag @e[distance=..0.7,tag=hostile] add hammer_punch_hit
-execute if entity @s[tag=!dead] run setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=true]
-execute if entity @s[tag=!dead] run setblock ~ ~2 ~ minecraft:stone_button[face=floor,facing=north]
+setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=true]
+setblock ~ ~2 ~ minecraft:structure_void

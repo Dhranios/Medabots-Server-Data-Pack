@@ -1,5 +1,5 @@
 # Fast roads
-execute if entity @s[tag=action_mode] run function medabots_server:settings/action_mode
+execute if entity @s[tag=action_mode,scores={Battle=0}] run function medabots_server:settings/action_mode
 
 # No drowning
 execute anchored eyes if block ^ ^ ^ minecraft:water run effect give @s minecraft:water_breathing 1 0 true

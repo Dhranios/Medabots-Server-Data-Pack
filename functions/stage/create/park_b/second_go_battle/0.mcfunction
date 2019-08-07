@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=0] positioned -1810 45 -653 run function medabots_server:spawn_entities/enemy_medabot/sailor_multi/pure_mermaid/sailor_multi/sailor_multi/spider
+execute unless entity @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=0] positioned -1810 45 -653 run function medabots_server:spawn_entities/medabot/sailor_multi/pure_mermaid/sailor_multi/sailor_multi/spider
 execute unless entity @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=0] positioned -1810 45 -653 run scoreboard players set @e[distance=..1] Stage 20
+execute unless entity @a[x=-1857,y=51,z=-730,dx=94,dy=4,dz=94,tag=0] positioned -1810 45 -653 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1808 45 -663 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1805 45 -660 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1805 45 -656 run function medabots_server:set_blocks/hole/delay_5

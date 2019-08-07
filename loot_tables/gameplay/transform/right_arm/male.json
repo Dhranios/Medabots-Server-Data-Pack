@@ -503,6 +503,16 @@
                             "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:25,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.zant_twilight_scimitar\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.sword\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.sword.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"55\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.zant\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.zant_twilight_scimitar.model\"}']},medabots_server:{id:\"medabots_server:zant_twilight_scimitar\",gender:0b,move:\"sword\",part:\"right_arm\",armor:55,power:24,activated:1b,version:1}}"
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:23,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_jet_engine\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.armor\",\"with\":[{\"text\":\"100\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.galleom\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.part.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_jet_engine.model\"}']},medabots_server:{id:\"medabots_server:galleom_jet_engine\",gender:0b,move:\"hammer\",part:\"right_arm\",armor:100,power:50,activated:1b,version:1}}"
+                        }
+                    ]
                 }
             ]
         }

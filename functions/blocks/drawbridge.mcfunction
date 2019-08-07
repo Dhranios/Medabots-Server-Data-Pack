@@ -4,7 +4,7 @@ scoreboard players set @s[tag=dead] Time 0
 
 # Lift the bridge
 setblock ~ ~-1 ~ minecraft:oak_planks
-execute if entity @s[scores={Time=0}] run function medabots_server:blocks/drawbridge/turn_back
+execute if entity @s[scores={Time=0}] if block ~ ~ ~ minecraft:air run function medabots_server:blocks/drawbridge/turn_back
 
 # Reset the pushing
 scoreboard players set @s Moving 0

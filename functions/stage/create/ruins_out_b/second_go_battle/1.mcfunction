@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=1] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=1] positioned -1787 45 -525 run function medabots_server:spawn_entities/enemy_medabot/hippopojamas/dragonbeetle/maxsnake/hippopojamas/knight
+execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=1] positioned -1787 45 -525 run function medabots_server:spawn_entities/medabot/hippopojamas/dragonbeetle/maxsnake/hippopojamas/knight
 execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=1] positioned -1787 45 -525 run scoreboard players set @e[distance=..1] Stage 16
+execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=1] positioned -1787 45 -525 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1790 45 -515 run function medabots_server:set_blocks/gas_floor/enabled/falling
 execute positioned -1784 45 -518 run function medabots_server:set_blocks/gas_floor/enabled/falling
 execute positioned -1797 45 -521 run function medabots_server:set_blocks/gas_floor/enabled/falling

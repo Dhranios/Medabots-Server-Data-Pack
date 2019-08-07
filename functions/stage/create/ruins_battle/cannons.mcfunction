@@ -1,17 +1,17 @@
 execute positioned -1982 45 -573 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4
-execute positioned -1982 45 -563 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4
+execute positioned -1982 45 -563 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_3
 execute positioned -1982 45 -558 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4
 execute positioned -1982 45 -548 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4
 execute positioned -2011 45 -548 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
-execute positioned -2011 45 -558 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
+execute positioned -2011 45 -558 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_3
 execute positioned -2011 45 -563 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
 execute positioned -2011 45 -573 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4
 execute positioned -2009 45 -575 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
-execute positioned -1999 45 -575 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
+execute positioned -1999 45 -575 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_3
 execute positioned -1994 45 -575 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
 execute positioned -1984 45 -575 run function medabots_server:spawn_entities/cannon/no_detect/rotating/south/delay_4
 execute positioned -1984 45 -546 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4
-execute positioned -1994 45 -546 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4
+execute positioned -1994 45 -546 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_3
 execute positioned -1999 45 -546 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4
 execute positioned -2009 45 -546 run function medabots_server:spawn_entities/cannon/no_detect/rotating/north/delay_4
 teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=-1] -1996 45 -557 0 0

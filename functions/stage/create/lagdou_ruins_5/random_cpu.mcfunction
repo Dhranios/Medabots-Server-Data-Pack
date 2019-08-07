@@ -1,18 +1,14 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"CPU Selection"}',Tags:["cpu_selection","1"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"CPU Selection"}',Tags:["cpu_selection","2"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"CPU Selection"}',Tags:["cpu_selection","3"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"CPU Selection"}',Tags:["cpu_selection","4"],Duration:1}
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"CPU Selection"}',Tags:["cpu_selection","5"],Duration:1}
-tag @e[type=minecraft:area_effect_cloud,tag=cpu_selection,sort=random,limit=1] add selected
+loot spawn ~ ~ ~ loot medabots_server:gameplay/options/5
 # Cyclops
-execute if entity @e[type=minecraft:area_effect_cloud,tag=cpu_selection,tag=selected,tag=1] run function medabots_server:spawn_entities/enemy_medabot/hippopojamas/fly_falcon/dorcus/king_pharaoh/mermaid
+execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:1}}}] run function medabots_server:spawn_entities/medabot/hippopojamas/fly_falcon/dorcus/king_pharaoh/mermaid
 # Gwyllgi
-execute if entity @e[type=minecraft:area_effect_cloud,tag=cpu_selection,tag=selected,tag=2] run function medabots_server:spawn_entities/enemy_medabot/warbonnet/magicalcard/shoot_spider/doctor_study/monkey
+execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:2}}}] run function medabots_server:spawn_entities/medabot/warbonnet/magicalcard/shoot_spider/doctor_study/monkey
 # Gorgon
-execute if entity @e[type=minecraft:area_effect_cloud,tag=cpu_selection,tag=selected,tag=3] run function medabots_server:spawn_entities/enemy_medabot/arcbeetle/magicalcard/le_villan/doctor_study/spider
+execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:3}}}] run function medabots_server:spawn_entities/medabot/arcbeetle/magicalcard/le_villan/doctor_study/spider
 # Bael
-execute if entity @e[type=minecraft:area_effect_cloud,tag=cpu_selection,tag=selected,tag=4] run function medabots_server:spawn_entities/enemy_medabot/basstroyer/baroncastle/maxsnake/shoot_spider/spider
+execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:4}}}] run function medabots_server:spawn_entities/medabot/basstroyer/baroncastle/maxsnake/shoot_spider/spider
 # Centaur
-execute if entity @e[type=minecraft:area_effect_cloud,tag=cpu_selection,tag=selected,tag=5] run function medabots_server:spawn_entities/enemy_medabot/doctor_study/attack_tyrano/warbonnet/acehorn/unicorn
-kill @e[type=minecraft:area_effect_cloud,tag=cpu_selection]
+execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:5}}}] run function medabots_server:spawn_entities/medabot/doctor_study/attack_tyrano/warbonnet/acehorn/unicorn
+kill @e[type=minecraft:item,distance=..0.7]
 scoreboard players set @e[tag=!medabot_model,distance=..1] Stage 40
+tag @e[tag=!medabot_model,distance=..1] add enemy_medabot

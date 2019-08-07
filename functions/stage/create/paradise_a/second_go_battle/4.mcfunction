@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=4] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=4] positioned -1715 45 -697 run function medabots_server:spawn_entities/enemy_medabot/blackstag/peppercat/blackstag/blackstag/knight
+execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=4] positioned -1715 45 -697 run function medabots_server:spawn_entities/medabot/blackstag/peppercat/blackstag/blackstag/knight
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=4] positioned -1715 45 -697 run scoreboard players set @e[distance=..1] Stage 21
+execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=4] positioned -1715 45 -697 run tag @e[distance=..1] add enemy_medabot
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=4] positioned -1715 45 -697 as @e[distance=..1] run data merge entity @s {DeathLootTable:"medabots_server:entities/medabot"}
 execute positioned -1716 45 -700 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1714 45 -695 run function medabots_server:set_blocks/hole/delay_5

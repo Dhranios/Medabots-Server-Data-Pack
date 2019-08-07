@@ -58,6 +58,7 @@ execute if entity @s[scores={Stage=14},tag=first_go] run function medabots_serve
 execute if entity @s[scores={Stage=14},tag=second_go] run function medabots_server:stage/leave_stage/snowfield_b/second_go
 execute if entity @s[scores={Stage=14},tag=rubberobo] run function medabots_server:stage/leave_stage/snowfield_b/rubberobo
 execute if entity @s[scores={Stage=14},tag=special] run function medabots_server:stage/leave_stage/snowfield_b/special
+execute if entity @s[scores={Stage=14},tag=sloan_challenge] run function medabots_server:stage/leave_stage/snowfield_b/sloan_challenge
 execute if entity @s[scores={Stage=15},tag=custom] run function medabots_server:stage/leave_stage/iceberg_b/custom
 execute if entity @s[scores={Stage=15},tag=first_go] run function medabots_server:stage/leave_stage/iceberg_b/first_go
 execute if entity @s[scores={Stage=15},tag=second_go] run function medabots_server:stage/leave_stage/iceberg_b/second_go

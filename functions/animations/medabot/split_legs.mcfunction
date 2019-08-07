@@ -11,8 +11,8 @@ execute if entity @s[tag=cutscene] run scoreboard players operation @e[tag=medab
 tag @e[tag=medabot_model,tag=new,limit=1] remove new
 
 execute if score #temp Time matches 1.. run function medabots_server:animations/medabot/separate_leg
-execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{leg_data:{has_tail:1b}}}}]}] run function medabots_server:animations/medabot/separate_tail
-execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{leg_data:{has_wormtail:1b}}}}]}] run function medabots_server:animations/medabot/separate_wormtail
+execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{has_tail:1b}}}}]}] run function medabots_server:animations/medabot/separate_tail
+execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{has_wormtail:1b}}}}]}] run function medabots_server:animations/medabot/separate_wormtail
 
 scoreboard players reset #temp Time
 kill @s

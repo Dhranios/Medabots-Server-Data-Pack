@@ -10,6 +10,10 @@ execute if entity @s[scores={ShopIndex4=9}] run function medabots_server:shoppin
 execute if entity @s[scores={ShopIndex4=10}] run function medabots_server:shopping/medabot_salesman/krd/sphere_doomers
 execute if entity @s[scores={ShopIndex4=11}] run function medabots_server:shopping/medabot_salesman/twi/darknut
 execute if entity @s[scores={ShopIndex4=12}] run function medabots_server:shopping/medabot_salesman/twi/zant
+execute if entity @s[scores={ShopIndex4=13}] run function medabots_server:shopping/medabot_salesman/fes/amelia
+execute if entity @s[scores={ShopIndex4=14}] run function medabots_server:shopping/medabot_salesman/fes/nino
+execute if entity @s[scores={ShopIndex4=15}] run function medabots_server:shopping/medabot_salesman/ssb/galleom
+execute if entity @s[scores={ShopIndex4=16}] run function medabots_server:shopping/medabot_salesman/ssb/master_core
 
 tellraw @s[scores={ShopIndex1=1..,ShopIndex2=1..,ShopIndex3=1..}] {"translate":"medabots_server:message.medallar_count","color":"green","with":[{"score":{"objective":"Money","name":"@s"}}]}
 execute if entity @s[scores={ShopIndex1=2,ShopIndex2=1,ShopIndex3=2}] run function medabots_server:shopping/medabot_salesman/bab

@@ -1,6 +1,7 @@
 execute unless entity @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] positioned -1604 45 -374 run function medabots_server:spawn_entities/character_enemy_medabot/spyke
+execute unless entity @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] positioned -1604 45 -374 run function medabots_server:spawn_entities/character_medabot/spyke
 execute unless entity @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] positioned -1604 45 -374 run scoreboard players set @e[distance=..1] Stage 11
+execute unless entity @a[x=-1636,y=51,z=-382,dx=63,dy=4,dz=63,tag=0] positioned -1604 45 -374 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1613 45 -373 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1613 45 -378 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
 execute positioned -1609 45 -369 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
