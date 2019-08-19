@@ -3,19 +3,19 @@ execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] positioned 
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] positioned -1890 44 -596 run scoreboard players set @e[distance=..1] Stage 29
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=3] positioned -1890 44 -596 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1890 44 -602 run function medabots_server:spawn_entities/item/10_medallar_cents
-execute positioned -1890 44 -601 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
-execute positioned -1889 44 -601 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
-execute positioned -1897 44 -593 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
-execute positioned -1882 44 -593 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
-execute positioned -1896 44 -598 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_11
-execute positioned -1883 44 -598 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_11
-execute positioned -1895 44 -590 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_12
-execute positioned -1884 44 -590 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_12
-execute positioned -1894 44 -600 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_13
-execute positioned -1885 44 -600 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_13
-execute positioned -1893 44 -588 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_14
-execute positioned -1886 44 -588 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_14
-tag @e[x=-1888.5,y=44,z=-584.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1890 44 -601 run function medabots_server:spawn_entities/cannon/search/south/delay_4
+execute positioned -1889 44 -601 run function medabots_server:spawn_entities/cannon/search/south/delay_4
+execute positioned -1897 44 -593 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
+execute positioned -1882 44 -593 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
+execute positioned -1896 44 -598 run function medabots_server:set_blocks/laser_trap/south/delay_11/power_0
+execute positioned -1883 44 -598 run function medabots_server:set_blocks/laser_trap/south/delay_11/power_0
+execute positioned -1895 44 -590 run function medabots_server:set_blocks/laser_trap/north/delay_12/power_0
+execute positioned -1884 44 -590 run function medabots_server:set_blocks/laser_trap/north/delay_12/power_0
+execute positioned -1894 44 -600 run function medabots_server:set_blocks/laser_trap/south/delay_13/power_0
+execute positioned -1885 44 -600 run function medabots_server:set_blocks/laser_trap/south/delay_13/power_0
+execute positioned -1893 44 -588 run function medabots_server:set_blocks/laser_trap/north/delay_14/power_0
+execute positioned -1886 44 -588 run function medabots_server:set_blocks/laser_trap/north/delay_14/power_0
+scoreboard players set @e[x=-1888.5,y=44,z=-584.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

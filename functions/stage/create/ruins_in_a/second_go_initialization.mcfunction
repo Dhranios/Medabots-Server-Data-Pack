@@ -1,5 +1,5 @@
 tag @s add -1
-tag @s add second_go
+scoreboard players set @s StageVersion 2
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ruins_in_a/second_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1683 50 -259 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1680 52 -277 minecraft:redstone_block

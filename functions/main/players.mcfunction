@@ -67,9 +67,6 @@ function medabots_server:effects/recharge
 # Loop music
 function medabots_server:other/music
 
-# Hush, no need to see what's going on here #FuturePlans
-execute if entity @s[tag=street_pass] run function medabots_server:items/streetpass
-
 # Verify resource pack
 execute if entity @s[scores={Offline=1..}] run function medabots_server:settings/resource_pack_verification/ask
 execute unless entity @s[scores={Verified=0..}] run function medabots_server:settings/resource_pack_verification/ask

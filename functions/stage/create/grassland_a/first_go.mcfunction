@@ -8,14 +8,14 @@ execute positioned -1523 45 -177 run function medabots_server:spawn_entities/gua
 execute positioned -1535 45 -171 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
 execute positioned -1538 45 -175 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
 execute positioned -1542 45 -169 run function medabots_server:spawn_entities/guard/slow/2_medallar_cents
-execute positioned -1558 45 -123 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4/1_medallar_cent
-execute positioned -1563 45 -128 run function medabots_server:spawn_entities/cannon/no_detect/looking/south/delay_4/1_medallar_cent
-execute positioned -1559 45 -130 run function medabots_server:spawn_entities/cannon/no_detect/rotating/west/delay_4/1_medallar_cent
-execute positioned -1565 45 -133 run function medabots_server:spawn_entities/cannon/no_detect/rotating/east/delay_4/1_medallar_cent
-execute positioned -1555 45 -136 run function medabots_server:spawn_entities/cannon/detect/looking/west/delay_4/1_medallar_cent
-execute positioned -1560 45 -138 run function medabots_server:spawn_entities/cannon/detect/looking/south/delay_4/1_medallar_cent
-execute positioned -1566 45 -141 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4/1_medallar_cent
-execute positioned -1560 45 -144 run function medabots_server:spawn_entities/cannon/detect/rotating/north/delay_4/1_medallar_cent
+execute positioned -1558 45 -123 run function medabots_server:spawn_entities/cannon/still/east/delay_4/1_medallar_cent
+execute positioned -1563 45 -128 run function medabots_server:spawn_entities/cannon/still/south/delay_4/1_medallar_cent
+execute positioned -1559 45 -130 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/1_medallar_cent
+execute positioned -1565 45 -133 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/1_medallar_cent
+execute positioned -1555 45 -136 run function medabots_server:spawn_entities/cannon/tripwire/west/delay_4/1_medallar_cent
+execute positioned -1560 45 -138 run function medabots_server:spawn_entities/cannon/tripwire/south/delay_4/1_medallar_cent
+execute positioned -1566 45 -141 run function medabots_server:spawn_entities/cannon/search/east/delay_4/1_medallar_cent
+execute positioned -1560 45 -144 run function medabots_server:spawn_entities/cannon/search/north/delay_4/1_medallar_cent
 execute positioned -1513 45 -123 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1516 45 -120 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1520 45 -121 run function medabots_server:set_blocks/floor_switch/green
@@ -132,19 +132,19 @@ execute positioned -1565 45 -142 run function medabots_server:set_blocks/wall
 execute positioned -1559 45 -143 run function medabots_server:set_blocks/wall
 execute positioned -1514 45 -167 run function medabots_server:set_blocks/wall
 execute positioned -1522 45 -171 run function medabots_server:set_blocks/wall
-execute positioned -1517 45 -128 run function medabots_server:set_blocks/door/closed/south
-execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/closed/west
-execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/closed/west
-execute positioned -1535 45 -158 run function medabots_server:set_blocks/door/closed/west
-execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/closed/west
-execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/closed/south
-execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/closed/east
-execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/closed/east
-execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/closed/east
-execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/closed/east
+execute positioned -1517 45 -128 run function medabots_server:set_blocks/door/south/power_1
+execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1535 45 -158 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/south/power_1
+execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/east/power_1
 execute positioned -1551 45 -171 run function medabots_server:set_blocks/goal_area
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area
-tag @s add first_go
+scoreboard players set @s StageVersion 1
 teleport @s -1516 45 -123 0 0
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @s

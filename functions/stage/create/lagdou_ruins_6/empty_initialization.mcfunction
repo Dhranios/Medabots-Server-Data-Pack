@@ -1,6 +1,6 @@
 tag @s add -1
 tag @s add ally_medabot
-tag @s add empty
+scoreboard players set @s StageVersion 1
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/lagdou_ruins_6/empty
 execute if entity @s[tag=vs_cpus] positioned -1236 45 -135 run function medabots_server:stage/create/lagdou_ruins_6/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1236 51 -99 -180 0

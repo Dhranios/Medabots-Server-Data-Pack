@@ -154,6 +154,8 @@ scoreboard objectives add Pig minecraft.custom:minecraft.pig_one_cm
 scoreboard objectives add PosX dummy
 scoreboard objectives add PosY dummy
 scoreboard objectives add PosZ dummy
+scoreboard objectives add PowerAmount dummy
+scoreboard objectives add PowerNeeded dummy
 scoreboard objectives add Press dummy
 scoreboard objectives add PreviousError dummy
 scoreboard objectives add Question trigger
@@ -187,12 +189,10 @@ scoreboard objectives add Sneaking minecraft.custom:minecraft.sneak_time
 scoreboard objectives add Sound dummy
 scoreboard objectives add Stage dummy
 scoreboard objectives add StageBuild trigger
+scoreboard objectives add StageVersion dummy
 scoreboard objectives add Stars dummy
 scoreboard objectives add StatusClear dummy
 scoreboard objectives add Steps dummy
-scoreboard objectives add StreetPassCool dummy
-scoreboard objectives add StreetPassHits dummy
-scoreboard objectives add StreetPassTime dummy
 scoreboard objectives add Swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add Sword dummy
 scoreboard objectives add TaskCheck trigger

@@ -1,5 +1,5 @@
 tag @s add -1
-tag @s add second_go
+scoreboard players set @s StageVersion 2
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/seashore_c/second_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1540 50 -578 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1540 52 -610 minecraft:redstone_block

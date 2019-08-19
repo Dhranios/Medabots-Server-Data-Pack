@@ -6,5 +6,4 @@ stopsound @s music
 playsound medabots_server:music.stage.park_intro music @s ~ ~ ~ 1000
 scoreboard players set @s Music 160
 scoreboard players set @s MusicType 16
-tag @s add custom
 function medabots_server:stage/create/custom/builder

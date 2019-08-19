@@ -22,8 +22,8 @@ execute if entity @s[y_rotation=-135..-45,tag=allowed] if block ~ ~-1 ~1 minecra
 execute if entity @s[y_rotation=-135..-45,tag=allowed] if block ~ ~-1 ~1 minecraft:water run tag @s remove allowed
 execute if entity @s[y_rotation=-135..-45,tag=allowed] if block ~ ~-1 ~1 minecraft:barrier run tag @s remove allowed
 
-execute if entity @s[y_rotation=45..135,tag=allowed] run function medabots_server:set_blocks/door/closed/east
-execute if entity @s[y_rotation=-45..45,tag=allowed] run function medabots_server:set_blocks/door/closed/north
-execute if entity @s[y_rotation=135..-135,tag=allowed] run function medabots_server:set_blocks/door/closed/south
-execute if entity @s[y_rotation=-135..-45,tag=allowed] run function medabots_server:set_blocks/door/closed/west
+execute if entity @s[y_rotation=45..135,tag=allowed] run function medabots_server:set_blocks/door/east
+execute if entity @s[y_rotation=-45..45,tag=allowed] run function medabots_server:set_blocks/door/north
+execute if entity @s[y_rotation=135..-135,tag=allowed] run function medabots_server:set_blocks/door/south
+execute if entity @s[y_rotation=-135..-45,tag=allowed] run function medabots_server:set_blocks/door/west
 tag @e[distance=..0.7,tag=door] add no_ticking

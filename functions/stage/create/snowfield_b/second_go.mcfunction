@@ -16,9 +16,9 @@ execute positioned -1703 45 -519 run function medabots_server:spawn_entities/gua
 execute positioned -1704 45 -515 run function medabots_server:spawn_entities/guard/slow/1_medallar_cent
 execute positioned -1705 45 -523 run function medabots_server:spawn_entities/guard/slow/1_medallar_cent
 execute positioned -1707 45 -518 run function medabots_server:spawn_entities/guard/slow/1_medallar_cent
-execute positioned -1728 45 -488 run function medabots_server:spawn_entities/cannon/detect/rotating/south/delay_4
-execute positioned -1714 45 -517 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4/1_medallar_cent
-execute positioned -1712 45 -516 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4/1_medallar_cent
+execute positioned -1728 45 -488 run function medabots_server:spawn_entities/cannon/search/south/delay_4
+execute positioned -1714 45 -517 run function medabots_server:spawn_entities/cannon/search/east/delay_4/1_medallar_cent
+execute positioned -1712 45 -516 run function medabots_server:spawn_entities/cannon/search/east/delay_4/1_medallar_cent
 execute positioned -1718 45 -463 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1711 45 -510 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1703 45 -514 run function medabots_server:spawn_entities/item/6_medallar_cents
@@ -43,11 +43,11 @@ execute positioned -1708 45 -465 run function medabots_server:set_blocks/floor_s
 execute positioned -1704 45 -464 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1708 45 -463 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1707 45 -463 run function medabots_server:set_blocks/floor_switch/blue
-execute positioned -1727 45 -501 run function medabots_server:set_blocks/action_floor/enabled/ice_block/west
-execute positioned -1722 45 -493 run function medabots_server:set_blocks/action_floor/enabled/ice_block/east
-execute positioned -1713 45 -493 run function medabots_server:set_blocks/action_floor/enabled/ice_block/west
-execute positioned -1705 45 -506 run function medabots_server:set_blocks/action_floor/enabled/ice_block/south
-execute positioned -1705 45 -510 run function medabots_server:set_blocks/alarm
+execute positioned -1727 45 -501 run function medabots_server:set_blocks/action_floor/ice_block/west/power_0
+execute positioned -1722 45 -493 run function medabots_server:set_blocks/action_floor/ice_block/east/power_0
+execute positioned -1713 45 -493 run function medabots_server:set_blocks/action_floor/ice_block/west/power_0
+execute positioned -1705 45 -506 run function medabots_server:set_blocks/action_floor/ice_block/south/power_0
+execute positioned -1705 45 -510 run function medabots_server:set_blocks/alarm/power_1
 execute positioned -1701 45 -528 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1702 45 -528 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1705 45 -467 run function medabots_server:set_blocks/pot
@@ -75,7 +75,7 @@ execute positioned -1713 45 -496 run function medabots_server:set_blocks/pot/bom
 execute positioned -1711 45 -490 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1709 45 -492 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1717 45 -517 run function medabots_server:set_blocks/pot/guard/slow
-execute positioned -1674 45 -501 run function medabots_server:set_blocks/pot/cannon/detect/rotating/west
+execute positioned -1674 45 -501 run function medabots_server:set_blocks/pot/cannon/search/west
 execute positioned -1710 45 -470 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1713 45 -453 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1731 45 -452 run function medabots_server:set_blocks/accelerator/west
@@ -129,15 +129,15 @@ execute positioned -1710 45 -464 run function medabots_server:set_blocks/wall
 execute positioned -1710 45 -465 run function medabots_server:set_blocks/wall
 execute positioned -1710 45 -466 run function medabots_server:set_blocks/wall
 execute positioned -1710 45 -467 run function medabots_server:set_blocks/wall
-execute positioned -1709 45 -468 run function medabots_server:set_blocks/door/closed/south
-execute positioned -1729 45 -451 run function medabots_server:set_blocks/door/closed/east
-execute positioned -1737 45 -461 run function medabots_server:set_blocks/door/open/east
-execute positioned -1751 45 -488 run function medabots_server:set_blocks/door/open/east
-execute positioned -1703 45 -509 run function medabots_server:set_blocks/door/closed/west
-execute positioned -1684 45 -487 run function medabots_server:set_blocks/door/open/west
-execute positioned -1681 45 -517 run function medabots_server:set_blocks/door/open/south
-execute positioned -1747 45 -513 run function medabots_server:set_blocks/door/closed/south
-execute positioned -1747 45 -514 run function medabots_server:set_blocks/door/open/south
+execute positioned -1709 45 -468 run function medabots_server:set_blocks/door/south/power_1
+execute positioned -1729 45 -451 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1737 45 -461 run function medabots_server:set_blocks/door/east/power_0
+execute positioned -1751 45 -488 run function medabots_server:set_blocks/door/east/power_0
+execute positioned -1703 45 -509 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1684 45 -487 run function medabots_server:set_blocks/door/west/power_0
+execute positioned -1681 45 -517 run function medabots_server:set_blocks/door/south/power_0
+execute positioned -1747 45 -513 run function medabots_server:set_blocks/door/south/power_1
+execute positioned -1747 45 -514 run function medabots_server:set_blocks/door/south/power_0
 execute positioned -1706 45 -464 run function medabots_server:set_blocks/starting_area
 teleport @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=-1] -1706 45 -464 0 0
 teleport @s[tag=-1] -1706 45 -464 0 0

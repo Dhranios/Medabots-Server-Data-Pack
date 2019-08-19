@@ -2,16 +2,16 @@ execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=1] run tellraw
 execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=1] positioned -1806 45 -580 run function medabots_server:spawn_entities/medabot/shoot_spider/maxsnake/basstroyer/shoot_spider/chameleon
 execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=1] positioned -1806 45 -580 run scoreboard players set @e[distance=..1] Stage 19
 execute unless entity @a[x=-1854,y=51,z=-633,dx=91,dy=4,dz=94,tag=1] positioned -1806 45 -580 run tag @e[distance=..1] add enemy_medabot
-execute positioned -1802 45 -575 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
-execute positioned -1818 45 -585 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
-execute positioned -1802 45 -596 run function medabots_server:set_blocks/action_floor/enabled/guard/normal
-execute positioned -1795 45 -587 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/west/delay_4
-execute positioned -1795 45 -584 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/west/delay_4
-execute positioned -1808 45 -577 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/north/delay_4
-execute positioned -1812 45 -579 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/east/delay_4
-execute positioned -1812 45 -592 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/east/delay_4
-execute positioned -1808 45 -595 run function medabots_server:set_blocks/action_floor/enabled/cannon/no_detect/rotating/south/delay_4
-tag @e[x=-1805.5,y=45,z=-597.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1802 45 -575 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
+execute positioned -1818 45 -585 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
+execute positioned -1802 45 -596 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
+execute positioned -1795 45 -587 run function medabots_server:set_blocks/action_floor/cannon/swiffle/west/delay_4/power_0
+execute positioned -1795 45 -584 run function medabots_server:set_blocks/action_floor/cannon/swiffle/west/delay_4/power_0
+execute positioned -1808 45 -577 run function medabots_server:set_blocks/action_floor/cannon/swiffle/north/delay_4/power_0
+execute positioned -1812 45 -579 run function medabots_server:set_blocks/action_floor/cannon/swiffle/east/delay_4/power_0
+execute positioned -1812 45 -592 run function medabots_server:set_blocks/action_floor/cannon/swiffle/east/delay_4/power_0
+execute positioned -1808 45 -595 run function medabots_server:set_blocks/action_floor/cannon/swiffle/south/delay_4/power_0
+scoreboard players set @e[x=-1805.5,y=45,z=-597.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

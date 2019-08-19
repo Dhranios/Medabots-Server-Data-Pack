@@ -1,6 +1,6 @@
 tag @s add -1
 tag @s add ally_medabot
-tag @s add ice_blocks
+scoreboard players set @s StageVersion 6
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/icefield_battle/ice_blocks
 execute if entity @s[tag=vs_cpus] positioned -1998 45 -612 run function medabots_server:stage/create/icefield_battle/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1999 51 -608 -180 0

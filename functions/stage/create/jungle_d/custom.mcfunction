@@ -4,5 +4,4 @@ scoreboard players set @s Battle 1
 scoreboard players set @s Stage 31
 scoreboard players set @s Music 0
 scoreboard players set @s MusicType 9
-tag @s add custom
 function medabots_server:stage/create/custom/builder

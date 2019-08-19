@@ -1,5 +1,5 @@
 tag @s add -1
-tag @s add rubberobo
+scoreboard players set @s StageVersion 3
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/iceberg_a/rubberobo
 execute if entity @s[tag=!vs_cpus] run teleport @s -1704 50 -221 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1703 52 -246 minecraft:redstone_block

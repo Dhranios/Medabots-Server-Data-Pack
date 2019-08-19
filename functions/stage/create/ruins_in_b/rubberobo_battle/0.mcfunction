@@ -2,24 +2,24 @@ execute unless entity @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=0] run tellraw
 execute unless entity @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=0] positioned -1621 44 -564 run function medabots_server:spawn_entities/medabot/dondoguu/knight_armor/poison_scorpi/dondoguu/mermaid
 execute unless entity @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=0] positioned -1621 44 -564 run scoreboard players set @e[distance=..1] Stage 17
 execute unless entity @a[x=-1666,y=50,z=-572,dx=92,dy=4,dz=92,tag=0] positioned -1621 44 -564 run tag @e[distance=..1] add enemy_medabot
-execute positioned -1618 44 -554 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1623 44 -554 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1619 44 -568 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1622 44 -568 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1616 44 -570 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1625 44 -570 run function medabots_server:spawn_entities/guard/normal
-execute positioned -1627 44 -558 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
-execute positioned -1614 44 -558 run function medabots_server:spawn_entities/cannon/detect/rotating/west/delay_4
-execute positioned -1627 44 -564 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
-execute positioned -1614 44 -564 run function medabots_server:spawn_entities/cannon/detect/rotating/west/delay_4
+execute positioned -1618 44 -554 run function medabots_server:spawn_entities/guard/medium
+execute positioned -1623 44 -554 run function medabots_server:spawn_entities/guard/medium
+execute positioned -1619 44 -568 run function medabots_server:spawn_entities/guard/medium
+execute positioned -1622 44 -568 run function medabots_server:spawn_entities/guard/medium
+execute positioned -1616 44 -570 run function medabots_server:spawn_entities/guard/medium
+execute positioned -1625 44 -570 run function medabots_server:spawn_entities/guard/medium
+execute positioned -1627 44 -558 run function medabots_server:spawn_entities/cannon/search/east/delay_4
+execute positioned -1614 44 -558 run function medabots_server:spawn_entities/cannon/search/west/delay_4
+execute positioned -1627 44 -564 run function medabots_server:spawn_entities/cannon/search/east/delay_4
+execute positioned -1614 44 -564 run function medabots_server:spawn_entities/cannon/search/west/delay_4
 execute positioned -1627 44 -558 run function medabots_server:set_blocks/drawbridge/west
 execute positioned -1614 44 -558 run function medabots_server:set_blocks/drawbridge/east
 execute positioned -1627 44 -564 run function medabots_server:set_blocks/drawbridge/west
 execute positioned -1614 44 -564 run function medabots_server:set_blocks/drawbridge/east
-execute positioned -1631 44 -556 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10
-execute positioned -1610 44 -561 run function medabots_server:set_blocks/laser_trap/enabled/west/delay_10
-execute positioned -1631 44 -566 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10
-tag @e[x=-1620.5,y=44,z=-551.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1631 44 -556 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_0
+execute positioned -1610 44 -561 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_0
+execute positioned -1631 44 -566 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_0
+scoreboard players set @e[x=-1620.5,y=44,z=-551.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

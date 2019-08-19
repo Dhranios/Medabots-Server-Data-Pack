@@ -2,19 +2,19 @@ execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] run tellraw
 execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] positioned -1651 44 -339 run function medabots_server:spawn_entities/medabot/maxsnake/hellphoenix/seven_colors/maxsnake/kuwagata
 execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] positioned -1651 44 -339 run scoreboard players set @e[distance=..1] Stage 8
 execute unless entity @a[x=-1729,y=50,z=-344,dx=90,dy=4,dz=92,tag=0] positioned -1651 44 -339 run tag @e[distance=..1] add enemy_medabot
-execute positioned -1640 44 -328 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
-execute positioned -1639 44 -332 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
-execute positioned -1639 44 -335 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
-execute positioned -1639 44 -337 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
-execute positioned -1639 44 -340 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
-execute positioned -1639 44 -342 run function medabots_server:spawn_entities/cannon/no_detect/looking/west/delay_4
-execute positioned -1661 44 -327 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
-execute positioned -1660 44 -331 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
-execute positioned -1662 44 -334 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
-execute positioned -1662 44 -336 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
-execute positioned -1661 44 -338 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
-execute positioned -1662 44 -341 run function medabots_server:spawn_entities/cannon/no_detect/looking/east/delay_4
-tag @e[x=-1650.5,y=44,z=-325.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1640 44 -328 run function medabots_server:spawn_entities/cannon/still/west/delay_4
+execute positioned -1639 44 -332 run function medabots_server:spawn_entities/cannon/still/west/delay_4
+execute positioned -1639 44 -335 run function medabots_server:spawn_entities/cannon/still/west/delay_4
+execute positioned -1639 44 -337 run function medabots_server:spawn_entities/cannon/still/west/delay_4
+execute positioned -1639 44 -340 run function medabots_server:spawn_entities/cannon/still/west/delay_4
+execute positioned -1639 44 -342 run function medabots_server:spawn_entities/cannon/still/west/delay_4
+execute positioned -1661 44 -327 run function medabots_server:spawn_entities/cannon/still/east/delay_4
+execute positioned -1660 44 -331 run function medabots_server:spawn_entities/cannon/still/east/delay_4
+execute positioned -1662 44 -334 run function medabots_server:spawn_entities/cannon/still/east/delay_4
+execute positioned -1662 44 -336 run function medabots_server:spawn_entities/cannon/still/east/delay_4
+execute positioned -1661 44 -338 run function medabots_server:spawn_entities/cannon/still/east/delay_4
+execute positioned -1662 44 -341 run function medabots_server:spawn_entities/cannon/still/east/delay_4
+scoreboard players set @e[x=-1650.5,y=44,z=-325.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

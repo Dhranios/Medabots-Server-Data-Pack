@@ -1,6 +1,6 @@
 tag @s add -1
 tag @s add ally_medabot
-tag @s add action_floors
+scoreboard players set @s StageVersion 7
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/park_battle/action_floors
 execute if entity @s[tag=vs_cpus] positioned -1956 45 -551 run function medabots_server:stage/create/park_battle/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1949 51 -564 -180 0

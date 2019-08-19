@@ -36,7 +36,7 @@ execute if entity @s[scores={StageBuild=83},tag=allowed,advancements={medabots_s
 execute if entity @s[scores={StageBuild=84},advancements={medabots_server:special_items/jammy=true}] run function medabots_server:stage/build/jammy
 
 execute if entity @s[scores={StageBuild=35}] run function medabots_server:stage/build/floor_switch_bind
-execute if entity @s[scores={StageBuild=47}] run function medabots_server:stage/build/toggle_object_activation
+execute if entity @s[scores={StageBuild=47}] run function medabots_server:stage/build/toggle_object_power
 
 tellraw @s[tag=!allowed] {"translate":"medabots_server:message.stage.stage_builder.cannot_place","color":"red"}
 tag @s remove allowed

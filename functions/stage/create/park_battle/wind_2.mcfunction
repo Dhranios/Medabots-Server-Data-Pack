@@ -10,10 +10,10 @@ execute positioned -1929 45 -546 run function medabots_server:set_blocks/acceler
 execute positioned -1941 45 -545 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1942 45 -557 run function medabots_server:set_blocks/accelerator/north
 execute positioned -1930 45 -558 run function medabots_server:set_blocks/accelerator/east
-execute positioned -1941 45 -562 run function medabots_server:set_blocks/fan/slow/south/range_15
-execute positioned -1925 45 -557 run function medabots_server:set_blocks/fan/slow/west/range_15
-execute positioned -1930 45 -541 run function medabots_server:set_blocks/fan/slow/north/range_15
-execute positioned -1946 45 -546 run function medabots_server:set_blocks/fan/slow/east/range_15
+execute positioned -1941 45 -562 run function medabots_server:set_blocks/fan/south/slow/range_15
+execute positioned -1925 45 -557 run function medabots_server:set_blocks/fan/west/slow/range_15
+execute positioned -1930 45 -541 run function medabots_server:set_blocks/fan/north/slow/range_15
+execute positioned -1946 45 -546 run function medabots_server:set_blocks/fan/east/slow/range_15
 execute positioned -1945 45 -563 run function medabots_server:set_blocks/wall
 execute positioned -1946 45 -562 run function medabots_server:set_blocks/wall
 execute positioned -1947 45 -561 run function medabots_server:set_blocks/wall

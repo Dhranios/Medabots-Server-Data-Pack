@@ -7,12 +7,12 @@ execute if entity @e[scores={Stage=7},tag=hide_normal_time] if score #temp Time 
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/ruins_out_a/rubberobo
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1554 44 -284 minecraft:lime_wool run tag @e[x=-1512.5,y=45,z=-295.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1581 44 -284 minecraft:lime_wool run tag @e[x=-1513.5,y=45,z=-295.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1511 44 -296 minecraft:lime_wool run tag @e[x=-1616.5,y=45,z=-309.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1567 44 -266 minecraft:lime_wool run tag @e[x=-1567.5,y=45,z=-263.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1622 44 -303 minecraft:orange_wool run tag @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,tag=open] remove open
-execute if block -1622 44 -303 minecraft:yellow_wool run tag @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1554 44 -284 minecraft:lime_wool run scoreboard players set @e[x=-1512.5,y=45,z=-295.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1581 44 -284 minecraft:lime_wool run scoreboard players set @e[x=-1513.5,y=45,z=-295.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1511 44 -296 minecraft:lime_wool run scoreboard players set @e[x=-1616.5,y=45,z=-309.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1567 44 -266 minecraft:lime_wool run scoreboard players set @e[x=-1567.5,y=45,z=-263.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1622 44 -303 minecraft:orange_wool run scoreboard players set @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1622 44 -303 minecraft:yellow_wool run scoreboard players set @e[x=-1621.5,y=45,z=-299.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1554 44 -258 minecraft:light_blue_wool run tag @e[x=-1553.5,y=45,z=-256.5,distance=..0.7,tag=hammer_punch] add enabled
 execute if block -1554 44 -258 minecraft:blue_wool run tag @e[x=-1553.5,y=45,z=-256.5,distance=..0.7,tag=hammer_punch] remove enabled
 execute if block -1552 44 -260 minecraft:light_blue_wool run tag @e[x=-1551.5,y=45,z=-258.5,distance=..0.7,tag=hammer_punch] add enabled

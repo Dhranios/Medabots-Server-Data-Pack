@@ -3,9 +3,9 @@ execute unless entity @s[scores={Time=0..}] run scoreboard players set @s Time 0
 
 # Timer
 scoreboard players remove @s[scores={Time=1..}] Time 1
-scoreboard players set @s[tag=enabled,scores={Time=0}] Time 600
+execute if score @s[scores={Time=0}] PowerAmount = @s PowerNeeded run scoreboard players set @s Time 600
 
-# Play sound and annoy selected guards when enabled
+# Play sound and annoy selected guards when powered
 execute if entity @s[scores={Time=20}] run playsound medabots_server:block.alarm ambient @a ~ ~ ~ 1
 execute if entity @s[scores={Time=40}] run playsound medabots_server:block.alarm ambient @a ~ ~ ~ 1
 execute if entity @s[scores={Time=60}] run playsound medabots_server:block.alarm ambient @a ~ ~ ~ 1
@@ -40,7 +40,7 @@ execute store result score #temp Stage run scoreboard players get @s Stage
 execute if entity @s[scores={Time=1..}] as @e[tag=guard,distance=..16,tag=!alarm_ringing] if score @s Stage = #temp Stage run tag @s add alarm_ringing
 
 # Stop annoying the guards when disabled again
-execute if entity @s[tag=!enabled,scores={Time=0}] as @e[tag=guard,distance=..16,tag=alarm_ringing] if score @s Stage = #temp Stage run tag @s remove alarm_ringing
+execute if entity @s[scores={Time=0}] as @e[tag=guard,distance=..16,tag=alarm_ringing] if score @s Stage = #temp Stage run tag @s remove alarm_ringing
 scoreboard players reset #temp Stage
 
 # Remove when cleaning up a stage

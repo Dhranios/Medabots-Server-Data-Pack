@@ -27,3 +27,4 @@ execute if entity @s[scores={EdgeGrabAble=1}] if block ~-1 ~1 ~ #medabots_server
 execute if entity @s[scores={EdgeGrabAble=1}] if block ~-1 ~1 ~ minecraft:snow[layers=1] run scoreboard players set @s EdgeGrabAble 2
 execute if entity @s[scores={EdgeGrabAble=1}] if block ~-1 ~1 ~ minecraft:snow[layers=2] run scoreboard players set @s EdgeGrabAble 2
 execute if entity @s[scores={EdgeGrabAble=1}] if block ~-1 ~1 ~ minecraft:snow[layers=3] run scoreboard players set @s EdgeGrabAble 2
+execute if entity @s[scores={EdgeGrabAble=1}] if block ~-1 ~1 ~ minecraft:campfire[lit=false] run scoreboard players set @s EdgeGrabAble 2

@@ -1,19 +1,19 @@
-execute positioned -1941 45 -623 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_10
-execute positioned -1936 45 -610 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
-execute positioned -1942 45 -609 run function medabots_server:set_blocks/laser_trap/enabled/west/delay_10
-execute positioned -1955 45 -604 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10
-execute positioned -1956 45 -610 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
-execute positioned -1961 45 -623 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_10
-execute positioned -1955 45 -624 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10
-execute positioned -1942 45 -629 run function medabots_server:set_blocks/laser_trap/enabled/west/delay_10
-execute positioned -1932 45 -602 run function medabots_server:set_blocks/laser_trap/enabled/west/delay_10
-execute positioned -1938 45 -599 run function medabots_server:set_blocks/laser_trap/enabled/west/delay_10
-execute positioned -1963 45 -600 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
-execute positioned -1966 45 -606 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
-execute positioned -1965 45 -631 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10
-execute positioned -1959 45 -634 run function medabots_server:set_blocks/laser_trap/enabled/east/delay_10
-execute positioned -1934 45 -633 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_10
-execute positioned -1931 45 -627 run function medabots_server:set_blocks/laser_trap/enabled/south/delay_10
+execute positioned -1941 45 -623 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_0
+execute positioned -1936 45 -610 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
+execute positioned -1942 45 -609 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_0
+execute positioned -1955 45 -604 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_0
+execute positioned -1956 45 -610 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
+execute positioned -1961 45 -623 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_0
+execute positioned -1955 45 -624 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_0
+execute positioned -1942 45 -629 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_0
+execute positioned -1932 45 -602 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_0
+execute positioned -1938 45 -599 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_0
+execute positioned -1963 45 -600 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
+execute positioned -1966 45 -606 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
+execute positioned -1965 45 -631 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_0
+execute positioned -1959 45 -634 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_0
+execute positioned -1934 45 -633 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_0
+execute positioned -1931 45 -627 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_0
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=-1] -1954 45 -616 -90 0
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=0] -1943 45 -617 90 0
 teleport @s[tag=-1] -1954 45 -616 90 0

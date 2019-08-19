@@ -3,7 +3,7 @@ execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=4] positioned 
 execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=4] positioned -1751 45 -528 run scoreboard players set @e[distance=..1] Stage 14
 execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=4] positioned -1751 45 -528 run tag @e[distance=..1] add enemy_medabot
 execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=4] positioned -1751 45 -528 as @e[distance=..1] run data merge entity @s {CustomName:'{"translate":"medabots_server:entity.red_pepper"}'}
-execute positioned -1758 45 -533 run function medabots_server:spawn_entities/cannon/detect/rotating/east/delay_4
+execute positioned -1758 45 -533 run function medabots_server:spawn_entities/cannon/search/east/delay_4
 execute positioned -1756 45 -518 run function medabots_server:set_blocks/accelerator/north
 execute positioned -1759 45 -521 run function medabots_server:set_blocks/accelerator/north
 execute positioned -1755 45 -526 run function medabots_server:set_blocks/accelerator/north
@@ -19,7 +19,7 @@ execute positioned -1741 45 -520 run function medabots_server:set_blocks/acceler
 execute positioned -1752 45 -517 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1754 45 -530 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1745 45 -534 run function medabots_server:set_blocks/hole/delay_5
-tag @e[x=-1746.5,y=45,z=-513.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1746.5,y=45,z=-513.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

@@ -25,7 +25,7 @@ scoreboard players set @s[scores={Time=0},tag=delay_8] Time 160
 scoreboard players set @s[scores={Time=0},tag=delay_9] Time 180
 scoreboard players set @s[scores={Time=0},tag=delay_10] Time 200
 
-# Timer based pushing if enabled
+# Timer based pushing if powered
 scoreboard players remove @s[scores={Time=..19}] Time 1
-scoreboard players remove @s[scores={Time=20},tag=enabled] Time 1
+execute if score @s[scores={Time=20}] PowerAmount = @s PowerNeeded run scoreboard players remove @s Time 1
 scoreboard players remove @s[scores={Time=21..}] Time 1

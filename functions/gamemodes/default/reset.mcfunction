@@ -79,37 +79,7 @@ tag @s remove 8
 tag @s remove 9
 
 # Remove stage version
-tag @s remove first_go
-tag @s remove second_go
-tag @s remove rubberobo
-tag @s remove special
-tag @s remove object_test
-tag @s remove sloan_challenge
-tag @s remove custom
-tag @s remove wave_1
-tag @s remove player
-tag @s remove accelerators
-tag @s remove action_floors
-tag @s remove action_floors_1
-tag @s remove action_floors_2
-tag @s remove balloon_bombs
-tag @s remove cannons
-tag @s remove cannons_1
-tag @s remove cannons_2
-tag @s remove darkness
-tag @s remove empty
-tag @s remove hammer_punches
-tag @s remove ice_blocks
-tag @s remove lasers
-tag @s remove locked_in
-tag @s remove locked_out
-tag @s remove mirrors
-tag @s remove spring_walls
-tag @s remove stones
-tag @s remove walls
-tag @s remove wind
-tag @s remove wind_1
-tag @s remove wind_2
+scoreboard players reset @s StageVersion
 
 # Prevent health from ever dropping to the default 20, which'll cause severe issues
 effect give @s minecraft:health_boost 1000000 19 true

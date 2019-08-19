@@ -1,6 +1,6 @@
 tag @s add -1
 tag @s add ally_medabot
-tag @s add empty
+scoreboard players set @s StageVersion 1
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ricco_harbor/empty
 execute if entity @s[tag=vs_cpus] positioned -1387 19 -194 run function medabots_server:stage/create/ricco_harbor/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1440 51 -158 -180 0

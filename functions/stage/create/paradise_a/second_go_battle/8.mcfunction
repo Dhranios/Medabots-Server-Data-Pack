@@ -6,19 +6,19 @@ execute positioned -1722 45 -670 run function medabots_server:set_blocks/floor_s
 execute positioned -1707 45 -670 run function medabots_server:set_blocks/floor_switch/yellow/delay_60
 execute positioned -1707 45 -685 run function medabots_server:set_blocks/floor_switch/yellow/delay_60
 execute positioned -1722 45 -685 run function medabots_server:set_blocks/floor_switch/yellow/delay_60
-execute positioned -1721 45 -670 run function medabots_server:set_blocks/fan/off/east/range_17
-execute positioned -1707 45 -671 run function medabots_server:set_blocks/fan/off/north/range_17
-execute positioned -1708 45 -685 run function medabots_server:set_blocks/fan/off/west/range_17
-execute positioned -1722 45 -684 run function medabots_server:set_blocks/fan/off/south/range_17
-execute positioned -1721 45 -668 run function medabots_server:set_blocks/laser_trap/disabled/east/delay_10
-execute positioned -1721 45 -675 run function medabots_server:set_blocks/laser_trap/disabled/east/delay_10
-execute positioned -1705 45 -671 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
-execute positioned -1712 45 -671 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
-execute positioned -1708 45 -687 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
-execute positioned -1708 45 -680 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
-execute positioned -1724 45 -684 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_10
-execute positioned -1717 45 -684 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_10
-tag @e[x=-1714.5,y=45,z=-665.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1721 45 -670 run function medabots_server:set_blocks/fan/east/off/range_17
+execute positioned -1707 45 -671 run function medabots_server:set_blocks/fan/north/off/range_17
+execute positioned -1708 45 -685 run function medabots_server:set_blocks/fan/west/off/range_17
+execute positioned -1722 45 -684 run function medabots_server:set_blocks/fan/south/off/range_17
+execute positioned -1721 45 -668 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_1
+execute positioned -1721 45 -675 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_1
+execute positioned -1705 45 -671 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_1
+execute positioned -1712 45 -671 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_1
+execute positioned -1708 45 -687 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_1
+execute positioned -1708 45 -680 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_1
+execute positioned -1724 45 -684 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_1
+execute positioned -1717 45 -684 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_1
+scoreboard players set @e[x=-1714.5,y=45,z=-665.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

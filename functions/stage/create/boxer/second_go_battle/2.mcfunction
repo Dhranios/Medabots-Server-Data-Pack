@@ -15,7 +15,7 @@ execute positioned -1877 44 -593 run function medabots_server:set_blocks/hole/de
 execute positioned -1879 44 -590 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1879 44 -587 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1877 44 -584 run function medabots_server:set_blocks/hole/delay_5
-tag @e[x=-1878.5,y=44,z=-582.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1878.5,y=44,z=-582.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

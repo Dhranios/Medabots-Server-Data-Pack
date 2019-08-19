@@ -1,6 +1,6 @@
 tag @s add -1
 tag @s add ally_medabot
-tag @s add stones
+scoreboard players set @s StageVersion 1
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/woods_battle/stones
 execute if entity @s[tag=vs_cpus] positioned -1943 45 -617 run function medabots_server:stage/create/woods_battle/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1949 51 -617 -180 0
