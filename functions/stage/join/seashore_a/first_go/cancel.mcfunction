@@ -4,4 +4,5 @@ execute if entity @s[tag=-1] run setblock -1538 53 -249 minecraft:red_wool
 execute if entity @s[tag=-1] run teleport @s -1537 37 -218 90 0
 execute if entity @s[tag=-1] run data merge block -1540 52 -247 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/seashore_a/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if entity @s[tag=-1] run setblock -1540 53 -249 minecraft:red_wool
+execute if entity @s[tag=-1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=-1] run tag @s remove -1

@@ -137,6 +137,7 @@ execute positioned -1567 45 -171 run function medabots_server:set_blocks/jammy
 execute positioned -1551 45 -171 run function medabots_server:set_blocks/goal_area
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 3
+function medabots_server:gamemodes/default/set_stats
 teleport @s -1516 45 -123 0 0
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @s

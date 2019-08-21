@@ -12,6 +12,3 @@ execute store result entity @s Inventory[{Slot:3b}].tag.medabots_server.activate
 
 # Medal
 execute store result entity @s Inventory[{Slot:4b}].tag.medabots_server.activated byte 1 run scoreboard players get #1 Constants
-
-# Tinpet
-execute store result entity @s Inventory[{Slot:16b}].tag.medabots_server.activated byte 1 run scoreboard players get #1 Constants

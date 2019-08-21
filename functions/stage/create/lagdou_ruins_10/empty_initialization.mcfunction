@@ -1,3 +1,4 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
 tag @s add ally_medabot
 scoreboard players set @s StageVersion 1

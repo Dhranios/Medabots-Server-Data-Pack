@@ -1,3 +1,4 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
 scoreboard players set @s StageVersion 4
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/seashore_b/special

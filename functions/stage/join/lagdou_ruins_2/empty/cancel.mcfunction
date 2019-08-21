@@ -4,4 +4,5 @@ execute if entity @s[tag=-1] run setblock -1294 53 -60 minecraft:red_wool
 execute if entity @s[tag=-1] run teleport @s -1285 25 -30 90 0
 execute if entity @s[tag=-1] run data merge block -1296 52 -58 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_2/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if entity @s[tag=-1] run setblock -1296 53 -60 minecraft:red_wool
+execute if entity @s[tag=-1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=-1] run tag @s remove -1

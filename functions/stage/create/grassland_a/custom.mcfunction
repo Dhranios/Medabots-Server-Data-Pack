@@ -5,3 +5,4 @@ scoreboard players set @s Stage 1
 scoreboard players set @s Music 0
 scoreboard players set @s MusicType 7
 function medabots_server:stage/create/custom/builder
+function medabots_server:gamemodes/default/set_stats

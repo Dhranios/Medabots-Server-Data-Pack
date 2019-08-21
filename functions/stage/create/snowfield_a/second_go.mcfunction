@@ -165,6 +165,7 @@ execute positioned -1652 45 -229 run function medabots_server:set_blocks/door/ea
 execute positioned -1660 45 -234 run function medabots_server:set_blocks/goal_area
 execute positioned -1594 45 -243 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 2
+function medabots_server:gamemodes/default/set_stats
 teleport @s -1594 45 -243 0 0
 bossbar set medabots_server:snowfield_a/time value 0
 bossbar set medabots_server:snowfield_a/time players @s

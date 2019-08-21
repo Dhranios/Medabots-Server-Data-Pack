@@ -24,6 +24,7 @@ execute positioned -1559 45 -140 run function medabots_server:set_blocks/door/ea
 execute positioned -1516 45 -174 run function medabots_server:set_blocks/goal_area
 execute positioned -1519 45 -171 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 5
+function medabots_server:gamemodes/default/set_stats
 teleport @s -1519 45 -171
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @s

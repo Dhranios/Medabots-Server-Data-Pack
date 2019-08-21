@@ -7,3 +7,4 @@ playsound medabots_server:music.stage.rock_intro music @s ~ ~ ~ 1000
 scoreboard players set @s Music 24
 scoreboard players set @s MusicType 8
 function medabots_server:stage/create/custom/builder
+function medabots_server:gamemodes/default/set_stats

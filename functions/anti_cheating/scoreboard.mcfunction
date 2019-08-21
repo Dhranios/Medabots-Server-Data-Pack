@@ -42,8 +42,8 @@ scoreboard objectives add DialogNr dummy
 scoreboard objectives add Donor dummy
 scoreboard objectives add Drop minecraft.custom:minecraft.drop
 scoreboard objectives add EdgeGrabAble dummy
+scoreboard objectives add EditingTinpet dummy
 scoreboard objectives add EffectTimer dummy
-scoreboard objectives add Error dummy
 scoreboard objectives add Fall minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add Falling dummy
 scoreboard objectives add FloorSwitchTime dummy
@@ -157,7 +157,6 @@ scoreboard objectives add PosZ dummy
 scoreboard objectives add PowerAmount dummy
 scoreboard objectives add PowerNeeded dummy
 scoreboard objectives add Press dummy
-scoreboard objectives add PreviousError dummy
 scoreboard objectives add Question trigger
 scoreboard objectives add RandomMessage dummy
 scoreboard objectives add Range dummy
@@ -205,6 +204,7 @@ scoreboard objectives add TransformLID dummy
 scoreboard objectives add TransformLTime dummy
 scoreboard objectives add TransformRID dummy
 scoreboard objectives add TransformRTime dummy
+scoreboard objectives add UnequipTinpet trigger
 scoreboard objectives add UpToDate dummy
 scoreboard objectives add UsePart minecraft.used:minecraft.fishing_rod
 scoreboard objectives add Verified trigger

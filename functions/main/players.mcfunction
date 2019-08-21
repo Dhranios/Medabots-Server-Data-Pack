@@ -1,6 +1,9 @@
 # Re-give items seen by advancements
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run function medabots_server:items/give_obtained_item
 
+# Tutorial
+execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/try/tutorial
+
 # Run stage
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=1..2},tag=!murder_mystery] run function medabots_server:stage/left_server
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=3..4},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
@@ -57,9 +60,6 @@ teleport @s[scores={Death=20}] ~ -4096 ~
 # Death timer
 scoreboard players add @s[scores={Death=1..}] Death 1
 scoreboard players add @s[scores={Death=..-1}] Death 1
-
-# Books
-function #medabots_server:books
 
 # Don't move for power, no combat for power
 function medabots_server:effects/recharge

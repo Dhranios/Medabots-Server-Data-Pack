@@ -1,4 +1,4 @@
-scoreboard players set @s Battle 4
+tag @s add stage_builder
 scoreboard players set @s Stage 2
 scoreboard players set @s Music 0
 scoreboard players set @s MusicType 30
