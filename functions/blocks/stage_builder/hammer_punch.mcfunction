@@ -41,4 +41,4 @@ execute if entity @s[tag=east,tag=delay_1] run function medabots_server:set_bloc
 execute if entity @s[tag=west,tag=delay_1] run function medabots_server:set_blocks/hammer_punch/west/delay_1/power_1
 
 # Give additional data
-hammer_punch
+scoreboard players operation @e[distance=..0.7,tag=hammer_punch] NeededPower = @s NeededPower

@@ -1,3 +1,2 @@
 function medabots_server:set_blocks/mirror
-execute as @e[distance=..0.7,tag=mirror] at @s run teleport @s ~ ~ ~ 45 0
-tag @e[distance=..0.7,tag=mirror] add 45
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.mirror"}',Tags:["mirror","45"],Invisible:1b,NoGravity:1b,Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:glass_pane",Count:1b}],Rotation:[45.0f,0.0f]}

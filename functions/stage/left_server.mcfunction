@@ -58,7 +58,7 @@ execute if entity @s[scores={Stage=14,StageVersion=1}] unless entity @e[scores={
 execute if entity @s[scores={Stage=14,StageVersion=2}] unless entity @e[scores={Stage=14,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/snowfield_b/second_go
 execute if entity @s[scores={Stage=14,StageVersion=3}] unless entity @e[scores={Stage=14,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/snowfield_b/rubberobo
 execute if entity @s[scores={Stage=14,StageVersion=4}] unless entity @e[scores={Stage=14,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/snowfield_b/special
-execute if entity @s[scores={Stage=14,StageVersion=5}}] unless entity @e[scores={Stage=14,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/snowfield_b/sloan_challenge
+execute if entity @s[scores={Stage=14,StageVersion=5}] unless entity @e[scores={Stage=14,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/snowfield_b/sloan_challenge
 execute if entity @s[scores={Stage=15}] unless entity @s[scores={StageVersion=1..}] unless entity @e[scores={Stage=15,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/iceberg_b/custom
 execute if entity @s[scores={Stage=15,StageVersion=1}] unless entity @e[scores={Stage=15,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/iceberg_b/first_go
 execute if entity @s[scores={Stage=15,StageVersion=2}] unless entity @e[scores={Stage=15,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/run/iceberg_b/second_go
