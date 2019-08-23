@@ -101,6 +101,9 @@ scoreboard players set @s[scores={BuyMedapart=1..}] BuyMedapart 0
 execute if entity @s[tag=!trading] run function medabots_server:shopping/reset
 
 # Store old position
+scoreboard players operation @s OtherX = @s PosX
+scoreboard players operation @s OtherY = @s PosY
+scoreboard players operation @s OtherZ = @s PosZ
 execute store result score @s PosX run data get entity @s Pos[0] 100
 execute store result score @s PosY run data get entity @s Pos[1] 100
 execute store result score @s PosZ run data get entity @s Pos[2] 100
