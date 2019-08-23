@@ -234,6 +234,7 @@ scoreboard players set #80 Constants 80
 scoreboard players set #100 Constants 100
 scoreboard players set #1000 Constants 1000
 scoreboard players set #1005 Constants 1005
+scoreboard players set #10000 Constants 10000
 scoreboard players set Medabots: ServerStats 70
 scoreboard players set Medals: ServerStats 12
 scoreboard players set Bosses: ServerStats 13

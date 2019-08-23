@@ -2,12 +2,12 @@
 scoreboard players reset @s[scores={OverheatingFly=0}] OverheatingFly
 
 # Set scores
-scoreboard players set @s[scores={Death=1..,Battle=1..3}] Battle 0
 team join EnemyPlayer @s[team=!EnemyPlayer,scores={Battle=1..3}]
 scoreboard players set @a[team=Moderator] Moderator 1
 tag @s[team=Moderator,tag=!bug_tester] add bug_tester
 
-# Don't allow combat for creative players and spectators
+# Don't allow combat for creative players
+tellraw @s[gamemode=creative,scores={Battle=1..3}] {"text":"Please switch to another gamemode to enter battle mode.","color":"green"}
 scoreboard players set @s[gamemode=creative,scores={Battle=1..3}] Battle 0
 
 # Prevent spawn point from moving

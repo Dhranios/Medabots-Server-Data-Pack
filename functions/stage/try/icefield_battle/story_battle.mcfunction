@@ -4,5 +4,5 @@ execute if entity @s[tag=valid_tinpet,advancements={medabots_server:wave_1/story
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:wave_1/story_progression={squidguts_jammy=true,squidguts_jammy_battle=false}}] run function medabots_server:stage/try/icefield_battle/story_battle/squidguts_jammy
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:wave_1/story_progression={vs_karin=true,vs_karin_battle=false}}] run function medabots_server:stage/try/icefield_battle/story_battle/vs_karin
 execute if entity @s[tag=valid_tinpet,tag=!story_battle] run tellraw @s {"translate":"medabots_server:message.stage.no_story","color":"green"}
-tellraw @s[tag=!valid_tinpet {"translate":"medabots_server:message.tinpet.not_valid"}
+tellraw @s[tag=!valid_tinpet] {"translate":"medabots_server:message.tinpet.not_valid"}
 tag @s remove valid_tinpet
