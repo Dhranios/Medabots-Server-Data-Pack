@@ -3,15 +3,7 @@ tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:male_tinpet"
 tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}}] add female_tinpet
 tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:neutral_tinpet"}}}}] add neutral_tinpet
 
-############################## To do ##############################
-# Save inventory
-# Load inventory from SelectedItem NBT, remove all other items (including SelectedItem)
-# Slot:0b = SelectedItem.tag.medabots_server.items.legs
-# Slot:1b = SelectedItem.tag.medabots_server.items.left_arm
-# Slot:2b = SelectedItem.tag.medabots_server.items.right_arm
-# Slot:3b = SelectedItem.tag.medabots_server.items.head
-# Slot:4b = SelectedItem.tag.medabots_server.items.medal
-###################################################################
+function medabots_server:gamemodes/default/load_medabot_inventory
 
 # Give 50 medals for timer
 replaceitem entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{id:"medabots_server:kuwagata_medal",activated:0b}}}]}] hotbar.4 minecraft:gold_ingot{CustomModelData:1,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kuwagata_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.kuwagata_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{id:"medabots_server:kuwagata_medal",move:"medaforce_charge",part:"medal",activated:1b,version:1}} 50

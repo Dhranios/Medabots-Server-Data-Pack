@@ -27,10 +27,7 @@ execute if entity @s[scores={Medaforce=-12}] run function medabots_server:items/
 scoreboard players set @s[scores={Medaforce=1..}] Medaforce 0
 scoreboard players set @s[scores={Charge=1..}] Charge 0
 
-############################## To do ##############################
-# Load old inventory again
-# Remove the items with activated:1b, keep the rest
-###################################################################
+function medabots_server:gamemodes/default/load_old_inventory
 
 # Un-set combat
 execute at @e[tag=medabot_model] if score @s MedabotNr = @e[distance=..0.1,tag=medabot_model,limit=1] MedabotNr run kill @e[distance=..0.1,tag=medabot_model,limit=1]
