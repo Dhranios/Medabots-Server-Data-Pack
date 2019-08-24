@@ -13,7 +13,7 @@ execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run fu
 scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
 
 # Stage builder
-execute if entity @s[scores={Battle=4}] run function medabots_server:stage/builder
+execute if entity @s[tag=stage_builder] run function medabots_server:stage/builder
 
 # Make the random server messages appear
 function medabots_server:other/random_message
@@ -50,16 +50,6 @@ execute if entity @s[scores={SettingsCheck=3..}] run function medabots_server:se
 
 # Complete a task
 execute if entity @s[scores={TaskCheck=2..}] run function medabots_server:settings/complete_task
-
-# Death
-execute if entity @s[scores={Death=1}] run function medabots_server:other/death
-
-# Remove player from the world
-teleport @s[scores={Death=20}] ~ -4096 ~
-
-# Death timer
-scoreboard players add @s[scores={Death=1..}] Death 1
-scoreboard players add @s[scores={Death=..-1}] Death 1
 
 # Don't move for power, no combat for power
 function medabots_server:effects/recharge

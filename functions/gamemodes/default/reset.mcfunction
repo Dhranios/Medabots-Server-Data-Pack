@@ -36,8 +36,6 @@ scoreboard players reset @s MedabotNr
 effect clear @s minecraft:invisibility
 clear @s minecraft:tipped_arrow
 tag @s remove hostile
-scoreboard players reset @s[scores={Death=0}] Stage
-scoreboard players set @s[scores={Death=1..}] LeaveStage 1
 
 # Remove medabot indexing
 tag @s remove medabot
@@ -78,19 +76,13 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:items/give_obtained_item
 
 loot replace entity @s hotbar.0 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s inventory.18 mine -286 1 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s inventory.18 9 mine -286 1 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 loot replace entity @s armor.feet 4 mine -286 0 -53 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s weapon.offhand mine -287 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s weapon.offhand 1 mine -287 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 setblock -286 0 -52 minecraft:bedrock
 setblock -286 1 -52 minecraft:stone
 setblock -286 0 -53 minecraft:bedrock
 setblock -287 0 -52 minecraft:bedrock
-
-# Re-equip headgear
-replaceitem entity @s[tag=had_sunglasses_equipped] armor.head minecraft:chainmail_helmet{Unbreakable:1b,HideFlags:4,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.sunglasses"}'},AttributeModifiers:[],medabots_server:{id:"medabots_server:sunglasses"}}
-tag @s[tag=had_sunglasses_equipped] remove had_sunglasses_equipped
-replaceitem entity @s[tag=had_master_crown_equipped] armor.head minecraft:golden_helmet{Unbreakable:1b,HideFlags:4,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.master_crown"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.master_crown.description"}']},AttributeModifiers:[],medabots_server:{id:"medabots_server:master_crown"}}
-tag @s[tag=had_master_crown_equipped] remove had_sunglasses_equipped
 
 # Remove scores
 scoreboard players reset @s LegsArmor

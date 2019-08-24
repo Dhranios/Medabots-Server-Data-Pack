@@ -53,7 +53,6 @@ data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:102
 data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:103b}] merge value {Slot:3b}
 setblock -286 0 -53 minecraft:shulker_box
 data modify block -286 0 -53 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
-tellraw @s {"nbt":"Items","block":"-286 0 -53"}
 data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:0b}]
 data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:1b}]
 data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:2b}]
@@ -61,7 +60,6 @@ data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:3b}
 data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:-106b}] merge value {Slot:0b}
 setblock -287 0 -52 minecraft:shulker_box
 data modify block -287 0 -52 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
-tellraw @s {"nbt":"Items","block":"-287 0 -52"}
 clear @s fishing_rod{medabots_server:{activated:1b}}
 clear @s gold_ingot{medabots_server:{activated:1b}}
 clear @s fishing_rod{medabots_server:{id:"medabots_server:pot_breaker"}}
