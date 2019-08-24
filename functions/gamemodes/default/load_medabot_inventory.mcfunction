@@ -4,7 +4,6 @@ data modify entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3] set from 
 # Save inventory
 setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone_button",Count:1b,tag:{medabots_server:{id:"medabots_server:inventory",items:[]},Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]}}]}
 data modify block -286 0 -52 Items[0].tag.medabots_server.items set from entity @s Inventory
-tellraw @s {"nbt":"Items[0].tag.medabots_server.items","block":"-286 0 -52"}
 clear @s
 loot replace entity @s armor.head mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 setblock -286 0 -52 minecraft:bedrock

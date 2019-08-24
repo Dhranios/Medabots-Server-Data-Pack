@@ -48,33 +48,20 @@ data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:6b}
 data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:7b}]
 data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:8b}]
 data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:100b}] merge value {Slot:0b}
+data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:101b}] merge value {Slot:1b}
+data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:102b}] merge value {Slot:2b}
+data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:103b}] merge value {Slot:3b}
 setblock -286 0 -53 minecraft:shulker_box
 data modify block -286 0 -53 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
+tellraw @s {"nbt":"Items","block":"-286 0 -53"}
 data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:0b}]
-data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:101b}] merge value {Slot:0b}
-setblock -286 1 -53 minecraft:shulker_box
-data modify block -286 1 -53 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
-data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:0b}]
-data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:102b}] merge value {Slot:0b}
-setblock -286 0 -51 minecraft:shulker_box
-data modify block -286 0 -51 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
-data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:0b}]
-data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:103b}] merge value {Slot:0b}
-setblock -286 1 -51 minecraft:shulker_box
-data modify block -286 1 -51 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
-data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:0b}]
+data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:1b}]
+data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:2b}]
+data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:3b}]
 data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:-106b}] merge value {Slot:0b}
 setblock -287 0 -52 minecraft:shulker_box
 data modify block -287 0 -52 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
-clear @s 
-loot replace entity @s hotbar.0 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s inventory.18 mine -286 1 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s armor.feet mine -286 0 -53 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s armor.legs mine -286 1 -53 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s armor.chest mine -286 0 -51 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s armor.head mine -286 1 -51 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s weapon.offhand mine -287 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-setblock -286 0 -52 minecraft:bedrock
-setblock -286 1 -52 minecraft:stone
-setblock -286 0 -53 minecraft:bedrock
-setblock -286 1 -53 minecraft:stone
+tellraw @s {"nbt":"Items","block":"-287 0 -52"}
+clear @s fishing_rod{medabots_server:{activated:1b}}
+clear @s gold_ingot{medabots_server:{activated:1b}}
+clear @s fishing_rod{medabots_server:{id:"medabots_server:pot_breaker"}}

@@ -77,6 +77,15 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar",stage_item:1b}}}]}] run function medabots_server:items/put_medallars_on_bank
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:items/give_obtained_item
 
+loot replace entity @s hotbar.0 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s inventory.18 mine -286 1 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s armor.feet 4 mine -286 0 -53 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s weapon.offhand mine -287 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+setblock -286 0 -52 minecraft:bedrock
+setblock -286 1 -52 minecraft:stone
+setblock -286 0 -53 minecraft:bedrock
+setblock -287 0 -52 minecraft:bedrock
+
 # Re-equip headgear
 replaceitem entity @s[tag=had_sunglasses_equipped] armor.head minecraft:chainmail_helmet{Unbreakable:1b,HideFlags:4,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.sunglasses"}'},AttributeModifiers:[],medabots_server:{id:"medabots_server:sunglasses"}}
 tag @s[tag=had_sunglasses_equipped] remove had_sunglasses_equipped
