@@ -60,6 +60,7 @@ data remove entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:3b}
 data modify entity @s Inventory[{Slot:103b}].tag.medabots_server.items[{Slot:-106b}] merge value {Slot:0b}
 setblock -287 0 -52 minecraft:shulker_box
 data modify block -287 0 -52 Items set from entity @s Inventory[{Slot:103b}].tag.medabots_server.items
-clear @s fishing_rod{medabots_server:{activated:1b}}
-clear @s gold_ingot{medabots_server:{activated:1b}}
-clear @s fishing_rod{medabots_server:{id:"medabots_server:pot_breaker"}}
+clear @s minecraft:fishing_rod{medabots_server:{activated:1b}}
+clear @s minecraft:gold_ingot{medabots_server:{activated:1b}}
+clear @s minecraft:diamond_axe{medabots_server:{id:"medabots_server:pot_breaker"}}
+clear @s minecraft:stone_button{medabots_server:{id:"medabots_server:inventory"}}

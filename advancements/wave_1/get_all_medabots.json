@@ -217,6 +217,45 @@
         },
         "master_core": {
             "trigger": "minecraft:impossible"
+        },
+        "nino": {
+            "trigger": "minecraft:impossible"
+        },
+        "alien_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "chameleon_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "devil_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "ghost_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "kabuto_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "knight_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "kuwagata_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "mermaid_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "monkey_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "question_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "spider_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "unicorn_medal": {
+            "trigger": "minecraft:impossible"
         }
     },
     "rewards": {

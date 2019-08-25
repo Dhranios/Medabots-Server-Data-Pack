@@ -19,5 +19,6 @@ data modify entity @s Inventory[{Slot:1b}].tag merge from entity @e[tag=tinpet,l
 data modify entity @s Inventory[{Slot:2b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.right_arm.tag
 data modify entity @s Inventory[{Slot:3b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.head.tag
 data modify entity @s Inventory[{Slot:4b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.medal.tag
+replaceitem entity @s hotbar.8 minecraft:diamond_axe{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker.description"}']},AttributeModifiers:[],HideFlags:62,CanDestroy:["minecraft:chest"],medabots_server:{id:"medabots_server:pot_breaker"}}
 
 kill @e[tag=tinpet,limit=1,distance=..0.1]
