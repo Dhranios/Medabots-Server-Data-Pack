@@ -132,7 +132,7 @@ execute at @s as @e[x=-429,y=55,z=-27,tag=dragonbeetle,distance=..1] run scorebo
 execute if entity @s[scores={Dialog=3016}] positioned -426 55 -28 run function medabots_server:spawn_entities/cutscene/rubberobo
 execute if entity @s[scores={Dialog=3016}] positioned -426 55 -28 run tag @e[tag=rubberobo,tag=this_dialog,limit=1,distance=..0.7] add rubberobo_1
 execute if entity @s[scores={Dialog=3016}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -45 ~
-execute if entity @s[scores={Dialog=3016}] poistioned -428 55 -28 run function medabots_server:spawn_entities/cutscene/rubberobo
+execute if entity @s[scores={Dialog=3016}] positioned -428 55 -28 run function medabots_server:spawn_entities/cutscene/rubberobo
 execute if entity @s[scores={Dialog=3016}] positioned -428 55 -28 run tag @e[tag=rubberobo,tag=this_dialog,limit=1,distance=..0.7] add rubberobo_2
 execute if entity @s[scores={Dialog=3016}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -45 ~
 execute if entity @s[scores={Dialog=3017}] run tag @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] add walking

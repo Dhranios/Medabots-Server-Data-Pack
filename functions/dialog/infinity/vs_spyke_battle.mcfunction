@@ -12,7 +12,7 @@ execute if entity @s[scores={Dialog=1}] positioned -1998 51 -603 run function me
 execute if entity @s[scores={Dialog=1}] positioned -1996 51 -604 run function medabots_server:spawn_entities/cutscene/sloan
 execute if entity @s[scores={Dialog=1}] positioned -2001 51 -603 run function medabots_server:spawn_entities/cutscene/spyke
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -2006 51 -611 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene"],Rotation:[-45.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2103051}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:11454154}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:70922}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-2006,y=51,z=-611,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNrBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene"],Rotation:[-90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2103051}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:11454154}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:70922}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=-2006,y=51,z=-611,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute at @s as @e[x=-329,y=55,z=5,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 80 ~

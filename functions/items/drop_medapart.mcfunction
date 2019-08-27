@@ -17,5 +17,6 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=medapart_selection,tag
 execute if entity @e[type=minecraft:area_effect_cloud,tag=medapart_selection,tag=selected,tag=head] run tellraw @s {"translate":"medabots_server:message.lost_medapart","color":"red","with":[{"nbt":"Inventory[{tag:{medabots_server:{part:\"head\",activated:1b}}}].tag.display.Name","entity":"@s","interpret":true,"color":"red"}]}
 execute if entity @e[type=minecraft:area_effect_cloud,tag=medapart_selection,tag=selected,tag=head] run clear @s minecraft:fishing_rod{medabots_server:{part:"head",activated:1b}}
 data merge entity @e[type=minecraft:item,tag=medapart_drop,distance=..1,limit=1] {Item:{tag:{medabots_server:{activated:0b,stage_item:1b}}}}
+data remove entity @e[type=minecraft:item,tag=medapart_drop,distance=..1,limit=1] Item.tag.display{Lore:['{"italic":falce,"color":"green","translate":"medabots_server:item.medapart.activated"}']}.Lore[8]
 tag @e[type=minecraft:item,tag=medapart_drop,distance=..1,limit=1] remove medapart_drop
 kill @e[type=minecraft:area_effect_cloud,tag=medapart_selection]
