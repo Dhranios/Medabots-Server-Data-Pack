@@ -16,3 +16,4 @@ tag @e[distance=..0.7,tag=floor_switch] add custom_stage
 scoreboard players operation @e[distance=..0.7,tag=floor_switch] HomeX = @s HomeX
 scoreboard players operation @e[distance=..0.7,tag=floor_switch] HomeY = @s HomeY
 scoreboard players operation @e[distance=..0.7,tag=floor_switch] HomeZ = @s HomeZ
+scoreboard players operation @e[distance=..0.7,tag=floor_switch] NeededPower = @s NeededPower

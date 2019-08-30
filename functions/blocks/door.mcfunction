@@ -1,3 +1,7 @@
+# Is this door powered?
+execute if score @s PowerAmount = @s PowerNeeded run tag @s add powered
+execute unless score @s PowerAmount = @s PowerNeeded run tag @s remove powered
+
 # Open the door
 execute if entity @s[tag=open] if block ~ ~ ~ minecraft:iron_door[open=false] run function medabots_server:blocks/door/open
 

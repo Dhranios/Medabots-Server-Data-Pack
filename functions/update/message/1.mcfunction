@@ -1,3 +1,2 @@
 # An update message
-tellraw @s[scores={StreetPass=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.3ds","color":"light_purple"},{"translate":"medabots_server:message.3ds.streetpass.detect","color":"light_purple"}],"extra":[{"text":"\n"},{"translate":"chat.type.text","with":[{"translate":"medabots_server:item.3ds","color":"light_purple"},{"translate":"medabots_server:message.3ds.streetpass.use","color":"light_purple","extra":[{"text":" /trigger MCMap set 135412152019","color":"gold"}]}]}]}
 scoreboard players add @s UpToDate 1

@@ -92,9 +92,3 @@ execute if entity @s[tag=!running,tag=!sneak_pos] unless entity @e[distance=..0.
 execute if entity @s[tag=!running,tag=sneak_pos] unless entity @e[distance=..0.1,type=minecraft:area_effect_cloud,tag=medabot_walk_detection] run tag @s add sneaking
 kill @e[distance=..1,type=minecraft:area_effect_cloud,tag=medabot_walk_detection]
 execute if entity @s[tag=!dead,tag=!running] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.walk_detection","with":[{"text":"Medabot"}]}',Tags:["medabot_walk_detection"],Duration:2}
-
-# No armor
-execute if entity @s[nbt={Inventory:[{Slot:100b}]}] run function medabots_server:items/give_obtained_item/100
-execute if entity @s[nbt={Inventory:[{Slot:101b}]}] run function medabots_server:items/give_obtained_item/101
-execute if entity @s[nbt={Inventory:[{Slot:102b}]}] run function medabots_server:items/give_obtained_item/102
-execute if entity @s[nbt={Inventory:[{Slot:103b}]},nbt=!{Inventory:[{Slot:103b,tag:{medabots_server:{id:"medabots_server:remove_knockback"}}}]}] run function medabots_server:items/give_obtained_item/103

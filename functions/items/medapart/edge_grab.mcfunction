@@ -20,3 +20,6 @@ execute if entity @s[scores={EdgeGrabAble=2,Sneaking=0}] if block ~ ~-1 ~ minecr
 # Sneak to let go
 #execute as run data; MC-121807
 execute if entity @s[tag=sneak_pos] as @e[distance=..1,type=minecraft:area_effect_cloud,tag=edge_grab] run data merge entity @s {Age:30}
+
+tag @s remove edge_grabbing
+execute if entity @e[distance=..1,type=minecraft:area_effect_cloud,tag=edge_grab] run tag @s add edge_grabbing

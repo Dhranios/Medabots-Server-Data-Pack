@@ -1,11 +1,11 @@
-execute positioned -1941 45 -620 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1941 45 -613 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1945 45 -609 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1952 45 -609 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1956 45 -613 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1956 45 -620 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1952 45 -624 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1945 45 -624 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
+execute positioned -1941 45 -620 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1941 45 -613 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1945 45 -609 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1952 45 -609 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1956 45 -613 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1956 45 -620 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1952 45 -624 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1945 45 -624 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=-1] -1954 45 -616 -90 0
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=0] -1943 45 -617 90 0
 teleport @s[tag=-1] -1954 45 -616 90 0

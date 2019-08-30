@@ -2,26 +2,26 @@ execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] run tellraw
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] positioned -1890 44 -578 run function medabots_server:spawn_entities/medabot/blackbeetle
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] positioned -1890 44 -578 run scoreboard players set @e[distance=..1] Stage 29
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=7] positioned -1890 44 -578 run tag @e[distance=..1] add enemy_medabot
-execute positioned -1892 44 -561 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1887 44 -561 run function medabots_server:set_blocks/gas_floor/enabled/no_defend
-execute positioned -1900 44 -569 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1900 44 -574 run function medabots_server:set_blocks/gas_floor/enabled/ineffective
-execute positioned -1892 44 -582 run function medabots_server:set_blocks/gas_floor/enabled/ineffective
-execute positioned -1887 44 -582 run function medabots_server:set_blocks/gas_floor/enabled/no_defend
-execute positioned -1879 44 -574 run function medabots_server:set_blocks/gas_floor/enabled/no_defend
-execute positioned -1879 44 -569 run function medabots_server:set_blocks/gas_floor/enabled/falling
-execute positioned -1887 44 -569 run function medabots_server:set_blocks/gas_floor/enabled/falling
-execute positioned -1892 44 -569 run function medabots_server:set_blocks/gas_floor/enabled/no_defend
-execute positioned -1892 44 -574 run function medabots_server:set_blocks/gas_floor/enabled/ineffective
-execute positioned -1887 44 -574 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-tag @e[x=-1889.5,y=44,z=-557.5,distance=..0.7,tag=door,tag=open] remove open
-tag @e[x=-1878.5,y=44,z=-561.5,distance=..0.7,tag=door,tag=open] remove open
-tag @e[x=-1875.5,y=44,z=-570.5,distance=..0.7,tag=door,tag=open] remove open
-tag @e[x=-1879.5,y=44,z=-581.5,distance=..0.7,tag=door,tag=open] remove open
-tag @e[x=-1888.5,y=44,z=-584.5,distance=..0.7,tag=door,tag=open] remove open
-tag @e[x=-1899.5,y=44,z=-580.5,distance=..0.7,tag=door,tag=open] remove open
-tag @e[x=-1902.5,y=44,z=-571.5,distance=..0.7,tag=door,tag=open] remove open
-tag @e[x=-1898.5,y=44,z=-560.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1892 44 -561 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1887 44 -561 run function medabots_server:set_blocks/gas_floor/no_defend/power_0
+execute positioned -1900 44 -569 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1900 44 -574 run function medabots_server:set_blocks/gas_floor/ineffective/power_0
+execute positioned -1892 44 -582 run function medabots_server:set_blocks/gas_floor/ineffective/power_0
+execute positioned -1887 44 -582 run function medabots_server:set_blocks/gas_floor/no_defend/power_0
+execute positioned -1879 44 -574 run function medabots_server:set_blocks/gas_floor/no_defend/power_0
+execute positioned -1879 44 -569 run function medabots_server:set_blocks/gas_floor/falling/power_0
+execute positioned -1887 44 -569 run function medabots_server:set_blocks/gas_floor/falling/power_0
+execute positioned -1892 44 -569 run function medabots_server:set_blocks/gas_floor/no_defend/power_0
+execute positioned -1892 44 -574 run function medabots_server:set_blocks/gas_floor/ineffective/power_0
+execute positioned -1887 44 -574 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+scoreboard players set @e[x=-1889.5,y=44,z=-557.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1878.5,y=44,z=-561.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1875.5,y=44,z=-570.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1879.5,y=44,z=-581.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1888.5,y=44,z=-584.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1899.5,y=44,z=-580.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1902.5,y=44,z=-571.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1898.5,y=44,z=-560.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

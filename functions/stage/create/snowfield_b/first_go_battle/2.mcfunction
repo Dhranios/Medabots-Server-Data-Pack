@@ -9,7 +9,7 @@ execute positioned -1679 45 -489 run function medabots_server:spawn_entities/bal
 execute positioned -1677 45 -485 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1674 45 -485 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1673 45 -482 run function medabots_server:spawn_entities/balloon_bomb
-tag @e[x=-1683.5,y=45,z=-486.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1683.5,y=45,z=-486.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

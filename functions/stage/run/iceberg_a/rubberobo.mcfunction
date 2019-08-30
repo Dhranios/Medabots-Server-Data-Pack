@@ -7,36 +7,36 @@ execute if entity @e[scores={Stage=6},tag=hide_normal_time] if score #temp Time 
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/iceberg_a/rubberobo
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=0..40}] run tag @e[x=-1715.5,y=44,z=-238.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1715 43 -239 minecraft:light_blue_wool run tag @e[x=-1715.5,y=44,z=-238.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1715 43 -239 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=0..40}] run tag @e[x=-1715.5,y=44,z=-238.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=10..50}] run tag @e[x=-1736.5,y=44,z=-221.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1738 43 -221 minecraft:light_blue_wool run tag @e[x=-1736.5,y=44,z=-221.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1738 43 -221 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=10..50}] run tag @e[x=-1736.5,y=44,z=-221.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=20..60}] run tag @e[x=-1740.5,y=44,z=-205.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1740 43 -207 minecraft:light_blue_wool run tag @e[x=-1740.5,y=44,z=-205.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1740 43 -207 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=20..60}] run tag @e[x=-1740.5,y=44,z=-205.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=30..70}] run tag @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1751 43 -212 minecraft:light_blue_wool run tag @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1751 43 -212 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=30..70}] run tag @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=40..80}] run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1740 43 -192 minecraft:lime_wool run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1744 43 -192 minecraft:yellow_wool run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1740 43 -192 minecraft:green_wool if block -1744 43 -192 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=40..80}] run tag @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=50..90}] run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1738 43 -192 minecraft:lime_wool run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1725 43 -207 minecraft:yellow_wool run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1738 43 -192 minecraft:green_wool if block -1725 43 -207 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=50..90}] run tag @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=60..100}] run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1736 43 -192 minecraft:lime_wool run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1728 43 -222 minecraft:yellow_wool run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1736 43 -192 minecraft:green_wool if block -1728 43 -222 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=60..100}] run tag @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=70..110}] run tag @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1750 43 -221 minecraft:yellow_wool run tag @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1750 43 -221 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=70..110}] run tag @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,tag=open] remove open
-execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=80..120}] run tag @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1707 43 -191 minecraft:lime_wool run tag @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1707 43 -191 minecraft:green_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=80..120}] run tag @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=open] remove open
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=0..40}] run scoreboard players set @e[x=-1715.5,y=44,z=-238.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1715 43 -239 minecraft:light_blue_wool run scoreboard players set @e[x=-1715.5,y=44,z=-238.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1715 43 -239 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=0..40}] run scoreboard players set @e[x=-1715.5,y=44,z=-238.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=10..50}] run scoreboard players set @e[x=-1736.5,y=44,z=-221.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1738 43 -221 minecraft:light_blue_wool run scoreboard players set @e[x=-1736.5,y=44,z=-221.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1738 43 -221 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=10..50}] run scoreboard players set @e[x=-1736.5,y=44,z=-221.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=20..60}] run scoreboard players set @e[x=-1740.5,y=44,z=-205.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1740 43 -207 minecraft:light_blue_wool run scoreboard players set @e[x=-1740.5,y=44,z=-205.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1740 43 -207 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=20..60}] run scoreboard players set @e[x=-1740.5,y=44,z=-205.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=30..70}] run scoreboard players set @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1751 43 -212 minecraft:light_blue_wool run scoreboard players set @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1751 43 -212 minecraft:blue_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=30..70}] run scoreboard players set @e[x=-1751.5,y=44,z=-212.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=40..80}] run scoreboard players set @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1740 43 -192 minecraft:lime_wool run scoreboard players set @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1744 43 -192 minecraft:yellow_wool run scoreboard players set @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1740 43 -192 minecraft:green_wool if block -1744 43 -192 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=40..80}] run scoreboard players set @e[x=-1740.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=50..90}] run scoreboard players set @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1738 43 -192 minecraft:lime_wool run scoreboard players set @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1725 43 -207 minecraft:yellow_wool run scoreboard players set @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1738 43 -192 minecraft:green_wool if block -1725 43 -207 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=50..90}] run scoreboard players set @e[x=-1738.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=60..100}] run scoreboard players set @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1736 43 -192 minecraft:lime_wool run scoreboard players set @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1728 43 -222 minecraft:yellow_wool run scoreboard players set @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1736 43 -192 minecraft:green_wool if block -1728 43 -222 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=60..100}] run scoreboard players set @e[x=-1736.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=70..110}] run scoreboard players set @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1750 43 -221 minecraft:yellow_wool run scoreboard players set @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1750 43 -221 minecraft:orange_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=70..110}] run scoreboard players set @e[x=-1734.5,y=44,z=-192.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=80..120}] run scoreboard players set @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1707 43 -191 minecraft:lime_wool run scoreboard players set @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1707 43 -191 minecraft:green_wool unless entity @e[x=-1710.5,y=44,z=-219.5,distance=..0.7,tag=blue_floor_switch_timer,scores={FloorSwitchTime=80..120}] run scoreboard players set @e[x=-1711.5,y=44,z=-208.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1682 43 -232 minecraft:yellow_wool run tag @e[x=-1687,y=43,z=-241,dx=10,dy=2,dz=15,tag=laser_trap] add enabled
 execute if block -1682 43 -232 minecraft:orange_wool run tag @e[x=-1687,y=43,z=-241,dx=10,dy=2,dz=15,tag=laser_trap] remove enabled
 execute if block -1740 43 -237 minecraft:light_blue_wool run tag @e[x=-1758.5,y=44,z=-217.5,distance=..0.7,tag=laser_trap] add enabled
@@ -81,7 +81,7 @@ execute if block -1741 44 -206 minecraft:iron_door[open=false] run tag @e[x=-175
 execute if block -1710 44 -209 minecraft:iron_door[open=true] if block -1683 44 -200 minecraft:air if entity @s[x=-1709,y=44,z=-210,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_a/rubberobo_battle/0
 execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mission] store result score @s BattlingMedabots if entity @e[scores={Stage=6,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1790.5,y=44,z=-208.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1790.5,y=44,z=-208.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mission]
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:iceberg_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

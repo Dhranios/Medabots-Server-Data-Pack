@@ -1,5 +1,5 @@
 teleport @s -1933 45 -551 90 0
-tag @s add wind_1
+scoreboard players set @s StageVersion 4
 tag @s add story_battle
 execute positioned -1938 45 -552 run function medabots_server:spawn_entities/medabot/pretty_prime/pretty_prime/pretty_prime/pretty_prime/monkey
 execute positioned -1938 45 -552 run scoreboard players set @e[distance=..1] Stage 50

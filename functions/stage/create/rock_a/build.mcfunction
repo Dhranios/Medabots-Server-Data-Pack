@@ -1,8 +1,7 @@
-scoreboard players set @s Battle 4
+tag @s add stage_builder
 scoreboard players set @s Stage 2
 scoreboard players set @s Music 0
 scoreboard players set @s MusicType 30
-tag @s add custom
 execute positioned -1602 45 -170 run function medabots_server:set_blocks/goal_area
 execute positioned -1626 45 -127 run function medabots_server:set_blocks/starting_area
 teleport @s -1626 45 -127 0 0

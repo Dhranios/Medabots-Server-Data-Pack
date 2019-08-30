@@ -1,4 +1,2 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.pot"}',Tags:["pot","bomb","delay_120"],Duration:2147483647}
-setblock ~ ~ ~ minecraft:chest[facing=south,type=single]
-setblock ~ ~1 ~ minecraft:barrier
-execute as @e[distance=..0.7,tag=floor_switch] at @s run function medabots_server:blocks/floor_switch
+function medabots_server:set_blocks/pot/bomb
+tag @e[distance=..0.7,tag=pot] add delay_120

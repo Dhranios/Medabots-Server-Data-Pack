@@ -11,16 +11,16 @@ execute positioned -1593 45 -741 run function medabots_server:set_blocks/floor_s
 execute positioned -1592 45 -744 run function medabots_server:set_blocks/floor_switch/yellow/delay_15
 execute positioned -1590 45 -746 run function medabots_server:set_blocks/floor_switch/yellow/delay_15
 execute positioned -1586 45 -745 run function medabots_server:set_blocks/floor_switch/yellow/delay_15
-execute positioned -1582 45 -734 run function medabots_server:set_blocks/fan/off/west/range_12
-execute positioned -1581 45 -739 run function medabots_server:set_blocks/fan/off/west/range_15
-execute positioned -1581 45 -742 run function medabots_server:set_blocks/fan/off/west/range_14
-execute positioned -1593 45 -734 run function medabots_server:set_blocks/fan/off/east/range_13
-execute positioned -1594 45 -739 run function medabots_server:set_blocks/fan/off/east/range_15
-execute positioned -1594 45 -744 run function medabots_server:set_blocks/fan/off/east/range_15
-execute positioned -1592 45 -746 run function medabots_server:set_blocks/fan/off/south/range_14
-execute positioned -1588 45 -746 run function medabots_server:set_blocks/fan/off/south/range_15
-execute positioned -1584 45 -746 run function medabots_server:set_blocks/fan/off/south/range_14
-tag @e[x=-1587.5,y=45,z=-729.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1582 45 -734 run function medabots_server:set_blocks/fan/west/off/range_12
+execute positioned -1581 45 -739 run function medabots_server:set_blocks/fan/west/off/range_15
+execute positioned -1581 45 -742 run function medabots_server:set_blocks/fan/west/off/range_14
+execute positioned -1593 45 -734 run function medabots_server:set_blocks/fan/east/off/range_13
+execute positioned -1594 45 -739 run function medabots_server:set_blocks/fan/east/off/range_15
+execute positioned -1594 45 -744 run function medabots_server:set_blocks/fan/east/off/range_15
+execute positioned -1592 45 -746 run function medabots_server:set_blocks/fan/south/off/range_14
+execute positioned -1588 45 -746 run function medabots_server:set_blocks/fan/south/off/range_15
+execute positioned -1584 45 -746 run function medabots_server:set_blocks/fan/south/off/range_14
+scoreboard players set @e[x=-1587.5,y=45,z=-729.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

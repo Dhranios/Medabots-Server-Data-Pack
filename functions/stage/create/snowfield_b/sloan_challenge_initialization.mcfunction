@@ -1,5 +1,6 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
-tag @s add sloan_challenge
+scoreboard players set @s StageVersion 5
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/snowfield_b/sloan_challenge
 execute if entity @s[tag=!vs_cpus] run teleport @s -1715 51 -492 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1714 53 -540 minecraft:redstone_block

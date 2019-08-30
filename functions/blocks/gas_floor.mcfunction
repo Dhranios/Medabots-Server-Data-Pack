@@ -3,8 +3,9 @@ execute unless entity @s[scores={Time=0..}] run scoreboard players add @s Time 2
 setblock ~ ~ ~ minecraft:light_gray_carpet
 
 # Coundown blowing
+scoreboard players remove @s[scores={Time=1..19}] Time 1
+execute if score @s[scores={Time=20}] PowerAmount = @s PowerNeeded run scoreboard players remove @s Time 1
 scoreboard players remove @s[scores={Time=20..}] Time 1
-scoreboard players remove @s[scores={Time=1..20},tag=enabled] Time 1
 
 # Fire in the hole!
 execute if entity @s[scores={Time=0}] run playsound medabots_server:block.gas_floor hostile @a ~ ~ ~ 1

@@ -3,7 +3,7 @@ execute if entity @s[tag=dead] run function medabots_server:blocks/hammer_punch/
 
 # Countdown punching
 scoreboard players remove @s[scores={Time=..19}] Time 1
-scoreboard players remove @s[scores={Time=20},tag=enabled] Time 1
+execute if score @s[scores={Time=20}] PowerAmount = @s PowerNeeded run scoreboard players remove @s Time 1
 scoreboard players remove @s[scores={Time=21..}] Time 1
 
 # Fire in the hole!

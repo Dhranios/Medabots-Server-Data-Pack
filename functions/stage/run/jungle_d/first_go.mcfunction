@@ -8,15 +8,15 @@ execute if entity @e[scores={Stage=31},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/jungle_d/first_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1641 44 -757 minecraft:lime_wool run tag @e[x=-1640.5,y=45,z=-758.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1636 44 -743 minecraft:lime_wool run tag @e[x=-1627.5,y=45,z=-753.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1609 44 -762 minecraft:lime_wool run tag @e[x=-1610.5,y=45,z=-733.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1653 44 -721 minecraft:lime_wool run tag @e[x=-1633.5,y=45,z=-721.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1641 44 -757 minecraft:lime_wool run scoreboard players set @e[x=-1640.5,y=45,z=-758.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1636 44 -743 minecraft:lime_wool run scoreboard players set @e[x=-1627.5,y=45,z=-753.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1609 44 -762 minecraft:lime_wool run scoreboard players set @e[x=-1610.5,y=45,z=-733.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1653 44 -721 minecraft:lime_wool run scoreboard players set @e[x=-1633.5,y=45,z=-721.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1634 45 -718 minecraft:iron_door[open=true] if block -1647 45 -712 minecraft:iron_door[open=false] if entity @s[x=-1637,y=45,z=-719,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_d/first_go_battle/0
 execute if entity @e[x=-1640.5,y=45,z=-712.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=31,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1633.5,y=45,z=-716.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1646.5,y=45,z=-711.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1633.5,y=45,z=-716.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1646.5,y=45,z=-711.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1665,y=42,z=-768,dx=61,dy=7,dz=61,tag=mission]
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:jungle_d/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

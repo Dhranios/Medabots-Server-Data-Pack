@@ -1,6 +1,9 @@
 # Re-give items seen by advancements
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run function medabots_server:items/give_obtained_item
 
+# Tutorial
+execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/try/tutorial
+
 # Run stage
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=1..2},tag=!murder_mystery] run function medabots_server:stage/left_server
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=3..4},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
@@ -10,7 +13,7 @@ execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run fu
 scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
 
 # Stage builder
-execute if entity @s[scores={Battle=4}] run function medabots_server:stage/builder
+execute if entity @s[tag=stage_builder] run function medabots_server:stage/builder
 
 # Make the random server messages appear
 function medabots_server:other/random_message
@@ -48,27 +51,11 @@ execute if entity @s[scores={SettingsCheck=3..}] run function medabots_server:se
 # Complete a task
 execute if entity @s[scores={TaskCheck=2..}] run function medabots_server:settings/complete_task
 
-# Death
-execute if entity @s[scores={Death=1}] run function medabots_server:other/death
-
-# Remove player from the world
-teleport @s[scores={Death=20}] ~ -4096 ~
-
-# Death timer
-scoreboard players add @s[scores={Death=1..}] Death 1
-scoreboard players add @s[scores={Death=..-1}] Death 1
-
-# Books
-function #medabots_server:books
-
 # Don't move for power, no combat for power
 function medabots_server:effects/recharge
 
 # Loop music
 function medabots_server:other/music
-
-# Hush, no need to see what's going on here #FuturePlans
-execute if entity @s[tag=street_pass] run function medabots_server:items/streetpass
 
 # Verify resource pack
 execute if entity @s[scores={Offline=1..}] run function medabots_server:settings/resource_pack_verification/ask
@@ -104,6 +91,9 @@ scoreboard players set @s[scores={BuyMedapart=1..}] BuyMedapart 0
 execute if entity @s[tag=!trading] run function medabots_server:shopping/reset
 
 # Store old position
+scoreboard players operation @s OtherX = @s PosX
+scoreboard players operation @s OtherY = @s PosY
+scoreboard players operation @s OtherZ = @s PosZ
 execute store result score @s PosX run data get entity @s Pos[0] 100
 execute store result score @s PosY run data get entity @s Pos[1] 100
 execute store result score @s PosZ run data get entity @s Pos[2] 100

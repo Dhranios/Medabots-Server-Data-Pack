@@ -1,11 +1,11 @@
-execute positioned -1939 45 -621 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
-execute positioned -1939 45 -612 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
-execute positioned -1944 45 -607 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
-execute positioned -1953 45 -607 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
-execute positioned -1958 45 -612 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
-execute positioned -1958 45 -621 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
-execute positioned -1953 45 -626 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
-execute positioned -1944 45 -626 run function medabots_server:set_blocks/action_floor/enabled/bomb/delay_0
+execute positioned -1939 45 -621 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
+execute positioned -1939 45 -612 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
+execute positioned -1944 45 -607 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
+execute positioned -1953 45 -607 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
+execute positioned -1958 45 -612 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
+execute positioned -1958 45 -621 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
+execute positioned -1953 45 -626 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
+execute positioned -1944 45 -626 run function medabots_server:set_blocks/action_floor/bomb/delay_0/power_0
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=-1] -1954 45 -616 -90 0
 teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=0] -1943 45 -617 90 0
 teleport @s[tag=-1] -1954 45 -616 90 0

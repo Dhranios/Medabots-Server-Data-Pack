@@ -1,6 +1,9 @@
 # Make the destroy attack do something
 execute if entity @s[tag=destroy] run function medabots_server:items/medapart/destroy/stand
 
+# Make the laser attack do something
+execute if entity @s[tag=laser,tag=source] run function medabots_server:items/medapart/laser/attack
+
 # Who else but Mr. Referee has to referee the battles?
 execute if entity @s[tag=mr_referee] run function medabots_server:dialog/mr_referee
 

@@ -1,5 +1,5 @@
 teleport @s -1999 45 -605 -180 0
-tag @s add mirrors
+scoreboard players set @s StageVersion 2
 tag @s add story_battle
 execute positioned -1998 45 -612 run function medabots_server:spawn_entities/character_medabot/gillgirl
 execute positioned -1998 45 -612 run scoreboard players set @e[distance=..1] Stage 48

@@ -1,3 +1,0 @@
-execute store result score #temp Time run clear @s minecraft:diamond_axe{medabots_server:{id:"medabots_server:pot_breaker"}} 0
-execute if score #temp Time matches 0 unless entity @s[nbt={Inventory:[{Slot:8b}]}] run replaceitem entity @s hotbar.8 minecraft:diamond_axe{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.drop_to_kill"}']},AttributeModifiers:[],HideFlags:62,CanDestroy:["minecraft:chest"],medabots_server:{id:"medabots_server:pot_breaker",kill:1b}}
-scoreboard players reset #temp Time

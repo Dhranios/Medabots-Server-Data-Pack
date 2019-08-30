@@ -5,14 +5,14 @@ execute unless entity @a[x=-1762,y=51,z=-538,dx=94,dy=4,dz=93,tag=0] positioned 
 execute positioned -1738 45 -468 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1751 45 -455 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1751 45 -455 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1739 45 -467 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1740 45 -463 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1743 45 -461 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1741 45 -458 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1744 45 -459 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1747 45 -456 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-execute positioned -1748 45 -461 run function medabots_server:set_blocks/gas_floor/enabled/confuse
-tag @e[x=-1736.5,y=45,z=-460.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1739 45 -467 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1740 45 -463 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1743 45 -461 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1741 45 -458 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1744 45 -459 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1747 45 -456 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+execute positioned -1748 45 -461 run function medabots_server:set_blocks/gas_floor/confuse/power_0
+scoreboard players set @e[x=-1736.5,y=45,z=-460.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

@@ -1,3 +1,5 @@
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.alarm"}',Tags:["alarm"],Duration:2147483647}
-setblock ~ ~ ~ minecraft:structure_block[mode=load]{name:"medabots_server:stage/alarm",mode:"LOAD"}
-setblock ~ ~1 ~ minecraft:redstone_block
+setblock ~ ~ ~ minecraft:black_concrete
+setblock ~ ~1 ~ minecraft:barrier
+scoreboard players set @e[distance=..0.7,tag=alarm] PowerNeeded 1
+scoreboard players set @e[distance=..0.7,tag=alarm] PowerAmount 0

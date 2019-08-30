@@ -7,14 +7,14 @@ execute positioned -1980 45 -576 run function medabots_server:set_blocks/wall
 execute positioned -1981 45 -544 run function medabots_server:set_blocks/wall
 execute positioned -2013 45 -545 run function medabots_server:set_blocks/wall
 execute positioned -2012 45 -577 run function medabots_server:set_blocks/wall
-execute positioned -1981 45 -577 run function medabots_server:set_blocks/spring_wall/enabled/south/delay_10
-execute positioned -1980 45 -545 run function medabots_server:set_blocks/spring_wall/enabled/west/delay_10
-execute positioned -2012 45 -544 run function medabots_server:set_blocks/spring_wall/enabled/north/delay_10
-execute positioned -2013 45 -576 run function medabots_server:set_blocks/spring_wall/enabled/east/delay_10
-execute positioned -1999 45 -579 run function medabots_server:set_blocks/fan/off/south/range_37
-execute positioned -1978 45 -563 run function medabots_server:set_blocks/fan/off/west/range_37
-execute positioned -1994 45 -542 run function medabots_server:set_blocks/fan/off/north/range_37
-execute positioned -2015 45 -558 run function medabots_server:set_blocks/fan/off/east/range_37
+execute positioned -1981 45 -577 run function medabots_server:set_blocks/spring_wall/south/delay_10/power_0
+execute positioned -1980 45 -545 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_0
+execute positioned -2012 45 -544 run function medabots_server:set_blocks/spring_wall/north/delay_10/power_0
+execute positioned -2013 45 -576 run function medabots_server:set_blocks/spring_wall/east/delay_10/power_0
+execute positioned -1999 45 -579 run function medabots_server:set_blocks/fan/south/off/range_37
+execute positioned -1978 45 -563 run function medabots_server:set_blocks/fan/west/off/range_37
+execute positioned -1994 45 -542 run function medabots_server:set_blocks/fan/north/off/range_37
+execute positioned -2015 45 -558 run function medabots_server:set_blocks/fan/east/off/range_37
 teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=-1] -1996 45 -557 0 0
 teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=0] -1997 45 -564 -180 0
 teleport @s[tag=-1] -1996 45 -557 0 0

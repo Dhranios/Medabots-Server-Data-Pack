@@ -8,13 +8,13 @@ execute if entity @e[scores={Stage=26},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/iceberg_c/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1568 43 -679 minecraft:lime_wool run tag @e[x=-1540.5,y=44,z=-660.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1513 43 -679 minecraft:lime_wool run tag @e[x=-1540.5,y=44,z=-659.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1568 43 -679 minecraft:lime_wool run scoreboard players set @e[x=-1540.5,y=44,z=-660.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1513 43 -679 minecraft:lime_wool run scoreboard players set @e[x=-1540.5,y=44,z=-659.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1553 44 -625 minecraft:iron_door[open=true] if block -1661 45 -134 minecraft:iron_door[open=false] if entity @s[x=-1555,y=44,z=-625,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_c/second_go_battle/0
 execute if entity @e[x=-1552.5,y=44,z=-618.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=26,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1552.5,y=44,z=-624.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1560.5,y=44,z=-665.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1552.5,y=44,z=-624.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1560.5,y=44,z=-665.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1552.5,y=44,z=-618.5,distance=..0.7,tag=mission]
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:iceberg_c/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

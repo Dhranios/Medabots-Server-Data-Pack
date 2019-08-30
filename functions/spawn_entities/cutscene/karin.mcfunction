@@ -1,0 +1,2 @@
+summon minecraft:armor_stand ~ ~ ~ {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["karin","cutscene","this_dialog"],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:12074079}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:16777215}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:14319255}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute as @e[tag=karin,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr

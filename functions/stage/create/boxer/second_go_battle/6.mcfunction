@@ -3,23 +3,23 @@ execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned 
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned -1906 44 -549 run scoreboard players set @e[distance=..1] Stage 29
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned -1906 44 -549 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1906 44 -547 run function medabots_server:spawn_entities/item/10_medallar_cents
-execute positioned -1903 44 -561 run function medabots_server:set_blocks/press_wall/disabled/south/range_5
-execute positioned -1905 44 -562 run function medabots_server:set_blocks/press_wall/disabled/south/range_8
-execute positioned -1908 44 -562 run function medabots_server:set_blocks/press_wall/disabled/south/range_8
-execute positioned -1910 44 -561 run function medabots_server:set_blocks/press_wall/disabled/south/range_5
-execute positioned -1913 44 -558 run function medabots_server:set_blocks/press_wall/disabled/east/range_3
-execute positioned -1914 44 -556 run function medabots_server:set_blocks/press_wall/disabled/east/range_6
-execute positioned -1914 44 -553 run function medabots_server:set_blocks/press_wall/disabled/east/range_6
-execute positioned -1913 44 -551 run function medabots_server:set_blocks/press_wall/disabled/east/range_3
-execute positioned -1910 44 -548 run function medabots_server:set_blocks/press_wall/disabled/north/range_5
-execute positioned -1908 44 -547 run function medabots_server:set_blocks/press_wall/disabled/north/range_8
-execute positioned -1905 44 -547 run function medabots_server:set_blocks/press_wall/disabled/north/range_8
-execute positioned -1903 44 -548 run function medabots_server:set_blocks/press_wall/disabled/north/range_5
-execute positioned -1900 44 -551 run function medabots_server:set_blocks/press_wall/disabled/west/range_3
-execute positioned -1899 44 -553 run function medabots_server:set_blocks/press_wall/disabled/west/range_6
-execute positioned -1899 44 -556 run function medabots_server:set_blocks/press_wall/disabled/west/range_6
-execute positioned -1900 44 -558 run function medabots_server:set_blocks/press_wall/disabled/west/range_3
-tag @e[x=-1899.5,y=44,z=-559.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1903 44 -561 run function medabots_server:set_blocks/press_wall/south/range_5/power_1
+execute positioned -1905 44 -562 run function medabots_server:set_blocks/press_wall/south/range_8/power_1
+execute positioned -1908 44 -562 run function medabots_server:set_blocks/press_wall/south/range_8/power_1
+execute positioned -1910 44 -561 run function medabots_server:set_blocks/press_wall/south/range_5/power_1
+execute positioned -1913 44 -558 run function medabots_server:set_blocks/press_wall/east/range_3/power_1
+execute positioned -1914 44 -556 run function medabots_server:set_blocks/press_wall/east/range_6/power_1
+execute positioned -1914 44 -553 run function medabots_server:set_blocks/press_wall/east/range_6/power_1
+execute positioned -1913 44 -551 run function medabots_server:set_blocks/press_wall/east/range_3/power_1
+execute positioned -1910 44 -548 run function medabots_server:set_blocks/press_wall/north/range_5/power_1
+execute positioned -1908 44 -547 run function medabots_server:set_blocks/press_wall/north/range_8/power_1
+execute positioned -1905 44 -547 run function medabots_server:set_blocks/press_wall/north/range_8/power_1
+execute positioned -1903 44 -548 run function medabots_server:set_blocks/press_wall/north/range_5/power_1
+execute positioned -1900 44 -551 run function medabots_server:set_blocks/press_wall/west/range_3/power_1
+execute positioned -1899 44 -553 run function medabots_server:set_blocks/press_wall/west/range_6/power_1
+execute positioned -1899 44 -556 run function medabots_server:set_blocks/press_wall/west/range_6/power_1
+execute positioned -1900 44 -558 run function medabots_server:set_blocks/press_wall/west/range_3/power_1
+scoreboard players set @e[x=-1899.5,y=44,z=-559.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

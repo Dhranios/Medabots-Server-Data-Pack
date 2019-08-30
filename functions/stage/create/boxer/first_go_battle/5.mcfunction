@@ -3,21 +3,21 @@ execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] positioned 
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] positioned -1917 44 -572 run scoreboard players set @e[distance=..1] Stage 29
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=5] positioned -1917 44 -572 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1920 44 -572 run function medabots_server:spawn_entities/item/10_medallar_cents
-execute positioned -1916 44 -578 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1918 44 -577 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1918 44 -576 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1919 44 -575 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1919 44 -574 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1919 44 -569 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1919 44 -568 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1918 44 -567 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1918 44 -566 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1916 44 -565 run function medabots_server:set_blocks/hammer_punch/enabled/east/delay_10
-execute positioned -1912 44 -573 run function medabots_server:set_blocks/hammer_punch/enabled/west/delay_10
-execute positioned -1911 44 -572 run function medabots_server:set_blocks/hammer_punch/enabled/west/delay_10
-execute positioned -1911 44 -571 run function medabots_server:set_blocks/hammer_punch/enabled/west/delay_10
-execute positioned -1912 44 -570 run function medabots_server:set_blocks/hammer_punch/enabled/west/delay_10
-tag @e[x=-1902.5,y=44,z=-571.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1916 44 -578 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1918 44 -577 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1918 44 -576 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1919 44 -575 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1919 44 -574 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1919 44 -569 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1919 44 -568 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1918 44 -567 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1918 44 -566 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1916 44 -565 run function medabots_server:set_blocks/hammer_punch/east/delay_10/power_0
+execute positioned -1912 44 -573 run function medabots_server:set_blocks/hammer_punch/west/delay_10/power_0
+execute positioned -1911 44 -572 run function medabots_server:set_blocks/hammer_punch/west/delay_10/power_0
+execute positioned -1911 44 -571 run function medabots_server:set_blocks/hammer_punch/west/delay_10/power_0
+execute positioned -1912 44 -570 run function medabots_server:set_blocks/hammer_punch/west/delay_10/power_0
+scoreboard players set @e[x=-1902.5,y=44,z=-571.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

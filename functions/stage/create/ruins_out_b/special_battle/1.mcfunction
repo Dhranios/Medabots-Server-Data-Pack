@@ -7,23 +7,23 @@ execute positioned -1785 45 -519 run function medabots_server:spawn_entities/rou
 execute positioned -1792 45 -521 run function medabots_server:spawn_entities/round_stone
 execute positioned -1790 45 -528 run function medabots_server:spawn_entities/round_stone
 execute positioned -1783 45 -526 run function medabots_server:spawn_entities/round_stone
-execute positioned -1783 45 -512 run function medabots_server:set_blocks/spring_wall/disabled/north/delay_10
-execute positioned -1785 45 -512 run function medabots_server:set_blocks/spring_wall/disabled/north/delay_10
-execute positioned -1790 45 -512 run function medabots_server:set_blocks/spring_wall/disabled/north/delay_10
-execute positioned -1792 45 -512 run function medabots_server:set_blocks/spring_wall/disabled/north/delay_10
-execute positioned -1799 45 -519 run function medabots_server:set_blocks/spring_wall/disabled/east/delay_10
-execute positioned -1799 45 -521 run function medabots_server:set_blocks/spring_wall/disabled/east/delay_10
-execute positioned -1799 45 -526 run function medabots_server:set_blocks/spring_wall/disabled/east/delay_10
-execute positioned -1799 45 -528 run function medabots_server:set_blocks/spring_wall/disabled/east/delay_10
-execute positioned -1792 45 -535 run function medabots_server:set_blocks/spring_wall/disabled/south/delay_10
-execute positioned -1790 45 -535 run function medabots_server:set_blocks/spring_wall/disabled/south/delay_10
-execute positioned -1785 45 -535 run function medabots_server:set_blocks/spring_wall/disabled/south/delay_10
-execute positioned -1783 45 -535 run function medabots_server:set_blocks/spring_wall/disabled/south/delay_10
-execute positioned -1776 45 -528 run function medabots_server:set_blocks/spring_wall/disabled/west/delay_10
-execute positioned -1776 45 -526 run function medabots_server:set_blocks/spring_wall/disabled/west/delay_10
-execute positioned -1776 45 -521 run function medabots_server:set_blocks/spring_wall/disabled/west/delay_10
-execute positioned -1776 45 -519 run function medabots_server:set_blocks/spring_wall/disabled/west/delay_10
-tag @e[x=-1787.5,y=45,z=-510.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1783 45 -512 run function medabots_server:set_blocks/spring_wall/north/delay_10/power_1
+execute positioned -1785 45 -512 run function medabots_server:set_blocks/spring_wall/north/delay_10/power_1
+execute positioned -1790 45 -512 run function medabots_server:set_blocks/spring_wall/north/delay_10/power_1
+execute positioned -1792 45 -512 run function medabots_server:set_blocks/spring_wall/north/delay_10/power_1
+execute positioned -1799 45 -519 run function medabots_server:set_blocks/spring_wall/east/delay_10/power_1
+execute positioned -1799 45 -521 run function medabots_server:set_blocks/spring_wall/east/delay_10/power_1
+execute positioned -1799 45 -526 run function medabots_server:set_blocks/spring_wall/east/delay_10/power_1
+execute positioned -1799 45 -528 run function medabots_server:set_blocks/spring_wall/east/delay_10/power_1
+execute positioned -1792 45 -535 run function medabots_server:set_blocks/spring_wall/south/delay_10/power_1
+execute positioned -1790 45 -535 run function medabots_server:set_blocks/spring_wall/south/delay_10/power_1
+execute positioned -1785 45 -535 run function medabots_server:set_blocks/spring_wall/south/delay_10/power_1
+execute positioned -1783 45 -535 run function medabots_server:set_blocks/spring_wall/south/delay_10/power_1
+execute positioned -1776 45 -528 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_1
+execute positioned -1776 45 -526 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_1
+execute positioned -1776 45 -521 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_1
+execute positioned -1776 45 -519 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_1
+scoreboard players set @e[x=-1787.5,y=45,z=-510.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

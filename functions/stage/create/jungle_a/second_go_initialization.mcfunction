@@ -1,5 +1,6 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
-tag @s add second_go
+scoreboard players set @s StageVersion 2
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/jungle_a/second_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1674 51 -149 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1672 53 -181 minecraft:redstone_block

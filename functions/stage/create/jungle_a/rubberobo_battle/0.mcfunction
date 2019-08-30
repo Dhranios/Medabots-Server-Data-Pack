@@ -2,7 +2,7 @@ execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] run tellraw
 execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] positioned -1651 45 -126 run function medabots_server:spawn_entities/medabot/seven_colors/dondoguu/hellphoenix/seven_colors/chameleon
 execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] positioned -1651 45 -126 run scoreboard players set @e[distance=..1] Stage 3
 execute unless entity @a[x=-1705,y=51,z=-179,dx=63,dy=4,dz=63,tag=0] positioned -1651 45 -126 run tag @e[distance=..1] add enemy_medabot
-tag @e[x=-1661.5,y=45,z=-123.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1661.5,y=45,z=-123.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

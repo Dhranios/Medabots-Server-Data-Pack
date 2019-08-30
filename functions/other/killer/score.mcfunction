@@ -1,7 +1,3 @@
-# Check if full medapart set
-tag @s remove full_medapart_set
-tag @s[scores={Medabot=0},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{part:"legs"}}},{Slot:1b,tag:{medabots_server:{part:"left_arm"}}},{Slot:2b,tag:{medabots_server:{part:"right_arm"}}},{Slot:3b,tag:{medabots_server:{part:"head"}}},{Slot:4b,tag:{medabots_server:{part:"medal"}}}]}] add full_medapart_set
-
 # Give a score depending on the selected set
 scoreboard players set @s Medabot 0
 scoreboard players set @s[scores={Medabot=0},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{id:"medabots_server:keithturtle_rollertank"}}},{Slot:1b,tag:{medabots_server:{id:"medabots_server:keithturtle_gigalaser"}}},{Slot:2b,tag:{medabots_server:{id:"medabots_server:keithturtle_megalaser"}}},{Slot:3b,tag:{medabots_server:{id:"medabots_server:keithturtle_tyranolaser"}}}]}] Medabot 1

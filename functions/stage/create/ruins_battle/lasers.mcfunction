@@ -6,14 +6,14 @@ execute positioned -1994 45 -555 run function medabots_server:set_blocks/floor_s
 execute positioned -1999 45 -555 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -2002 45 -558 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -2002 45 -563 run function medabots_server:set_blocks/floor_switch/blue
-execute positioned -1999 45 -579 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_10
-execute positioned -1994 45 -579 run function medabots_server:set_blocks/laser_trap/disabled/south/delay_10
-execute positioned -1978 45 -563 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
-execute positioned -1978 45 -558 run function medabots_server:set_blocks/laser_trap/disabled/west/delay_10
-execute positioned -1994 45 -542 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
-execute positioned -1999 45 -542 run function medabots_server:set_blocks/laser_trap/disabled/north/delay_10
-execute positioned -2015 45 -558 run function medabots_server:set_blocks/laser_trap/disabled/east/delay_10
-execute positioned -2015 45 -563 run function medabots_server:set_blocks/laser_trap/disabled/east/delay_10
+execute positioned -1999 45 -579 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_1
+execute positioned -1994 45 -579 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_1
+execute positioned -1978 45 -563 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_1
+execute positioned -1978 45 -558 run function medabots_server:set_blocks/laser_trap/west/delay_10/power_1
+execute positioned -1994 45 -542 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_1
+execute positioned -1999 45 -542 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_1
+execute positioned -2015 45 -558 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_1
+execute positioned -2015 45 -563 run function medabots_server:set_blocks/laser_trap/east/delay_10/power_1
 teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=-1] -1996 45 -557 0 0
 teleport @a[x=-2017,y=51,z=-581,dx=42,dy=4,dz=42,tag=0] -1997 45 -564 -180 0
 teleport @s[tag=-1] -1996 45 -557 0 0

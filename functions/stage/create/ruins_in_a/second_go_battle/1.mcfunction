@@ -10,15 +10,15 @@ execute positioned -1727 44 -322 run function medabots_server:spawn_entities/gua
 execute positioned -1721 44 -324 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1712 44 -324 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1706 44 -322 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1722 44 -330 run function medabots_server:set_blocks/hammer_punch/disabled/north/delay_10
-execute positioned -1722 44 -335 run function medabots_server:set_blocks/hammer_punch/disabled/south/delay_10
-execute positioned -1711 44 -330 run function medabots_server:set_blocks/hammer_punch/disabled/north/delay_10
-execute positioned -1711 44 -335 run function medabots_server:set_blocks/hammer_punch/disabled/south/delay_10
+execute positioned -1722 44 -330 run function medabots_server:set_blocks/hammer_punch/north/delay_10/power_1
+execute positioned -1722 44 -335 run function medabots_server:set_blocks/hammer_punch/south/delay_10/power_1
+execute positioned -1711 44 -330 run function medabots_server:set_blocks/hammer_punch/north/delay_10/power_1
+execute positioned -1711 44 -335 run function medabots_server:set_blocks/hammer_punch/south/delay_10/power_1
 execute positioned -1722 44 -331 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1722 44 -334 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1711 44 -331 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1711 44 -334 run function medabots_server:set_blocks/floor_switch/blue
-tag @e[x=-1716.5,y=44,z=-319.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1716.5,y=44,z=-319.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2
