@@ -8,7 +8,7 @@ execute positioned -1722 45 -724 run function medabots_server:set_blocks/floor_s
 execute positioned -1725 45 -722 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1731 45 -718 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1733 45 -728 run function medabots_server:set_blocks/floor_switch/blue
-tag @e[x=-1708.5,y=45,z=-711.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1708.5,y=45,z=-711.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

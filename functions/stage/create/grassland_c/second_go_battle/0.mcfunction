@@ -2,10 +2,10 @@ execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] run tellraw
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] positioned -1557 44 -474 run function medabots_server:spawn_entities/medabot/pure_mermaid/frappe/pure_mermaid/pure_mermaid/mermaid
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] positioned -1557 44 -474 run scoreboard players set @e[distance=..1] Stage 23
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=0] positioned -1557 44 -474 run tag @e[distance=..1] add enemy_medabot
-execute positioned -1554 44 -474 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/south/delay_4
-execute positioned -1556 44 -476 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/south/delay_4
-execute positioned -1558 44 -476 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/south/delay_4
-execute positioned -1560 44 -474 run function medabots_server:spawn_entities/mission/cannon/no_detect/looking/south/delay_4
+execute positioned -1554 44 -474 run function medabots_server:spawn_entities/cannon/still/south/delay_4/mission
+execute positioned -1556 44 -476 run function medabots_server:spawn_entities/cannon/still/south/delay_4/mission
+execute positioned -1558 44 -476 run function medabots_server:spawn_entities/cannon/still/south/delay_4/mission
+execute positioned -1560 44 -474 run function medabots_server:spawn_entities/cannon/still/south/delay_4/mission
 execute positioned -1553 44 -474 run function medabots_server:set_blocks/stone
 execute positioned -1554 44 -475 run function medabots_server:set_blocks/stone
 execute positioned -1555 44 -474 run function medabots_server:set_blocks/stone
@@ -17,7 +17,7 @@ execute positioned -1559 44 -476 run function medabots_server:set_blocks/stone
 execute positioned -1559 44 -474 run function medabots_server:set_blocks/stone
 execute positioned -1560 44 -475 run function medabots_server:set_blocks/stone
 execute positioned -1561 44 -474 run function medabots_server:set_blocks/stone
-tag @e[x=-1556.5,y=44,z=-462.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1556.5,y=44,z=-462.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

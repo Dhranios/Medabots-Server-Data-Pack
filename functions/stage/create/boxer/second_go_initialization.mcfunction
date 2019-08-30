@@ -1,5 +1,6 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
-tag @s add second_go
+scoreboard players set @s StageVersion 2
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/boxer/second_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1890 50 -571 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1889 52 -605 minecraft:redstone_block

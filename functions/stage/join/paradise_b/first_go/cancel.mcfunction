@@ -8,6 +8,7 @@ execute if entity @s[tag=-1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag
 execute if entity @s[tag=-1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=1] remove 1
 execute if entity @s[tag=-1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=2] remove 2
 execute if entity @s[tag=-1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] remove 3
+execute if entity @s[tag=-1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=-1] run tag @s remove -1
 
 execute if entity @s[tag=0] if entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=1] if entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=2] if entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.paradise","with":[{"text":"B"}]},{"text":"2"}]}
@@ -24,6 +25,7 @@ execute if entity @s[tag=0] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=
 execute if entity @s[tag=0] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=2] remove 2
 execute if entity @s[tag=0] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] add 2
 execute if entity @s[tag=0] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] remove 3
+execute if entity @s[tag=0] run scoreboard players set @s Battle 0
 execute if entity @s[tag=0] run tag @s remove 0
 
 execute if entity @s[tag=1] if entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=2] if entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.paradise","with":[{"text":"B"}]},{"text":"2"}]}
@@ -36,6 +38,7 @@ execute if entity @s[tag=1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=
 execute if entity @s[tag=1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=2] remove 2
 execute if entity @s[tag=1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] add 2
 execute if entity @s[tag=1] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] remove 3
+execute if entity @s[tag=1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=1] run tag @s remove 1
 
 execute if entity @s[tag=2] if entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.paradise","with":[{"text":"B"}]},{"text":"2"}]}
@@ -44,8 +47,10 @@ execute if entity @s[tag=2] unless entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=6
 execute if entity @s[tag=2] unless entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] run data merge block -1633 52 -638 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!enemy_medabot,tag=!-1] run function medabots_server:stage/join/paradise_b/first_go/2"}}'}
 execute if entity @s[tag=2] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] add 2
 execute if entity @s[tag=2] run tag @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=3] remove 3
+execute if entity @s[tag=2] run scoreboard players set @s Battle 0
 execute if entity @s[tag=2] run tag @s remove 2
 
 execute if entity @s[tag=3] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.paradise","with":[{"text":"B"}]},{"text":"2"}]}
 execute if entity @s[tag=3] run data merge block -1633 52 -638 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!enemy_medabot,tag=!-1] run function medabots_server:stage/join/paradise_b/first_go/3"}}'}
+execute if entity @s[tag=3] run scoreboard players set @s Battle 0
 execute if entity @s[tag=3] run tag @s remove 3

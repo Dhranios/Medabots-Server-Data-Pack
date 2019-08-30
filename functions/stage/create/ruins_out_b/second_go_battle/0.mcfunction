@@ -4,13 +4,13 @@ execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=0] positioned 
 execute unless entity @a[x=-1858,y=51,z=-536,dx=94,dy=4,dz=95,tag=0] positioned -1853 45 -512 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1846 45 -508 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1846 45 -516 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1855 45 -507 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/east/delay_4
-execute positioned -1855 45 -509 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/east/delay_4
-execute positioned -1855 45 -515 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/east/delay_4
-execute positioned -1855 45 -517 run function medabots_server:spawn_entities/mission/cannon/no_detect/rotating/east/delay_4
-execute positioned -1850 45 -508 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1850 45 -516 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-tag @e[x=-1842.5,y=45,z=-510.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1855 45 -507 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/mission
+execute positioned -1855 45 -509 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/mission
+execute positioned -1855 45 -515 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/mission
+execute positioned -1855 45 -517 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/mission
+execute positioned -1850 45 -508 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1850 45 -516 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+scoreboard players set @e[x=-1842.5,y=45,z=-510.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

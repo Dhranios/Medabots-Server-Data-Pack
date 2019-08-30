@@ -3,7 +3,7 @@ execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned 
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned -1906 43 -553 run scoreboard players set @e[distance=..1] Stage 29
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=6] positioned -1906 43 -553 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1906 44 -547 run function medabots_server:spawn_entities/item/10_medallar_cents
-tag @e[x=-1898.5,y=44,z=-560.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1898.5,y=44,z=-560.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

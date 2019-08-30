@@ -42,8 +42,8 @@ scoreboard objectives add DialogNr dummy
 scoreboard objectives add Donor dummy
 scoreboard objectives add Drop minecraft.custom:minecraft.drop
 scoreboard objectives add EdgeGrabAble dummy
+scoreboard objectives add EditingTinpet dummy
 scoreboard objectives add EffectTimer dummy
-scoreboard objectives add Error dummy
 scoreboard objectives add Fall minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add Falling dummy
 scoreboard objectives add FloorSwitchTime dummy
@@ -154,8 +154,9 @@ scoreboard objectives add Pig minecraft.custom:minecraft.pig_one_cm
 scoreboard objectives add PosX dummy
 scoreboard objectives add PosY dummy
 scoreboard objectives add PosZ dummy
+scoreboard objectives add PowerAmount dummy
+scoreboard objectives add PowerNeeded dummy
 scoreboard objectives add Press dummy
-scoreboard objectives add PreviousError dummy
 scoreboard objectives add Question trigger
 scoreboard objectives add RandomMessage dummy
 scoreboard objectives add Range dummy
@@ -187,12 +188,10 @@ scoreboard objectives add Sneaking minecraft.custom:minecraft.sneak_time
 scoreboard objectives add Sound dummy
 scoreboard objectives add Stage dummy
 scoreboard objectives add StageBuild trigger
+scoreboard objectives add StageVersion dummy
 scoreboard objectives add Stars dummy
 scoreboard objectives add StatusClear dummy
 scoreboard objectives add Steps dummy
-scoreboard objectives add StreetPassCool dummy
-scoreboard objectives add StreetPassHits dummy
-scoreboard objectives add StreetPassTime dummy
 scoreboard objectives add Swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add Sword dummy
 scoreboard objectives add TaskCheck trigger
@@ -205,6 +204,7 @@ scoreboard objectives add TransformLID dummy
 scoreboard objectives add TransformLTime dummy
 scoreboard objectives add TransformRID dummy
 scoreboard objectives add TransformRTime dummy
+scoreboard objectives add UnequipTinpet trigger
 scoreboard objectives add UpToDate dummy
 scoreboard objectives add UsePart minecraft.used:minecraft.fishing_rod
 scoreboard objectives add Verified trigger
@@ -212,7 +212,6 @@ scoreboard objectives add Walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add WalkOnWater minecraft.custom:minecraft.walk_on_water_one_cm
 scoreboard objectives add WalkUnderWater minecraft.custom:minecraft.walk_under_water_one_cm
 scoreboard objectives add Wave dummy
-scoreboard objectives add WearsArmor armor
 
 # Set slots
 scoreboard objectives setdisplay sidebar ServerStats
@@ -234,6 +233,7 @@ scoreboard players set #80 Constants 80
 scoreboard players set #100 Constants 100
 scoreboard players set #1000 Constants 1000
 scoreboard players set #1005 Constants 1005
+scoreboard players set #10000 Constants 10000
 scoreboard players set Medabots: ServerStats 70
 scoreboard players set Medals: ServerStats 12
 scoreboard players set Bosses: ServerStats 13

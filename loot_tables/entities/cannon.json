@@ -7,11 +7,23 @@
                 {
                     "type": "minecraft:item",
                     "name": "minecraft:iron_nugget",
-                    "weight": 9
+                    "weight": 9,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{medabots_server:{stage_item:1b}}"
+                        }
+                    ]
                 },
                 {
                     "type": "minecraft:item",
-                    "name": "minecraft:iron_ingot"
+                    "name": "minecraft:iron_ingot",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{medabots_server:{stage_item:1b}}"
+                        }
+                    ]
                 }
             ]
         }

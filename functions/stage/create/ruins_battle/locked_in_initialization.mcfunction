@@ -1,6 +1,7 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
 tag @s add ally_medabot
-tag @s add locked_in
+scoreboard players set @s StageVersion 7
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ruins_battle/locked_in
 execute if entity @s[tag=vs_cpus] positioned -1997 45 -564 run function medabots_server:stage/create/ruins_battle/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1997 51 -560 -180 0

@@ -65,17 +65,17 @@ execute if entity @e[x=-1798.5,y=45,z=-671.5,distance=..0.7,tag=fan_timer,scores
 execute if entity @e[x=-1798.5,y=45,z=-671.5,distance=..0.7,tag=fan_timer,scores={Time=1}] run tag @e[x=-1785.5,y=45,z=-653.5,distance=..0.7,tag=fan,tag=!changed] add changed
 execute if entity @e[x=-1798.5,y=45,z=-671.5,distance=..0.7,tag=fan_timer,scores={Time=401}] run scoreboard players add @e[x=-1785.5,y=45,z=-653.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if entity @e[x=-1798.5,y=45,z=-671.5,distance=..0.7,tag=fan_timer,scores={Time=401}] run tag @e[x=-1785.5,y=45,z=-653.5,distance=..0.7,tag=fan,tag=changed] remove changed
-execute if block -1806 44 -679 minecraft:lime_wool run tag @e[x=-1801.5,y=45,z=-674.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1774 44 -644 minecraft:lime_wool run tag @e[x=-1810.5,y=45,z=-694.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1811 44 -710 minecraft:light_blue_wool run tag @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,tag=open] remove open
-execute if block -1810 44 -711 minecraft:light_blue_wool run tag @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,tag=open] remove open
-execute if block -1811 44 -710 minecraft:blue_wool if block -1810 44 -711 minecraft:blue_wool run tag @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1784 44 -689 minecraft:lime_wool if block -1774 44 -725 minecraft:lime_wool if block -1816 44 -729 minecraft:lime_wool if block -1851 44 -719 minecraft:lime_wool if block -1855 44 -699 minecraft:lime_wool if block -1851 44 -672 minecraft:lime_wool if block -1851 44 -641 minecraft:lime_wool if block -1839 44 -640 minecraft:lime_wool if block -1829 44 -638 minecraft:lime_wool if block -1811 44 -639 minecraft:lime_wool if block -1770 44 -643 minecraft:lime_wool if block -1774 44 -679 minecraft:lime_wool run tag @e[x=-1773.5,y=45,z=-680.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1774 44 -679 minecraft:lime_wool run tag @e[x=-1809.5,y=45,z=-671.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1801 44 -710 minecraft:light_blue_wool run tag @e[x=-1798.5,y=45,z=-710.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1801 44 -710 minecraft:blue_wool run tag @e[x=-1798.5,y=45,z=-710.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
-execute if block -1801 44 -711 minecraft:light_blue_wool run tag @e[x=-1798.5,y=45,z=-709.5,distance=..0.7,tag=spring_wall,tag=!enabled] add enabled
-execute if block -1801 44 -711 minecraft:blue_wool run tag @e[x=-1798.5,y=45,z=-709.5,distance=..0.7,tag=spring_wall,tag=enabled] remove enabled
+execute if block -1806 44 -679 minecraft:lime_wool run scoreboard players set @e[x=-1801.5,y=45,z=-674.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1774 44 -644 minecraft:lime_wool run scoreboard players set @e[x=-1810.5,y=45,z=-694.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1811 44 -710 minecraft:light_blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1810 44 -711 minecraft:light_blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1811 44 -710 minecraft:blue_wool if block -1810 44 -711 minecraft:blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-683.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1784 44 -689 minecraft:lime_wool if block -1774 44 -725 minecraft:lime_wool if block -1816 44 -729 minecraft:lime_wool if block -1851 44 -719 minecraft:lime_wool if block -1855 44 -699 minecraft:lime_wool if block -1851 44 -672 minecraft:lime_wool if block -1851 44 -641 minecraft:lime_wool if block -1839 44 -640 minecraft:lime_wool if block -1829 44 -638 minecraft:lime_wool if block -1811 44 -639 minecraft:lime_wool if block -1770 44 -643 minecraft:lime_wool if block -1774 44 -679 minecraft:lime_wool run scoreboard players set @e[x=-1773.5,y=45,z=-680.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1774 44 -679 minecraft:lime_wool run scoreboard players set @e[x=-1809.5,y=45,z=-671.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1801 44 -710 minecraft:light_blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-710.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1801 44 -710 minecraft:blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-710.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1801 44 -711 minecraft:light_blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-709.5,distance=..0.7,tag=spring_wall,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1801 44 -711 minecraft:blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-709.5,distance=..0.7,tag=spring_wall,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1810 45 -668 minecraft:iron_door[open=true] if entity @s[x=-1812,y=45,z=-668,dx=3,dy=3,dz=3] run function medabots_server:stage/create/park_b/second_go_battle/0
 execute if entity @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=20,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=20}] run scoreboard players set @s Stage 20

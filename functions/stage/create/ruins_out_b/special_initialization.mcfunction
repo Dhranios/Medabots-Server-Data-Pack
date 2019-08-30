@@ -1,5 +1,6 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
-tag @s add special
+scoreboard players set @s StageVersion 4
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ruins_out_b/special
 execute if entity @s[tag=!vs_cpus] run teleport @s -1812 51 -489 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1812 53 -537 minecraft:redstone_block

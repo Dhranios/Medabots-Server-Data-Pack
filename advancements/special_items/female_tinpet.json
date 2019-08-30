@@ -1,0 +1,32 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_pickaxe",
+            "nbt": "{Unbreakable:1b,Damage:4,CustomModelData:1}"
+        },
+        "title": {
+            "translate": "medabots_server:item.female_tinpet"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.taken"
+        },
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "parent": "medabots_server:special_items/male_tinpet",
+    "criteria": {
+        "obtained": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:female_tinpet\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/special_items/female_tinpet"
+    }
+}

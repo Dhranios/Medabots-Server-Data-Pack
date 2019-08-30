@@ -1,2 +1,3 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.accelerator"}',Tags:["accelerator","south"],Duration:2147483647}
+function medabots_server:set_blocks/accelerator
+tag @e[distance=..0.7,tag=accelerator] add south
 fill ~ ~ ~ ~ ~ ~ minecraft:comparator[powered=false,mode=compare,facing=north] replace minecraft:air

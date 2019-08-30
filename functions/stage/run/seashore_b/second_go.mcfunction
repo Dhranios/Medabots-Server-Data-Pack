@@ -8,12 +8,12 @@ execute if entity @e[scores={Stage=13},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/seashore_b/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1760 44 -387 minecraft:lime_wool run tag @e[x=-1686.5,y=45,z=-358.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1684 44 -353 minecraft:lime_wool if block -1674 44 -374 minecraft:lime_wool if block -1702 44 -365 minecraft:lime_wool run tag @e[x=-1672.5,y=45,z=-387.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1672 44 -438 minecraft:lime_wool run tag @e[x=-1694.5,y=45,z=-410.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1711 44 -417 minecraft:blue_wool run tag @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,tag=open] remove open
-execute if block -1712 44 -418 minecraft:light_blue_wool run tag @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,tag=open] remove open
-execute if block -1712 44 -418 minecraft:blue_wool if block -1711 44 -417 minecraft:light_blue_wool run tag @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1760 44 -387 minecraft:lime_wool run scoreboard players set @e[x=-1686.5,y=45,z=-358.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1684 44 -353 minecraft:lime_wool if block -1674 44 -374 minecraft:lime_wool if block -1702 44 -365 minecraft:lime_wool run scoreboard players set @e[x=-1672.5,y=45,z=-387.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1672 44 -438 minecraft:lime_wool run scoreboard players set @e[x=-1694.5,y=45,z=-410.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1711 44 -417 minecraft:blue_wool run scoreboard players set @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1712 44 -418 minecraft:light_blue_wool run scoreboard players set @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1712 44 -418 minecraft:blue_wool if block -1711 44 -417 minecraft:light_blue_wool run scoreboard players set @e[x=-1693.5,y=45,z=-433.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1743 44 -354 minecraft:orange_wool run scoreboard players remove @e[x=-1742.5,y=45,z=-354.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1743 44 -354 minecraft:orange_wool run tag @e[x=-1742.5,y=45,z=-354.5,distance=..0.7,tag=fan,tag=changed] remove changed
 execute if block -1743 44 -354 minecraft:yellow_wool run scoreboard players add @e[x=-1742.5,y=45,z=-354.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
@@ -48,7 +48,7 @@ execute if block -1747 45 -354 minecraft:iron_door[open=true] if block -1760 44 
 execute if entity @e[x=-1754.5,y=44,z=-360.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=13,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1754.5,y=44,z=-360.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=13},tag=cannon,tag=mission_entity] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run tag @e[x=-1746.5,y=45,z=-353.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1746.5,y=45,z=-353.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=13,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=13,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1

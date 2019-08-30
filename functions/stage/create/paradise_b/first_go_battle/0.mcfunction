@@ -17,7 +17,7 @@ execute positioned -1606 45 -593 run function medabots_server:set_blocks/acceler
 execute positioned -1606 45 -595 run function medabots_server:set_blocks/accelerator/south
 execute positioned -1604 45 -589 run function medabots_server:set_blocks/accelerator/south
 execute positioned -1604 45 -591 run function medabots_server:set_blocks/accelerator/south
-tag @e[x=-1617.5,y=45,z=-588.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1617.5,y=45,z=-588.5,distance=..0.7,tag=door,tag=open] remove open
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

@@ -1,6 +1,7 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
 tag @s add ally_medabot
-tag @s add empty
+scoreboard players set @s StageVersion 1
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/lagdou_ruins_8/empty
 execute if entity @s[tag=vs_cpus] positioned -1264 41 5 run function medabots_server:stage/create/lagdou_ruins_8/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1290 49 29 -180 0

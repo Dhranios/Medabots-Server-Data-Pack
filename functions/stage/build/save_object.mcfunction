@@ -17,3 +17,4 @@ execute if entity @s[tag=press_wall] store result entity @e[tag=build_stage,limi
 execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[0] int 1 run scoreboard players get @s HomeX
 execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[1] int 1 run scoreboard players get @s HomeY
 execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[2] int 1 run scoreboard players get @s HomeZ
+execute if entity @s[scores={NeededPower=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[6] int 1 run scoreboard players get @s NeededPower

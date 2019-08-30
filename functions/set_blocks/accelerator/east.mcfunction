@@ -1,2 +1,3 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.accelerator"}',Tags:["accelerator","east"],Duration:2147483647}
+function medabots_server:set_blocks/accelerator
+tag @e[distance=..0.7,tag=accelerator] add east
 fill ~ ~ ~ ~ ~ ~ minecraft:comparator[powered=false,mode=compare,facing=west] replace minecraft:air

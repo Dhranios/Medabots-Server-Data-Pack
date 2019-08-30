@@ -3,15 +3,15 @@ execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=0] positioned 
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=0] positioned -1867 44 -555 run scoreboard players set @e[distance=..1] Stage 29
 execute unless entity @a[x=-1921,y=50,z=-603,dx=64,dy=4,dz=64,tag=0] positioned -1867 44 -555 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1865 44 -555 run function medabots_server:spawn_entities/item/10_medallar_cents
-execute positioned -1878 44 -557 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1878 44 -552 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1875 44 -549 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1870 44 -549 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1867 44 -552 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1867 44 -557 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1870 44 -560 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-execute positioned -1875 44 -560 run function medabots_server:set_blocks/action_floor/enabled/balloon_bomb
-tag @e[x=-1877.5,y=44,z=-560.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1878 44 -557 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1878 44 -552 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1875 44 -549 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1870 44 -549 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1867 44 -552 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1867 44 -557 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1870 44 -560 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1875 44 -560 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+scoreboard players set @e[x=-1877.5,y=44,z=-560.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

@@ -1,5 +1,6 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
-tag @s add first_go
+scoreboard players set @s StageVersion 1
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/laboratory_b/first_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1727 50 -575 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1726 52 -606 minecraft:redstone_block

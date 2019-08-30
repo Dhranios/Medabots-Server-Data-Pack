@@ -1,5 +1,5 @@
 teleport @s -1997 45 -564 0 0
-tag @s add accelerators
+scoreboard players set @s StageVersion 4
 tag @s add story_battle
 execute positioned -1996 45 -557 run function medabots_server:spawn_entities/character_medabot/jaxy
 execute positioned -1996 45 -557 run scoreboard players set @e[distance=..1] Stage 49

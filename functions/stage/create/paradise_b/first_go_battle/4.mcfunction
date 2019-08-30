@@ -4,14 +4,14 @@ execute unless entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=4] positioned 
 execute unless entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=4] positioned -1659 45 -618 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1661 45 -620 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1657 45 -619 run function medabots_server:spawn_entities/balloon_bomb
-execute positioned -1661 45 -627 run function medabots_server:set_blocks/hammer_punch/enabled/south/delay_10
+execute positioned -1661 45 -627 run function medabots_server:set_blocks/hammer_punch/south/delay_10/power_0
 execute positioned -1662 45 -623 run function medabots_server:set_blocks/stone
 execute positioned -1658 45 -622 run function medabots_server:set_blocks/stone
 execute positioned -1661 45 -617 run function medabots_server:set_blocks/stone
 execute positioned -1657 45 -617 run function medabots_server:set_blocks/stone
 execute positioned -1657 45 -614 run function medabots_server:set_blocks/stone
-execute positioned -1658 45 -613 run function medabots_server:set_blocks/laser_trap/enabled/north/delay_10
-tag @e[x=-1658.545,z=-627.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1658 45 -613 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
+scoreboard players set @e[x=-1658.545,z=-627.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

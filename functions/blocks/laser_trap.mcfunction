@@ -1,6 +1,3 @@
-# New lasers need scores
-execute unless entity @s[scores={Time=0..}] run scoreboard players add @s Time 20
-
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 execute if entity @s[tag=dead] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
@@ -8,7 +5,7 @@ kill @s[tag=dead]
 
 # Coundown shooting
 scoreboard players remove @s[scores={Time=1..19}] Time 1
-scoreboard players remove @s[scores={Time=20},tag=enabled] Time 1
+execute if score @s[scores={Time=20}] PowerAmount = @s PowerNeeded run scoreboard players remove @s Time 1
 scoreboard players remove @s[scores={Time=21..}] Time 1
 
 # Fire in the hole!

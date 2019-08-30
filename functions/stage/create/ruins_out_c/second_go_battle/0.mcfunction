@@ -3,7 +3,7 @@ execute unless entity @a[x=-1665,y=50,z=-704,dx=62,dy=4,dz=63,tag=0] positioned 
 execute unless entity @a[x=-1665,y=50,z=-704,dx=62,dy=4,dz=63,tag=0] positioned -1617 44 -688 run scoreboard players set @e[distance=..1] Stage 27
 execute unless entity @a[x=-1665,y=50,z=-704,dx=62,dy=4,dz=63,tag=0] positioned -1617 44 -688 run tag @e[distance=..1] add enemy_medabot
 execute positioned -1648 44 -698 run function medabots_server:set_blocks/stone
-tag @e[x=-1616.5,y=44,z=-683.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1616.5,y=44,z=-683.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

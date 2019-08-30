@@ -1,5 +1,6 @@
+function medabots_server:gamemodes/default/set_stats
 tag @s add -1
-tag @s add special
+scoreboard players set @s StageVersion 4
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/grassland_a/special
 execute if entity @s[tag=!vs_cpus] run teleport @s -1539 51 -151 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1538 53 -182 minecraft:redstone_block

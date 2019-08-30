@@ -246,6 +246,12 @@
         "minecraft:nether_portal",
         "minecraft:acacia_door",
         "#medabots_server:edge_grab/stairs",
-        "minecraft:piston_head"
+        "minecraft:piston_head",
+        "minecraft:bell",
+        "minecraft:grindstone",
+        "minecraft:lantern",
+        "minecraft:scaffolding",
+        "minecraft:stonecutter",
+        "minecraft:sweet_berry_bush"
     ]
 }

@@ -2,14 +2,14 @@ execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] run tellraw
 execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] positioned -1583 45 -407 run function medabots_server:spawn_entities/medabot/attack_tyrano/maxsnake/dragonbeetle/attack_tyrano/kuwagata
 execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] positioned -1583 45 -407 run scoreboard players set @e[distance=..1] Stage 12
 execute unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=0] positioned -1583 45 -407 run tag @e[distance=..1] add enemy_medabot
-execute positioned -1593 45 -408 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/east/delay_4
-execute positioned -1593 45 -406 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/east/delay_4
-execute positioned -1586 45 -402 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/north/delay_4
-execute positioned -1586 45 -413 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/south/delay_4
-execute positioned -1583 45 -414 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/south/delay_4
-execute positioned -1577 45 -412 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/west/delay_4
-execute positioned -1576 45 -404 run function medabots_server:spawn_entities/mission/cannon/detect/rotating/west/delay_4
-tag @e[x=-1589.5,y=45,z=-411.5,distance=..0.7,tag=door,tag=open] remove open
+execute positioned -1593 45 -408 run function medabots_server:spawn_entities/cannon/search/east/delay_4/mission
+execute positioned -1593 45 -406 run function medabots_server:spawn_entities/cannon/search/east/delay_4/mission
+execute positioned -1586 45 -402 run function medabots_server:spawn_entities/cannon/search/north/delay_4/mission
+execute positioned -1586 45 -413 run function medabots_server:spawn_entities/cannon/search/south/delay_4/mission
+execute positioned -1583 45 -414 run function medabots_server:spawn_entities/cannon/search/south/delay_4/mission
+execute positioned -1577 45 -412 run function medabots_server:spawn_entities/cannon/search/west/delay_4/mission
+execute positioned -1576 45 -404 run function medabots_server:spawn_entities/cannon/search/west/delay_4/mission
+scoreboard players set @e[x=-1589.5,y=45,z=-411.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

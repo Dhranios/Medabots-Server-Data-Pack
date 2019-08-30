@@ -14,7 +14,7 @@ execute positioned -1740 45 -420 run function medabots_server:set_blocks/mirror/
 execute positioned -1750 45 -425 run function medabots_server:set_blocks/mirror/45
 execute positioned -1752 45 -423 run function medabots_server:set_blocks/mirror/45
 execute positioned -1754 45 -421 run function medabots_server:set_blocks/mirror/45
-tag @e[x=-1746.5,y=45,z=-412.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1746.5,y=45,z=-412.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

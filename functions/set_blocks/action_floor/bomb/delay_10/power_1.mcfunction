@@ -1,0 +1,1 @@
+function medabots_server:set_blocks/action_floor/bomb/delay_10

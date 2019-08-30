@@ -6,22 +6,18 @@ execute store result entity @e[tag=me,limit=1] Pos[2] double 1 run scoreboard pl
 execute as @e[tag=me,limit=1] at @s run teleport @s ~0.5 ~ ~0.5
 
 # Power position if powered
-execute if entity @s[scores={FloorSwitchTime=1..},tag=!negative] at @e[tag=me,limit=1] run tag @e[tag=!fan,tag=!door,distance=..0.7,tag=!enabled] add enabled
-execute if entity @s[scores={FloorSwitchTime=1..},tag=!negative] at @e[tag=me,limit=1] run tag @e[tag=door,distance=..0.7,tag=!open] add open
+execute if entity @s[scores={FloorSwitchTime=1..},tag=!negative] at @e[tag=me,limit=1] run scoreboard players operation @e[distance=..0.7] PowerAmount += @s NeededPower
 execute if entity @s[scores={FloorSwitchTime=1..},tag=!negative] at @e[tag=me,limit=1] run scoreboard players add @e[tag=fan,distance=..0.7,tag=!changed] Moving 1
 execute if entity @s[scores={FloorSwitchTime=1..},tag=!negative] at @e[tag=me,limit=1] run tag @e[tag=fan,distance=..0.7,tag=!changed] add changed
-execute if entity @s[scores={FloorSwitchTime=..0},tag=negative] at @e[tag=me,limit=1] run tag @e[tag=!fan,tag=!door,distance=..0.7,tag=!enabled] add enabled
-execute if entity @s[scores={FloorSwitchTime=..0},tag=negative] at @e[tag=me,limit=1] run tag @e[tag=door,distance=..0.7,tag=!open] add open
+execute if entity @s[scores={FloorSwitchTime=..0},tag=negative] at @e[tag=me,limit=1] run scoreboard players operation @e[distance=..0.7] PowerAmount += @s NeededPower
 execute if entity @s[scores={FloorSwitchTime=..0},tag=negative] at @e[tag=me,limit=1] run scoreboard players add @e[tag=fan,distance=..0.7,tag=!changed] Moving 1
 execute if entity @s[scores={FloorSwitchTime=..0},tag=negative] at @e[tag=me,limit=1] run tag @e[tag=fan,distance=..0.7,tag=!changed] add changed
 
 # Unpower position if unpowered
-execute if entity @s[scores={FloorSwitchTime=..0},tag=!negative] at @e[tag=me,limit=1] run tag @e[tag=!fan,tag=!door,distance=..0.7,tag=enabled] remove enabled
-execute if entity @s[scores={FloorSwitchTime=..0},tag=!negative] at @e[tag=me,limit=1] run tag @e[tag=door,distance=..0.7,tag=open] remove open
+execute if entity @s[scores={FloorSwitchTime=..0},tag=!negative] at @e[tag=me,limit=1] run scoreboard players operation @e[distance=..0.7] PowerAmount -= @s NeededPower
 execute if entity @s[scores={FloorSwitchTime=..0},tag=!negative] at @e[tag=me,limit=1] run scoreboard players remove @e[tag=fan,distance=..0.7,tag=changed] Moving 1
 execute if entity @s[scores={FloorSwitchTime=..0},tag=!negative] at @e[tag=me,limit=1] run tag @e[tag=fan,distance=..0.7,tag=changed] remove changed
-execute if entity @s[scores={FloorSwitchTime=1..},tag=negative] at @e[tag=me,limit=1] run tag @e[tag=!fan,tag=!door,distance=..0.7,tag=enabled] remove enabled
-execute if entity @s[scores={FloorSwitchTime=1..},tag=negative] at @e[tag=me,limit=1] run tag @e[tag=door,distance=..0.7,tag=open] remove open
+execute if entity @s[scores={FloorSwitchTime=1..},tag=negative] at @e[tag=me,limit=1] run scoreboard players operation @e[distance=..0.7] PowerAmount -= @s NeededPower
 execute if entity @s[scores={FloorSwitchTime=1..},tag=negative] at @e[tag=me,limit=1] run scoreboard players remove @e[tag=fan,distance=..0.7,tag=changed] Moving 1
 execute if entity @s[scores={FloorSwitchTime=1..},tag=negative] at @e[tag=me,limit=1] run tag @e[tag=fan,distance=..0.7,tag=changed] remove changed
 

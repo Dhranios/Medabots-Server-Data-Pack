@@ -8,9 +8,9 @@ execute if entity @e[scores={Stage=21},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/paradise_a/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1689 44 -641 minecraft:lime_wool run tag @e[x=-1697.5,y=45,z=-712.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1728 44 -642 minecraft:lime_wool run tag @e[x=-1729.5,y=45,z=-711.5,distance=..0.7,tag=door,tag=!open] add open
-execute if block -1697 44 -728 minecraft:lime_wool if block -1734 44 -715 minecraft:lime_wool run tag @e[x=-1713.5,y=45,z=-705.5,distance=..0.7,tag=door,tag=!open] add open
+execute if block -1689 44 -641 minecraft:lime_wool run scoreboard players set @e[x=-1697.5,y=45,z=-712.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
+execute if block -1728 44 -642 minecraft:lime_wool run scoreboard players set @e[x=-1729.5,y=45,z=-711.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
+execute if block -1697 44 -728 minecraft:lime_wool if block -1734 44 -715 minecraft:lime_wool run scoreboard players set @e[x=-1713.5,y=45,z=-705.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if block -1722 44 -670 minecraft:yellow_wool run scoreboard players add @e[x=-1720.5,y=45,z=-669.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1722 44 -670 minecraft:yellow_wool run tag @e[x=-1720.5,y=45,z=-669.5,distance=..0.7,tag=fan,tag=!changed] add changed
 execute if block -1722 44 -670 minecraft:yellow_wool run tag @e[x=-1720.5,y=45,z=-667.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
@@ -47,8 +47,8 @@ execute if block -1683 45 -694 minecraft:iron_door[open=true] if block -1689 45 
 execute if entity @e[x=-1672.5,y=45,z=-648.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1672.5,y=45,z=-648.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=21},tag=guard,tag=mission_entity] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run tag @e[x=-1682.5,y=45,z=-693.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[tag=mission_success] run tag @e[x=-1688.5,y=45,z=-644.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1682.5,y=45,z=-693.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1688.5,y=45,z=-644.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=21,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=21,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
@@ -59,7 +59,7 @@ execute if block -1692 45 -708 minecraft:iron_door[open=true] unless block -1689
 execute if entity @e[x=-1687.5,y=45,z=-713.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1687.5,y=45,z=-713.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1684 44 -708 minecraft:lime_wool if block -1677 44 -708 minecraft:lime_wool if block -1672 44 -709 minecraft:lime_wool if block -1671 44 -715 minecraft:lime_wool if block -1672 44 -720 minecraft:lime_wool if block -1689 44 -715 minecraft:lime_wool if block -1689 44 -720 minecraft:lime_wool if block -1690 44 -727 minecraft:lime_wool if block -1683 44 -721 minecraft:lime_wool if block -1684 44 -726 minecraft:lime_wool if block -1684 44 -715 minecraft:lime_wool if block -1677 44 -715 minecraft:lime_wool if block -1678 44 -721 minecraft:lime_wool if block -1677 44 -726 minecraft:lime_wool if block -1671 44 -727 minecraft:lime_wool run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run tag @e[x=-1691.5,y=45,z=-707.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1691.5,y=45,z=-707.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=21,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=21,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
@@ -70,7 +70,7 @@ execute if block -1709 45 -712 minecraft:iron_door[open=true] unless block -1722
 execute if entity @e[x=-1717.5,y=45,z=-718.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1717.5,y=45,z=-718.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1713 44 -723 minecraft:lime_wool if block -1720 44 -728 minecraft:lime_wool if block -1722 44 -724 minecraft:lime_wool if block -1725 44 -722 minecraft:lime_wool if block -1731 44 -718 minecraft:lime_wool if block -1733 44 -728 minecraft:light_blue_wool run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run tag @e[x=-1708.5,y=45,z=-711.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1708.5,y=45,z=-711.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=21,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=21,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
@@ -81,7 +81,7 @@ execute if block -1740 45 -708 minecraft:iron_door[open=true] if block -1749 44 
 execute if entity @e[x=-1742.5,y=45,z=-712.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1742.5,y=45,z=-712.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=21},tag=cannon,tag=mission_entity] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run tag @e[x=-1739.5,y=45,z=-707.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1739.5,y=45,z=-707.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=21,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=21,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
@@ -91,7 +91,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1714 45 -705 minecraft:iron_door[open=true] if block -1710 45 -701 minecraft:air if entity @s[x=-1716,y=45,z=-705,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_a/second_go_battle/4
 execute if entity @e[x=-1713.5,y=45,z=-698.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1713.5,y=45,z=-704.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1713.5,y=45,z=-704.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:paradise_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
@@ -99,8 +99,8 @@ execute if block -1740 45 -682 minecraft:iron_door[open=true] if block -1743 45 
 execute if entity @e[x=-1745.5,y=45,z=-669.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1745.5,y=45,z=-669.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=21},tag=cannon,tag=mission_entity] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run tag @e[x=-1739.5,y=45,z=-681.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[tag=mission_success] run tag @e[x=-1742.5,y=45,z=-662.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1739.5,y=45,z=-681.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1742.5,y=45,z=-662.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=21,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=21,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
@@ -111,8 +111,8 @@ execute if block -1742 45 -662 minecraft:iron_door[open=true] if block -1725 45 
 execute if entity @e[x=-1744.5,y=45,z=-652.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1744.5,y=45,z=-652.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=21},tag=guard,tag=mission_entity] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run tag @e[x=-1741.5,y=45,z=-661.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[tag=mission_success] run tag @e[x=-1724.5,y=45,z=-648.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1741.5,y=45,z=-661.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1724.5,y=45,z=-648.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=21,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=21,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
@@ -122,8 +122,8 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1724 45 -650 minecraft:iron_door[open=true] if block -1715 45 -663 minecraft:iron_door[open=false] if entity @s[x=-1724,y=45,z=-651,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_a/second_go_battle/7
 execute if entity @e[x=-1713.5,y=45,z=-648.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1723.5,y=45,z=-649.5,distance=..0.7,tag=door,tag=!open] add open
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1714.5,y=45,z=-662.5,distance=..0.7,tag=door,tag=!open] add open
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1723.5,y=45,z=-649.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1714.5,y=45,z=-662.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:paradise_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
