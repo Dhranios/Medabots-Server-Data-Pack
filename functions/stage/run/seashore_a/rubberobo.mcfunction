@@ -10,5 +10,5 @@ execute if block -1563 44 -235 minecraft:lime_wool run tag @e[x=-1514.5,y=45,z=-
 execute as @e[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] unless entity @s[scores={Stage=4}] run scoreboard players set @s Stage 4
 execute if entity @s[tag=clear_stage,gamemode=adventure] run function medabots_server:stage/clean_up/seashore_a/rubberobo
 advancement grant @s[tag=clear_stage,gamemode=adventure] only medabots_server:stages/wave_1/seashore_a_rubberobo
-tag @s[tag=clear_stage,gamemode=adventure,advancements={medabots_server:wave_1/story_progression={rubberobo_enters_seashore_a=true,rubberobo_leaves_seashore_a=false}}] add dialog_infinity_rubberobo_leaves_seashore_a
+tag @s[tag=clear_stage,gamemode=adventure,advancements={medabots_server:story_progression/infinity={rubberobo_enters_seashore_a=true,rubberobo_leaves_seashore_a=false}}] add dialog_infinity_rubberobo_leaves_seashore_a
 execute if entity @s[tag=clear_stage,gamemode=adventure] positioned -1539 51 -216 run function medabots_server:stage/clear

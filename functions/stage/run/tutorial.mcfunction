@@ -31,6 +31,7 @@ execute unless score @s LegsArmor = @s MaxLegsArmor run scoreboard players add @
 execute if entity @s[scores={Dialog=1104}] run scoreboard players set @e[scores={Stage=0},tag=saikachis] Battle 2
 execute if entity @s[scores={Dialog=1104}] run scoreboard players set @e[scores={Stage=0},tag=saikachis] Time 950
 execute if entity @s[scores={Dialog=1104}] run teleport @e[tag=saikachis,scores={Stage=0}] -1884 45 -630
+execute if entity @s[scores={Dialog=1104}] run replaceitem entity @e[tag=saikachis,scores={Stage=0}] weapon.mainhand minecraft:air
 teleport @s[scores={Dialog=1104}] -1884 45 -618
 scoreboard players set @s[scores={Dialog=1104}] HeadUses 0
 scoreboard players set @s[scores={Dialog=1104}] LeftArmArmor -1

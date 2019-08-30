@@ -3,7 +3,7 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
-advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression jaxy_follows_doctor_haru
+advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jaxy_follows_doctor_haru
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -456 55 -70 {Duration:1000000,Tags:["cutscene","jaxy"],Rotation:[85.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-456,y=55,z=-70,distance=..1,tag=jaxy] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[x=-456,y=55,z=-70,distance=..1,tag=jaxy] MedabotNr 1

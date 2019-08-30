@@ -5,18 +5,10 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:16}"
         },
         "title": {
-            "translate": "medabots_server:model.bezelga",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.bezelga"
-                }
-            ]
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.bezelga"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.bezelga"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.bezelga.description"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/attack_tyrano",

@@ -5,18 +5,10 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:49}"
         },
         "title": {
-            "translate": "medabots_server:model.rob",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.rob"
-                }
-            ]
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.rob"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.rob"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.rob.description"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/nino",

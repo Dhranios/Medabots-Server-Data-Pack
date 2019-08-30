@@ -5,18 +5,10 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:69}"
         },
         "title": {
-            "translate": "medabots_server:model.nin_ninja",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.nin_ninja"
-                }
-            ]
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.nin_ninja"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.nin_ninja"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.nin_ninja.description"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/metabee",

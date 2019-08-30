@@ -18,5 +18,5 @@ execute if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecr
 execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/snowfield_a/rubberobo
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/snowfield_a_rubberobo
-tag @s[tag=clear_stage,advancements={medabots_server:wave_1/story_progression={rubberobo_enters_snowfield_a=true,rubberobo_leaves_snowfield_a=false}}] add dialog_infinity_rubberobo_leaves_snowfield_a
+tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={rubberobo_enters_snowfield_a=true,rubberobo_leaves_snowfield_a=false}}] add dialog_infinity_rubberobo_leaves_snowfield_a
 execute if entity @s[tag=clear_stage] positioned -1620 51 -216 run function medabots_server:stage/clear

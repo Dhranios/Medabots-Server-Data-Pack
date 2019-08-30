@@ -51,5 +51,5 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1634,y=42,z=-315,dx=127,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=7}] run scoreboard players set @s Stage 7
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/ruins_out_a/first_go
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/ruins_out_a_first_go
-tag @s[tag=clear_stage,advancements={medabots_server:wave_1/story_progression={meet_doctor_haru=true,tunes_order=false}}] add dialog_infinity_tunes_order
+tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={meet_doctor_haru=true,tunes_order=false}}] add dialog_infinity_tunes_order
 execute if entity @s[tag=clear_stage] positioned -1570 51 -284 run function medabots_server:stage/clear

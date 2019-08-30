@@ -3,7 +3,7 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
-advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression jammy_discovered
+advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jammy_discovered
 stopsound @s[scores={Dialog=1}] music
 scoreboard players set @s[scores={Dialog=1}] MusicType -1
 scoreboard players set @s[scores={Dialog=1}] Music 0

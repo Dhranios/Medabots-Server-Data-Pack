@@ -5,18 +5,10 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:36}"
         },
         "title": {
-            "translate": "medabots_server:model.fancyroll",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.fancyroll"
-                }
-            ]
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.fancyroll"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.fancyroll"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.fancyroll.description"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/dragonbeetle",

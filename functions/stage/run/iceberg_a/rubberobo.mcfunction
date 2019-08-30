@@ -88,5 +88,5 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=6}] run scoreboard players set @s Stage 6
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/iceberg_a/rubberobo
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/iceberg_a_rubberobo
-tag @s[tag=clear_stage,advancements={medabots_server:wave_1/story_progression={rubberobo_enters_iceberg_a=true,rubberobo_leaves_iceberg_a=false}}] add dialog_infinity_rubberobo_leaves_iceberg_a
+tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={rubberobo_enters_iceberg_a=true,rubberobo_leaves_iceberg_a=false}}] add dialog_infinity_rubberobo_leaves_iceberg_a
 execute if entity @s[tag=clear_stage] positioned -1704 50 -221 run function medabots_server:stage/clear

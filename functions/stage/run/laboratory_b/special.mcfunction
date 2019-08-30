@@ -77,6 +77,6 @@ execute as @e[x=-1760,y=41,z=-633,dx=92,dy=8,dz=92,type=!minecraft:player] unles
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/laboratory_b/special
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/laboratory_b_special
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:laboratory_b/robattle players
-tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:wave_1/story_progression={harus_experiment=true,flame_tisala_is_yours=false}}] add dialog_infinity_flame_tisala_is_yours
+tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={harus_experiment=true,flame_tisala_is_yours=false}}] add dialog_infinity_flame_tisala_is_yours
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1727 50 -575 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

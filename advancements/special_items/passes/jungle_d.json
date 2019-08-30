@@ -13,7 +13,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "medabots_server:special_items/passes/extra_area",
+    "parent": "medabots_server:special_items/passes/bonus_area",
     "criteria": {
         "give": {
             "trigger": "minecraft:impossible"

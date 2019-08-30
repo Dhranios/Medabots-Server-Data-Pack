@@ -3,7 +3,7 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
-advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression see_spyke
+advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity see_spyke
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -361 55 -83 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["spyke","cutscene"],Rotation:[-90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2764847}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:6176294}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:3291004}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
 execute at @s as @e[x=-361,y=55,z=-83,tag=spyke,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1..}] at @e[tag=spyke,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=spyke,tag=this_dialog,limit=1] ~ ~ ~ ~ ~

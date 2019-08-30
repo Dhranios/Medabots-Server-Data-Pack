@@ -1,0 +1,43 @@
+{
+    "criteria": {
+        "get_amelia": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_darknut": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_galleom": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_magolor": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_master_core": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_metal_general": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_mewtwo": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_nino": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_rob": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_sphere_doomers": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_suzumega_hummer": {
+            "trigger": "minecraft:impossible"
+        },
+        "get_zant": {
+            "trigger": "minecraft:impossible"
+        },
+        "magolor_appears": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

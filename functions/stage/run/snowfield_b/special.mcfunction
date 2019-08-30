@@ -82,6 +82,6 @@ execute as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,type=!minecraft:player] unles
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/snowfield_b/special
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/snowfield_b_special
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:snowfield_b/robattle players
-tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:wave_1/story_progression={red_pepper=true,red_pepper_defeated=false}}] add dialog_infinity_red_pepper_defeated
+tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={red_pepper=true,red_pepper_defeated=false}}] add dialog_infinity_red_pepper_defeated
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1715 51 -492 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

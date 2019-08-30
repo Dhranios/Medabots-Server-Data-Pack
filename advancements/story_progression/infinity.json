@@ -255,7 +255,7 @@
         "rubberobo_leaves_iceberg_a": {
             "trigger": "minecraft:impossible"
         },
-        "rubberobo_enters_runs_out_b": {
+        "rubberobo_enters_ruins_out_b": {
             "trigger": "minecraft:impossible"
         },
         "rubberobo_leaves_ruins_out_b": {

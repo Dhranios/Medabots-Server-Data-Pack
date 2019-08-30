@@ -43,6 +43,6 @@ execute as @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,type=!minecraft:player] unles
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/jungle_b/rubberobo
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/jungle_b_rubberobo
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:jungle_b/robattle players
-tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:wave_1/story_progression={rubberobo_enters_jungle_b=true,rubberobo_leaves_jungle_b=false}}] add dialog_infinity_rubberobo_leaves_jungle_b
+tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={rubberobo_enters_jungle_b=true,rubberobo_leaves_jungle_b=false}}] add dialog_infinity_rubberobo_leaves_jungle_b
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1620 51 -431 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

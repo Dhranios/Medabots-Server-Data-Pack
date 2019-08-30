@@ -38,10 +38,10 @@ execute positioned -1698 45 -724 run function medabots_server:set_blocks/pot
 execute positioned -1698 45 -725 run function medabots_server:set_blocks/pot
 execute positioned -1698 45 -726 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1698 45 -727 run function medabots_server:set_blocks/pot
-execute positioned -1698 45 -728 run function medabots_server:set_blocks/pot
 # Stage build item pot
+execute positioned -1698 45 -728 run function medabots_server:set_blocks/pot
+replaceitem block -1698 45 -728 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"action_floor",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.action_floor"}]}'}}
 execute positioned -1697 45 -727 run function medabots_server:set_blocks/pot
-replaceitem block -1697 45 -727 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"action_floor",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.action_floor"}]}'}}
 execute positioned -1711 45 -692 run function medabots_server:set_blocks/pot/guard/normal
 execute positioned -1713 45 -692 run function medabots_server:set_blocks/pot/6_medallar_cents
 execute positioned -1716 45 -692 run function medabots_server:set_blocks/pot/4_medallar_cents

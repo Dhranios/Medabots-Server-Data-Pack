@@ -54,6 +54,6 @@ execute as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,type=!minecraft:player] unles
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/grassland_b/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/grassland_b_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:grassland_b/robattle players
-tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:wave_1/story_progression={vs_koji_battle=true,vs_sloan_begin=false}}] add dialog_infinity_vs_sloan_begin
+tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={vs_koji_battle=true,vs_sloan_begin=false}}] add dialog_infinity_vs_sloan_begin
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1540 51 -367 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

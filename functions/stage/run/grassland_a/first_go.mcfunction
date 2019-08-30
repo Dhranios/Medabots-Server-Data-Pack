@@ -17,5 +17,5 @@ execute if block -1543 44 -174 minecraft:lime_wool run tag @e[x=-1548.5,y=45,z=-
 execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1}] run scoreboard players set @s Stage 1
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/grassland_a/first_go
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/grassland_a_first_go
-tag @s[tag=clear_stage,advancements={medabots_server:wave_1/story_progression={meet_karin=true,meet_max=false}}] add dialog_infinity_meet_max
+tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={meet_karin=true,meet_max=false}}] add dialog_infinity_meet_max
 execute if entity @s[tag=clear_stage] positioned -1539 51 -151 run function medabots_server:stage/clear

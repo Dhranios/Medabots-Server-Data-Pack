@@ -119,7 +119,7 @@ execute positioned -1598 44 -498 run function medabots_server:set_blocks/mirror/
 execute positioned -1609 44 -484 run function medabots_server:set_blocks/mirror/45
 execute positioned -1607 44 -484 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1600 44 -484 run function medabots_server:set_blocks/mirror/45
-execute positioned -1698 44 -484 run function medabots_server:set_blocks/mirror/-45
+execute positioned -1598 44 -484 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1601 44 -534 run function medabots_server:set_blocks/pot
 execute positioned -1601 44 -535 run function medabots_server:set_blocks/pot
 execute positioned -1600 44 -534 run function medabots_server:set_blocks/pot

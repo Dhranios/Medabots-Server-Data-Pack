@@ -3,7 +3,7 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
-advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression rubberobo_leaves_snowfield_b
+advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity rubberobo_leaves_snowfield_b
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1717 51 -492 {Duration:1000000,Tags:["cutscene","metabee"],Rotation:[-90.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-1717,y=51,z=-492,distance=..1,tag=metabee] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[x=-1717,y=51,z=-492,distance=..1,tag=metabee] MedabotNr 1

@@ -4,10 +4,10 @@
             "item": "minecraft:paper"
         },
         "title": {
-            "translate": "medabots_server:advancements.special_items.passes.extra_area"
+            "translate": "medabots_server:advancements.special_items.passes.bonus_area"
         },
         "description": {
-            "translate": "medabots_server:advancements.special_items.passes.extra_area.description"
+            "translate": "medabots_server:advancements.special_items.passes.bonus_area.description"
         },
         "show_toast": false,
         "announce_to_chat": false,
@@ -20,6 +20,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/special_items/passes/extra_area"
+        "function": "medabots_server:advancements/special_items/passes/bonus_area"
     }
 }

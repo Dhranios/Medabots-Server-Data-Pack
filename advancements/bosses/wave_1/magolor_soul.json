@@ -5,15 +5,7 @@
             "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:5}"
         },
         "title": {
-            "translate": "medabots_server:advancements.bosses.magolor_soul",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.magolor_soul"
-                }
-            ]
+            "translate": "medabots_server:advancements.bosses.magolor_soul"
         },
         "description": {
             "translate": "medabots_server:advancements.bosses.magolor_soul.description"

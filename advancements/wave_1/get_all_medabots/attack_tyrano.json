@@ -5,18 +5,10 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:9}"
         },
         "title": {
-            "translate": "medabots_server:model.attack_tyrano",
-            "extra": [
-                {
-                    "translate": "medabots_server:message.stage.requires.version"
-                },
-                {
-                    "translate": "medabots_server:entity.attack_tyrano"
-                }
-            ]
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.attack_tyrano"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.attack_tyrano"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.attack_tyrano.description"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/ashton",

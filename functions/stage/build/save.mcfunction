@@ -1,4 +1,4 @@
-summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:globe_banner_pattern",Count:1b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage:0,stage_data:[]}}},Tags:["build_stage"],NoGravity:1b,PickupDelay:20s}
+summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:1,AttributeModifiers:[],medabots_server:{id:"medabots_server:custom_stage",stage:0,stage_data:[]}}},Tags:["build_stage"],NoGravity:1b,PickupDelay:20s}
 execute store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage int 1 run scoreboard players get @s Stage
 
 execute store result score #temp Stage run scoreboard players get @s Stage

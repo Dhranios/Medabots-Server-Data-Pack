@@ -3,7 +3,7 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
-advancement grant @s[scores={Dialog=1}] only medabots_server:wave_1/story_progression neutranurse_helps
+advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity neutranurse_helps
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {Duration:1000000,Tags:["cutscene","metabee"]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[distance=..1,tag=metabee] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 execute if entity @s[scores={Dialog=1}] run scoreboard players add @e[distance=..1,tag=metabee] MedabotNr 1

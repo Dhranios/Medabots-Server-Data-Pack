@@ -170,6 +170,7 @@ execute positioned -1684 45 -394 run function medabots_server:set_blocks/pot
 execute positioned -1671 45 -396 run function medabots_server:set_blocks/pot
 execute positioned -1673 45 -396 run function medabots_server:set_blocks/pot
 execute positioned -1672 45 -395 run function medabots_server:set_blocks/pot
+execute positioned -1698 45 -396 run function medabots_server:set_blocks/pot
 execute positioned -1672 45 -397 run function medabots_server:set_blocks/pot
 execute positioned -1679 45 -411 run function medabots_server:set_blocks/pot
 execute positioned -1679 45 -412 run function medabots_server:set_blocks/pot

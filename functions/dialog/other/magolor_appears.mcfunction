@@ -3,6 +3,7 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
+advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/other magolor_appears
 stopsound @s[scores={Dialog=1}] music
 execute if entity @s[scores={Dialog=1}] run playsound medabots_server:music.entity.magolor music @a -292 58 195 1000
 scoreboard players set @s[scores={Dialog=1}] MusicType 2
@@ -57,7 +58,7 @@ execute if entity @s[scores={Dialog=1820}] run tellraw @s {"translate":"chat.typ
 execute if entity @s[scores={Dialog=1820}] run advancement grant @s only medabots_server:special_items/passes/dimensional
 execute if entity @s[scores={Dialog=1948}] as @e[tag=magolor,tag=this_dialog,limit=1] at @s run particle minecraft:poof ~-1 ~-1 ~-1 2 2 2 0 60
 execute if entity @s[scores={Dialog=1948}] run fill -295 63 193 -289 69 193 minecraft:air
-tag @s[scores={Dialog=1948}] remove dialog_magolor
+tag @s[scores={Dialog=1948}] remove dialog_other_magolor_appears
 scoreboard players reset @s[scores={Dialog=1948}] DialogNr
 scoreboard players set @s[scores={Dialog=1948}] Dialog 0
 scoreboard players reset #temp DialogNr

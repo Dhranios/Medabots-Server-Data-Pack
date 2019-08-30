@@ -30,5 +30,5 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1705,y=42,z=-179,dx=63,dy=8,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=3}] run scoreboard players set @s Stage 3
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/jungle_a/rubberobo
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/jungle_a_rubberobo
-tag @s[tag=clear_stage,advancements={medabots_server:wave_1/story_progression={rubberobo_enters_jungle_a=true,rubberobo_leaves_jungle_a=false}}] add dialog_infinity_rubberobo_leaves_jungle_a
+tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={rubberobo_enters_jungle_a=true,rubberobo_leaves_jungle_a=false}}] add dialog_infinity_rubberobo_leaves_jungle_a
 execute if entity @s[tag=clear_stage] positioned -1673 51 -148 run function medabots_server:stage/clear
