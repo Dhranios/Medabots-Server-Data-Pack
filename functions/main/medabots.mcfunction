@@ -9,13 +9,13 @@ execute if entity @s[type=minecraft:player] store result score @s Damage run dat
 execute if entity @s[type=!minecraft:player] store result score @s Damage run data get entity @s AbsorptionAmount -1
 scoreboard players operation @s Damage += #100 Constants
 
-# Reduce damage by DEF/1000
-scoreboard players operation #temp Damage = @s LegsDefense
-scoreboard players operation #temp Damage *= @s Damage
-scoreboard players operation @s Damage *= #1000 Constants
-scoreboard players operation @s Damage -= #temp Damage
-scoreboard players operation @s Damage /= #1000 Constants
-scoreboard players reset #temp Damage
+# Reduce damage by DEF/10
+execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation #temp Damage = @s LegsDefense
+execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation #temp Damage *= @s Damage
+execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation @s Damage *= #1000 Constants
+execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation @s Damage -= #temp Damage
+execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation @s Damage /= #1000 Constants
+execute if entity @s[scores={LegsArmor=1..}] run scoreboard players reset #temp Damage
 
 # Prevent earrape when not verified and when leaving stage
 scoreboard players set @s[nbt={HurtTime:0s}] Damage 0

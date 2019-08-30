@@ -1,3 +1,4 @@
+execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
 scoreboard players operation @s[scores={Dialog=0}] DialogNr > @a[scores={DialogNr=0..}] DialogNr
 scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr

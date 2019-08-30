@@ -1,2 +1,2 @@
-data modify entity @s Inventory[{tag:{medabots_server:{activated:0b}}}].tag.display.Lore append value '{"italic":falce,"color":"green","translate":"medabots_server:item.medapart.activated"}'
+data modify entity @s Inventory[{tag:{medabots_server:{activated:0b}}}].tag.display.Lore append value '{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}'
 data modify entity @s Inventory[{tag:{medabots_server:{activated:0b}}}].tag.medabots_server.activated set value 1b

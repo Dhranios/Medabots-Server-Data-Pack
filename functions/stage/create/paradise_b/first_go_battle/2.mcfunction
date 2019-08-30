@@ -5,7 +5,7 @@ execute unless entity @a[x=-1665,y=51,z=-638,dx=64,dy=4,dz=63,tag=2] positioned 
 execute positioned -1648 45 -603 run function medabots_server:set_blocks/hammer_punch/west/delay_3/power_0
 execute positioned -1648 45 -602 run function medabots_server:set_blocks/hammer_punch/west/delay_5/power_0
 execute positioned -1648 45 -601 run function medabots_server:set_blocks/hammer_punch/west/delay_4/power_0
-scoreboard players set @e[x=-1649.5,y=45,z=-599.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1649.5,y=45,z=-599.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

@@ -30,5 +30,6 @@ execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{t
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"right_arm"}}}}] run function medabots_server:items/tinpet/equip_right_arm
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"left_arm"}}}}] run function medabots_server:items/tinpet/equip_left_arm
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"legs"}}}}] run function medabots_server:items/tinpet/equip_legs
-execute if entity @s[scores={UsePart=1..},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] unless entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/edit
+execute if entity @s[scores={UsePart=1..,Dialog=0},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] unless entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/edit
 execute if entity @s[scores={UnequipTinpet=1..}] run function medabots_server:items/tinpet/unequip
+tellraw @s[scores={UsePart=1..,Dialog=1..},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] {"translate":"medabots_server:message.tinpet.dialog","color":"green"}

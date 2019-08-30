@@ -91,7 +91,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1714 45 -705 minecraft:iron_door[open=true] if block -1710 45 -701 minecraft:air if entity @s[x=-1716,y=45,z=-705,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_a/second_go_battle/4
 execute if entity @e[x=-1713.5,y=45,z=-698.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run tag @e[x=-1713.5,y=45,z=-704.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1713.5,y=45,z=-704.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission]
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:paradise_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

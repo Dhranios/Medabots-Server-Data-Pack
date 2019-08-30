@@ -1,3 +1,4 @@
+execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
 scoreboard players operation @s[scores={Dialog=0}] DialogNr > @a[scores={DialogNr=0..}] DialogNr
 scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
@@ -9,7 +10,6 @@ execute if entity @s[scores={Dialog=1}] positioned -450 55 -55 run function meda
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -472 55 -68 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene"],Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:4206859}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:14133163}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:15263976}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
 execute at @s as @e[x=-472,y=55,z=-68,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 85 ~
->>>>>>> 9c6453b8c09b0ab33116cd3c7663b57646963cae
 execute if entity @s[scores={Dialog=2}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -472 55 -68
 execute if entity @s[scores={Dialog=2..124}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.1"}]}

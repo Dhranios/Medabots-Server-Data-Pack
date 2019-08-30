@@ -61,3 +61,5 @@ playsound medabots_server:music.battle.under music @s[scores={MusicType=29}] ~ ~
 scoreboard players set @s[scores={MusicType=29}] Music 1310
 playsound medabots_server:music.edit music @s[scores={MusicType=30}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=30}] Music 488
+playsound medabots_server:music.medawatch music @s[scores={MusicType=31}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=31}] Music 453

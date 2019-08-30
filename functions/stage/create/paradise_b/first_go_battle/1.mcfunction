@@ -16,7 +16,7 @@ execute positioned -1656 45 -580 run function medabots_server:set_blocks/stone
 execute positioned -1659 45 -583 run function medabots_server:set_blocks/stone
 execute positioned -1659 45 -586 run function medabots_server:set_blocks/stone
 execute positioned -1662 45 -587 run function medabots_server:set_blocks/stone
-scoreboard players set @e[x=-1655.5,y=45,z=-588.5,distance=..0.7,tag=door,tag=open] remove open
+scoreboard players set @e[x=-1655.5,y=45,z=-588.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

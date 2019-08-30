@@ -2,7 +2,7 @@ execute if entity @s[tag=!separated] run function medabots_server:animations/med
 
 # Move with
 execute if entity @a[tag=sneak_pos,tag=this_medabot,limit=1] run tag @s add sneak_pos
-execute at @e[tag=this_medabot,tag=chest,limit=1] rotated ~ 0 run teleport @s ^ ^.1 ^-.25
+execute at @e[tag=this_medabot,tag=chest,limit=1] rotated ~ 0 run teleport @s ^ ^.1 ^
 
 # Look left/right
 execute if entity @e[tag=edge_grabbing,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add edge_grabbing
