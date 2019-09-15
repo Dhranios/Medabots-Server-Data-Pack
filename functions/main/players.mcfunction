@@ -7,7 +7,9 @@ execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/
 # Run stage
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=1..2},tag=!murder_mystery] run function medabots_server:stage/left_server
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=3..4},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=0},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=0..,Battle=1..},tag=!enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/run
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=0..},tag=stage_builder,tag=!enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/run
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=enemy_medabot,tag=!murder_mystery] run function medabots_server:stage/enemy_run
 execute if entity @s[tag=!enemy_medabot,scores={Stage=1..,FlyCourse=0..}] run function medabots_server:stage/run_fly_course
 scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
@@ -17,9 +19,6 @@ execute if entity @s[tag=stage_builder] run function medabots_server:stage/build
 
 # Make the random server messages appear
 function medabots_server:other/random_message
-
-# Play dialogs/cutscenes
-function medabots_server:dialog/try
 
 # Make players who did nothing for 1 minute invulnerable
 function medabots_server:other/afk_system

@@ -31,7 +31,7 @@ execute if entity @s[scores={Dialog=483}] as @e[tag=max,tag=!medabot_model,tag=t
 stopsound @s[scores={Dialog=452}] music
 scoreboard players set @s[scores={Dialog=452}] MusicType 1
 scoreboard players set @s[scores={Dialog=452}] Music 0
-execute if entity @s[scores={Dialog=452..564}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=452..564}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=452}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.meet_max.11"}]}
 tellraw @s[scores={Dialog=484}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.meet_max.12"}]}
 tag @s[scores={Dialog=564}] remove dialog_infinity_meet_max

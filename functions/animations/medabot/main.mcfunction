@@ -19,6 +19,8 @@ execute if entity @s[tag=left_arm,tag=dying] run function medabots_server:animat
 execute if entity @s[tag=right_arm,tag=dying] run function medabots_server:animations/medabot/death/right_arm
 execute if entity @s[tag=chest,tag=dying] run function medabots_server:animations/medabot/death/head
 execute if entity @s[tag=head,tag=dying] run function medabots_server:animations/medabot/death/head
+scoreboard players set @s[tag=!dancing] AnimationProg 0
+tag @s[tag=dancing] remove dancing
 data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2

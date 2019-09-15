@@ -1,6 +1,6 @@
 # Is this press wall powered?
-execute if score @s[tag=!dying] PowerAmount = @s PowerNeeded run tag @s add powered
-execute unless score @s[tag=!dying] PowerAmount = @s PowerNeeded run tag @s remove powered
+execute if score @s[tag=!dying] PowerAmount >= @s PowerNeeded run tag @s add powered
+execute unless score @s[tag=!dying] PowerAmount >= @s PowerNeeded run tag @s remove powered
 
 # Extending and retracting
 execute if entity @s[tag=north,tag=powered,tag=!cannot_extend] run function medabots_server:blocks/press_wall/extend/north
@@ -46,3 +46,4 @@ execute if entity @s[tag=south,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_p
 execute if entity @s[tag=east,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=x]
 execute if entity @s[tag=west,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=x]
 execute if entity @s[tag=!dying] run fill ~ ~1 ~ ~ ~3 ~ minecraft:black_stained_glass
+scoreboard players set @e[tag=custom_stage] PowerAmount 0

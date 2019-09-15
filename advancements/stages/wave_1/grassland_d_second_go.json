@@ -4,12 +4,7 @@
             "item": "minecraft:grass_block"
         },
         "title": {
-            "translate": "medabots_server:location.grassland",
-			"with": [
-				{
-					"text": "D"
-				}
-			],
+            "translate": "medabots_server:location.grassland_d",
 			"extra": [
 				{
 					"translate": "medabots_server:message.stage.requires.version"

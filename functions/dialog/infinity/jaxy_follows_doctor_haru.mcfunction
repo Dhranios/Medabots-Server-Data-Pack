@@ -7,14 +7,16 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jaxy_follows_doctor_haru
 execute if entity @s[scores={Dialog=1}] positioned -456 55 -70 run function medabots_server:spawn_entities/cutscene/jaxy
 execute if entity @s[scores={Dialog=1}] positioned -450 55 -55 run function medabots_server:spawn_entities/cutscene/doctor_haru
-execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -472 55 -68 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene"],Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:4206859}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:14133163}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:15263976}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -472 55 -68 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:4206859}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:14133163}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:15263976}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
 execute at @s as @e[x=-472,y=55,z=-68,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 85 ~
 execute if entity @s[scores={Dialog=2}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -472 55 -68
+execute if entity @s[scores={Dialog=2}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2..124}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.1"}]}
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.2","with":[{"selector":"@s"}]}]}
 execute if entity @s[scores={Dialog=40}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
+execute if entity @s[scores={Dialog=40}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=40..140}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=140}] run kill @e[tag=kid,tag=this_dialog,limit=1]
 stopsound @s[scores={Dialog=60}] music

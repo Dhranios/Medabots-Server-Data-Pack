@@ -4,23 +4,13 @@
             "item": "minecraft:black_wool"
         },
         "title": {
-            "translate": "medabots_server:location.final_destination",
-			"with": [
-				{
-					"text": "3"
-				}
-			]
+            "translate": "medabots_server:location.final_destination_3"
         },
         "description": {
             "translate": "medabots_server:advancements.stages.clear",
 			"with": [
 				{
-					"translate": "medabots_server:location.final_destination",
-					"with": [
-						{
-							"text": "3"
-						}
-					]
+					"translate": "medabots_server:location.final_destination_3"
 				}
 			]
         }

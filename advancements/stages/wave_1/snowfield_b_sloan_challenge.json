@@ -1,15 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:water_bucket"
+            "item": "minecraft:snow_block"
         },
         "title": {
-            "translate": "medabots_server:location.seashore",
-			"with": [
-				{
-					"text": "B"
-				}
-			],
+            "translate": "medabots_server:location.snowfield_b",
 			"extra": [
 				{
 					"translate": "medabots_server:message.stage.requires.version"
@@ -23,12 +18,7 @@
             "translate": "medabots_server:advancements.stages.version",
 			"with": [
 				{
-					"translate": "medabots_server:location.seashore",
-					"with": [
-						{
-							"text": "B"
-						}
-					]
+					"translate": "medabots_server:location.snowfield_b"
 				},
 				{
 					"translate": "medabots_server:sign.stage.version.other.sloan_challenge"
@@ -43,6 +33,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/wave_1/seashore_b_sloan_challenge"
+        "function": "medabots_server:advancements/stages/wave_1/snowfield_b_sloan_challenge"
     }
 }

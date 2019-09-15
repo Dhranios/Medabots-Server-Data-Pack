@@ -7,6 +7,8 @@ kill @s[tag=!player_is_here]
 tag @s[tag=player_is_here] remove player_is_here
 tag @a[tag=this_dialog] remove this_dialog
 
+function medabots_server:animations/cutscene_entity
+
 tag @s[tag=refresh] add refreshed
 tag @s[tag=!refresh] add refresh
 tag @s[tag=refreshed] remove refresh

@@ -4,12 +4,7 @@
             "item": "minecraft:yellow_terracotta"
         },
         "title": {
-            "translate": "medabots_server:location.ruins_in",
-			"with": [
-				{
-					"text": "D"
-				}
-			],
+            "translate": "medabots_server:location.ruins_in_d",
 			"extra": [
 				{
 					"translate": "medabots_server:message.stage.requires.version"

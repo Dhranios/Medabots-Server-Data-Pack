@@ -4,12 +4,7 @@
             "item": "minecraft:jungle_leaves"
         },
         "title": {
-            "translate": "medabots_server:location.jungle",
-			"with": [
-				{
-					"text": "D"
-				}
-			],
+            "translate": "medabots_server:location.jungle_d",
 			"extra": [
 				{
 					"translate": "medabots_server:message.stage.requires.version"

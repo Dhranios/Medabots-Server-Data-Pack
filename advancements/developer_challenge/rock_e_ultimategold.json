@@ -4,12 +4,7 @@
             "item": "minecraft:granite"
         },
         "title": {
-            "translate": "medabots_server:location.rock",
-			"with": [
-				{
-					"text": "E"
-				}
-			],
+            "translate": "medabots_server:location.rock_e",
 			"extra": [
 				{
 					"translate": "medabots_server:message.stage.requires.version"
@@ -28,12 +23,7 @@
             "translate": "medabots_server:advancements.stages.version",
 			"with": [
 				{
-					"translate": "medabots_server:location.rock",
-					"with": [
-						{
-							"text": "E"
-						}
-					]
+					"translate": "medabots_server:location.rock_e"
 				},
 				{
 					"translate": "medabots_server:sign.stage.version.dev",

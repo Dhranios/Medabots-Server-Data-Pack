@@ -3,7 +3,7 @@ execute unless entity @s[scores={Time=0..}] run scoreboard players set @s Time 0
 
 # Timer
 scoreboard players remove @s[scores={Time=1..}] Time 1
-execute if score @s[scores={Time=0}] PowerAmount = @s PowerNeeded run scoreboard players set @s Time 600
+execute if score @s[scores={Time=0}] PowerAmount >= @s PowerNeeded run scoreboard players set @s Time 600
 
 # Play sound and annoy selected guards when powered
 execute if entity @s[scores={Time=20}] run playsound medabots_server:block.alarm ambient @a ~ ~ ~ 1
@@ -47,3 +47,4 @@ scoreboard players reset #temp Stage
 execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 execute if entity @s[tag=dead] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
 kill @s[tag=dead]
+scoreboard players set @e[tag=custom_stage] PowerAmount 0

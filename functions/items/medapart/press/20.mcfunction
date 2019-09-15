@@ -1,13 +1,13 @@
 # Set which part is activated
-scoreboard players set @s[scores={Press=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:dragonbeetle_veryweighter"}}}]}] MedapartType 1
-scoreboard players set @s[scores={Press=2},nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:dragonbeetle_hardweighter"}}}]}] MedapartType 2
-scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:dragonbeetle_heavyweighter"}}}]}] MedapartType 3
-scoreboard players set @s[scores={Press=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:king_pharaoh_dark_hall"}}}]}] MedapartType 4
-scoreboard players set @s[scores={Press=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:uglyduck_featherdone"}}}]}] MedapartType 5
-scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rob_stack_arm"}}}]}] MedapartType 6
-scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:ashton_ash_breaker"}}}]}] MedapartType 7
-scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:magolor_magic_hand"}}}]}] MedapartType 8
-scoreboard players set @s[scores={Press=3},nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:king_pharaoh_black_hall"}}}]}] MedapartType 9
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:dragonbeetle_veryweighter"}}}]}] MedapartID 1
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:dragonbeetle_hardweighter"}}}]}] MedapartID 2
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:dragonbeetle_heavyweighter"}}}]}] MedapartID 3
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:king_pharaoh_dark_hall"}}}]}] MedapartID 4
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:uglyduck_featherdone"}}}]}] MedapartID 5
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:rob_stack_arm"}}}]}] MedapartID 6
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:ashton_ash_breaker"}}}]}] MedapartID 7
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:magolor_magic_hand"}}}]}] MedapartID 8
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:king_pharaoh_black_hall"}}}]}] MedapartID 9
 
 # Give the weapon
 # Give the weapon to user
@@ -30,4 +30,4 @@ execute if entity @s[type=!minecraft:player] run tag @e[type=minecraft:snowball,
 execute if entity @s[type=!minecraft:player] run kill @e[type=minecraft:area_effect_cloud,tag=press]
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[scores={Press=2}] HeadUses 1
+scoreboard players remove @s[tag=head_selected] HeadUses 1

@@ -5,4 +5,4 @@ execute if entity @s[tag=no_defend] run function medabots_server:set_blocks/gas_
 execute if entity @s[tag=confuse] run function medabots_server:set_blocks/gas_floor/confuse/power_1
 
 # Give additional data
-scoreboard players operation @e[distance=..0.7,tag=gas_floor] NeededPower = @s NeededPower
+scoreboard players operation @e[distance=..0.7,tag=gas_floor] PowerNeeded = @s PowerNeeded

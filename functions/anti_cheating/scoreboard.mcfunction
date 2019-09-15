@@ -3,23 +3,19 @@
 #       Load Function       #
 #############################
 
-# Say server is (re)loaded
-tellraw @a {"text":"[Server] Reload complete."}
+# Say server has reloaded
+tellraw @a {"translate":"medabots_server:message.reloaded","color":"green"}
 
 #Re-add any objectives that may have been removed
 scoreboard objectives add AFKTime dummy
 scoreboard objectives add ActionFloorNr dummy
-scoreboard objectives add AntiFly dummy
-scoreboard objectives add AntiTank dummy
+scoreboard objectives add AnimationProg dummy
 scoreboard objectives add ArrowID dummy
 scoreboard objectives add Attack minecraft.custom:minecraft.damage_dealt
-scoreboard objectives add AuxiliaryCharge dummy
 scoreboard objectives add AuxiliaryTime dummy
 scoreboard objectives add Battle dummy
 scoreboard objectives add BattlingMedabots dummy
 scoreboard objectives add Boat minecraft.custom:minecraft.boat_one_cm
-scoreboard objectives add Break dummy
-scoreboard objectives add Bug dummy
 scoreboard objectives add BugTime dummy
 scoreboard objectives add BugTimer dummy
 scoreboard objectives add BuyMedapart trigger
@@ -27,14 +23,11 @@ scoreboard objectives add CannonFire dummy
 scoreboard objectives add ChaosTime dummy
 scoreboard objectives add Charge dummy
 scoreboard objectives add Cloud dummy
-scoreboard objectives add Confuse dummy
 scoreboard objectives add ConfuseTime dummy
 scoreboard objectives add Constants dummy
 scoreboard objectives add Damage dummy
 scoreboard objectives add DeathTime dummy
-scoreboard objectives add Defense dummy
 scoreboard objectives add DefenseTime dummy
-scoreboard objectives add Destroy dummy
 scoreboard objectives add Detect dummy
 scoreboard objectives add DetectTime dummy
 scoreboard objectives add Dialog dummy
@@ -45,8 +38,6 @@ scoreboard objectives add EdgeGrabAble dummy
 scoreboard objectives add EditingTinpet dummy
 scoreboard objectives add EffectTimer dummy
 scoreboard objectives add Fall minecraft.custom:minecraft.fall_one_cm
-scoreboard objectives add Falling dummy
-scoreboard objectives add FloorSwitchTime dummy
 scoreboard objectives add Fly dummy
 scoreboard objectives add FlyCourse dummy
 scoreboard objectives add FlyCourseFee dummy
@@ -58,16 +49,10 @@ scoreboard objectives add FlyCourseTime dummy
 scoreboard objectives add FlyHackTime dummy
 scoreboard objectives add FlyTime dummy
 scoreboard objectives add Flying minecraft.custom:minecraft.fly_one_cm
-scoreboard objectives add Freeze dummy
 scoreboard objectives add FreezeTime dummy
 scoreboard objectives add GamemodeTime dummy
-scoreboard objectives add Gatling dummy
 scoreboard objectives add GoalSearch dummy
-scoreboard objectives add GuardGravity dummy
-scoreboard objectives add GuardGunpowder dummy
 scoreboard objectives add GuardNr dummy
-scoreboard objectives add GuardOptical dummy
-scoreboard objectives add Hammer dummy
 scoreboard objectives add HeadArmor dummy
 scoreboard objectives add HeadDanger dummy
 scoreboard objectives add HeadPer dummy
@@ -75,12 +60,8 @@ scoreboard objectives add HeadPower dummy
 scoreboard objectives add HeadUses dummy
 scoreboard objectives add HeadUsesDanger dummy
 scoreboard objectives add HeadUsesPer dummy
-scoreboard objectives add Heal dummy
 scoreboard objectives add Health dummy
-scoreboard objectives add Hearts health
-scoreboard objectives add Hide dummy
 scoreboard objectives add HideTime dummy
-scoreboard objectives add Hold dummy
 scoreboard objectives add HoldTime dummy
 scoreboard objectives add HomeRot dummy
 scoreboard objectives add HomeX dummy
@@ -88,14 +69,11 @@ scoreboard objectives add HomeY dummy
 scoreboard objectives add HomeZ dummy
 scoreboard objectives add Horse minecraft.custom:minecraft.horse_one_cm
 scoreboard objectives add Hunger food
-scoreboard objectives add Ineffective dummy
 scoreboard objectives add IneffectiveTime dummy
-scoreboard objectives add Infect dummy
 scoreboard objectives add InfectTime dummy
 scoreboard objectives add InfectTimer dummy
 scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer dummy
-scoreboard objectives add Laser dummy
 scoreboard objectives add LastPlaceTime dummy
 scoreboard objectives add LeaveStage trigger
 scoreboard objectives add LeftArmArmor dummy
@@ -108,25 +86,20 @@ scoreboard objectives add LegsDanger dummy
 scoreboard objectives add LegsPer dummy
 scoreboard objectives add Level level
 scoreboard objectives add LifeTime dummy
-scoreboard objectives add MagolorBattle dummy
-scoreboard objectives add MasterCrazySpec trigger
 scoreboard objectives add MaxHeadArmor dummy
 scoreboard objectives add MaxHeadUses dummy
 scoreboard objectives add MaxLeftArmArmor dummy
 scoreboard objectives add MaxLegsArmor dummy
 scoreboard objectives add MaxRightArmArmor dummy
 scoreboard objectives add Medabot dummy
-scoreboard objectives add MedabotMet dummy
 scoreboard objectives add MedabotNr dummy
+scoreboard objectives add MedabotRotation dummy
 scoreboard objectives add Medaforce dummy
-scoreboard objectives add MedaforceControl dummy
 scoreboard objectives add MedaforceTimer dummy
+scoreboard objectives add MedapartID dummy
 scoreboard objectives add MedapartType dummy
-scoreboard objectives add MeleeTrap dummy
-scoreboard objectives add Melt dummy
 scoreboard objectives add Message dummy
 scoreboard objectives add Minecart minecraft.custom:minecraft.minecart_one_cm
-scoreboard objectives add Missile dummy
 scoreboard objectives add Moderator dummy
 scoreboard objectives add Money dummy
 scoreboard objectives add MotionX dummy
@@ -136,19 +109,15 @@ scoreboard objectives add Moving dummy
 scoreboard objectives add MtBattle dummy
 scoreboard objectives add Music dummy
 scoreboard objectives add MusicType dummy
-scoreboard objectives add Napalm dummy
-scoreboard objectives add NoDefend dummy
 scoreboard objectives add NoDefendTime dummy
 scoreboard objectives add Offline minecraft.custom:minecraft.leave_game
-scoreboard objectives add OnlineTime dummy
+scoreboard objectives add OldMusicType dummy
 scoreboard objectives add OtherX dummy
 scoreboard objectives add OtherY dummy
 scoreboard objectives add OtherZ dummy
 scoreboard objectives add OverheatingFly dummy
 scoreboard objectives add OverheatingMedal dummy
-scoreboard objectives add Paralyze dummy
 scoreboard objectives add ParalyzeTime dummy
-scoreboard objectives add PerfectGuard dummy
 scoreboard objectives add PerfectGuardTime dummy
 scoreboard objectives add Pig minecraft.custom:minecraft.pig_one_cm
 scoreboard objectives add PosX dummy
@@ -156,12 +125,8 @@ scoreboard objectives add PosY dummy
 scoreboard objectives add PosZ dummy
 scoreboard objectives add PowerAmount dummy
 scoreboard objectives add PowerNeeded dummy
-scoreboard objectives add Press dummy
-scoreboard objectives add Question trigger
 scoreboard objectives add RandomMessage dummy
 scoreboard objectives add Range dummy
-scoreboard objectives add Repair dummy
-scoreboard objectives add Rifle dummy
 scoreboard objectives add RightArmArmor dummy
 scoreboard objectives add RightArmDanger dummy
 scoreboard objectives add RightArmPer dummy
@@ -169,15 +134,13 @@ scoreboard objectives add RightArmPower dummy
 scoreboard objectives add Rings dummy
 scoreboard objectives add RingsTotal dummy
 scoreboard objectives add RobattleMusic dummy
+scoreboard objectives add RotationDif dummy
 scoreboard objectives add Run minecraft.custom:minecraft.sprint_one_cm
-scoreboard objectives add Sacrifice dummy
-scoreboard objectives add Scout dummy
 scoreboard objectives add ScoutTime dummy
 scoreboard objectives add SelfDestruct minecraft.dropped:minecraft.gold_ingot
 scoreboard objectives add SelfDestructTime dummy
 scoreboard objectives add ServerStats dummy {"translate":"medabots_server:scoreboard.objective.server_stats"}
 scoreboard objectives add SettingsCheck trigger
-scoreboard objectives add ShootingTrap dummy
 scoreboard objectives add ShopIndex1 trigger
 scoreboard objectives add ShopIndex2 trigger
 scoreboard objectives add ShopIndex3 trigger
@@ -190,14 +153,12 @@ scoreboard objectives add Stage dummy
 scoreboard objectives add StageBuild trigger
 scoreboard objectives add StageVersion dummy
 scoreboard objectives add Stars dummy
-scoreboard objectives add StatusClear dummy
 scoreboard objectives add Steps dummy
 scoreboard objectives add Swimming minecraft.custom:minecraft.swim_one_cm
-scoreboard objectives add Sword dummy
 scoreboard objectives add TaskCheck trigger
 scoreboard objectives add Time dummy
 scoreboard objectives add Trading minecraft.custom:minecraft.talked_to_villager
-scoreboard objectives add Transform dummy
+scoreboard objectives add TransactionValue dummy
 scoreboard objectives add TransformHID dummy
 scoreboard objectives add TransformHTime dummy
 scoreboard objectives add TransformLID dummy
@@ -211,7 +172,6 @@ scoreboard objectives add Verified trigger
 scoreboard objectives add Walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add WalkOnWater minecraft.custom:minecraft.walk_on_water_one_cm
 scoreboard objectives add WalkUnderWater minecraft.custom:minecraft.walk_under_water_one_cm
-scoreboard objectives add Wave dummy
 
 # Set slots
 scoreboard objectives setdisplay sidebar ServerStats

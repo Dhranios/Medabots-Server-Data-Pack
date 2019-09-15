@@ -1,1 +1,3 @@
-tellraw @s {"translate":"medabots_server:message.stage.requires","extra":[{"text":" "},{"translate":"medabots_server:advancements.special_items.passes.snowfield_d"},{"translate":"medabots_server:message.stage.requires.and"},{"translate":"medabots_server:message.stage.requires.medapart","with":[{"translate":"medabots_server:move.float"}]}]}
+tellraw @s {"translate":"medabots_server:message.stage.requires"}
+tellraw @s {"translate":"medabots_server:message.stage.requires.entry","with":[{"translate":"medabots_server:message.stage.requirements.snowfield_d.first_go.0"}]}
+tellraw @s {"translate":"medabots_server:message.stage.requires.entry","with":[{"translate":"medabots_server:message.stage.requirements.snowfield_d.first_go.1"}]}

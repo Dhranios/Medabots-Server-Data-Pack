@@ -1,3 +1,3 @@
 # Finish move
-scoreboard players reset @s GuardGunpowder
+scoreboard players reset @s MedapartType
 scoreboard players set @s Time 0

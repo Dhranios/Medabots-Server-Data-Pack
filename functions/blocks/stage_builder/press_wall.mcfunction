@@ -6,4 +6,4 @@ execute if entity @s[tag=west] run function medabots_server:set_blocks/press_wal
 
 # Give additional data
 scoreboard players operation @e[distance=..0.7,tag=press_wall] Range = @s Range
-scoreboard players operation @e[distance=..0.7,tag=press_wall] NeededPower = @s NeededPower
+scoreboard players operation @e[distance=..0.7,tag=press_wall] PowerNeeded = @s PowerNeeded

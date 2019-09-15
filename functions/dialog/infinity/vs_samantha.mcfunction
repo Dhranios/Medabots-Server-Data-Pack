@@ -45,6 +45,7 @@ tellraw @s[scores={Dialog=1020}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1028}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_samantha.27"}]}
 tellraw @s[scores={Dialog=1044}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat"},{"translate":"medabots_server:dialog.infinity.vs_samantha.28"}]}
 execute if entity @s[scores={Dialog=1052}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
+execute if entity @s[scores={Dialog=1052}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1053..1142}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1052}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
 execute if entity @s[scores={Dialog=1052}] run tag @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] add walking

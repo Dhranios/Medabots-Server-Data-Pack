@@ -1,6 +1,6 @@
 # Part of team?
-execute if entity @e[scores={Napalm=1..,Time=20..59},tag=ally_medabot] run tag @s[tag=!life_time] add ally_team
-execute if entity @e[scores={Napalm=1..,Time=20..59},tag=enemy_medabot] run tag @s[tag=!life_time] add enemy_team
+execute if entity @e[scores={MedapartID=26,Time=20..59},tag=ally_medabot] run tag @s[tag=!life_time] add ally_team
+execute if entity @e[scores={MedapartID=26,Time=20..59},tag=enemy_medabot] run tag @s[tag=!life_time] add enemy_team
 execute if entity @s[tag=!life_time] run scoreboard players operation @s ArrowID > @e[type=minecraft:arrow] ArrowID
 execute if entity @s[tag=!life_time] run scoreboard players add @s ArrowID 1
 

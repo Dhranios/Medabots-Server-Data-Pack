@@ -26,11 +26,12 @@ execute if entity @s[scores={Medaforce=-11}] run function medabots_server:items/
 execute if entity @s[scores={Medaforce=-12}] run function medabots_server:items/medapart/destroyer
 scoreboard players set @s[scores={Medaforce=1..}] Medaforce 0
 scoreboard players set @s[scores={Charge=1..}] Charge 0
+scoreboard players set @s Battle 0
 
 function medabots_server:gamemodes/default/load_old_inventory
 
 # Un-set combat
-execute at @e[tag=medabot_model] if score @s MedabotNr = @e[distance=..0.1,tag=medabot_model,limit=1] MedabotNr run kill @e[distance=..0.1,tag=medabot_model,limit=1]
+execute as @e[tag=medabot_model] if score @s MedabotNr = @a[distance=..0.1,limit=1] MedabotNr run kill @s
 execute as @e[scores={MedabotNr=1..}] if score @s MedabotNr > @e[distance=..0.1,tag=hostile,limit=1] MedabotNr run scoreboard players remove @s MedabotNr 1
 scoreboard players reset @s MedabotNr
 effect clear @s minecraft:invisibility
@@ -75,6 +76,7 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar",stage_item:1b}}}]}] run function medabots_server:items/put_medallars_on_bank
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:items/give_obtained_item
 
+# Restore inventory
 loot replace entity @s hotbar.0 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 loot replace entity @s inventory.18 9 mine -286 1 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 loot replace entity @s armor.feet 4 mine -286 0 -53 minecraft:golden_pickaxe{phi:{drop_contents:true}}
@@ -83,6 +85,21 @@ setblock -286 0 -52 minecraft:bedrock
 setblock -286 1 -52 minecraft:stone
 setblock -286 0 -53 minecraft:bedrock
 setblock -287 0 -52 minecraft:bedrock
+
+# Remove dropped Medapart
+data modify entity @s[tag=drop_head] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.head set value {}
+data modify entity @s[tag=drop_head] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.display.Lore[1] set value '{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}'
+tag @s remove drop_head
+data modify entity @s[tag=drop_right_arm] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.right_arm set value {}
+data modify entity @s[tag=drop_right_arm] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.display.Lore[2] set value '{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}'
+tag @s remove drop_right_arm
+data modify entity @s[tag=drop_left_arm] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.left_arm set value {}
+data modify entity @s[tag=drop_left_arm] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.display.Lore[3] set value '{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}'
+tag @s remove drop_left_arm
+data modify entity @s[tag=drop_legs] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.legs set value {}
+data modify entity @s[tag=drop_legs] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.display.Lore[4] set value '{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}'
+tag @s remove drop_legs
+data remove entity @s Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.activated
 
 # Remove scores
 scoreboard players reset @s LegsArmor

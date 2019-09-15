@@ -140,4 +140,4 @@ execute if entity @s[tag=guard,tag=!slow,tag=!fast] run function medabots_server
 execute if entity @s[tag=guard,tag=fast] run function medabots_server:set_blocks/action_floor/guard/fast/power_1
 
 # Give additional data
-scoreboard players operation @e[distance=..0.7,tag=action_floor] NeededPower = @s NeededPower
+scoreboard players operation @e[distance=..0.7,tag=action_floor] PowerNeeded = @s PowerNeeded

@@ -41,4 +41,4 @@ execute if entity @s[tag=east,tag=delay_1] run function medabots_server:set_bloc
 execute if entity @s[tag=west,tag=delay_1] run function medabots_server:set_blocks/spring_wall/west/delay_1/power_1
 
 # Give additional data
-scoreboard players operation @e[distance=..0.7,tag=spring_wall] NeededPower = @s NeededPower
+scoreboard players operation @e[distance=..0.7,tag=spring_wall] PowerNeeded = @s PowerNeeded

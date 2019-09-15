@@ -8,9 +8,9 @@ data merge entity @s[tag=!broken] {CustomName:'{"translate":"medabots_server:mov
 summon minecraft:armor_stand ~ ~-1.3 ~ {Invisible:1b,CustomName:'{"translate":"medabots_server:move.break"}',NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:black_wool",Count:1b}],Marker:1b,Tags:["life_time"]}
 
 # Damage every entity that gets close
-execute if entity @s[tag=broken,tag=!strong,tag=!ally_team,tag=!enemy_team] as @e[tag=!break,distance=..1,tag=hostile] unless entity @s[scores={Break=1..}] run function medabots_server:items/medapart/break/hit
-execute if entity @s[tag=broken,tag=!strong,tag=ally_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!ally_team] unless entity @s[scores={Break=1..}] run function medabots_server:items/medapart/break/hit
-execute if entity @s[tag=broken,tag=!strong,tag=enemy_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!enemy_team] unless entity @s[scores={Break=1..}] run function medabots_server:items/medapart/break/hit
-execute if entity @s[tag=broken,tag=strong,tag=!ally_team,tag=!enemy_team] as @e[tag=!break,distance=..1,tag=hostile] unless entity @s[scores={Break=1..}] run function medabots_server:items/medapart/break/strong_hit
-execute if entity @s[tag=broken,tag=strong,tag=ally_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!ally_team] unless entity @s[scores={Break=1..}] run function medabots_server:items/medapart/break/strong_hit
-execute if entity @s[tag=broken,tag=strong,tag=enemy_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!enemy_team] unless entity @s[scores={Break=1..}] run function medabots_server:items/medapart/break/strong_hit
+execute if entity @s[tag=broken,tag=!strong,tag=!ally_team,tag=!enemy_team] as @e[tag=!break,distance=..1,tag=hostile] unless entity @s[scores={MedapartType=4}] run function medabots_server:items/medapart/break/hit
+execute if entity @s[tag=broken,tag=!strong,tag=ally_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!ally_team] unless entity @s[scores={MedapartType=4}] run function medabots_server:items/medapart/break/hit
+execute if entity @s[tag=broken,tag=!strong,tag=enemy_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!enemy_team] unless entity @s[scores={MedapartType=4}] run function medabots_server:items/medapart/break/hit
+execute if entity @s[tag=broken,tag=strong,tag=!ally_team,tag=!enemy_team] as @e[tag=!break,distance=..1,tag=hostile] unless entity @s[scores={MedapartType=4}] run function medabots_server:items/medapart/break/strong_hit
+execute if entity @s[tag=broken,tag=strong,tag=ally_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!ally_team] unless entity @s[scores={MedapartType=4}] run function medabots_server:items/medapart/break/strong_hit
+execute if entity @s[tag=broken,tag=strong,tag=enemy_team] as @e[tag=!break,distance=..1,tag=hostile,tag=!enemy_team] unless entity @s[scores={MedapartType=4}] run function medabots_server:items/medapart/break/strong_hit

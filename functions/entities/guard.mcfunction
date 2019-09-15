@@ -18,10 +18,11 @@ scoreboard players set @s[scores={ConfuseTime=1..}] Time 40
 teleport @s[tag=!dying,scores={ConfuseTime=1..}] ~ ~ ~ ~-18 ~
 
 # Attack
-execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^1 if entity @a[tag=hostile,distance=..1.05,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] run function medabots_server:entities/guard/attack
+execute unless block ~ ~ ~ minecraft:water unless block ~ ~ ~1 minecraft:air unless block ~ ~ ~1 minecraft:comparator unless block ~ ~ ~1 minecraft:black_carpet unless block ~ ~ ~1 minecraft:light_gray_carpet unless block ~ ~ ~1 #minecraft:slabs[type=bottom] unless block ~ ~ ~-1 minecraft:air unless block ~ ~ ~-1 minecraft:comparator unless block ~ ~ ~-1 minecraft:black_carpet unless block ~ ~ ~-1 minecraft:light_gray_carpet unless block ~ ~ ~-1 #minecraft:slabs[type=bottom] unless block ~1 ~ ~ minecraft:air unless block ~1 ~ ~ minecraft:comparator unless block ~1 ~ ~ minecraft:black_carpet unless block ~1 ~ ~ minecraft:light_gray_carpet unless block ~1 ~ ~ #minecraft:slabs[type=bottom] unless block ~-1 ~ ~ minecraft:air unless block ~-1 ~ ~ minecraft:comparator unless block ~-1 ~ ~ minecraft:black_carpet unless block ~-1 ~ ~ minecraft:light_gray_carpet unless block ~-1 ~ ~ #minecraft:slabs[type=bottom] run tag @s add cannot_move
+execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying,tag=!cannot_move] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^0.5 if entity @a[tag=hostile,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] run function medabots_server:entities/guard/attack
 
 # Walk to target or random location
-execute at @s[scores={Time=0},tag=!alarm_ringing,tag=!dying] run function medabots_server:entities/guard/wander
+execute at @s[scores={Time=0},tag=!alarm_ringing,tag=!dying,tag=!cannot_move] run function medabots_server:entities/guard/wander
 
 # Fall
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
@@ -34,6 +35,7 @@ execute at @s[tag=!fall] align y unless block ~ ~ ~ #minecraft:slabs[type=bottom
 execute at @s[tag=!fall] align y if block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~0.5 ~
 tag @s remove fall
 execute at @s if entity @s[y=0,dy=1] run tag @s add dead
+tag @s remove cannot_move
 
 # Attacked by melee trap
 execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run function medabots_server:items/medapart/melee_trap/hit

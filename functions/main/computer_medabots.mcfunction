@@ -66,6 +66,7 @@ scoreboard players set @s[scores={Sound=0},tag=walking,tag=!dying] Sound 8
 execute if entity @s[tag=!dead] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.walk_detection","with":[{"text":"CPU"}]}',Tags:["cpu_walk_detection"],Duration:2}
 
 # CPU only things
+execute if entity @s[tag=dead] as @e[tag=medabot_model] if score @s MedabotNr = @e[distance=..0.1,tag=hostile,limit=1] MedabotNr run kill @s
 execute if entity @s[tag=dead] as @e[scores={MedabotNr=1..}] if score @s MedabotNr > @e[distance=..0.1,tag=hostile,limit=1] MedabotNr run scoreboard players remove @s MedabotNr 1
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[nbt=!{ArmorItems:[{id:"minecraft:structure_void"}]}] run replaceitem entity @s armor.head minecraft:structure_void

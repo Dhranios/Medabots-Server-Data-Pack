@@ -1,3 +1,4 @@
+execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
 teleport @s[scores={Dialog=0},gamemode=adventure] -1631 37 -733 90 0
 execute if entity @s[scores={Dialog=0},gamemode=adventure] run data merge block -1636 52 -768 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/jungle_d/enter"}}'}
 execute if entity @s[scores={Dialog=0},gamemode=adventure] run setblock -1636 53 -770 minecraft:red_wool

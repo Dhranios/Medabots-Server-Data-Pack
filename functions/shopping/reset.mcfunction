@@ -2,6 +2,7 @@ tag @s remove trading_with_salesman
 tag @s remove trading_with_mineral_buyer
 tag @s remove trading_with_medabot_salesman
 tag @s remove trading_with_medal_salesman
+tag @s remove trading_with_tinpet_salesman
 tag @s remove trading
 scoreboard players reset @s ShopIndex0
 scoreboard players reset @s ShopIndex1

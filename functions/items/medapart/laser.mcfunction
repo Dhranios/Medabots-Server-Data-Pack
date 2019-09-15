@@ -4,7 +4,7 @@ execute if entity @s[scores={Time=40..42}] run function medabots_server:items/me
 execute if entity @s[scores={Time=80..}] run function medabots_server:items/medapart/laser/80_
 
 # Increase time by 1
-scoreboard players add @s[scores={Laser=1..}] Time 1
+scoreboard players add @s[scores={MedapartType=21}] Time 1
 
 # Attacked by shooting trap
 execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=shooting_trap,tag=!ally_team,tag=!enemy_team] run function medabots_server:items/medapart/shooting_trap/hit

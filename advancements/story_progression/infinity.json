@@ -318,6 +318,12 @@
         "sloan_goes_elsewhere": {
             "trigger": "minecraft:impossible"
         },
+        "vs_screws": {
+            "trigger": "minecraft:impossible"
+        },
+        "vs_screws_battle": {
+            "trigger": "minecraft:impossible"
+        },
         "suspicious_tune": {
             "trigger": "minecraft:impossible"
         },

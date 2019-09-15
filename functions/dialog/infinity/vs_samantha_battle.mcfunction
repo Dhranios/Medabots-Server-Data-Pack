@@ -66,7 +66,9 @@ tellraw @s[scores={Dialog=1140}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1148}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.30"}]}
 tellraw @s[scores={Dialog=1180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.31"}]}
 tellraw @s[scores={Dialog=1252}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.32"}]}
+execute if entity @s[scores={Dialog=1260}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1260..1267}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=1268}] as @e[tag=samantha,tag=this_dialog,limit=1] run tag @s remove walking
 tellraw @s[scores={Dialog=1268}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.33"}]}
 tellraw @s[scores={Dialog=1292}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.34"}]}
 tellraw @s[scores={Dialog=1340}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.35"}]}
@@ -126,19 +128,20 @@ execute if entity @s[scores={Dialog=2283..2322}] at @e[tag=samantha,tag=this_dia
 tellraw @s[scores={Dialog=2283}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.71"}]}
 tellraw @s[scores={Dialog=2299}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.72"}]}
 execute if entity @s[scores={Dialog=2323}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
-execute if entity @s[scores={Dialog=2324..2417}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=2417}] run kill @e[tag=samantha,tag=this_dialog,limit=1]
-stopsound @s[scores={Dialog=2417}] music
-scoreboard players set @s[scores={Dialog=2417}] MusicType 1
-scoreboard players set @s[scores={Dialog=2417}] Music 0
-execute if entity @s[scores={Dialog=2417..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=2417}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.73"}]}
-tellraw @s[scores={Dialog=2473}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.74"}]}
-tellraw @s[scores={Dialog=2553}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.75"}]}
-tellraw @s[scores={Dialog=2585}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.76"}]}
-tag @s[scores={Dialog=2641}] remove dialog_infinity_vs_samantha_battle
-scoreboard players reset @s[scores={Dialog=2641}] DialogNr
-scoreboard players set @s[scores={Dialog=2641}] Dialog 0
+execute if entity @s[scores={Dialog=2323}] as @e[tag=samantha,tag=this_dialog,limit=1] run tag @s add running
+execute if entity @s[scores={Dialog=2324..2370}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
+execute if entity @s[scores={Dialog=2370}] run kill @e[tag=samantha,tag=this_dialog,limit=1]
+stopsound @s[scores={Dialog=2370}] music
+scoreboard players set @s[scores={Dialog=2370}] MusicType 1
+scoreboard players set @s[scores={Dialog=2370}] Music 0
+execute if entity @s[scores={Dialog=2370..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=2370}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.73"}]}
+tellraw @s[scores={Dialog=2426}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.74"}]}
+tellraw @s[scores={Dialog=2506}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.75"}]}
+tellraw @s[scores={Dialog=2538}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.76"}]}
+tag @s[scores={Dialog=2594}] remove dialog_infinity_vs_samantha_battle
+scoreboard players reset @s[scores={Dialog=2594}] DialogNr
+scoreboard players set @s[scores={Dialog=2594}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
 

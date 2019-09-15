@@ -10,6 +10,7 @@ tellraw @s {"translate":"medabots_server:message.tinpet.edit.unequip","color":"g
 scoreboard players enable @s UnequipTinpet
 
 # Medawatch music
+scoreboard players operation @s OldMusicType = @s MusicType
 stopsound @s music
 playsound medabots_server:music.medawatch_intro music @s ~ ~ ~ 1000
 scoreboard players set @s MusicType 31

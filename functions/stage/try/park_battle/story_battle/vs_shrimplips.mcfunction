@@ -1,3 +1,4 @@
+function medabots_server:gamemodes/default/set_stats
 teleport @s -1929 45 -577 90 0
 scoreboard players set @s StageVersion 2
 tag @s add story_battle

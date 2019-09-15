@@ -1,1 +1,2 @@
-tellraw @s {"translate":"medabots_server:message.stage.requires","extra":[{"text":" "},{"translate":"medabots_server:message.stage.requires.wins.1.version","with":[{"translate":"medabots_server:location.grassland","with":[{"text":"A"}]}]}]}
+tellraw @s {"translate":"medabots_server:message.stage.requires"}
+tellraw @s {"translate":"medabots_server:message.stage.requires.entry","with":[{"translate":"medabots_server:message.stage.requirements.grassland_a.second_go.0"}]}

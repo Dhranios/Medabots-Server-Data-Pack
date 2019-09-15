@@ -1,11 +1,10 @@
 # New gass floors need scores and carpet
 execute unless entity @s[scores={Time=0..}] run scoreboard players add @s Time 20
-setblock ~ ~ ~ minecraft:light_gray_carpet
 
 # Coundown blowing
 scoreboard players remove @s[scores={Time=1..19}] Time 1
-execute if score @s[scores={Time=20}] PowerAmount = @s PowerNeeded run scoreboard players remove @s Time 1
-scoreboard players remove @s[scores={Time=20..}] Time 1
+execute if score @s[scores={Time=20}] PowerAmount >= @s PowerNeeded run scoreboard players remove @s Time 1
+scoreboard players remove @s[scores={Time=21..}] Time 1
 
 # Fire in the hole!
 execute if entity @s[scores={Time=0}] run playsound medabots_server:block.gas_floor hostile @a ~ ~ ~ 1
@@ -15,3 +14,4 @@ execute if entity @s[scores={Time=121..}] run function medabots_server:blocks/ga
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run setblock ~ ~ ~ minecraft:air
 kill @s[tag=dead]
+scoreboard players set @e[tag=custom_stage] PowerAmount 0

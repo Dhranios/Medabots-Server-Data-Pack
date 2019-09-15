@@ -26,27 +26,27 @@ team join Bot @s[tag=Bot,team=EnemyPlayer]
 team join Bot @s[tag=Bot,team=]
 
 # This player is knowledged
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Walk=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Run=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Boat=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Minecart=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Pig=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Horse=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Flying=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Swimming=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,WalkOnWater=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,WalkUnderWater=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Sneaking=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Jump=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Fall=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Medaforce=1}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Attack=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Drop=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Offline=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,UsePart=1..}]
-team join Advanced @s[team=AFK,scores={OnlineTime=5760..,Trading=1..}]
-team join Advanced @s[team=EnemyPlayer,scores={OnlineTime=5760..,Battle=0}]
-team join Advanced @s[team=,scores={OnlineTime=5760..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Walk=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Run=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Boat=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Minecart=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Pig=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Horse=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Flying=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Swimming=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={WalkOnWater=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={WalkUnderWater=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Sneaking=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Jump=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Fall=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Medaforce=1}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Attack=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Drop=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Offline=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={UsePart=1..}]
+team join Advanced @s[team=AFK,tag=advanced,scores={Trading=1..}]
+team join Advanced @s[team=EnemyPlayer,tag=advanced,scores={Battle=0}]
+team join Advanced @s[team=,tag=advanced]
 
 # This is a donator
 team join Donor @s[team=AFK,scores={Donor=1,Walk=1..}]
@@ -247,7 +247,6 @@ tag @s[scores={Sneak=1..}] add sneaking
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
 execute if entity @s[scores={Trading=1},tag=trading] run function medabots_server:shopping/reset
 scoreboard players set @s[scores={Trading=1..}] Trading 2
-tellraw @s[scores={Trading=1..},tag=!trading] {"translate":"medabots_server:message.shop.chat_setting","color":"green"}
 execute if entity @s[scores={Trading=1..},tag=!trading] run function medabots_server:shopping/target_villager
 scoreboard players set @s[scores={Trading=1..},tag=trading] Trading 0
 execute unless entity @e[tag=shop,distance=..4,limit=1] run tag @s[tag=trading] remove trading

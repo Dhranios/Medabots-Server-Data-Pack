@@ -5,9 +5,10 @@ tag @a[x=-1476,y=14,z=-176,distance=..1] remove -1
 tag @a[x=-1387,y=19,z=-194,distance=..1] remove 0
 scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] Stage 46
 scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] Battle 1
+stopsound @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] music
 loot spawn -1443 16 -157 loot medabots_server:gameplay/random_chance/1_in_84
 execute unless entity @e[x=-1442.5,y=16,z=-156.5,distance=..0.7,type=minecraft:item,nbt={Item:{tag:{Success:1b}}}] run playsound medabots_server:music.stage.pvp.rico_harbor_intro music @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] ~ ~ ~ 10000
-execute unless entity @e[x=-1442.5,y=16,z=-156.5,distance=..0.7,type=minecraft:item,nbt={Item:{tag:{Success:1b}}}] run scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] Music 40
+execute unless entity @e[x=-1442.5,y=16,z=-156.5,distance=..0.7,type=minecraft:item,nbt={Item:{tag:{Success:1b}}}] run scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] Music 30
 execute unless entity @e[x=-1442.5,y=16,z=-156.5,distance=..0.7,type=minecraft:item,nbt={Item:{tag:{Success:1b}}}] run scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] MusicType 24
 execute if entity @e[x=-1442.5,y=16,z=-156.5,distance=..0.7,type=minecraft:item,nbt={Item:{tag:{Success:1b}}}] run scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] Music 0
 execute if entity @e[x=-1442.5,y=16,z=-156.5,distance=..0.7,type=minecraft:item,nbt={Item:{tag:{Success:1b}}}] run scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] MusicType 25

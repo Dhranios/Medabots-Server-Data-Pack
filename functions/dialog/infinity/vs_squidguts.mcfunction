@@ -11,11 +11,11 @@ scoreboard players set @s[scores={Dialog=1}] MusicType -1
 scoreboard players set @s[scores={Dialog=1}] Music 62
 execute if entity @s[scores={Dialog=1}] positioned -1999 51 -560 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1998 51 -564 run function medabots_server:spawn_entities/cutscene/squidguts
-execute if entity @s[scores={Dialog=1..857}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @e[distance=..0.1,tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=1..857}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
 teleport @s[scores={Dialog=1}] -1997 51 -560 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.1"}]}
-execute if entity @s[scores={Dialog=24..786}] at @e[tag=squidguts,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=squidguts,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=24..786}] at @e[tag=squidguts,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=squidguts,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.2"}]}
 tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.3"}]}
 tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.4"}]}
@@ -35,10 +35,11 @@ tellraw @s[scores={Dialog=592}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=600}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.18"}]}
 tellraw @s[scores={Dialog=664}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.19"}]}
 execute if entity @s[scores={Dialog=786}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
+execute if entity @s[scores={Dialog=786}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=787..866}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=866}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add dead
 tellraw @s[scores={Dialog=826}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.20"}]}
-execute if entity @s[scores={Dialog=858..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=858..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=858}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.21","with":[{"selector":"@s"}]}]}
 tag @s[scores={Dialog=898}] remove dialog_infinity_vs_squidguts
 stopsound @s[scores={Dialog=898}] music

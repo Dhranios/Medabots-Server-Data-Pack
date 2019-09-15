@@ -38,26 +38,26 @@ execute if block -1727 43 -303 minecraft:lime_wool run scoreboard players set @e
 execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add enabled
 execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] add enabled
 execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,type=minecraft:area_effect_cloud,tag=press_wall] remove enabled
-execute if block -1694 44 -259 minecraft:iron_door[open=true] run tag @e[x=-1646.5,y=44,z=-289.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1709.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1709.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1712.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1712.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1712 43 -286 minecraft:yellow_wool run tag @e[x=-1714.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1712 43 -286 minecraft:orange_wool run tag @e[x=-1714.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1723 43 -289 minecraft:yellow_wool run tag @e[x=-1721.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1723 43 -289 minecraft:orange_wool run tag @e[x=-1721.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1723 43 -289 minecraft:yellow_wool run tag @e[x=-1724.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1723 43 -289 minecraft:orange_wool run tag @e[x=-1724.5,y=44,z=-276.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1723 43 -289 minecraft:yellow_wool run tag @e[x=-1726.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1723 43 -289 minecraft:orange_wool run tag @e[x=-1726.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1723 43 -289 minecraft:yellow_wool run tag @e[x=-1719.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1723 43 -289 minecraft:orange_wool run tag @e[x=-1719.5,y=44,z=-279.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1727.5,y=44,z=-302.5,distance=..0.7,tag=spring_wall] add enabled
-execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1725.5,y=44,z=-302.5,distance=..0.7,tag=spring_wall] add enabled
-execute if block -1727 43 -300 minecraft:lime_wool run tag @e[x=-1726.5,y=44,z=-315.5,distance=..0.7,tag=spring_wall] add enabled
+execute if block -1694 44 -259 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1646.5,y=44,z=-289.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1712 43 -286 minecraft:yellow_wool run scoreboard players set @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1712 43 -286 minecraft:orange_wool run scoreboard players set @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1712 43 -286 minecraft:yellow_wool run scoreboard players set @e[x=-1709.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1712 43 -286 minecraft:orange_wool run scoreboard players set @e[x=-1709.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1712 43 -286 minecraft:yellow_wool run scoreboard players set @e[x=-1712.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1712 43 -286 minecraft:orange_wool run scoreboard players set @e[x=-1712.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1712 43 -286 minecraft:yellow_wool run scoreboard players set @e[x=-1714.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1712 43 -286 minecraft:orange_wool run scoreboard players set @e[x=-1714.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1723 43 -289 minecraft:yellow_wool run scoreboard players set @e[x=-1721.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1723 43 -289 minecraft:orange_wool run scoreboard players set @e[x=-1721.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1723 43 -289 minecraft:yellow_wool run scoreboard players set @e[x=-1724.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1723 43 -289 minecraft:orange_wool run scoreboard players set @e[x=-1724.5,y=44,z=-276.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1723 43 -289 minecraft:yellow_wool run scoreboard players set @e[x=-1726.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1723 43 -289 minecraft:orange_wool run scoreboard players set @e[x=-1726.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1723 43 -289 minecraft:yellow_wool run scoreboard players set @e[x=-1719.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1723 43 -289 minecraft:orange_wool run scoreboard players set @e[x=-1719.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1727 43 -300 minecraft:lime_wool run scoreboard players set @e[x=-1727.5,y=44,z=-302.5,distance=..0.7,tag=spring_wall,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1727 43 -300 minecraft:lime_wool run scoreboard players set @e[x=-1725.5,y=44,z=-302.5,distance=..0.7,tag=spring_wall,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1727 43 -300 minecraft:lime_wool run scoreboard players set @e[x=-1726.5,y=44,z=-315.5,distance=..0.7,tag=spring_wall,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1651 44 -326 minecraft:iron_door[open=true] if block -1694 44 -259 minecraft:iron_door[open=false] if entity @s[x=-1652,y=44,z=-329,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_a/rubberobo_battle/0
 execute if entity @e[x=-1649.5,y=44,z=-336.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=8,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}

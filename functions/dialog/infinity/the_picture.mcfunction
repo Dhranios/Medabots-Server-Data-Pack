@@ -81,6 +81,7 @@ execute if entity @s[scores={Dialog=1735}] as @e[tag=roks,tag=!medabot_model,tag
 execute if entity @s[scores={Dialog=1735}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1736..1855}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1735}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -415 55 -28
+execute if entity @s[scores={Dialog=1735}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1736..1855}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1855}] run kill @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1855}] run kill @e[tag=koji,tag=this_dialog,limit=1]

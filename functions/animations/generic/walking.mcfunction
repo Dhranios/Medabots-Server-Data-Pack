@@ -6,7 +6,7 @@ execute if entity @s[tag=running,tag=walk_animation_other_way] store result enti
 execute store result entity @s Pose.LeftArm[0] float 0.1 run scoreboard players operation #temp Time *= #-1 Constants
 execute store result entity @s Pose.RightLeg[0] float 0.1 run scoreboard players get #temp Time
 execute store result entity @s Pose.LeftLeg[0] float 0.1 run scoreboard players operation #temp Time *= #-1 Constants
-execute if score #temp Time matches 80.. run tag @s add walk_animation_other_way
-execute if score #temp Time matches ..-80 run tag @s remove walk_animation_other_way
+execute if score #temp Time matches 120.. run tag @s add walk_animation_other_way
+execute if score #temp Time matches ..-120 run tag @s remove walk_animation_other_way
 scoreboard players reset #temp Time
 tag @s add was_walking

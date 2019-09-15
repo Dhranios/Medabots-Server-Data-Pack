@@ -10,7 +10,7 @@ execute if entity @s[scores={Dialog=1}] run playsound medabots_server:music.enti
 scoreboard players set @s[scores={Dialog=1}] MusicType 2
 scoreboard players set @s[scores={Dialog=1}] Music 2676
 execute if entity @s[scores={Dialog=1..}] run teleport @s -292 55 205
-execute if entity @s[scores={Dialog=286}] run summon minecraft:skeleton -292 68 195 {Invulnerable:1b,Silent:1b,NoGravity:1b,NoAI:1b,CustomName:'{"translate":"medabots_server:entity.magolor"}',ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandItems:[{},{}],HandDropChances:[0.0f,0.0f],LeftHanded:1b,Tags:["magolor","cutscene"]}
+execute if entity @s[scores={Dialog=286}] positioned -292 68 195 run function medabots_server:spawn_entities/cutscene/magolor
 execute at @s as @e[x=-292,y=68,z=195,tag=magolor,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=286}] run tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.magolor"},{"translate":"medabots_server:dialog.magolor.1"}]}
 execute if entity @s[scores={Dialog=286}] as @e[tag=magolor,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ ~ ~-10

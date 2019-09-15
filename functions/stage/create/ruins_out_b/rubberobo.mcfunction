@@ -11,8 +11,6 @@ execute positioned -1831 45 -472 run function medabots_server:spawn_entities/gua
 execute positioned -1840 45 -487 run function medabots_server:spawn_entities/guard/fast
 execute positioned -1806 45 -481 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1817 45 -483 run function medabots_server:spawn_entities/guard/medium
-execute positioned -1793 45 -479 run function medabots_server:spawn_entities/guard/medium/2_medallar_cents
-execute positioned -1781 45 -479 run function medabots_server:spawn_entities/guard/medium/2_medallar_cents
 execute positioned -1815 45 -449 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4/2_medallar_cents
 execute positioned -1808 45 -449 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4/2_medallar_cents
 execute positioned -1806 45 -451 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4
@@ -87,8 +85,10 @@ execute positioned -1856 45 -487 run function medabots_server:set_blocks/floor_s
 execute positioned -1852 45 -488 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1841 45 -493 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1791 45 -479 run function medabots_server:set_blocks/floor_switch/blue
-execute positioned -1855 45 -469 run function medabots_server:set_blocks/action_floor/diabled/guard/medium/power_1
-execute positioned -1854 45 -471 run function medabots_server:set_blocks/action_floor/diabled/guard/medium/power_1
+execute positioned -1855 45 -469 run function medabots_server:set_blocks/action_floor/guard/medium/power_1
+execute positioned -1854 45 -471 run function medabots_server:set_blocks/action_floor/guard/medium/power_1
+execute positioned -1793 45 -479 run function medabots_server:set_blocks/action_floor/guard/medium/2_medallar_cents/power_0
+execute positioned -1781 45 -479 run function medabots_server:set_blocks/action_floor/guard/medium/2_medallar_cents/power_0
 execute positioned -1769 45 -482 run function medabots_server:set_blocks/action_floor/bomb/delay_5/power_0
 execute positioned -1771 45 -482 run function medabots_server:set_blocks/action_floor/bomb/delay_5/power_0
 execute positioned -1770 45 -481 run function medabots_server:set_blocks/action_floor/bomb/delay_5/power_0
@@ -211,8 +211,9 @@ execute positioned -1800 45 -482 run function medabots_server:set_blocks/door/we
 execute positioned -1775 45 -482 run function medabots_server:set_blocks/door/west/power_1
 execute positioned -1770 45 -482 run function medabots_server:set_blocks/goal_area
 execute positioned -1811 45 -454 run function medabots_server:set_blocks/starting_area
-teleport @s -1811 45 -454 0 0
 scoreboard players set @s StageVersion 3
+function medabots_server:gamemodes/default/set_stats
+teleport @s -1811 45 -454 0 0
 bossbar set medabots_server:ruins_out_b/time value 0
 bossbar set medabots_server:ruins_out_b/time players @s
 scoreboard players set @s Battle 1

@@ -4,23 +4,13 @@
             "item": "minecraft:polished_granite"
         },
         "title": {
-            "translate": "medabots_server:location.lagdou_ruins",
-			"with": [
-				{
-					"text": "5"
-				}
-			]
+            "translate": "medabots_server:location.lagdou_ruins_5"
         },
         "description": {
             "translate": "medabots_server:advancements.stages.clear_again",
 			"with": [
 				{
-					"translate": "medabots_server:location.lagdou_ruins",
-					"with": [
-						{
-							"text": "5"
-						}
-					]
+					"translate": "medabots_server:location.lagdou_ruins_5"
 				}
 			]
         }

@@ -19,16 +19,16 @@ execute if block -1522 44 -365 minecraft:yellow_wool run scoreboard players set 
 execute if block -1522 44 -367 minecraft:orange_wool run scoreboard players set @e[x=-1543.5,y=45,z=-362.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1522 44 -367 minecraft:yellow_wool run scoreboard players set @e[x=-1543.5,y=45,z=-362.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1544 44 -374 minecraft:lime_wool run scoreboard players set @e[x=-1557.5,y=45,z=-383.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1555 44 -351 minecraft:blue_wool run tag @e[x=-1567.5,y=45,z=-350.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1555 44 -351 minecraft:light_blue_wool run tag @e[x=-1567.5,y=45,z=-350.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1550 44 -352 minecraft:blue_wool run tag @e[x=-1568.5,y=45,z=-351.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1550 44 -352 minecraft:light_blue_wool run tag @e[x=-1568.5,y=45,z=-351.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1563 44 -353 minecraft:blue_wool run tag @e[x=-1568.5,y=45,z=-352.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1563 44 -353 minecraft:light_blue_wool run tag @e[x=-1568.5,y=45,z=-352.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1558 44 -354 minecraft:blue_wool run tag @e[x=-1568.5,y=45,z=-353.5,distance=..0.7,tag=action_floor] remove enabled
-execute if block -1558 44 -354 minecraft:light_blue_wool run tag @e[x=-1568.5,y=45,z=-353.5,distance=..0.7,tag=action_floor] add enabled
-execute if block -1522 44 -366 minecraft:orange_wool run tag @e[x=-1522,y=44,z=-366,distance=..5,tag=alarm] remove enabled
-execute if block -1522 44 -366 minecraft:yellow_wool run tag @e[x=-1522,y=44,z=-366,distance=..5,tag=alarm] add enabled
+execute if block -1555 44 -351 minecraft:blue_wool run scoreboard players set @e[x=-1567.5,y=45,z=-350.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1555 44 -351 minecraft:light_blue_wool run scoreboard players set @e[x=-1567.5,y=45,z=-350.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1550 44 -352 minecraft:blue_wool run scoreboard players set @e[x=-1568.5,y=45,z=-351.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1550 44 -352 minecraft:light_blue_wool run scoreboard players set @e[x=-1568.5,y=45,z=-351.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1563 44 -353 minecraft:blue_wool run scoreboard players set @e[x=-1568.5,y=45,z=-352.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1563 44 -353 minecraft:light_blue_wool run scoreboard players set @e[x=-1568.5,y=45,z=-352.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1558 44 -354 minecraft:blue_wool run scoreboard players set @e[x=-1568.5,y=45,z=-353.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1558 44 -354 minecraft:light_blue_wool run scoreboard players set @e[x=-1568.5,y=45,z=-353.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1522 44 -366 minecraft:orange_wool run scoreboard players set @e[x=-1522,y=44,z=-366,distance=..5,tag=alarm,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1522 44 -366 minecraft:yellow_wool run scoreboard players set @e[x=-1522,y=44,z=-366,distance=..5,tag=alarm,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1522 45 -340 minecraft:iron_door[open=true] if block -1518 45 -335 minecraft:air if entity @s[x=-1524,y=45,z=-340,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_b/first_go_battle/0
 execute if entity @e[x=-1520.5,y=45,z=-328.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=10,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}

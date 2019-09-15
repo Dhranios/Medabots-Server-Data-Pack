@@ -52,6 +52,8 @@ scoreboard players set @s[scores={Dialog=1467}] Music 0
 scoreboard players set @s[scores={Dialog=1467}] Battle 0
 teleport @s[scores={Dialog=1467}] -286 55 -52.0 -90 0
 scoreboard players set @s[scores={Dialog=1467}] Dialog 0
+scoreboard players reset @s SelfDestruct
+scoreboard players reset @s SelfDestructTime
 scoreboard players operation @s[scores={Dialog=..1100}] HeadUses = @s MaxHeadUses
 scoreboard players operation @s HeadArmor = @s MaxHeadArmor
 scoreboard players operation @s[scores={Dialog=..1100}] RightArmArmor = @s MaxRightArmArmor

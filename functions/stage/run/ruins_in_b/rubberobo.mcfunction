@@ -17,14 +17,14 @@ execute if block -1591 43 -562 minecraft:lime_wool run scoreboard players set @e
 execute if block -1588 43 -562 minecraft:lime_wool run scoreboard players set @e[x=-1595.5,y=44,z=-565.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1591 43 -571 minecraft:lime_wool run scoreboard players set @e[x=-1595.5,y=44,z=-565.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1588 43 -571 minecraft:lime_wool run scoreboard players set @e[x=-1595.5,y=44,z=-565.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1601 43 -506 minecraft:blue_wool run tag @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1601 43 -505 minecraft:blue_wool run tag @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1600 43 -506 minecraft:blue_wool run tag @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1601 43 -506 minecraft:light_blue_wool if block -1601 43 -505 minecraft:light_blue_wool if block -1600 43 -506 minecraft:light_blue_wool run tag @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,tag=enabled] remove enabled
-execute if block -1601 43 -534 minecraft:blue_wool run tag @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,tag=!enabled] add enabled
-execute if block -1601 43 -535 minecraft:blue_wool run tag @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,tag=!enabled] add enabled
-execute if block -1600 43 -534 minecraft:blue_wool run tag @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,tag=!enabled] add enabled
-execute if block -1601 43 -534 minecraft:light_blue_wool if block -1601 43 -535 minecraft:light_blue_wool if block -1600 43 -534 minecraft:light_blue_wool run tag @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,tag=enabled] remove enabled
+execute if block -1601 43 -506 minecraft:blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1601 43 -505 minecraft:blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1600 43 -506 minecraft:blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1601 43 -506 minecraft:light_blue_wool if block -1601 43 -505 minecraft:light_blue_wool if block -1600 43 -506 minecraft:light_blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-512.5,distance=..4,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1601 43 -534 minecraft:blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1601 43 -535 minecraft:blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1600 43 -534 minecraft:blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1601 43 -534 minecraft:light_blue_wool if block -1601 43 -535 minecraft:light_blue_wool if block -1600 43 -534 minecraft:light_blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-526.5,distance=..4,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1600 43 -505 minecraft:blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-488.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1600 43 -505 minecraft:light_blue_wool run scoreboard players set @e[x=-1606.5,y=44,z=-488.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1600 43 -505 minecraft:blue_wool run scoreboard players set @e[x=-1599.5,y=44,z=-488.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1

@@ -13,36 +13,36 @@ execute if block -1728 44 -642 minecraft:lime_wool run scoreboard players set @e
 execute if block -1697 44 -728 minecraft:lime_wool if block -1734 44 -715 minecraft:lime_wool run scoreboard players set @e[x=-1713.5,y=45,z=-705.5,distance=..0.7,tag=door,scores={NeededPower=1}] PowerAmount 1
 execute if block -1722 44 -670 minecraft:yellow_wool run scoreboard players add @e[x=-1720.5,y=45,z=-669.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1722 44 -670 minecraft:yellow_wool run tag @e[x=-1720.5,y=45,z=-669.5,distance=..0.7,tag=fan,tag=!changed] add changed
-execute if block -1722 44 -670 minecraft:yellow_wool run tag @e[x=-1720.5,y=45,z=-667.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1722 44 -670 minecraft:yellow_wool run tag @e[x=-1720.5,y=45,z=-674.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1722 44 -670 minecraft:yellow_wool run tag @e[x=-1720.5,y=45,z=-667.5,distance=..0.7,tag=laser_trap] add enabled
+execute if block -1722 44 -670 minecraft:yellow_wool run tag @e[x=-1720.5,y=45,z=-674.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1722 44 -670 minecraft:orange_wool run scoreboard players remove @e[x=-1720.5,y=45,z=-669.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1722 44 -670 minecraft:orange_wool run tag @e[x=-1720.5,y=45,z=-669.5,distance=..0.7,tag=fan,tag=changed] remove changed
-execute if block -1722 44 -670 minecraft:orange_wool run tag @e[x=-1720.5,y=45,z=-667.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
-execute if block -1722 44 -670 minecraft:orange_wool run tag @e[x=-1720.5,y=45,z=-674.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1722 44 -670 minecraft:orange_wool run scoreboard players set @e[x=-1720.5,y=45,z=-667.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1722 44 -670 minecraft:orange_wool run scoreboard players set @e[x=-1720.5,y=45,z=-674.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1707 44 -670 minecraft:yellow_wool run scoreboard players add @e[x=-1706.5,y=45,z=-670.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1707 44 -670 minecraft:yellow_wool run tag @e[x=-1706.5,y=45,z=-670.5,distance=..0.7,tag=fan,tag=!changed] add changed
-execute if block -1707 44 -670 minecraft:yellow_wool run tag @e[x=-1704.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1707 44 -670 minecraft:yellow_wool run tag @e[x=-1711.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1707 44 -670 minecraft:yellow_wool run tag @e[x=-1704.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap] add enabled
+execute if block -1707 44 -670 minecraft:yellow_wool run tag @e[x=-1711.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1707 44 -670 minecraft:orange_wool run scoreboard players remove @e[x=-1706.5,y=45,z=-670.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1707 44 -670 minecraft:orange_wool run tag @e[x=-1706.5,y=45,z=-670.5,distance=..0.7,tag=fan,tag=changed] remove changed
-execute if block -1707 44 -670 minecraft:orange_wool run tag @e[x=-1704.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
-execute if block -1707 44 -670 minecraft:orange_wool run tag @e[x=-1711.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1707 44 -670 minecraft:orange_wool run scoreboard players set @e[x=-1704.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1707 44 -670 minecraft:orange_wool run scoreboard players set @e[x=-1711.5,y=45,z=-670.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1707 44 -685 minecraft:yellow_wool run scoreboard players add @e[x=-1707.5,y=45,z=-684.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1707 44 -685 minecraft:yellow_wool run tag @e[x=-1707.5,y=45,z=-684.5,distance=..0.7,tag=fan,tag=!changed] add changed
-execute if block -1707 44 -685 minecraft:yellow_wool run tag @e[x=-1707.5,y=45,z=-686.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1707 44 -685 minecraft:yellow_wool run tag @e[x=-1707.5,y=45,z=-679.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1707 44 -685 minecraft:yellow_wool run tag @e[x=-1707.5,y=45,z=-686.5,distance=..0.7,tag=laser_trap] add enabled
+execute if block -1707 44 -685 minecraft:yellow_wool run tag @e[x=-1707.5,y=45,z=-679.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1707 44 -685 minecraft:orange_wool run scoreboard players remove @e[x=-1707.5,y=45,z=-684.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1707 44 -685 minecraft:orange_wool run tag @e[x=-1707.5,y=45,z=-684.5,distance=..0.7,tag=fan,tag=changed] remove changed
-execute if block -1707 44 -685 minecraft:orange_wool run tag @e[x=-1707.5,y=45,z=-686.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
-execute if block -1707 44 -685 minecraft:orange_wool run tag @e[x=-1707.5,y=45,z=-679.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1707 44 -685 minecraft:orange_wool run scoreboard players set @e[x=-1707.5,y=45,z=-686.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1707 44 -685 minecraft:orange_wool run scoreboard players set @e[x=-1707.5,y=45,z=-679.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1722 44 -685 minecraft:yellow_wool run scoreboard players add @e[x=-1721.5,y=45,z=-683.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1722 44 -685 minecraft:yellow_wool run tag @e[x=-1721.5,y=45,z=-683.5,distance=..0.7,tag=fan,tag=!changed] add changed
-execute if block -1722 44 -685 minecraft:yellow_wool run tag @e[x=-1723.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
-execute if block -1722 44 -685 minecraft:yellow_wool run tag @e[x=-1716.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap,tag=!enabled] add enabled
+execute if block -1722 44 -685 minecraft:yellow_wool run tag @e[x=-1723.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap] add enabled
+execute if block -1722 44 -685 minecraft:yellow_wool run tag @e[x=-1716.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap] add enabled
 execute if block -1722 44 -685 minecraft:orange_wool run scoreboard players remove @e[x=-1721.5,y=45,z=-683.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1722 44 -685 minecraft:orange_wool run tag @e[x=-1721.5,y=45,z=-683.5,distance=..0.7,tag=fan,tag=changed] remove changed
-execute if block -1722 44 -685 minecraft:orange_wool run tag @e[x=-1723.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
-execute if block -1722 44 -685 minecraft:orange_wool run tag @e[x=-1716.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap,tag=enabled] remove enabled
+execute if block -1722 44 -685 minecraft:orange_wool run scoreboard players set @e[x=-1723.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1722 44 -685 minecraft:orange_wool run scoreboard players set @e[x=-1716.5,y=45,z=-683.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1683 45 -694 minecraft:iron_door[open=true] if block -1689 45 -645 minecraft:iron_door[open=false] if entity @s[x=-1685,y=45,z=-694,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_a/second_go_battle/0
 execute if entity @e[x=-1672.5,y=45,z=-648.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1672.5,y=45,z=-648.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=21},tag=guard,tag=mission_entity] run tag @s add mission_success

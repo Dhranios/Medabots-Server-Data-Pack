@@ -36,10 +36,12 @@ tellraw @s[scores={Dialog=536}] {"translate":"chat.type.text","with":[{"translat
 execute if entity @s[scores={Dialog=544}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 execute if entity @s[scores={Dialog=544}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=544}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
+execute if entity @s[scores={Dialog=544}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=545..558}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=545..567}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=559}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=559}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
+execute if entity @s[scores={Dialog=568}] run tag @e[tag=spyke,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=568}] as @e[tag=spyke,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=568}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=544}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 135 0
@@ -137,9 +139,11 @@ execute if entity @s[scores={Dialog=3016}] positioned -428 55 -28 run function m
 execute if entity @s[scores={Dialog=3016}] positioned -428 55 -28 run tag @e[tag=rubberobo,tag=this_dialog,limit=1,distance=..0.7] add rubberobo_2
 execute if entity @s[scores={Dialog=3016}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -45 ~
 execute if entity @s[scores={Dialog=3017}] run tag @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] add walking
+execute if entity @s[scores={Dialog=3017}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=3017..3040}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3017..3040}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3017}] run tag @e[tag=dragonbeetle_2,tag=!medabot_model,tag=this_dialog,limit=1] add walking
+execute if entity @s[scores={Dialog=3017}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=3017..3040}] as @e[tag=dragonbeetle_2,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3017..3040}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3041}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 40 0
@@ -150,6 +154,8 @@ execute if entity @s[scores={Dialog=3042..3121}] as @e[tag=dragonbeetle_1,tag=!m
 execute if entity @s[scores={Dialog=3042..3111}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3042..3113}] as @e[tag=dragonbeetle_2,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3042..3103}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=3103}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] run tag @s add running
+execute if entity @s[scores={Dialog=3111}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=3113}] run tag @e[tag=dragonbeetle_2,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=3114}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=3115..3120}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
@@ -226,8 +232,12 @@ execute if entity @s[scores={Dialog=3991}] as @e[tag=jaxy,tag=!medabot_model,tag
 execute if entity @s[scores={Dialog=3991}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=3986..3995}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^-0.425
 execute if entity @s[scores={Dialog=3986..3995}] as @e[tag=dragonbeetle_2,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^-0.425
+execute if entity @s[scores={Dialog=3986}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] run tag @s add running
+execute if entity @s[scores={Dialog=3986}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=3986..3995}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^-0.425
 execute if entity @s[scores={Dialog=3986..3995}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^-0.425
+execute if entity @s[scores={Dialog=3996}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] run tag @s remove running
+execute if entity @s[scores={Dialog=3996}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] run tag @s remove running
 tellraw @s[scores={Dialog=3995}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.the_prominence.105"}]}
 execute if entity @s[scores={Dialog=4022}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 execute if entity @s[scores={Dialog=4022}] run tag @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] add walking
@@ -260,6 +270,7 @@ execute if entity @s[scores={Dialog=4326}] at @e[tag=dragonbeetle,tag=this_dialo
 execute if entity @s[scores={Dialog=4326}] run kill @e[tag=dragonbeetle,tag=this_dialog]
 tellraw @s[scores={Dialog=4346}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.the_prominence.114"}]}
 tellraw @s[scores={Dialog=4362}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.the_prominence.115"}]}
+execute if entity @s[scores={Dialog=4394}] as @e[tag=rubberobo,tag=this_dialog] run tag @s add running
 execute if entity @s[scores={Dialog=4394}] as @e[tag=rubberobo,tag=this_dialog] at @s run teleport @s ~ ~ ~ -115 0
 execute if entity @s[scores={Dialog=4395..4434}] as @e[tag=rubberobo,tag=this_dialog] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=4435}] as @e[tag=rubberobo,tag=this_dialog] at @s run teleport @s ~ ~ ~ -180 0
@@ -300,6 +311,7 @@ execute if entity @s[scores={Dialog=5032}] run tag @e[tag=jaxy,tag=!medabot_mode
 execute if entity @s[scores={Dialog=5033..}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=5072}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.the_prominence.129"}]}
 tellraw @s[scores={Dialog=5088}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.the_prominence.130"}]}
+execute if entity @s[scores={Dialog=5112}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=5112}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -135 0
 execute if entity @s[scores={Dialog=5113..}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 stopsound @s[scores={Dialog=5132}] music

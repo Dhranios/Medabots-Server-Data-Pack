@@ -12,7 +12,9 @@ scoreboard players set @s[scores={Dialog=1}] Music 70
 execute if entity @s[scores={Dialog=1}] positioned -394 55 -52 run function medabots_server:spawn_entities/cutscene/select_corps
 teleport @s[x=-394,y=55,z=-52,distance=..4] -399 55 -52
 execute if entity @s[scores={Dialog=1}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
+execute if entity @s[scores={Dialog=1}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2..81}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=82}] as @e[tag=select_corps,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=82..255}] at @e[tag=select_corps,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=select_corps,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.1"}]}
 tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.2"}]}
@@ -21,6 +23,7 @@ tellraw @s[scores={Dialog=128}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.5"}]}
 tellraw @s[scores={Dialog=200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.6"}]}
 execute if entity @s[scores={Dialog=256}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
+execute if entity @s[scores={Dialog=256}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=257..}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=297}] remove dialog_infinity_select_corps_warning
 stopsound @s[scores={Dialog=297}] music

@@ -3,7 +3,7 @@ summon minecraft:armor_stand ^ ^0.1 ^1 {Invisible:1b,Small:1b,ArmorItems:[{},{},
 execute positioned ^ ^0.1 ^1 at @e[type=minecraft:armor_stand,tag=destroy,distance=..0.2] rotated as @s run teleport @e[type=minecraft:armor_stand,tag=destroy,distance=..0.2] ~ ~ ~ ~ ~
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[scores={Destroy=2}] HeadUses 1
+scoreboard players remove @s[tag=head_selected] HeadUses 1
 
 # Make the closest destroy move deal damage
 tag @s add me

@@ -12,10 +12,10 @@ execute if block -1603 44 -321 minecraft:lime_wool run scoreboard players set @e
 execute if block -1607 44 -321 minecraft:lime_wool run scoreboard players set @e[x=-1613.5,y=45,z=-331.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1576 44 -357 minecraft:yellow_wool run scoreboard players set @e[x=-1576.5,y=45,z=-357.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1576 44 -357 minecraft:orange_wool run scoreboard players set @e[x=-1576.5,y=45,z=-357.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1605 44 -321 minecraft:light_blue_wool run tag @e[x=-1604.5,y=45,z=-319.5,distance=..0.7,tag=hammer_punch] add enabled
-execute if block -1605 44 -321 minecraft:blue_wool run tag @e[x=-1604.5,y=45,z=-319.5,distance=..0.7,tag=hammer_punch] remove enabled
-execute if block -1606 44 -335 minecraft:light_blue_wool run tag @e[x=-1605.5,y=45,z=-335.5,distance=..0.7,tag=hammer_punch] add enabled
-execute if block -1606 44 -335 minecraft:blue_wool run tag @e[x=-1605.5,y=45,z=-335.5,distance=..0.7,tag=hammer_punch] remove enabled
+execute if block -1605 44 -321 minecraft:light_blue_wool run scoreboard players set @e[x=-1604.5,y=45,z=-319.5,distance=..0.7,tag=hammer_punch,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1605 44 -321 minecraft:blue_wool run scoreboard players set @e[x=-1604.5,y=45,z=-319.5,distance=..0.7,tag=hammer_punch,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1606 44 -335 minecraft:light_blue_wool run scoreboard players set @e[x=-1605.5,y=45,z=-335.5,distance=..0.7,tag=hammer_punch,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1606 44 -335 minecraft:blue_wool run scoreboard players set @e[x=-1605.5,y=45,z=-335.5,distance=..0.7,tag=hammer_punch,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1595 45 -344 minecraft:iron_door[open=true] if block -1583 45 -343 minecraft:iron_door[open=false] if entity @s[x=-1595,y=45,z=-345,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_b/second_go_battle/0
 execute if entity @e[x=-1587.5,y=45,z=-344.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=11,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}

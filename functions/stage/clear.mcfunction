@@ -7,3 +7,4 @@ scoreboard players set @s Music 299
 teleport @s ~ ~ ~ -180 0
 tag @s remove story_battle
 tag @s remove clear_stage
+function medabots_server:gamemodes/default/reset

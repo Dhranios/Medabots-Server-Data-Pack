@@ -42,4 +42,4 @@ execute if entity @s[scores={ScoutTime=1..},tag=enemy_medabot] as @e[scores={Max
 execute if entity @s[scores={ScoutTime=1..},tag=enemy_medabot] as @e[scores={MaxRightArmArmor=..15},distance=..16,tag=enemy_medabot] run scoreboard players operation @s RightArmArmor = @s MaxRightArmArmor
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[scores={Repair=2}] HeadUses 1
+scoreboard players remove @s[tag=head_selected] HeadUses 1

@@ -15,7 +15,7 @@ execute if entity @s[tag=seaslug] run function medabots_server:animations/seaslu
 
 # Generic animations
 execute unless entity @s[tag=!walking,tag=!running,tag=!rubberobo] run function medabots_server:animations/generic/walking
-execute if entity @s[tag=!walking,tag=!running,tag=was_walking,tag=!rubberobo] run data merge entity @s {Pose:{RightArm:[15.0f,15.0f,0.0f],eftArm:[15.0f,15.0f,0.0f],RightLeg:[15.0f,15.0f,0.0f],LeftLeg:[15.0f,15.0f,0.0f]}}
+execute if entity @s[tag=!walking,tag=!running,tag=was_walking,tag=!rubberobo] run data merge entity @s {Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]}}
 execute if entity @s[tag=!walking,tag=!running,tag=!rubberobo] run tag @s remove was_walking
 
 execute unless entity @s[tag=hand_over] run function medabots_server:animations/generic/hand_over

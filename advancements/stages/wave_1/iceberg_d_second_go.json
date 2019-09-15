@@ -4,12 +4,7 @@
             "item": "minecraft:packed_ice"
         },
         "title": {
-            "translate": "medabots_server:location.iceberg",
-			"with": [
-				{
-					"text": "D"
-				}
-			],
+            "translate": "medabots_server:location.iceberg_d",
 			"extra": [
 				{
 					"translate": "medabots_server:message.stage.requires.version"

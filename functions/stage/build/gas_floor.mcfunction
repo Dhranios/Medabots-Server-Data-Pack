@@ -5,4 +5,4 @@ execute if entity @s[tag=allowed,scores={StageBuild=87}] run function medabots_s
 execute if entity @s[tag=allowed,scores={StageBuild=88}] run function medabots_server:set_blocks/gas_floor/ineffective
 execute if entity @s[tag=allowed,scores={StageBuild=89}] run function medabots_server:set_blocks/gas_floor/no_defend
 execute if entity @s[tag=allowed,scores={StageBuild=90}] run function medabots_server:set_blocks/gas_floor/falling
-tag @e[distance=..0.7,tag=stone] add no_ticking
+tag @e[distance=..0.7,tag=gas_floor] add no_ticking

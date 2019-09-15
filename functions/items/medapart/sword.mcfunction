@@ -3,7 +3,7 @@ execute if entity @s[scores={Time=20..22}] run function medabots_server:items/me
 execute if entity @s[scores={Time=60..}] run function medabots_server:items/medapart/sword/60_
 
 # Increase time by 1
-scoreboard players add @s[scores={Sword=1..}] Time 1
+scoreboard players add @s[scores={MedapartType=37}] Time 1
 
 # Allow dealing damage
 effect clear @s minecraft:weakness

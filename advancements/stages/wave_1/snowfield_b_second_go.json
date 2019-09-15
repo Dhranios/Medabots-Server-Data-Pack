@@ -4,12 +4,7 @@
             "item": "minecraft:snow_block"
         },
         "title": {
-            "translate": "medabots_server:location.snowfield",
-			"with": [
-				{
-					"text": "B"
-				}
-			],
+            "translate": "medabots_server:location.snowfield_b",
 			"extra": [
 				{
 					"translate": "medabots_server:message.stage.requires.version"
@@ -23,12 +18,7 @@
             "translate": "medabots_server:advancements.stages.version",
 			"with": [
 				{
-					"translate": "medabots_server:location.snowfield",
-					"with": [
-						{
-							"text": "B"
-						}
-					]
+					"translate": "medabots_server:location.snowfield_b"
 				},
 				{
 					"translate": "medabots_server:sign.stage.version.second_go"

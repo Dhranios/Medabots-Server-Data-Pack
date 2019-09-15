@@ -27,5 +27,6 @@ scoreboard players set @s[scores={Time=0},tag=delay_10] Time 200
 
 # Timer based pushing if powered
 scoreboard players remove @s[scores={Time=..19}] Time 1
-execute if score @s[scores={Time=20}] PowerAmount = @s PowerNeeded run scoreboard players remove @s Time 1
+execute if score @s[scores={Time=20}] PowerAmount >= @s PowerNeeded run scoreboard players remove @s Time 1
 scoreboard players remove @s[scores={Time=21..}] Time 1
+scoreboard players set @e[tag=custom_stage] PowerAmount 0

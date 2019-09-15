@@ -42,8 +42,8 @@ execute if block -1676 44 -417 minecraft:blue_wool run scoreboard players remove
 execute if block -1676 44 -417 minecraft:blue_wool run tag @e[x=-1675.5,y=45,z=-417.5,distance=..0.7,tag=fan,tag=changed] remove changed
 execute if block -1676 44 -417 minecraft:light_blue_wool run scoreboard players add @e[x=-1675.5,y=45,z=-417.5,distance=..0.7,tag=fan,tag=!changed] Moving 1
 execute if block -1676 44 -417 minecraft:light_blue_wool run tag @e[x=-1675.5,y=45,z=-417.5,distance=..0.7,tag=fan,tag=!changed] add changed
-execute if block -1679 44 -411 minecraft:blue_wool run tag @e[x=-1690,y=44,z=-412,dx=10,dy=3,dz=2,tag=alarm,tag=enabled] remove enabled
-execute if block -1679 44 -411 minecraft:light_blue_wool if block -1679 44 -412 minecraft:blue_wool run tag @e[x=-1690,y=44,z=-412,dx=10,dy=3,dz=2,tag=alarm,tag=!enabled] add enabled
+execute if block -1679 44 -411 minecraft:blue_wool run scoreboard players set @e[x=-1690,y=44,z=-412,dx=10,dy=3,dz=2,tag=alarm,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1679 44 -411 minecraft:light_blue_wool if block -1679 44 -412 minecraft:blue_wool run tag @e[x=-1690,y=44,z=-412,dx=10,dy=3,dz=2,tag=alarm] add enabled
 execute if block -1747 45 -354 minecraft:iron_door[open=true] if block -1760 44 -368 minecraft:water if entity @s[x=-1750,y=44,z=-356,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_b/second_go_battle/0
 execute if entity @e[x=-1754.5,y=44,z=-360.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=13,Medabot=0..,Battle=1..2}]
 execute if entity @e[x=-1754.5,y=44,z=-360.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[scores={Stage=13},tag=cannon,tag=mission_entity] run tag @s add mission_success

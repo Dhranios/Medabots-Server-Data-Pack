@@ -14,7 +14,7 @@ execute if entity @s[scores={Dialog=1}] positioned -1537 51 -151 run function me
 teleport @s[scores={Dialog=1}] -1540 51 -151 -90 0
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
-execute if entity @s[scores={Dialog=1..953}] at @e[tag=karin,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=karin,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=1..953}] at @e[tag=karin,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=karin,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.meet_karin.1"}]}
 tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.meet_karin.2"}]}
 tellraw @s[scores={Dialog=46}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.neutranurse"},{"translate":"medabots_server:dialog.infinity.meet_karin.3"}]}
@@ -35,12 +35,13 @@ tellraw @s[scores={Dialog=858}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=874}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.neutranurse"},{"translate":"medabots_server:dialog.infinity.meet_karin.18"}]}
 tellraw @s[scores={Dialog=906}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.meet_karin.19"}]}
 execute if entity @s[scores={Dialog=954}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
+execute if entity @s[scores={Dialog=954}] run tag @e[tag=karin,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=955..1105}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=954}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
 execute if entity @s[scores={Dialog=954}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking
 execute if entity @s[scores={Dialog=955..990}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=990}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s remove walking
-execute if entity @s[scores={Dialog=990..1100}] at @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=neutranurse,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=990..1100}] at @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=neutranurse,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=990}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.neutranurse"},{"translate":"medabots_server:dialog.infinity.meet_karin.20"}]}
 execute if entity @s[scores={Dialog=1101}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
 execute if entity @s[scores={Dialog=1101}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking

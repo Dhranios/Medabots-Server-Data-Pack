@@ -5,7 +5,7 @@ kill @s[tag=dead]
 
 # Coundown shooting
 scoreboard players remove @s[scores={Time=1..19}] Time 1
-execute if score @s[scores={Time=20}] PowerAmount = @s PowerNeeded run scoreboard players remove @s Time 1
+execute if score @s[scores={Time=20}] PowerAmount >= @s PowerNeeded run scoreboard players remove @s Time 1
 scoreboard players remove @s[scores={Time=21..}] Time 1
 
 # Fire in the hole!
@@ -31,3 +31,4 @@ scoreboard players set @s[tag=delay_12,scores={Time=0}] Time 240
 scoreboard players set @s[tag=delay_13,scores={Time=0}] Time 260
 scoreboard players set @s[tag=delay_14,scores={Time=0}] Time 280
 scoreboard players set @s[tag=delay_15,scores={Time=0}] Time 300
+scoreboard players set @e[tag=custom_stage] PowerAmount 0

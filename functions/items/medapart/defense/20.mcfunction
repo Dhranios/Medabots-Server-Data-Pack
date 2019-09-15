@@ -9,4 +9,4 @@ execute if entity @s[scores={ScoutTime=1..},tag=ally_medabot] run scoreboard pla
 execute if entity @e[scores={ScoutTime=1..},tag=enemy_medabot] run scoreboard players set @e[distance=..16,tag=enemy_medabot] DefenseTime 180
 
 # Remove from head uses if this was a head part
-scoreboard players remove @s[scores={Defense=2,Time=20}] HeadUses 1
+scoreboard players remove @s[tag=head_selected,scores={Time=20}] HeadUses 1

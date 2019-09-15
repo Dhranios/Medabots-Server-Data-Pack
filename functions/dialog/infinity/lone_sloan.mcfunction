@@ -6,7 +6,7 @@ execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity lone_sloan
 execute if entity @s[scores={Dialog=1}] positioned -384 55 -9 run function medabots_server:spawn_entities/cutscene/sloan
-execute if entity @s[scores={Dialog=1..}] at @e[tag=sloan,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=sloan,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=1..}] at @e[tag=sloan,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=sloan,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.lone_sloan.1","with":[{"selector":"@s"}]}]}
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.lone_sloan.2"}]}
 tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.lone_sloan.3"}]}

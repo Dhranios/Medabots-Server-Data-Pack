@@ -31,4 +31,4 @@ execute rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~-1 minecraft:water[level=0
 execute rotated 0 ~ positioned ^ ^ ^2 if block ~ ~-1 ~1 minecraft:water[level=0] unless block ~ ~ ~1 minecraft:water positioned ~ ~-1 ~1 run function medabots_server:set_blocks/thin_ice
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[scores={Freeze=2}] HeadUses 1
+scoreboard players remove @s[tag=head_selected] HeadUses 1

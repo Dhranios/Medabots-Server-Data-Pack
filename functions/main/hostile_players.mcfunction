@@ -52,6 +52,9 @@ title @s actionbar {"translate":"medabots_server:scoreboard.objective.legs_armor
 function medabots_server:items/pot_breaker
 
 # Let the combat begin, activate your part
+tag @s[scores={Time=0}] remove head_selected
+tag @s[scores={Time=0}] remove right_arm_selected
+tag @s[scores={Time=0}] remove left_arm_selected
 execute if entity @s[scores={Time=0,Battle=1,UsePart=1..}] run function medabots_server:items/medapart/activate/player
 
 # Static flying
@@ -63,10 +66,6 @@ tag @s[scores={Battle=1,UsePart=1..},tag=static_flying] remove static_flying
 # Check status effects
 execute if entity @s[tag=!checked_effects,nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}}] run function medabots_server:effects/check
 tag @s[tag=checked_effects,nbt=!{SelectedItem:{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}}] remove checked_effects
-
-# Track how long the player has been in combat
-# To do: make the scoreboard name correct
-scoreboard players add @s OnlineTime 1
 
 # Damage the selected part
 execute if entity @s[tag=murder_mystery,scores={Damage=1..}] run scoreboard players set @s HeadArmor 0

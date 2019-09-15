@@ -12,9 +12,9 @@ execute if block -1805 44 -486 minecraft:lime_wool run scoreboard players set @e
 execute if block -1805 44 -478 minecraft:lime_wool run scoreboard players set @e[x=-1799.5,y=45,z=-481.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1852 44 -488 minecraft:blue_wool run scoreboard players set @e[x=-1799.5,y=45,z=-481.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1818 44 -478 minecraft:green_wool if block -1818 44 -486 minecraft:green_wool if block -1805 44 -486 minecraft:green_wool if block -1805 44 -478 minecraft:green_wool if block -1852 44 -488 minecraft:light_blue_wool run scoreboard players set @e[x=-1799.5,y=45,z=-481.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1841 44 -493 minecraft:blue_wool run scoreboard players set @e[x=-1824.5,y=45,z=-445.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1791 44 -479 minecraft:blue_wool run scoreboard players set @e[x=-1824.5,y=45,z=-445.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1841 44 -493 minecraft:light_blue_wool if block -1791 44 -479 minecraft:light_blue_wool run scoreboard players set @e[x=-1824.5,y=45,z=-445.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1841 44 -493 minecraft:blue_wool run scoreboard players set @e[x=-1774.5,y=45,z=-481.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1791 44 -479 minecraft:blue_wool run scoreboard players set @e[x=-1774.5,y=45,z=-481.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1841 44 -493 minecraft:light_blue_wool if block -1791 44 -479 minecraft:light_blue_wool run scoreboard players set @e[x=-1774.5,y=45,z=-481.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1856 44 -472 minecraft:light_blue_wool run scoreboard players set @e[x=-1854.5,y=45,z=-468.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1856 44 -472 minecraft:blue_wool run scoreboard players set @e[x=-1854.5,y=45,z=-468.5,distance=..0.7,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1856 44 -472 minecraft:light_blue_wool run scoreboard players set @e[x=-1853.5,y=45,z=-470.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
