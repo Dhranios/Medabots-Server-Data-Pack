@@ -1,5 +1,5 @@
 # Timer countdown
-scoreboard players remove @s[scores={Dialog=1..}] Dialog 1
+scoreboard players remove @s[scores={Dialog=1..},tag=enabled] Dialog 1
 execute if entity @s[scores={Dialog=0},tag=!dead] run function medabots_server:entities/bomb/explode
 
 # Push away

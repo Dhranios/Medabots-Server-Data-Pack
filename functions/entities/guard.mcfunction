@@ -6,7 +6,7 @@ execute if entity @s[tag=dying,tag=!dead] run function medabots_server:animation
 scoreboard players remove @s[scores={Time=1..}] Time 1
 
 # If hurt, freezes
-scoreboard players set @s[nbt={HurtTime:9s}] Time 40
+tag @s[nbt={HurtTime:9s}] add hurt
 
 # Effects
 scoreboard players set @s[scores={FreezeTime=1..}] Time 40
@@ -19,10 +19,11 @@ teleport @s[tag=!dying,scores={ConfuseTime=1..}] ~ ~ ~ ~-18 ~
 
 # Attack
 execute unless block ~ ~ ~ minecraft:water unless block ~ ~ ~1 minecraft:air unless block ~ ~ ~1 minecraft:comparator unless block ~ ~ ~1 minecraft:black_carpet unless block ~ ~ ~1 minecraft:light_gray_carpet unless block ~ ~ ~1 #minecraft:slabs[type=bottom] unless block ~ ~ ~-1 minecraft:air unless block ~ ~ ~-1 minecraft:comparator unless block ~ ~ ~-1 minecraft:black_carpet unless block ~ ~ ~-1 minecraft:light_gray_carpet unless block ~ ~ ~-1 #minecraft:slabs[type=bottom] unless block ~1 ~ ~ minecraft:air unless block ~1 ~ ~ minecraft:comparator unless block ~1 ~ ~ minecraft:black_carpet unless block ~1 ~ ~ minecraft:light_gray_carpet unless block ~1 ~ ~ #minecraft:slabs[type=bottom] unless block ~-1 ~ ~ minecraft:air unless block ~-1 ~ ~ minecraft:comparator unless block ~-1 ~ ~ minecraft:black_carpet unless block ~-1 ~ ~ minecraft:light_gray_carpet unless block ~-1 ~ ~ #minecraft:slabs[type=bottom] run tag @s add cannot_move
-execute if entity @s[scores={Time=0},tag=!alarm_ringing,tag=!dying,tag=!cannot_move] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^0.5 if entity @a[tag=hostile,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] run function medabots_server:entities/guard/attack
+execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^0.5 if entity @a[tag=hostile,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={Battle=1}] run tag @s add attack
 
 # Walk to target or random location
-execute at @s[scores={Time=0},tag=!alarm_ringing,tag=!dying,tag=!cannot_move] run function medabots_server:entities/guard/wander
+tag @s remove walking
+execute at @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!attack] run function medabots_server:entities/guard/wander
 
 # Fall
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
@@ -38,8 +39,9 @@ execute at @s if entity @s[y=0,dy=1] run tag @s add dead
 tag @s remove cannot_move
 
 # Attacked by melee trap
-execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run function medabots_server:items/medapart/melee_trap/hit
+execute if entity @s[tag=attack] at @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run function medabots_server:items/medapart/melee_trap/hit
 
 # Clean up
 teleport @s[tag=dead] ~ -1000 ~
+execute if entity @s[tag=dead] as @e[scores={GuardNr=1..},tag=model_piece] if score @s GuardNr = @e[distance=..0.7,tag=guard,limit=1] GuardNr run kill @s
 execute if entity @s[tag=dead] as @e[scores={GuardNr=1..}] if score @s GuardNr > @e[distance=..0.7,tag=guard,limit=1] GuardNr run scoreboard players remove @s GuardNr 1

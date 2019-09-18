@@ -51,10 +51,10 @@ execute if entity @s[tag=!murder_mystery] run function medabots_server:items/ena
 execute if entity @s[tag=murder_mystery,tag=!innocent] run function medabots_server:items/enable_medaparts
 
 # Model
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["legs","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["left_arm","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model","new"],CustomName:'{"translate":"medabots_server:entity.medabot_model"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["legs","medabot_model","model_piece","new"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["left_arm","medabot_model","model_piece","new"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model","model_piece","new"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model","model_piece","new"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 scoreboard players operation @s MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 scoreboard players add @s MedabotNr 1
 execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = @a[distance=..0.1,limit=1] MedabotNr

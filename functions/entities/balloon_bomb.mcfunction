@@ -1,5 +1,6 @@
 # Blow away
 execute if entity @s[scores={Moving=0}] run function medabots_server:entities/balloon_bomb/hit
+execute if entity @s[scores={ActionFloorNr=0..}] run function medabots_server:blocks/action_floor/prevent_spawning
 
 # Burst
 execute if entity @s[tag=burst] run function medabots_server:entities/balloon_bomb/burst

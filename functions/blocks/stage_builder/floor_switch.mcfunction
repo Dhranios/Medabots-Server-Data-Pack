@@ -1,6 +1,10 @@
 # Spawn object
 execute if entity @s[tag=green_floor_switch] run function medabots_server:set_blocks/floor_switch/green
+execute if entity @s[tag=yellow_floor_switch,tag=delay_1] run function medabots_server:set_blocks/floor_switch/yellow/delay_1
+execute if entity @s[tag=yellow_floor_switch,tag=delay_2] run function medabots_server:set_blocks/floor_switch/yellow/delay_2
+execute if entity @s[tag=yellow_floor_switch,tag=delay_5] run function medabots_server:set_blocks/floor_switch/yellow/delay_5
 execute if entity @s[tag=yellow_floor_switch,tag=delay_10] run function medabots_server:set_blocks/floor_switch/yellow/delay_10
+execute if entity @s[tag=yellow_floor_switch,tag=delay_15] run function medabots_server:set_blocks/floor_switch/yellow/delay_15
 execute if entity @s[tag=yellow_floor_switch,tag=delay_20] run function medabots_server:set_blocks/floor_switch/yellow/delay_20
 execute if entity @s[tag=yellow_floor_switch,tag=delay_30] run function medabots_server:set_blocks/floor_switch/yellow/delay_30
 execute if entity @s[tag=yellow_floor_switch,tag=delay_40] run function medabots_server:set_blocks/floor_switch/yellow/delay_40

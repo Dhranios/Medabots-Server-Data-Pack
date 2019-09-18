@@ -19,9 +19,9 @@ execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:exper
 execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
 execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
 execute store result score #temp Stage run scoreboard players get @s[scores={DeathTime=1},type=minecraft:player] Stage
-execute if entity @s[scores={DeathTime=1},type=minecraft:player] run scoreboard players set #temp Drop 1
-execute if entity @s[scores={DeathTime=1},type=minecraft:player] as @a[tag=practice_battle] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 0
-execute if entity @s[scores={DeathTime=1},type=minecraft:player] as @e[type=!minecraft:player,tag=enemy_medabot,nbt={DeathLootTable:"medabots_server:entities/medabot"}] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 0
+execute if entity @s[scores={DeathTime=1},type=minecraft:player] run scoreboard players set #temp Drop -1
+execute if entity @s[scores={DeathTime=1},type=minecraft:player,tag=!practice_battle] as @a[tag=!practice_battle] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 1
+execute if entity @s[scores={DeathTime=1},type=minecraft:player,tag=!practice_battle] as @e[type=!minecraft:player,tag=enemy_medabot,nbt=!{DeathLootTable:"medabots_server:entities/medabot"}] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 1
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] unless score #temp Drop matches 0 run function medabots_server:items/drop_medapart
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run scoreboard players reset #temp Stage
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run scoreboard players reset #temp Drop
@@ -42,7 +42,6 @@ scoreboard players set @s[scores={DeathTime=100}] LeaveStage 1
 execute if entity @s[scores={DeathTime=100}] run function medabots_server:other/death
 tag @s[tag=stage_builder] remove stage_builder
 tag @s[scores={DeathTime=100},type=!minecraft:player] add dead
-scoreboard players reset @s[scores={DeathTime=100}] DeathTime
 execute if entity @s[scores={DeathTime=100}] run kill @e[tag=this_medabot]
 execute if entity @s[scores={DeathTime=100}] at @e[tag=this_medabot] positioned ~ ~0.7 ~ run particle minecraft:cloud ~ ~ ~ 1 1 1 0 30
 gamemode adventure @s[scores={DeathTime=101}]
@@ -53,5 +52,6 @@ tag @s[scores={DeathTime=101}] remove had_death
 tag @s[scores={DeathTime=101}] remove retry
 tag @s[scores={DeathTime=101}] remove enemy_medabot
 tag @s[scores={DeathTime=101}] remove story_battle
+scoreboard players reset @s[scores={DeathTime=101}] DeathTime
 scoreboard players reset #temp MedabotNr
 tag @e[tag=this_medabot] remove this_medabot

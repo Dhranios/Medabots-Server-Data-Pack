@@ -14,13 +14,14 @@ execute if entity @s[tag=!can_move] run scoreboard players set @s Time 30
 execute unless entity @a[tag=target] at @e[tag=move_target,distance=..1.1] if score @s GuardNr = @e[distance=..0.4,limit=1,sort=nearest,tag=move_target] GuardNr run scoreboard players set @s Time 30
 execute unless entity @a[tag=target] as @e[tag=move_target,distance=..1.1] if score @s GuardNr = @e[distance=..0.1,tag=guard,limit=1,tag=!action_floor] GuardNr run kill @s
 execute if entity @s[tag=!can_move] unless entity @a[tag=target] as @e[tag=move_target] if score @s GuardNr = @e[distance=..0.1,tag=guard,limit=1,tag=!action_floor] GuardNr run kill @s
-execute if entity @s[scores={Sound=0},tag=can_move] if entity @a[tag=target] run playsound medabots_server:entity.guard.move hostile @a ~ ~ ~ 1
-execute if entity @s[scores={Sound=0},tag=can_move] if entity @a[tag=target] run scoreboard players set @s Sound 10
-execute if entity @s[scores={Sound=0},tag=can_move,tag=has_move_target] run playsound medabots_server:entity.guard.move hostile @a ~ ~ ~ 1
-execute if entity @s[scores={Sound=0},tag=can_move,tag=has_move_target] run scoreboard players set @s Sound 10
+execute if entity @s[tag=can_move] if entity @a[tag=target] run tag @s add walking
+execute if entity @s[tag=can_move,tag=has_move_target] run tag @s add walking
 tag @a[tag=possible_targets] remove possible_targets
 tag @a[tag=target] remove target
 tag @s[tag=has_move_target] remove has_move_target
+
+execute if entity @s[tag=walking,scores={Sound=0}] run playsound medabots_server:entity.guard.move hostile @a ~ ~ ~ 1
+execute if entity @s[tag=walking,scores={Sound=0}] run scoreboard players set @s Sound 10
 
 # Prevent suffocation
 execute at @s unless block ~ ~ ~0.33 minecraft:air unless block ~ ~ ~0.33 minecraft:comparator unless block ~ ~ ~0.33 minecraft:black_carpet unless block ~ ~ ~0.33 minecraft:light_gray_carpet unless block ~ ~ ~0.33 #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~-0.2

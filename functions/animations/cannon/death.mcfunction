@@ -14,6 +14,7 @@ execute if entity @s[scores={DeathTime=60}] run particle minecraft:cloud ~ ~4 ~ 
 execute if entity @s[scores={DeathTime=60}] run summon minecraft:experience_orb ~ ~4 ~ {Value:1s}
 tag @s[scores={DeathTime=60}] add dead
 execute if entity @s[scores={DeathTime=60}] positioned ~ ~1 ~ run tag @e[type=minecraft:falling_block,distance=..0.7,tag=cannon_base] add dead
+execute if entity @s[scores={DeathTime=60,ActionFloorNr=0..}] run function medabots_server:blocks/action_floor/reenable_spawning
 
 execute positioned ~ ~1 ~ as @e[type=minecraft:falling_block,distance=..5,tag=cannon_base] run data merge entity @s {Air:1,Motion:[0.0d,0.0d,0.0d]}
 execute positioned ~ ~1 ~ as @e[type=minecraft:falling_block,distance=..5,tag=cannon_base] run data merge entity @s {Air:0,Motion:[0.0d,0.0d,0.0d]}

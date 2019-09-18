@@ -71,3 +71,4 @@ scoreboard players set @s[scores={MedaforceTimer=6..}] MedaforceTimer 0
 
 execute if entity @s[scores={Battle=1}] run tag @e[tag=cannon,tag=!action_floor,tag=!enabled,distance=..16] add enabled
 execute if entity @s[scores={Battle=1}] run tag @e[tag=guard,tag=!action_floor,tag=!enabled,distance=..16] add enabled
+execute if entity @s[scores={Battle=1}] run tag @e[tag=bomb,tag=!action_floor,tag=!enabled,distance=..16] add enabled

@@ -5,7 +5,7 @@
             "nbt": "{CustomModelData:1}"
         },
         "title": {
-            "translate": "medabots_server:item.part.wave",
+            "translate": "medabots_server:item.medapart.wave",
 			"with": [
 				{
 					"text": "1"
