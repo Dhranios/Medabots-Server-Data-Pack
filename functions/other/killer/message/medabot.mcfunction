@@ -194,9 +194,9 @@ execute if entity @s[scores={Medabot=64,Message=2}] run tellraw @a {"translate":
 execute if entity @s[scores={Medabot=65,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.pururun_jelly.kill.1"}]}
 execute if entity @s[scores={Medabot=65,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.pururun_jelly.kill.2"}]}
 execute if entity @s[scores={Medabot=65,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.pururun_jelly.kill.3"}]}
-execute if entity @s[scores={Medabot=66,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.le_villan.kill.1"}]}
-execute if entity @s[scores={Medabot=66,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.le_villan.kill.2"}]}
-execute if entity @s[scores={Medabot=66,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.le_villan.kill.3"}]}
+execute if entity @s[scores={Medabot=66,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.le_villain.kill.1"}]}
+execute if entity @s[scores={Medabot=66,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.le_villain.kill.2"}]}
+execute if entity @s[scores={Medabot=66,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.le_villain.kill.3"}]}
 execute if entity @s[scores={Medabot=67,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.suzumega_hummer.kill.1"}]}
 execute if entity @s[scores={Medabot=67,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.suzumega_hummer.kill.2"}]}
 execute if entity @s[scores={Medabot=67,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:message.suzumega_hummer.kill.3"}]}

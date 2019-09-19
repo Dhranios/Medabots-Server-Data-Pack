@@ -12,6 +12,12 @@ execute if block ~ ~-1 ~ minecraft:snow_block run tag @s add snow_block
 execute if block ~ ~-1 ~ minecraft:oak_planks run tag @s add oak_planks
 execute if block ~ ~-1 ~ minecraft:andesite run tag @s add andesite
 execute if block ~ ~-1 ~ minecraft:orange_terracotta run tag @s add orange_terracotta
+execute if block ~ ~-1 ~ minecraft:light_blue_terracotta run tag @s add light_blue_terracotta
+execute if block ~ ~-1 ~ minecraft:light_gray_terracotta run tag @s add light_gray_terracotta
+execute if block ~ ~-1 ~ minecraft:purple_terracotta run tag @s add purple_terracotta
+execute if block ~ ~-1 ~ minecraft:green_terracotta run tag @s add green_terracotta
+execute if block ~ ~-1 ~ minecraft:lime_terracotta run tag @s add lime_terracotta
+execute if block ~ ~-1 ~ minecraft:yellow_terracotta run tag @s add yellow_terracotta
 execute if block ~ ~-1 ~ minecraft:polished_granite run tag @s add polished_granite
 execute if block ~ ~-1 ~ minecraft:red_wool run tag @s add red_wool
 execute if block ~ ~-1 ~ minecraft:quartz_block run tag @s add quartz_block

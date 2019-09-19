@@ -5,10 +5,10 @@
             "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:66}"
         },
         "title": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.le_villan"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.le_villain"
         },
         "description": {
-            "translate": "medabots_server:advancements.wave_1.get_all_medabots.le_villan.description"
+            "translate": "medabots_server:advancements.wave_1.get_all_medabots.le_villain.description"
         }
     },
     "parent": "medabots_server:wave_1/get_all_medabots/knight_armor",
@@ -18,7 +18,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villan_grave_lane\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villain_grave_lane\"}}"
                     }
                 ]
             }
@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villan_tudge_shield\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villain_tudge_shield\"}}"
                     }
                 ]
             }
@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villan_crime_stick\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villain_crime_stick\"}}"
                     }
                 ]
             }
@@ -48,13 +48,13 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villan_protoauto\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:le_villain_protoauto\"}}"
                     }
                 ]
             }
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/wave_1/get_all_medabots/le_villan"
+        "function": "medabots_server:advancements/wave_1/get_all_medabots/le_villain"
     }
 }

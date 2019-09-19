@@ -1,4 +1,0 @@
-function medabots_server:give_items/medaparts/le_villan/protoauto
-function medabots_server:give_items/medaparts/le_villan/crime_stick
-function medabots_server:give_items/medaparts/le_villan/tudge_shield
-function medabots_server:give_items/medaparts/le_villan/grave_lane

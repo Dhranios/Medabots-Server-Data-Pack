@@ -142,10 +142,10 @@ execute if entity @s[scores={BuyMedapart=141},advancements={medabots_server:wave
 execute if entity @s[scores={BuyMedapart=142},advancements={medabots_server:wave_1/get_all_medabots/knight_armor={left_arm=true}}] run function medabots_server:give_items/medaparts/knight_armor/greatshield
 execute if entity @s[scores={BuyMedapart=143},advancements={medabots_server:wave_1/get_all_medabots/knight_armor={right_arm=true}}] run function medabots_server:give_items/medaparts/knight_armor/knightshield
 execute if entity @s[scores={BuyMedapart=144},advancements={medabots_server:wave_1/get_all_medabots/knight_armor={head=true}}] run function medabots_server:give_items/medaparts/knight_armor/clearshield
-execute if entity @s[scores={BuyMedapart=145},advancements={medabots_server:wave_1/get_all_medabots/le_villan={legs=true}}] run function medabots_server:give_items/medaparts/le_villan/protoauto
-execute if entity @s[scores={BuyMedapart=146},advancements={medabots_server:wave_1/get_all_medabots/le_villan={left_arm=true}}] run function medabots_server:give_items/medaparts/le_villan/crime_stick
-execute if entity @s[scores={BuyMedapart=147},advancements={medabots_server:wave_1/get_all_medabots/le_villan={right_arm=true}}] run function medabots_server:give_items/medaparts/le_villan/tudge_shield
-execute if entity @s[scores={BuyMedapart=148},advancements={medabots_server:wave_1/get_all_medabots/le_villan={head=true}}] run function medabots_server:give_items/medaparts/le_villan/grave_lane
+execute if entity @s[scores={BuyMedapart=145},advancements={medabots_server:wave_1/get_all_medabots/le_villain={legs=true}}] run function medabots_server:give_items/medaparts/le_villain/protoauto
+execute if entity @s[scores={BuyMedapart=146},advancements={medabots_server:wave_1/get_all_medabots/le_villain={left_arm=true}}] run function medabots_server:give_items/medaparts/le_villain/crime_stick
+execute if entity @s[scores={BuyMedapart=147},advancements={medabots_server:wave_1/get_all_medabots/le_villain={right_arm=true}}] run function medabots_server:give_items/medaparts/le_villain/tudge_shield
+execute if entity @s[scores={BuyMedapart=148},advancements={medabots_server:wave_1/get_all_medabots/le_villain={head=true}}] run function medabots_server:give_items/medaparts/le_villain/grave_lane
 execute if entity @s[scores={BuyMedapart=149},advancements={medabots_server:wave_1/get_all_medabots/magicalcard={legs=true}}] run function medabots_server:give_items/medaparts/magicalcard/wandrack
 execute if entity @s[scores={BuyMedapart=150},advancements={medabots_server:wave_1/get_all_medabots/magicalcard={left_arm=true}}] run function medabots_server:give_items/medaparts/magicalcard/lookme
 execute if entity @s[scores={BuyMedapart=151},advancements={medabots_server:wave_1/get_all_medabots/magicalcard={right_arm=true}}] run function medabots_server:give_items/medaparts/magicalcard/onetwothree

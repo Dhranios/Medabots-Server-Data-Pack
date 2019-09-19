@@ -11,7 +11,7 @@
             "translate": "medabots_server:advancements.wave_1.get_all_medabots.potato_insect.description"
         }
     },
-    "parent": "medabots_server:wave_1/get_all_medabots/le_villan",
+    "parent": "medabots_server:wave_1/get_all_medabots/le_villain",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",

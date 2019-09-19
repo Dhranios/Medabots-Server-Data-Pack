@@ -7,7 +7,7 @@
             "translate": "medabots_server:location.laboratory_a",
 			"extra": [
 				{
-					"translate": "medabots_server:message.stage.requires.version"
+					"text": " "
 				},
 				{
 					"translate": "medabots_server:sign.stage.version.first_go"

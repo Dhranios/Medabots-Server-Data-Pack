@@ -67,38 +67,43 @@ execute if block -1827 44 -599 minecraft:yellow_wool run scoreboard players set 
 execute if block -1825 44 -600 minecraft:yellow_wool run scoreboard players set @e[x=-1825.5,y=45,z=-599.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1827 44 -599 minecraft:orange_wool if block -1825 44 -600 minecraft:orange_wool run scoreboard players set @e[x=-1825.5,y=45,z=-599.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1830 45 -582 minecraft:iron_door[open=true] if block -1826 45 -586 minecraft:iron_door[open=true] if block -1823 45 -589 minecraft:iron_door[open=true] if block -1823 45 -596 minecraft:iron_door[open=true] if block -1826 45 -599 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1829.5,y=45,z=-602.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1830 45 -582 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829.5,y=45,z=-602.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1826 45 -586 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829.5,y=45,z=-602.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1823 45 -589 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829.5,y=45,z=-602.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1823 45 -596 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829.5,y=45,z=-602.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1826 45 -599 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829.5,y=45,z=-602.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1824 44 -617 minecraft:light_blue_wool run scoreboard players set @e[x=-1827.5,y=45,z=-604.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1828 44 -617 minecraft:light_blue_wool run scoreboard players set @e[x=-1827.5,y=45,z=-604.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1831 44 -617 minecraft:light_blue_wool run scoreboard players set @e[x=-1827.5,y=45,z=-604.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1835 44 -617 minecraft:light_blue_wool run scoreboard players set @e[x=-1827.5,y=45,z=-604.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1824 44 -617 minecraft:blue_wool if block -1828 44 -617 minecraft:blue_wool if block -1831 44 -617 minecraft:blue_wool if block -1835 44 -617 minecraft:blue_wool run scoreboard players set @e[x=-1827.5,y=45,z=-604.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1830 45 -582 minecraft:iron_door[open=true] run tag @e[x=-1829,y=45,z=-578,distance=..2,tag=action_floor] add enabled
+execute if block -1830 45 -582 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1829,y=45,z=-578,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1830 45 -582 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829,y=45,z=-578,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1833 45 -578 minecraft:iron_door[open=true] run tag @e[x=-1836,y=45,z=-579,distance=..2,tag=action_floor] add enabled
-execute if block -1837 45 -582 minecraft:iron_door[open=true] run tag @e[x=-1836,y=45,z=-579,distance=..2,tag=action_floor] add enabled
+execute if block -1833 45 -578 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1836,y=45,z=-579,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1837 45 -582 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1836,y=45,z=-579,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1833 45 -578 minecraft:iron_door[open=false] if block -1837 45 -582 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1836,y=45,z=-579,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1826 45 -579 minecraft:iron_door[open=true] run tag @e[x=-1822,y=45,z=-579,distance=..2,tag=action_floor] add enabled
-execute if block -1823 45 -582 minecraft:iron_door[open=true] run tag @e[x=-1822,y=45,z=-579,distance=..2,tag=action_floor] add enabled
+execute if block -1826 45 -579 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1822,y=45,z=-579,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1823 45 -582 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1822,y=45,z=-579,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1826 45 -579 minecraft:iron_door[open=false] if block -1823 45 -582 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1822,y=45,z=-579,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1826 45 -586 minecraft:iron_door[open=true] run tag @e[x=-1829,y=45,z=-585,distance=..2,tag=action_floor] add enabled
+execute if block -1826 45 -586 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1829,y=45,z=-585,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1826 45 -586 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829,y=45,z=-585,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1833 45 -585 minecraft:iron_door[open=true] run tag @e[x=-1836,y=45,z=-585,distance=..2,tag=action_floor] add enabled
+execute if block -1833 45 -585 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1836,y=45,z=-585,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1833 45 -585 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1836,y=45,z=-585,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1823 45 -589 minecraft:iron_door[open=true] run tag @e[x=-1822,y=45,z=-585,distance=..2,tag=action_floor] add enabled
+execute if block -1823 45 -589 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1822,y=45,z=-585,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1823 45 -589 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1822,y=45,z=-585,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1830 45 -589 minecraft:iron_door[open=true] run tag @e[x=-1829,y=45,z=-592,distance=..2,tag=action_floor] add enabled
-execute if block -1826 45 -593 minecraft:iron_door[open=true] run tag @e[x=-1829,y=45,z=-592,distance=..2,tag=action_floor] add enabled
-execute if block -1830 45 -596 minecraft:iron_door[open=true] run tag @e[x=-1829,y=45,z=-592,distance=..2,tag=action_floor] add enabled
+execute if block -1830 45 -589 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1829,y=45,z=-592,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1826 45 -593 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1829,y=45,z=-592,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1830 45 -596 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1829,y=45,z=-592,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1830 45 -589 minecraft:iron_door[open=false] if block -1826 45 -593 minecraft:iron_door[open=false] if block -1830 45 -596 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829,y=45,z=-592,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1837 45 -589 minecraft:iron_door[open=true] run tag @e[x=-1836,y=45,z=-592,distance=..2,tag=laser_trap] add enabled
-execute if block -1833 45 -592 minecraft:iron_door[open=true] run tag @e[x=-1836,y=45,z=-592,distance=..2,tag=laser_trap] add enabled
-execute if block -1837 45 -596 minecraft:iron_door[open=true] run tag @e[x=-1836,y=45,z=-592,distance=..2,tag=laser_trap] add enabled
+execute if block -1837 45 -589 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1836,y=45,z=-592,distance=..2,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1833 45 -592 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1836,y=45,z=-592,distance=..2,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1837 45 -596 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1836,y=45,z=-592,distance=..2,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1837 45 -589 minecraft:iron_door[open=false] if block -1833 45 -592 minecraft:iron_door[open=false] if block -1837 45 -596 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1829,y=45,z=-592,distance=..2,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1823 45 -596 minecraft:iron_door[open=true] run tag @e[x=-1822,y=45,z=-592,distance=..2,tag=action_floor] add enabled
+execute if block -1823 45 -596 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1822,y=45,z=-592,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1823 45 -596 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1822,y=45,z=-592,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1833 45 -599 minecraft:iron_door[open=true] run tag @e[x=-1836,y=45,z=-599,distance=..2,tag=action_floor] add enabled
+execute if block -1833 45 -599 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1836,y=45,z=-599,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1833 45 -599 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1836,y=45,z=-599,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1826 45 -600 minecraft:iron_door[open=true] run tag @e[x=-1822,y=45,z=-599,distance=..2,tag=action_floor] add enabled
+execute if block -1826 45 -600 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1822,y=45,z=-599,distance=..2,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1826 45 -600 minecraft:iron_door[open=false] run scoreboard players set @e[x=-1822,y=45,z=-599,distance=..2,tag=action_floor,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1824 44 -610 minecraft:light_blue_wool run scoreboard players set @e[x=-1823.5,y=45,z=-610.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1824 44 -610 minecraft:blue_wool run scoreboard players set @e[x=-1823.5,y=45,z=-610.5,distance=..0.7,tag=laser_trap,scores={PowerAmount=1}] PowerAmount 0
@@ -125,6 +130,7 @@ execute if entity @e[x=-1854,y=0,z=-633,dx=91,dy=49,dz=94,tag=mr_referee] store 
 execute as @e[x=-1854,y=0,z=-633,dx=91,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=19}] run scoreboard players set @s Stage 19
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/park_a/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/park_a_first_go
+tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={vs_screws_battle=true,suspicious_tune=false}}] add dialog_infinity_suspicious_tune
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:park_a/robattle players
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1809 51 -587 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

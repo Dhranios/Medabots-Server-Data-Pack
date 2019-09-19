@@ -7,4 +7,4 @@ scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabo
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:god_emperor_death_laser"}}}]}] MedapartID 6
 scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:rob_famicom_zapper"}}}]}] MedapartID 7
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:iron_man_repulsor_beam"}}}]}] MedapartID 8
-scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:le_villan_grave_lane"}}}]}] MedapartID 9
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:le_villain_grave_lane"}}}]}] MedapartID 9

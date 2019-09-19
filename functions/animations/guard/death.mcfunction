@@ -6,4 +6,3 @@ execute if entity @s[scores={DeathTime=70}] run particle minecraft:cloud ~ ~ ~ 1
 execute if entity @s[scores={DeathTime=70}] run particle minecraft:cloud ^ ^ ^0.5 1 1 1 0 30
 execute if entity @s[scores={DeathTime=70}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
 tag @s[scores={DeathTime=70}] add dead
-execute if entity @s[scores={DeathTime=70,ActionFloorNr=0..}] run function medabots_server:blocks/action_floor/reenable_spawning

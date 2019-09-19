@@ -1,6 +1,7 @@
 # Set dead
 tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
 execute if entity @s[tag=dying,tag=!dead] run function medabots_server:animations/guard/death
+execute if entity @s[tag=dead] run function medabots_server:blocks/action_floor/reenable_spawning
 
 # Count down the freeze timer
 scoreboard players remove @s[scores={Time=1..}] Time 1

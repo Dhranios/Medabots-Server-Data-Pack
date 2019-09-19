@@ -17,16 +17,14 @@ tellraw @s[scores={SettingsCheck=3,FlyCourseFee=1..}] {"translate":"medabots_ser
 tellraw @s[scores={SettingsCheck=3,FlyCourseFee=0}] {"translate":"medabots_server:settings.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"extra":[{"text":" "},{"translate":"medabots_server:settings.fly_course.no_fee"}]}
 
 # Toggle vs cpus
-tellraw @s[scores={SettingsCheck=4},tag=hostile] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=4},tag=enemy_medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=4},tag=-1] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=4},tag=!vs_cpus,tag=!hostile,tag=!enemy_medabot,tag=!-1] {"translate":"medabots_server:settings.modified.vs_cpus","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
-tellraw @s[scores={SettingsCheck=4},tag=vs_cpus,tag=!hostile,tag=!enemy_medabot,tag=!-1] {"translate":"medabots_server:settings.modified.vs_cpus","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
-tag @s[scores={SettingsCheck=4},tag=!vs_cpus,tag=!hostile,tag=!enemy_medabot,tag=!-1] add toggle_vs_cpus
-tag @s[tag=toggle_vs_cpus,tag=!hostile,tag=!enemy_medabot,tag=!-1] add vs_cpus
-scoreboard players reset @s[tag=toggle_vs_cpus,tag=!hostile,tag=!enemy_medabot,tag=!-1] SettingsCheck
-tag @s[tag=toggle_vs_cpus,tag=!hostile,tag=!enemy_medabot,tag=!-1] remove toggle_vs_cpus
-tag @s[scores={SettingsCheck=4},tag=vs_cpus,tag=!hostile,tag=!enemy_medabot,tag=!-1] remove vs_cpus
+tellraw @s[scores={SettingsCheck=4},tag=medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
+tellraw @s[scores={SettingsCheck=4},tag=!vs_cpus,tag=!medabot] {"translate":"medabots_server:settings.modified.vs_cpus","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
+tellraw @s[scores={SettingsCheck=4},tag=vs_cpus,tag=!medabot] {"translate":"medabots_server:settings.modified.vs_cpus","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
+tag @s[scores={SettingsCheck=4},tag=!vs_cpus,tag=!medabot] add toggle_vs_cpus
+tag @s[tag=toggle_vs_cpus,tag=!medabot] add vs_cpus
+scoreboard players reset @s[tag=toggle_vs_cpus,tag=!medabot] SettingsCheck
+tag @s[tag=toggle_vs_cpus,tag=!medabot] remove toggle_vs_cpus
+tag @s[scores={SettingsCheck=4},tag=vs_cpus,tag=!medabot] remove vs_cpus
 
 # Toggle fly course speed
 tellraw @s[scores={SettingsCheck=5},tag=!long_fly_course_speed] {"translate":"medabots_server:settings.modified.fly_course_speed","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 5"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.long"}]}
@@ -47,16 +45,14 @@ tag @s[tag=toggle_action_mode] remove toggle_action_mode
 tag @s[scores={SettingsCheck=6},tag=action_mode] remove action_mode
 
 # Toggle practice battle
-tellraw @s[scores={SettingsCheck=7},tag=hostile] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=7},tag=enemy_medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=7},tag=-1] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=7},tag=!practice_battle,tag=!hostile,tag=!enemy_medabot,tag=!-1] {"translate":"medabots_server:settings.modified.practice_battle","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
-tellraw @s[scores={SettingsCheck=7},tag=practice_battle,tag=!hostile,tag=!enemy_medabot,tag=!-1] {"translate":"medabots_server:settings.modified.practice_battle","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
-tag @s[scores={SettingsCheck=7},tag=!practice_battle,tag=!hostile,tag=!enemy_medabot,tag=!-1] add toggle_practice_battle
-tag @s[tag=toggle_practice_battle,tag=!hostile,tag=!enemy_medabot,tag=!-1] add practice_battle
-scoreboard players reset @s[tag=toggle_practice_battle,tag=!hostile,tag=!enemy_medabot,tag=!-1] SettingsCheck
-tag @s[tag=toggle_practice_battle,tag=!hostile,tag=!enemy_medabot,tag=!-1] remove toggle_practice_battle
-tag @s[scores={SettingsCheck=7},tag=practice_battle,tag=!hostile,tag=!enemy_medabot,tag=!-1] remove practice_battle
+tellraw @s[scores={SettingsCheck=7},tag=medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
+tellraw @s[scores={SettingsCheck=7},tag=!practice_battle,tag=!medabot] {"translate":"medabots_server:settings.modified.practice_battle","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
+tellraw @s[scores={SettingsCheck=7},tag=practice_battle,tag=!medabot] {"translate":"medabots_server:settings.modified.practice_battle","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
+tag @s[scores={SettingsCheck=7},tag=!practice_battle,tag=!medabot] add toggle_practice_battle
+tag @s[tag=toggle_practice_battle,tag=!medabot] add practice_battle
+scoreboard players reset @s[tag=toggle_practice_battle,tag=!medabot] SettingsCheck
+tag @s[tag=toggle_practice_battle,tag=!medabot] remove toggle_practice_battle
+tag @s[scores={SettingsCheck=7},tag=practice_battle,tag=!medabot] remove practice_battle
 
 # Toggle fly course force fallout
 tellraw @s[scores={SettingsCheck=8},tag=racer] {"translate":"medabots_server:settings.fly_course.in_race","color":"blue"}
@@ -84,12 +80,10 @@ tellraw @s[scores={SettingsCheck=10,FlyCourseFee=1..},tag=!racer] {"translate":"
 tellraw @s[scores={SettingsCheck=10,FlyCourseFee=0},tag=!racer] {"translate":"medabots_server:settings.modified.fly_course.fee","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 10"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.fly_course.no_fee"}]}
 
 # Toggle robattle music
-tellraw @s[scores={SettingsCheck=11},tag=hostile] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=11},tag=enemy_medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-tellraw @s[scores={SettingsCheck=11},tag=-1] {"translate":"medabots_server:settings.in_stage","color":"blue"}
-scoreboard players add @s[scores={SettingsCheck=11},tag=!hostile,tag=!enemy_medabot,tag=!-1] RobattleMusic 1
-scoreboard players set @s[scores={SettingsCheck=11,RobattleMusic=4},tag=!hostile,tag=!enemy_medabot,tag=!-1] RobattleMusic 0
-tellraw @s[scores={SettingsCheck=11},tag=!hostile,tag=!enemy_medabot,tag=!-1] {"translate":"medabots_server:settings.modified.robattle_music","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 11"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"RobattleMusic"}}]}
+tellraw @s[scores={SettingsCheck=11},tag=medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
+scoreboard players add @s[scores={SettingsCheck=11},tag=!medabot] RobattleMusic 1
+scoreboard players set @s[scores={SettingsCheck=11,RobattleMusic=4},tag=!medabot] RobattleMusic 0
+tellraw @s[scores={SettingsCheck=11},tag=!medabot] {"translate":"medabots_server:settings.modified.robattle_music","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 11"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"RobattleMusic"}}]}
 
 
 scoreboard players reset @s[scores={SettingsCheck=3..}] SettingsCheck
