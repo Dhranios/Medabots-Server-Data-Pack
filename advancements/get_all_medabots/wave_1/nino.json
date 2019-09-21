@@ -1,0 +1,60 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:70}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.get_all_medabots.nino"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.nino.description"
+        }
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1/mewtwo",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:nino_bolganone\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:nino_ragnarok\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:nino_excalibur\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:nino_sand_proof_boots\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/nino"
+    }
+}

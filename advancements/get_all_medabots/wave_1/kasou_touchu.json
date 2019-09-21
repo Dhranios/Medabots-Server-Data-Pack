@@ -1,0 +1,60 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:5}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.get_all_medabots.kasou_touchu"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.kasou_touchu.description"
+        }
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1/ka_o_lantern",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kasou_touchu_mushroom\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kasou_touchu_shitake\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kasou_touchu_maitake\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kasou_touchu_fungoton\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/kasou_touchu"
+    }
+}

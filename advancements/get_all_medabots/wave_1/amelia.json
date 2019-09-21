@@ -1,0 +1,60 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:46}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.get_all_medabots.amelia"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.amelia.description"
+        }
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:amelia_great_shield\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:amelia_spear\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:amelia_silver_axe\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:amelia_swiftsole\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/amelia"
+    }
+}

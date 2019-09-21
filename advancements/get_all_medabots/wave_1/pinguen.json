@@ -1,0 +1,60 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:44}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.get_all_medabots.pinguen"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.pinguen.description"
+        }
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1/marine_killer",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:pinguen_zera_reactor\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:pinguen_free_arm\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:pinguen_new_arm\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:pinguen_fin\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/pinguen"
+    }
+}

@@ -1,0 +1,60 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:18}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.get_all_medabots.shoot_spider"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.shoot_spider.description"
+        }
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1/seven_colors",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:shoot_spider_spydertrap\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:shoot_spider_cheapertrap\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:shoot_spider_cheaptrap\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:shoot_spider_multi_leg\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/shoot_spider"
+    }
+}

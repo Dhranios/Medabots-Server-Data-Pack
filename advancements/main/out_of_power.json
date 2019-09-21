@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:lapis_block"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.out_of_power"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.out_of_power.description"
+        },
+        "frame": "challenge"
+    },
+    "parent": "medabots_server:main/you_you_traitor",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/out_of_power"
+    }
+}

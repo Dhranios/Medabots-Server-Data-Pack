@@ -1,0 +1,58 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Damage:4,Unbreakable:1b,CustomModelData:71}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.get_all_medabots.galleom"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.galleom.description"
+        },
+		"hidden": true
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1/zant",
+    "criteria": {
+        "head": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:galleom_armored_body\"}}"
+                    }
+                ]
+            }
+        },
+        "right_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:galleom_jet_engine\"}}"
+                    }
+                ]
+            }
+        },
+        "left_arm": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:galleom_flaming_engine\"}}"
+                    }
+                ]
+            }
+        },
+        "legs": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:galleom_subspace_crusader\"}}"
+                    }
+                ]
+            }
+        }
+    }
+}

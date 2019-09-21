@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:7,CustomModelData:2}"
+        },
+        "title": {
+            "translate": "medabots_server:item.neutral_tinpet"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.taken"
+        },
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "medabots_server:get_all_medabots/female_tinpet",
+    "criteria": {
+        "obtained": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:neutral_tinpet\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/neutral_tinpet"
+    }
+}

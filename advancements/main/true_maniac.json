@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:black_concrete"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.true_maniac"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.true_maniac.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/true_maniac"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:tnt"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.kamikaze_bomber"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.kamikaze_bomber.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/kamikaze_bomber"
+    }
+}

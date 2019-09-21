@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:quartz"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.a_crazy_order"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.a_crazy_order.description"
+        }
+    },
+    "parent": "medabots_server:main/a_masters_order",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/a_crazy_order"
+    }
+}

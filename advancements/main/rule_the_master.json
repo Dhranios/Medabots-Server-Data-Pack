@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:obsidian"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.rule_the_master"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.rule_the_master.description"
+        }
+    },
+    "parent": "medabots_server:main/the_true_final_battle",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/rule_the_master"
+    }
+}

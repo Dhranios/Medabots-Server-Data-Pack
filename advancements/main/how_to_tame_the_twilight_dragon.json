@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:dragon_breath"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.how_to_tame_the_twilight_dragon"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.how_to_tame_the_twilight_dragon.description"
+        }
+    },
+    "parent": "medabots_server:main/dragon_knight",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/how_to_tame_the_twilight_dragon"
+    }
+}

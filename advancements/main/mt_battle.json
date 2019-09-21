@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_sword"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.mt_battle"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.mt_battle.description"
+        },
+        "hidden": true
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "start": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

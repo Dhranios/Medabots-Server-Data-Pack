@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:dragon_breath"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.dragon_knight"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.dragon_knight.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "kill": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:spider",
+                    "nbt": "{Tags:[\"argorok\"],AbsorptionAmount:0.0f}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/dragon_knight"
+    }
+}

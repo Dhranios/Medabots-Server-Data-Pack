@@ -1,0 +1,299 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:yellow_terracotta"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.medabot_master"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.medabot_master.description"
+        },
+        "frame": "challenge"
+    },
+    "parent": "medabots_server:main/true_medafighter",
+    "criteria": {
+        "grassland_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_a_special": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_a_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_b_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_b_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_b_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_b_special": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_b_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_b_special": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_b_sloan_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_b_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_b_special": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_b_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_b_rubberobo": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_b_special": {
+            "trigger": "minecraft:impossible"
+        },
+        "park_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "park_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "park_a_special": {
+            "trigger": "minecraft:impossible"
+        },
+        "park_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "park_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "paradise_a_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "paradise_a_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "paradise_b_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "paradise_b_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_c_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_c_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_c_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_c_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_c_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "seashore_c_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_c_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_c_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_c_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_c_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_c_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_c_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "boxer_c_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "boxer_c_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "grassland_d_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "jungle_d_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "snowfield_d_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "iceberg_d_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_d_second_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_d_first_go": {
+            "trigger": "minecraft:impossible"
+        },
+        "laboratory_d_second_go": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/medabot_master"
+    }
+}

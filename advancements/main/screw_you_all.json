@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_block"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.screw_you_all"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.screw_you_all.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/screw_you_all"
+    }
+}

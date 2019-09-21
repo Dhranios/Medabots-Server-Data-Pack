@@ -1,0 +1,22 @@
+{
+    "criteria": {
+        "kill": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "damage": {
+                    "type": {
+                        "is_projectile": true
+                    }
+                },
+                "entity": {
+                    "type": "minecraft:spider",
+                    "nbt": "{Tags:[\"argorok\"],AbsorptionAmount:0.0f}"
+                }
+            }
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "rewards": {
+        "function": "medabots_server:advancements/main/the_prominence_achieve"
+    }
+}

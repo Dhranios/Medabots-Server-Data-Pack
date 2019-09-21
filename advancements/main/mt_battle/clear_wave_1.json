@@ -1,0 +1,33 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:gold_ingot",
+            "nbt": "{CustomModelData:1}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.mt_battle.clear_wave",
+            "with": [
+                {
+                    "text": "1"
+                }
+            ]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.mt_battle.clear_wave.description",
+            "with": [
+                {
+                    "text": "1"
+                }
+            ]
+        },
+        "show_toast": false,
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "medabots_server:main/mt_battle",
+    "criteria": {
+        "start": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

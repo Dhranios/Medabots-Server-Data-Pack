@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:lime_stained_glass"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.successful_experiment"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.successful_experiment.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/successful_experiment"
+    }
+}

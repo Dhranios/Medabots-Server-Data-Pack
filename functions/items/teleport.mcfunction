@@ -15,8 +15,8 @@ execute if entity @s[tag=medabot_loot,tag=ally_loot] at @a[tag=this_medabot,sort
 execute if entity @s[tag=medabot_loot,tag=!enemy_loot,tag=!ally_loot] at @a[tag=this_medabot,sort=nearest,limit=1] run teleport @s ~ ~ ~
 execute if entity @s[tag=medabot_loot] run scoreboard players reset #temp Stage
 execute if entity @s[tag=medabot_loot] run tag @e[tag=this_medabot] remove this_medabot
-execute positioned ~ ~1 ~ if entity @a[tag=float,distance=..0.7] run tag @s add teleport_up
-execute positioned ~ ~1 ~ if entity @a[scores={Fly=1..},distance=..0.7] run tag @s add teleport_up
+execute if entity @a[dy=3,tag=float] run tag @s add teleport_up
+execute if entity @a[dy=3,scores={Fly=1..}] run tag @s add teleport_up
 teleport @s[tag=teleport_up] ~ ~1 ~
 tag @s[tag=teleport_up] remove teleport_up
 tag @s add do_not_teleport

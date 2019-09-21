@@ -1,0 +1,30 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:0}"
+        },
+        "title": {
+            "translate": "medabots_server:item.kuwagata_medal"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.kuwagata_medal"
+        }
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1/knight_medal",
+    "criteria": {
+        "medal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:kuwagata_medal\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/kuwagata_medal"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:iron_sword"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.melee_champion"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.melee_champion.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/melee_champion"
+    }
+}

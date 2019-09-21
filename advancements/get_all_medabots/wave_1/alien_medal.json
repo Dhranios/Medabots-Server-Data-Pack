@@ -1,0 +1,30 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:6}"
+        },
+        "title": {
+            "translate": "medabots_server:item.alien_medal"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.alien_medal"
+        }
+    },
+    "parent": "medabots_server:get_all_medabots/wave_1",
+    "criteria": {
+        "medal": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:alien_medal\"}}"
+                    }
+                ]
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/alien_medal"
+    }
+}

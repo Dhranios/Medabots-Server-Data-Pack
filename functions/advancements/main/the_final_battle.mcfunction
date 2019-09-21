@@ -1,0 +1,1 @@
+advancement grant @s only medabots_server:special_items/passes/smash_4

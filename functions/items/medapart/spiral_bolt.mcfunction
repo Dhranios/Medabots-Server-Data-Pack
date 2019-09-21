@@ -1,5 +1,4 @@
 execute if entity @s[scores={Time=10}] run function medabots_server:items/medapart/spiral_bolt/10
-execute if entity @s[scores={Time=10..12}] run function medabots_server:items/medapart/spiral_bolt/10_12
 execute if entity @s[scores={Time=50..}] run function medabots_server:items/medapart/spiral_bolt/50_
 
 # Show particles

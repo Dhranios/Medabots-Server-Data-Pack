@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:quartz"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.a_masters_order"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.a_masters_order.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "kill": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:ghast",
+                    "nbt": "{Tags:[\"master_hand\"],AbsorptionAmount:0.0f}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/a_masters_order"
+    }
+}

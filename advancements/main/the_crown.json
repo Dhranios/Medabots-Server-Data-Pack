@@ -1,0 +1,46 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:golden_helmet"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.the_crown"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.the_crown.description"
+        }
+    },
+    "parent": "medabots_server:main/you_you_traitor",
+    "criteria": {
+        "lor_starcutter": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:ghast",
+                    "nbt": "{Tags:[\"lor_starcutter\"],AbsorptionAmount:0.0f}"
+                }
+            }
+        },
+        "magolor": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:wither_skeleton",
+                    "nbt": "{Tags:[\"magolor\"],AbsorptionAmount:0.0f}"
+                }
+            }
+        },
+        "magolor_soul": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:ghast",
+                    "nbt": "{Tags:[\"magolor_soul\"],AbsorptionAmount:0.0f}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/the_crown"
+    }
+}

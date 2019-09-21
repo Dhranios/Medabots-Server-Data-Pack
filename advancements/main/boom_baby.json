@@ -1,0 +1,28 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:red_terracotta"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.boom_baby"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.boom_baby.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "kill": {
+            "trigger": "minecraft:player_hurt_entity",
+            "conditions": {
+                "entity": {
+                    "type": "minecraft:ghast",
+                    "nbt": "{Tags:[\"hr_d3\"],AbsorptionAmount:0.0f}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/boom_baby"
+    }
+}

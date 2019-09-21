@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:7,CustomModelData:0}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.get_all_medabots.root"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.get_all_medabots.root.description"
+        },
+        "background": "medabots_server:textures/gui/advancements/backgrounds/get_all_medabots.png",
+        "show_toast": false,
+        "announce_to_chat": false
+    },
+    "criteria": {
+        "got_an_item": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

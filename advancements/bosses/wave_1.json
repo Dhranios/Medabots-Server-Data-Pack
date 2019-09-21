@@ -19,7 +19,8 @@
 					"text": "1"
 				}
 			]
-        }
+        },
+        "frame": "challenge"
     },
 	"parent": "medabots_server:bosses/root",
     "criteria": {
@@ -58,6 +59,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/mt_battle/wave_1"
+        "function": "medabots_server:advancements/main/mt_battle/clear_wave_1"
     }
 }

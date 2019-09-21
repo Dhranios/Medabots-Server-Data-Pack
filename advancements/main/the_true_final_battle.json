@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:quartz"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.the_true_final_battle"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.the_true_final_battle.description"
+        },
+        "frame": "goal"
+    },
+    "parent": "medabots_server:main/the_final_battle",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/the_true_final_battle"
+    }
+}

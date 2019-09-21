@@ -74,6 +74,7 @@ scoreboard objectives add InfectTime dummy
 scoreboard objectives add InfectTimer dummy
 scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer dummy
+scoreboard objectives add KillStream dummy
 scoreboard objectives add LastPlaceTime dummy
 scoreboard objectives add LeaveStage trigger
 scoreboard objectives add LeftArmArmor dummy

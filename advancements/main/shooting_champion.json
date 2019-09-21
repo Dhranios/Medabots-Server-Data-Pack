@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:bow"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.shooting_champion"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.shooting_champion.description"
+        }
+    },
+    "parent": "medabots_server:main/melee_champion",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/shooting_champion"
+    }
+}

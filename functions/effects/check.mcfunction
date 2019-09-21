@@ -103,7 +103,7 @@ execute if entity @s[scores={ParalyzeTime=1..}] run scoreboard players operation
 execute if entity @s[scores={ParalyzeTime=1..}] run tellraw @s {"color":"red","translate":"medabots_server:message.current_effects.time","with":[{"translate":"medabots_server:effect.paralyzed"},{"score":{"objective":"EffectTimer","name":"@s"}}]}
 
 # None
-execute unless entity @s[scores={EffectTimer=1..}] run tellraw @s[tag=!blocked_medaforce,tag=!static_fly] {"translate":"medabots_server:message.current_effects.none"}
+execute unless entity @s[scores={EffectTimer=-1..}] run tellraw @s[tag=!blocked_medaforce,tag=!static_fly] {"translate":"medabots_server:message.current_effects.none"}
 
 # Show only once
 tag @s[tag=!checked_effects] add checked_effects

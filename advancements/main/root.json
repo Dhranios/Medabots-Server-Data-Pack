@@ -1,0 +1,23 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:gold_ingot",
+            "nbt": "{CustomModelData:1}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.root"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.root.description"
+        },
+        "background": "medabots_server:textures/gui/advancements/backgrounds/main.png"
+    },
+    "criteria": {
+        "verified_resource_pack": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/root"
+    }
+}
