@@ -6,7 +6,7 @@ execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:cobblestone run tag @
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:smooth_stone_slab[type=double] run tag @s add double_smooth_stone_slab_1
+execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:snow_block run tag @s add snow_block_1
@@ -38,7 +38,7 @@ execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:cobblestone run tag 
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:smooth_stone_slab[type=double] run tag @s add double_smooth_stone_slab_1
+execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:snow_block run tag @s add snow_block_1
@@ -70,7 +70,7 @@ execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:cobblestone run tag
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:smooth_stone_slab[type=double] run tag @s add double_smooth_stone_slab_1
+execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:snow_block run tag @s add snow_block_1
@@ -102,7 +102,7 @@ execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:cobblestone run tag 
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:coarse_dirt run tag @s add coarse_dirt_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:sand run tag @s add sand_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:packed_ice run tag @s add packed_ice_1
-execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:smooth_stone_slab[type=double] run tag @s add double_smooth_stone_slab_1
+execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:snow_block run tag @s add snow_block_1

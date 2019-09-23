@@ -5,7 +5,7 @@ execute if block ~ ~-1 ~ minecraft:cobblestone run tag @s add cobblestone
 execute if block ~ ~-1 ~ minecraft:coarse_dirt run tag @s add coarse_dirt
 execute if block ~ ~-1 ~ minecraft:sand run tag @s add sand
 execute if block ~ ~-1 ~ minecraft:packed_ice run tag @s add packed_ice
-execute if block ~ ~-1 ~ minecraft:smooth_stone_slab[type=double] run tag @s add double_smooth_stone_slab
+execute if block ~ ~-1 ~ minecraft:smooth_stone run tag @s add smooth_stone
 execute if block ~ ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab
 execute if block ~ ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab
 execute if block ~ ~-1 ~ minecraft:snow_block run tag @s add snow_block

@@ -96,8 +96,8 @@ execute positioned -1784 45 -714 run function medabots_server:set_blocks/floor_s
 execute positioned -1784 45 -710 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1779 45 -710 run function medabots_server:set_blocks/floor_switch/blue
 execute positioned -1777 45 -717 run function medabots_server:set_blocks/floor_switch/blue
-execute positioned -1817 45 -689 run function medabots_server:set_blocks/action_floor/guard/medium/power_1
-execute positioned -1816 45 -689 run function medabots_server:set_blocks/action_floor/round_stone/east/power_1
+execute positioned -1796 45 -701 run function medabots_server:set_blocks/action_floor/guard/medium/power_1
+execute positioned -1795 45 -701 run function medabots_server:set_blocks/action_floor/round_stone/east/power_1
 execute positioned -1784 45 -700 run function medabots_server:set_blocks/spring_wall/north/delay_1/power_1
 execute positioned -1783 45 -706 run function medabots_server:set_blocks/spring_wall/west/delay_1/power_1
 execute positioned -1792 45 -705 run function medabots_server:set_blocks/spring_wall/north/delay_1/power_1
