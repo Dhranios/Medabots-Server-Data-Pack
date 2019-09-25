@@ -46,8 +46,8 @@ scoreboard players set @s[scores={DeathTime=100}] LeaveStage 1
 execute if entity @s[scores={DeathTime=100}] run function medabots_server:other/death
 tag @s[tag=stage_builder] remove stage_builder
 tag @s[scores={DeathTime=100},type=!minecraft:player] add dead
-execute if entity @s[scores={DeathTime=100}] run kill @e[tag=this_medabot]
 execute if entity @s[scores={DeathTime=100}] at @e[tag=this_medabot] positioned ~ ~0.7 ~ run particle minecraft:cloud ~ ~ ~ 1 1 1 0 30
+execute if entity @s[scores={DeathTime=100}] run kill @e[tag=this_medabot]
 gamemode adventure @s[scores={DeathTime=101}]
 tag @s[scores={DeathTime=101}] remove drowned
 tag @s[scores={DeathTime=101}] remove crushed
