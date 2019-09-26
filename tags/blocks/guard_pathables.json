@@ -1,0 +1,10 @@
+{
+    "values": [
+        "minecraft:air",
+        "minecraft:cave_air",
+        "minecraft:void_air",
+        "minecraft:comparator",
+        "minecraft:black_carpet",
+        "minecraft:light_gray_carpet"
+    ]
+}

@@ -1,0 +1,2 @@
+execute unless block ~ ~ ~ minecraft:water run function medabots_server:entities/guard/can_move
+execute if block ~ ~ ~ minecraft:water positioned ~ ~1 ~ run function medabots_server:entities/guard/can_move

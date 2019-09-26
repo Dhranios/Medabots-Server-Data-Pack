@@ -16,18 +16,18 @@ execute if entity @s[scores={Time=7,CannonFire=0..},tag=detect,tag=detected,tag=
 
 # Fire in the hole!
 execute store result score #temp Stage run scoreboard players get @s Stage
-execute as @a[scores={Battle=2}] if score @s Stage = #temp Stage run tag @e[tag=cannon,distance=..0.1] add no_fire
+execute as @e[scores={Battle=2}] if score @s Stage = #temp Stage run tag @e[tag=cannon,distance=..0.1] add no_fire
 execute if entity @s[scores={Time=0,CannonFire=1..},tag=!no_fire,tag=!dying] unless entity @s[scores={IneffectiveTime=1..}] run function medabots_server:entities/cannon/fire
 scoreboard players set @s[scores={Time=0,CannonFire=1..,IneffectiveTime=1..},tag=!no_fire,tag=!dying] CannonFire 0
 tag @s[tag=no_fire] remove no_fire
 scoreboard players reset #temp Stage
 
 # Set anything that has detected to have not detected
+tag @s[tag=!detected] remove already_targetted
 tag @s[tag=detected,tag=detect] remove detected
 
 # No detect is the same as detected
 tag @s[tag=!detect] add detected
-tag @s[tag=!detected] remove already_targetted
 
 # Set the time depending on the delay
 scoreboard players set @s[scores={ParalyzeTime=1..}] Time 0
