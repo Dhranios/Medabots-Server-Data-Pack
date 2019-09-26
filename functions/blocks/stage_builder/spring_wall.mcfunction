@@ -42,3 +42,4 @@ execute if entity @s[tag=west,tag=delay_1] run function medabots_server:set_bloc
 
 # Give additional data
 scoreboard players operation @e[distance=..0.7,tag=spring_wall] PowerNeeded = @s PowerNeeded
+scoreboard players operation @e[distance=..0.7,tag=spring_wall] DelayTime = @s DelayTime

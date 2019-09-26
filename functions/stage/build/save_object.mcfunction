@@ -18,3 +18,4 @@ execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,li
 execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[1] int 1 run scoreboard players get @s HomeY
 execute if entity @s[tag=floor_switch] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[2] int 1 run scoreboard players get @s HomeZ
 execute if entity @s[scores={PowerNeeded=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[6] int 1 run scoreboard players get @s PowerNeeded
+execute if entity @s[scores={DelayTime=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[5] int 1 run scoreboard players get @s DelayTime

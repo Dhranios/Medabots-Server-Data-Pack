@@ -13,6 +13,7 @@ execute store result score @e[tag=new,tag=floor_switch,limit=1] HomeZ run data g
 execute store result score @e[tag=new,tag=fan,limit=1] Moving run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[0]
 execute store result score @e[tag=new,tag=fan,limit=1] Range run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[1]
 execute store result score @e[tag=new,tag=press_wall,limit=1] Range run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[0]
+execute store result score @e[tag=new,limit=1] DelayTime run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[5]
 execute store result score @e[tag=new,limit=1] PowerNeeded run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[6]
 execute at @e[tag=new,tag=starting_area] run teleport @a[tag=building_player,limit=1] ~ ~ ~ 0 0
 

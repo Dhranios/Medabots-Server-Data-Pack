@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/hammer_punch/west
-tag @e[distance=..0.7,tag=hammer_punch] add delay_7
+scoreboard players set @e[distance=..0.7,tag=hammer_punch] DelayTime 140
