@@ -1,9 +1,7 @@
-execute unless entity @s[scores={Level=0..}] run playsound medabots_server:music.map_overworld music @s[scores={MusicType=1}] ~ ~ ~ 1000
-execute unless entity @s[scores={Level=0..}] run scoreboard players set @s[scores={MusicType=1}] Music 1256
-playsound medabots_server:music.map_overworld music @s[scores={Level=..59,MusicType=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Level=..59,MusicType=1}] Music 1256
-playsound medabots_server:music.map_finished music @s[scores={Level=60..,MusicType=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Level=60..,MusicType=1}] Music 1118
+playsound medabots_server:music.map_overworld music @s[scores={MusicType=1},advancements={medabots_server:story_progression/infinity={victory=false}}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=1},advancements={medabots_server:story_progression/infinity={victory=false}}] Music 1256
+playsound medabots_server:music.map_finished music @s[scores={MusicType=1},advancements={medabots_server:story_progression/infinity={victory=true}}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=1},advancements={medabots_server:story_progression/infinity={victory=true}}] Music 1118
 playsound medabots_server:music.map_beach music @s[scores={MusicType=2}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=2}] Music 1746
 playsound medabots_server:music.map_sea music @s[scores={MusicType=3}] ~ ~ ~ 1000

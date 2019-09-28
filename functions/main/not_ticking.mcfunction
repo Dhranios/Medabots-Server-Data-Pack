@@ -12,3 +12,6 @@ execute if entity @s[tag=east,tag=accelerator] run fill ~ ~ ~ ~ ~ ~ minecraft:co
 execute if entity @s[tag=north,tag=accelerator] run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[facing=south,mode=compare,powered=false] replace minecraft:air
 execute if entity @s[tag=south,tag=accelerator] run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[facing=north,mode=compare,powered=false] replace minecraft:air
 execute if entity @s[tag=west,tag=accelerator] run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[facing=east,mode=compare,powered=false] replace minecraft:air
+
+# Model
+execute if entity @s[tag=guard,tag=!action_floor,tag=!pot] run function medabots_server:animations/guard

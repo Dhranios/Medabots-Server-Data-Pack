@@ -1,6 +1,3 @@
-# Make it so 1-time messages repeat
-scoreboard players set @s PreviousError 0
-
 # Reset title times
 title @s times 10 60 20
 effect give @s minecraft:health_boost 1000000 19 true
@@ -8,6 +5,7 @@ effect give @s minecraft:instant_health 1 19 true
 
 # No longer AFK
 scoreboard players set @s AFKTime 0
+team leave @s
 
 # Not the random message "owner" anymore
 tag @a[tag=message] remove message
@@ -28,4 +26,3 @@ scoreboard players set @s[tag=hostile] Batte 0
 
 # That's it
 tag @s remove returner
-scoreboard players set @s Verified 2

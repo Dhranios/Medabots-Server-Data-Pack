@@ -35,7 +35,7 @@ execute positioned -1543 45 -130 run function medabots_server:set_blocks/hole/de
 execute positioned -1545 45 -125 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1548 45 -122 run function medabots_server:set_blocks/hole/delay_5
 execute positioned -1509 45 -152 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
-execute positioned -1508 45 -152 run function medabots_server:set_blocks/fan/west/slow/range_31
+execute positioned -1508 45 -152 run function medabots_server:set_blocks/fan/west/slow/range_32
 execute positioned -1518 45 -131 run function medabots_server:set_blocks/pot
 execute positioned -1517 45 -132 run function medabots_server:set_blocks/pot
 execute positioned -1516 45 -132 run function medabots_server:set_blocks/pot
@@ -96,12 +96,13 @@ execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/we
 execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/west/power_1
 execute positioned -1536 45 -158 run function medabots_server:set_blocks/door/west/power_1
 execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/south/power_1
 execute positioned -1527 45 -171 run function medabots_server:set_blocks/door/east/power_1
 execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/east/power_0
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area
 teleport @a[x=-1570,y=51,z=-180,dx=63,dy=4,dz=63,tag=-1] -1516 45 -123 0 0
 teleport @s[tag=-1] -1516 45 -123 0 0
-tag @a[x=-1807,y=45,z=-555,distance=..1] remove -1
+tag @a[x=-1516,y=45,z=-123,distance=..1] remove -1
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @a[x=-1516,y=45,z=-123,distance=..1]
 scoreboard players set @a[x=-1516,y=45,z=-123,distance=..1] Battle 1

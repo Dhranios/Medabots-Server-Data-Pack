@@ -5,5 +5,5 @@ execute if entity @s[scores={AnimationProg=1}] store result entity @s Pose.Head[
 execute if entity @s[scores={AnimationProg=1}] as @e[tag=this_guard,limit=1] run function medabots_server:entities/guard/hurt
 execute if entity @s[scores={AnimationProg=2}] store result entity @s Pose.Head[0] float 1 run scoreboard players add #temp Time 18
 scoreboard players reset #temp Time
-execute if entity @s[scores={AnimationProg=2}] run tag @e[tag=this_guard] remove hurt
+execute if entity @s[scores={AnimationProg=2}] run tag @e[tag=this_guard,limit=1] remove hurt
 scoreboard players reset @s[scores={AnimationProg=2}] AnimationProg

@@ -12,15 +12,15 @@ scoreboard players set @s[scores={Dialog=1}] Music 62
 execute if entity @s[scores={Dialog=1}] positioned -388 55 -51 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -353 55 -36 run function medabots_server:spawn_entities/cutscene/shrimplips
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -350 55 -39 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[45.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:854784}}},{id:"minecraft:leather_leggings",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:8653587}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:12955077}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-350,y=55,z=-39,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
+execute if entity @s[scores={Dialog=1}] as @e[x=-350,y=55,z=-39,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -353 55 -40 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[0.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:4007937}}},{id:"minecraft:leather_leggings",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:14331567}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:15856365}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-353,y=55,z=-40,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
+execute if entity @s[scores={Dialog=1}] as @e[x=-353,y=55,z=-40,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -357 55 -37 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[-75.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:3681047}}},{id:"minecraft:leather_leggings",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:8810305}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:14343129}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-357,y=55,z=-37,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
+execute if entity @s[scores={Dialog=1}] as @e[x=-357,y=55,z=-37,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -357 55 -35 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[-105.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:1251852}}},{id:"minecraft:leather_leggings",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:11585482}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:201734}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-357,y=55,z=-35,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
-execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -67 ~
-execute if entity @s[scores={Dialog=1}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
+execute if entity @s[scores={Dialog=1}] as @e[x=-357,y=55,z=-35,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
+execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ~ ~ ~ -67 ~
+execute if entity @s[scores={Dialog=1}] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ~ ~ ~ -180 ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.1"}]}
 tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.2"}]}
 tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.3"}]}
@@ -40,9 +40,9 @@ execute if entity @s[scores={Dialog=960}] unless entity @s[x=-353,y=55,z=-36,dis
 execute if entity @s[scores={Dialog=960},tag=passed_on_medal] run tag @e[tag=kid,tag=this_dialog,sort=random,limit=1] add joins
 execute if entity @s[scores={Dialog=960},tag=!passed_on_medal] run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog] -357 55 -39 -55 0
 execute if entity @s[scores={Dialog=960..1468},tag=!passed_on_medal] at @e[tag=shrimplips,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=shrimplips,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=960..},tag=passed_on_medal] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s facing entity @e[tag=kid,tag=joins,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=960..},tag=passed_on_medal] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] facing entity @e[tag=kid,tag=joins,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=960}] run tag @e[tag=kid,tag=joins,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=960..970}] as @e[tag=kid,tag=joins,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=960..970}] as @e[tag=kid,tag=joins,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=970}] as @e[tag=kid,tag=joins,tag=this_dialog,limit=1] run tag @s remove walking
 tellraw @s[scores={Dialog=960}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.14"}]}
 tellraw @s[scores={Dialog=1000}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.15"}]}
@@ -60,9 +60,9 @@ tellraw @s[scores={Dialog=1276}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1372}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.23"}]}
 tellraw @s[scores={Dialog=1428}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.24"}]}
 tellraw @s[scores={Dialog=1436}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.25"}]}
-execute if entity @s[scores={Dialog=1468}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -80 0
+execute if entity @s[scores={Dialog=1468}] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ~ ~ ~ -80 0
 execute if entity @s[scores={Dialog=1468}] as @e[tag=shrimplips,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=1469..1548}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
+execute if entity @s[scores={Dialog=1469..1548}] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=1549}] run kill @e[tag=shrimplips,tag=this_dialog,limit=1]
 stopsound @s[scores={Dialog=1508}] music
 scoreboard players set @s[scores={Dialog=1508}] MusicType 1

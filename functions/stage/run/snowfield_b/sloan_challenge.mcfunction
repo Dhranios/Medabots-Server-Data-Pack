@@ -38,7 +38,7 @@ execute if block -1705 44 -509 minecraft:orange_wool run scoreboard players set 
 execute if block -1705 44 -509 minecraft:yellow_wool run scoreboard players set @e[x=-1704.5,y=45,z=-509.5,distance=..0.7,tag=alarm,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1737 45 -461 minecraft:iron_door[open=true] unless block -1749 44 -455 minecraft:lime_wool if entity @s[x=-1740,y=45,z=-463,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/sloan_challenge_battle/0
 execute if entity @e[x=-1744.5,y=45,z=-457.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,Battle=1..2}]
-execute if entity @e[x=-1744.5,y=45,z=-457.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1751 44 -455 minecraft:lime_wool run tag @s add mission_success
+execute if entity @e[x=-1744.5,y=45,z=-457.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1749 44 -455 minecraft:lime_wool run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=14,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
@@ -49,7 +49,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1751 45 -488 minecraft:iron_door[open=true] unless block -1746 44 -496 minecraft:lime_wool if entity @s[x=-1754,y=45,z=-490,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/sloan_challenge_battle/1
 execute if entity @e[x=-1755.5,y=45,z=-489.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,Battle=1..2}]
-execute if entity @e[x=-1755.5,y=45,z=-489.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1746 44 -497 minecraft:lime_wool run tag @s add mission_success
+execute if entity @e[x=-1755.5,y=45,z=-489.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1746 44 -496 minecraft:lime_wool run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=14,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
@@ -71,7 +71,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1681 45 -517 minecraft:iron_door[open=true] unless block -1686 44 -534 minecraft:lime_wool if entity @s[x=-1682,y=45,z=-520,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/sloan_challenge_battle/3
 execute if entity @e[x=-1678.5,y=45,z=-526.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,Battle=1..2}]
-execute if entity @e[x=-1678.5,y=45,z=-526.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1686 44 -535 minecraft:lime_wool run tag @s add mission_success
+execute if entity @e[x=-1678.5,y=45,z=-526.5,distance=..0.7,tag=mission,scores={Dialog=81}] if block -1686 44 -534 minecraft:lime_wool run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=14,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
