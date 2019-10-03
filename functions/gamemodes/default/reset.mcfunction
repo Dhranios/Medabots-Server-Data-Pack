@@ -4,12 +4,6 @@ scoreboard players set @s[scores={TransformLTime=2..}] TransformLTime 2
 scoreboard players set @s[scores={TransformRTime=2..}] TransformRTime 2
 scoreboard players set @s[scores={TransformHTime=2..}] TransformHTime 2
 scoreboard players set @s[scores={Fly=1..}] Fly 0
-tag @s[tag=float] remove float
-tag @s[tag=multi_legged] remove multi_legged
-tag @s[tag=swim] remove swim
-tag @s[tag=tank] remove tank
-tag @s[tag=two_legged] remove two_legged
-tag @s[tag=wheel] remove wheel
 function medabots_server:effects/clear
 
 # Reset medaforce
@@ -45,6 +39,13 @@ tag @s remove ally_medabot
 tag @s remove male_tinpet
 tag @s remove female_tinpet
 tag @s remove neutral_tinpet
+tag @s remove fly_legs
+tag @s remove float_legs
+tag @s remove multi_legged_legs
+tag @s remove two_legged_legs
+tag @s remove wheel_legs
+tag @s remove tank_legs
+tag @s remove swim_legs
 tag @s remove 1
 tag @s remove 2
 tag @s remove 3

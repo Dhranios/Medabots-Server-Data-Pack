@@ -2,7 +2,13 @@
 execute if entity @s[scores={Battle=2}] run function medabots_server:gamemodes/default/robattle_wait
 
 # Make Leg parts do something
-function #medabots_server:leg_medaparts
+execute if entity @s[tag=fly_legs] run function medabots_server:items/medapart/fly
+execute if entity @s[tag=float_legs] run function medabots_server:items/medapart/float
+execute if entity @s[tag=multi_legged_legs] run function medabots_server:items/medapart/multi_legged
+execute if entity @s[tag=two_legged_legs] run function medabots_server:items/medapart/two_legged
+execute if entity @s[tag=wheel_legs] run function medabots_server:items/medapart/wheel
+execute if entity @s[tag=tank_legs] run function medabots_server:items/medapart/tank
+execute if entity @s[tag=swim_legs] run function medabots_server:items/medapart/swim
 
 # Medaforce getting blocked
 execute if entity @s[tag=medaforce_block] run function medabots_server:effects/blocked_medaforce_toggle

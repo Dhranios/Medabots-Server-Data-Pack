@@ -1,40 +1,44 @@
-scoreboard players set @s[tag=anti_fly_left_arm] MedapartType 1
-scoreboard players set @s[tag=anti_tank_left_arm] MedapartType 2
-scoreboard players set @s[tag=auxilary_charge_left_arm] MedapartType 3
-scoreboard players set @s[tag=break_left_arm] MedapartType 4
-scoreboard players set @s[tag=bug_left_arm] MedapartType 5
-scoreboard players set @s[tag=confuse_left_arm] MedapartType 6
-scoreboard players set @s[tag=defense_left_arm] MedapartType 7
-scoreboard players set @s[tag=destroy_left_arm] MedapartType 8
-scoreboard players set @s[tag=falling_left_arm] MedapartType 9
-scoreboard players set @s[tag=freeze_left_arm] MedapartType 10
-scoreboard players set @s[tag=gatling_left_arm] MedapartType 11
-scoreboard players set @s[tag=guard_gravity_left_arm] MedapartType 12
-scoreboard players set @s[tag=guard_gunpowder_left_arm] MedapartType 13
-scoreboard players set @s[tag=guard_optical_left_arm] MedapartType 14
-scoreboard players set @s[tag=hammer_left_arm] MedapartType 15
-scoreboard players set @s[tag=heal_left_arm] MedapartType 16
-scoreboard players set @s[tag=hide_left_arm] MedapartType 17
-scoreboard players set @s[tag=hold_left_arm] MedapartType 18
-scoreboard players set @s[tag=ineffective_left_arm] MedapartType 19
-scoreboard players set @s[tag=infect_left_arm] MedapartType 20
-scoreboard players set @s[tag=laser_left_arm] MedapartType 21
-scoreboard players set @s[tag=medaforce_control_left_arm] MedapartType 22
-scoreboard players set @s[tag=melee_trap_left_arm] MedapartType 23
-scoreboard players set @s[tag=melt_left_arm] MedapartType 24
-scoreboard players set @s[tag=missile_left_arm] MedapartType 25
-scoreboard players set @s[tag=napalm_left_arm] MedapartType 26
-scoreboard players set @s[tag=no_defend_left_arm] MedapartType 27
-scoreboard players set @s[tag=paralyze_left_arm] MedapartType 28
-scoreboard players set @s[tag=perfect_guard_left_arm] MedapartType 29
-scoreboard players set @s[tag=press_left_arm] MedapartType 30
-scoreboard players set @s[tag=repair_left_arm] MedapartType 31
-scoreboard players set @s[tag=rifle_left_arm] MedapartType 32
-scoreboard players set @s[tag=sacrifice_left_arm] MedapartType 33
-scoreboard players set @s[tag=scout_left_arm] MedapartType 34
-scoreboard players set @s[tag=shooting_trap_left_arm] MedapartType 35
-scoreboard players set @s[tag=status_clear_left_arm] MedapartType 36
-scoreboard players set @s[tag=sword_left_arm] MedapartType 37
-scoreboard players set @s[tag=transform_left_arm] MedapartType 38
-scoreboard players set @s[tag=wave_left_arm] MedapartType 39
+execute store result score #temp MedabotNr run scoreboard players get @s MedabotNr
+execute as @e[scores={MedabotNr=0..},tag=left_arm] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"anti_fly"}}}]}] run scoreboard players set @s MedapartType 1
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"anti_tank"}}}]}] run scoreboard players set @s MedapartType 2
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"auxilary_charge"}}}]}] run scoreboard players set @s MedapartType 3
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"break"}}}]}] run scoreboard players set @s MedapartType 4
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"bug"}}}]}] run scoreboard players set @s MedapartType 5
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"confuse"}}}]}] run scoreboard players set @s MedapartType 6
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"defense"}}}]}] run scoreboard players set @s MedapartType 7
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"destroy"}}}]}] run scoreboard players set @s MedapartType 8
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"falling"}}}]}] run scoreboard players set @s MedapartType 9
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"freeze"}}}]}] run scoreboard players set @s MedapartType 10
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"gatling"}}}]}] run scoreboard players set @s MedapartType 11
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"guard_gravity"}}}]}] run scoreboard players set @s MedapartType 12
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"guard_gunpowder"}}}]}] run scoreboard players set @s MedapartType 13
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"guard_optical"}}}]}] run scoreboard players set @s MedapartType 14
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"hammer"}}}]}] run scoreboard players set @s MedapartType 15
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"heal"}}}]}] run scoreboard players set @s MedapartType 16
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"hide"}}}]}] run scoreboard players set @s MedapartType 17
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"hold"}}}]}] run scoreboard players set @s MedapartType 18
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"ineffective"}}}]}] run scoreboard players set @s MedapartType 19
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"infect"}}}]}] run scoreboard players set @s MedapartType 20
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"laser"}}}]}] run scoreboard players set @s MedapartType 21
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"medaforce_control"}}}]}] run scoreboard players set @s MedapartType 22
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"melee_trap"}}}]}] run scoreboard players set @s MedapartType 23
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"melt"}}}]}] run scoreboard players set @s MedapartType 24
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"missile"}}}]}] run scoreboard players set @s MedapartType 25
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"napalm"}}}]}] run scoreboard players set @s MedapartType 26
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"no_defend"}}}]}] run scoreboard players set @s MedapartType 27
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"paralyze"}}}]}] run scoreboard players set @s MedapartType 28
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"perfect_guard"}}}]}] run scoreboard players set @s MedapartType 29
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"press"}}}]}] run scoreboard players set @s MedapartType 30
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"repair"}}}]}] run scoreboard players set @s MedapartType 31
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"rifle"}}}]}] run scoreboard players set @s MedapartType 32
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"sacrifice"}}}]}] run scoreboard players set @s MedapartType 33
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"scout"}}}]}] run scoreboard players set @s MedapartType 34
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"shooting_trap"}}}]}] run scoreboard players set @s MedapartType 35
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"status_clear"}}}]}] run scoreboard players set @s MedapartType 36
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"sword"}}}]}] run scoreboard players set @s MedapartType 37
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run scoreboard players set @s MedapartType 38
+execute if entity @s[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"wave"}}}]}] run scoreboard players set @s MedapartType 39
 scoreboard players set @s Time 10
+scoreboard players reset #temp MedabotNr
+tag @e[tag=this_medabot,limit=1] remove this_medabot

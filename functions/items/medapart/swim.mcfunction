@@ -1,7 +1,5 @@
 # Allow swimming for equipped users
-tag @s[tag=swim] remove swim
-tag @s[scores={LegsArmor=1..},type=!minecraft:player,tag=swim_legs] add swim
-tag @s[scores={LegsArmor=1..},type=minecraft:player,nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"swim"}}}]}] add swim
+tag @s[scores={LegsArmor=1..},tag=swim_legs] add swim
 execute if entity @s[type=!minecraft:player,tag=swim] if block ~ ~1.1 ~ minecraft:water run data modify entity @s Motion[1] set value 0.0824d
 
 # Kill unequipped users in deep water
@@ -23,3 +21,5 @@ execute if block ~ ~ ~ minecraft:bubble_column if block ~ ~-1 ~ minecraft:magma_
 tag @s[tag=drowned,tag=guard] add dead
 tag @s[tag=drowned,tag=bomb] add dead
 tag @s[tag=drowned] add dying
+
+tag @s remove swim

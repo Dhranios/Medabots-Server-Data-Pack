@@ -1,9 +1,7 @@
 # Tag the equipped users
-execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[tag=hostile,scores={LegsArmor=1..},tag=fly_legs,type=!minecraft:player] Fly 2
-execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[tag=hostile,scores={LegsArmor=1..},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] Fly 2
-execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[tag=hostile,scores={LegsArmor=1..,Fly=1..},tag=fly_legs,type=!minecraft:player] Fly 2
-execute if block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:air run scoreboard players set @s[tag=hostile,nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] Fly 1
-execute if block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:air run scoreboard players set @s[tag=hostile,scores={Fly=1..},type=!minecraft:player] Fly 1
+execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[scores={LegsArmor=1..},tag=fly_legs,type=!minecraft:player] Fly 2
+execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[scores={LegsArmor=1..,Fly=1..},tag=fly_legs] Fly 2
+execute if block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:air run scoreboard players set @s[scores={Fly=1..}] Fly 1
 
 # Fly crash
 tag @s[scores={Fly=1,LegsArmor=..0}] remove static_fly
@@ -13,12 +11,12 @@ tag @s remove no_crash
 execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[scores={Fly=2..,LegsArmor=..0}] Fly 0
 
 # Fly up
-scoreboard players set @s[tag=hostile,scores={LegsArmor=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] Fly 3
-scoreboard players set @s[tag=hostile,scores={LegsArmor=1..,FlyTime=..150},type=!minecraft:player,tag=fly_legs,tag=legs_selected] Fly 3
-execute if entity @s[tag=hostile,scores={LegsArmor=1..,Fly=1..2}] run function medabots_server:items/medapart/fly/hot_air
+scoreboard players set @s[scores={LegsArmor=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] Fly 3
+scoreboard players set @s[scores={LegsArmor=1..,FlyTime=..150},type=!minecraft:player,tag=fly_legs,tag=legs_selected] Fly 3
+execute if entity @s[scores={LegsArmor=1..,Fly=1..2}] run function medabots_server:items/medapart/fly/hot_air
 
 # CPU behavior
-execute if entity @s[tag=hostile,scores={LegsArmor=1..},tag=fly_legs,type=!minecraft:player] run function medabots_server:items/medapart/fly/cpu_behavior
+execute if entity @s[scores={LegsArmor=1..},tag=fly_legs,type=!minecraft:player] run function medabots_server:items/medapart/fly/cpu_behavior
 
 # Limit flying to 8 seconds
 scoreboard players set @s[nbt={OnGround:1b}] FlyTime 0
@@ -26,9 +24,9 @@ scoreboard players set @s[scores={FlyTime=160}] OverheatingFly 1
 scoreboard players set @s[scores={OverheatingFly=1}] Fly 1
 
 # Move up unless outside of y=0-255
-execute if entity @s[tag=hostile,scores={Fly=1..,LegsArmor=1..}] run effect give @s minecraft:slow_falling 1 0 true
-execute if entity @s[tag=hostile,scores={Fly=3}] if entity @s[y=0,dy=255] run effect give @s minecraft:levitation 1 3 true
-execute if entity @s[tag=hostile,scores={Fly=3}] if entity @s[y=255,dy=1] run effect clear @s minecraft:levitation
+execute if entity @s[scores={Fly=1..,LegsArmor=1..}] run effect give @s minecraft:slow_falling 1 0 true
+execute if entity @s[scores={Fly=3}] if entity @s[y=0,dy=255] run effect give @s minecraft:levitation 1 3 true
+execute if entity @s[scores={Fly=3}] if entity @s[y=255,dy=1] run effect clear @s minecraft:levitation
 
 # Increase and decrease the fly time
 scoreboard players add @s[scores={Fly=3},tag=!hot_air] FlyTime 2
