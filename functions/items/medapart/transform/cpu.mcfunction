@@ -14,15 +14,15 @@ scoreboard players set @s[tag=head_selected] TransformHTime 2400
 
 # Transform
 tag @e[distance=..0.7,type=minecraft:item] add not_me
-execute if entity @s[tag=left_arm_selected,tag=male_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/left_arm/male_tinpet
-execute if entity @s[tag=right_arm_selected,tag=male_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/right_arm/male_tinpet
-execute if entity @s[tag=head_selected,tag=male_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/head/male_tinpet
-execute if entity @s[tag=left_arm_selected,tag=female_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/left_arm/female_tinpet
-execute if entity @s[tag=right_arm_selected,tag=female_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/right_arm/female_tinpet
-execute if entity @s[tag=head_selected,tag=female_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/head/female_tinpet
-execute if entity @s[tag=left_arm_selected,tag=neutral_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/left_arm/neutral_tinpet
-execute if entity @s[tag=right_arm_selected,tag=neutral_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/right_arm/neutral_tinpet
-execute if entity @s[tag=head_selected,tag=neutral_tinpet] loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/head/neutral_tinpet
+execute if entity @s[tag=left_arm_selected,tag=male_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/left_arm/male_tinpet
+execute if entity @s[tag=right_arm_selected,tag=male_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/right_arm/male_tinpet
+execute if entity @s[tag=head_selected,tag=male_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/head/male_tinpet
+execute if entity @s[tag=left_arm_selected,tag=female_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/left_arm/female_tinpet
+execute if entity @s[tag=right_arm_selected,tag=female_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/right_arm/female_tinpet
+execute if entity @s[tag=head_selected,tag=female_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/head/female_tinpet
+execute if entity @s[tag=left_arm_selected,tag=neutral_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/left_arm/neutral_tinpet
+execute if entity @s[tag=right_arm_selected,tag=neutral_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/right_arm/neutral_tinpet
+execute if entity @s[tag=head_selected,tag=neutral_tinpet] run loot spawn ~ ~ ~ loot medabots_server:gameplay/transform/head/neutral_tinpet
 
 # Update model
 execute if entity @s[tag=left_arm_selected] run kill @e[tag=left_arm,tag=this_model]
@@ -35,10 +35,10 @@ execute if entity @s[tag=head_selected] run summon minecraft:armor_stand ~ ~ ~ {
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add male_tinpet
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add female_tinpet
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:neutral_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add neutral_tinpet
-execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = @a[distance=..0.1,limit=1] MedabotNr
-execute if entity @s[tag=left_arm_selected] as @e[tag=left_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
-execute if entity @s[tag=right_arm_selected] as @e[tag=right_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
-execute if entity @s[tag=head_selected] as @e[tag=head,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
+execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = @e[distance=..0.1,limit=1] MedabotNr
+execute if entity @s[tag=left_arm_selected] as @e[tag=left_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @e[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
+execute if entity @s[tag=right_arm_selected] as @e[tag=right_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @e[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
+execute if entity @s[tag=head_selected] as @e[tag=head,tag=new] run data modify entity @s ArmorItems[3] merge from entity @e[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
 kill @e[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1]
 tag @e[tag=medabot_model,tag=new] remove new
 scoreboard players reset #temp MedabotNr

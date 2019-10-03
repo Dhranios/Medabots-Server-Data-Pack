@@ -128,10 +128,12 @@ execute if entity @s[scores={Dialog=1046..1073}] as @e[tag=peace_kiss,tag=!medab
 execute if entity @s[scores={Dialog=1074}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -449 55 -47
 execute if entity @s[scores={Dialog=1075..1104}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1104}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
+execute if entity @s[scores={Dialog=1074}] run setblock -457 53 -43 minecraft:air
 execute if entity @s[scores={Dialog=1104}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1044}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.23"}]}
 tellraw @s[scores={Dialog=1076}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peace_kiss"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.24"}]}
 tellraw @s[scores={Dialog=1108}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.blue_man"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.25"}]}
+execute if entity @s[scores={Dialog=1179}] run setblock -457 53 -43 minecraft:redstone_block
 execute if entity @s[scores={Dialog=1179}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~5 ~
 execute if entity @s[scores={Dialog=1180}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -456 55 -42
 execute if entity @s[scores={Dialog=1181..1218}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

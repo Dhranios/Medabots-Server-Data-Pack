@@ -8,6 +8,7 @@ execute if block ~ ~-1 ~ minecraft:packed_ice run tag @s add packed_ice
 execute if block ~ ~-1 ~ minecraft:smooth_stone run tag @s add smooth_stone
 execute if block ~ ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab
 execute if block ~ ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab
+execute if block ~ ~-1 ~ minecraft:dark_oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_dark_oak_slab
 execute if block ~ ~-1 ~ minecraft:snow_block run tag @s add snow_block
 execute if block ~ ~-1 ~ minecraft:oak_planks run tag @s add oak_planks
 execute if block ~ ~-1 ~ minecraft:andesite run tag @s add andesite

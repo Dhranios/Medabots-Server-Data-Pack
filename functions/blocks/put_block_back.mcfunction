@@ -8,6 +8,7 @@ execute if entity @s[tag=packed_ice] run setblock ~ ~-1 ~ minecraft:packed_ice
 execute if entity @s[tag=smooth_stone] run setblock ~ ~-1 ~ minecraft:smooth_stone
 execute if entity @s[tag=waterlogged_top_jungle_slab] run setblock ~ ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true]
 execute if entity @s[tag=waterlogged_top_oak_slab] run setblock ~ ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true]
+execute if entity @s[tag=waterlogged_top_dark_oak_slab] run setblock ~ ~-1 ~ minecraft:dark_oak_slab[type=top,waterlogged=true]
 execute if entity @s[tag=snow_block] run setblock ~ ~-1 ~ minecraft:snow_block
 execute if entity @s[tag=oak_planks] run setblock ~ ~-1 ~ minecraft:oak_planks
 execute if entity @s[tag=andesite] run setblock ~ ~-1 ~ minecraft:andesite

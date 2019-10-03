@@ -20,7 +20,7 @@ execute if block -1638 44 -636 minecraft:orange_wool run scoreboard players remo
 execute if block -1638 44 -636 minecraft:orange_wool run tag @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,tag=changed] remove changed
 execute if block -1618 45 -589 minecraft:iron_door[open=true] if block -1615 45 -593 minecraft:air if entity @s[x=-1619,y=45,z=-592,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/second_go_battle/0
 execute if entity @e[x=-1609.5,y=45,z=-590.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,Battle=1..2}]
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] as @e[x=-1609.5,y=45,z=-589.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=22}] run tag @s remove run_until_the_time_is_up
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] as @e[x=-1609.5,y=45,z=-590.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=22}] run tag @s remove run_until_the_time_is_up
 execute if entity @e[x=-1609.5,y=45,z=-590.5,distance=..0.7,tag=mission,tag=!run_until_the_time_is_up] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @e[x=-1609.5,y=45,z=-590.5,distance=..0.7,tag=mission,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=-1617.5,y=45,z=-588.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1609.5,y=45,z=-590.5,distance=..0.7,tag=mission,tag=!run_until_the_time_is_up] run bossbar set medabots_server:paradise_b/robattle players

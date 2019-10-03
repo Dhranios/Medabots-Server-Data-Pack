@@ -18,7 +18,7 @@ execute positioned -1711 45 -641 run function medabots_server:set_blocks/hammer_
 execute positioned -1710 45 -642 run function medabots_server:set_blocks/hammer_punch/north/delay_10/power_0
 execute positioned -1709 45 -643 run function medabots_server:set_blocks/hammer_punch/north/delay_10/power_0
 execute positioned -1708 45 -644 run function medabots_server:set_blocks/hammer_punch/north/delay_10/power_0
-scoreboard players set @e[x=-1723.5,y=45,z=-649.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
+scoreboard players set @e[x=-1723.5,y=45,z=-649.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

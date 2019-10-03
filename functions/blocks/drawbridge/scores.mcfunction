@@ -9,6 +9,7 @@ execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:packed_ice run tag @s
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
+execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:dark_oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_dark_oak_slab_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:andesite run tag @s add andesite_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:orange_terracotta run tag @s add orange_terracotta_1
@@ -41,6 +42,7 @@ execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:packed_ice run tag @
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
+execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:dark_oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_dark_oak_slab_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:andesite run tag @s add andesite_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:orange_terracotta run tag @s add orange_terracotta_1
@@ -73,6 +75,7 @@ execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:packed_ice run tag 
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
+execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:dark_oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_dark_oak_slab_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:andesite run tag @s add andesite_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:orange_terracotta run tag @s add orange_terracotta_1
@@ -105,6 +108,7 @@ execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:packed_ice run tag @
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:smooth_stone run tag @s add smooth_stone_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:jungle_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_jungle_slab_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_oak_slab_1
+execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:dark_oak_slab[type=top,waterlogged=true] run tag @s add waterlogged_top_dark_oak_slab_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:snow_block run tag @s add snow_block_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:andesite run tag @s add andesite_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:orange_terracotta run tag @s add orange_terracotta_1

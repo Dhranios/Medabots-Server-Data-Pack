@@ -9,11 +9,10 @@
         "description": {
             "translate": "medabots_server:advancements.special_items.passes.robo_1.description"
         },
-        "show_toast": false,
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "medabots_server:special_items/passes",
+    "parent": "medabots_server:special_items/passes/attendee",
     "criteria": {
         "give": {
             "trigger": "minecraft:impossible"

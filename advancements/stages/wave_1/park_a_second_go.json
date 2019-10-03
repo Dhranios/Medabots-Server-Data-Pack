@@ -1,7 +1,7 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:smooth_stone_slab"
+            "item": "minecraft:gold_block"
         },
         "title": {
             "translate": "medabots_server:location.park_a",

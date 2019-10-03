@@ -2,12 +2,12 @@ execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] run tellraw
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] positioned -1743 45 -652 run function medabots_server:spawn_entities/medabot/seven_colors/kasou_touchu/poison_scorpi/seven_colors/chameleon
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] positioned -1743 45 -652 run scoreboard players set @e[distance=..1] Stage 21
 execute unless entity @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] positioned -1743 45 -652 run tag @e[distance=..1] add enemy_medabot
-execute positioned -1744 45 -652 run function medabots_server:spawn_entities/mission/guard/medium
-execute positioned -1738 45 -650 run function medabots_server:spawn_entities/mission/guard/medium
-execute positioned -1750 45 -645 run function medabots_server:spawn_entities/mission/guard/medium
-execute positioned -1728 45 -649 run function medabots_server:spawn_entities/mission/guard/medium
-execute positioned -1737 45 -642 run function medabots_server:spawn_entities/mission/guard/medium
-scoreboard players set @e[x=-1741.5,y=45,z=-661.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
+execute positioned -1744 45 -652 run function medabots_server:spawn_entities/guard/medium/mission
+execute positioned -1738 45 -650 run function medabots_server:spawn_entities/guard/medium/mission
+execute positioned -1750 45 -645 run function medabots_server:spawn_entities/guard/medium/mission
+execute positioned -1728 45 -649 run function medabots_server:spawn_entities/guard/medium/mission
+execute positioned -1737 45 -642 run function medabots_server:spawn_entities/guard/medium/mission
+scoreboard players set @e[x=-1741.5,y=45,z=-661.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

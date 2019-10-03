@@ -34,9 +34,9 @@ tag @s[advancements={medabots_server:story_progression/infinity={new_look_new_ch
 tag @s[advancements={medabots_server:story_progression/infinity={suspicious_tune=true,harus_experiment=false}},x=-425,y=55,z=-55,distance=..4] add dialog_infinity_harus_experiment
 tag @s[advancements={medabots_server:story_progression/infinity={vs_karin_battle=true,death_break=false}},x=-413,y=55,z=-38,distance=..5] add dialog_infinity_death_break
 tag @s[advancements={medabots_server:story_progression/infinity={red_pepper_defeated=true,three_colors_defeated=false}},x=-435,y=55,z=-66,dx=5,dy=5,dz=28] add dialog_infinity_three_colors_defeated
-#tag @s[advancements={medabots_server:story_progression/infinity={three_colors_defeated=true,suspicious_haru=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_suspicious_haru
-#tag @s[advancements={medabots_server:story_progression/infinity={suspicious_haru=true,tunes_tinpet=false,harus_tinpet=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_tunes_tinpet
-#tag @s[advancements={medabots_server:story_progression/infinity={suspicious_haru=true,tunes_tinpet=false,harus_tinpet=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_haru_tinpet
+tag @s[advancements={medabots_server:story_progression/infinity={three_colors_defeated=true,suspicious_haru=false}},x=-375,y=55,z=-37,distance=..6] add dialog_infinity_suspicious_haru
+tag @s[advancements={medabots_server:story_progression/infinity={suspicious_haru=true,tunes_tinpet=false,harus_tinpet=false}},x=-424,y=55,z=-14,distance=..6] add dialog_infinity_tunes_tinpet
+tag @s[advancements={medabots_server:story_progression/infinity={suspicious_haru=true,tunes_tinpet=false,harus_tinpet=false}},x=-450,y=55,z=-95,distance=..6] add dialog_infinity_harus_tinpet
 #tag @s[advancements={medabots_server:story_progression/infinity={jaxy_is_gone=true,krosserdog_taken=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_krosserdog_taken
 #tag @s[advancements={medabots_server:story_progression/infinity={jaxy_is_gone=true,totalizer_taken=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_totalizer_taken
 #tag @s[advancements={medabots_server:story_progression/infinity={jaxy_is_gone=true,peppercat_taken=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_peppercat_taken

@@ -8,12 +8,12 @@ execute positioned -1739 45 -679 run function medabots_server:spawn_entities/gua
 execute positioned -1748 45 -678 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1753 45 -672 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1754 45 -666 run function medabots_server:spawn_entities/guard/medium
-execute positioned -1733 45 -669 run function medabots_server:spawn_entities/mission/cannon/search/west/delay_4
-execute positioned -1732 45 -679 run function medabots_server:spawn_entities/mission/cannon/search/west/delay_4
-execute positioned -1744 45 -680 run function medabots_server:spawn_entities/mission/cannon/search/south/delay_4
-execute positioned -1754 45 -677 run function medabots_server:spawn_entities/mission/cannon/search/east/delay_4
-execute positioned -1751 45 -665 run function medabots_server:spawn_entities/mission/cannon/search/east/delay_4
-scoreboard players set @e[x=-1739.5,y=45,z=-681.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
+execute positioned -1733 45 -669 run function medabots_server:spawn_entities/cannon/search/west/delay_4/mission
+execute positioned -1732 45 -679 run function medabots_server:spawn_entities/cannon/search/west/delay_4/mission
+execute positioned -1744 45 -680 run function medabots_server:spawn_entities/cannon/search/south/delay_4/mission
+execute positioned -1754 45 -677 run function medabots_server:spawn_entities/cannon/search/east/delay_4/mission
+execute positioned -1751 45 -665 run function medabots_server:spawn_entities/cannon/search/east/delay_4/mission
+scoreboard players set @e[x=-1739.5,y=45,z=-681.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

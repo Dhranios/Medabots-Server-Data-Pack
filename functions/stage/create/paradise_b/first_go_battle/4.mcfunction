@@ -11,7 +11,7 @@ execute positioned -1661 45 -617 run function medabots_server:set_blocks/stone
 execute positioned -1657 45 -617 run function medabots_server:set_blocks/stone
 execute positioned -1657 45 -614 run function medabots_server:set_blocks/stone
 execute positioned -1658 45 -613 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
-scoreboard players set @e[x=-1658.545,z=-627.5,distance=..0.7,tag=door,scores={NeededPower=0}] NeededPower 1
+scoreboard players set @e[x=-1658.545,z=-627.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

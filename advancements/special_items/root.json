@@ -10,7 +10,6 @@
             "translate": "medabots_server:advancements.special_items.root.description"
         },
         "background": "medabots_server:textures/gui/advancements/backgrounds/special_items.png",
-        "show_toast": false,
         "announce_to_chat": false
     },
     "criteria": {

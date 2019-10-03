@@ -9,4 +9,5 @@ execute if entity @s[advancements={medabots_server:story_progression/infinity={v
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_seaslug=true,vs_seaslug_battle=false}},scores={Dialog=0},gamemode=adventure] run function medabots_server:stage/sign/generic/story_battle
 execute if entity @s[advancements={medabots_server:story_progression/infinity={motivated_fight=true,motivated_fight_battle=false}},scores={Dialog=0},gamemode=adventure] run function medabots_server:stage/sign/generic/story_battle
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_screws=true,vs_screws_battle=false}},scores={Dialog=0},gamemode=adventure] run function medabots_server:stage/sign/generic/story_battle
+execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_jaxy=true,vs_jaxy_battle=false}},scores={Dialog=0},gamemode=adventure] run function medabots_server:stage/sign/generic/story_battle
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
