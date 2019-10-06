@@ -87,7 +87,7 @@ execute if block -1586 44 -745 minecraft:yellow_wool run tag @e[x=-1583.5,y=45,z
 execute if block -1586 44 -745 minecraft:orange_wool run scoreboard players remove @e[x=-1583.5,y=45,z=-745.5,distance=..0.7,tag=fan,tag=changed] Moving 1
 execute if block -1586 44 -745 minecraft:orange_wool run tag @e[x=-1583.5,y=45,z=-745.5,distance=..0.7,tag=fan,tag=changed] remove changed
 execute if block -1588 45 -730 minecraft:iron_door[open=true] if entity @s[x=-1589,y=45,z=-733,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_d/first_go_battle/0
-execute if entity @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=30,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=30,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=30}] run scoreboard players set @s Stage 30
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/grassland_d/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/grassland_d_first_go

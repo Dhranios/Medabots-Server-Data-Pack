@@ -204,53 +204,67 @@ scoreboard players set Passes: ServerStats 19
 scoreboard players set Dev_Mode_Versions: ServerStats 2
 
 # Re-add any teams that may have been removed
-team add AFK {"translate":"medabots_server:scoreboard.team.afk"}
 team add Advanced {"translate":"medabots_server:scoreboard.team.advanced"}
+team add AFK {"translate":"medabots_server:scoreboard.team.afk"}
+team add AllyMedabot {"translate":"medabots_server:scoreboard.team.ally_medabot"}
 team add Bot {"translate":"medabots_server:scoreboard.team.bot"}
 team add Donator {"translate":"medabots_server:scoreboard.team.donator"}
-team add EnemyPlayer {"translate":"medabots_server:scoreboard.team.enemy"}
+team add EnemyMedabot {"translate":"medabots_server:scoreboard.team.enemy_medabot"}
 team add Moderator {"translate":"medabots_server:scoreboard.team.moderator"}
 team add MtBattleMaster {"translate":"medabots_server:scoreboard.team.mt_battle_master"}
+team add NeutralMedabot {"translate":"medabots_server:scoreboard.team.neutral_medabot"}
 team add Passive
 team add Rubberobo
-team add StageBoss {"translate":"medabots_server:scoreboard.team.boss"}
-team add StageEnemy {"translate":"medabots_server:scoreboard.team.enemy"}
+team add StageBoss {"translate":"medabots_server:scoreboard.team.stage_boss"}
+team add StageEnemy {"translate":"medabots_server:scoreboard.team.stage_enemy"}
 
 # Set team data
+team modify Advanced color aqua
+team modify Advanced prefix {"translate":"medabots_server:entity.team.advanced","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.advanced"}}}
 team modify AFK collisionRule never
 team modify AFK color black
 team modify AFK friendlyFire false
 team modify AFK nametagVisibility never
 team modify AFK seeFriendlyInvisibles false
 team modify AFK prefix {"translate":"medabots_server:entity.team.afk","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.afk"}}}
-team modify Advanced color aqua
-team modify Advanced prefix {"translate":"medabots_server:entity.team.advanced","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.advanced"}}}
+team modify AllyMedabot collisionRule never
+team modify AllyMedabot color green
+team modify AllyMedabot friendlyFire true
+team modify AllyMedabot nametagVisibility hideForOtherTeams
+team modify AllyMedabot seeFriendlyInvisibles false
+team modify AllyMedabot prefix {"translate":"medabots_server:entity.team.ally_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.ally_medabot"}}}
 team modify Bot color gray
 team modify Bot prefix {"translate":"medabots_server:entity.team.bot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.bot"}}}
 team modify Donator color gold
 team modify Donator prefix {"translate":"medabots_server:entity.team.donator","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.donator"}}}
-team modify EnemyPlayer collisionRule never
-team modify EnemyPlayer color green
-team modify EnemyPlayer friendlyFire true
-team modify EnemyPlayer nametagVisibility never
-team modify EnemyPlayer seeFriendlyInvisibles false
-team modify EnemyPlayer prefix {"translate":"medabots_server:entity.team.enemy","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.enemy"}}}
+team modify EnemyMedabot collisionRule never
+team modify EnemyMedabot color green
+team modify EnemyMedabot friendlyFire true
+team modify EnemyMedabot nametagVisibility hideForOtherTeams
+team modify EnemyMedabot seeFriendlyInvisibles false
+team modify EnemyMedabot prefix {"translate":"medabots_server:entity.team.enemy_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.enemy_medabot"}}}
 team modify Moderator color red
 team modify Moderator prefix {"translate":"medabots_server:entity.team.moderator","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.moderator"}}}
 team modify MtBattleMaster color light_purple
 team modify MtBattleMaster prefix {"translate":"medabots_server:entity.team.mt_battle_master","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.mt_battle_master"}}}
+team modify NeutralMedabot collisionRule never
+team modify NeutralMedabot color green
+team modify NeutralMedabot friendlyFire true
+team modify NeutralMedabot nametagVisibility hideForOtherTeams
+team modify NeutralMedabot seeFriendlyInvisibles false
+team modify NeutralMedabot prefix {"translate":"medabots_server:entity.team.neutral_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.neutral_medabot"}}}
 team modify StageBoss collisionRule never
 team modify StageBoss color green
 team modify StageBoss friendlyFire false
 team modify StageBoss nametagVisibility never
 team modify StageBoss seeFriendlyInvisibles false
-team modify StageBoss prefix {"translate":"medabots_server:entity.team.boss","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.boss"}}}
+team modify StageBoss prefix {"translate":"medabots_server:entity.team.stage_boss","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.stage_boss"}}}
 team modify StageEnemy collisionRule never
 team modify StageEnemy color green
 team modify StageEnemy friendlyFire false
 team modify StageEnemy nametagVisibility never
 team modify StageEnemy seeFriendlyInvisibles false
-team modify StageEnemy prefix {"translate":"medabots_server:entity.team.enemy","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.enemy"}}}
+team modify StageEnemy prefix {"translate":"medabots_server:entity.team.stage_enemy","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.stage_enemy"}}}
 
 # Re-add any bossbars that may have been removed
 bossbar add medabots_server:grassland_a/time {"translate":"medabots_server:scoreboard.bossbar.time","color":"green"}

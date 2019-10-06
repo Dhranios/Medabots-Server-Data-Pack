@@ -30,7 +30,7 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1706
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:jungle_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1687 45 -173 minecraft:iron_door[open=true] if entity @s[x=-1690,y=45,z=-175,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_a/first_go_battle/1
-execute if entity @e[x=-1706,y=42,z=-179,dx=63,dy=8,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=3,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1706,y=42,z=-179,dx=63,dy=8,dz=63,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=3,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1705,y=42,z=-179,dx=63,dy=8,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=3}] run scoreboard players set @s Stage 3
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/jungle_a/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/jungle_a_first_go

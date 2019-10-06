@@ -1,5 +1,6 @@
 function medabots_server:gamemodes/default/set_stats
 tag @s add -1
+tag @s add main
 scoreboard players set @s StageVersion 3
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/laboratory_b/rubberobo
 execute if entity @s[tag=!vs_cpus] run teleport @s -1727 50 -575 -180 0

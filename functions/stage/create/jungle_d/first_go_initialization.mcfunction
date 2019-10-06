@@ -1,5 +1,6 @@
 function medabots_server:gamemodes/default/set_stats
 tag @s add -1
+tag @s add main
 scoreboard players set @s StageVersion 1
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/jungle_d/first_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1635 51 -738 -180 0

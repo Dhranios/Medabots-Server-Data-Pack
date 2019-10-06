@@ -49,7 +49,7 @@ execute if entity @s[tag=mission_success] run kill @e[x=-1570,y=43,z=-414,dx=62,
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1559 45 -385 minecraft:iron_door[open=true] if entity @s[x=-1560,y=45,z=-388,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_b/first_go_battle/2
-execute if entity @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=10,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=10,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=10}] run scoreboard players set @s Stage 10
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/grassland_b/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/grassland_b_first_go

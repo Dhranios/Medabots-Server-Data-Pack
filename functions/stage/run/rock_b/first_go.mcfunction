@@ -36,7 +36,7 @@ execute if entity @s[tag=mission_success] run bossbar set medabots_server:rock_b
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1615 45 -372 minecraft:iron_door[open=true] if entity @s[x=-1615,y=45,z=-373,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_b/first_go_battle/2
-execute if entity @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=11,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=11,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=11}] run scoreboard players set @s Stage 11
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/rock_b/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/rock_b_first_go

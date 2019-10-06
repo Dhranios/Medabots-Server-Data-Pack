@@ -1,5 +1,6 @@
 function medabots_server:gamemodes/default/set_stats
 tag @s add -1
+tag @s add main
 scoreboard players set @s StageVersion 4
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/seashore_b/special
 execute if entity @s[tag=!vs_cpus] run teleport @s -1715 51 -396 -180 0

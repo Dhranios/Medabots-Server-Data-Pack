@@ -38,7 +38,7 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set med
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1608.5,y=45,z=-462.5,distance=..0.7,tag=mission,scores={Dialog=81}]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1635 45 -451 minecraft:iron_door[open=true] if entity @s[x=-1638,y=45,z=-453,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_b/rubberobo_battle/2
-execute if entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=12,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=12,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1666,y=0,z=-477,dx=94,dy=50,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=12}] run scoreboard players set @s Stage 12
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/jungle_b/rubberobo
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/jungle_b_rubberobo

@@ -28,14 +28,14 @@ execute if entity @s[scores={Dialog=2},tag=!done,tag=!no_overwrite] run stopsoun
 execute if entity @s[scores={Dialog=3},tag=!done,tag=!no_overwrite] run scoreboard players set @a[tag=waiting_for_referee] Music 0
 execute if entity @s[scores={Dialog=3..},tag=!done,tag=!no_overwrite] run playsound medabots_server:music.entity.mr_referee music @a[tag=waiting_for_referee,scores={Music=0}] ~ ~ ~ 1000
 execute if entity @s[scores={Dialog=3..},tag=!done,tag=!no_overwrite] run scoreboard players set @a[tag=waiting_for_referee] Music 193
-execute if entity @s[tag=0] run function medabots_server:dialog/mr_referee/0
-execute if entity @s[tag=1] run function medabots_server:dialog/mr_referee/1
-execute if entity @s[tag=2] run function medabots_server:dialog/mr_referee/2
-execute if entity @s[tag=3] run function medabots_server:dialog/mr_referee/3
-execute if entity @s[tag=4] run function medabots_server:dialog/mr_referee/4
-execute if entity @s[tag=5] run function medabots_server:dialog/mr_referee/5
-execute if entity @s[tag=6] run function medabots_server:dialog/mr_referee/6
-execute if entity @s[tag=7] run function medabots_server:dialog/mr_referee/7
+execute if entity @s[tag=0,tag=!done] run function medabots_server:dialog/mr_referee/0
+execute if entity @s[tag=1,tag=!done] run function medabots_server:dialog/mr_referee/1
+execute if entity @s[tag=2,tag=!done] run function medabots_server:dialog/mr_referee/2
+execute if entity @s[tag=3,tag=!done] run function medabots_server:dialog/mr_referee/3
+execute if entity @s[tag=4,tag=!done] run function medabots_server:dialog/mr_referee/4
+execute if entity @s[tag=5,tag=!done] run function medabots_server:dialog/mr_referee/5
+execute if entity @s[tag=6,tag=!done] run function medabots_server:dialog/mr_referee/6
+execute if entity @s[tag=7,tag=!done] run function medabots_server:dialog/mr_referee/7
 execute if entity @s[scores={Dialog=2..},tag=!done] run tag @e[tag=waiting_for_referee] remove waiting_for_referee
 execute if entity @s[tag=done,tag=!finished] run playsound medabots_server:entity.mr_referee.robattle voice @a[tag=waiting_for_referee] ~ ~ ~ 1000
 execute if entity @s[tag=done,tag=!finished] run tellraw @a[tag=waiting_for_referee] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.mr_referee"},{"translate":"medabots_server:dialog.mr_referee.robattle"}]}

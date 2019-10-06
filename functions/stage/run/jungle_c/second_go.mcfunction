@@ -51,7 +51,7 @@ execute if entity @s[tag=mission_success] run bossbar set medabots_server:jungle
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1552 44 -525 minecraft:iron_door[open=true] if entity @s[x=-1553,y=44,z=-528,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_c/second_go_battle/2
-execute if entity @e[x=-1570,y=42,z=-545,dx=62,dy=7,dz=62,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=24,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1570,y=42,z=-545,dx=62,dy=7,dz=62,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=24,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1570,y=42,z=-545,dx=62,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=24}] run scoreboard players set @s Stage 24
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/jungle_c/second_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/jungle_c_second_go

@@ -128,7 +128,7 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1761
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:paradise_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1715 45 -666 minecraft:iron_door[open=true] if entity @s[x=-1716,y=45,z=-669,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_a/first_go_battle/8
-execute if entity @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=21}] run scoreboard players set @s Stage 21
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/paradise_a/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/paradise_a_first_go

@@ -165,7 +165,8 @@ function medabots_server:gamemodes/default/set_stats
 teleport @s -1509 45 -196 0 0
 bossbar set medabots_server:seashore_a/time value 0
 bossbar set medabots_server:seashore_a/time players @s
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] Stage 4
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] Music 0
-scoreboard players set @a[x=-1570,y=43,z=-247,dx=63,dy=7,dz=63] MusicType 10
+tag @s add main
+scoreboard players set @s Battle 1
+scoreboard players set @s Stage 4
+scoreboard players set @s Music 0
+scoreboard players set @s MusicType 10

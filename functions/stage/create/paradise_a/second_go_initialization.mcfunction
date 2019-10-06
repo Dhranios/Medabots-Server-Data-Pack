@@ -1,5 +1,6 @@
 function medabots_server:gamemodes/default/set_stats
 tag @s add -1
+tag @s add main
 scoreboard players set @s StageVersion 2
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/paradise_a/second_go
 execute if entity @s[tag=!vs_cpus] run teleport @s -1714 51 -683 -180 0

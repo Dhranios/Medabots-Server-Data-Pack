@@ -67,10 +67,11 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1921
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:boxer/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1899 44 -561 minecraft:iron_door[open=true] if block -1891 44 -558 minecraft:iron_door[open=false] unless entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee] if entity @s[x=-1899,y=44,z=-562,dx=3,dy=3,dz=3] run function medabots_server:stage/create/boxer/first_go_battle/7
-execute if entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=29,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=29,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=29}] run scoreboard players set @s Stage 29
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/boxer/first_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/boxer_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:boxer/robattle players
+tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={the_final_battle=true,victory=false}}] add dialog_infinity_victory
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1890 50 -571 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

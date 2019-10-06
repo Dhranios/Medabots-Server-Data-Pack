@@ -28,7 +28,8 @@ function medabots_server:gamemodes/default/set_stats
 teleport @s -1519 45 -171 0 0
 bossbar set medabots_server:grassland_a/time value 0
 bossbar set medabots_server:grassland_a/time players @s
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Battle 1
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Stage 1
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] Music 0
-scoreboard players set @a[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63] MusicType 7
+tag @s add main
+scoreboard players set @s Battle 1
+scoreboard players set @s Stage 1
+scoreboard players set @s Music 0
+scoreboard players set @s MusicType 7

@@ -77,7 +77,7 @@ execute if entity @s[tag=mission_success] run kill @e[x=-1762,y=42,z=-538,dx=94,
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1747 45 -514 minecraft:iron_door[open=true] if entity @s[x=-1748,y=45,z=-517,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/second_go_battle/4
-execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1762,y=42,z=-538,dx=94,dy=7,dz=93,type=!minecraft:player] unless entity @s[scores={Stage=14}] run scoreboard players set @s Stage 14
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/snowfield_b/second_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/snowfield_b_second_go

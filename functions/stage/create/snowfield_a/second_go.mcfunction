@@ -169,7 +169,8 @@ function medabots_server:gamemodes/default/set_stats
 teleport @s -1594 45 -243 0 0
 bossbar set medabots_server:snowfield_a/time value 0
 bossbar set medabots_server:snowfield_a/time players @s
-scoreboard players set @a[x=-1594,y=45,z=-243,distance=..1] Battle 1
-scoreboard players set @a[x=-1594,y=45,z=-243,distance=..1] Stage 5
-scoreboard players set @a[x=-1594,y=45,z=-243,distance=..1] Music 0
-scoreboard players set @a[x=-1594,y=45,z=-243,distance=..1] MusicType 11
+tag @s add main
+scoreboard players set @s Battle 1
+scoreboard players set @s Stage 5
+scoreboard players set @s Music 0
+scoreboard players set @s MusicType 11

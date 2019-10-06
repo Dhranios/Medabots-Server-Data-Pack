@@ -6,6 +6,9 @@ execute if entity @s[tag=break] run function medabots_server:items/medapart/brea
 execute if entity @s[tag=falling] run function medabots_server:items/medapart/falling/attack
 execute if entity @s[tag=damage_ball] run function medabots_server:items/medapart/damage_ball/attack
 
+# Spawn Medabot
+execute if entity @s[tag=spawn_medabot] run function medabots_server:spawn_entities/medabot
+
 # Kill items that get placed in the inventory anyway, as well as teleport dropped items
 function #medabots_server:all_items
 

@@ -11,7 +11,7 @@ execute if block -1597 44 -159 minecraft:lime_wool run scoreboard players set @e
 execute if block -1617 44 -156 minecraft:light_blue_wool run scoreboard players set @e[x=-1616.5,y=45,z=-166.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1617 44 -156 minecraft:blue_wool run scoreboard players set @e[x=-1616.5,y=45,z=-166.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1616 45 -167 minecraft:iron_door[open=true] if entity @s[x=-1616,y=45,z=-168,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_a/second_go_battle/0
-execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee] store result score @s BattlingMedabots if entity @e[scores={Stage=2,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=2,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=2}] run scoreboard players set @s Stage 2
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/rock_a/second_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/rock_a_second_go
