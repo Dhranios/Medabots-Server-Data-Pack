@@ -16,8 +16,8 @@ execute positioned -1944 45 -625 run function medabots_server:spawn_entities/bal
 execute positioned -1944 45 -630 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1941 45 -622 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1938 45 -621 run function medabots_server:spawn_entities/balloon_bomb
-teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=-1] -1954 45 -616 -90 0
-teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=0] -1943 45 -617 90 0
+teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=-1] -1954 45 -616 90 0
+teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,tag=0] -1943 45 -617 -90 0
 teleport @s[tag=-1] -1954 45 -616 90 0
 tag @a[x=-1954,y=45,z=-616,distance=..1] remove -1
 tag @a[x=-1943,y=45,z=-617,distance=..1] remove 0

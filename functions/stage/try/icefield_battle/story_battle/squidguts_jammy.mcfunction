@@ -2,6 +2,7 @@ function medabots_server:gamemodes/default/set_stats
 teleport @s -1999 45 -605 -180 0
 scoreboard players set @s StageVersion 3
 tag @s add story_battle
+tag @s add main
 execute positioned -1998 45 -612 run function medabots_server:spawn_entities/character_medabot/squidguts
 execute positioned -1998 45 -612 run scoreboard players set @e[distance=..1] Stage 48
 execute positioned -1998 45 -612 run tag @e[distance=..1] add enemy_medabot
