@@ -229,7 +229,7 @@ team modify AFK seeFriendlyInvisibles false
 team modify AFK prefix {"translate":"medabots_server:entity.team.afk","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.afk"}}}
 team modify AllyMedabot collisionRule never
 team modify AllyMedabot color green
-team modify AllyMedabot friendlyFire true
+team modify AllyMedabot friendlyFire false
 team modify AllyMedabot nametagVisibility hideForOtherTeams
 team modify AllyMedabot seeFriendlyInvisibles false
 team modify AllyMedabot prefix {"translate":"medabots_server:entity.team.ally_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.ally_medabot"}}}
@@ -239,7 +239,7 @@ team modify Donator color gold
 team modify Donator prefix {"translate":"medabots_server:entity.team.donator","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.donator"}}}
 team modify EnemyMedabot collisionRule never
 team modify EnemyMedabot color green
-team modify EnemyMedabot friendlyFire true
+team modify EnemyMedabot friendlyFire false
 team modify EnemyMedabot nametagVisibility hideForOtherTeams
 team modify EnemyMedabot seeFriendlyInvisibles false
 team modify EnemyMedabot prefix {"translate":"medabots_server:entity.team.enemy_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.enemy_medabot"}}}
@@ -250,7 +250,7 @@ team modify MtBattleMaster prefix {"translate":"medabots_server:entity.team.mt_b
 team modify NeutralMedabot collisionRule never
 team modify NeutralMedabot color green
 team modify NeutralMedabot friendlyFire true
-team modify NeutralMedabot nametagVisibility hideForOtherTeams
+team modify NeutralMedabot nametagVisibility never
 team modify NeutralMedabot seeFriendlyInvisibles false
 team modify NeutralMedabot prefix {"translate":"medabots_server:entity.team.neutral_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.neutral_medabot"}}}
 team modify StageBoss collisionRule never

@@ -3,22 +3,22 @@ summon minecraft:skeleton ~ ~ ~ {Silent:1b,CustomNameVisisble:1b,ArmorItems:[{},
 scoreboard players set @e[tag=new_medabot,limit=1] Killer 0
 scoreboard players set @e[tag=new_medabot,limit=1] Charge 0
 scoreboard players set @e[tag=new_medabot,limit=1] Battle 3
-data modify entity @e[tag=new_medabot,limit=1] Rotation set from @s Rotation
+data modify entity @e[tag=new_medabot,limit=1] Rotation set from entity @s Rotation
 
 # Spawn model parts
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","legs","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","left_arm","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","right_arm","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","head","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","right_arm","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","left_arm","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","legs","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 scoreboard players operation @e[tag=new_medabot,limit=1] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 scoreboard players add @e[tag=new_medabot,limit=1] MedabotNr 1
 execute as @e[tag=new_model] run scoreboard players operation @s MedabotNr = @e[tag=new_medabot,limit=1] MedabotNr
 
 # Get Equipment
-data modify entity @e[tag=new_model,tag=head,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.legs
-data modify entity @e[tag=new_model,tag=right_arm,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.left_arm
-data modify entity @e[tag=new_model,tag=left_arm,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.right_arm
-data modify entity @e[tag=new_model,tag=legs,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.head
+data modify entity @e[tag=new_model,tag=head,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.head
+data modify entity @e[tag=new_model,tag=right_arm,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.right_arm
+data modify entity @e[tag=new_model,tag=left_arm,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.left_arm
+data modify entity @e[tag=new_model,tag=legs,limit=1] ArmorItems[3] merge from entity @s Item.tag.medabots_server.items.legs
 
 # Set Medabot set
 scoreboard players set @e[tag=new_medabot,limit=1] Medabot 0
@@ -26,15 +26,15 @@ execute store result score #head Medabot run data get entity @s Item.tag.medabot
 execute store result score #right_arm Medabot run data get entity @s Item.tag.medabots_server.items.right_arm.tag.Damage
 execute store result score #left_arm Medabot run data get entity @s Item.tag.medabots_server.items.left_arm.tag.Damage
 execute store result score #legs Medabot run data get entity @s Item.tag.medabots_server.items.legs.tag.Damage
-execute if score #head Medabot = #right_arm Medabot if score #head Medabot = #left_arm Medabot if score #head Medabot = #legs Medabot execute store result score @e[tag=new_medabot,limit=1] Medabot run scoreboard players get #head Medabot
+execute if score #head Medabot = #right_arm Medabot if score #head Medabot = #left_arm Medabot if score #head Medabot = #legs Medabot store result score @e[tag=new_medabot,limit=1] Medabot run scoreboard players get #head Medabot
 scoreboard players reset #head Medabot
 scoreboard players reset #right_arm Medabot
 scoreboard players reset #left_arm Medabot
 scoreboard players reset #legs Medabot
 
 # Set name
-data modify entity @e[tag=new_medabot,limit=1] CustomName set from @s Item.tag.medabots_server.items.head.tag.display.Lore[5]
-execute if data entity @s Item.tag.medabots_server.cpu_data.medabot_name run data modify entity @e[tag=new_medabot,limit=1] CustomName set from @s Item.tag.medabots_server.cpu_data.medabot_name
+data modify entity @e[tag=new_medabot,limit=1] CustomName set from entity @s Item.tag.medabots_server.items.head.tag.display.Lore[5]
+execute if data entity @s Item.tag.medabots_server.cpu_data.medabot_name run data modify entity @e[tag=new_medabot,limit=1] CustomName set from entity @s Item.tag.medabots_server.cpu_data.medabot_name
 
 # Enemy, ally or neutral
 execute unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"enemy"}}}}}] unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"ally"}}}}}] run tag @e[tag=new_medabot,limit=1] add neutral_medabot
@@ -91,7 +91,7 @@ execute as @e[tag=new_medabot,limit=1] run scoreboard players operation @s LegsA
 # Set settings
 execute if entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{practice_battle:1b}}}}}] run tag @e[tag=new_medabot,limit=1] add practice_battle
 execute if data entity @s Item.tag.medabots_server.cpu_data.overwrite_robattle_music run tag @e[tag=new_medabot,limit=1] add overwrite_robattle_music
-execute if data entity @s Item.tag.medabots_server.cpu_data.overwrite_robattle_music execute store result score @e[tag=new_medabot,limit=1] MusicType run data get entity @s Item.tag.medabots_server.cpu_data.overwrite_robattle_music
+execute if data entity @s Item.tag.medabots_server.cpu_data.overwrite_robattle_music store result score @e[tag=new_medabot,limit=1] MusicType run data get entity @s Item.tag.medabots_server.cpu_data.overwrite_robattle_music
 
 # Done
 tag @e[tag=new_medabot,limit=1] remove new_medabot
