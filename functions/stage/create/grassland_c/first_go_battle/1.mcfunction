@@ -1,7 +1,9 @@
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=1] run tellraw @s[tag=!vs_cpus] {"translate":"medabots_server:message.stage.player.left","color":"green"}
-execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=1] positioned -1537 44 -470 run function medabots_server:spawn_entities/medabot/bluesdog/bluesdog/fly_falcon/bluesdog/kabuto
+execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=1] positioned -1537 44 -470 run function medabots_server:spawn_entities/character_medabot/krosserdog
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=1] positioned -1537 44 -470 run scoreboard players set @e[distance=..1] Stage 23
 execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=1] positioned -1537 44 -470 run tag @e[distance=..1] add enemy_medabot
+execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=1] positioned -1537 44 -470 run scoreboard players set @e[distance=..1] MusicType 29
+execute unless entity @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=1] positioned -1537 44 -470 run tag @e[distance=..1] add overwrite_robattle_music
 execute positioned -1535 44 -463 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
 execute positioned -1531 44 -465 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
 execute positioned -1531 44 -470 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
