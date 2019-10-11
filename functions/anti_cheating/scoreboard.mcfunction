@@ -127,6 +127,7 @@ scoreboard objectives add PosY dummy
 scoreboard objectives add PosZ dummy
 scoreboard objectives add PowerAmount dummy
 scoreboard objectives add PowerNeeded dummy
+scoreboard objectives add PrevMusicType dummy
 scoreboard objectives add RandomMessage dummy
 scoreboard objectives add Range dummy
 scoreboard objectives add RightArmArmor dummy
