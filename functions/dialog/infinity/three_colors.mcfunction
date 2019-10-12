@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity three_colors
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-playsound medabots_server:music.entity.king_pharaoh_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] Music 335
+scoreboard players set @s[scores={Dialog=1}] MusicType 46
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1537 51 -150 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1532 51 -152 {Duration:1000000,Tags:["cutscene","this_dialog","medabot","blue_man"],Rotation:[0.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-1532,y=51,z=-152,distance=..1,tag=blue_man] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
@@ -182,13 +180,9 @@ execute if entity @s[scores={Dialog=2592}] run tag @e[tag=blue_man,tag=!medabot_
 execute if entity @s[scores={Dialog=2593..2728}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 advancement grant @s[scores={Dialog=2728}] only medabots_server:special_items/passes/three_colors
 tag @s[scores={Dialog=2728}] remove dialog_infinity_three_colors
-stopsound @s[scores={Dialog=2728}] music
 scoreboard players set @s[scores={Dialog=2728}] MusicType 1
 scoreboard players set @s[scores={Dialog=2728}] Music 0
 scoreboard players reset @s[scores={Dialog=2728}] DialogNr
 scoreboard players set @s[scores={Dialog=2728}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.king_pharaoh music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 417

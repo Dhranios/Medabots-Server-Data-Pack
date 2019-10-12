@@ -7,7 +7,7 @@ scoreboard players set @s[scores={MusicType=2}] Music 1746
 playsound medabots_server:music.map_sea music @s[scores={MusicType=3}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=3}] Music 1035
 playsound medabots_server:music.stage.selection music @s[scores={MusicType=4}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=4}] Music 384
+scoreboard players set @s[scores={MusicType=4}] Music 342
 playsound medabots_server:music.stage.mt_battle.stage music @s[scores={MusicType=5}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=5}] Music 1095
 playsound medabots_server:music.stage.fly_course music @s[scores={MusicType=6}] ~ ~ ~ 1000
@@ -46,11 +46,11 @@ playsound medabots_server:music.map_underground music @s[scores={MusicType=22}] 
 scoreboard players set @s[scores={MusicType=22}] Music 1233
 playsound medabots_server:music.stage.pvp.lagdou_ruins3 music @s[scores={MusicType=23}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=23}] Music 900
-playsound medabots_server:music.stage.pvp.rico_harbor music @s[scores={MusicType=24}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.pvp.ricco_harbor music @s[scores={MusicType=24}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=24}] Music 2440
-playsound medabots_server:music.stage.pvp.rico_harbor_removed music @s[scores={MusicType=25}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.pvp.ricco_harbor_removed music @s[scores={MusicType=25}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=25}] Music 3640
-execute if entity @s[scores={MusicType=26}] run function medabots_server:other/music/play_26
+execute if entity @s[scores={MusicType=26}] run function medabots_server:other/music/play/loop_robattle
 playsound medabots_server:music.battle.rubberobo_leader music @s[scores={MusicType=27}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=27}] Music 1061
 playsound medabots_server:music.battle.corruption music @s[scores={MusicType=28}] ~ ~ ~ 1000
@@ -61,3 +61,41 @@ playsound medabots_server:music.edit music @s[scores={MusicType=30}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=30}] Music 488
 playsound medabots_server:music.medawatch music @s[scores={MusicType=31}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=31}] Music 453
+playsound medabots_server:music.entity.rubberobo music @s[scores={MusicType=32}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=32}] Music 744
+playsound medabots_server:music.entity.select_corps music @s[scores={MusicType=33}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=33}] Music 720
+playsound medabots_server:music.jammy music @s[scores={MusicType=34}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=34}] Music 480
+playsound medabots_server:music.entity.screws music @s[scores={MusicType=35}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=35}] Music 250
+playsound medabots_server:music.entity.karin music @s[scores={MusicType=36}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=36}] Music 500
+playsound medabots_server:music.entity.erika music @s[scores={MusicType=37}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=37}] Music 502
+playsound medabots_server:music.entity.koji music @s[scores={MusicType=38}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=38}] Music 274
+playsound medabots_server:music.entity.max music @s[scores={MusicType=39}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=39}] Music 578
+playsound medabots_server:music.entity.jaxy music @s[scores={MusicType=40}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=40}] Music 1024
+playsound medabots_server:music.entity.jaxy.power music @s[scores={MusicType=41}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=41}] Music 1024
+playsound medabots_server:music.entity.director_tune music @s[scores={MusicType=42}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=42}] Music 652
+playsound medabots_server:music.entity.doctor_haru music @s[scores={MusicType=43}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=43}] Music 609
+playsound medabots_server:music.entity.doctor_haru.evil music @s[scores={MusicType=44}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=44}] Music 1074
+playsound medabots_server:music.entity.doctor_haru.sad music @s[scores={MusicType=45}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=45}] Music 1199
+playsound medabots_server:music.entity.king_pharaoh music @s[scores={MusicType=46}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=46}] Music 417
+playsound medabots_server:music.intro music @s[scores={MusicType=47}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=47}] Music 915
+playsound medabots_server:music.conspiracy music @s[scores={MusicType=48}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=48}] Music 873
+playsound medabots_server:music.story music @s[scores={MusicType=49}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=49}] Music 860
+playsound medabots_server:music.map_welcome_underground music @s[scores={MusicType=50}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=50}] Music 1229

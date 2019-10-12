@@ -4,10 +4,8 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity shrimplips_jammy
 execute if entity @s[scores={Dialog=1}] positioned -1951 51 -565 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1949 51 -569 run function medabots_server:spawn_entities/cutscene/shrimplips
@@ -91,13 +89,9 @@ tellraw @s[scores={Dialog=1196}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1212}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy.33"}]}
 tellraw @s[scores={Dialog=1252}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy.34"}]}
 tag @s[scores={Dialog=1284}] remove dialog_infinity_shrimplips_jammy
-stopsound @s[scores={Dialog=1284}] music
 scoreboard players set @s[scores={Dialog=1284}] MusicType 1
 scoreboard players set @s[scores={Dialog=1284}] Music 0
 scoreboard players reset @s[scores={Dialog=1284}] DialogNr
 scoreboard players set @s[scores={Dialog=1284}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

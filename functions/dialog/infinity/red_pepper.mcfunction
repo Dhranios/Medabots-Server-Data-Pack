@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity red_pepper
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-playsound medabots_server:music.entity.king_pharaoh_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] Music 335
+scoreboard players set @s[scores={Dialog=1}] MusicType 46
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1713 51 -493 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1715 51 -497 {Duration:1000000,Tags:["cutscene","this_dialog","medabot","red_pepper"],Rotation:[0.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-1715,y=51,z=-497,distance=..1,tag=red_pepper] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
@@ -48,13 +46,9 @@ execute if entity @s[scores={Dialog=305..498}] as @e[tag=red_pepper,tag=!medabot
 tellraw @s[scores={Dialog=344}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.red_pepper.10"}]}
 tellraw @s[scores={Dialog=392}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.red_pepper.11"}]}
 tag @s[scores={Dialog=498}] remove dialog_infinity_red_pepper
-stopsound @s[scores={Dialog=498}] music
 scoreboard players set @s[scores={Dialog=498}] MusicType 1
 scoreboard players set @s[scores={Dialog=498}] Music 0
 scoreboard players reset @s[scores={Dialog=498}] DialogNr
 scoreboard players set @s[scores={Dialog=498}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.king_pharaoh music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 417

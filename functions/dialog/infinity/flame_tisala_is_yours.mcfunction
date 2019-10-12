@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity flame_tisala_is_yours
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 43
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1728 50 -574 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1727 50 -572 run function medabots_server:spawn_entities/cutscene/doctor_haru
@@ -27,7 +26,6 @@ execute if entity @s[scores={Dialog=244}] run tag @e[tag=doctor_haru,tag=this_di
 execute if entity @s[scores={Dialog=245..}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=284}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.10"}]}
 tellraw @s[scores={Dialog=324}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.11"}]}
-stopsound @s[scores={Dialog=385}] music
 scoreboard players set @s[scores={Dialog=385}] MusicType 1
 scoreboard players set @s[scores={Dialog=385}] Music 0
 tag @s[scores={Dialog=385}] remove dialog_infinity_flame_tisala_is_yours
@@ -35,6 +33,3 @@ scoreboard players reset @s[scores={Dialog=385}] DialogNr
 scoreboard players set @s[scores={Dialog=385}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.doctor_haru music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 609

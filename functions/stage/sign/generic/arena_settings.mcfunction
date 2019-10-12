@@ -1,0 +1,3 @@
+function medabots_server:stage/sign/generic/stage_settings
+tellraw @s[tag=vs_random_arena_version] {"translate":"medabots_server:settings.current.random_arena_version","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 12"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
+tellraw @s[tag=!vs_random_arena_version] {"translate":"medabots_server:settings.current.random_arena_version","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 12"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}

@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity haru_and_tune
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 43
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -367 55 -68 run function medabots_server:spawn_entities/cutscene/doctor_haru
@@ -31,7 +30,7 @@ tellraw @s[scores={Dialog=540}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=564}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.15"}]}
 tellraw @s[scores={Dialog=572}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.16"}]}
 tellraw @s[scores={Dialog=644}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.17"}]}
-stopsound @s[scores={Dialog=700}] music
+scoreboard players set @s[scores={Dialog=700}] MusicType 49
 scoreboard players set @s[scores={Dialog=700}] Music 0
 tellraw @s[scores={Dialog=700}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.18"}]}
 tellraw @s[scores={Dialog=788}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.19"}]}
@@ -81,7 +80,7 @@ tellraw @s[scores={Dialog=3440}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=3456}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.63"}]}
 tellraw @s[scores={Dialog=3544}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.64"}]}
 tellraw @s[scores={Dialog=3584}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.65"}]}
-stopsound @s[scores={Dialog=3600}] music
+scoreboard players set @s[scores={Dialog=3600}] MusicType 43
 scoreboard players set @s[scores={Dialog=3600}] Music 0
 tellraw @s[scores={Dialog=3600}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.66"}]}
 tellraw @s[scores={Dialog=3624}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.67"}]}
@@ -104,7 +103,6 @@ execute if entity @s[scores={Dialog=4165..4282}] as @e[tag=doctor_haru,tag=this_
 execute if entity @s[scores={Dialog=4283}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -398 55 -54
 execute if entity @s[scores={Dialog=4284..4323}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=4323}] remove already_gave_items
-stopsound @s[scores={Dialog=4323}] music
 scoreboard players set @s[scores={Dialog=4323}] MusicType 1
 scoreboard players set @s[scores={Dialog=4323}] Music 0
 tag @s[scores={Dialog=4323}] remove dialog_infinity_haru_and_tune
@@ -112,10 +110,3 @@ scoreboard players reset @s[scores={Dialog=4323}] DialogNr
 scoreboard players set @s[scores={Dialog=4323}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.doctor_haru music @s[scores={Music=0,MusicType=-1,Dialog=..699}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..699}] Music 609
-playsound medabots_server:music.story music @s[scores={Music=0,MusicType=-1,Dialog=700..3599}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=700..3599}] Music 860
-playsound medabots_server:music.entity.doctor_haru music @s[scores={Music=0,MusicType=-1,Dialog=3600..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=3600..}] Music 609

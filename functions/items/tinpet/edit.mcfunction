@@ -11,7 +11,5 @@ scoreboard players enable @s UnequipTinpet
 
 # Medawatch music
 scoreboard players operation @s OldMusicType = @s MusicType
-stopsound @s music
-playsound medabots_server:music.medawatch_intro music @s ~ ~ ~ 1000
 scoreboard players set @s MusicType 31
-scoreboard players set @s Music 75
+scoreboard players set @s Music 0

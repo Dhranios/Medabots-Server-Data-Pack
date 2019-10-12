@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity harus_tinpet
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 43
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -450 55 -95 run function medabots_server:spawn_entities/cutscene/doctor_haru
@@ -38,13 +37,9 @@ execute if entity @s[scores={Dialog=757..}] as @e[tag=doctor_haru,tag=this_dialo
 tellraw @s[scores={Dialog=796}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.harus_tinpet.18"}]}
 tag @s[scores={Dialog=844}] remove already_gave_items
 tag @s[scores={Dialog=844}] remove dialog_infinity_harus_tinpet
-stopsound @s[scores={Dialog=844}] music
 scoreboard players set @s[scores={Dialog=844}] MusicType 1
 scoreboard players set @s[scores={Dialog=844}] Music 0
 scoreboard players reset @s[scores={Dialog=844}] DialogNr
 scoreboard players set @s[scores={Dialog=844}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.doctor_haru music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 609

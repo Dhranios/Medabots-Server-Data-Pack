@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/floor_switch/yellow
-tag @e[distance=..0.7,tag=floor_switch] add delay_1
+scoreboard players set @e[distance=..0.7,tag=floor_switch] DelayTime 20

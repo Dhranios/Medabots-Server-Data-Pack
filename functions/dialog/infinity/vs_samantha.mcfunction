@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_samantha
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 35
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1951 51 -565 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1949 51 -570 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=1..1051}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -56,13 +54,9 @@ execute if entity @s[scores={Dialog=1147..}] at @e[tag=metabee,tag=!medabot_mode
 tellraw @s[scores={Dialog=1147}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_samantha.29","with":[{"selector":"@s"}]}]}
 tellraw @s[scores={Dialog=1187}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_samantha.30"}]}
 tag @s[scores={Dialog=1195}] remove dialog_infinity_vs_samantha
-stopsound @s[scores={Dialog=1195}] music
 scoreboard players set @s[scores={Dialog=1195}] MusicType 1
 scoreboard players set @s[scores={Dialog=1195}] Music 0
 scoreboard players reset @s[scores={Dialog=1195}] DialogNr
 scoreboard players set @s[scores={Dialog=1195}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

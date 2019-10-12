@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_jaxy
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 40
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1996 51 -563 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1998 51 -579 run function medabots_server:spawn_entities/cutscene/jaxy
@@ -70,13 +69,9 @@ tellraw @s[scores={Dialog=1570}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1610}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_jaxy.45"}]}
 tellraw @s[scores={Dialog=1642}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_jaxy.46"}]}
 tag @s[scores={Dialog=1658}] remove dialog_infinity_vs_jaxy
-stopsound @s[scores={Dialog=1658}] music
 scoreboard players set @s[scores={Dialog=1658}] MusicType 1
 scoreboard players set @s[scores={Dialog=1658}] Music 0
 scoreboard players reset @s[scores={Dialog=1658}] DialogNr
 scoreboard players set @s[scores={Dialog=1658}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.jaxy music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 1024

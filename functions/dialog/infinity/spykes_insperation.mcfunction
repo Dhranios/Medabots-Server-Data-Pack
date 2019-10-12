@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity spykes_insperation
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 35
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1728 50 -574 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1726 50 -572 run function medabots_server:spawn_entities/cutscene/krosserdog
 execute if entity @s[scores={Dialog=1}] positioned -1727 50 -571 run function medabots_server:spawn_entities/cutscene/spyke
@@ -53,7 +51,6 @@ execute if entity @s[scores={Dialog=953..1092}] as @e[tag=krosserdog,tag=!medabo
 execute if entity @s[scores={Dialog=1088}] as @e[tag=spyke,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=1092}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=1088..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-stopsound @s[scores={Dialog=1092}] music
 scoreboard players set @s[scores={Dialog=1092}] MusicType 1
 scoreboard players set @s[scores={Dialog=1092}] Music 0
 tellraw @s[scores={Dialog=1092}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.spykes_insperation.29"}]}
@@ -63,7 +60,3 @@ scoreboard players reset @s[scores={Dialog=1156}] DialogNr
 scoreboard players set @s[scores={Dialog=1156}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

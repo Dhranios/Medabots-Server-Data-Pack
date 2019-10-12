@@ -33,10 +33,8 @@ tellraw @s[scores={Dialog=264}] {"translate":"chat.type.text","with":[{"translat
 execute if entity @s[scores={Dialog=296}] positioned -1950 51 -639 run function medabots_server:spawn_entities/cutscene/gillgirl
 execute if entity @s[scores={Dialog=296..669}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=gillgirl,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=296..663}] at @e[tag=gillgirl,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=gillgirl,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-stopsound @s[scores={Dialog=296}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=296}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=296}] MusicType -1
-scoreboard players set @s[scores={Dialog=296}] Music 62
+scoreboard players set @s[scores={Dialog=296}] MusicType 32
+scoreboard players set @s[scores={Dialog=296}] Music 0
 tellraw @s[scores={Dialog=296}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.10"}]}
 tellraw @s[scores={Dialog=304}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.11"}]}
 tellraw @s[scores={Dialog=368}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.12"}]}
@@ -55,13 +53,9 @@ execute if entity @s[scores={Dialog=669}] run kill @e[tag=gillgirl,tag=this_dial
 tellraw @s[scores={Dialog=669}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.21"}]}
 tellraw @s[scores={Dialog=685}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.22"}]}
 tag @s[scores={Dialog=709}] remove dialog_infinity_gillgirls_jammy
-stopsound @s[scores={Dialog=709}] music
 scoreboard players set @s[scores={Dialog=709}] MusicType 1
 scoreboard players set @s[scores={Dialog=709}] Music 0
 scoreboard players reset @s[scores={Dialog=709}] DialogNr
 scoreboard players set @s[scores={Dialog=709}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

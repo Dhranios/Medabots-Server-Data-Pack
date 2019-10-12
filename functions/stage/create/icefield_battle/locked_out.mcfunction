@@ -14,11 +14,11 @@ execute positioned -2010 45 -609 run function medabots_server:spawn_entities/can
 execute positioned -2010 45 -608 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_8
 execute positioned -2008 45 -616 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
 execute positioned -2008 45 -601 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
-teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=-1] -1999 45 -593 -180 0
-teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=0] -1998 45 -624 0 0
-teleport @s[tag=-1] -1999 45 -593 -180 0
-tag @a[x=-1999,y=45,z=-593,distance=..1] remove -1
-tag @a[x=-1998,y=45,z=-624,distance=..1] remove 0
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=-1] -1998 45 -624 0 0
+teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,tag=0] -1999 45 -593 -180 0
+teleport @s[tag=-1] -1998 45 -624 0 0
+tag @a[x=-1998,y=45,z=-612,distance=..1] remove -1
+tag @a[x=-1999,y=45,z=-605,distance=..1] remove 0
 scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Stage 48
 scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Battle 1
 scoreboard players set @a[x=-2022,y=43,z=-632,dx=48,dy=7,dz=48] Music 0

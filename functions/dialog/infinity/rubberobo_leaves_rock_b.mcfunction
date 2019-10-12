@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity rubberobo_leaves_rock_b
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1605 51 -348 run function medabots_server:spawn_entities/cutscene/rubberobo
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -1603 51 -348 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2500134}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:7932672}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:2500134}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
 execute at @s as @e[x=-1603,y=51,z=-348,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
@@ -29,7 +27,6 @@ execute if entity @s[scores={Dialog=160}] as @e[tag=rubberobo,tag=this_dialog,li
 execute if entity @s[scores={Dialog=161..295}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=295}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=295}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
-stopsound @s[scores={Dialog=295}] music
 scoreboard players set @s[scores={Dialog=295}] MusicType 1
 scoreboard players set @s[scores={Dialog=295}] Music 0
 tag @s[scores={Dialog=295}] remove dialog_infinity_rubberobo_leaves_rock_b
@@ -37,6 +34,3 @@ scoreboard players reset @s[scores={Dialog=295}] DialogNr
 scoreboard players set @s[scores={Dialog=295}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

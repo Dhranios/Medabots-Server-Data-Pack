@@ -18,11 +18,9 @@ execute if entity @s[scores={Medaforce=-9}] run function medabots_server:items/m
 execute if entity @s[scores={Medaforce=-10}] run function medabots_server:items/medapart/iron_wall
 execute if entity @s[scores={Medaforce=-11}] run function medabots_server:items/medapart/life_drain
 execute if entity @s[scores={Medaforce=-12}] run function medabots_server:items/medapart/destroyer
+scoreboard players set @s[scores={MedaforceTimer=1..}] MedaforceTimer 0
 scoreboard players set @s[scores={Medaforce=1..}] Medaforce 0
 scoreboard players set @s[scores={Charge=1..}] Charge 0
-scoreboard players set @s Battle 0
-
-function medabots_server:gamemodes/default/load_old_inventory
 
 # Un-set combat
 execute as @e[tag=medabot_model] if score @s MedabotNr = @a[distance=..0.1,limit=1] MedabotNr run kill @s
@@ -78,14 +76,7 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:items/give_obtained_item
 
 # Restore inventory
-loot replace entity @s hotbar.0 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s inventory.18 9 mine -286 1 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s armor.feet 4 mine -286 0 -53 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-loot replace entity @s weapon.offhand 1 mine -287 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-setblock -286 0 -52 minecraft:bedrock
-setblock -286 1 -52 minecraft:stone
-setblock -286 0 -53 minecraft:bedrock
-setblock -287 0 -52 minecraft:bedrock
+function medabots_server:gamemodes/default/load_old_inventory
 
 # Remove dropped Medapart
 data modify entity @s[tag=drop_head] Inventory[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.head set value {}
@@ -119,4 +110,5 @@ scoreboard players reset @s LeftArmPer
 scoreboard players reset @s RightArmPer
 scoreboard players reset @s HeadPer
 scoreboard players reset @s HeadUsesPer
-scoreboard players set @s Medabot 0
+scoreboard players reset @s Medabot
+scoreboard players reset @s Battle

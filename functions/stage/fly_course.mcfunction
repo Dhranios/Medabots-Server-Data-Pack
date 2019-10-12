@@ -22,9 +22,8 @@ stopsound @s[scores={FlyCourse=1}] music
 scoreboard players set @s[scores={FlyCourse=1}] Music 0
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:0b}] MusicType 0
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] MusicType 6
+scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] Music 0
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] Time 220
-playsound medabots_server:music.stage.fly_course_intro music @s[scores={FlyCourse=1},nbt={FallFlying:1b}] ~ ~ ~ 1000
-scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] Music 127
 
 # Stop the course
 scoreboard players set @s[scores={FlyCourse=2},nbt={FallFlying:0b}] FlyCourse 0

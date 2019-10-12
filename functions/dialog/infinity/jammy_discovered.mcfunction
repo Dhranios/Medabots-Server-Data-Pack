@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jammy_discovered
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 37
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1606 51 -351 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1602 51 -345 run function medabots_server:spawn_entities/cutscene/max
@@ -99,7 +98,6 @@ execute if entity @s[scores={Dialog=2471..}] as @e[tag=max,tag=!medabot_model,ta
 execute if entity @s[scores={Dialog=2470}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1604 51 -319
 execute if entity @s[scores={Dialog=2470}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2471..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-stopsound @s[scores={Dialog=2590}] music
 scoreboard players set @s[scores={Dialog=2590}] MusicType 1
 scoreboard players set @s[scores={Dialog=2590}] Music 0
 tag @s[scores={Dialog=2590}] remove already_gave_items
@@ -108,6 +106,3 @@ scoreboard players reset @s[scores={Dialog=2590}] DialogNr
 scoreboard players set @s[scores={Dialog=2590}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 502

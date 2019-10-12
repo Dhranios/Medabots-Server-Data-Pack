@@ -1,6 +1,6 @@
-execute if entity @e[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=43,Medabot=0..,Battle=1..}]
-execute unless entity @e[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1294 39 35 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[-145.0f,0.0f]}
-execute as @e[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=43}] run scoreboard players set @s Stage 43
+execute if entity @e[x=-1319,y=35,z=-2,dx=59,dy=13,dz=62,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=43,Medabot=0..,Battle=1..}]
+execute unless entity @e[x=-1319,y=35,z=-2,dx=59,dy=13,dz=62,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1294 39 35 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[-145.0f,0.0f]}
+execute as @e[x=-1319,y=35,z=-2,dx=59,dy=13,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=43}] run scoreboard players set @s Stage 43
 execute as @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/lagdou_ruins_8/darkness
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:stages/wave_1/lagdou_ruins_8_first_go=true}] only medabots_server:stages/wave_1/lagdou_ruins_8_second_go
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:stages/wave_1/lagdou_ruins_8_first_go=false}] only medabots_server:stages/wave_1/lagdou_ruins_8_first_go

@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity suspicious_tune
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 37
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1811 51 -586 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1809 51 -583 run function medabots_server:spawn_entities/cutscene/erika
@@ -35,7 +34,7 @@ tellraw @s[scores={Dialog=872}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=888}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.20"}]}
 tellraw @s[scores={Dialog=928}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.21"}]}
 tellraw @s[scores={Dialog=936}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.22"}]}
-stopsound @s[scores={Dialog=1000}] music
+scoreboard players set @s[scores={Dialog=1000}] MusicType 48
 scoreboard players set @s[scores={Dialog=1000}] Music 0
 tellraw @s[scores={Dialog=1000}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.23"}]}
 tellraw @s[scores={Dialog=1048}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.24"}]}
@@ -95,15 +94,9 @@ tellraw @s[scores={Dialog=3556}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=3564}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.74"}]}
 tellraw @s[scores={Dialog=3588}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.75"}]}
 tag @s[scores={Dialog=3656}] remove dialog_infinity_suspicious_tune
-stopsound @s[scores={Dialog=3656}] music
 scoreboard players set @s[scores={Dialog=3656}] MusicType 1
 scoreboard players set @s[scores={Dialog=3656}] Music 0
 scoreboard players reset @s[scores={Dialog=3656}] DialogNr
 scoreboard players set @s[scores={Dialog=3656}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=..999}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..999}] Music 502
-playsound medabots_server:music.conspiracy music @s[scores={Music=0,MusicType=-1,Dialog=1000..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=1000..}] Music 873

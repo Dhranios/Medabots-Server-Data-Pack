@@ -22,7 +22,7 @@ data merge entity @s[tag=!selected,tag=was_selected] {Pose:{Head:[0.0f,0.0f,0.00
 execute if entity @s[tag=selected] unless entity @s[nbt={Pose:{Head:[0.0f]}}] run data merge entity @s {Pose:{Head:[0.0f,0.001f,0.0f]}}
 execute if entity @s[tag=selected] store result score #temp Time run data get entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[1] 1
 execute if entity @s[tag=selected] store result entity @s Pose.Head[0] float 1 run scoreboard players operation #temp Time -= #70 Constants
-execute if entity @s[tag=selected] store result entity @s Pose.Head[0] float 1 run data get entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[0] 1
+execute if entity @s[tag=selected] store result entity @s Rotation[0] float 1 run data get entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[0] 1
 scoreboard players reset #temp Time
 
 # Walk animation

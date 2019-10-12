@@ -64,3 +64,11 @@ clear @s minecraft:fishing_rod{medabots_server:{activated:1b}}
 clear @s minecraft:gold_ingot{medabots_server:{activated:1b}}
 clear @s minecraft:diamond_axe{medabots_server:{id:"medabots_server:pot_breaker"}}
 clear @s minecraft:stone_button{medabots_server:{id:"medabots_server:inventory"}}
+loot replace entity @s hotbar.0 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s inventory.18 9 mine -286 1 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s armor.feet 4 mine -286 0 -53 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+loot replace entity @s weapon.offhand 1 mine -287 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+setblock -286 0 -52 minecraft:bedrock
+setblock -286 1 -52 minecraft:stone
+setblock -286 0 -53 minecraft:bedrock
+setblock -287 0 -52 minecraft:bedrock

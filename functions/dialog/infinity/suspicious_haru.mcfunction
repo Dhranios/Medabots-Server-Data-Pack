@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity suspicious_haru
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 37
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -375 55 -37 run function medabots_server:spawn_entities/cutscene/erika
@@ -49,7 +48,7 @@ tellraw @s[scores={Dialog=1424}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1496}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.suspicious_haru.31"}]}
 tellraw @s[scores={Dialog=1504}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.suspicious_haru.32"}]}
 tellraw @s[scores={Dialog=1512}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.suspicious_haru.33"}]}
-stopsound @s[scores={Dialog=1528}] music
+scoreboard players set @s[scores={Dialog=1528}] MusicType 48
 scoreboard players set @s[scores={Dialog=1528}] Music 0
 tellraw @s[scores={Dialog=1528}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.suspicious_haru.34"}]}
 tellraw @s[scores={Dialog=1544}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.suspicious_haru.35"}]}
@@ -106,15 +105,9 @@ execute if entity @s[scores={Dialog=4264}] as @e[tag=erika,tag=this_dialog,limit
 execute if entity @s[scores={Dialog=4264}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=4265..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=4345}] remove dialog_infinity_suspicious_haru
-stopsound @s[scores={Dialog=4345}] music
 scoreboard players set @s[scores={Dialog=4345}] MusicType 1
 scoreboard players set @s[scores={Dialog=4345}] Music 0
 scoreboard players reset @s[scores={Dialog=4345}] DialogNr
 scoreboard players set @s[scores={Dialog=4345}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=..1527}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..1527}] Music 502
-playsound medabots_server:music.conspiracy music @s[scores={Music=0,MusicType=-1,Dialog=1528..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=1528..}] Music 873

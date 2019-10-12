@@ -7,6 +7,8 @@ tellraw @s[scores={SettingsCheck=3},tag=!action_mode] {"translate":"medabots_ser
 tellraw @s[scores={SettingsCheck=3},tag=practice_battle] {"translate":"medabots_server:settings.practice_battle","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
 tellraw @s[scores={SettingsCheck=3},tag=!practice_battle] {"translate":"medabots_server:settings.practice_battle","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 7"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
 tellraw @s[scores={SettingsCheck=3}] {"translate":"medabots_server:settings.robattle_music","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 11"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"extra":[{"text":" "},{"score":{"name":"@s","objective":"RobattleMusic"}}]}
+tellraw @s[scores={SettingsCheck=3},tag=random_arena_version] {"translate":"medabots_server:settings.random_arena_version","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 12"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
+tellraw @s[scores={SettingsCheck=3},tag=!random_arena_version] {"translate":"medabots_server:settings.random_arena_version","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 12"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
 tellraw @s[scores={SettingsCheck=3}] {"text":""}
 tellraw @s[scores={SettingsCheck=3}] {"translate":"medabots_server:settings.fly_course","color":"blue"}
 tellraw @s[scores={SettingsCheck=3},tag=fly_course_force_fallout] {"translate":"medabots_server:settings.fly_course.force_fallout","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 8"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
@@ -84,6 +86,16 @@ tellraw @s[scores={SettingsCheck=11},tag=medabot] {"translate":"medabots_server:
 scoreboard players add @s[scores={SettingsCheck=11},tag=!medabot] RobattleMusic 1
 scoreboard players set @s[scores={SettingsCheck=11,RobattleMusic=4},tag=!medabot] RobattleMusic 0
 tellraw @s[scores={SettingsCheck=11},tag=!medabot] {"translate":"medabots_server:settings.modified.robattle_music","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 11"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"score":{"name":"@s","objective":"RobattleMusic"}}]}
+
+# Toggle random arena version
+tellraw @s[scores={SettingsCheck=12},tag=medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
+tellraw @s[scores={SettingsCheck=12},tag=!random_arena_version,tag=!medabot] {"translate":"medabots_server:settings.modified.random_arena_version","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
+tellraw @s[scores={SettingsCheck=12},tag=random_arena_version,tag=!medabot] {"translate":"medabots_server:settings.modified.random_arena_version","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
+tag @s[scores={SettingsCheck=12},tag=!random_arena_version,tag=!medabot] add toggle_random_arena_version
+tag @s[tag=toggle_random_arena_version,tag=!medabot] add random_arena_version
+scoreboard players reset @s[tag=toggle_random_arena_version,tag=!medabot] SettingsCheck
+tag @s[tag=toggle_random_arena_version,tag=!medabot] remove toggle_random_arena_version
+tag @s[scores={SettingsCheck=12},tag=random_arena_version,tag=!medabot] remove random_arena_version
 
 
 scoreboard players reset @s[scores={SettingsCheck=3..}] SettingsCheck

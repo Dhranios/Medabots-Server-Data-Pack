@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity krosserdog_saved
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-playsound medabots_server:music.entity.doctor_haru.evil_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] Music 97
+scoreboard players set @s[scores={Dialog=1}] MusicType 44
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1539 50 -445 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1540 50 -447 run function medabots_server:spawn_entities/cutscene/krosserdog
 execute if entity @s[scores={Dialog=1}] positioned -1535 50 -449 run function medabots_server:spawn_entities/cutscene/caroline
@@ -50,9 +48,8 @@ tellraw @s[scores={Dialog=984}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=1000}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.28"}]}
 tellraw @s[scores={Dialog=1064}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.29"}]}
 execute if entity @s[scores={Dialog=1072}] positioned -1539 50 -418 run function medabots_server:spawn_entities/cutscene/spyke
-stopsound @s[scores={Dialog=1072}] music
-playsound medabots_server:music.map_welcome_underground_intro music @s[scores={Dialog=1072}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1072}] Music 308
+scoreboard players set @s[scores={Dialog=1072}] MusicType 50
+scoreboard players set @s[scores={Dialog=1072}] Music 0
 execute if entity @s[scores={Dialog=1072}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1538 50 -443
 execute if entity @s[scores={Dialog=1072}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add running
 execute if entity @s[scores={Dialog=1073..1131}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
@@ -158,15 +155,9 @@ execute if entity @s[scores={Dialog=3054}] as @e[tag=caroline,tag=!medabot_model
 execute if entity @s[scores={Dialog=3054}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=3055..}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=3201}] remove dialog_infinity_krosserdog_saved
-stopsound @s[scores={Dialog=3201}] music
 scoreboard players set @s[scores={Dialog=3201}] MusicType 22
 scoreboard players set @s[scores={Dialog=3201}] Music 0
 scoreboard players reset @s[scores={Dialog=3201}] DialogNr
 scoreboard players set @s[scores={Dialog=3201}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.doctor_haru.evil music @s[scores={Music=0,MusicType=-1,Dialog=..1071}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..1071}] Music 1074
-playsound medabots_server:music.map_welcome_underground music @s[scores={Music=0,MusicType=-1,Dialog=1072..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=1072..}] Music 1229

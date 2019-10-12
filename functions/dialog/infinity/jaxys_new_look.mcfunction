@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jaxys_new_look
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 37
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -353 55 -89 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -355 55 -73 run function medabots_server:spawn_entities/cutscene/brass
@@ -43,7 +42,7 @@ execute if entity @s[scores={Dialog=664}] at @e[tag=jaxy,tag=!medabot_model] run
 execute if entity @s[scores={Dialog=664}] at @e[tag=jaxy,tag=!medabot_model] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","jaxy","head","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:19,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pretty_prime_reflectmirror"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.scout"}','{"italic":false,"color":"white","translate":"medabots_server:move.scout.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"7"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.pretty_prime"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.pretty_prime_reflectmirror.model"}']},medabots_server:{stage_item:0b,id:"medabots_server:pretty_prime_reflectmirror",gender:1b,move:"scout",part:"head",armor:50,power:18,uses:7,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=664}] at @e[tag=jaxy,tag=!medabot_model] as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=jaxy] MedabotNr
 execute if entity @s[scores={Dialog=664}] at @e[tag=jaxy,tag=!medabot_model] as @e[tag=jaxy,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
-stopsound @s[scores={Dialog=664}] music
+scoreboard players set @s[scores={Dialog=664}] MusicType 40
 scoreboard players set @s[scores={Dialog=664}] Music 0
 tellraw @s[scores={Dialog=684}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.17"}]}
 tellraw @s[scores={Dialog=724}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.18"}]}
@@ -103,7 +102,6 @@ execute if entity @s[scores={Dialog=1856..1944}] as @e[tag=karin,tag=this_dialog
 execute if entity @s[scores={Dialog=1944}] run kill @e[tag=karin,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=1844}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.47"}]}
 tellraw @s[scores={Dialog=1884}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.48"}]}
-stopsound @s[scores={Dialog=1940}] music
 scoreboard players set @s[scores={Dialog=1940}] MusicType 1
 scoreboard players set @s[scores={Dialog=1940}] Music 0
 tag @s[scores={Dialog=1940}] remove dialog_infinity_jaxys_new_look
@@ -111,8 +109,3 @@ scoreboard players reset @s[scores={Dialog=1940}] DialogNr
 scoreboard players set @s[scores={Dialog=1940}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=..663}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..663}] Music 502
-playsound medabots_server:music.entity.jaxy music @s[scores={Music=0,MusicType=-1,Dialog=664..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=664..}] Music 1024

@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_koji_battle
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 136
-playsound medabots_server:music.entity.koji_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Dialog=1}] MusicType 38
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1948 51 -616 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1951 51 -614 run function medabots_server:spawn_entities/cutscene/roks
 execute if entity @s[scores={Dialog=1}] positioned -1950 51 -613 run function medabots_server:spawn_entities/cutscene/koji
@@ -31,7 +29,6 @@ execute if entity @s[scores={Dialog=133..232}] as @e[tag=roks,tag=!medabot_model
 execute if entity @s[scores={Dialog=133..227}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=232}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=227}] run tag @e[tag=koji,tag=this_dialog,limit=1] add dead
-stopsound @s[scores={Dialog=182}] music
 scoreboard players set @s[scores={Dialog=182}] MusicType 1
 scoreboard players set @s[scores={Dialog=182}] Music 0
 tellraw @s[scores={Dialog=182}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_koji_battle.8"}]}
@@ -42,6 +39,3 @@ scoreboard players reset @s[scores={Dialog=333}] DialogNr
 scoreboard players set @s[scores={Dialog=333}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.koji music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 274

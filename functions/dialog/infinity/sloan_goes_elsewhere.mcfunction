@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity sloan_goes_elsewhere
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 35
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1713 51 -393 run function medabots_server:spawn_entities/cutscene/totalizer
 execute if entity @s[scores={Dialog=1}] positioned -1715 51 -392 run function medabots_server:spawn_entities/cutscene/sloan
 execute if entity @s[scores={Dialog=1..255}] at @e[tag=sloan,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=sloan,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -28,7 +26,6 @@ execute if entity @s[scores={Dialog=256}] as @e[tag=totalizer,tag=!medabot_model
 execute if entity @s[scores={Dialog=256}] run tag @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=257..461}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=458}] as @e[tag=sloan,tag=this_dialog,limit=1] run kill @s
-stopsound @s[scores={Dialog=461}] music
 scoreboard players set @s[scores={Dialog=461}] MusicType 1
 scoreboard players set @s[scores={Dialog=461}] Music 0
 tag @s[scores={Dialog=461}] remove dialog_infinity_sloan_goes_elsewhere
@@ -36,6 +33,3 @@ scoreboard players reset @s[scores={Dialog=461}] DialogNr
 scoreboard players set @s[scores={Dialog=461}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

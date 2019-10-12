@@ -19,9 +19,8 @@ execute if entity @s[scores={Dialog=40}] as @e[tag=kid,tag=this_dialog,limit=1] 
 execute if entity @s[scores={Dialog=40}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=40..140}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=140}] run kill @e[tag=kid,tag=this_dialog,limit=1]
-stopsound @s[scores={Dialog=60}] music
+scoreboard players set @s[scores={Dialog=60}] MusicType 43
 scoreboard players set @s[scores={Dialog=60}] Music 0
-scoreboard players set @s[scores={Dialog=60}] MusicType -1
 execute if entity @s[scores={Dialog=125}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=126..155}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=135}] run fill -476 55 -72 -476 57 -65 minecraft:red_wool replace minecraft:redstone_block
@@ -36,7 +35,6 @@ execute if entity @s[scores={Dialog=300}] run tag @e[tag=jaxy,tag=!medabot_model
 execute if entity @s[scores={Dialog=301..330}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=305}] run fill -476 55 -72 -476 57 -65 minecraft:red_wool replace minecraft:redstone_block
 execute if entity @s[scores={Dialog=325}] run fill -476 55 -72 -476 57 -65 minecraft:redstone_block replace minecraft:red_wool
-stopsound @s[scores={Dialog=330}] music
 scoreboard players set @s[scores={Dialog=330}] MusicType 1
 scoreboard players set @s[scores={Dialog=330}] Music 0
 tag @s[scores={Dialog=330}] remove dialog_infinity_jaxy_follows_doctor_haru
@@ -44,6 +42,3 @@ scoreboard players reset @s[scores={Dialog=330}] DialogNr
 scoreboard players set @s[scores={Dialog=330}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.doctor_haru music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 609

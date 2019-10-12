@@ -1,7 +1,7 @@
 execute if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air run tag @s add allowed
 execute if entity @e[distance=..0.7,type=!minecraft:player,tag=!bridge,tag=!raft] run tag @s remove allowed
 
-# Unused: 58-72
+# Unused: 63-72
 execute if entity @s[scores={StageBuild=1},tag=allowed] run function medabots_server:stage/build/starting_area
 execute if entity @s[scores={StageBuild=2},tag=allowed] run function medabots_server:stage/build/goal_area
 execute if entity @s[scores={StageBuild=3}] run function medabots_server:stage/build/pot
@@ -19,6 +19,7 @@ execute if entity @s[scores={StageBuild=5},tag=allowed] run function medabots_se
 execute if entity @s[scores={StageBuild=14},tag=allowed,advancements={medabots_server:special_items/glass=true}] run function medabots_server:stage/build/glass
 execute if entity @s[scores={StageBuild=15..16},tag=allowed,advancements={medabots_server:special_items/mirror=true}] run function medabots_server:stage/build/mirror
 execute if entity @s[scores={StageBuild=101..110},tag=allowed,advancements={medabots_server:special_items/laser_trap=true}] run function medabots_server:stage/build/laser_trap
+execute if entity @s[scores={StageBuild=58..62},tag=allowed,advancements={medabots_server:special_items/laser_trap=true}] run function medabots_server:stage/build/laser_trap
 execute if entity @s[scores={StageBuild=111..170},tag=allowed,advancements={medabots_server:special_items/fan=true}] run function medabots_server:stage/build/fan
 execute if entity @s[scores={StageBuild=4},tag=allowed] run function medabots_server:stage/build/bridge
 execute if entity @s[scores={StageBuild=13},tag=allowed,advancements={medabots_server:special_items/drawbridge=true}] run function medabots_server:stage/build/drawbridge

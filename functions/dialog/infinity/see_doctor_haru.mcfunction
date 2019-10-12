@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity see_doctor_haru
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 43
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -318 55 -107 run function medabots_server:spawn_entities/cutscene/doctor_haru
 execute if entity @s[scores={Dialog=1..127}] at @e[tag=doctor_haru,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=doctor_haru,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -19,13 +18,9 @@ execute if entity @s[scores={Dialog=129..176}] as @e[tag=doctor_haru,tag=this_di
 execute if entity @s[scores={Dialog=177}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -304 55 -84
 execute if entity @s[scores={Dialog=178..}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=238}] remove dialog_infinity_see_doctor_haru
-stopsound @s[scores={Dialog=238}] music
 scoreboard players set @s[scores={Dialog=238}] MusicType 1
 scoreboard players set @s[scores={Dialog=238}] Music 0
 scoreboard players reset @s[scores={Dialog=238}] DialogNr
 scoreboard players set @s[scores={Dialog=238}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.doctor_haru music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 609

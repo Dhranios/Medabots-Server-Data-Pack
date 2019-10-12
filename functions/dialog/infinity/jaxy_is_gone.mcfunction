@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jaxy_is_gone
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 36
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1636 51 -605 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1631 51 -605 run function medabots_server:spawn_entities/cutscene/roks
@@ -36,7 +35,7 @@ tellraw @s[scores={Dialog=360}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=416}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.jaxy_is_gone.14"}]}
 tellraw @s[scores={Dialog=440}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.jaxy_is_gone.15"}]}
 tellraw @s[scores={Dialog=472}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.jaxy_is_gone.16"}]}
-stopsound @s[scores={Dialog=536}] music
+scoreboard players set @s[scores={Dialog=536}] MusicType 48
 scoreboard players set @s[scores={Dialog=536}] Music 0
 tellraw @s[scores={Dialog=536}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.jaxy_is_gone.17"}]}
 tellraw @s[scores={Dialog=552}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.jaxy_is_gone.18"}]}
@@ -97,15 +96,9 @@ execute if entity @s[scores={Dialog=1979}] as @e[tag=roks,tag=!medabot_model,tag
 tellraw @s[scores={Dialog=1884}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.jaxy_is_gone.48"}]}
 tellraw @s[scores={Dialog=1932}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.jaxy_is_gone.49"}]}
 tag @s[scores={Dialog=1984}] remove dialog_infinity_jaxy_is_gone
-stopsound @s[scores={Dialog=1984}] music
 scoreboard players set @s[scores={Dialog=1984}] MusicType 1
 scoreboard players set @s[scores={Dialog=1984}] Music 0
 scoreboard players reset @s[scores={Dialog=1984}] DialogNr
 scoreboard players set @s[scores={Dialog=1984}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.karin music @s[scores={Music=0,MusicType=-1,Dialog=..535}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..535}] Music 500
-playsound medabots_server:music.conspiracy music @s[scores={Music=0,MusicType=-1,Dialog=536..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=536..}] Music 873

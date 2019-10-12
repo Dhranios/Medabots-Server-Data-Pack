@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity death_break
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 35
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -438 55 -6 run function medabots_server:spawn_entities/cutscene/jaxy
 execute if entity @s[scores={Dialog=1}] positioned -428 55 -30 run function medabots_server:spawn_entities/cutscene/krosserdog
 execute if entity @s[scores={Dialog=1}] positioned -426 55 -32 run function medabots_server:spawn_entities/cutscene/samantha
@@ -88,7 +86,7 @@ execute if entity @s[scores={Dialog=1128}] at @e[tag=jaxy,tag=!medabot_model] ru
 execute if entity @s[scores={Dialog=1128}] at @e[tag=jaxy,tag=!medabot_model] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["cutscene","jaxy","head","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:17,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.god_emperor_death_break"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.break"}','{"italic":false,"color":"white","translate":"medabots_server:move.break.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"7"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.god_emperor"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.god_emperor_death_break.model"}']},medabots_server:{stage_item:0b,id:"medabots_server:god_emperor_death_break",gender:0b,move:"break",part:"head",armor:50,power:52,uses:7,activated:0b,version:1}}}]}
 execute if entity @s[scores={Dialog=1128}] at @e[tag=jaxy,tag=!medabot_model] as @e[tag=medabot_model,distance=..1] run scoreboard players operation @s MedabotNr = @e[distance=..1,limit=1,tag=jaxy] MedabotNr
 execute if entity @s[scores={Dialog=1128}] at @e[tag=jaxy,tag=!medabot_model] as @e[tag=jaxy,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
-stopsound @s[scores={Dialog=1128}] music
+scoreboard players set @s[scores={Dialog=1128}] MusicType 41
 scoreboard players set @s[scores={Dialog=1128}] Music 0
 tellraw @s[scores={Dialog=1136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.death_break.35"}]}
 tellraw @s[scores={Dialog=1152}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy"},{"translate":"medabots_server:dialog.infinity.death_break.36"}]}
@@ -99,7 +97,7 @@ execute if entity @s[scores={Dialog=1168}] run tag @e[tag=peppercat,tag=this_dia
 execute if entity @s[scores={Dialog=1168}] at @e[tag=totalizer,tag=this_dialog] run particle minecraft:cloud ~ ~ ~ 0 0 0 0.2 50 force @s
 execute if entity @s[scores={Dialog=1168}] at @e[tag=totalizer,tag=this_dialog] run playsound medabots_server:entity.medabot.death player @s ~ ~ ~ 2
 execute if entity @s[scores={Dialog=1168}] run tag @e[tag=totalizer,tag=this_dialog] add dead
-stopsound @s[scores={Dialog=1208}] music
+scoreboard players set @s[scores={Dialog=1208}] MusicType 40
 scoreboard players set @s[scores={Dialog=1208}] Music 0
 tellraw @s[scores={Dialog=1208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.death_break.38"}]}
 tellraw @s[scores={Dialog=1232}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.death_break.39"}]}
@@ -143,17 +141,9 @@ execute if entity @s[scores={Dialog=1692}] as @e[tag=krosserdog,tag=!medabot_mod
 execute if entity @s[scores={Dialog=1692}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1693..}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=1752}] remove dialog_infinity_death_break
-stopsound @s[scores={Dialog=1752}] music
 scoreboard players set @s[scores={Dialog=1752}] MusicType 1
 scoreboard players set @s[scores={Dialog=1752}] Music 0
 scoreboard players reset @s[scores={Dialog=1752}] DialogNr
 scoreboard players set @s[scores={Dialog=1752}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1,Dialog=..1127}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..1127}] Music 250
-playsound medabots_server:music.entity.jaxy.power music @s[scores={Music=0,MusicType=-1,Dialog=1128..1207}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=1128..1207}] Music 1024
-playsound medabots_server:music.entity.jaxy music @s[scores={Music=0,MusicType=-1,Dialog=1208..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=1208..}] Music 1024

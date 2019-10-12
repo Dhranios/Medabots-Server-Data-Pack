@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_shrimplips
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1948 51 -566 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1952 51 -566 run function medabots_server:spawn_entities/cutscene/shrimplips
 execute if entity @s[scores={Dialog=1..2225}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=shrimplips,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -89,13 +87,9 @@ tellraw @s[scores={Dialog=2226}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=2306}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.55"}]}
 tellraw @s[scores={Dialog=2378}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.56"}]}
 tag @s[scores={Dialog=2418}] remove dialog_infinity_vs_shrimplips
-stopsound @s[scores={Dialog=2418}] music
 scoreboard players set @s[scores={Dialog=2418}] MusicType 1
 scoreboard players set @s[scores={Dialog=2418}] Music 0
 scoreboard players reset @s[scores={Dialog=2418}] DialogNr
 scoreboard players set @s[scores={Dialog=2418}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

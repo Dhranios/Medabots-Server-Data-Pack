@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity squidguts_jammy_battle
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1997 51 -607 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -2000 51 -601 run function medabots_server:spawn_entities/cutscene/squidguts
 execute if entity @s[scores={Dialog=1..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -25,9 +23,8 @@ tellraw @s[scores={Dialog=256}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=304}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.9"}]}
 tellraw @s[scores={Dialog=400}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.10"}]}
 tellraw @s[scores={Dialog=416}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.11"}]}
-stopsound @s[scores={Dialog=480}] music
-playsound medabots_server:music.entity.select_corps_intro music @s[scores={Dialog=480}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=480}] Music 70
+scoreboard players set @s[scores={Dialog=480}] MusicType 33
+scoreboard players set @s[scores={Dialog=480}] Music 0
 execute if entity @s[scores={Dialog=480}] positioned -1999 51 -585 run function medabots_server:spawn_entities/cutscene/select_corps
 execute if entity @s[scores={Dialog=480}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -601
 execute if entity @s[scores={Dialog=480}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
@@ -61,15 +58,9 @@ execute if entity @s[scores={Dialog=1128}] run tag @e[tag=select_corps,tag=this_
 execute if entity @s[scores={Dialog=1129..}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=1148}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.30"}]}
 tag @s[scores={Dialog=1198}] remove dialog_infinity_squidguts_jammy_battle
-stopsound @s[scores={Dialog=1198}] music
 scoreboard players set @s[scores={Dialog=1198}] MusicType 1
 scoreboard players set @s[scores={Dialog=1198}] Music 0
 scoreboard players reset @s[scores={Dialog=1198}] DialogNr
 scoreboard players set @s[scores={Dialog=1198}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1,Dialog=..479}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..479}] Music 744
-playsound medabots_server:music.entity.select_corps music @s[scores={Music=0,MusicType=-1,Dialog=480..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=480..}] Music 720

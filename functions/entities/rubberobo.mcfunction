@@ -78,7 +78,7 @@ execute if entity @s[scores={Time=1..40},tag=!downed,tag=!see_goal_area,tag=!res
 execute if entity @s[scores={Time=1..40},tag=downed,tag=!see_goal_area,tag=!respawning] run playsound medabots_server:entity.rubberobo.walk_downed neutral @a ~ ~ ~ 1
 
 # At the goal
-execute if block ~ ~ ~ minecraft:heavy_weighted_pressure_plate run tag @s add dead
+execute if block ~ ~-1 ~ minecraft:bricks if block ~ ~3 ~ minecraft:brick_slab run tag @s add dead
 
 # Stage cleanup
 teleport @s[tag=dead] ~ -100 ~

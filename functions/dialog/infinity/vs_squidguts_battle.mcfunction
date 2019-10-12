@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_squidguts_battle
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1995 51 -560 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1997 51 -556 run function medabots_server:spawn_entities/cutscene/squidguts
 execute if entity @s[scores={Dialog=1..3349}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -101,7 +99,6 @@ execute if entity @s[scores={Dialog=3305},tag=!already_gave_items] run summon mi
 execute at @s as @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=3305}] run data modify entity @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1] Owner.L set from entity @s UUIDLeast
 execute if entity @s[scores={Dialog=3305}] run data modify entity @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1] Owner.M set from entity @s UUIDMost
-stopsound @s[scores={Dialog=3350}] music
 scoreboard players set @s[scores={Dialog=3350}] MusicType 1
 scoreboard players set @s[scores={Dialog=3350}] Music 0
 execute if entity @s[scores={Dialog=3350..3900}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -115,10 +112,8 @@ tag @s[scores={Dialog=3502}] add already_gave_items
 execute if entity @s[scores={Dialog=3502..3901}] unless entity @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players set @s Dialog 3901
 execute if entity @s[scores={Dialog=3502..3901}] unless entity @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players set @s Dialog 3901
 execute if entity @s[scores={Dialog=3901..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-stopsound @s[scores={Dialog=3901}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=3901}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=3901}] MusicType -1
-scoreboard players set @s[scores={Dialog=3901}] Music 62
+scoreboard players set @s[scores={Dialog=3901}] MusicType 32
+scoreboard players set @s[scores={Dialog=3901}] Music 0
 execute if entity @s[scores={Dialog=3901}] run data merge entity @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] {PickupDelay:1000s}
 execute if entity @s[scores={Dialog=3901}] run data merge entity @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1] {PickupDelay:1000s}
 execute if entity @s[scores={Dialog=3901}] positioned -1997 51 -540 run function medabots_server:spawn_entities/cutscene/rubberobo
@@ -159,6 +154,3 @@ scoreboard players reset @s[scores={Dialog=4030}] DialogNr
 scoreboard players set @s[scores={Dialog=4030}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

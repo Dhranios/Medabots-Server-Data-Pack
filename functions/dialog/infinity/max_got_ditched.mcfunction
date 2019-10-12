@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity max_got_ditched
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 39
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1717 51 -396 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1716 51 -392 run function medabots_server:spawn_entities/cutscene/max
@@ -52,7 +51,6 @@ tellraw @s[scores={Dialog=1316}] {"translate":"chat.type.text","with":[{"transla
 execute if entity @s[scores={Dialog=1332}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1715 51 -349
 execute if entity @s[scores={Dialog=1332}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1333..1542}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-stopsound @s[scores={Dialog=1472}] music
 scoreboard players set @s[scores={Dialog=1472}] MusicType 1
 scoreboard players set @s[scores={Dialog=1472}] Music 0
 tellraw @s[scores={Dialog=1472}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.max_got_ditched.34"}]}
@@ -63,6 +61,3 @@ scoreboard players reset @s[scores={Dialog=1542}] DialogNr
 scoreboard players set @s[scores={Dialog=1542}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.max music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 578

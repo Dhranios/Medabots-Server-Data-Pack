@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity meet_director_tune
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 42
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1671 51 -147 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1673 51 -149.0 run function medabots_server:spawn_entities/cutscene/director_tune
@@ -28,13 +27,9 @@ tellraw @s[scores={Dialog=142}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=192}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.7"}]}
 tellraw @s[scores={Dialog=240}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.8"}]}
 tag @s[scores={Dialog=272}] remove dialog_infinity_meet_director_tune
-stopsound @s[scores={Dialog=272}] music
 scoreboard players set @s[scores={Dialog=272}] MusicType 1
 scoreboard players set @s[scores={Dialog=272}] Music 0
 scoreboard players reset @s[scores={Dialog=272}] DialogNr
 scoreboard players set @s[scores={Dialog=272}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.director_tune music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 652

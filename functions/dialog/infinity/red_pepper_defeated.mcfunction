@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity red_pepper_defeated
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-playsound medabots_server:music.entity.king_pharaoh_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] Music 335
+scoreboard players set @s[scores={Dialog=1}] MusicType 46
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1717 51 -491 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1715 51 -487 {Duration:1000000,Tags:["cutscene","this_dialog","medabot","red_pepper"],Rotation:[0.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-1715,y=51,z=-487,distance=..1,tag=red_pepper] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
@@ -37,13 +35,9 @@ tellraw @s[scores={Dialog=280}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=296}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper"},{"translate":"medabots_server:dialog.infinity.red_pepper_defeated.9"}]}
 tellraw @s[scores={Dialog=352}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.red_pepper_defeated.10"}]}
 tag @s[scores={Dialog=433}] remove dialog_infinity_red_pepper_defeated
-stopsound @s[scores={Dialog=433}] music
 scoreboard players set @s[scores={Dialog=433}] MusicType 1
 scoreboard players set @s[scores={Dialog=433}] Music 0
 scoreboard players reset @s[scores={Dialog=433}] DialogNr
 scoreboard players set @s[scores={Dialog=433}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.king_pharaoh music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 417

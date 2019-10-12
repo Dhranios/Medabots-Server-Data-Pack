@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_seaslug
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1999 51 -561 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1997 51 -564 run function medabots_server:spawn_entities/cutscene/seaslug
 execute if entity @s[scores={Dialog=1..1319}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=seaslug,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -116,13 +114,9 @@ execute if entity @s[scores={Dialog=3908}] as @e[tag=seaslug,tag=this_dialog,lim
 execute if entity @s[scores={Dialog=3908}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add running
 execute if entity @s[scores={Dialog=3909..}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 tag @s[scores={Dialog=3949}] remove dialog_infinity_vs_seaslug
-stopsound @s[scores={Dialog=3949}] music
 scoreboard players set @s[scores={Dialog=3949}] MusicType 1
 scoreboard players set @s[scores={Dialog=3949}] Music 0
 scoreboard players reset @s[scores={Dialog=3949}] DialogNr
 scoreboard players set @s[scores={Dialog=3949}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_sloan
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 35
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1949 51 -621 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=1}] positioned -1946 51 -623 run function medabots_server:spawn_entities/cutscene/sloan
 execute if entity @s[scores={Dialog=1}] positioned -1951 51 -623 run function medabots_server:spawn_entities/cutscene/spyke
@@ -31,13 +29,9 @@ execute if entity @s[scores={Dialog=192}] run tag @e[tag=totalizer,tag=!medabot_
 execute if entity @s[scores={Dialog=193..268}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=268}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] run kill @s
 tag @s[scores={Dialog=272}] remove dialog_infinity_vs_sloan
-stopsound @s[scores={Dialog=272}] music
 scoreboard players set @s[scores={Dialog=272}] MusicType 1
 scoreboard players set @s[scores={Dialog=272}] Music 0
 scoreboard players reset @s[scores={Dialog=272}] DialogNr
 scoreboard players set @s[scores={Dialog=272}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

@@ -33,8 +33,7 @@ tellraw @s[scores={Dialog=400}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=432}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_ruins_out_a.11"}]}
 tellraw @s[scores={Dialog=528}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_ruins_out_a.12"}]}
 tellraw @s[scores={Dialog=544}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_ruins_out_a.13"}]}
-stopsound @s[scores={Dialog=568}] music
-scoreboard players set @s[scores={Dialog=568}] MusicType -1
+scoreboard players set @s[scores={Dialog=568}] MusicType 37
 scoreboard players set @s[scores={Dialog=568}] Music 0
 execute if entity @s[scores={Dialog=568}] positioned -1570 51 -255 run function medabots_server:spawn_entities/cutscene/erika
 execute if entity @s[scores={Dialog=568}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -175 ~
@@ -98,7 +97,6 @@ execute if entity @s[scores={Dialog=2582}] run tag @e[tag=kid,tag=this_dialog,li
 execute if entity @s[scores={Dialog=2582}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2583..}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2583..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-stopsound @s[scores={Dialog=2712}] music
 scoreboard players set @s[scores={Dialog=2712}] MusicType 1
 scoreboard players set @s[scores={Dialog=2712}] Music 0
 tag @s[scores={Dialog=2712}] remove dialog_infinity_rubberobo_leaves_ruins_out_a
@@ -106,6 +104,3 @@ scoreboard players reset @s[scores={Dialog=2712}] DialogNr
 scoreboard players set @s[scores={Dialog=2712}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 502

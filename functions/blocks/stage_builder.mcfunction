@@ -16,11 +16,6 @@ execute if entity @s[tag=jammy,tag=!pot] run function medabots_server:set_blocks
 
 # Objects with variants
 execute if entity @s[tag=pot] run function medabots_server:blocks/stage_builder/pot
-execute if entity @s[tag=guard,tag=!action_floor,tag=!pot] run function medabots_server:blocks/stage_builder/guard
-execute if entity @s[tag=cannon,tag=!action_floor,tag=!pot] run function medabots_server:blocks/stage_builder/cannon
-execute if entity @s[tag=round_stone,tag=!action_floor] run function medabots_server:blocks/stage_builder/round_stone
-execute if entity @s[tag=ice_block,tag=!action_floor] run function medabots_server:blocks/stage_builder/ice_block
-execute if entity @s[tag=bomb,tag=!action_floor] run function medabots_server:blocks/stage_builder/bomb
 execute if entity @s[tag=hole] run function medabots_server:blocks/stage_builder/hole
 execute if entity @s[tag=drawbridge] run function medabots_server:blocks/stage_builder/drawbridge
 execute if entity @s[tag=mirror] run function medabots_server:blocks/stage_builder/mirror
@@ -38,5 +33,10 @@ execute if entity @s[tag=spring_wall] run function medabots_server:blocks/stage_
 execute if entity @s[tag=gas_floor] run function medabots_server:blocks/stage_builder/gas_floor
 execute if entity @s[tag=hammer_punch] run function medabots_server:blocks/stage_builder/hammer_punch
 execute if entity @s[tag=laser_trap] run function medabots_server:blocks/stage_builder/laser_trap
+execute if entity @s[tag=guard,tag=!action_floor,tag=!pot] run function medabots_server:blocks/stage_builder/guard
+execute if entity @s[tag=cannon,tag=!action_floor,tag=!pot] run function medabots_server:blocks/stage_builder/cannon
+execute if entity @s[tag=round_stone,tag=!action_floor] run function medabots_server:blocks/stage_builder/round_stone
+execute if entity @s[tag=ice_block,tag=!action_floor] run function medabots_server:blocks/stage_builder/ice_block
+execute if entity @s[tag=bomb,tag=!action_floor] run function medabots_server:blocks/stage_builder/bomb
 
 execute if entity @s[tag=no_ticker] run tag @e[distance=..0.7,type=!minecraft:player] add no_ticking

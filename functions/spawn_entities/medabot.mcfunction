@@ -2,7 +2,7 @@
 summon minecraft:skeleton ~ ~ ~ {Silent:1b,CustomNameVisisble:1b,ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/medabot",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["new_medabot","medabot","killerable","hostile"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
 scoreboard players set @e[tag=new_medabot,limit=1] Killer 0
 scoreboard players set @e[tag=new_medabot,limit=1] Charge 0
-scoreboard players set @e[tag=new_medabot,limit=1] Battle 3
+scoreboard players set @e[tag=new_medabot,limit=1] Battle 2
 data modify entity @e[tag=new_medabot,limit=1] Rotation set from entity @s Rotation
 
 # Spawn model parts
@@ -22,10 +22,10 @@ data modify entity @e[tag=new_model,tag=legs,limit=1] ArmorItems[3] merge from e
 
 # Set Medabot set
 scoreboard players set @e[tag=new_medabot,limit=1] Medabot 0
-execute store result score #head Medabot run data get entity @s Item.tag.medabots_server.items.head.tag.Damage
-execute store result score #right_arm Medabot run data get entity @s Item.tag.medabots_server.items.right_arm.tag.Damage
-execute store result score #left_arm Medabot run data get entity @s Item.tag.medabots_server.items.left_arm.tag.Damage
-execute store result score #legs Medabot run data get entity @s Item.tag.medabots_server.items.legs.tag.Damage
+execute store result score #head Medabot run data get entity @s Item.tag.medabots_server.items.head.tag.CustomModelData
+execute store result score #right_arm Medabot run data get entity @s Item.tag.medabots_server.items.right_arm.tag.CustomModelData
+execute store result score #left_arm Medabot run data get entity @s Item.tag.medabots_server.items.left_arm.tag.CustomModelData
+execute store result score #legs Medabot run data get entity @s Item.tag.medabots_server.items.legs.tag.CustomModelData
 execute if score #head Medabot = #right_arm Medabot if score #head Medabot = #left_arm Medabot if score #head Medabot = #legs Medabot store result score @e[tag=new_medabot,limit=1] Medabot run scoreboard players get #head Medabot
 scoreboard players reset #head Medabot
 scoreboard players reset #right_arm Medabot

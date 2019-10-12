@@ -1,5 +1,6 @@
 teleport @s -1280 51 -171 -180 0
-stopsound @s music
+scoreboard players reset @s Stage
+scoreboard players set @s PrevMusicType 0
 scoreboard players set @s Music 0
 scoreboard players set @s MusicType 1
 scoreboard players set @s Battle 0

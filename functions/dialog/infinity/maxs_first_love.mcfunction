@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity maxs_first_love
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 37
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -322 55 -33 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -321 55 -39 run function medabots_server:spawn_entities/cutscene/max
@@ -93,7 +92,7 @@ tellraw @s[scores={Dialog=2536}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2568}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.61"}]}
 tellraw @s[scores={Dialog=2600}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.62"}]}
 tellraw @s[scores={Dialog=2624}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.63"}]}
-stopsound @s[scores={Dialog=2656}] music
+scoreboard players set @s[scores={Dialog=2656}] MusicType 39
 scoreboard players set @s[scores={Dialog=2656}] Music 0
 tellraw @s[scores={Dialog=2656}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.64"}]}
 tellraw @s[scores={Dialog=2736}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.65"}]}
@@ -146,7 +145,6 @@ execute if entity @s[scores={Dialog=3688}] run tag @e[tag=max,tag=!medabot_model
 execute if entity @s[scores={Dialog=3689..3827}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3828}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -354 55 -78
 execute if entity @s[scores={Dialog=3829..}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-stopsound @s[scores={Dialog=3748}] music
 scoreboard players set @s[scores={Dialog=3748}] MusicType 1
 scoreboard players set @s[scores={Dialog=3748}] Music 0
 tellraw @s[scores={Dialog=3748}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.maxs_first_love.95"}]}
@@ -157,8 +155,3 @@ scoreboard players reset @s[scores={Dialog=3860}] DialogNr
 scoreboard players set @s[scores={Dialog=3860}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=..2655}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..2655}] Music 502
-playsound medabots_server:music.entity.max music @s[scores={Music=0,MusicType=-1,Dialog=2656..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=2656..}] Music 578

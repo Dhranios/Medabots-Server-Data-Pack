@@ -4,10 +4,8 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity shrimplips_jammy_battle
 execute if entity @s[scores={Dialog=1}] positioned -1947 51 -563 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1949 51 -560 run function medabots_server:spawn_entities/cutscene/shrimplips
@@ -32,9 +30,8 @@ execute if entity @s[scores={Dialog=612}] run tag @e[tag=shrimplips,tag=this_dia
 execute if entity @s[scores={Dialog=612}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=518..1038}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=shrimplips,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=518}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy_battle.7"}]}
-stopsound @s[scores={Dialog=612}] music
-playsound medabots_server:music.entity.select_corps_intro music @s[scores={Dialog=612}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=612}] Music 70
+scoreboard players set @s[scores={Dialog=612}] MusicType 33
+scoreboard players set @s[scores={Dialog=612}] Music 0
 execute if entity @s[scores={Dialog=612}] positioned -1948 51 -541 run function medabots_server:spawn_entities/cutscene/select_corps
 execute if entity @s[scores={Dialog=612}] positioned -1948 51 -541 run tag @e[tag=select_corps,tag=this_dialog,distance=..0.7,limit=1] add select_corps_1
 execute if entity @s[scores={Dialog=612}] as @e[tag=select_corps_1,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
@@ -79,15 +76,9 @@ execute if entity @s[scores={Dialog=999..1038}] as @e[tag=shrimplips,tag=this_di
 execute if entity @s[scores={Dialog=1038}] run kill @e[tag=shrimplips,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=1018}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy_battle.20"}]}
 tag @s[scores={Dialog=1042}] remove dialog_infinity_shrimplips_jammy_battle
-stopsound @s[scores={Dialog=1042}] music
 scoreboard players set @s[scores={Dialog=1042}] MusicType 1
 scoreboard players set @s[scores={Dialog=1042}] Music 0
 scoreboard players reset @s[scores={Dialog=1042}] DialogNr
 scoreboard players set @s[scores={Dialog=1042}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1,Dialog=..611}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..611}] Music 744
-playsound medabots_server:music.entity.select_corps music @s[scores={Music=0,MusicType=-1,Dialog=612..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=612..}] Music 720

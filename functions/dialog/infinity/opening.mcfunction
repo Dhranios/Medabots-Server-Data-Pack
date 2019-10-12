@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity opening
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 47
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -284 55 -51 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -305 55 -53 run function medabots_server:spawn_entities/cutscene/brass
@@ -149,9 +148,8 @@ execute if entity @s[scores={Dialog=4024}] as @e[tag=metabee,tag=!medabot_model,
 teleport @s[scores={Dialog=3936..4024}] ~-0.2125 ~ ~
 execute if entity @s[scores={Dialog=4025}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 108 0
 teleport @s[scores={Dialog=4025..5164}] -340 55 -53
-stopsound @s[scores={Dialog=4025}] music
-scoreboard players set @s[scores={Dialog=4025}] Music 70
-playsound medabots_server:music.entity.select_corps_intro music @s[scores={Dialog=4025}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Dialog=4025}] MusicType 33
+scoreboard players set @s[scores={Dialog=4025}] Music 0
 tellraw @s[scores={Dialog=4024}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.opening.86"}]}
 tellraw @s[scores={Dialog=4060}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.opening.87"}]}
 tellraw @s[scores={Dialog=4080}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.opening.88"}]}
@@ -184,7 +182,7 @@ tellraw @s[scores={Dialog=5092}] {"translate":"chat.type.text","with":[{"selecto
 execute if entity @s[scores={Dialog=5164}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s -407 55 -117 -180 0
 teleport @s[scores={Dialog=5164}] -405 55 -117 -180 0
 teleport @s[scores={Dialog=5165..}] -405 55 -117
-stopsound @s[scores={Dialog=5164}] music
+scoreboard players set @s[scores={Dialog=5164}] MusicType 37
 scoreboard players set @s[scores={Dialog=5164}] Music 0
 tellraw @s[scores={Dialog=5164}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.112"}]}
 tellraw @s[scores={Dialog=5180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.opening.113"}]}
@@ -213,17 +211,9 @@ execute if entity @s[scores={Dialog=5461..5472}] as @e[tag=metabee,tag=!medabot_
 execute if entity @s[scores={Dialog=5444}] run setblock -412 53 -118 minecraft:redstone_block
 execute if entity @s[scores={Dialog=5472}] run setblock -412 53 -118 minecraft:air
 tag @s[scores={Dialog=5472}] remove dialog_infinity_opening
-stopsound @s[scores={Dialog=5472}] music
 scoreboard players set @s[scores={Dialog=5472}] MusicType 1
 scoreboard players set @s[scores={Dialog=5472}] Music 0
 scoreboard players reset @s[scores={Dialog=5472}] DialogNr
 scoreboard players set @s[scores={Dialog=5472}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.intro music @s[scores={Music=0,MusicType=-1,Dialog=..4024}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..4024}] Music 915
-playsound medabots_server:music.entity.select_corps music @s[scores={Music=0,MusicType=-1,Dialog=4025..5163}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=4081..5163}] Music 720
-playsound medabots_server:music.entity.erika music @s[scores={Music=0,MusicType=-1,Dialog=5164..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=5164..}] Music 502

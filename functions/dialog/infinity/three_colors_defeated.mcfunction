@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity three_colors_defeated
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-playsound medabots_server:music.entity.king_pharaoh_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] Music 335
+scoreboard players set @s[scores={Dialog=1}] MusicType 46
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -432 55 -52 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -451 55 -41 run function medabots_server:spawn_entities/cutscene/jaxy
 execute if entity @s[scores={Dialog=1}] positioned -460 55 -69 run function medabots_server:spawn_entities/cutscene/spyke
@@ -192,9 +190,8 @@ execute if entity @s[scores={Dialog=2284}] run tag @e[tag=spyke,tag=this_dialog,
 execute if entity @s[scores={Dialog=2285..2350}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2350}] run tag @e[tag=spyke,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=2351}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-stopsound @s[scores={Dialog=2304}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=2304}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=2304}] Music 62
+scoreboard players set @s[scores={Dialog=2304}] MusicType 35
+scoreboard players set @s[scores={Dialog=2304}] Music 0
 tellraw @s[scores={Dialog=2344}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.53"}]}
 tellraw @s[scores={Dialog=2376}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.54"}]}
 tellraw @s[scores={Dialog=2448}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.55"}]}
@@ -217,9 +214,8 @@ execute if entity @s[scores={Dialog=2688}] as @e[tag=red_pepper,tag=!medabot_mod
 execute if entity @s[scores={Dialog=2688}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=sloan,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=2688}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=spyke,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=2688}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s facing entity @e[tag=samantha,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-stopsound @s[scores={Dialog=2688}] music
-playsound medabots_server:music.entity.doctor_haru.evil_intro music @s[scores={Dialog=2688}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=2688}] Music 97
+scoreboard players set @s[scores={Dialog=2688}] MusicType 44
+scoreboard players set @s[scores={Dialog=2688}] Music 0
 execute if entity @s[scores={Dialog=2688}] run fill -472 56 -114 -471 59 -113 minecraft:orange_stained_glass
 execute if entity @s[scores={Dialog=2688}] run setblock -472 58 -113 minecraft:air
 teleport @s[scores={Dialog=2688..4235}] -472 57 -113 facing -465 55 -119
@@ -291,9 +287,8 @@ execute if entity @s[scores={Dialog=4236}] as @e[tag=red_pepper,tag=!medabot_mod
 execute if entity @s[scores={Dialog=4236}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=4236}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=4236}] run kill @e[tag=doctor_haru,tag=this_dialog,limit=1]
-stopsound @s[scores={Dialog=4236}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=4236}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=4236}] Music 62
+scoreboard players set @s[scores={Dialog=4236}] MusicType 35
+scoreboard players set @s[scores={Dialog=4236}] Music 0
 execute if entity @s[scores={Dialog=4236}] run fill -472 56 -114 -471 59 -113 minecraft:air
 teleport @s[scores={Dialog=4236}] -445 55 -46 facing -459 55 -53
 teleport @s[scores={Dialog=4237..}] -445 55 -46 
@@ -321,7 +316,6 @@ execute if entity @s[scores={Dialog=4365..}] as @e[tag=peace_kiss,tag=!medabot_m
 execute if entity @s[scores={Dialog=4364}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -394 55 -53
 execute if entity @s[scores={Dialog=4364}] run tag @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=4365..}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-stopsound @s[scores={Dialog=4404}] music
 scoreboard players set @s[scores={Dialog=4404}] MusicType 1
 scoreboard players set @s[scores={Dialog=4404}] Music 0
 tellraw @s[scores={Dialog=4404}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.98"}]}
@@ -336,12 +330,3 @@ scoreboard players reset @s[scores={Dialog=4724}] DialogNr
 scoreboard players set @s[scores={Dialog=4724}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.king_pharaoh music @s[scores={Music=0,MusicType=-1,Dialog=..2303}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..2302}] Music 417
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1,Dialog=2304..2687}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=2304..2687}] Music 250
-playsound medabots_server:music.entity.doctor_haru.evil music @s[scores={Music=0,MusicType=-1,Dialog=2688..4235}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=2688..4235}] Music 1074
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1,Dialog=4236..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=4236..}] Music 250

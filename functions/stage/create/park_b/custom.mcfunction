@@ -5,7 +5,5 @@ function medabots_server:gamemodes/default/set_stats
 tag @s add main
 scoreboard players set @s Battle 1
 scoreboard players set @s Stage 20
-stopsound @s music
-playsound medabots_server:music.stage.park_intro music @s ~ ~ ~ 1000
-scoreboard players set @s Music 160
+scoreboard players set @s Music 0
 scoreboard players set @s MusicType 16

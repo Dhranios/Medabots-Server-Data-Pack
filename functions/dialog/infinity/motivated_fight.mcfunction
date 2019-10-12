@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity motivated_fight
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 35
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1998 51 -562 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1998 51 -565 run function medabots_server:spawn_entities/cutscene/krosserdog
 execute if entity @s[scores={Dialog=1}] positioned -1997 51 -564 run function medabots_server:spawn_entities/cutscene/spyke
@@ -74,13 +72,9 @@ tellraw @s[scores={Dialog=1846}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=1868}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.motivated_fight.48"}]}
 tellraw @s[scores={Dialog=1892}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.motivated_fight.49"}]}
 tag @s[scores={Dialog=1900}] remove dialog_infinity_motivated_fight
-stopsound @s[scores={Dialog=1900}] music
 scoreboard players set @s[scores={Dialog=1900}] MusicType 1
 scoreboard players set @s[scores={Dialog=1900}] Music 0
 scoreboard players reset @s[scores={Dialog=1900}] DialogNr
 scoreboard players set @s[scores={Dialog=1900}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

@@ -4,7 +4,7 @@ tag @s add main
 tag @s add ally_medabot
 scoreboard players set @s StageVersion 2
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/lagdou_ruins_8/darkness
-execute if entity @s[tag=vs_cpus] positioned -1310 46 -287 run function medabots_server:stage/create/lagdou_ruins_8/random_cpu
+execute if entity @s[tag=vs_cpus] positioned -1310 46 -287 rotated 0 0 run function medabots_server:stage/create/lagdou_ruins_8/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1288 51 -256 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1287 53 -281 minecraft:redstone_block
 execute if entity @s[tag=!vs_cpus] run data merge block -1287 52 -279 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot,tag=!-1] run function medabots_server:stage/join/lagdou_ruins_9/darkness/0"}}'}

@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity the_picture
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 136
-playsound medabots_server:music.entity.koji_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Dialog=1}] MusicType 38
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -394 55 -53 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -401 55 -52 run function medabots_server:spawn_entities/cutscene/roks
 execute if entity @s[scores={Dialog=1}] positioned -399 55 -49 run function medabots_server:spawn_entities/cutscene/koji
@@ -85,7 +83,6 @@ execute if entity @s[scores={Dialog=1735}] run tag @e[tag=koji,tag=this_dialog,l
 execute if entity @s[scores={Dialog=1736..1855}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1855}] run kill @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1855}] run kill @e[tag=koji,tag=this_dialog,limit=1]
-stopsound @s[scores={Dialog=1795}] music
 scoreboard players set @s[scores={Dialog=1795}] MusicType 1
 scoreboard players set @s[scores={Dialog=1795}] Music 0
 tellraw @s[scores={Dialog=1795}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max"},{"translate":"medabots_server:dialog.infinity.the_picture.48"}]}
@@ -110,6 +107,3 @@ scoreboard players reset @s[scores={Dialog=2283}] DialogNr
 scoreboard players set @s[scores={Dialog=2283}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.koji music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 274

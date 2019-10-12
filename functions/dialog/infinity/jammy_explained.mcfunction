@@ -5,8 +5,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jammy_explained
-stopsound @s[scores={Dialog=1}] music
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
+scoreboard players set @s[scores={Dialog=1}] MusicType 47
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -381 55 -53 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -377 55 -50 run function medabots_server:spawn_entities/cutscene/samantha
@@ -83,7 +82,7 @@ tellraw @s[scores={Dialog=1420}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1468}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.jammy_explained.36"}]}
 tellraw @s[scores={Dialog=1500}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.jammy_explained.37"}]}
 execute if entity @s[scores={Dialog=1508}] run setblock -379 55 -54 minecraft:end_rod
-stopsound @s[scores={Dialog=1508}] music
+scoreboard players set @s[scores={Dialog=1508}] MusicType 34
 scoreboard players set @s[scores={Dialog=1508}] Music 0
 tellraw @s[scores={Dialog=1528}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.jammy_explained.38"}]}
 tellraw @s[scores={Dialog=1568}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.jammy_explained.39"}]}
@@ -250,7 +249,6 @@ tellraw @s[scores={Dialog=4520}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=4536}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.jammy_explained.116"}]}
 tellraw @s[scores={Dialog=4664}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.jammy_explained.117"}]}
 advancement grant @s[scores={Dialog=4680}] only medabots_server:special_items/passes/robo_4
-stopsound @s[scores={Dialog=4680}] music
 scoreboard players set @s[scores={Dialog=4680}] MusicType 1
 scoreboard players set @s[scores={Dialog=4680}] Music 0
 tag @s[scores={Dialog=4680}] remove dialog_infinity_jammy_explained
@@ -258,8 +256,3 @@ scoreboard players reset @s[scores={Dialog=4680}] DialogNr
 scoreboard players set @s[scores={Dialog=4680}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.intro music @s[scores={Music=0,MusicType=-1,Dialog=..1507}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=..1507}] Music 915
-playsound medabots_server:music.jammy music @s[scores={Music=0,MusicType=-1,Dialog=1508..}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1,Dialog=1508..}] Music 480

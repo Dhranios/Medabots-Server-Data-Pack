@@ -4,7 +4,7 @@ tag @s add main
 tag @s add ally_medabot
 scoreboard players set @s StageVersion 1
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ricco_harbor/empty
-execute if entity @s[tag=vs_cpus] positioned -1387 19 -194 run function medabots_server:stage/create/ricco_harbor/random_cpu
+execute if entity @s[tag=vs_cpus] positioned -1387 19 -194 rotated 90 0 run function medabots_server:stage/create/ricco_harbor/random_cpu
 execute if entity @s[tag=!vs_cpus] run teleport @s -1440 51 -158 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1439 53 -212 minecraft:redstone_block
 execute if entity @s[tag=!vs_cpus] run data merge block -1439 52 -210 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot,tag=!-1] run function medabots_server:stage/join/ricco_harbor/empty/0"}}'}

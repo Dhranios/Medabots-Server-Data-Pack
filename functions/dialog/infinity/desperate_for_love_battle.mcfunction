@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity desperate_for_love_battle
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.screws_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 35
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -1947 51 -615 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1951 51 -613 run function medabots_server:spawn_entities/cutscene/peppercat
 execute if entity @s[scores={Dialog=1}] positioned -1949 51 -612 run function medabots_server:spawn_entities/cutscene/samantha
@@ -33,7 +31,6 @@ execute if entity @s[scores={Dialog=244}] as @e[tag=samantha,tag=this_dialog,lim
 execute if entity @s[scores={Dialog=244}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add running
 execute if entity @s[scores={Dialog=245..288}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=288}] run kill @e[tag=samantha,tag=this_dialog,limit=1]
-stopsound @s[scores={Dialog=288}] music
 scoreboard players set @s[scores={Dialog=288}] MusicType 1
 scoreboard players set @s[scores={Dialog=288}] Music 0
 tellraw @s[scores={Dialog=288}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.desperate_for_love_battle.9"}]}
@@ -43,6 +40,3 @@ scoreboard players reset @s[scores={Dialog=360}] DialogNr
 scoreboard players set @s[scores={Dialog=360}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.screws music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 250

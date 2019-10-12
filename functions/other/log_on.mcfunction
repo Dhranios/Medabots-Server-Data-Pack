@@ -12,7 +12,7 @@ tag @a[tag=message] remove message
 scoreboard players reset @s RandomMessage
 
 # No music when logging in
-stopsound @s music
+scoreboard players set @s PrevMusicType 0
 scoreboard players set @s Music 0
 
 # Welcome!

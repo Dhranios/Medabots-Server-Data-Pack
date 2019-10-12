@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity shrimplips_is_recruiting
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.rubberobo_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 62
+scoreboard players set @s[scores={Dialog=1}] MusicType 32
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -388 55 -51 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -353 55 -36 run function medabots_server:spawn_entities/cutscene/shrimplips
 execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -350 55 -39 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[45.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:854784}}},{id:"minecraft:leather_leggings",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:8653587}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{AttributeModifiers:[],Unbreakable:1b,display:{color:12955077}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
@@ -64,7 +62,6 @@ execute if entity @s[scores={Dialog=1468}] as @e[tag=shrimplips,tag=this_dialog,
 execute if entity @s[scores={Dialog=1468}] as @e[tag=shrimplips,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=1469..1548}] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=1549}] run kill @e[tag=shrimplips,tag=this_dialog,limit=1]
-stopsound @s[scores={Dialog=1508}] music
 scoreboard players set @s[scores={Dialog=1508}] MusicType 1
 scoreboard players set @s[scores={Dialog=1508}] Music 0
 execute if entity @s[scores={Dialog=1508..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -86,6 +83,3 @@ scoreboard players reset @s[scores={Dialog=1732}] DialogNr
 scoreboard players set @s[scores={Dialog=1732}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.rubberobo music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 744

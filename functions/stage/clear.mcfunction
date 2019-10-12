@@ -1,6 +1,8 @@
 stopsound @s music
 playsound medabots_server:music.stage.stage_end music @s ~ ~ ~ 1000
+scoreboard players reset @s Stage
 scoreboard players set @s Battle 0
+scoreboard players set @s PrevMusicType 0
 scoreboard players set @s MusicType 1
 scoreboard players set @s[scores={Stage=23..29}] MusicType 22
 scoreboard players set @s Music 299

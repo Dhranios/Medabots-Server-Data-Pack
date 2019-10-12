@@ -5,10 +5,8 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity select_corps_warning
-stopsound @s[scores={Dialog=1}] music
-playsound medabots_server:music.entity.select_corps_intro music @s[scores={Dialog=1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Dialog=1}] MusicType -1
-scoreboard players set @s[scores={Dialog=1}] Music 70
+scoreboard players set @s[scores={Dialog=1}] MusicType 33
+scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1}] positioned -394 55 -52 run function medabots_server:spawn_entities/cutscene/select_corps
 teleport @s[x=-394,y=55,z=-52,distance=..4] -399 55 -52
 execute if entity @s[scores={Dialog=1}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
@@ -26,13 +24,9 @@ execute if entity @s[scores={Dialog=256}] as @e[tag=select_corps,tag=this_dialog
 execute if entity @s[scores={Dialog=256}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=257..}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=297}] remove dialog_infinity_select_corps_warning
-stopsound @s[scores={Dialog=297}] music
 scoreboard players set @s[scores={Dialog=297}] MusicType 1
 scoreboard players set @s[scores={Dialog=297}] Music 0
 scoreboard players reset @s[scores={Dialog=297}] DialogNr
 scoreboard players set @s[scores={Dialog=297}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
-
-playsound medabots_server:music.entity.select_corps music @s[scores={Music=0,MusicType=-1}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Music=0,MusicType=-1}] Music 720
