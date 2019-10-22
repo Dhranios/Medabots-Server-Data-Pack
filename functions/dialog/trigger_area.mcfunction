@@ -44,8 +44,9 @@ tag @s[advancements={medabots_server:story_progression/infinity={jaxy_is_gone=tr
 tag @s[advancements={medabots_server:story_progression/infinity={jaxy_is_gone=true,roks_taken=false}},x=-458,y=55,z=-89,distance=..5] add dialog_infinity_roks_taken
 tag @s[advancements={medabots_server:story_progression/infinity={krosserdog_taken=true,totalizer_taken=true,peppercat_taken=true,brass_taken=true,roks_taken=true,into_the_underground_arena=false}},x=-460,y=55,z=-29,distance=..5] add dialog_infinity_into_the_underground_arena
 tag @s[advancements={medabots_server:story_progression/infinity={into_the_underground_arena=true,the_underground_arena=false}},x=-478,y=9,z=-80,dx=3,dy=3,dz=4] add dialog_infinity_the_underground_arena
-#tag @s[advancements={medabots_server:story_progression/infinity={doctor_haru_defeated=true,karin_saved=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_karin_saved
-#tag @s[advancements={medabots_server:story_progression/infinity={karin_saved=true,the_final_battle=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_the_final_battle
+tag @s[advancements={medabots_server:story_progression/infinity={into_the_underground_arena=true,doctor_haru_defeated=false}},x=-445,y=9,z=-81,distance=..4] add dialog_infinity_stop_saving_karin
+tag @s[advancements={medabots_server:story_progression/infinity={doctor_haru_defeated=true,karin_saved=false}},x=-453,y=11,z=-77,distance=..4] add dialog_infinity_karin_saved
+tag @s[advancements={medabots_server:story_progression/infinity={karin_saved=true,the_final_battle=false}},x=-445,y=9,z=-84,dx=2,dy=4,dz=6] add dialog_infinity_the_final_battle
 #tag @s[advancements={medabots_server:story_progression/infinity={victory=true,bonus_area_pass=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_bonus_area_pass
 #tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,jaxys_happy=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_jaxys_happy
 #tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,samanthas_challenge=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_samanthas_challenge

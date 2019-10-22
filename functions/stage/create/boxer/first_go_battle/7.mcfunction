@@ -15,6 +15,7 @@ tag @e[sort=random,type=minecraft:area_effect_cloud,tag=referee_marker,limit=1] 
 execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=1,tag=selected] run summon minecraft:armor_stand -1887 44 -571 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","hide_normal_time"],Invisible:1b,Rotation:[90.0f,0.0f]}
 execute if entity @e[type=minecraft:area_effect_cloud,tag=referee_marker,tag=2,tag=selected] run summon minecraft:armor_stand -1892 44 -572 {CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","hide_normal_time"],Invisible:1b,Rotation:[-90.0f,0.0f]}
 kill @e[type=minecraft:area_effect_cloud,tag=referee_marker]
+scoreboard players set @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee] MusicType 55
 bossbar set medabots_server:boxer/robattle value 3600
 bossbar set medabots_server:boxer/robattle players @a[scores={Stage=29}]
 bossbar set medabots_server:boxer/time players

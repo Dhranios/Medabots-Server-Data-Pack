@@ -12,14 +12,8 @@
     },
     "parent": "medabots_server:main/root",
     "criteria": {
-        "kill": {
-            "trigger": "minecraft:player_hurt_entity",
-            "conditions": {
-                "entity": {
-                    "type": "minecraft:ghast",
-                    "nbt": "{Tags:[\"master_hand\"],AbsorptionAmount:0.0f}"
-                }
-            }
+        "give": {
+            "trigger": "minecraft:impossible"
         }
     },
     "rewards": {

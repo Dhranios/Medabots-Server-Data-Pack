@@ -11,6 +11,7 @@ scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{m
 scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:attack_tyrano_breathfire"}}}]}] MedapartID 10
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:sphere_doomers_fire_doomer"}}}]}] MedapartID 11
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:galleom_flaming_engine"}}}]}] MedapartID 12
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:nino_bolganone"}}}]}] MedapartID 13
 
 # Give the weapon
 execute unless entity @s[scores={ScoutTime=1..}] run replaceitem entity @s[tag=left_arm_selected,scores={Drop=0}] hotbar.1 minecraft:fire_charge{CustomModelData:1,Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.melt"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melt"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.strike"}']},Enchantments:[{id:"minecraft:fire_aspect",lvl:1s}],medabots_server:{id:"medabots_server:melt"}}

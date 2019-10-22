@@ -244,10 +244,10 @@
         "laboratory_c_second_go": {
             "trigger": "minecraft:impossible"
         },
-        "boxer_c_first_go": {
+        "boxer_first_go": {
             "trigger": "minecraft:impossible"
         },
-        "boxer_c_second_go": {
+        "boxer_second_go": {
             "trigger": "minecraft:impossible"
         }
     }

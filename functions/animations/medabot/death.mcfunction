@@ -21,9 +21,14 @@ execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:exper
 execute store result score #temp Stage run scoreboard players get @s[scores={DeathTime=1}] Stage
 tag @s[scores={DeathTime=1}] add me
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set #temp Drop -1
-execute if entity @s[scores={DeathTime=1},tag=!practice_battle] as @e[tag=!practice_battle,tag=!me] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 1
-execute if entity @s[scores={DeathTime=1},tag=!practice_battle] as @e[tag=practice_battle,tag=!me] if score @s Stage = #temp Stage run scoreboard players set #temp Drop -1
-execute if entity @s[scores={DeathTime=1}] unless score #temp Drop matches -1 run function medabots_server:items/drop_medapart
+execute if entity @s[scores={DeathTime=1},tag=!practice_battle] as @e[tag=medabot,tag=!practice_battle,tag=!me,tag=!dying] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 1
+execute if entity @s[scores={DeathTime=1},tag=!practice_battle] as @e[tag=medabot,tag=practice_battle,tag=!me,tag=!dying] if score @s Stage = #temp Stage run scoreboard players set #temp Drop -1
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] unless score #temp Drop matches -1 positioned ~ 3 ~ run function medabots_server:items/drop_medapart
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=enemy_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add enemy_loot
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=ally_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add ally_loot
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] unless score #temp Drop matches -1 run function medabots_server:items/drop_medapart
+execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=enemy_medabot] run tag @e[distance=..1,type=minecraft:item] add enemy_loot
+execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=ally_medabot] run tag @e[distance=..1,type=minecraft:item] add ally_loot
 execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Stage
 execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Drop
 tag @s[scores={DeathTime=1}] remove me

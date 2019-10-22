@@ -4,6 +4,7 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
+tag @s[scores={Dialog=1}] add get_suzumega_hummer_dialog
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/other get_suzumega_hummer
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud ^ ^ ^3 {Duration:1000000,Tags:["cutscene","suzumega_hummer","medabot","this_dialog"]}
 execute if entity @s[scores={Dialog=1}] positioned ^ ^ ^3 run scoreboard players operation @e[distance=..1,tag=suzumega_hummer] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
@@ -25,6 +26,7 @@ tellraw @s[scores={Dialog=372}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=436}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.suzumega_hummer"},{"translate":"medabots_server:dialog.other.get_suzumega_hummer.6"}]}
 execute if entity @s[scores={Dialog=476}] as @e[tag=suzumega_hummer,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ ~ -90
 execute if entity @s[scores={Dialog=477..}] as @e[tag=suzumega_hummer,tag=this_dialog,limit=1] at @s run teleport @s ~ ~0.2 ~
+tag @s[scores={Dialog=497}] remove get_suzumega_hummer_dialog
 tag @s[scores={Dialog=497}] remove dialog_other_get_suzumega_hummer
 tag @s[scores={Dialog=497}] remove already_gave_items
 scoreboard players reset @s[scores={Dialog=497}] DialogNr

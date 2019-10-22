@@ -25,3 +25,18 @@ execute if entity @s[scores={Range=9..,Time=80}] if block ~ ~ ~-8 minecraft:air 
 execute if entity @s[scores={Range=10..,Time=80}] unless block ~ ~ ~-9 minecraft:air run tag @s add extending_blocked
 execute if entity @s[scores={Range=10..,Time=90}] if block ~ ~ ~-9 minecraft:air run playsound medabots_server:block.press_wall.move block @a ~ ~ ~ 1 1.8
 execute if entity @s[scores={Range=10..,Time=90}] if block ~ ~ ~-9 minecraft:air positioned ~ ~ ~-9 run function medabots_server:blocks/press_wall/extend/z
+execute if entity @s[scores={Range=11..,Time=90}] unless block ~ ~ ~-10 minecraft:air run tag @s add extending_blocked
+execute if entity @s[scores={Range=11..,Time=100}] if block ~ ~ ~-10 minecraft:air run playsound medabots_server:block.press_wall.move block @a ~ 1 1.8
+execute if entity @s[scores={Range=11..,Time=100}] if block ~ ~ ~-10 minecraft:air positioned ~ ~ ~-10 run function medabots_server:blocks/press_wall/extend/z
+execute if entity @s[scores={Range=12..,Time=100}] unless block ~ ~ ~-11 minecraft:air run tag @s add extending_blocked
+execute if entity @s[scores={Range=12..,Time=110}] if block ~ ~ ~-11 minecraft:air run playsound medabots_server:block.press_wall.move block @a ~ 1 1.8
+execute if entity @s[scores={Range=12..,Time=110}] if block ~ ~ ~-11 minecraft:air positioned ~ ~ ~-11 run function medabots_server:blocks/press_wall/extend/z
+execute if entity @s[scores={Range=13..,Time=110}] unless block ~ ~ ~-12 minecraft:air run tag @s add extending_blocked
+execute if entity @s[scores={Range=13..,Time=120}] if block ~ ~ ~-12 minecraft:air run playsound medabots_server:block.press_wall.move block @a ~ 1 1.8
+execute if entity @s[scores={Range=13..,Time=120}] if block ~ ~ ~-12 minecraft:air positioned ~ ~ ~-12 run function medabots_server:blocks/press_wall/extend/z
+execute if entity @s[scores={Range=14..,Time=120}] unless block ~ ~ ~-13 minecraft:air run tag @s add extending_blocked
+execute if entity @s[scores={Range=14..,Time=130}] if block ~ ~ ~-13 minecraft:air run playsound medabots_server:block.press_wall.move block @a ~ 1 1.8
+execute if entity @s[scores={Range=14..,Time=130}] if block ~ ~ ~-13 minecraft:air positioned ~ ~ ~-13 run function medabots_server:blocks/press_wall/extend/z
+execute if entity @s[scores={Range=15..,Time=130}] unless block ~ ~ ~-14 minecraft:air run tag @s add extending_blocked
+execute if entity @s[scores={Range=15..,Time=140}] if block ~ ~ ~-14 minecraft:air run playsound medabots_server:block.press_wall.move block @a ~ 1 1.8
+execute if entity @s[scores={Range=15..,Time=140}] if block ~ ~ ~-14 minecraft:air positioned ~ ~ ~-14 run function medabots_server:blocks/press_wall/extend/z

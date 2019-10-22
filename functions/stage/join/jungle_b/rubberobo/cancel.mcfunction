@@ -10,15 +10,15 @@ execute if entity @s[tag=-1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=-1] run tag @s remove -1
 
 execute if entity @s[tag=0] if entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.jungle_b"},{"text":"2"}]}
-execute if entity @s[tag=0] if entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] run data merge block -1619 52 -477 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!enemy_medabot,tag=!-1] run function medabots_server:stage/join/jungle_b/rubberobo/1"}}'}
+execute if entity @s[tag=0] if entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] run data merge block -1619 52 -477 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot] run function medabots_server:stage/join/jungle_b/rubberobo/1"}}'}
 execute if entity @s[tag=0] unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.jungle_b"},{"text":"3"}]}
-execute if entity @s[tag=0] unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] run data merge block -1619 52 -477 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!enemy_medabot,tag=!-1] run function medabots_server:stage/join/jungle_b/rubberobo/0"}}'}
+execute if entity @s[tag=0] unless entity @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] run data merge block -1619 52 -477 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot] run function medabots_server:stage/join/jungle_b/rubberobo/0"}}'}
 execute if entity @s[tag=0] run tag @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] add 0
 execute if entity @s[tag=0] run tag @a[x=-1666,y=51,z=-477,dx=94,dy=4,dz=92,tag=1] remove 1
 execute if entity @s[tag=0] run scoreboard players set @s Battle 0
 execute if entity @s[tag=0] run tag @s remove 0
 
 execute if entity @s[tag=1] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.jungle_b"},{"text":"2"}]}
-execute if entity @s[tag=1] run data merge block -1619 52 -477 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!enemy_medabot,tag=!-1] run function medabots_server:stage/join/jungle_b/rubberobo/0"}}'}
+execute if entity @s[tag=1] run data merge block -1619 52 -477 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot] run function medabots_server:stage/join/jungle_b/rubberobo/0"}}'}
 execute if entity @s[tag=1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=1] run tag @s remove 1

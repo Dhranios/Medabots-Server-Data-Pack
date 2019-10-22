@@ -8,7 +8,7 @@ execute positioned -1538 44 -475 run function medabots_server:set_blocks/action_
 execute positioned -1542 44 -472 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
 execute positioned -1543 44 -468 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
 execute positioned -1540 44 -464 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
-scoreboard players set @e[x=-1536.5,y=44,z=-457.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1537.5,y=44,z=-456.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2

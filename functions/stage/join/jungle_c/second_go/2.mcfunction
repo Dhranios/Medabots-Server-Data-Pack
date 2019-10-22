@@ -6,9 +6,9 @@ execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run setblock -1540 52 -
 execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run data merge block -1542 51 -545 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/jungle_c/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run setblock -1542 52 -547 minecraft:red_wool
 tag @s[tag=valid_tinpet,scores={Dialog=0}] add enemy_medabot
-tag @s[tag=valid_tinpet,scores={Dialog=0}] add 1
-execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run function medabots_server:stage/create/jungle_c/second_go
+tag @s[tag=valid_tinpet,scores={Dialog=0}] add 2
 execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run function medabots_server:gamemodes/default/set_stats
+execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run function medabots_server:stage/create/jungle_c/second_go
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
 tellraw @s[tag=!valid_tinpet] {"translate":"medabots_server:message.tinpet.not_valid"}
 tag @s remove valid_tinpet

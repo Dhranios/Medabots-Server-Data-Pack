@@ -9,6 +9,7 @@ execute if entity @s[scores={Moving=0}] run function medabots_server:entities/bo
 execute if entity @s[scores={Moving=1..}] run function medabots_server:entities/bomb/valid_move
 
 # Move if this move is valid
+execute unless entity @s[scores={Steps=0..}] run scoreboard players set @s[scores={Moving=1..}] Steps 0
 scoreboard players set @s[tag=!valid_move,scores={Moving=0..,Steps=0}] Moving 0
 tag @s[scores={Moving=1..}] add has_moved
 execute at @s run teleport @s[scores={Moving=1}] ~0.2 ~ ~

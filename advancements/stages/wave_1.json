@@ -1,8 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:gold_ingot",
-            "nbt": "{CustomModelData:1}"
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:1}"
         },
         "title": {
             "translate": "medabots_server:item.medapart.wave",
@@ -261,10 +261,10 @@
         "laboratory_c_second_go": {
             "trigger": "minecraft:impossible"
         },
-        "boxer_c_first_go": {
+        "boxer_first_go": {
             "trigger": "minecraft:impossible"
         },
-        "boxer_c_second_go": {
+        "boxer_second_go": {
             "trigger": "minecraft:impossible"
         },
         "grassland_d_first_go": {

@@ -1,5 +1,9 @@
 experience add @s -10000 levels
 clear @s
+tag @s[scores={ArenaType=0}] add 1v1
+tag @s[scores={ArenaType=1}] add 1v3
+tag @s[scores={ArenaType=2}] add 2v2
+tag @s[scores={ArenaType=3}] add 1v1v1v1
 tag @s[scores={FlyCourseLaps=0}] add fallout_race
 tag @s[scores={FlyCourseLaps=3}] add 3_laps
 tag @s[scores={FlyCourseLaps=4}] add 4_laps
@@ -16,6 +20,10 @@ tag @s[scores={FlyCourseFee=30}] add 30_medallars
 tag @s[scores={FlyCourseFee=40}] add 40_medallars
 tag @s[scores={FlyCourseFee=50}] add 50_medallars
 scoreboard players reset @s
+scoreboard players set @s[tag=1v1] ArenaType 0
+scoreboard players set @s[tag=1v3] ArenaType 1
+scoreboard players set @s[tag=2v2] ArenaType 2
+scoreboard players set @s[tag=1v1v1v1] ArenaType 3
 scoreboard players set @s[tag=fallout_race] FlyCourseLaps 0
 scoreboard players set @s[tag=3_laps] FlyCourseLaps 3
 scoreboard players set @s[tag=4_laps] FlyCourseLaps 4
@@ -31,6 +39,10 @@ scoreboard players set @s[tag=20_medallars] FlyCourseFee 20
 scoreboard players set @s[tag=30_medallars] FlyCourseFee 30
 scoreboard players set @s[tag=40_medallars] FlyCourseFee 40
 scoreboard players set @s[tag=50_medallars] FlyCourseFee 50
+tag @s remove 1v1
+tag @s remove 1v3
+tag @s remove 2v2
+tag @s remove 1v1v1v1
 tag @s remove fallout_race
 tag @s remove 3_laps
 tag @s remove 4_laps
@@ -93,6 +105,7 @@ scoreboard players set @s Dialog 0
 scoreboard players set @s RobattleMusic 0
 scoreboard players set @s Killer 0
 tag @s add killerable
+execute unless entity @s[scores={ArenaType=0..}] run scoreboard players set @s ArenaType 0
 execute unless entity @s[scores={FlyCourseLaps=0..}] run scoreboard players set @s FlyCourseLaps 3
 execute unless entity @s[scores={FlyCourseFee=0..}] run scoreboard players set @s FlyCourseFee 10
 experience add @s 1 levels

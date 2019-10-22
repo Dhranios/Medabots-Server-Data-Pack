@@ -5,10 +5,10 @@
             "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:5}"
         },
         "title": {
-            "translate": "medabots_server:item.spider_medal"
+            "translate": "medabots_server:advancements.get_all_medabots.spider_medal"
         },
         "description": {
-            "translate": "medabots_server:advancements.get_all_medabots.spider_medal"
+            "translate": "medabots_server:advancements.get_all_medabots.spider_medal.description"
         }
     },
     "parent": "medabots_server:get_all_medabots/wave_1/question_medal",

@@ -4,7 +4,7 @@ execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:
 execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] run setblock -1237 53 -141 minecraft:red_wool
 scoreboard players set @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] Music 0
 scoreboard players set @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] MusicType 4
-execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/stage_settings
+execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/arena_settings
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
 execute unless entity @s[scores={Dialog=0,Level=30..}] run tellraw @s {"translate":"medabots_server:message.stage.requires.not_matching","with":[{"translate":"medabots_server:message.stage.requirements.lagdou_ruins_6.0"}]}
 execute unless entity @s[scores={Dialog=0},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true}] run tellraw @s {"translate":"medabots_server:message.stage.requires.not_matching","with":[{"translate":"medabots_server:message.stage.requirements.lagdou_ruins_6.1"}]}

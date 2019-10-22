@@ -99,3 +99,15 @@ playsound medabots_server:music.story music @s[scores={MusicType=49}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=49}] Music 860
 playsound medabots_server:music.map_welcome_underground music @s[scores={MusicType=50}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=50}] Music 1229
+playsound medabots_server:music.stage.pvp.final_destination_1 music @s[scores={MusicType=51}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=51}] Music 853
+playsound medabots_server:music.stage.boss.master_hand_1 music @s[scores={MusicType=52}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=52}] Music 1182
+playsound medabots_server:music.stage.pvp.final_destination_2 music @s[scores={MusicType=53}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=53}] Music 1690
+playsound medabots_server:music.stage.boss.master_hand_and_crazy_hand_2 music @s[scores={MusicType=54}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=54}] Music 1680
+playsound medabots_server:music.boss_mae music @s[scores={MusicType=55}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=55}] Music 597
+playsound medabots_server:music.entity.mr_referee music @s[scores={MusicType=56}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=56}] Music 247

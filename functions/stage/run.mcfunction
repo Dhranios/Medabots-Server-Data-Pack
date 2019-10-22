@@ -183,9 +183,13 @@ execute if entity @s[scores={Stage=58}] unless entity @s[scores={StageVersion=1.
 execute if entity @s[scores={Stage=59}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/ruins_in_e/custom
 execute if entity @s[scores={Stage=60}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/rock_f/custom
 execute if entity @s[scores={Stage=61,StageVersion=1}] run function medabots_server:stage/run/final_destination_1/empty
+execute if entity @s[scores={Stage=61,StageVersion=2}] run function medabots_server:stage/run/final_destination_1/master_hand
 execute if entity @s[scores={Stage=62,StageVersion=1}] run function medabots_server:stage/run/final_destination_2/empty
+execute if entity @s[scores={Stage=62,StageVersion=2}] run function medabots_server:stage/run/final_destination_2/master_hand
 execute if entity @s[scores={Stage=63,StageVersion=1}] run function medabots_server:stage/run/final_destination_3/empty
+execute if entity @s[scores={Stage=63,StageVersion=2}] run function medabots_server:stage/run/final_destination_3/master_hand
 execute if entity @s[scores={Stage=64,StageVersion=1}] run function medabots_server:stage/run/final_destination_4/empty
+execute if entity @s[scores={Stage=64,StageVersion=2}] run function medabots_server:stage/run/final_destination_4/master_hand
 execute if entity @s[scores={Stage=65,StageVersion=1}] run function medabots_server:stage/run/subspace_1/empty
 execute if entity @s[scores={Stage=66,StageVersion=1}] run function medabots_server:stage/run/subspace_2/empty
 execute if entity @s[scores={Stage=67,StageVersion=1}] run function medabots_server:stage/run/subspace_3/empty

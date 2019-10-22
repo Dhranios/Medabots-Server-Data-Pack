@@ -18,12 +18,7 @@
             "translate": "medabots_server:advancements.stages.version",
 			"with": [
 				{
-					"translate": "medabots_server:location.laboratory",
-					"with": [
-						{
-							"text": "D"
-						}
-					]
+					"translate": "medabots_server:location.laboratory_d"
 				},
 				{
 					"translate": "medabots_server:sign.stage.version.second_go"

@@ -18,12 +18,7 @@
             "translate": "medabots_server:advancements.stages.version",
 			"with": [
 				{
-					"translate": "medabots_server:location.ruins_in",
-					"with": [
-						{
-							"text": "D"
-						}
-					]
+					"translate": "medabots_server:location.ruins_in_d"
 				},
 				{
 					"translate": "medabots_server:sign.stage.version.first_go"

@@ -8,7 +8,7 @@ execute if entity @s[tag=multi_legged_legs] run function medabots_server:items/m
 execute if entity @s[tag=two_legged_legs] run function medabots_server:items/medapart/two_legged
 execute if entity @s[tag=wheel_legs] run function medabots_server:items/medapart/wheel
 execute if entity @s[tag=tank_legs] run function medabots_server:items/medapart/tank
-execute if entity @s[tag=swim_legs] run function medabots_server:items/medapart/swim
+function medabots_server:items/medapart/swim
 
 # Medaforce getting blocked
 execute if entity @s[tag=medaforce_block] run function medabots_server:effects/blocked_medaforce_toggle

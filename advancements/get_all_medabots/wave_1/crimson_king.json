@@ -11,7 +11,7 @@
             "translate": "medabots_server:advancements.get_all_medabots.crimson_king.description"
         }
     },
-    "parent": "medabots_server:get_all_medabots/wave_1",
+    "parent": "medabots_server:get_all_medabots/wave_1/boarbooster",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",

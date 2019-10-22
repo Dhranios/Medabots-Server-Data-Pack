@@ -183,7 +183,7 @@ execute positioned -1557 44 -644 run function medabots_server:set_blocks/acceler
 execute positioned -1554 44 -642 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1517 44 -674 run function medabots_server:set_blocks/accelerator/south
 execute positioned -1553 44 -625 run function medabots_server:set_blocks/door/north/power_0
-execute positioned -1561 44 -666 run function medabots_server:set_blocks/door/south/power_1
+execute positioned -1561 44 -665 run function medabots_server:set_blocks/door/south/power_1
 execute positioned -1541 44 -660 run function medabots_server:set_blocks/door/south/power_1
 execute positioned -1541 44 -661 run function medabots_server:set_blocks/door/south/power_1
 execute positioned -1541 44 -662 run function medabots_server:set_blocks/door/south/power_0

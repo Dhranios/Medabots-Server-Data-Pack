@@ -37,5 +37,13 @@ playsound medabots_server:music.entity.king_pharaoh_intro music @s[scores={Music
 scoreboard players set @s[scores={MusicType=46}] Music 335
 playsound medabots_server:music.map_welcome_underground_intro music @s[scores={MusicType=50}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=50}] Music 308
+playsound medabots_server:music.stage.pvp.final_destination_1_intro music @s[scores={MusicType=51}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=51}] Music 30
+playsound medabots_server:music.stage.boss.master_hand_1_intro music @s[scores={MusicType=52}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=52}] Music 452
+playsound medabots_server:music.stage.pvp.final_destination_2_intro music @s[scores={MusicType=53}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=53}] Music 21
+playsound medabots_server:music.stage.boss.master_hand_and_crazy_hand_2_intro music @s[scores={MusicType=54}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=54}] Music 222
 
 scoreboard players operation @s[scores={Music=0}] PrevMusicType = @s MusicType

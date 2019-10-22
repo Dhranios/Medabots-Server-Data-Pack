@@ -11,7 +11,7 @@
             "translate": "medabots_server:advancements.get_all_medabots.boarbooster.description"
         }
     },
-    "parent": "medabots_server:get_all_medabots/wave_1/baroncastle",
+    "parent": "medabots_server:get_all_medabots/wave_1",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",

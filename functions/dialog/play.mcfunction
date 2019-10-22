@@ -139,19 +139,20 @@ execute if entity @s[tag=dialog_infinity_brass_taken] run function medabots_serv
 execute if entity @s[tag=dialog_infinity_roks_taken] run function medabots_server:dialog/infinity/roks_taken
 execute if entity @s[tag=dialog_infinity_into_the_underground_arena] run function medabots_server:dialog/infinity/into_the_underground_arena
 execute if entity @s[tag=dialog_infinity_the_underground_arena] run function medabots_server:dialog/infinity/the_underground_arena
+execute if entity @s[tag=dialog_infinity_stop_saving_karin] run function medabots_server:dialog/infinity/stop_saving_karin
 execute if entity @s[tag=dialog_infinity_krosserdog_saved] run function medabots_server:dialog/infinity/krosserdog_saved
-#execute if entity @s[tag=dialog_infinity_totalizer_saved] run function medabots_server:dialog/infinity/totalizer_saved
-#execute if entity @s[tag=dialog_infinity_peppercat_saved] run function medabots_server:dialog/infinity/peppercat_saved
-#execute if entity @s[tag=dialog_infinity_brass_saved] run function medabots_server:dialog/infinity/brass_saved
-#execute if entity @s[tag=dialog_infinity_kojis_worried] run function medabots_server:dialog/infinity/kojis_worried
-#execute if entity @s[tag=dialog_infinity_roks_saved] run function medabots_server:dialog/infinity/roks_saved
-#execute if entity @s[tag=dialog_infinity_doctor_harus_research] run function medabots_server:dialog/infinity/doctor_harus_research
-#execute if entity @s[tag=dialog_infinity_doctor_haru_defeated] run function medabots_server:dialog/infinity/doctor_haru_defeated
-#execute if entity @s[tag=dialog_infinity_karin_saved] run function medabots_server:dialog/infinity/karin_saved
-#execute if entity @s[tag=dialog_infinity_the_final_battle] run function medabots_server:dialog/infinity/the_final_battle
-#execute if entity @s[tag=dialog_infinity_victory] run function medabots_server:dialog/infinity/victory
-#execute if entity @s[tag=dialog_infinity_bonus_area_pass] run function medabots_server:dialog/infinity/extra_area_pass
-#execute if entity @s[tag=dialog_infinity_jaxys_happy] run function medabots_server:dialog/infinity/jaxys_happy
+execute if entity @s[tag=dialog_infinity_totalizer_saved] run function medabots_server:dialog/infinity/totalizer_saved
+execute if entity @s[tag=dialog_infinity_peppercat_saved] run function medabots_server:dialog/infinity/peppercat_saved
+execute if entity @s[tag=dialog_infinity_brass_saved] run function medabots_server:dialog/infinity/brass_saved
+execute if entity @s[tag=dialog_infinity_koji_is_worried] run function medabots_server:dialog/infinity/koji_is_worried
+execute if entity @s[tag=dialog_infinity_roks_saved] run function medabots_server:dialog/infinity/roks_saved
+execute if entity @s[tag=dialog_infinity_doctor_harus_research] run function medabots_server:dialog/infinity/doctor_harus_research
+execute if entity @s[tag=dialog_infinity_doctor_haru_defeated] run function medabots_server:dialog/infinity/doctor_haru_defeated
+execute if entity @s[tag=dialog_infinity_karin_saved] run function medabots_server:dialog/infinity/karin_saved
+execute if entity @s[tag=dialog_infinity_the_final_battle] run function medabots_server:dialog/infinity/the_final_battle
+execute if entity @s[tag=dialog_infinity_victory] run function medabots_server:dialog/infinity/victory
+#execute if entity @s[tag=dialog_infinity_bonus_area_pass] run function medabots_server:dialog/infinity/bonus_area_pass
+#execute if entity @s[tag=dialog_infinity_jaxy_is_happy] run function medabots_server:dialog/infinity/jaxy_is_happy
 #execute if entity @s[tag=dialog_infinity_spykes_challenge] run function medabots_server:dialog/infinity/spykes_challenge
 #execute if entity @s[tag=dialog_infinity_spykes_pass] run function medabots_server:dialog/infinity/spykes_pass
 #execute if entity @s[tag=dialog_infinity_sloans_challenge] run function medabots_server:dialog/infinity/sloans_challenge
@@ -167,8 +168,7 @@ execute if entity @s[tag=dialog_infinity_krosserdog_saved] run function medabots
 #execute if entity @s[tag=dialog_infinity_kojis_pass] run function medabots_server:dialog/infinity/kojis_pass
 
 # Other
-#execute if entity @s[tag=dialog_other_get_amelia] run function medabots_server:dialog/other/get_amelia
-#execute if entity @s[tag=dialog_other_get_darknut] run function medabots_server:dialog/other/get_darknut
+execute if entity @s[tag=dialog_other_get_amelia] run function medabots_server:dialog/other/get_amelia
 #execute if entity @s[tag=dialog_other_get_galleom] run function medabots_server:dialog/other/get_galleom
 #execute if entity @s[tag=dialog_other_get_magolor] run function medabots_server:dialog/other/get_magolor
 #execute if entity @s[tag=dialog_other_get_master_core] run function medabots_server:dialog/other/get_master_core
@@ -176,7 +176,10 @@ execute if entity @s[tag=dialog_infinity_krosserdog_saved] run function medabots
 #execute if entity @s[tag=dialog_other_get_mewtwo] run function medabots_server:dialog/other/get_mewtwo
 #execute if entity @s[tag=dialog_other_get_nino] run function medabots_server:dialog/other/get_nino
 #execute if entity @s[tag=dialog_other_get_rob] run function medabots_server:dialog/other/get_rob
-#execute if entity @s[tag=dialog_other_get_sphere_doomers] run function medabots_server:dialog/other/get_sphere_doomers
-execute if entity @s[tag=dialog_other_get_suzumega_hummer] run function medabots_server:dialog/other/get_suzumega_hummer
 #execute if entity @s[tag=dialog_other_get_zant] run function medabots_server:dialog/other/get_zant
 execute if entity @s[tag=dialog_other_magolor_appears] run function medabots_server:dialog/other/magolor_appears
+
+# Clashable
+#execute if entity @s[tag=dialog_other_get_darknut] unless entity @s[tag=!get_darknut_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_darknut
+#execute if entity @s[tag=dialog_other_get_sphere_doomers] unless entity @s[tag=!get_sphere_doomers_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_sphere_doomers
+execute if entity @s[tag=dialog_other_get_suzumega_hummer] unless entity @s[tag=!get_suzumega_hummer_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_suzumega_hummer

@@ -429,7 +429,7 @@
         "brass_saved": {
             "trigger": "minecraft:impossible"
         },
-        "kojis_worried": {
+        "koji_is_worried": {
             "trigger": "minecraft:impossible"
         },
         "roks_saved": {
@@ -450,10 +450,10 @@
         "victory": {
             "trigger": "minecraft:impossible"
         },
-        "extra_area_pass": {
+        "bonus_area_pass": {
             "trigger": "minecraft:impossible"
         },
-        "jaxys_happy": {
+        "jaxy_is_happy": {
             "trigger": "minecraft:impossible"
         },
         "spykes_challenge": {

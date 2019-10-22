@@ -9,6 +9,6 @@ execute if entity @s[tag=-1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=-1] run tag @s remove -1
 
 execute if entity @s[tag=0] run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.park_a"},{"text":"2"}]}
-execute if entity @s[tag=0] run data merge block -1808 52 -633 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!enemy_medabot,tag=!-1] run function medabots_server:stage/join/park_a/first_go/0"}}'}
+execute if entity @s[tag=0] run data merge block -1808 52 -633 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot] run function medabots_server:stage/join/park_a/first_go/0"}}'}
 execute if entity @s[tag=0] run scoreboard players set @s Battle 0
 execute if entity @s[tag=0] run tag @s remove 0

@@ -11,10 +11,10 @@ execute positioned -1519 44 -538 run function medabots_server:spawn_entities/rou
 execute positioned -1514 44 -506 run function medabots_server:spawn_entities/round_stone
 execute positioned -1557 44 -505 run function medabots_server:spawn_entities/raft
 execute positioned -1532 44 -524 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1515 44 -513 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1515 44 -514 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1515 44 -515 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1567 44 -500 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1515 44 -513 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1515 44 -512 run function medabots_server:set_blocks/floor_switch/green
+execute positioned -1515 44 -511 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1540 44 -541 run function medabots_server:set_blocks/floor_switch/yellow/delay_5
 execute positioned -1523 44 -527 run function medabots_server:set_blocks/floor_switch/yellow/delay_5
 execute positioned -1568 44 -516 run function medabots_server:set_blocks/floor_switch/yellow/delay_60
@@ -103,7 +103,7 @@ execute positioned -1535 44 -534 run function medabots_server:set_blocks/door/we
 execute positioned -1515 44 -531 run function medabots_server:set_blocks/door/north/power_1
 execute positioned -1525 44 -528 run function medabots_server:set_blocks/door/west/power_1
 execute positioned -1560 44 -488 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1552 44 -525 run function medabots_server:set_blocks/door/south/power_0
+execute positioned -1552 44 -524 run function medabots_server:set_blocks/door/south/power_0
 execute positioned -1557 44 -488 run function medabots_server:set_blocks/starting_area
 teleport @a[x=-1570,y=50,z=-545,dx=62,dy=4,dz=62,tag=-1] -1557 44 -488 0 0
 teleport @s[tag=-1] -1557 44 -488 0 0

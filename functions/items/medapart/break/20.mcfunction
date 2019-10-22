@@ -1,5 +1,5 @@
 # Set which part is activated
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:boarbooster_woolybond"}}}]}] MedapartID 1
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:boarbooster_woollybond"}}}]}] MedapartID 1
 scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:boarbooster_drillril"}}}]}] MedapartID 2
 scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:god_emperor_death_break"}}}]}] MedapartID 3
 scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:yuchitang_plus_diver"}}}]}] MedapartID 4

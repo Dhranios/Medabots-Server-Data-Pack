@@ -9,27 +9,27 @@ scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/jungle_c/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1533.5,y=44,z=-523.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1515 43 -513 minecraft:lime_wool run scoreboard players set @e[x=-1533.5,y=44,z=-523.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1515 43 -514 minecraft:lime_wool run scoreboard players set @e[x=-1534.5,y=44,z=-533.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1515 43 -511 minecraft:lime_wool run scoreboard players set @e[x=-1533.5,y=44,z=-523.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1515 43 -512 minecraft:lime_wool run scoreboard players set @e[x=-1534.5,y=44,z=-533.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1540 43 -541 minecraft:yellow_wool run scoreboard players set @e[x=-1534.5,y=44,z=-533.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1515 43 -514 minecraft:green_wool if block -1540 43 -541 minecraft:orange_wool run scoreboard players set @e[x=-1534.5,y=44,z=-533.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1515 43 -512 minecraft:green_wool if block -1540 43 -541 minecraft:orange_wool run scoreboard players set @e[x=-1534.5,y=44,z=-533.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1514.5,y=44,z=-530.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1515 43 -511 minecraft:lime_wool run scoreboard players set @e[x=-1514.5,y=44,z=-530.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1515 43 -513 minecraft:lime_wool run scoreboard players set @e[x=-1514.5,y=44,z=-530.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1515 43 -515 minecraft:lime_wool run scoreboard players set @e[x=-1514.5,y=44,z=-530.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1523 43 -527 minecraft:yellow_wool run scoreboard players set @e[x=-1524.5,y=44,z=-527.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1523 43 -527 minecraft:orange_wool run scoreboard players set @e[x=-1524.5,y=44,z=-527.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1567 43 -500 minecraft:lime_wool run scoreboard players set @e[x=-1559.5,y=44,z=-487.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1568 43 -516 minecraft:yellow_wool run scoreboard players set @e[x=-1559.5,y=44,z=-487.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1567 43 -500 minecraft:green_wool if block -1568 43 -516 minecraft:orange_wool run scoreboard players set @e[x=-1559.5,y=44,z=-487.5,distance=..0.7,tag=door,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1539.5,y=44,z=-533.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1537.5,y=44,z=-534.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1541.5,y=44,z=-535.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1538.5,y=44,z=-537.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1515.5,y=44,z=-537.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1520.5,y=44,z=-535.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1518.5,y=44,z=-534.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1515.5,y=44,z=-533.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -524 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1519.5,y=44,z=-531.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1539.5,y=44,z=-533.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1537.5,y=44,z=-534.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1541.5,y=44,z=-535.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1538.5,y=44,z=-537.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1515.5,y=44,z=-537.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1520.5,y=44,z=-535.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1518.5,y=44,z=-534.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1515.5,y=44,z=-533.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1532 43 -524 minecraft:lime_wool run scoreboard players set @e[x=-1519.5,y=44,z=-531.5,distance=..0.7,tag=action_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1522 44 -496 minecraft:iron_door[open=true] if block -1523 44 -488 minecraft:iron_door[open=false] if entity @s[x=-1524,y=44,z=-496,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_c/second_go_battle/0
 execute if entity @e[x=-1518.5,y=44,z=-490.5,distance=..0.7,tag=mission,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=24,Medabot=0..,Battle=1..2}]
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] as @e[x=-1518.5,y=44,z=-490.5,distance=..0.7,tag=mission,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=24}] run tag @s remove run_until_the_time_is_up
@@ -50,7 +50,7 @@ execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:jungle_c/robattle players
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block -1552 44 -525 minecraft:iron_door[open=true] if entity @s[x=-1553,y=44,z=-528,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_c/second_go_battle/2
+execute if block -1552 44 -524 minecraft:iron_door[open=true] if entity @s[x=-1553,y=44,z=-528,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_c/second_go_battle/2
 execute if entity @e[x=-1570,y=42,z=-545,dx=62,dy=7,dz=62,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=24,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1570,y=42,z=-545,dx=62,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=24}] run scoreboard players set @s Stage 24
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/jungle_c/second_go

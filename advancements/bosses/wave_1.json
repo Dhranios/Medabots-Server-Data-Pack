@@ -1,8 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:gold_ingot",
-            "nbt": "{CustomModelData:1}"
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:1}"
         },
         "title": {
             "translate": "medabots_server:item.medapart.wave",

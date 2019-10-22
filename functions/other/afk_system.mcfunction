@@ -22,9 +22,9 @@ team leave @s[team=AFK,scores={Drop=1..}]
 team leave @s[team=AFK,scores={Offline=1..}]
 team leave @s[team=AFK,scores={UsePart=1..}]
 team leave @s[team=AFK,scores={Trading=1..}]
-team leave @s[team=AllyMedabot,scores={Battle=0}]
-team leave @s[team=EnemyMedabot,scores={Battle=0}]
-team leave @s[team=NeutralMedabot,scores={Battle=0}]
+execute unless entity @s[scores={Battle=0..}] run team leave @s[team=AllyMedabot]
+execute unless entity @s[scores={Battle=0..}] run team leave @s[team=EnemyMedabot]
+execute unless entity @s[scores={Battle=0..}] run team leave @s[team=NeutralMedabot]
 
 # Join correct team
 team join AllyMedabot @s[team=!AFK,tag=ally_medabot,scores={Battle=1..}]
@@ -85,24 +85,24 @@ execute if entity @s[scores={AFKTime=2400}] run playsound medabots_server:entity
 tellraw @s[scores={AFKTime=2400}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:message.metabee.hurry_up"}]}
 
 # Make sounds
-execute if entity @s[scores={Damage=1..}] run playsound medabots_server:entity.medabot.damage player @s ~ ~ ~ .5
-execute if entity @s[scores={Run=0,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ .05
-execute if entity @s[scores={Run=1..,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ .1
+execute if entity @s[scores={Damage=1..}] run playsound medabots_server:entity.medabot.damage player @s ~ ~ ~ 1
+execute if entity @s[scores={Run=0,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ 1
+execute if entity @s[scores={Run=1..,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ 1
 execute if entity @s[scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
-execute if entity @s[scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ .1
+execute if entity @s[scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ 1
 execute if entity @s[scores={Swimming=5..,Sound=0}] run scoreboard players set @s Sound 2
-execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ .025
+execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ 1
 execute if entity @s[scores={Walk=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 8
 execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run playsound medabots_server:entity.medabot.move.mod player @s ~ ~ ~ .1
 execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run scoreboard players set @s Sound 20
-execute if entity @s[scores={Fall=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.fall player @s ~ ~ ~ .1
+execute if entity @s[scores={Fall=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.fall player @s ~ ~ ~ 1
 execute if entity @s[scores={Fall=5..,Sound=0}] run scoreboard players set @s Sound 10
-execute if entity @s[scores={Run=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.run player @s ~ ~ ~ .05
+execute if entity @s[scores={Run=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.run player @s ~ ~ ~ 1
 execute if entity @s[scores={Run=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 6
-execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.under_water player @s ~ ~ ~ .1
+execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.under_water player @s ~ ~ ~ 1
 execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run scoreboard players set @s Sound 17
-execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.on_water player @s ~ ~ ~ .1
+execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.on_water player @s ~ ~ ~ 1
 execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run scoreboard players set @s Sound 17
 
 # Reset movement checks

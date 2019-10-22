@@ -75,6 +75,7 @@ tellraw @s[scores={Dialog=1460}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1516}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.42"}]}
 tellraw @s[scores={Dialog=1572}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.43"}]}
 tellraw @s[scores={Dialog=1604}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.44"}]}
+execute if entity @s[scores={Dialog=1692..1915}] at @e[tag=spyke,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=spyke,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1692}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.45","with":[{"selector":"@s"}]}]}
 tellraw @s[scores={Dialog=1772}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.46"}]}
 tellraw @s[scores={Dialog=1876}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.47"}]}
@@ -105,59 +106,59 @@ tellraw @s[scores={Dialog=2328}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2416}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.63"}]}
 tellraw @s[scores={Dialog=2536}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.64"}]}
 tellraw @s[scores={Dialog=2560}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.krosserdog"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.65"}]}
-tellraw @s[scores={Dialog=2480}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.66"}]}
-execute if entity @s[scores={Dialog=2504}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
-execute if entity @s[scores={Dialog=2504}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2505..2514}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=2514}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
-execute if entity @s[scores={Dialog=2515}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2515}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2515}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2515}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2515}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=2516}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.krosserdog"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.67"}]}
-tellraw @s[scores={Dialog=2532}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.68"}]}
-tellraw @s[scores={Dialog=2580}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.krosserdog"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.69"}]}
-tellraw @s[scores={Dialog=2596}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.70"}]}
-execute if entity @s[scores={Dialog=2612}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add right_arm_selected
-execute if entity @s[scores={Dialog=2612..2621}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~0.2125 ~
-execute if entity @s[scores={Dialog=2622..2631}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.2125 ~
-execute if entity @s[scores={Dialog=2632}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] remove right_arm_selected
-execute if entity @s[scores={Dialog=2622..2624}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.425 ~0.2125 ~0.425
-execute if entity @s[scores={Dialog=2625..2627}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.425 ~-0.2125 ~0.425
-execute if entity @s[scores={Dialog=2626..2627}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~-0.425 ~ ~0.425
-execute if entity @s[scores={Dialog=2628}] run playsound minecraft:block.glass.break block @s -1540 49 -445 1
-execute if entity @s[scores={Dialog=2628}] run playsound minecraft:block.glass.break block @s -1540 49 -446 1
-execute if entity @s[scores={Dialog=2628}] run playsound minecraft:block.glass.break block @s -1539 49 -445 1
-execute if entity @s[scores={Dialog=2628}] run playsound minecraft:block.glass.break block @s -1539 49 -446 1
-execute if entity @s[scores={Dialog=2628..2647}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.425 ~
-execute if entity @s[scores={Dialog=2628..2647}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.425 ~
-execute if entity @s[scores={Dialog=2647}] run kill @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1]
-execute if entity @s[scores={Dialog=2647}] run kill @e[tag=spyke,tag=this_dialog,limit=1]
-execute if entity @s[scores={Dialog=2646}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=2646}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.71"}]}
-tellraw @s[scores={Dialog=2654}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.72"}]}
-execute if entity @s[scores={Dialog=2662}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s facing entity @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=2662}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.73"}]}
-tellraw @s[scores={Dialog=2678}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.74"}]}
-tellraw @s[scores={Dialog=2694}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.75"}]}
+tellraw @s[scores={Dialog=2580}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.66"}]}
+execute if entity @s[scores={Dialog=2604}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
+execute if entity @s[scores={Dialog=2604}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] add walking
+execute if entity @s[scores={Dialog=2605..2614}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=2614}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
+execute if entity @s[scores={Dialog=2615}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2615}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2615}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2615}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2615}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=2616}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.krosserdog"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.67"}]}
+tellraw @s[scores={Dialog=2632}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.68"}]}
+tellraw @s[scores={Dialog=2680}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.krosserdog"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.69"}]}
+tellraw @s[scores={Dialog=2696}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.70"}]}
+execute if entity @s[scores={Dialog=2712}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add right_arm_selected
+execute if entity @s[scores={Dialog=2712..2721}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~0.2125 ~
+execute if entity @s[scores={Dialog=2722..2731}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.2125 ~
+execute if entity @s[scores={Dialog=2732}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] remove right_arm_selected
+execute if entity @s[scores={Dialog=2722..2724}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.425 ~0.2125 ~0.425
+execute if entity @s[scores={Dialog=2725..2727}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.425 ~-0.2125 ~0.425
+execute if entity @s[scores={Dialog=2726..2727}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~-0.425 ~ ~0.425
+execute if entity @s[scores={Dialog=2728}] run playsound minecraft:block.glass.break block @s -1540 49 -445 1
+execute if entity @s[scores={Dialog=2728}] run playsound minecraft:block.glass.break block @s -1540 49 -446 1
+execute if entity @s[scores={Dialog=2728}] run playsound minecraft:block.glass.break block @s -1539 49 -445 1
+execute if entity @s[scores={Dialog=2728}] run playsound minecraft:block.glass.break block @s -1539 49 -446 1
+execute if entity @s[scores={Dialog=2728..2747}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.425 ~
+execute if entity @s[scores={Dialog=2728..2747}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.425 ~
+execute if entity @s[scores={Dialog=2747}] run kill @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1]
+execute if entity @s[scores={Dialog=2747}] run kill @e[tag=spyke,tag=this_dialog,limit=1]
+execute if entity @s[scores={Dialog=2746}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=2746}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.71"}]}
+tellraw @s[scores={Dialog=2754}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.72"}]}
+execute if entity @s[scores={Dialog=2762}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s facing entity @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+tellraw @s[scores={Dialog=2762}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.73"}]}
+tellraw @s[scores={Dialog=2778}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.74"}]}
+tellraw @s[scores={Dialog=2794}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.75"}]}
 tellraw @s[scores={Dialog=2766}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.76"}]}
-tellraw @s[scores={Dialog=2774}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.77"}]}
-tellraw @s[scores={Dialog=2814}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.78"}]}
-tellraw @s[scores={Dialog=2846}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.79"}]}
-tellraw @s[scores={Dialog=2958}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.80"}]}
-tellraw @s[scores={Dialog=2982}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.81"}]}
-execute if entity @s[scores={Dialog=3054}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 50 -418
-execute if entity @s[scores={Dialog=3054}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=3055..3191}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=3191}] run kill @e[tag=doctor_haru,tag=this_dialog,limit=1]
-execute if entity @s[scores={Dialog=3054}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 50 -418
-execute if entity @s[scores={Dialog=3054}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=3055..}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-tag @s[scores={Dialog=3201}] remove dialog_infinity_krosserdog_saved
-scoreboard players set @s[scores={Dialog=3201}] MusicType 22
-scoreboard players set @s[scores={Dialog=3201}] Music 0
-scoreboard players reset @s[scores={Dialog=3201}] DialogNr
-scoreboard players set @s[scores={Dialog=3201}] Dialog 0
+tellraw @s[scores={Dialog=2874}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.77"}]}
+tellraw @s[scores={Dialog=2914}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.78"}]}
+tellraw @s[scores={Dialog=2946}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.79"}]}
+tellraw @s[scores={Dialog=3058}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.80"}]}
+tellraw @s[scores={Dialog=3082}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.krosserdog_saved.81"}]}
+execute if entity @s[scores={Dialog=3154}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 50 -418
+execute if entity @s[scores={Dialog=3154}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
+execute if entity @s[scores={Dialog=3155..3291}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+execute if entity @s[scores={Dialog=3291}] run kill @e[tag=doctor_haru,tag=this_dialog,limit=1]
+execute if entity @s[scores={Dialog=3154}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 50 -418
+execute if entity @s[scores={Dialog=3154}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add walking
+execute if entity @s[scores={Dialog=3155..}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
+tag @s[scores={Dialog=3301}] remove dialog_infinity_krosserdog_saved
+scoreboard players set @s[scores={Dialog=3301}] MusicType 22
+scoreboard players set @s[scores={Dialog=3301}] Music 0
+scoreboard players reset @s[scores={Dialog=3301}] DialogNr
+scoreboard players set @s[scores={Dialog=3301}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog

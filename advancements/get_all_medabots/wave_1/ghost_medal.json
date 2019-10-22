@@ -5,10 +5,10 @@
             "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:3}"
         },
         "title": {
-            "translate": "medabots_server:item.ghost_medal"
+            "translate": "medabots_server:advancements.get_all_medabots.ghost_medal"
         },
         "description": {
-            "translate": "medabots_server:advancements.get_all_medabots.ghost_medal"
+            "translate": "medabots_server:advancements.get_all_medabots.ghost_medal.description"
         }
     },
     "parent": "medabots_server:get_all_medabots/wave_1/devil_medal",

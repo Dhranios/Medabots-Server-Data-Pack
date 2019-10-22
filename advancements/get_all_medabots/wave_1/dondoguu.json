@@ -11,7 +11,7 @@
             "translate": "medabots_server:advancements.get_all_medabots.dondoguu.description"
         }
     },
-    "parent": "medabots_server:get_all_medabots/wave_1/boarbooster",
+    "parent": "medabots_server:get_all_medabots/wave_1/baroncastle",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",

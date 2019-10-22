@@ -7,7 +7,9 @@ execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run data merge block -1
 execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run setblock -1635 53 -640 minecraft:red_wool
 tag @s[tag=valid_tinpet,scores={Dialog=0}] add enemy_medabot
 tag @s[tag=valid_tinpet,scores={Dialog=0}] add 4
+execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run function medabots_server:gamemodes/default/set_stats
 execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run function medabots_server:stage/create/paradise_b/first_go
+execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run function medabots_server:gamemodes/default/set_stats
 execute if entity @s[tag=valid_tinpet,scores={Dialog=0}] run function medabots_server:gamemodes/default/set_stats
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
 tellraw @s[tag=!valid_tinpet] {"translate":"medabots_server:message.tinpet.not_valid"}

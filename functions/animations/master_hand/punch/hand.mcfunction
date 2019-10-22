@@ -1,0 +1,10 @@
+scoreboard players set @s[scores={AnimationProg=110}] AnimationProg 0
+scoreboard players add @s AnimationProg 1
+execute if entity @s[scores={AnimationProg=1}] run data modify entity @s Pose.Head[0] set value 90f
+execute if entity @s[scores={AnimationProg=81}] run data modify entity @s Pose.Head[0] set value 0f
+execute store result score #temp Time run data get entity @s Pose.Head[0]
+execute if entity @s[scores={AnimationProg=81..87}] store result entity @s Pose.Head[0] float 1 run scoreboard players remove #temp Time 2
+execute if entity @s[scores={AnimationProg=88..94}] store result entity @s Pose.Head[0] float 1 run scoreboard players add #temp Time 2
+execute if entity @s[scores={AnimationProg=95..101}] store result entity @s Pose.Head[0] float 1 run scoreboard players remove #temp Time 2
+execute if entity @s[scores={AnimationProg=102..109}] store result entity @s Pose.Head[0] float 1 run scoreboard players add #temp Time 2
+scoreboard players reset #temp Time
