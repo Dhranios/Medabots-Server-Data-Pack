@@ -26,3 +26,4 @@ scoreboard players reset @s[scores={HomeX=-2147483648..},tag=bound] HomeX
 execute if entity @s[tag=!success] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.floor_switch.cannot_bind","color":"red"}
 tag @s remove bound
 tag @s remove success
+scoreboard players reset @s StageBuild

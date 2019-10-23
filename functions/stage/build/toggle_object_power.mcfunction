@@ -10,3 +10,4 @@ execute as @e[distance=..0.7,tag=gas_floor] run function medabots_server:stage/b
 execute as @e[distance=..0.7,tag=action_floor] run function medabots_server:stage/build/toggle_power
 execute if entity @s[tag=!success] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.alter_power.cannot_change","color":"red"}
 tag @s remove success
+scoreboard players reset @s StageBuild

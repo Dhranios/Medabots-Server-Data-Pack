@@ -8,6 +8,7 @@ execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=1..2},tag=!murder_mystery] run function medabots_server:stage/left_server
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=3},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=0},tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
+execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=0..,LeaveStage=1..},tag=stage_builder,tag=!murder_mystery] run function medabots_server:stage/left_server_enforced
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=0..},tag=stage_builder,tag=!murder_mystery] run function medabots_server:stage/run
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=0..,Battle=1..},tag=main,tag=!murder_mystery] run function medabots_server:stage/run
 execute unless entity @s[scores={FlyCourse=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=!main,tag=!murder_mystery] run function medabots_server:stage/non_main_run

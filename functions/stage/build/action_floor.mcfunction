@@ -41,9 +41,9 @@ execute if entity @s[tag=allowed] if entity @e[tag=dead,distance=..0.7,tag=canno
 execute if entity @s[tag=allowed] if entity @e[tag=dead,distance=..0.7,tag=cannon,tag=!detect,tag=looking,tag=west] run function medabots_server:set_blocks/action_floor/cannon/still/west/delay_4/power_1
 execute if entity @s[tag=allowed] if entity @e[tag=dead,distance=..0.7,tag=ice_block] run function medabots_server:set_blocks/action_floor/ice_block/power_1
 execute if entity @s[tag=allowed] if entity @e[tag=dead,distance=..0.7,tag=round_stone] run function medabots_server:set_blocks/action_floor/round_stone/power_1
-execute if entity @e[tag=dead,distance=..0.7,tag=bomb] run scoreboard players operation @s[tag=allowed] DelayTime = @e[tag=dead,distance=..0.7,tag=bomb,limit=1] DelayTime
-execute if entity @e[tag=dead,distance=..0.7,tag=guard] run scoreboard players operation @s[tag=allowed] DelayTime = @e[tag=dead,distance=..0.7,tag=guard,limit=1] Speed
-execute if entity @e[tag=dead,distance=..0.7,tag=cannon] run scoreboard players operation @s[tag=allowed] DelayTime = @e[tag=dead,distance=..0.7,tag=cannon,limit=1] DelayTime
-execute if entity @e[tag=dead,distance=..0.7,tag=round_stone] run scoreboard players operation @s[tag=allowed] DelayTime = @e[tag=dead,distance=..0.7,tag=round_stone,limit=1] Moving
-execute if entity @e[tag=dead,distance=..0.7,tag=ice_block] run scoreboard players operation @s[tag=allowed] DelayTime = @e[tag=dead,distance=..0.7,tag=ice_block,limit=1] Moving
+execute if entity @e[tag=dead,distance=..0.7,tag=bomb] run scoreboard players operation @e[tag=action_floor,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=bomb,limit=1] DelayTime
+execute if entity @e[tag=dead,distance=..0.7,tag=guard] run scoreboard players operation @e[tag=action_floor,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=guard,limit=1] Speed
+execute if entity @e[tag=dead,distance=..0.7,tag=cannon] run scoreboard players operation @e[tag=action_floor,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=cannon,limit=1] DelayTime
+execute if entity @e[tag=dead,distance=..0.7,tag=round_stone] run scoreboard players operation @e[tag=action_floor,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=round_stone,limit=1] Moving
+execute if entity @e[tag=dead,distance=..0.7,tag=ice_block] run scoreboard players operation @e[tag=action_floor,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=ice_block,limit=1] Moving
 tag @e[distance=..0.7,tag=action_floor] add no_ticking
