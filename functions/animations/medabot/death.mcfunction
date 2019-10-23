@@ -1,6 +1,6 @@
 scoreboard players add @s DeathTime 1
 scoreboard players set @s[scores={Time=1..}] Time 950
-execute store result score #temp MedabotNr run scoreboard players get @s MedabotNr
+scoreboard players operation #temp MedabotNr = @s MedabotNr
 execute as @e[tag=medabot_model,tag=chest] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
 gamemode spectator @s[scores={DeathTime=1}]
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Time 950

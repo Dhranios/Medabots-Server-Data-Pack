@@ -1,4 +1,4 @@
-execute if entity @e[tag=this_guard,tag=dying,limit=1] run tag @s add dying
+execute if entity @e[type=minecraft:creeper,tag=this_guard,tag=dying,limit=1] run tag @s add dying
 execute if entity @s[tag=body,tag=!dying] run function medabots_server:animations/guard/body
 execute if entity @s[tag=hammer,tag=!dying] run function medabots_server:animations/guard/hammer
 execute if entity @s[tag=front_legs,tag=!dying] run function medabots_server:animations/guard/front_legs

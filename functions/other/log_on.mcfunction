@@ -23,6 +23,7 @@ scoreboard players set @s[tag=hostile] LeaveStage 1
 tellraw @s[tag=hostile] {"translate":"medabots_server:message.anti_cheating.log","color":"red"}
 execute if entity @s[tag=hostile] run tellraw @a[team=Moderator] {"translate":"medabots_server:message.anti_cheating.log.mod","color":"red","with":[{"selector":"@s"}]}
 scoreboard players add @s[tag=hostile] Warning 1
+execute if entity @s[tag=hostile] run medabots_server:entities/medabot/spawn_model
 scoreboard players set @s[tag=hostile] Batte 0
 
 # That's it
