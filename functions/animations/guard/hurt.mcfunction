@@ -6,4 +6,5 @@ execute if entity @s[scores={AnimationProg=1}] as @e[tag=this_guard,limit=1] run
 data merge entity @s[scores={AnimationProg=2}] {Pose:{Head:[0.001f,0.001f,0.001f]}}
 scoreboard players reset #temp Time
 execute if entity @s[scores={AnimationProg=2}] run tag @e[tag=this_guard,limit=1] remove hurt
+tag @e[tag=this_guard,limit=1] remove attack
 scoreboard players reset @s[scores={AnimationProg=2}] AnimationProg
