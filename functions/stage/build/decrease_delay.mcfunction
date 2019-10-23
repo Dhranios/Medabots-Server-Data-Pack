@@ -1,0 +1,3 @@
+scoreboard players remove @e[distance=..0.7,scores={DelayTime=20..},tag=!action_floor,tag=!pot] DelayTime 20
+execute as @e[distance=..0.7,scores={DelayTime=20..},tag=!action_floor,tag=!pot] run tellraw @a[scores={StageBuild=-7}] {"translate":"medabots_server:message.stage.stage_builder.delay.decreased","with":[{"selector":"@s"},{"score":{"objective":"DelayTime","name":"@s"}}],"color":"green"}
+execute unless entity @e[distance=..0.7,scores={DelayTime=20..},tag=!action_floor,tag=!pot] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.delay.cannot_decrease","color":"red"}

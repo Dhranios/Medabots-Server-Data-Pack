@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/pot/cannon/tripwire/south
-tag @e[distance=..0.7,tag=pot] add delay_6
+scoreboard players set @e[distance=..0.7,tag=pot] DelayTime 120

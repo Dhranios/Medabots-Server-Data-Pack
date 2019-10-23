@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/pot/cannon/search/west
-tag @e[distance=..0.7,tag=pot] add delay_2
+scoreboard players set @e[distance=..0.7,tag=pot] DelayTime 40

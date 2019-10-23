@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/action_floor/guard
-tag @e[distance=..0.7,tag=action_floor] add fast
+scoreboard players set @e[distance=..0.7,tag=action_floor] DelayTime 4

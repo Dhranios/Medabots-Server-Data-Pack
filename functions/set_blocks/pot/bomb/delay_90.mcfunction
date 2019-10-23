@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/pot/bomb
-tag @e[distance=..0.7,tag=pot] add delay_90
+scoreboard players set @e[distance=..0.7,tag=pot] DelayTime 1800

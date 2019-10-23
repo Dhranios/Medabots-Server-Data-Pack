@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/action_floor/cannon/still/north
-tag @e[distance=..0.7,tag=action_floor] add delay_6
+scoreboard players set @e[distance=..0.7,tag=action_floor] DelayTime 120

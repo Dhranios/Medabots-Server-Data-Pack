@@ -16,6 +16,5 @@ execute positioned ~ ~-3 ~ as @e[tag=hostile,tag=enemy_medabot,distance=..0.7] r
 execute positioned ~ ~-3 ~ as @e[tag=hostile,tag=enemy_medabot,distance=..0.7] run scoreboard players set @s[scores={LegsArmor=1..9}] LegsArmor 0
 execute positioned ~ ~-3 ~ as @e[tag=hostile,tag=enemy_medabot,distance=..0.7] run scoreboard players remove @s[scores={LegsArmor=10..}] LegsArmor 10
 execute positioned ~ ~-3 ~ as @e[tag=hostile,type=!minecraft:item,distance=..0.7] run teleport @s ~ ~5 ~
-execute positioned ~ ~2 ~ if entity @e[tag=hostile,type=!minecraft:item,distance=..0.7] run scoreboard players set @s[tag=delay_5] Time 100
-execute positioned ~ ~2 ~ if entity @e[tag=hostile,type=!minecraft:item,distance=..0.7] run scoreboard players set @s[tag=delay_10] Time 200
+execute positioned ~ ~2 ~ if entity @e[tag=hostile,type=!minecraft:item,distance=..0.7] run scoreboard players operation @s Time = @s DelayTime
 execute positioned ~ ~2 ~ unless entity @e[tag=hostile,type=!minecraft:item,distance=..0.7] run scoreboard players set @s Time 1

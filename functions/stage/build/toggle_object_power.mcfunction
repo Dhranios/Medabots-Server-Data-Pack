@@ -1,4 +1,3 @@
-tag @s add allowed
 execute as @e[distance=..0.7,tag=fan] run function medabots_server:stage/build/toggle_fan_power
 execute as @e[distance=..0.7,tag=floor_switch] run function medabots_server:stage/build/toggle_floor_switch_power
 execute as @e[distance=..0.7,tag=alarm] run function medabots_server:stage/build/toggle_power

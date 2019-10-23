@@ -1,4 +1,3 @@
-tag @s add allowed
 execute if entity @e[distance=..0.7,tag=floor_switch] run tag @s add success
 execute if entity @e[distance=..0.7,tag=floor_switch] store result score @s HomeX run data get entity @e[distance=..0.7,tag=floor_switch,limit=1] Pos[0]
 execute if entity @e[distance=..0.7,tag=floor_switch] store result score @s HomeY run data get entity @e[distance=..0.7,tag=floor_switch,limit=1] Pos[1]

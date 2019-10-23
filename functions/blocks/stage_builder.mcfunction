@@ -16,13 +16,13 @@ execute if entity @s[tag=jammy,tag=!pot] run function medabots_server:set_blocks
 
 # Objects with variants
 execute if entity @s[tag=pot] run function medabots_server:blocks/stage_builder/pot
-execute if entity @s[tag=hole] run function medabots_server:blocks/stage_builder/hole
 execute if entity @s[tag=drawbridge] run function medabots_server:blocks/stage_builder/drawbridge
 execute if entity @s[tag=mirror] run function medabots_server:blocks/stage_builder/mirror
 execute if entity @s[tag=accelerator] run function medabots_server:blocks/stage_builder/accelerator
 execute if entity @s[tag=rubberobo] run function medabots_server:blocks/stage_builder/rubberobo
 
 # Objects with more custom data
+execute if entity @s[tag=hole] run function medabots_server:blocks/stage_builder/hole
 execute if entity @s[tag=floor_switch] run function medabots_server:blocks/stage_builder/floor_switch
 execute if entity @s[tag=fan] run function medabots_server:blocks/stage_builder/fan
 execute if entity @s[tag=press_wall] run function medabots_server:blocks/stage_builder/press_wall
