@@ -12,4 +12,5 @@ execute if entity @s[scores={Time=5},tag=!dead] run setblock ~ ~-1 ~ minecraft:o
 execute if entity @s[scores={Time=5},tag=!dead] run setblock ~ ~2 ~ minecraft:air
 scoreboard players operation @s[scores={Time=0}] Time = @s DelayTime
 
-scoreboard players set @e[tag=custom_stage] PowerAmount 0
+# Custom stage object powering
+execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

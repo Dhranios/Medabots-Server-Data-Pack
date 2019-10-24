@@ -14,4 +14,6 @@ execute if entity @s[scores={Time=121..}] run function medabots_server:blocks/ga
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run setblock ~ ~ ~ minecraft:air
 kill @s[tag=dead]
-scoreboard players set @e[tag=custom_stage] PowerAmount 0
+
+# Custom stage object powering
+execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

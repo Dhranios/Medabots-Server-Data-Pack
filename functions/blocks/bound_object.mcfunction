@@ -4,7 +4,7 @@ execute store result entity @e[type=minecraft:area_effect_cloud,tag=me,limit=1] 
 execute store result entity @e[type=minecraft:area_effect_cloud,tag=me,limit=1] Pos[1] double 1 run scoreboard players get @s HomeY
 execute store result entity @e[type=minecraft:area_effect_cloud,tag=me,limit=1] Pos[2] double 1 run scoreboard players get @s HomeZ
 
-# Power position if powered
-execute at @e[type=minecraft:area_effect_cloud,tag=me,limit=1] positioned ~0.5 ~ ~0.5 run function medabots_server:blocks/floor_switch/custom_stage_target
+# Transfer power to position
+execute at @e[type=minecraft:area_effect_cloud,tag=me,limit=1] positioned ~0.5 ~ ~0.5 run function medabots_server:blocks/bound_object_target
 
 kill @e[type=minecraft:area_effect_cloud,tag=me,limit=1]

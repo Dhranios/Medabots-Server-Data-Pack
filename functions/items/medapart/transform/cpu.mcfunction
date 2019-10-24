@@ -1,11 +1,11 @@
-execute store result score #temp MedabotNr run scoreboard players get @s MedabotNr
-execute as @e[scores={MedabotNr=0..},tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run tag @s add this_model
+scoreboard players operation #temp MedabotNr = @s MedabotNr
+execute as @e[tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run tag @s add this_model
 
 # Set which part is activated
-execute if entity @s[tag=left_arm_selected] if entity @e[tag=this_medabot,tag=left_arm,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:flame_tisala_sala_arm"}}}]}] run scoreboard players set @s TransformLID 1
-execute if entity @s[tag=right_arm_selected] if entity @e[tag=this_medabot,tag=right_arm,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:flame_tisala_sala_hand"}}}]}] run scoreboard players set @s TransformRID 1
-execute if entity @s[tag=head_selected] if entity @e[tag=this_medabot,tag=chest,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:flame_tisala_sala_head"}}}]}] run scoreboard players set @s TransformHID 1
-execute if entity @s[tag=head_selected] if entity @e[tag=this_medabot,tag=chest,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:potato_insect_changedress"}}}]}] run scoreboard players set @s TransformHID 2
+execute if entity @s[tag=left_arm_selected] if entity @e[tag=this_model,tag=left_arm,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:flame_tisala_sala_arm"}}}]}] run scoreboard players set @s TransformLID 1
+execute if entity @s[tag=right_arm_selected] if entity @e[tag=this_model,tag=right_arm,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:flame_tisala_sala_hand"}}}]}] run scoreboard players set @s TransformRID 1
+execute if entity @s[tag=head_selected] if entity @e[tag=this_model,tag=chest,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:flame_tisala_sala_head"}}}]}] run scoreboard players set @s TransformHID 1
+execute if entity @s[tag=head_selected] if entity @e[tag=this_model,tag=chest,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{id:"medabots_server:potato_insect_changedress"}}}]}] run scoreboard players set @s TransformHID 2
 
 # Transform timer
 scoreboard players set @s[tag=left_arm_selected] TransformLTime 2400
@@ -35,7 +35,7 @@ execute if entity @s[tag=head_selected] run summon minecraft:armor_stand ~ ~ ~ {
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add male_tinpet
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add female_tinpet
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:neutral_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add neutral_tinpet
-execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = @e[distance=..0.1,limit=1] MedabotNr
+execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = #temp MedabotNr
 execute if entity @s[tag=left_arm_selected] as @e[tag=left_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @e[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
 execute if entity @s[tag=right_arm_selected] as @e[tag=right_arm,tag=new] run data modify entity @s ArmorItems[3] merge from entity @e[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item
 execute if entity @s[tag=head_selected] as @e[tag=head,tag=new] run data modify entity @s ArmorItems[3] merge from entity @e[distance=..0.7,type=minecraft:item,tag=!not_me,limit=1] Item

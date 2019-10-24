@@ -1,5 +1,5 @@
 execute store result score #temp MedabotNr run scoreboard players get @s MedabotNr
-execute as @e[scores={MedabotNr=0..},tag=left_arm] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
+execute as @e[scores={MedabotNr=0..},tag=head] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"anti_fly"}}}]}] run scoreboard players set @s MedapartType 1
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"anti_tank"}}}]}] run scoreboard players set @s MedapartType 2
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"auxilary_charge"}}}]}] run scoreboard players set @s MedapartType 3

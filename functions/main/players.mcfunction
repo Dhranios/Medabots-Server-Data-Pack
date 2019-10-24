@@ -1,4 +1,5 @@
 # Re-give items seen by advancements
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar_cent",stage_item:0b}}}]}] run function medabots_server:items/put_medallar_cents_on_bank
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run function medabots_server:items/give_obtained_item
 
 # Tutorial

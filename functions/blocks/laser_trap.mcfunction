@@ -17,4 +17,6 @@ scoreboard players reset #temp Stage
 
 # Set the time depending on the delay
 scoreboard players operation @s[scores={Time=0}] Time = @s DelayTime
-scoreboard players set @e[tag=custom_stage] PowerAmount 0
+
+# Custom stage object powering
+execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

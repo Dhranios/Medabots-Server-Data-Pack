@@ -47,4 +47,6 @@ scoreboard players reset #temp Stage
 execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 execute if entity @s[tag=dead] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
 kill @s[tag=dead]
-scoreboard players set @e[tag=custom_stage] PowerAmount 0
+
+# Custom stage object powering
+execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

@@ -46,4 +46,6 @@ execute if entity @s[tag=south,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_p
 execute if entity @s[tag=east,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=x]
 execute if entity @s[tag=west,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=x]
 execute if entity @s[tag=!dying] run fill ~ ~1 ~ ~ ~3 ~ minecraft:black_stained_glass
-scoreboard players set @e[tag=custom_stage] PowerAmount 0
+
+# Custom stage object powering
+execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

@@ -15,7 +15,6 @@ execute if entity @s[tag=bridge] run function medabots_server:set_blocks/bridge
 execute if entity @s[tag=jammy,tag=!pot] run function medabots_server:set_blocks/jammy
 
 # Objects with variants
-execute if entity @s[tag=pot] run function medabots_server:blocks/stage_builder/pot
 execute if entity @s[tag=drawbridge] run function medabots_server:blocks/stage_builder/drawbridge
 execute if entity @s[tag=mirror] run function medabots_server:blocks/stage_builder/mirror
 execute if entity @s[tag=accelerator] run function medabots_server:blocks/stage_builder/accelerator
@@ -28,6 +27,7 @@ execute if entity @s[tag=fan] run function medabots_server:blocks/stage_builder/
 execute if entity @s[tag=press_wall] run function medabots_server:blocks/stage_builder/press_wall
 execute if entity @s[tag=alarm] run function medabots_server:blocks/stage_builder/alarm
 execute if entity @s[tag=door] run function medabots_server:blocks/stage_builder/door
+execute if entity @s[tag=pot] run function medabots_server:blocks/stage_builder/pot
 execute if entity @s[tag=action_floor] run function medabots_server:blocks/stage_builder/action_floor
 execute if entity @s[tag=spring_wall] run function medabots_server:blocks/stage_builder/spring_wall
 execute if entity @s[tag=gas_floor] run function medabots_server:blocks/stage_builder/gas_floor

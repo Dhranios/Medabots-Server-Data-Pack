@@ -17,4 +17,6 @@ execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=south] 
 execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=south] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air replace minecraft:iron_door
 execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=west] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:barrier
 execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=west] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:iron_door
-scoreboard players set @e[tag=custom_stage] PowerAmount 0
+
+# Custom stage object powering
+execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object
