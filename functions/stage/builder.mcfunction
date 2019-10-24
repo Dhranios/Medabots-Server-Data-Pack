@@ -38,8 +38,16 @@ data modify entity @s[advancements={medabots_server:special_items/mission=true}]
 data modify entity @s Inventory[{tag:{medabots_server:{id:"medabots_server:stage_builder",final:0b}}}].tag.medabots_server.final set value 1b
 scoreboard players enable @s StageBuild
 
-execute if entity @s[scores={StageBuild=1..},nbt={OnGround:1b},x_rotation=-45..45] rotated ~ 0 positioned ^ ^ ^1 align xz positioned ~0.5 ~ ~0.5 run function medabots_server:stage/build/try
-execute if entity @s[scores={StageBuild=1..},nbt={OnGround:1b},x_rotation=45..-45] align xz positioned ~0.5 ~ ~0.5 run function medabots_server:stage/build/try
+scoreboard players operation #temp Stage = @s Stage
+execute as @e[tag=starting_area] at @s if score @s Stage = #temp Stage store result score #temp HomeY run data get entity @s Pos[1]
+execute store result score #temp2 HomeY run data get entity @s Pos[1]
+execute unless score #temp HomeY = #temp2 HomeY run tellraw @s[scores={StageBuild=1..}] {"translate":"medabots_server:message.stage.stage_builder.cannot_place","color":"red"}
+execute unless score #temp HomeY = #temp2 HomeY run tag @s add go
+execute if entity @s[tag=go,scores={StageBuild=1..},x_rotation=-45..45] rotated ~ 0 positioned ^ ^ ^1 align xz positioned ~0.5 ~ ~0.5 run function medabots_server:stage/build/try
+execute if entity @s[tag=go,scores={StageBuild=1..},x_rotation=45..-45] align xz positioned ~0.5 ~ ~0.5 run function medabots_server:stage/build/try
+tag @s remove go
+scoreboard players reset #temp HomeY
+scoreboard players reset #temp2 HomeY
 execute if entity @s[scores={StageBuild=-1},x_rotation=-45..45] rotated ~ 0 positioned ^ ^ ^1 align xz positioned ~0.5 ~ ~0.5 run function medabots_server:stage/build/remove
 execute if entity @s[scores={StageBuild=-1},x_rotation=45..-45] align xz positioned ~0.5 ~ ~0.5 run function medabots_server:stage/build/remove
 execute if entity @s[scores={StageBuild=-2}] run function medabots_server:stage/build/save_version
