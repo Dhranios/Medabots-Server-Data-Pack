@@ -33,6 +33,8 @@ execute if entity @s[scores={StageBuild=41..42}] run function medabots_server:st
 execute if entity @s[scores={StageBuild=43..44},advancements={medabots_server:special_items/ice_block=true}] run function medabots_server:stage/build/ice_block
 execute if entity @s[scores={StageBuild=45},tag=allowed,advancements={medabots_server:special_items/rubberobo=true}] run function medabots_server:stage/build/rubberobo
 execute if entity @s[scores={StageBuild=46},advancements={medabots_server:special_items/jammy=true}] run function medabots_server:stage/build/jammy
+execute if entity @s[scores={StageBuild=47..52},advancements={medabots_server:special_items/mission=true}] run function medabots_server:stage/build/mission
+execute if entity @s[scores={StageBuild=53},advancements={medabots_server:special_items/mission=true}] run function medabots_server:stage/build/enemy_medabot
 
 tellraw @s[tag=!allowed] {"translate":"medabots_server:message.stage.stage_builder.cannot_place","color":"red"}
 tag @s remove allowed

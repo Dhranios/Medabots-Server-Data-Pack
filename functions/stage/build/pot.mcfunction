@@ -43,4 +43,5 @@ execute if entity @s[tag=allowed] if entity @e[tag=dead,distance=..0.7,tag=canno
 execute if entity @e[tag=dead,distance=..0.7,tag=bomb] run scoreboard players operation @e[tag=pot,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=bomb,limit=1] DelayTime
 execute if entity @e[tag=dead,distance=..0.7,tag=guard] run scoreboard players operation @e[tag=pot,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=guard,limit=1] Speed
 execute if entity @e[tag=dead,distance=..0.7,tag=cannon] run scoreboard players operation @e[tag=pot,distance=..0.7,limit=1] DelayTime = @e[tag=dead,distance=..0.7,tag=cannon,limit=1] DelayTime
+execute if entity @s[tag=allowed] unless entity @e[tag=dead,distance=..0.7] run function medabots_server:set_blocks/pot
 tag @e[distance=..0.7,tag=pot] add no_ticking

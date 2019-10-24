@@ -1,4 +1,4 @@
-data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data append value {position:[0,0,0],object:[""],additional_data:[0,0,0,0,0,0,0,0]}
+data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data append value {position:[0,0,0],object:[""],nbt:{},additional_data:[0,0,0,0,0,0,0,0]}
 
 teleport @s[tag=bomb] ~ ~1 ~
 teleport @s[tag=balloon_bomb] ~ ~1 ~
@@ -10,6 +10,9 @@ execute store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server
 execute store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].position[1] int 1 run data get entity @s Pos[1]
 execute store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].position[2] int 1 run data get entity @s Pos[2]
 data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].object set from entity @s Tags
+
+execute if entity @s[tag=mission] run data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].nbt set from entity @s ArmorItems[3]
+execute if entity @s[tag=enemy_medabot] run data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].nbt set from entity @s ArmorItems[3]
 
 execute if entity @s[scores={HomeX=-2147483648..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[0] int 1 run scoreboard players get @s HomeX
 execute if entity @s[scores={HomeY=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[1] int 1 run scoreboard players get @s HomeY

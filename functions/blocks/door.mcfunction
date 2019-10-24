@@ -1,5 +1,5 @@
 # Is this door powered?
-execute if score @s PowerAmount >= @s PowerNeeded run tag @s add powered
+execute if score @s PowerAmount >= @s PowerNeeded run tag @s[tag=!no_open] add powered
 execute unless score @s PowerAmount >= @s PowerNeeded run tag @s remove powered
 
 # Open the door
@@ -20,3 +20,4 @@ execute if entity @s[tag=dead] if block ~ ~ ~ minecraft:iron_door[facing=west] r
 
 # Custom stage object powering
 execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object
+tag @s[tag=no_open] remove no_open

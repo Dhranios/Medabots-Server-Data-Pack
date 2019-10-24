@@ -50,3 +50,14 @@ execute if entity @s[tag=done,tag=!finished] run tag @e[tag=waiting_for_referee]
 data merge entity @s[tag=done,tag=!finished] {Small:1b,Invisible:1b,ArmorItems:[{},{},{},{}]}
 scoreboard players set @s[tag=done,tag=!finished] Dialog 0
 tag @s[tag=done,tag=!finished] add finished
+
+# Custom stage
+execute store result score #temp Stage run scoreboard players get @s Stage
+execute as @e[tag=medabot] if score @s Stage = #temp Stage run tag @s add this_mission
+execute if entity @s[tag=done,tag=finished,tag=custom_stage] store result score @s BattlingMedabots if entity @e[scores={Medabot=0..,Battle=1..2},tag=this_mission]
+tag @s[scores={BattlingMedabots=1},tag=custom_stage] add mission_success
+execute if entity @s[tag=mission_success] run tag @a[tag=this_mission] add remove_bossbar
+execute if entity @s[tag=mission_success] run tag @a[tag=clear_stage] add remove_bossbar
+scoreboard players reset @s[scores={BattlingMedabots=1..},tag=custom_stage] BattlingMedabots
+scoreboard players reset #temp Stage
+tag @e[tag=this_mission] remove this_mission
