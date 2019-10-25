@@ -12,7 +12,7 @@
                 {
                     "type": "minecraft:loot_table",
                     "name": "medabots_server:gameplay/transform/head/female",
-                    "weight": 14
+                    "weight": 15
                 },
                 {
                     "type": "minecraft:loot_table",

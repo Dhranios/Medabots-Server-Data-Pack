@@ -51,7 +51,7 @@ execute if entity @s[tag=mission_success] run title @s title {"translate":"medab
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1746.5,y=45,z=-353.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mission]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=13,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
-execute if entity @s[tag=mission_success] run scoreboard players set @a[scores={Stage=13,Medabot=0..,Battle=1..2},tag=enemy_medabot] LeaveStage 1
+execute if entity @s[tag=mission_success] as @a[scores={Stage=13,Medabot=0..,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/left_server_enforced
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:seashore_b/robattle players
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

@@ -153,6 +153,16 @@
                             "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:42,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.uglyduck_featherdone\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.press.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"65\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.uglyduck\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.uglyduck_featherdone.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:uglyduck_featherdone\",gender:1b,move:\"press\",part:\"left_arm\",armor:65,power:26,activated:1b,version:1}}"
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nino_excalibur\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.anti_fly\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.anti_fly.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"30\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.nino\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nino_excalibur.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:nino_excalibur\",gender:1b,move:\"anti_fly\",part:\"left_arm\",armor:30,power:28,activated:1b,version:1}}"
+                        }
+                    ]
                 }
             ]
         }

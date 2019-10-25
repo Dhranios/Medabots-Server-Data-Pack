@@ -44,8 +44,10 @@ execute if entity @s[tag=attack] at @e[distance=..3,type=minecraft:area_effect_c
 
 # Clean up
 teleport @s[tag=dead] ~ -1000 ~
-execute if entity @s[tag=dead] as @e[tag=guard_model] if score @s GuardNr = @e[distance=..0.1,tag=guard,limit=1] GuardNr run kill @s
-execute if entity @s[tag=dead] as @e[scores={GuardNr=1..}] if score @s GuardNr > @e[distance=..0.1,tag=guard,limit=1] GuardNr run scoreboard players remove @s GuardNr 1
+execute if entity @s[tag=dead] run scoreboard players operation #temp GuardNr = @s GuardNr
+execute if entity @s[tag=dead] as @e[tag=guard_model] if score @s GuardNr = #temp GuardNr run kill @s
+execute if entity @s[tag=dead] as @e[scores={GuardNr=1..}] if score @s GuardNr > #temp GuardNr run scoreboard players remove @s GuardNr 1
+execute if entity @s[tag=dead] run scoreboard players reset #temp GuardNr
 
 # Model
 execute if entity @s[tag=!dead] run function medabots_server:animations/guard

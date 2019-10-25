@@ -5,9 +5,9 @@ execute if entity @e[scores={Stage=10},tag=hide_normal_time] store result score 
 execute if entity @e[scores={Stage=10},tag=hide_normal_time] if entity @e[scores={Stage=10,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:grassland_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[scores={Stage=10},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=10},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
-scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/grassland_b/custom
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
+scoreboard players reset #temp Time
 execute if entity @s[tag=remove_bossbar] run bossbar set medabots_server:grassland_b/robattle players
 tag @s[tag=remove_bossbar] remove remove_bossbar
 execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:grassland_b/time players

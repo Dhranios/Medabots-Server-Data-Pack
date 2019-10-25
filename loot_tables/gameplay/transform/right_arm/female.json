@@ -153,6 +153,16 @@
                             "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:42,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.uglyduck_feathermend\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.break\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.break.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"65\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.uglyduck\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.uglyduck_feathermend.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:uglyduck_feathermend\",gender:1b,move:\"break\",part:\"right_arm\",armor:65,power:26,activated:1b,version:1}}"
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:69,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nino_ragnarok\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.napalm\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.napalm.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"15\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.female\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.nino\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.nino_ragnarok.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:nino_ragnarok\",gender:1b,move:\"napalm\",part:\"right_arm\",armor:15,power:20,activated:1b,version:1}}"
+                        }
+                    ]
                 }
             ]
         }
