@@ -1,4 +1,4 @@
-execute if entity @e[x=-1314,y=42,z=-291,dx=53,dy=7,dz=68,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=44,Medabot=0..,Battle=1..}]
+execute if entity @e[x=-1314,y=42,z=-291,dx=53,dy=7,dz=68,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=44,Medabot=0..,Battle=1..}]
 execute unless entity @e[x=-1314,y=42,z=-291,dx=53,dy=7,dz=68,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1304 46 -261 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[-90.0f,0.0f]}
 execute as @e[x=-1314,y=42,z=-291,dx=53,dy=7,dz=68,type=!minecraft:player] unless entity @s[scores={Stage=44}] run scoreboard players set @s Stage 44
 execute as @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/lagdou_ruins_9/empty
@@ -131,4 +131,4 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=fire_marker,tag=59,tag
 execute if entity @e[type=minecraft:area_effect_cloud,tag=fire_marker,tag=60,tag=selected] run fill -1266 46 -261 -1264 46 -259 minecraft:fire[age=15,up=false,north=false,south=false,west=false,east=false] replace minecraft:air
 execute if entity @e[type=minecraft:area_effect_cloud,tag=fire_marker,tag=61,tag=selected] run fill -1272 46 -261 -1270 46 -259 minecraft:fire[age=15,up=false,north=false,south=false,west=false,east=false] replace minecraft:air
 kill @e[type=minecraft:area_effect_cloud,tag=fire_marker]
-execute unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=fire_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["fire_timer"],Duration:240}
+execute unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=fire_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["fire_timer,type=minecraft:area_effect_cloud"],Duration:240}

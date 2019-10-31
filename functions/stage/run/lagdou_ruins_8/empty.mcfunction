@@ -1,4 +1,4 @@
-execute if entity @e[x=-1319,y=35,z=-2,dx=59,dy=13,dz=62,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=43,Medabot=0..,Battle=1..}]
+execute if entity @e[x=-1319,y=35,z=-2,dx=59,dy=13,dz=62,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=43,Medabot=0..,Battle=1..}]
 execute unless entity @e[x=-1319,y=35,z=-2,dx=59,dy=13,dz=62,tag=mr_referee,type=minecraft:armor_stand] run summon minecraft:armor_stand -1294 39 35 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[-145.0f,0.0f]}
 execute as @e[x=-1319,y=35,z=-2,dx=59,dy=13,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=43}] run scoreboard players set @s Stage 43
 execute as @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/lagdou_ruins_8/empty
@@ -52,4 +52,4 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=bridge_marker,tag=sele
 execute if entity @e[type=minecraft:area_effect_cloud,tag=bridge_marker,tag=selected] unless entity @e[type=minecraft:area_effect_cloud,tag=bridge_marker,tag=13,tag=selected] run fill -1292 36 16 -1287 36 18 minecraft:oak_slab[waterlogged=true,type=bottom]
 execute if entity @e[type=minecraft:area_effect_cloud,tag=bridge_marker,tag=selected] unless entity @e[type=minecraft:area_effect_cloud,tag=bridge_marker,tag=14,tag=selected] run fill -1304 36 19 -1293 36 21 minecraft:oak_slab[waterlogged=true,type=bottom]
 kill @e[type=minecraft:area_effect_cloud,tag=bridge_marker]
-execute unless entity @e[x=-1319,y=34,z=-2,dx=59,dy=13,dz=62,tag=bridge_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["bridge_timer"],Duration:720}
+execute unless entity @e[x=-1319,y=34,z=-2,dx=59,dy=13,dz=62,tag=bridge_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["bridge_timer,type=minecraft:area_effect_cloud"],Duration:720}

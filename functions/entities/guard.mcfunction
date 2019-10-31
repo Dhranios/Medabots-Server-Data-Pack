@@ -29,8 +29,8 @@ execute at @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!canno
 # Fall
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
 execute at @s if block ~ ~-0.2 ~ minecraft:black_carpet run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water positioned ~ ~-0.5 ~ unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column positioned ~ ~-0.5 ~ unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
 execute at @s if block ~ ~-0.2 ~ minecraft:lava run tag @s add fall
 execute at @s[tag=fall] run teleport @s ~ ~-0.2 ~
 execute at @s[tag=!fall] align y unless block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~
@@ -45,7 +45,7 @@ execute if entity @s[tag=attack] at @e[distance=..3,type=minecraft:area_effect_c
 # Clean up
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp GuardNr = @s GuardNr
-execute if entity @s[tag=dead] as @e[tag=guard_model] if score @s GuardNr = #temp GuardNr run kill @s
+execute if entity @s[tag=dead] as @e[tag=guard_model,type=minecraft:area_effect_cloud] if score @s GuardNr = #temp GuardNr run kill @s
 execute if entity @s[tag=dead] as @e[scores={GuardNr=1..}] if score @s GuardNr > #temp GuardNr run scoreboard players remove @s GuardNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp GuardNr
 
