@@ -1,4 +1,4 @@
-execute if entity @e[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93,tag=mr_referee,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=46,Medabot=0..,Battle=1..}]
+execute if entity @e[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=46,Medabot=0..,Battle=1..}]
 execute unless entity @e[scores={Stage=46,Medabot=0..,Battle=1..},tag=main] run tag @s add main
 execute as @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/ricco_harbor/empty
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1440 51 -158 run function medabots_server:stage/clear

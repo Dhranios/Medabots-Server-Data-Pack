@@ -1,3 +1,4 @@
+execute as @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42,type=!minecraft:player] unless entity @s[scores={Stage=49}] run scoreboard players set @s Stage 49
 function medabots_server:stage/clean_up/ruins_battle/walls
 function medabots_server:stage/clean_up/ruins_battle/wind
 function medabots_server:stage/clean_up/ruins_battle/cannons

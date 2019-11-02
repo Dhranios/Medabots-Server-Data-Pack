@@ -33,25 +33,25 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1793
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:ruins_in_d/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1747 44 -792 minecraft:iron_door[open=true] if block -1737 44 -794 minecraft:air if entity @s[x=-1747,y=44,z=-793,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_d/first_go_battle/2
-execute if entity @e[x=-1737.5,y=44,z=-786.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission,type=minecraft:area_effect_cloud_entity,scores={Stage=34},tag=guard] run tag @s add mission_success
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run tag @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,scores={Stage=34,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] as @a[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,scores={Stage=34,Medabot=0..,Battle=1..},tag=enemy_medabot] run function medabots_server:stage/leave_server_enforced
-title @s[tag=mission,type=minecraft:area_effect_cloud_success] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run scoreboard players set @e[x=-1746.5,y=44,z=-791.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run scoreboard players set @e[x=-1762.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run kill @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,tag=mission,type=minecraft:area_effect_cloud]
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run bossbar set medabots_server:ruins_in_d/robattle players
-tag @s[tag=mission,type=minecraft:area_effect_cloud_success] remove mission_success
+execute if entity @e[x=-1737.5,y=44,z=-786.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=34},tag=guard,type=minecraft:creeper] run tag @s add mission_success
+execute if entity @s[tag=mission_success] run tag @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,scores={Stage=34,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
+execute if entity @s[tag=mission_success] as @a[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,scores={Stage=34,Medabot=0..,Battle=1..},tag=enemy_medabot] run function medabots_server:stage/leave_server_enforced
+title @s[tag=mission_success] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1746.5,y=44,z=-791.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1762.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[tag=mission_success] run kill @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,tag=mission,type=minecraft:area_effect_cloud]
+execute if entity @s[tag=mission_success] run bossbar set medabots_server:ruins_in_d/robattle players
+tag @s[tag=mission_success] remove mission_success
 execute if block -1778 44 -791 minecraft:iron_door[open=true] if block -1737 44 -794 minecraft:air if entity @s[x=-1781,y=44,z=-793,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_d/first_go_battle/3
 execute if entity @e[x=-1786.5,y=44,z=-788.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if block -1783 43 -790 minecraft:lime_wool if block -1784 43 -789 minecraft:lime_wool if block -1791 43 -793 minecraft:lime_wool if block -1791 43 -788 minecraft:lime_wool if block -1791 43 -782 minecraft:lime_wool if block -1785 43 -782 minecraft:lime_wool if block -1780 43 -782 minecraft:lime_wool run tag @s add mission_success
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run tag @e[scores={Stage=34,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] as @a[scores={Stage=34,Medabot=0..,Battle=1..},tag=enemy_medabot] run function medabots_server:stage/leave_server_enforced
-title @s[tag=mission,type=minecraft:area_effect_cloud_success] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run scoreboard players set @e[x=-1777.5,y=44,z=-790.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run scoreboard players set @e[x=-1762.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run kill @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,tag=mission,type=minecraft:area_effect_cloud]
-execute if entity @s[tag=mission,type=minecraft:area_effect_cloud_success] run bossbar set medabots_server:ruins_in_d/robattle players
-tag @s[tag=mission,type=minecraft:area_effect_cloud_success] remove mission_success
+execute if entity @s[tag=mission_success] run tag @e[scores={Stage=34,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
+execute if entity @s[tag=mission_success] as @a[scores={Stage=34,Medabot=0..,Battle=1..},tag=enemy_medabot] run function medabots_server:stage/leave_server_enforced
+title @s[tag=mission_success] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1777.5,y=44,z=-790.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1762.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[tag=mission_success] run kill @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,tag=mission,type=minecraft:area_effect_cloud]
+execute if entity @s[tag=mission_success] run bossbar set medabots_server:ruins_in_d/robattle players
+tag @s[tag=mission_success] remove mission_success
 execute if block -1763 44 -779 minecraft:iron_door[open=true] if entity @s[x=-1764,y=44,z=-782,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_d/first_go_battle/4
 execute if entity @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=34,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=34}] run scoreboard players set @s Stage 34

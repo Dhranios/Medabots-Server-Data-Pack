@@ -17,4 +17,5 @@ execute if entity @s[tag=!detect,tag=looking,tag=south] run function medabots_se
 execute if entity @s[tag=!detect,tag=looking,tag=west] run function medabots_server:spawn_entities/cannon/still/west/delay_1
 
 # Give additional data
+execute if entity @s[tag=mission_entity] run tag @e[distance=..0.7,tag=cannon] add mission_entity
 scoreboard players operation @e[distance=..0.7,tag=cannon] DelayTime = @s DelayTime

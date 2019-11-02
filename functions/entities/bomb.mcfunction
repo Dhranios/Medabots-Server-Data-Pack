@@ -22,10 +22,10 @@ scoreboard players add @s[scores={Moving=1..,Steps=0..4}] Steps 1
 execute if entity @s[scores={Time=1}] if block ~ ~-0.2 ~ minecraft:air run playsound medabots_server:block.moving_block.fall block @a ~ ~ ~ 1
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
 execute at @s if block ~ ~-0.2 ~ minecraft:black_carpet run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column unless entity @e[tag=raft,distance=..0.7] run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water if entity @e[tag=raft,distance=..0.7] run tag @s add align_y
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column if entity @e[tag=raft,distance=..0.7] run tag @s add align_y
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water if entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add align_y
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column if entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add align_y
 execute at @s if block ~ ~-0.2 ~ minecraft:lava run tag @s add fall
 execute at @s[tag=fall] run fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
 execute at @s[tag=fall] run teleport @s ~ ~-0.2 ~
