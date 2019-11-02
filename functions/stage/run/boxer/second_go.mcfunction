@@ -8,10 +8,10 @@ execute if entity @e[scores={Stage=29},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer/second_go
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
-execute if block -1903 44 -561 minecraft:quartz_pillar unless entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall,type=minecraft:area_effect_cloud_timer] run summon minecraft:area_effect_cloud -1906 44 -555 {CustomName:'{"translate":"medabots_server:block.press_wall"}',Tags:["press_wall_timer"],Duration:400}
-scoreboard players add @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall,type=minecraft:area_effect_cloud_timer] Time 1
-execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall,type=minecraft:area_effect_cloud_timer,scores={Time=1}] run scoreboard players set @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall,type=minecraft:area_effect_cloud_timer,scores={Time=81}] run scoreboard players set @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1903 44 -561 minecraft:quartz_pillar unless entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud -1906 44 -555 {CustomName:'{"translate":"medabots_server:block.press_wall"}',Tags:["press_wall_timer"],Duration:400}
+scoreboard players add @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,type=minecraft:area_effect_cloud] Time 1
+execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,type=minecraft:area_effect_cloud,scores={Time=1}] run scoreboard players set @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,type=minecraft:area_effect_cloud,scores={Time=81}] run scoreboard players set @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1878 44 -561 minecraft:iron_door[open=true] if block -1876 44 -571 minecraft:iron_door[open=false] if entity @s[x=-1880,y=44,z=-561,dx=3,dy=3,dz=3] run function medabots_server:stage/create/boxer/second_go_battle/0
 execute if entity @e[x=-1871.5,y=44,z=-553.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=29,Medabot=0..,Battle=1..2}]
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}

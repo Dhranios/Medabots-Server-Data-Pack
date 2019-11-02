@@ -4,15 +4,9 @@ execute unless entity @e[scores={Stage=60},tag=hide_normal_time] store result bo
 execute if entity @e[scores={Stage=60},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:rock_f/robattle value
 execute if entity @e[scores={Stage=60},tag=hide_normal_time] if entity @e[scores={Stage=60,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:rock_f/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[scores={Stage=60},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1919,y=42,z=-696,dx=60,dy=7,dz=60,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
-<<<<<<< HEAD
-execute if entity @e[scores={Stage=60},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1919,y=42,z=-696,dx=60,dy=7,dz=60,tag=mr_referee] at @s run function medabots_server:stage/referee_decides
+execute if entity @e[scores={Stage=60},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1919,y=42,z=-696,dx=60,dy=7,dz=60,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 execute if entity @s[scores={Battle=0},tag=!stage_builder] run function medabots_server:stage/clean_up/rock_f/custom
 execute if entity @s[scores={Battle=0},tag=!stage_builder] run function medabots_server:other/death
-=======
-execute if entity @e[scores={Stage=60},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1919,y=42,z=-696,dx=60,dy=7,dz=60,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/rock_f/custom
-execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
->>>>>>> 13a632eeed08a40b3ba7753126d6948c13807501
 scoreboard players reset #temp Time
 execute if entity @s[tag=remove_bossbar] run bossbar set medabots_server:rock_f/robattle players
 tag @s[tag=remove_bossbar] remove remove_bossbar

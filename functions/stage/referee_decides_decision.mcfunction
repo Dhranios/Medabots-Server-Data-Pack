@@ -1,5 +1,5 @@
 execute if score @s HeadPer >= @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] HeadPer run tag @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle,type=!minecraft:player] add dead
-execute if score @s HeadPer >= @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] HeadPer as @a[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle,type=minecraft:player] run function medabots_server:stage/left_server_enforced
+execute if score @s HeadPer >= @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] HeadPer as @a[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] run function medabots_server:stage/left_server_enforced
 execute if score @s HeadPer < @e[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] HeadPer run function medabots_server:stage/left_server_enforced
 execute if entity @s[scores={Battle=0}] run title @s title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@e[distance=..0.1,tag=enemy_medabot,limit=1]"}]}
 execute if entity @s[scores={Battle=0}] run title @a[distance=..0.1,tag=enemy_medabot,limit=1,tag=this_robattle] title {"translate":"medabots_server:message.mr_referee.winner","color":"green","with":[{"selector":"@s"}]}
