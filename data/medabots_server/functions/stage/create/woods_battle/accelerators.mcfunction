@@ -21,5 +21,5 @@ tag @a[x=-1943,y=45,z=-617,distance=..1] remove -1
 tag @a[x=-1954,y=45,z=-616,distance=..1] remove 0
 scoreboard players set @a[x=-1972,y=43,z=-640,dx=48,dy=7,dz=48] Stage 47
 scoreboard players set @a[x=-1972,y=43,z=-640,dx=48,dy=7,dz=48] Battle 1
-scoreboard players set @a[x=-1972,y=43,z=-640,dx=48,dy=7,dz=48] Music 0
+execute as @a[x=-1972,y=43,z=-640,dx=48,dy=7,dz=48] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1972,y=43,z=-640,dx=48,dy=7,dz=48] MusicType 0

@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity tune_observes
 scoreboard players set @s[scores={Dialog=1}] MusicType 42
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -411 55 -31 run function medabots_server:spawn_entities/cutscene/director_tune
 execute if entity @s[scores={Dialog=1}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
 teleport @s[x=-410,y=55,z=-42,distance=..6] -415 55 -34

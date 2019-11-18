@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity roks_taken
 scoreboard players set @s[scores={Dialog=1}] MusicType 38
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -458 55 -89 run function medabots_server:spawn_entities/cutscene/koji
 execute if entity @s[scores={Dialog=1..207}] at @e[tag=koji,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=koji,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji"},{"translate":"medabots_server:dialog.infinity.roks_taken.1"}]}

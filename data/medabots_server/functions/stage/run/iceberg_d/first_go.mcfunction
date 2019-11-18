@@ -35,7 +35,7 @@ title @s[tag=mission_success] title {"translate":"medabots_server:message.stage.
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1709.5,y=44,z=-736.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1695.5,y=44,z=-749.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1729,y=41,z=-795,dx=62,dy=7,dz=62,tag=mission,type=minecraft:area_effect_cloud]
-execute if entity @s[tag=mission_success] run bossbar set medabots_server:jungle_d/robattle players
+execute if entity @s[tag=mission_success] run bossbar set medabots_server:iceberg_d/robattle players
 tag @s[tag=mission_success] remove mission_success
 execute if block -1684 44 -774 minecraft:iron_door[open=true] if entity @s[x=-1685,y=44,z=-777,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_d/first_go_battle/1
 execute if entity @e[x=-1729,y=41,z=-795,dx=62,dy=7,dz=62,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=33,Medabot=0..,Battle=1..2}]

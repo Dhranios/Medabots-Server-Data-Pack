@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity maxs_first_love
 scoreboard players set @s[scores={Dialog=1}] MusicType 37
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -322 55 -33 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -321 55 -39 run function medabots_server:spawn_entities/cutscene/max
 execute if entity @s[scores={Dialog=1}] positioned -325 55 -38 run function medabots_server:spawn_entities/cutscene/erika

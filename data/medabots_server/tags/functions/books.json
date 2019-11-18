@@ -3,6 +3,7 @@
         "medabots_server:items/book/how_to",
         "medabots_server:items/book/important",
         "medabots_server:items/book/medaparts",
-        "medabots_server:items/book/rules"
+        "medabots_server:items/book/rules",
+        "medabots_server:items/jukebox"
     ]
 }

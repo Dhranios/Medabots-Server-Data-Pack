@@ -52,6 +52,7 @@ scoreboard objectives add FlyHackTime dummy
 scoreboard objectives add FlyTime dummy
 scoreboard objectives add Flying minecraft.custom:minecraft.fly_one_cm
 scoreboard objectives add FreezeTime dummy
+scoreboard objectives add Gamemode dummy
 scoreboard objectives add GamemodeTime dummy
 scoreboard objectives add GoalSearch dummy
 scoreboard objectives add GuardNr dummy
@@ -74,6 +75,9 @@ scoreboard objectives add Hunger food
 scoreboard objectives add IneffectiveTime dummy
 scoreboard objectives add InfectTime dummy
 scoreboard objectives add InfectTimer dummy
+scoreboard objectives add Jukebox dummy
+scoreboard objectives add JukeboxChannel dummy
+scoreboard objectives add JukeboxSetting trigger
 scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer dummy
 scoreboard objectives add KillStreak dummy

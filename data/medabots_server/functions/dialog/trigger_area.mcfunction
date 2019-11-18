@@ -47,12 +47,14 @@ tag @s[advancements={medabots_server:story_progression/infinity={into_the_underg
 tag @s[advancements={medabots_server:story_progression/infinity={into_the_underground_arena=true,doctor_haru_defeated=false}},x=-445,y=9,z=-81,distance=..4] add dialog_infinity_stop_saving_karin
 tag @s[advancements={medabots_server:story_progression/infinity={doctor_haru_defeated=true,karin_saved=false}},x=-453,y=11,z=-77,distance=..4] add dialog_infinity_karin_saved
 tag @s[advancements={medabots_server:story_progression/infinity={karin_saved=true,the_final_battle=false}},x=-445,y=9,z=-84,dx=2,dy=4,dz=6] add dialog_infinity_the_final_battle
-#tag @s[advancements={medabots_server:story_progression/infinity={victory=true,bonus_area_pass=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_bonus_area_pass
-#tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,jaxys_happy=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_jaxys_happy
-#tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,samanthas_challenge=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_samanthas_challenge
-#tag @s[advancements={medabots_server:story_progression/infinity={samanthas_challenge=true,samanthas_pass=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_samanthas_pass
-#tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,karins_challenge=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_karins_challenge
-#tag @s[advancements={medabots_server:story_progression/infinity={karins_challenge=true,karins_pass=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_karins_pass
-#tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,erikas_challenge=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_erikas_challenge
+tag @s[advancements={medabots_server:story_progression/infinity={victory=true,bonus_area_pass=false}},x=-394,y=55,z=-52,distance=..5] add dialog_infinity_bonus_area_pass
+execute unless entity @s[advancements={medabots_server:story_progression/infinity={spykes_pass=true,sloans_pass=true,samanthas_pass=true,karins_pass=true,erikas_pass=true,kojis_pass=true}}] run tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,jaxy_is_happy=false}},x=-462,y=55,z=-94,distance=..5] add dialog_infinity_jaxy_is_happy
+tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,samanthas_challenge=false}},x=-452,y=55,z=0,distance=..4] add dialog_infinity_samanthas_challenge
+tag @s[advancements={medabots_server:story_progression/infinity={samanthas_challenge=true,samanthas_pass=false}},x=-452,y=55,z=0,distance=..4] add dialog_infinity_samanthas_challenge_repeat
+tag @s[advancements={medabots_server:story_progression/infinity={samanthas_challenge=true,samanthas_pass=false}},x=-393,y=55,z=-29,distance=..4] add dialog_infinity_samanthas_pass
+tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,karins_challenge=false}},x=-394,y=55,z=-95,distance=..4] add dialog_infinity_karins_challenge
+tag @s[advancements={medabots_server:story_progression/infinity={karins_challenge=true,karins_pass=false},medabots_server:special_items/purple_plant=true,medabots_server:special_items/blue_plant=true,medabots_server:special_items/light_blue_plant=true,medabots_server:special_items/green_plant=true,medabots_server:special_items/yellow_plant=true,medabots_server:special_items/orange_plant=true,medabots_server:special_items/red_plant=true},x=-394,y=55,z=-95,distance=..4] add dialog_infinity_karins_pass
+tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,erikas_challenge=false}},x=-391,y=55,z=14,distance=..4] add dialog_infinity_erikas_challenge
+tag @s[advancements={medabots_server:story_progression/infinity={erikas_challenge=true,erikas_pass=false}},x=-391,y=55,z=14,distance=..4] add dialog_infinity_erikas_challenge_repeat
 #tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,kojis_challenge=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_kojis_challenge
 #tag @s[advancements={medabots_server:story_progression/infinity={kojis_challenge=true,kojis_pass=false}},x=-394,y=55,z=-52,distance=..3] add dialog_infinity_kojis_pass

@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_pickaxe",
+            "nbt": "{Unbreakable:1b,Damage:5,CustomModelData:14}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.bosses.boolossus"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.bosses.boolossus.description"
+        },
+        "hidden": true
+    },
+	"parent": "medabots_server:bosses/arena",
+    "criteria": {
+        "defeated": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/bosses/arena/boolossus"
+    }
+}

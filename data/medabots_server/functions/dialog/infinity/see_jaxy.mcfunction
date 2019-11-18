@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity see_jaxy
 scoreboard players set @s[scores={Dialog=1}] MusicType 40
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -362 55 -120 run function medabots_server:spawn_entities/cutscene/jaxy
 execute if entity @s[scores={Dialog=1}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 40 ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.see_jaxy.1"}]}

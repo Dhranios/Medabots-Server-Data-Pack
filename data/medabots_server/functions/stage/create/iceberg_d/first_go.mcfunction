@@ -13,7 +13,7 @@ execute positioned -1721 44 -790 run function medabots_server:spawn_entities/gua
 execute positioned -1717 44 -793 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1706 43 -786 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1704 43 -790 run function medabots_server:spawn_entities/guard/medium
-execute positioned -1689 44 -745 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_4
+execute positioned -1689 44 -744 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_4
 execute positioned -1689 44 -742 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4
 execute positioned -1690 44 -743 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
 execute positioned -1688 44 -743 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4
@@ -138,7 +138,7 @@ replaceitem block -1696 44 -788 container.0 minecraft:fishing_rod{Damage:2,Unbre
 execute positioned -1703 44 -769 run function medabots_server:set_blocks/accelerator/north
 execute positioned -1724 44 -759 run function medabots_server:set_blocks/bridge
 execute positioned -1720 44 -752 run function medabots_server:set_blocks/bridge
-execute positioned -1689 44 -745 run function medabots_server:set_blocks/bridge
+execute positioned -1689 44 -744 run function medabots_server:set_blocks/bridge
 execute positioned -1689 44 -742 run function medabots_server:set_blocks/bridge
 execute positioned -1690 44 -743 run function medabots_server:set_blocks/bridge
 execute positioned -1688 44 -743 run function medabots_server:set_blocks/bridge
@@ -182,9 +182,9 @@ bossbar set medabots_server:iceberg_d/time value 0
 bossbar set medabots_server:iceberg_d/time players @a[x=-1725,y=44,z=-755,distance=..1]
 scoreboard players set @a[x=-1725,y=44,z=-755,distance=..1] Battle 1
 scoreboard players set @a[x=-1725,y=44,z=-755,distance=..1] Stage 33
-scoreboard players set @a[x=-1725,y=44,z=-755,distance=..1] Music 0
+execute as @a[x=-1725,y=44,z=-755,distance=..1] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1725,y=44,z=-755,distance=..1] MusicType 12
 scoreboard players set @a[x=-1729,y=49,z=-795,dx=62,dy=4,dz=62,tag=medabot] Battle 3
 scoreboard players set @a[x=-1729,y=49,z=-795,dx=62,dy=4,dz=62,tag=medabot] Stage 33
-scoreboard players set @a[x=-1729,y=49,z=-795,dx=62,dy=4,dz=62,tag=medabot] Music 0
+execute as @a[x=-1729,y=49,z=-795,dx=62,dy=4,dz=62,tag=medabot] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1729,y=49,z=-795,dx=62,dy=4,dz=62,tag=medabot] MusicType 12

@@ -12,7 +12,7 @@
         },
         "hidden": true
     },
-	"parent": "medabots_server:bosses/arena",
+	"parent": "medabots_server:bosses/arena/boolossus",
     "criteria": {
         "defeated": {
             "trigger": "minecraft:impossible"

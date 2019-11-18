@@ -11,8 +11,8 @@ execute positioned -1736 44 -783 run function medabots_server:spawn_entities/ice
 execute positioned -1735 44 -784 run function medabots_server:spawn_entities/ice_block
 execute positioned -1742 44 -790 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1741 44 -789 run function medabots_server:spawn_entities/item/4_medallar_cents
-execute positioned -1737 44 -793 run function medabots_server:set_blocks/action_floor/balloon_bombs/power_0
-execute positioned -1745 44 -785 run function medabots_server:set_blocks/action_floor/balloon_bombs/power_0
+execute positioned -1737 44 -793 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
+execute positioned -1745 44 -785 run function medabots_server:set_blocks/action_floor/balloon_bomb/power_0
 execute positioned -1737 44 -794 run function medabots_server:set_blocks/fan/south/slow/range_11
 execute positioned -1746 44 -785 run function medabots_server:set_blocks/fan/east/slow/range_11
 scoreboard players set @e[x=-1746.5,y=44,z=-791.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1

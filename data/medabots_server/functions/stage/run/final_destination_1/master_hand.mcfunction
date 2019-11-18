@@ -4,3 +4,5 @@ execute as @s[scores={Battle=1..},tag=!no_end] run function medabots_server:stag
 advancement grant @s[scores={Battle=1..},tag=!no_end] only medabots_server:main/a_masters_order
 execute if entity @s[scores={Battle=1..},tag=!no_end] positioned -2041 43 -196 run function medabots_server:stage/clear
 tag @s remove no_end
+
+execute as @e[scores={Stage=61}] at @s run teleport @s[y=0,dy=10] -2041 52 -220

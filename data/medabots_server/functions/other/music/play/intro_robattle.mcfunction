@@ -6,3 +6,5 @@ playsound medabots_server:music.battle.2_intro music @s[scores={RobattleMusic=2}
 scoreboard players set @s[scores={RobattleMusic=2}] Music 121
 playsound medabots_server:music.battle.3_intro music @s[scores={RobattleMusic=3}] ~ ~ ~ 1000
 scoreboard players set @s[scores={RobattleMusic=3}] Music 590
+
+advancement grant @s only medabots_server:special_items/jukebox/robattle

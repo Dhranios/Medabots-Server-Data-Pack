@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity new_look_new_chances
 scoreboard players set @s[scores={Dialog=1}] MusicType 40
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1947 51 -565 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1951 51 -566 run function medabots_server:spawn_entities/cutscene/karin
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1949 51 -568 {Duration:1000000,Tags:["cutscene","jaxy","medabot","this_dialog"]}

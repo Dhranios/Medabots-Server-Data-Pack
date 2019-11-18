@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity the_underground_arena
 scoreboard players set @s[scores={Dialog=1}] MusicType 44
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -474 9 -79 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -465 9 -64 run function medabots_server:spawn_entities/cutscene/caroline
 execute if entity @s[scores={Dialog=1}] positioned -470 9 -77 run function medabots_server:spawn_entities/cutscene/doctor_haru

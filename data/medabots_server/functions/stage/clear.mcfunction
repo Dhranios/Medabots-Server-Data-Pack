@@ -1,10 +1,10 @@
-stopsound @s music
-playsound medabots_server:music.stage.stage_end music @s ~ ~ ~ 1000
+execute unless entity @s[scores={Jukebox=1..}] run stopsound @s music
+execute unless entity @s[scores={Jukebox=1..}] run playsound medabots_server:music.stage.stage_end music @s ~ ~ ~ 1000
 scoreboard players set @s Battle 0
 scoreboard players set @s PrevMusicType 0
 scoreboard players set @s MusicType 1
 scoreboard players set @s[scores={Stage=23..29}] MusicType 22
-scoreboard players set @s Music 299
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 299
 scoreboard players reset @s Stage
 teleport @s ~ ~ ~ -180 0
 tag @s remove story_battle

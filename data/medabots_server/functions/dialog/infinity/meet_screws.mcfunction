@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity meet_screws
 scoreboard players set @s[scores={Dialog=1}] MusicType 35
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1539 51 -218 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1535 51 -217 run function medabots_server:spawn_entities/cutscene/samantha
 teleport @s[scores={Dialog=1}] -1539 51 -216 -105 0

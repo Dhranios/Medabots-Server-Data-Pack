@@ -112,9 +112,9 @@ bossbar set medabots_server:jungle_c/time value 0
 bossbar set medabots_server:jungle_c/time players @a[x=-1557,y=44,z=-488,distance=..1]
 scoreboard players set @a[x=-1557,y=44,z=-488,distance=..1] Battle 1
 scoreboard players set @a[x=-1557,y=44,z=-488,distance=..1] Stage 24
-scoreboard players set @a[x=-1557,y=44,z=-488,distance=..1] Music 0
+execute as @a[x=-1557,y=44,z=-488,distance=..1] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1557,y=44,z=-488,distance=..1] MusicType 18
 scoreboard players set @a[x=-1570,y=50,z=-545,dx=62,dy=4,dz=62,tag=medabot] Battle 3
 scoreboard players set @a[x=-1570,y=50,z=-545,dx=62,dy=4,dz=62,tag=medabot] Stage 24
-scoreboard players set @a[x=-1570,y=50,z=-545,dx=62,dy=4,dz=62,tag=medabot] Music 0
+execute as @a[x=-1570,y=50,z=-545,dx=62,dy=4,dz=62,tag=medabot] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1570,y=50,z=-545,dx=62,dy=4,dz=62,tag=medabot] MusicType 18

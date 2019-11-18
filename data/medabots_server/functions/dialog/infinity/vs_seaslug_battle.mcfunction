@@ -4,9 +4,10 @@ scoreboard players add @s[scores={Dialog=0}] DialogNr 1
 execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 scoreboard players add @s Dialog 1
+advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_seaslug_battle
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
-advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_seaslug_battle
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1995 51 -559 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1997 51 -556 run function medabots_server:spawn_entities/cutscene/seaslug
 execute if entity @s[scores={Dialog=1..411}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=seaslug,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~

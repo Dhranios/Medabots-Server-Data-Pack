@@ -18,7 +18,7 @@ execute if block -1854 43 -775 minecraft:lime_wool run scoreboard players set @e
 execute if block -1854 43 -768 minecraft:lime_wool run scoreboard players set @e[x=-1846.5,y=44,z=-782.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1848 43 -784 minecraft:lime_wool run scoreboard players set @e[x=-1823.5,y=44,z=-793.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1848 43 -784 minecraft:lime_wool run scoreboard players set @e[x=-1823.5,y=44,z=-805.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1797 43 -784 minecraft:lime_wool run scoreboard players set @e[x=-1806.5,y=44,z=-805.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1797 43 -784 minecraft:lime_wool run scoreboard players set @e[x=-1806.5,y=44,z=-793.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1797 43 -784 minecraft:lime_wool run scoreboard players set @e[x=-1806.5,y=44,z=-805.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1813 43 -760 minecraft:yellow_wool run scoreboard players set @e[x=-1806.5,y=44,z=-759.5,distance=..0.7,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1813 43 -760 minecraft:orange_wool run scoreboard players set @e[x=-1806.5,y=44,z=-759.5,distance=..0.7,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0

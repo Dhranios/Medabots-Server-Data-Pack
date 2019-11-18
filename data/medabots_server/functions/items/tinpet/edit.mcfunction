@@ -12,4 +12,4 @@ scoreboard players enable @s UnequipTinpet
 # Medawatch music
 scoreboard players operation @s OldMusicType = @s MusicType
 scoreboard players set @s MusicType 31
-scoreboard players set @s Music 0
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0

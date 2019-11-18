@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity three_colors_defeated
 scoreboard players set @s[scores={Dialog=1}] MusicType 46
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -432 55 -52 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -451 55 -41 run function medabots_server:spawn_entities/cutscene/jaxy
 execute if entity @s[scores={Dialog=1}] positioned -460 55 -69 run function medabots_server:spawn_entities/cutscene/spyke
@@ -201,18 +202,12 @@ tellraw @s[scores={Dialog=2576}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2592}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.59"}]}
 tellraw @s[scores={Dialog=2640}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.60"}]}
 execute if entity @s[scores={Dialog=2688}] positioned -468 55 -122 run function medabots_server:spawn_entities/cutscene/doctor_haru
-execute if entity @s[scores={Dialog=2688}] run teleport @e[tag=samantha,tag=this_dialog,limit=1] -465 55 -119
-execute if entity @s[scores={Dialog=2688}] run teleport @e[tag=sloan,tag=this_dialog,limit=1] -463 55 -120
-execute if entity @s[scores={Dialog=2688}] run teleport @e[tag=spyke,tag=this_dialog,limit=1] -466 55 -117
-execute if entity @s[scores={Dialog=2688}] run teleport @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] -470 55 -119
-execute if entity @s[scores={Dialog=2688}] run teleport @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] -470 55 -121
-execute if entity @s[scores={Dialog=2688}] run teleport @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] -470 55 -117
-execute if entity @s[scores={Dialog=2688}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2688}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2688}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2688}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=samantha,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2688}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=sloan,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=2688}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=spyke,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2688}] as @e[tag=samantha,tag=this_dialog,limit=1] positioned -465 55 -119 facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2688}] as @e[tag=sloan,tag=this_dialog,limit=1] positioned -463 55 -120 facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2688}] as @e[tag=spyke,tag=this_dialog,limit=1] positioned -466 55 -117 facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2688}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] positioned -470 55 -119 facing entity @e[tag=samantha,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2688}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] positioned -470 55 -121 facing entity @e[tag=sloan,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2688}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] positioned -470 55 -117 facing entity @e[tag=spyke,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=2688}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s facing entity @e[tag=samantha,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 scoreboard players set @s[scores={Dialog=2688}] MusicType 44
 scoreboard players set @s[scores={Dialog=2688}] Music 0
@@ -274,18 +269,12 @@ execute if entity @s[scores={Dialog=4088}] run tag @e[tag=blue_man,tag=!medabot_
 execute if entity @s[scores={Dialog=4089..4235}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=4236}] run tag @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 tellraw @s[scores={Dialog=4148}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.three_colors_defeated.91"}]}
-execute if entity @s[scores={Dialog=4236}] run teleport @e[tag=samantha,tag=this_dialog,limit=1] -459 55 -53
-execute if entity @s[scores={Dialog=4236}] run teleport @e[tag=sloan,tag=this_dialog,limit=1] -460 55 -51
-execute if entity @s[scores={Dialog=4236}] run teleport @e[tag=spyke,tag=this_dialog,limit=1] -460 55 -55
-execute if entity @s[scores={Dialog=4236}] run teleport @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] -451 55 -46
-execute if entity @s[scores={Dialog=4236}] run teleport @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] -449 55 -47
-execute if entity @s[scores={Dialog=4236}] run teleport @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] -453 55 -47
-execute if entity @s[scores={Dialog=4236}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=4236}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=4236}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=4236}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=4236}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=4236}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=4236}] as @e[tag=samantha,tag=this_dialog,limit=1] positioned -459 55 -53 facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=4236}] as @e[tag=sloan,tag=this_dialog,limit=1] positioned -460 55 -51 facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=4236}] as @e[tag=spyke,tag=this_dialog,limit=1] positioned -460 55 -55 facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=4236}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] positioned -451 55 -46 facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=4236}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] positioned -449 55 -47 facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=4236}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] positioned -453 55 -47 facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=4236}] run kill @e[tag=doctor_haru,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=4236}] MusicType 35
 scoreboard players set @s[scores={Dialog=4236}] Music 0

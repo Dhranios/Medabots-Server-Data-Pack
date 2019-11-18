@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity select_corps_warning
 scoreboard players set @s[scores={Dialog=1}] MusicType 33
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -394 55 -52 run function medabots_server:spawn_entities/cutscene/select_corps
 teleport @s[x=-394,y=55,z=-52,distance=..4] -399 55 -52
 execute if entity @s[scores={Dialog=1}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~

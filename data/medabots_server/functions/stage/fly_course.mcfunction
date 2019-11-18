@@ -6,8 +6,9 @@ scoreboard players reset @s[scores={FlyCourse=0}] FlyTime
 scoreboard players reset @s[scores={FlyCourse=0}] FlyCourseLapTime
 scoreboard players set @s[scores={FlyCourse=0}] Time 0
 scoreboard players set @s[scores={FlyCourse=0}] MusicType 1
-scoreboard players set @s[scores={FlyCourse=0}] Music 0
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={FlyCourse=0}] Music 0
 scoreboard players reset @s[scores={FlyCourse=0}] FlyCourse
+scoreboard players reset @s[scores={FlyCourse=0}] Gamemode
 
 # Give the items
 tag @s[tag=fly_course_speed] remove fly_course_speed
@@ -18,11 +19,8 @@ execute unless entity @s[nbt={Inventory:[{Slot:8b}]}] run replaceitem entity @s[
 execute unless entity @s[nbt={Inventory:[{Slot:8b}]}] run replaceitem entity @s[scores={FlyCourse=1..2},tag=!long_fly_course_speed,tag=!fly_course_speed] hotbar.8 minecraft:firework_rocket{Fireworks:{Flight:1b},medabots_server:{id:"medabots_server:fly_course_speed"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_course_speed\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_course_speed.description\"}"]}}
 
 # Play the music
-stopsound @s[scores={FlyCourse=1}] music
-scoreboard players set @s[scores={FlyCourse=1}] Music 0
-scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:0b}] MusicType 0
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={FlyCourse=1}] Music 0
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] MusicType 6
-scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] Music 0
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] Time 220
 
 # Stop the course

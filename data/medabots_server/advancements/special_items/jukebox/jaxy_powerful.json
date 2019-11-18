@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:music_disc_13"
+        },
+        "title": {
+            "translate": "medabots_server:item.jukebox.track.jaxy_powerful"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.taken"
+        },
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "medabots_server:special_items/jukebox/jaxy",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/special_items/jukebox/jaxy_powerful"
+    }
+}

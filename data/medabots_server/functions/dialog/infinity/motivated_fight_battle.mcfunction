@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity motivated_fight_battle
 scoreboard players set @s[scores={Dialog=1}] MusicType 35
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1995 51 -559 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1996 51 -555 run function medabots_server:spawn_entities/cutscene/krosserdog
 execute if entity @s[scores={Dialog=1}] positioned -1998 51 -556 run function medabots_server:spawn_entities/cutscene/spyke

@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity rubberobo_leaves_seashore_a
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1537 51 -216 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1538 51 -213 run function medabots_server:spawn_entities/cutscene/rubberobo
 teleport @s[scores={Dialog=1}] -1539 51 -216 -20 0

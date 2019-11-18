@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_shrimplips
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1948 51 -566 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1952 51 -566 run function medabots_server:spawn_entities/cutscene/shrimplips
 execute if entity @s[scores={Dialog=1..2225}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=shrimplips,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -43,7 +44,7 @@ execute if entity @s[scores={Dialog=1065..1173}] as @e[tag=rubberobo,tag=this_di
 execute if entity @s[scores={Dialog=1174}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s remove running
 execute if entity @s[scores={Dialog=1105..1853}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1174}] as @e[tag=rubberobo,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=shrimplips,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1064}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.25"}]}8
+tellraw @s[scores={Dialog=1064}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.25"}]}
 tellraw @s[scores={Dialog=1174}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.26"}]}
 tellraw @s[scores={Dialog=1190}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.27"}]}
 tellraw @s[scores={Dialog=1230}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.28"}]}

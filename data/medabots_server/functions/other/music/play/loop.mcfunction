@@ -80,7 +80,7 @@ scoreboard players set @s[scores={MusicType=39}] Music 578
 playsound medabots_server:music.entity.jaxy music @s[scores={MusicType=40}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=40}] Music 1024
 playsound medabots_server:music.entity.jaxy.power music @s[scores={MusicType=41}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=41}] Music 1024
+scoreboard players set @s[scores={MusicType=41}] Music 872
 playsound medabots_server:music.entity.director_tune music @s[scores={MusicType=42}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=42}] Music 652
 playsound medabots_server:music.entity.doctor_haru music @s[scores={MusicType=43}] ~ ~ ~ 1000

@@ -2,11 +2,25 @@ tag @s remove allowed
 execute if entity @e[distance=..0.7,tag=door] unless entity @e[distance=..0.7,tag=mission] run tag @s add allowed
 tag @s[tag=!allowed] add failed
 
+execute store result score #temp Stage run scoreboard players get @s Stage
+execute at @e[tag=rubberobo] if score @e[tag=rubberobo,limit=1,distance=..0.1] Stage = #temp Stage run tag @s add impossible
+execute at @e[tag=jammy] if score @e[tag=jammy,limit=1,distance=..0.1] Stage = #temp Stage run tag @s add impossible
+tag @s[tag=impossible] remove allowed
+tellraw @s[tag=impossible] {"translate":"medabots_server:message.stage.stage_builder.mission.required_goal"}
+scoreboard players reset #temp Stage
+tag @s[tag=impossible] remove impossible
+
 execute if entity @s[tag=!failed] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage"}}}]}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.none_selected","color":"red"}
 execute if entity @s[tag=!failed] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage"}}}]}] run tag @s add failed
 
 execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["mission"]}]}}}]}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.contains_mission","color":"red"}
 execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["mission"]}]}}}]}] run tag @s add failed
+
+execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["rubberobo"]}]}}}]}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.contains_rubberobo","color":"red"}
+execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["rubberobo"]}]}}}]}] run tag @s add failed
+
+execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["jammy"]}]}}}]}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.contains_jammy","color":"red"}
+execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["jammy"]}]}}}]}] run tag @s add failed
 
 execute if entity @s[tag=!failed] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["door"]}]}}}]}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.no_door","color":"red"}
 execute if entity @s[tag=!failed] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["door"]}]}}}]}] run tag @s add failed

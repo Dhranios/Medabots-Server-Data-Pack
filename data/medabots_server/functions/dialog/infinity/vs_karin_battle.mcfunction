@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity vs_karin_battle
 scoreboard players set @s[scores={Dialog=1}] MusicType 36
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1999 51 -605 run function medabots_server:spawn_entities/cutscene/karin
 execute if entity @s[scores={Dialog=1}] positioned -2007 51 -620 run function medabots_server:spawn_entities/cutscene/koji
 execute if entity @s[scores={Dialog=1}] positioned -2007 51 -612 run function medabots_server:spawn_entities/cutscene/rubberobo

@@ -7,6 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity jaxy_is_gone
 scoreboard players set @s[scores={Dialog=1}] MusicType 36
 scoreboard players set @s[scores={Dialog=1}] Music 0
+scoreboard players set @s[scores={Dialog=1}] Jukebox 0
 execute if entity @s[scores={Dialog=1}] positioned -1636 51 -605 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1631 51 -605 run function medabots_server:spawn_entities/cutscene/roks
 execute if entity @s[scores={Dialog=1}] positioned -1632 51 -606 run function medabots_server:spawn_entities/cutscene/koji

@@ -42,7 +42,7 @@ execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1762.
 execute if entity @s[tag=mission_success] run kill @e[x=-1793,y=41,z=-795,dx=62,dy=7,dz=62,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:ruins_in_d/robattle players
 tag @s[tag=mission_success] remove mission_success
-execute if block -1778 44 -791 minecraft:iron_door[open=true] if block -1737 44 -794 minecraft:air if entity @s[x=-1781,y=44,z=-793,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_d/first_go_battle/3
+execute if block -1778 44 -791 minecraft:iron_door[open=true] if block -1783 44 -789 minecraft:air if entity @s[x=-1781,y=44,z=-793,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_d/first_go_battle/3
 execute if entity @e[x=-1786.5,y=44,z=-788.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if block -1783 43 -790 minecraft:lime_wool if block -1784 43 -789 minecraft:lime_wool if block -1791 43 -793 minecraft:lime_wool if block -1791 43 -788 minecraft:lime_wool if block -1791 43 -782 minecraft:lime_wool if block -1785 43 -782 minecraft:lime_wool if block -1780 43 -782 minecraft:lime_wool run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=34,Medabot=0..,Battle=1..},type=!minecraft:player] add dead
 execute if entity @s[tag=mission_success] as @a[scores={Stage=34,Medabot=0..,Battle=1..},tag=enemy_medabot] run function medabots_server:stage/leave_server_enforced

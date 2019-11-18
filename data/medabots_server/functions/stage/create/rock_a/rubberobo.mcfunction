@@ -163,5 +163,5 @@ bossbar set medabots_server:rock_a/time players @s
 tag @s add main
 scoreboard players set @s Battle 1
 scoreboard players set @s Stage 2
-scoreboard players set @s Music 0
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 8

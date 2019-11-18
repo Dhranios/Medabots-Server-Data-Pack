@@ -1,0 +1,38 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:snow_block"
+        },
+        "title": {
+            "translate": "medabots_server:location.snowfield_b",
+			"extra": [
+				{
+					"text": " "
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.challenge"
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.version",
+			"with": [
+				{
+					"translate": "medabots_server:location.snowfield_b"
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.challenge"
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/wave_1/boxer_first_go",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/wave_1/snowfield_b_challenge"
+    }
+}

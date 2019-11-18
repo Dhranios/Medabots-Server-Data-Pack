@@ -3,10 +3,12 @@ scoreboard players set @s[scores={Time=1..}] Time 950
 scoreboard players operation #temp MedabotNr = @s MedabotNr
 execute as @e[tag=medabot_model,tag=chest] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
 gamemode spectator @s[scores={DeathTime=1}]
+execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Time 0
+execute if entity @s[scores={DeathTime=1,TransformLTime=1..}] run scoreboard players set @s TransformLTime 2
+execute if entity @s[scores={DeathTime=1,TransformRTime=1..}] run scoreboard players set @s TransformRTime 2
+execute if entity @s[scores={DeathTime=1,TransformHTime=1..}] run scoreboard players set @s TransformHTime 2
+execute if entity @s[scores={DeathTime=1}] run function medabots_server:effects/transformed
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Time 950
-execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s TransformLTime 2
-execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s TransformRTime 2
-execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s TransformHTime 2
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Damage 0
 replaceitem entity @s[scores={DeathTime=1},type=!minecraft:player] weapon.mainhand minecraft:air
 execute if entity @s[scores={DeathTime=1}] run function medabots_server:effects/clear

@@ -2,7 +2,7 @@ execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:it
 teleport @s[scores={Dialog=0,Level=10..},advancements={medabots_server:stages/wave_1/lagdou_ruins_1_second_go=true},gamemode=adventure,tag=!random_arena_version] -1285 25 -30 90 0
 execute if entity @s[scores={Dialog=0,Level=10..},advancements={medabots_server:stages/wave_1/lagdou_ruins_1_second_go=true},gamemode=adventure,tag=!random_arena_version] run data merge block -1296 52 -58 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_2/enter"}}'}
 execute if entity @s[scores={Dialog=0,Level=10..},advancements={medabots_server:stages/wave_1/lagdou_ruins_1_second_go=true},gamemode=adventure,tag=!random_arena_version] run setblock -1296 53 -60 minecraft:red_wool
-scoreboard players set @s[scores={Dialog=0,Level=10..},advancements={medabots_server:stages/wave_1/lagdou_ruins_1_second_go=true},gamemode=adventure,tag=!random_arena_version] Music 0
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0,Level=10..},advancements={medabots_server:stages/wave_1/lagdou_ruins_1_second_go=true},gamemode=adventure,tag=!random_arena_version] Music 0
 scoreboard players set @s[scores={Dialog=0,Level=10..},advancements={medabots_server:stages/wave_1/lagdou_ruins_1_second_go=true},gamemode=adventure,tag=!random_arena_version] MusicType 4
 execute if entity @s[scores={Dialog=0,Level=10..},advancements={medabots_server:stages/wave_1/lagdou_ruins_1_second_go=true},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/arena_settings
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}

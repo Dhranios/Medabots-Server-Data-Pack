@@ -55,6 +55,6 @@
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/get_all_medabots/wave_1/uglyguck"
+        "function": "medabots_server:advancements/get_all_medabots/wave_1/uglyduck"
     }
 }

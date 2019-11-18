@@ -8,6 +8,23 @@ tag @s add me
 
 execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:air run tag @s add air
 execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:gray_stained_glass run tag @s add glass
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=north,open=false] run tag @s add door
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=south,open=false] run tag @s add door
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=east,open=true] run tag @s add door
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=west,open=true] run tag @s add door
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=north,open=true] run tag @s add door
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=south,open=true] run tag @s add door
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=east,open=false] run tag @s add door
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=west,open=false] run tag @s add door
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=north,open=false] run tag @s add door
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=south,open=false] run tag @s add door
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=east,open=true] run tag @s add door
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=west,open=true] run tag @s add door
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=north,open=true] run tag @s add door
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=south,open=true] run tag @s add door
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=east,open=false] run tag @s add door
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_door[facing=west,open=false] run tag @s add door
+execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:barrier if block ~ ~-1 ~ minecraft:air positioned ~ ~-1 ~ if entity @e[distance=..0.7,tag=algae] run tag @s add algae
 execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:barrier if block ~ ~-1 ~ minecraft:cut_sandstone positioned ~ ~-1 ~ if entity @e[distance=..0.7,tag=mirror] run tag @s add mirror
 execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:black_stained_glass positioned ~ ~-1 ~ if entity @e[distance=..0.7,tag=ice_block] run tag @s add ice_block
 execute at @s positioned ~ ~1.325 ~ if entity @e[distance=..0.7,tag=balloon_bomb] run tag @s add balloon_bomb
@@ -44,10 +61,12 @@ execute at @s[tag=hit,tag=!strong] positioned ~ ~0.7 ~ run effect give @e[distan
 execute at @s[tag=hit,tag=strong] positioned ~ ~0.7 ~ run effect give @e[distance=..0.7,type=!#medabots_server:undead] minecraft:instant_damage 1 2 true
 execute at @s[tag=hit,tag=strong] positioned ~ ~0.7 ~ run effect give @e[distance=..0.7,type=#medabots_server:undead] minecraft:instant_health 1 2 true
 
-tag @s[tag=!air,tag=!glass,tag=!mirror,tag=!ice_block] add dead
+tag @s[tag=!air,tag=!glass,tag=!door,tag=!algae,tag=!mirror,tag=!ice_block] add dead
 tag @s[tag=hit] add dead
 tag @s remove air
 tag @s remove glass
+tag @s remove door
+tag @s remove algae
 tag @s remove mirror
 tag @s remove 45
 tag @s remove -45

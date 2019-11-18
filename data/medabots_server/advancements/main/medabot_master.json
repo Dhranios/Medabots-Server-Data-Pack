@@ -145,7 +145,7 @@
         "snowfield_b_special": {
             "trigger": "minecraft:impossible"
         },
-        "snowfield_b_sloan_challenge": {
+        "snowfield_b_challenge": {
             "trigger": "minecraft:impossible"
         },
         "iceberg_b_first_go": {
@@ -193,7 +193,7 @@
         "park_a_second_go": {
             "trigger": "minecraft:impossible"
         },
-        "park_a_special": {
+        "park_a_challenge": {
             "trigger": "minecraft:impossible"
         },
         "park_b_first_go": {

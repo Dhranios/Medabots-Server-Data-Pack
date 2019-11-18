@@ -2,7 +2,7 @@ execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:it
 teleport @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] -1995 37 -557 90 0
 execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run data merge block -1998 52 -581 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/ruins_battle/enter"}}'}
 execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run setblock -1998 53 -583 minecraft:red_wool
-scoreboard players set @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] Music 0
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] Music 0
 scoreboard players set @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] MusicType 4
 execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/arena_settings
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_squidguts=true,vs_squidguts_battle=false}},scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle

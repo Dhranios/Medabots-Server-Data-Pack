@@ -52,9 +52,9 @@ execute positioned -1733 44 -743 run function medabots_server:set_blocks/spring_
 execute positioned -1733 44 -741 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_0
 execute positioned -1733 44 -739 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_0
 execute positioned -1733 44 -737 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_0
-execute positioned -1775 44 -774 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_0
-execute positioned -1776 44 -794 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_0
-execute positioned -1774 44 -794 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_0
+execute positioned -1775 44 -774 run function medabots_server:set_blocks/laser_trap/north/delay_10/power_1
+execute positioned -1776 44 -794 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_1
+execute positioned -1774 44 -794 run function medabots_server:set_blocks/laser_trap/south/delay_10/power_1
 execute positioned -1792 44 -750 run function medabots_server:set_blocks/pot/cannon/search/south/delay_4/6_medallar_cents
 execute positioned -1733 44 -750 run function medabots_server:set_blocks/pot/10_medallar_cents
 execute positioned -1763 44 -744 run function medabots_server:set_blocks/pot/guard/medium/2_medallar_cents
@@ -119,11 +119,11 @@ teleport @s[tag=-1] -1763 44 -749 0 0
 tag @a[x=-1763,y=44,z=-749,distance=..1] remove -1
 bossbar set medabots_server:ruins_in_d/time value 0
 bossbar set medabots_server:ruins_in_d/time players @a[x=-1763,y=44,z=-749,distance=..1]
-scoreboard players set @a[x=-1594,y=45,z=-790,distance=..1] Battle 1
-scoreboard players set @a[x=-1594,y=45,z=-790,distance=..1] Stage 34
-scoreboard players set @a[x=-1594,y=45,z=-790,distance=..1] Music 0
-scoreboard players set @a[x=-1594,y=45,z=-790,distance=..1] MusicType 14
+scoreboard players set @a[x=-1763,y=44,z=-749,distance=..1] Battle 1
+scoreboard players set @a[x=-1763,y=44,z=-749,distance=..1] Stage 34
+execute as @a[x=-1763,y=44,z=-749,distance=..1] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
+scoreboard players set @a[x=-1763,y=44,z=-749,distance=..1] MusicType 14
 scoreboard players set @a[x=-1793,y=50,z=-795,dx=62,dy=4,dz=62,tag=medabot] Battle 3
 scoreboard players set @a[x=-1793,y=50,z=-795,dx=62,dy=4,dz=62,tag=medabot] Stage 34
-scoreboard players set @a[x=-1793,y=50,z=-795,dx=62,dy=4,dz=62,tag=medabot] Music 0
+execute as @a[x=-1793,y=50,z=-795,dx=62,dy=4,dz=62,tag=medabot] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1793,y=50,z=-795,dx=62,dy=4,dz=62,tag=medabot] MusicType 14

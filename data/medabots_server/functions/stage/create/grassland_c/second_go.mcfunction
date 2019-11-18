@@ -175,9 +175,9 @@ bossbar set medabots_server:grassland_c/time value 0
 bossbar set medabots_server:grassland_c/time players @a[x=-1535,y=44,z=-423,distance=..1]
 scoreboard players set @a[x=-1535,y=44,z=-423,distance=..1] Battle 1
 scoreboard players set @a[x=-1535,y=44,z=-423,distance=..1] Stage 23
-scoreboard players set @a[x=-1535,y=44,z=-423,distance=..1] Music 0
+execute as @a[x=-1535,y=44,z=-423,distance=..1] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1535,y=44,z=-423,distance=..1] MusicType 18
 scoreboard players set @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=medabot] Battle 3
 scoreboard players set @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=medabot] Stage 23
-scoreboard players set @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=medabot] Music 0
+execute as @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=medabot] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1570,y=50,z=-480,dx=65,dy=4,dz=63,tag=medabot] MusicType 18

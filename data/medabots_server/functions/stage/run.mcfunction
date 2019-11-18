@@ -58,7 +58,7 @@ execute if entity @s[scores={Stage=14,StageVersion=1}] run function medabots_ser
 execute if entity @s[scores={Stage=14,StageVersion=2}] run function medabots_server:stage/run/snowfield_b/second_go
 execute if entity @s[scores={Stage=14,StageVersion=3}] run function medabots_server:stage/run/snowfield_b/rubberobo
 execute if entity @s[scores={Stage=14,StageVersion=4}] run function medabots_server:stage/run/snowfield_b/special
-execute if entity @s[scores={Stage=14,StageVersion=5}] run function medabots_server:stage/run/snowfield_b/sloan_challenge
+execute if entity @s[scores={Stage=14,StageVersion=5}] run function medabots_server:stage/run/snowfield_b/challenge
 execute if entity @s[scores={Stage=15}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/iceberg_b/custom
 execute if entity @s[scores={Stage=15,StageVersion=1}] run function medabots_server:stage/run/iceberg_b/first_go
 execute if entity @s[scores={Stage=15,StageVersion=2}] run function medabots_server:stage/run/iceberg_b/second_go
@@ -79,7 +79,7 @@ execute if entity @s[scores={Stage=18,StageVersion=4}] run function medabots_ser
 execute if entity @s[scores={Stage=19}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/park_a/custom
 execute if entity @s[scores={Stage=19,StageVersion=1}] run function medabots_server:stage/run/park_a/first_go
 execute if entity @s[scores={Stage=19,StageVersion=2}] run function medabots_server:stage/run/park_a/second_go
-execute if entity @s[scores={Stage=19,StageVersion=3}] run function medabots_server:stage/run/park_a/special
+execute if entity @s[scores={Stage=19,StageVersion=3}] run function medabots_server:stage/run/park_a/challenge
 execute if entity @s[scores={Stage=20}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/park_b/custom
 execute if entity @s[scores={Stage=20,StageVersion=1}] run function medabots_server:stage/run/park_b/first_go
 execute if entity @s[scores={Stage=20,StageVersion=2}] run function medabots_server:stage/run/park_b/second_go
