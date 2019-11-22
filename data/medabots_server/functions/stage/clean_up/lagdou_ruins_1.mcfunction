@@ -1,3 +1,13 @@
 execute as @e[x=-1329,y=0,z=-115,dx=61,dy=50,dz=61,type=!minecraft:player] unless entity @s[scores={Stage=36}] run scoreboard players set @s Stage 36
-function medabots_server:stage/clean_up/lagdou_ruins_1/empty
-tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}
+scoreboard players set @a[scores={Stage=36},tag=enemy_medabot] Music 0
+scoreboard players set @a[scores={Stage=36},tag=enemy_medabot] MusicType 1
+scoreboard players set @a[scores={Stage=36},tag=enemy_medabot] Battle 0
+teleport @a[scores={Stage=36},tag=enemy_medabot] -1298 51 -87 -180 0
+scoreboard players set @s[scores={Stage=36,Battle=0}] Music 0
+scoreboard players set @s[scores={Stage=36,Battle=0}] MusicType 1
+scoreboard players set @s[scores={Stage=36,Battle=0}] Battle 0
+teleport @s[scores={Stage=36,Battle=0}] -1298 51 -87 -180 0
+tag @e[scores={Stage=36},type=!minecraft:player] add dead
+data merge block -1299 52 -115 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/lagdou_ruins_1/play"}}'}
+setblock -1299 53 -117 minecraft:redstone_block
+execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}

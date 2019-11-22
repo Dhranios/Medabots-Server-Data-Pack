@@ -13,30 +13,10 @@ scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={Selec
 tag @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_alien_medaforce"}}}]},tag=!random_change] add random_change
 
 # Randomize alien medaforce
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","2"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","3"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","4"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","5"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","6"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","7"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","8"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","9"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","10"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","11"],Duration:1}
-execute if entity @s[tag=random_change] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Medaforce"}',Tags:["random_medaforce","12"],Duration:1}
-execute if entity @s[tag=random_change] run scoreboard players set @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_medaforce] Medaforce 1
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=2] run scoreboard players set @s Medaforce -2
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=3] run scoreboard players set @s Medaforce -3
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=4] run scoreboard players set @s Medaforce -4
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=5] run scoreboard players set @s Medaforce -5
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=6] run scoreboard players set @s Medaforce -6
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=7] run scoreboard players set @s Medaforce -7
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=8] run scoreboard players set @s Medaforce -8
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=9] run scoreboard players set @s Medaforce -9
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=10] run scoreboard players set @s Medaforce -10
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=11] run scoreboard players set @s Medaforce -11
-execute at @e[type=minecraft:area_effect_cloud,tag=left_arm_selected,tag=12] run scoreboard players set @s Medaforce -12
-execute if entity @s[tag=random_change] run kill @e[type=minecraft:area_effect_cloud,tag=random_medaforce]
+execute if entity @s[tag=random_change] run loot spawn ~ ~ ~ loot medabots_server:gameplay/random_change
+execute if entity @s[tag=random_change] store result score @s Medaforce as @e[type=minecraft:item,distance=..0.7] if data entity @s Item.tag.Option run data get entity @s Item.tag.Option
+scoreboard players operation @s[tag=random_change] Medaforce *= #-1 Constants
+execute if entity @s[tag=random_change] as @e[type=minecraft:item,distance=..0.7] if data entity @s Item.tag.Option run kill @s
 
 # Activate left arm, right arm or head
 tag @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,part:"head"}}}]}] add head_selected

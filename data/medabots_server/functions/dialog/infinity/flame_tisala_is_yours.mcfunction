@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity flame_tisala_is_yours
 scoreboard players set @s[scores={Dialog=1}] MusicType 43
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -1728 50 -574 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1727 50 -572 run function medabots_server:spawn_entities/cutscene/doctor_haru
 execute if entity @s[scores={Dialog=1..243}] at @e[tag=doctor_haru,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=doctor_haru,tag=this_dialog,limit=1] ~ ~ ~ ~ ~

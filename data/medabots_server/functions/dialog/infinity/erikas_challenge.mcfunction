@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity erikas_challenge
 scoreboard players set @s[scores={Dialog=1}] MusicType 37
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -388 55 15 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -391 55 14 run function medabots_server:spawn_entities/cutscene/erika
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=erika,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~

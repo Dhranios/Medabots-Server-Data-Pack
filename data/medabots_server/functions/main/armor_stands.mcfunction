@@ -8,10 +8,7 @@ execute if entity @s[tag=laser,tag=source] run function medabots_server:items/me
 execute if entity @s[tag=mr_referee] run function medabots_server:dialog/mr_referee
 
 # Make mirrors act
-execute if entity @s[tag=mirror] run function medabots_server:blocks/mirror
-
-# Make missions act
-execute if entity @s[tag=mission] run function medabots_server:entities/mission
+execute if entity @s[tag=mirror,tag=!disabled] run function medabots_server:blocks/mirror
 
 # Medabot model animations
 execute as @s[tag=model_piece] run function medabots_server:animations/model_piece

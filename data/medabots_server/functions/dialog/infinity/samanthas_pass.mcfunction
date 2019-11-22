@@ -36,7 +36,7 @@ teleport @s[scores={Dialog=896}] -446 55 -1 80 0
 teleport @s[scores={Dialog=897..2814}] -446 55 -1
 scoreboard players set @s[scores={Dialog=896}] MusicType 35
 scoreboard players set @s[scores={Dialog=896}] Music 0
-scoreboard players set @s[scores={Dialog=896}] Jukebox 0
+execute if entity @s[scores={Dialog=896,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=896}] positioned -452 55 0 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=896}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] positioned -447 55 1 facing entity @e[tag=samantha,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=896}] as @e[tag=kid_1,tag=this_dialog,limit=1] positioned -452 55 3 facing entity @e[tag=samantha,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~

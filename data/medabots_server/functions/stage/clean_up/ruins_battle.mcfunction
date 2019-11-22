@@ -1,10 +1,13 @@
 execute as @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42,type=!minecraft:player] unless entity @s[scores={Stage=49}] run scoreboard players set @s Stage 49
-function medabots_server:stage/clean_up/ruins_battle/walls
-function medabots_server:stage/clean_up/ruins_battle/wind
-function medabots_server:stage/clean_up/ruins_battle/cannons
-function medabots_server:stage/clean_up/ruins_battle/accelerators
-function medabots_server:stage/clean_up/ruins_battle/lasers
-function medabots_server:stage/clean_up/ruins_battle/hammer_punches
-function medabots_server:stage/clean_up/ruins_battle/locked_in
-function medabots_server:stage/clean_up/ruins_battle/empty
-tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}
+scoreboard players set @a[scores={Stage=49},tag=enemy_medabot] Music 0
+scoreboard players set @a[scores={Stage=49},tag=enemy_medabot] MusicType 1
+scoreboard players set @a[scores={Stage=49},tag=enemy_medabot] Battle 0
+teleport @a[scores={Stage=49},tag=enemy_medabot] -1997 51 -560 -180 0
+scoreboard players set @s[scores={Stage=49,Battle=0}] Music 0
+scoreboard players set @s[scores={Stage=49,Battle=0}] MusicType 1
+scoreboard players set @s[scores={Stage=49,Battle=0}] Battle 0
+teleport @s[scores={Stage=49,Battle=0}] -1997 51 -560 -180 0
+tag @e[scores={Stage=49},type=!minecraft:player] add dead
+data merge block -1998 52 -581 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_battle/play"}}'}
+setblock -1998 53 -583 minecraft:redstone_block
+execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}

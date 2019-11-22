@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity peppercat_saved
 scoreboard players set @s[scores={Dialog=1}] MusicType 48
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -1543 50 -576 run function medabots_server:spawn_entities/cutscene/peppercat
 execute if entity @s[scores={Dialog=1}] positioned -1543 50 -575 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=1}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~

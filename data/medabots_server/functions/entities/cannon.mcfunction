@@ -15,12 +15,8 @@ execute if entity @s[scores={Time=9,CannonFire=0..},tag=detect,tag=detected,tag=
 execute if entity @s[scores={Time=7,CannonFire=0..},tag=detect,tag=detected,tag=!dying,tag=!already_targetted] run playsound medabots_server:entity.cannon.beep hostile @a ~ ~ ~ 1
 
 # Fire in the hole!
-execute store result score #temp Stage run scoreboard players get @s Stage
-execute as @e[scores={Battle=2}] if score @s Stage = #temp Stage run tag @e[tag=cannon,type=minecraft:zombie,distance=..0.1] add no_fire
-execute if entity @s[scores={Time=0,CannonFire=1..},tag=!no_fire,tag=!dying] unless entity @s[scores={IneffectiveTime=1..}] run function medabots_server:entities/cannon/fire
-scoreboard players set @s[scores={Time=0,CannonFire=1..,IneffectiveTime=1..},tag=!no_fire,tag=!dying] CannonFire 0
-tag @s[tag=no_fire] remove no_fire
-scoreboard players reset #temp Stage
+execute if entity @s[scores={Time=0,CannonFire=1..},tag=!dying] unless entity @s[scores={IneffectiveTime=1..}] run function medabots_server:entities/cannon/fire
+scoreboard players set @s[scores={Time=0,CannonFire=1..,IneffectiveTime=1..},tag=!dying] CannonFire 0
 
 # Set anything that has detected to have not detected
 tag @s[tag=!detected] remove already_targetted

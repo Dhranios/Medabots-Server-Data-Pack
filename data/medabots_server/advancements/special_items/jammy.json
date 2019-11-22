@@ -13,7 +13,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "medabots_server:special_items/rubberobo",
+    "parent": "medabots_server:special_items/balloon_bomb",
     "criteria": {
         "obtained": {
             "trigger": "minecraft:impossible"

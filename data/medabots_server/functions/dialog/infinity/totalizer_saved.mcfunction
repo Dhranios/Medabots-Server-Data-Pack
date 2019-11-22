@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity totalizer_saved
 scoreboard players set @s[scores={Dialog=1}] MusicType 44
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -1541 50 -511 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1543 50 -513 run function medabots_server:spawn_entities/cutscene/totalizer
 execute if entity @s[scores={Dialog=1}] positioned -1538 50 -515 run function medabots_server:spawn_entities/cutscene/caroline

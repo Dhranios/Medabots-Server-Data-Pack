@@ -4,6 +4,7 @@ execute if entity @s[scores={Dialog=0},advancements={medabots_server:special_ite
 execute if entity @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] run setblock -1957 45 -197 minecraft:red_wool
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] Music 0
 scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] MusicType 4
+scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] Stage 62
 execute if entity @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/arena_settings
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
 execute unless entity @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true}] run tellraw @s {"translate":"medabots_server:message.stage.requires.not_matching","with":[{"translate":"medabots_server:message.stage.requirements.final_destination_2.0"}]}

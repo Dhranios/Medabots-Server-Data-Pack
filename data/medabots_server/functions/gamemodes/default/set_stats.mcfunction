@@ -47,8 +47,10 @@ scoreboard players operation @s LeftArmArmor = @s MaxLeftArmArmor
 scoreboard players operation @s LegsArmor = @s MaxLegsArmor
 
 # Activate parts
-execute if entity @s[tag=!murder_mystery] run function medabots_server:items/enable_medaparts
-execute if entity @s[tag=murder_mystery,tag=!innocent] run function medabots_server:items/enable_medaparts
+function medabots_server:items/enable_medaparts
+
+# Spawn gold pass if level is above 50
+execute if entity @s[level=50..,advancements={medabots_server:special_items/passes/gold=false}] run function medabots_server:spawn_entities/pass/gold
 
 # Model
 function medabots_server:entities/medabot/spawn_model

@@ -71,6 +71,7 @@ execute if entity @s[scores={Stage=17}] unless entity @s[scores={StageVersion=1.
 execute if entity @s[scores={Stage=17,StageVersion=1}] run function medabots_server:stage/run/ruins_in_b/first_go
 execute if entity @s[scores={Stage=17,StageVersion=2}] run function medabots_server:stage/run/ruins_in_b/second_go
 execute if entity @s[scores={Stage=17,StageVersion=3}] run function medabots_server:stage/run/ruins_in_b/rubberobo
+execute if entity @s[scores={Stage=17,StageVersion=4}] run function medabots_server:stage/run/ruins_in_b/dev_fvbico
 execute if entity @s[scores={Stage=18}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/laboratory_b/custom
 execute if entity @s[scores={Stage=18,StageVersion=1}] run function medabots_server:stage/run/laboratory_b/first_go
 execute if entity @s[scores={Stage=18,StageVersion=2}] run function medabots_server:stage/run/laboratory_b/second_go

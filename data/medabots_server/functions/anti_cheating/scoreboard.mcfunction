@@ -207,9 +207,8 @@ scoreboard players set #1005 Constants 1005
 scoreboard players set #10000 Constants 10000
 scoreboard players set Medabots: ServerStats 70
 scoreboard players set Medals: ServerStats 12
-scoreboard players set Bosses: ServerStats 13
+scoreboard players set Bosses: ServerStats 14
 scoreboard players set Enemies: ServerStats 9
-scoreboard players set Passes: ServerStats 19
 scoreboard players set Dev_Mode_Versions: ServerStats 2
 
 # Re-add any teams that may have been removed

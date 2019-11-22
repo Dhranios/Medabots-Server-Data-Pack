@@ -8,6 +8,8 @@ tag @e[distance=..0.7,tag=rubberobo] add dead
 
 tag @s add me
 execute if entity @e[distance=..0.7,tag=!me,tag=!dead,tag=!model_piece] run tag @s add cancel
+execute if block ~ ~ ~ minecraft:iron_door[hinge=right] run tag @s add cancel
+execute if block ~ ~ ~ minecraft:quartz_pillar run tag @s add cancel
 
 # Remove
 kill @s
@@ -51,3 +53,4 @@ execute if entity @s[tag=!cancel,tag=ice_block,tag=!action_floor] run function m
 execute if entity @s[tag=!cancel,tag=bomb,tag=!action_floor] run function medabots_server:blocks/stage_builder/bomb
 
 execute if entity @s[tag=!cancel,tag=no_ticker] run tag @e[distance=..0.7,type=!minecraft:player] add no_ticking
+execute if entity @s[tag=!cancel,tag=disabled] run tag @e[distance=..0.7,type=!minecraft:player] add disabled

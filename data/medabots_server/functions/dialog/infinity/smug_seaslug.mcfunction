@@ -17,7 +17,7 @@ tellraw @s[scores={Dialog=264}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=272}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug"},{"translate":"medabots_server:dialog.infinity.smug_seaslug.6"}]}
 scoreboard players set @s[scores={Dialog=344}] MusicType 32
 scoreboard players set @s[scores={Dialog=344}] Music 0
-scoreboard players set @s[scores={Dialog=344}] Jukebox 0
+execute if entity @s[scores={Dialog=344,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=344}] positioned -412 55 -72 run function medabots_server:spawn_entities/cutscene/seaslug
 execute if entity @s[scores={Dialog=344}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=344}] as @e[tag=seaslug,tag=this_dialog,limit=1] run tag @s add running

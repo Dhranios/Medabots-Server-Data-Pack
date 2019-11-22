@@ -35,7 +35,7 @@ execute if entity @s[scores={Dialog=296..669}] as @e[tag=metabee,tag=!medabot_mo
 execute if entity @s[scores={Dialog=296..663}] at @e[tag=gillgirl,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=gillgirl,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 scoreboard players set @s[scores={Dialog=296}] MusicType 32
 scoreboard players set @s[scores={Dialog=296}] Music 0
-scoreboard players set @s[scores={Dialog=296}] Jukebox 0
+execute if entity @s[scores={Dialog=296,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 tellraw @s[scores={Dialog=296}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.10"}]}
 tellraw @s[scores={Dialog=304}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.11"}]}
 tellraw @s[scores={Dialog=368}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.12"}]}

@@ -14,6 +14,6 @@ execute if block -1533 44 -174 minecraft:lime_wool run scoreboard players set @e
 execute if block -1538 44 -169 minecraft:lime_wool run scoreboard players set @e[x=-1547.5,y=45,z=-171.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1543 44 -174 minecraft:lime_wool run scoreboard players set @e[x=-1548.5,y=45,z=-171.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1}] run scoreboard players set @s Stage 1
-execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/grassland_a/second_go
+execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/grassland_a
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/grassland_a_second_go
 execute if entity @s[tag=clear_stage] positioned -1539 51 -151 run function medabots_server:stage/clear

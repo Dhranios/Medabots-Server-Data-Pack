@@ -13,7 +13,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "medabots_server:special_items/alarm",
+    "parent": "medabots_server:special_items/laser_trap",
     "criteria": {
         "obtained": {
             "trigger": "minecraft:impossible"

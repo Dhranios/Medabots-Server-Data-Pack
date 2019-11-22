@@ -5,7 +5,7 @@ execute if entity @e[scores={Stage=3},tag=hide_normal_time] store result score #
 execute if entity @e[scores={Stage=3},tag=hide_normal_time] if entity @e[scores={Stage=3,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:jungle_a/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[scores={Stage=3},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1706,y=42,z=-179,dx=63,dy=8,dz=63,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/jungle_a/rubberobo
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/jungle_a
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1688 44 -125 minecraft:yellow_wool run scoreboard players set @e[x=-1679.5,y=45,z=-128.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1688 44 -125 minecraft:orange_wool run scoreboard players set @e[x=-1679.5,y=45,z=-128.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
@@ -28,7 +28,7 @@ execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1706
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:jungle_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=-1705,y=42,z=-179,dx=63,dy=8,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=3}] run scoreboard players set @s Stage 3
-execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/jungle_a/rubberobo
+execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/jungle_a
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/jungle_a_rubberobo
 tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={rubberobo_enters_jungle_a=true,rubberobo_leaves_jungle_a=false}}] add dialog_infinity_rubberobo_leaves_jungle_a
 execute if entity @s[tag=clear_stage] positioned -1673 51 -148 run function medabots_server:stage/clear

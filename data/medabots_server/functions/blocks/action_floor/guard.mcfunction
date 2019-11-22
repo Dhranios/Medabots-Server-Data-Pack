@@ -5,6 +5,6 @@ execute if entity @s[tag=4_medallar_cents] positioned ~ ~-1.3999 ~ run function 
 execute if entity @s[tag=6_medallar_cents] positioned ~ ~-1.3999 ~ run function medabots_server:spawn_entities/guard/medium/6_medallar_cents
 execute if entity @s[tag=10_medallar_cents] positioned ~ ~-1.3999 ~ run function medabots_server:spawn_entities/guard/medium/10_medallar_cents
 execute if entity @s[tag=20_medallar_cents] positioned ~ ~-1.3999 ~ run function medabots_server:spawn_entities/guard/medium/20_medallar_cents
-execute positioned ~ ~-1.3999 ~ run scoreboard players operation @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=!action_floor] Speed = @s DelayTime
+execute positioned ~ ~-1.3999 ~ run scoreboard players operation @e[distance=..0.7,type=minecraft:creeper,tag=guard,tag=!action_floor] Speed = @s DelayTime
 execute positioned ~ ~-1.3999 ~ run tag @e[distance=..0.7,tag=!action_floor,tag=guard] add no_processing
 execute positioned ~ ~-1.3999 ~ as @e[distance=..0.7,tag=guard] run data merge entity @s {Invulnerable:1b}

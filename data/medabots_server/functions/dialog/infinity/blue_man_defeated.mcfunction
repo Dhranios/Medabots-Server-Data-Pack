@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity blue_man_defeated
 scoreboard players set @s[scores={Dialog=1}] MusicType 46
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -1541 51 -150 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] run summon minecraft:area_effect_cloud -1539 51 -148 {Duration:1000000,Tags:["cutscene","this_dialog","medabot","blue_man"],Rotation:[0.0f,0.0f]}
 execute if entity @s[scores={Dialog=1}] run scoreboard players operation @e[x=-1539,y=51,z=-148,distance=..1,tag=blue_man] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr

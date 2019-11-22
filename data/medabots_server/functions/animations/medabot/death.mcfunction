@@ -13,7 +13,6 @@ execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Damage 
 replaceitem entity @s[scores={DeathTime=1},type=!minecraft:player] weapon.mainhand minecraft:air
 execute if entity @s[scores={DeathTime=1}] run function medabots_server:effects/clear
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function medabots_server:other/death
-tag @s[tag=stage_builder] remove stage_builder_message
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
@@ -47,7 +46,7 @@ execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=ally_medabot] run tag @
 scoreboard players set @s[y=-80,dy=79,scores={DeathTime=1}] DeathTime 99
 execute if entity @s[scores={DeathTime=1..99}] positioned as @e[tag=this_medabot,limit=1] rotated as @s rotated ~ 0 run teleport @s ^0.105 ^2 ^-1.5 facing entity @e[tag=this_medabot,limit=1]
 execute if entity @s[scores={DeathTime=100}] run function medabots_server:other/death
-execute if entity @s[scores={DeathTime=100},type=minecraft:player] run function medabots_server:stage/left_server_enforced
+execute if entity @s[scores={DeathTime=100},type=minecraft:player] run function medabots_server:stage/exit/enforced
 tag @s[scores={DeathTime=100},type=!minecraft:player] add dead
 execute if entity @s[scores={DeathTime=100}] at @e[tag=this_medabot] positioned ~ ~0.7 ~ run particle minecraft:cloud ~ ~ ~ 1 1 1 0 30
 execute if entity @s[scores={DeathTime=100}] run kill @e[tag=this_medabot]

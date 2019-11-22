@@ -6,7 +6,7 @@ execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add
 scoreboard players add @s Dialog 1
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity shrimplips_jammy_battle
 execute if entity @s[scores={Dialog=1}] positioned -1947 51 -563 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -1949 51 -560 run function medabots_server:spawn_entities/cutscene/shrimplips

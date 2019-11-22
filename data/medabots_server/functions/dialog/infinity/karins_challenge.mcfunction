@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity karins_challenge
 scoreboard players set @s[scores={Dialog=1}] MusicType 36
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -393 55 -93 run function medabots_server:spawn_entities/cutscene/neutranurse
 execute if entity @s[scores={Dialog=1}] positioned -394 55 -95 run function medabots_server:spawn_entities/cutscene/karin
@@ -46,7 +46,7 @@ tellraw @s[scores={Dialog=968}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=976}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.karins_challenge.26"}]}
 tellraw @s[scores={Dialog=984}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.karins_challenge.27"}]}
 tellraw @s[scores={Dialog=1024}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.karins_challenge.28"}]}
-tag @s[scores={Dialog=1024},advancements={medabots_server:special_items/purple_plant=true,medabots_server:special_items/blue_plant=true,medabots_server:special_items/light_blue_plant=true,medabots_server:special_items/green_plant=true,medabots_server:special_items/yellow_plant=true,medabots_server:special_items/orange_plant=true,medabots_server:special_items/red_plant=true}] add has_flowers
+tag @s[scores={Dialog=1024..},advancements={medabots_server:special_items/purple_plant=true,medabots_server:special_items/blue_plant=true,medabots_server:special_items/light_blue_plant=true,medabots_server:special_items/green_plant=true,medabots_server:special_items/yellow_plant=true,medabots_server:special_items/orange_plant=true,medabots_server:special_items/red_plant=true}] add has_flowers
 tellraw @s[scores={Dialog=1032},tag=has_flowers] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.karins_challenge.29.alternate"}]}
 tag @s[scores={Dialog=1103},tag=has_flowers] remove dialog_infinity_karins_challenge
 tag @s[scores={Dialog=1103},tag=has_flowers] add dialog_infinity_karins_pass
@@ -65,3 +65,4 @@ scoreboard players reset @s[scores={Dialog=1440}] DialogNr
 scoreboard players set @s[scores={Dialog=1440}] Dialog 0
 scoreboard players reset #temp DialogNr
 tag @e[tag=this_dialog] remove this_dialog
+tag @s[tag=has_flowers] remove has_flowers

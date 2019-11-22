@@ -1,6 +1,16 @@
 execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
-function medabots_server:stage/clean_up/snowfield_a/first_go
-function medabots_server:stage/clean_up/snowfield_a/second_go
-function medabots_server:stage/clean_up/snowfield_a/rubberobo
-function medabots_server:stage/clean_up/snowfield_a/custom
-tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}
+bossbar set medabots_server:snowfield_a/time players
+bossbar set medabots_server:snowfield_a/robattle players
+scoreboard players set @a[scores={Stage=5},tag=enemy_medabot] Music 0
+scoreboard players set @a[scores={Stage=5},tag=enemy_medabot] MusicType 1
+scoreboard players set @a[scores={Stage=5},tag=enemy_medabot] Battle 0
+teleport @a[scores={Stage=5},tag=enemy_medabot] -1620 51 -216 -180 0
+scoreboard players set @s[scores={Stage=5,Battle=0}] Music 0
+scoreboard players set @s[scores={Stage=5,Battle=0}] MusicType 1
+scoreboard players set @s[scores={Stage=5,Battle=0}] Battle 0
+teleport @s[scores={Stage=5,Battle=0}] -1620 51 -216 -180 0
+tag @e[scores={Stage=5},type=!minecraft:player] add dead
+data merge block -1621 52 -247 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/snowfield_a/play"}}'}
+setblock -1621 53 -249 minecraft:redstone_block
+clear @s minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}
+execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}

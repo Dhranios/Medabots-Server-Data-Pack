@@ -6,7 +6,7 @@ execute if entity @e[scores={Stage=13},tag=hide_normal_time] if entity @e[scores
 execute if entity @e[scores={Stage=13},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=13},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/seashore_b/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/seashore_b
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1760 44 -387 minecraft:lime_wool run scoreboard players set @e[x=-1686.5,y=45,z=-358.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1684 44 -353 minecraft:lime_wool if block -1674 44 -374 minecraft:lime_wool if block -1702 44 -365 minecraft:lime_wool run scoreboard players set @e[x=-1672.5,y=45,z=-387.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
@@ -58,7 +58,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1747 45 -413 minecraft:iron_door[open=true] if entity @s[x=-1748,y=45,z=-416,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_b/first_go_battle/1
 execute if entity @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=13,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1762,y=42,z=-442,dx=94,dy=7,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=13}] run scoreboard players set @s Stage 13
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/seashore_b/first_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/seashore_b
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/seashore_b_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:seashore_b/robattle players
 tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={jammy_discovered=true,max_got_ditched=false}}] add dialog_infinity_max_got_ditched

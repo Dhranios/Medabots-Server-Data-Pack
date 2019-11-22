@@ -24,7 +24,7 @@ execute if entity @s[type=minecraft:snowball] run function medabots_server:main/
 
 # Functions that run on every Rubberobo
 execute if entity @s[tag=rubberobo,nbt={HurtTime:5s}] unless entity @s[scores={Stage=1..}] run function medabots_server:entities/rubberobo/caught
-execute if entity @s[tag=rubberobo,scores={Stage=1..}] run function medabots_server:entities/rubberobo
+execute if entity @s[tag=rubberobo,scores={Stage=1..},tag=!disabled] run function medabots_server:entities/rubberobo
 
 # Make the guards do things
 execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_server:entities/guard
@@ -32,10 +32,10 @@ execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_ser
 # Make the cannons do things
 tag @s[type=minecraft:zombie,tag=cannon,tag=!enabled,nbt={AbsorptionAmount:0.0f}] add enabled
 tag @s[type=minecraft:zombie,tag=cannon,tag=!enabled,tag=dead] add enabled
-execute if entity @s[type=minecraft:zombie,tag=cannon,tag=enabled] run function medabots_server:entities/cannon
+execute if entity @s[type=minecraft:zombie,tag=cannon,tag=enabled,tag=!disabled] run function medabots_server:entities/cannon
 
 # Make the jammy do things
-execute if entity @s[type=minecraft:pig,tag=jammy] run function medabots_server:blocks/jammy
+execute if entity @s[type=minecraft:pig,tag=jammy,tag=!disabled] run function medabots_server:blocks/jammy
 
 # Prevent tnt (minecarts) from destroying terrain
 execute if entity @s[type=minecraft:tnt] run function medabots_server:anti_cheating/tnt

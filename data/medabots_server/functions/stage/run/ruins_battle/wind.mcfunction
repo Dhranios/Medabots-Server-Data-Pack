@@ -17,7 +17,7 @@ execute if block -1999 44 -576 minecraft:yellow_wool run tag @e[x=-1998.5,y=45,z
 execute if block -1999 44 -576 minecraft:orange_wool run scoreboard players add @e[x=-1998.5,y=45,z=-578.5,distance=..0.7,tag=fan,type=minecraft:area_effect_cloud,tag=changed] Moving 1
 execute if block -1999 44 -576 minecraft:orange_wool run tag @e[x=-1998.5,y=45,z=-578.5,distance=..0.7,tag=fan,type=minecraft:area_effect_cloud,tag=changed] remove changed
 execute as @e[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42,type=!minecraft:player] unless entity @s[scores={Stage=49}] run scoreboard players set @s Stage 49
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/ruins_battle/wind
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/ruins_battle
 tag @s[scores={BattlingMedabots=1,Battle=1..},tag=story_battle,advancements={medabots_server:story_progression/infinity={vs_seaslug=true,vs_seaslug_battle=false}}] add dialog_infinity_vs_seaslug_battle
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1997 51 -560 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

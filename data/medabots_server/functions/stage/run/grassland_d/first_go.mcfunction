@@ -5,7 +5,7 @@ execute if entity @e[scores={Stage=30},tag=hide_normal_time] store result score 
 execute if entity @e[scores={Stage=30},tag=hide_normal_time] if entity @e[scores={Stage=30,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:grassland_d/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[scores={Stage=30},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/grassland_d/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/grassland_d
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1547 44 -697 minecraft:yellow_wool run scoreboard players set @e[x=-1558.5,y=45,z=-699.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1550 44 -700 minecraft:yellow_wool run scoreboard players set @e[x=-1558.5,y=45,z=-699.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
@@ -89,7 +89,7 @@ execute if block -1586 44 -745 minecraft:orange_wool run tag @e[x=-1583.5,y=45,z
 execute if block -1588 45 -730 minecraft:iron_door[open=true] if entity @s[x=-1589,y=45,z=-733,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_d/first_go_battle/0
 execute if entity @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=30,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1600,y=42,z=-750,dx=62,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=30}] run scoreboard players set @s Stage 30
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/grassland_d/first_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/grassland_d
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/grassland_d_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:grassland_d/robattle players
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1570 51 -720 run function medabots_server:stage/clear

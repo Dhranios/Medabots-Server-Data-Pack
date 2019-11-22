@@ -6,7 +6,7 @@ execute if entity @e[scores={Stage=9},tag=hide_normal_time] if entity @e[scores=
 execute if entity @e[scores={Stage=9},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=9},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/laboratory_a/rubberobo
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/laboratory_a
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1775 43 -258 minecraft:green_wool if block -1770 43 -258 minecraft:green_wool if block -1770 43 -253 minecraft:green_wool if block -1775 43 -253 minecraft:green_wool run scoreboard players set @e[x=-1762.5,y=44,z=-270.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1780 43 -270 minecraft:yellow_wool run scoreboard players set @e[x=-1762.5,y=44,z=-270.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
@@ -84,7 +84,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1772 44 -313 minecraft:iron_door[open=true] if entity @s[x=-1773.5,y=44,z=-313,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_a/rubberobo_battle/2
 execute if entity @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=9,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1812,y=41,z=-322,dx=80,dy=8,dz=72,type=!minecraft:player] unless entity @s[scores={Stage=9}] run scoreboard players set @s Stage 9
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/laboratory_a/rubberobo
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/laboratory_a
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/laboratory_a_rubberobo
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:laboratory_a/robattle players
 tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={rubberobo_enters_laboratory_a=true,rubberobo_leaves_laboratory_a=false}}] add dialog_infinity_rubberobo_leaves_laboratory_a

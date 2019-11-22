@@ -270,49 +270,43 @@
         "grassland_d_first_go": {
             "trigger": "minecraft:impossible"
         },
-        "grassland_d_second_go": {
-            "trigger": "minecraft:impossible"
-        },
         "jungle_d_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "jungle_d_second_go": {
             "trigger": "minecraft:impossible"
         },
         "snowfield_d_first_go": {
             "trigger": "minecraft:impossible"
         },
-        "snowfield_d_second_go": {
-            "trigger": "minecraft:impossible"
-        },
         "iceberg_d_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "iceberg_d_second_go": {
             "trigger": "minecraft:impossible"
         },
         "ruins_in_d_first_go": {
             "trigger": "minecraft:impossible"
         },
-        "ruins_in_d_second_go": {
-            "trigger": "minecraft:impossible"
-        },
         "laboratory_d_first_go": {
-            "trigger": "minecraft:impossible"
-        },
-        "laboratory_d_second_go": {
             "trigger": "minecraft:impossible"
         },
         "final_destination_1": {
             "trigger": "minecraft:impossible"
         },
+        "final_destination_1_master_hand": {
+            "trigger": "minecraft:impossible"
+        },
         "final_destination_2": {
+            "trigger": "minecraft:impossible"
+        },
+        "final_destination_2_master_hand": {
             "trigger": "minecraft:impossible"
         },
         "final_destination_3": {
             "trigger": "minecraft:impossible"
         },
+        "final_destination_3_master_hand": {
+            "trigger": "minecraft:impossible"
+        },
         "final_destination_4": {
+            "trigger": "minecraft:impossible"
+        },
+        "final_destination_4_master_hand": {
             "trigger": "minecraft:impossible"
         },
         "lagdou_ruins_1_first_go": {

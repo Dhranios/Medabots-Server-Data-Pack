@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity bonus_area_pass
 scoreboard players set @s[scores={Dialog=1}] MusicType 42
 scoreboard players set @s[scores={Dialog=1}] Music 0
-scoreboard players set @s[scores={Dialog=1}] Jukebox 0
+execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -397 55 -51 run function medabots_server:spawn_entities/cutscene/metabee
 execute if entity @s[scores={Dialog=1}] positioned -394 55 -52 run function medabots_server:spawn_entities/cutscene/director_tune
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=this_dialog,limit=1] at @s facing entity @e[tag=director_tune,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~

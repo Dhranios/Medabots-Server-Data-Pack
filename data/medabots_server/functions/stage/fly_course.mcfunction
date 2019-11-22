@@ -7,8 +7,8 @@ scoreboard players reset @s[scores={FlyCourse=0}] FlyCourseLapTime
 scoreboard players set @s[scores={FlyCourse=0}] Time 0
 scoreboard players set @s[scores={FlyCourse=0}] MusicType 1
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={FlyCourse=0}] Music 0
-scoreboard players reset @s[scores={FlyCourse=0}] FlyCourse
 scoreboard players reset @s[scores={FlyCourse=0}] Gamemode
+scoreboard players reset @s[scores={FlyCourse=0}] FlyCourse
 
 # Give the items
 tag @s[tag=fly_course_speed] remove fly_course_speed
@@ -20,6 +20,7 @@ execute unless entity @s[nbt={Inventory:[{Slot:8b}]}] run replaceitem entity @s[
 
 # Play the music
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={FlyCourse=1}] Music 0
+scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:0b}] MusicType 0
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] MusicType 6
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] Time 220
 

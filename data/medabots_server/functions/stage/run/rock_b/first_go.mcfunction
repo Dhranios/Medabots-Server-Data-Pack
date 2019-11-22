@@ -6,7 +6,7 @@ execute if entity @e[scores={Stage=11},tag=hide_normal_time] if entity @e[scores
 execute if entity @e[scores={Stage=11},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=11},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/rock_b/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/rock_b
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1603 44 -321 minecraft:lime_wool run scoreboard players set @e[x=-1589.5,y=45,z=-332.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1607 44 -321 minecraft:lime_wool run scoreboard players set @e[x=-1613.5,y=45,z=-331.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
@@ -38,7 +38,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1615 45 -372 minecraft:iron_door[open=true] if entity @s[x=-1615,y=45,z=-373,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_b/first_go_battle/2
 execute if entity @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=11,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1636,y=43,z=-382,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=11}] run scoreboard players set @s Stage 11
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/rock_b/first_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/rock_b
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/rock_b_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:rock_b/robattle players
 tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={vs_sloan_battle=true,jammy_discovered=false}}] add dialog_infinity_jammy_discovered

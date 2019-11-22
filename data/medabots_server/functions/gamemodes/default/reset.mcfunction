@@ -72,6 +72,7 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:yellow_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/yellow_plant
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:orange_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/orange_plant
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:red_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/red_plant
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:gold_pass",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/gold_pass
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/stage_build_item
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar",stage_item:1b}}}]}] run function medabots_server:items/put_medallars_on_bank
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:items/give_obtained_item

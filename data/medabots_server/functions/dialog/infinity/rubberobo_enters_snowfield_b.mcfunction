@@ -15,7 +15,7 @@ tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=280}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_snowfield_b.4"}]}
 scoreboard players set @s[scores={Dialog=296}] MusicType 32
 scoreboard players set @s[scores={Dialog=296}] Music 0
-scoreboard players set @s[scores={Dialog=296}] Jukebox 0
+execute if entity @s[scores={Dialog=296,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=296}] positioned -349 55 -13 run function medabots_server:spawn_entities/cutscene/rubberobo
 execute if entity @s[scores={Dialog=296}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 5 ~
 execute if entity @s[scores={Dialog=306..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~

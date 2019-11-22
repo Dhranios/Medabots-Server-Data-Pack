@@ -5,7 +5,7 @@ execute if entity @e[scores={Stage=20},tag=hide_normal_time] store result score 
 execute if entity @e[scores={Stage=20},tag=hide_normal_time] if entity @e[scores={Stage=20,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:park_b/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[scores={Stage=20},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/park_b/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/park_b
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1818 44 -678 minecraft:lime_wool run scoreboard players set @e[x=-1818.5,y=45,z=-674.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1822 44 -662 minecraft:lime_wool if block -1822 44 -656 minecraft:lime_wool if block -1822 44 -647 minecraft:lime_wool if block -1830 44 -643 minecraft:lime_wool if block -1837 44 -643 minecraft:lime_wool if block -1848 44 -645 minecraft:lime_wool if block -1849 44 -653 minecraft:lime_wool if block -1849 44 -659 minecraft:lime_wool if block -1842 44 -670 minecraft:lime_wool run scoreboard players set @e[x=-1818.5,y=45,z=-691.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
@@ -29,7 +29,7 @@ execute if block -1794 44 -700 minecraft:blue_wool if block -1791 44 -703 minecr
 execute if block -1810 45 -668 minecraft:iron_door[open=true] if entity @s[x=-1812,y=45,z=-668,dx=3,dy=3,dz=3] run function medabots_server:stage/create/park_b/first_go_battle/0
 execute if entity @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=20,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=20}] run scoreboard players set @s Stage 20
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/park_b/first_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/park_b
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/park_b_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:park_b/robattle players
 tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={erikas_article=true,erika_is_out_of_the_race=false}}] add dialog_infinity_erika_is_out_of_the_race

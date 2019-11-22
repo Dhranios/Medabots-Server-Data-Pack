@@ -4,3 +4,4 @@ data merge block -1891 51 -603 {Text1:'{"text":"","clickEvent":{"action":"run_co
 setblock -1891 52 -605 minecraft:redstone_block
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 22
+scoreboard players reset @s Stage

@@ -5,10 +5,10 @@ execute if entity @e[scores={Stage=29},tag=hide_normal_time] store result score 
 execute if entity @e[scores={Stage=29},tag=hide_normal_time] if entity @e[scores={Stage=29,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:boxer/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[scores={Stage=29},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=29},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1879 44 -562 minecraft:iron_door[open=true] if block -1876 44 -571 minecraft:iron_door[open=false] if entity @s[x=-1880,y=44,z=-561,dx=3,dy=3,dz=3] run function medabots_server:stage/create/boxer/first_go_battle/0
 execute if entity @e[x=-1871.5,y=44,z=-553.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=29,Medabot=0..,Battle=1..2}]
@@ -69,7 +69,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1899 44 -561 minecraft:iron_door[open=true] if block -1891 44 -558 minecraft:iron_door[open=false] unless entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee,type=minecraft:armor_stand] if entity @s[x=-1899,y=44,z=-562,dx=3,dy=3,dz=3] run function medabots_server:stage/create/boxer/first_go_battle/7
 execute if entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=29,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=29}] run scoreboard players set @s Stage 29
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/boxer/first_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/boxer
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/boxer_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:boxer/robattle players
 tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={the_final_battle=true,victory=false}}] add dialog_infinity_victory

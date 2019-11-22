@@ -10,7 +10,7 @@ scoreboard players add @s[scores={Time=..-1}] Time 1
 tag @s[tag=no_spawning] remove no_spawning
 
 # Spawn
-execute if entity @s[scores={Time=1..}] run function medabots_server:blocks/action_floor/spawn
+execute if entity @s[scores={Time=1..},tag=!dead] run function medabots_server:blocks/action_floor/spawn
 
 # Remove when cleaning up stage
 execute if entity @s[tag=dead] run function medabots_server:blocks/action_floor/clean_up

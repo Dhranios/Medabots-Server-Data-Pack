@@ -15,7 +15,7 @@
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1/final_destination_3",
+	"parent": "medabots_server:stages/wave_1/final_destination_3_master_hand",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

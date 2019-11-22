@@ -6,7 +6,7 @@ execute if entity @e[scores={Stage=22},tag=hide_normal_time] if entity @e[scores
 execute if entity @e[scores={Stage=22},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1665,y=42,z=-638,dx=64,dy=7,dz=63,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=22},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1665,y=42,z=-638,dx=64,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/paradise_b/first_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/paradise_b
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1646 44 -632 minecraft:lime_wool run scoreboard players set @e[x=-1644.5,y=45,z=-628.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerNeeded=1}] PowerAmount 1
 execute if block -1643 44 -623 minecraft:lime_wool run scoreboard players set @e[x=-1647.5,y=45,z=-612.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerNeeded=1}] PowerAmount 1
@@ -53,7 +53,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1659 45 -628 minecraft:iron_door[open=true] if entity @s[x=-1661,y=45,z=-628,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/first_go_battle/4
 execute if entity @e[x=-1665,y=42,z=-638,dx=64,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1665,y=42,z=-638,dx=64,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=22}] run scoreboard players set @s Stage 22
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/paradise_b/first_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/paradise_b
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/paradise_b_first_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:paradise_b/robattle players
 tag @s[scores={BattlingMedabots=1,Battle=1..},advancements={medabots_server:story_progression/infinity={the_final_stage=true,jaxy_is_gone=false}}] add dialog_infinity_jaxy_is_gone

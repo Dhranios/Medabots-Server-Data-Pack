@@ -6,7 +6,7 @@ execute if entity @e[scores={Stage=29},tag=hide_normal_time] if entity @e[scores
 execute if entity @e[scores={Stage=29},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=29},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
 scoreboard players reset #temp Time
-execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer/second_go
+execute if entity @s[scores={Battle=0}] run function medabots_server:stage/clean_up/boxer
 execute if entity @s[scores={Battle=0}] run function medabots_server:other/death
 execute if block -1903 44 -561 minecraft:quartz_pillar unless entity @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud -1906 44 -555 {CustomName:'{"translate":"medabots_server:block.press_wall"}',Tags:["press_wall_timer"],Duration:400}
 scoreboard players add @e[x=-1905.5,y=44,z=-554.5,distance=..0.7,tag=press_wall_timer,type=minecraft:area_effect_cloud] Time 1
@@ -71,7 +71,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1899 44 -561 minecraft:iron_door[open=true] if block -1890 44 -558 minecraft:iron_door[open=false] unless entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee,type=minecraft:armor_stand] if entity @s[x=-1899,y=44,z=-562,dx=3,dy=3,dz=3] run function medabots_server:stage/create/boxer/second_go_battle/7
 execute if entity @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=29,Medabot=0..,Battle=1..2}]
 execute as @e[x=-1921,y=42,z=-603,dx=64,dy=7,dz=64,type=!minecraft:player] unless entity @s[scores={Stage=29}] run scoreboard players set @s Stage 29
-execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/boxer/second_go
+execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run function medabots_server:stage/clean_up/boxer
 advancement grant @s[scores={BattlingMedabots=1,Battle=1..}] only medabots_server:stages/wave_1/boxer_second_go
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run bossbar set medabots_server:boxer/robattle players
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -1890 50 -571 run function medabots_server:stage/clear

@@ -38,6 +38,12 @@
         },
         "magolor_appears": {
             "trigger": "minecraft:impossible"
+        },
+        "ruins_in_b_fvbico": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_in_b_fvbico_cleared": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

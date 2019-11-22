@@ -4,6 +4,9 @@ execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progre
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progression/infinity={motivated_fight=true,motivated_fight_battle=false}}] run function medabots_server:stage/try/ruins_battle/story_battle/motivated_fight
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progression/infinity={vs_screws=true,vs_screws_battle=false}}] run function medabots_server:stage/try/ruins_battle/story_battle/vs_screws
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progression/infinity={vs_jaxy=true,vs_jaxy_battle=false}}] run function medabots_server:stage/try/ruins_battle/story_battle/vs_jaxy
+execute if entity @s[tag=valid_tinpet,scores={KillStreak=1}] run function medabots_server:stage/try/ruins_battle/story_battle/postgame_spyke
+execute if entity @s[tag=valid_tinpet,scores={KillStreak=2}] run function medabots_server:stage/try/ruins_battle/story_battle/postgame_jaxy
+execute if entity @s[tag=valid_tinpet,scores={KillStreak=3}] run function medabots_server:stage/try/ruins_battle/story_battle/postgame_doctor_haru
 execute if entity @s[tag=valid_tinpet,tag=!story_battle] run tellraw @s {"translate":"medabots_server:message.stage.no_story","color":"green"}
 tellraw @s[tag=!valid_tinpet] {"translate":"medabots_server:message.tinpet.not_valid"}
 tag @s remove valid_tinpet
