@@ -1,6 +1,5 @@
 # Tag the equipped users
-execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[scores={LegsArmor=1..},tag=fly_legs,type=!minecraft:player] Fly 2
-execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[scores={LegsArmor=1..,Fly=1..},tag=fly_legs] Fly 2
+scoreboard players set @s[scores={LegsArmor=1..},tag=fly_legs] Fly 2
 execute if block ~ ~-1 ~ minecraft:air if block ~ ~-2 ~ minecraft:air run scoreboard players set @s[scores={Fly=1..}] Fly 1
 
 # Fly crash
@@ -12,13 +11,14 @@ execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[scores=
 
 # Fly up
 scoreboard players set @s[scores={LegsArmor=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] Fly 3
-scoreboard players set @s[scores={LegsArmor=1..,FlyTime=..150},type=!minecraft:player,tag=fly_legs,tag=legs_selected] Fly 3
+scoreboard players set @s[scores={LegsArmor=1..,FlyTime=..150},type=!minecraft:player,tag=!static_fly,tag=fly_legs,tag=legs_selected] Fly 3
 execute if entity @s[scores={LegsArmor=1..,Fly=1..2}] run function medabots_server:items/medapart/fly/hot_air
 
 # CPU behavior
 execute if entity @s[scores={LegsArmor=1..},tag=fly_legs,type=!minecraft:player] run function medabots_server:items/medapart/fly/cpu_behavior
 
 # Limit flying to 8 seconds
+execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s FlyTime 0
 scoreboard players set @s[nbt={OnGround:1b}] FlyTime 0
 scoreboard players set @s[scores={FlyTime=160}] OverheatingFly 1
 scoreboard players set @s[scores={OverheatingFly=1}] Fly 1

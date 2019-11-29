@@ -2,10 +2,8 @@
 execute unless entity @s[scores={Dialog=0..}] run scoreboard players set @s Dialog 0
 scoreboard players add @s[scores={Dialog=..80}] Dialog 1
 execute store result score #temp Stage run scoreboard players get @s Stage
-execute as @e[tag=medabot] if score @s Stage = #temp Stage run tag @s add this_mission
-execute as @e[tag=mission_entity] if score @s Stage = #temp Stage run tag @s add this_mission
+execute as @e if score @s Stage = #temp Stage run tag @s add this_mission
 execute if entity @s[scores={Dialog=1}] as @e[tag=cannon,type=minecraft:zombie] if score @s Stage = #temp Stage run tag @s remove enabled
-execute if entity @s[scores={Dialog=1}] as @e[tag=guard,type=minecraft:creeper] if score @s Stage = #temp Stage run tag @s remove enabled
 execute if entity @s[scores={Dialog=1}] as @e[tag=!medabot] if score @s Stage = #temp Stage run tag @s add disabled
 # Try to save a lot of resources by not ticking objects in stages when in a mission, if they are not part of the mission
 #execute if entity @s[scores={Dialog=1}] as @e[tag=!medabot,tag=!mission_entity] if score @s Stage = #temp Stage run tag @s add no_ticking
@@ -30,6 +28,8 @@ execute if entity @s[tag=custom_stage,tag=defeat_all_guards] unless entity @e[ta
 tag @s[scores={BattlingMedabots=1},tag=custom_stage,tag=defeat_the_enemy] add mission_success
 execute if entity @s[tag=mission_success] run title @a[tag=this_mission] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[tag=mission_success] run scoreboard players set @e[distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerNeeded=1..}] PowerNeeded 0
+execute if entity @s[tag=mission_success] run scoreboard players set @e[tag=door,tag=this_mission,tag=mission_door,type=minecraft:area_effect_cloud,scores={PowerNeeded=1..}] PowerNeeded 0
+execute if entity @s[tag=mission_success] run tag @e[tag=door,tag=this_mission,tag=mission_door,type=minecraft:area_effect_cloud] remove mission_door
 execute if entity @s[tag=mission_success] run tag @e[scores={Medabot=0..,Battle=1..2},tag=this_mission,tag=enemy_medabot,type=minecraft:skeleton] add dead
 execute if entity @s[tag=mission_success] as @a[scores={Medabot=0..,Battle=1..2},tag=this_mission,tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run tag @a[tag=this_mission] add remove_bossbar

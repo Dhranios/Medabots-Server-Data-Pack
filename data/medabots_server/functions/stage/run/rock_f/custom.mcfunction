@@ -14,7 +14,7 @@ execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:rock_f/tim
 execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:rock_f/robattle players @a[scores={Stage=60}]
 execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:rock_f/robattle value 3600
 tag @s[tag=add_bossbar] remove add_bossbar
-execute as @e[x=-1919,y=42,z=-696,dx=60,dy=7,dz=60,tag=build_stage,type=minecraft:item,limit=1] run data merge entity @s {Item:{tag:{display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage","with":[{"translate":"medabots_server:location.rock_f"}]}'}}}}
+execute as @e[x=-1919,y=42,z=-696,dx=60,dy=7,dz=60,tag=build_stage,type=minecraft:item,limit=1] run data modify entity @s Item.tag.display.Lore[0] set value '{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.location","with":[{"translate":"medabots_server:location.rock_f"}]}'
 execute as @e[x=-1919,y=42,z=-696,dx=60,dy=7,dz=60,type=!minecraft:player] unless entity @s[scores={Stage=60}] run scoreboard players set @s Stage 60
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/rock_f
 execute if entity @s[tag=clear_stage] positioned -1890 51 -666 run function medabots_server:stage/clear

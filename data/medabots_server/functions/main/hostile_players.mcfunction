@@ -2,6 +2,9 @@
 execute if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator/accel
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
+# Spawn gold pass if level is above 50
+execute if entity @s[level=50..,advancements={medabots_server:special_items/passes/gold=false},tag=!spawned_pass] run function medabots_server:spawn_entities/item/gold_pass
+
 # Instant death if you fall in the void
 execute if entity @s[y=-80,dy=79,tag=!had_death] run tellraw @a {"translate":"medabots_server:death.void","with":[{"selector":"@s"}]}
 tag @s[y=-80,dy=79] add had_death

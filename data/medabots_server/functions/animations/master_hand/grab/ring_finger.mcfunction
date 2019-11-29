@@ -1,3 +1,5 @@
+scoreboard players set @s[tag=fast_idle] AnimationProg 0
+tag @s[tag=fast_idle] remove fast_idle
 scoreboard players set @s[scores={AnimationProg=30}] AnimationProg 0
 scoreboard players add @s AnimationProg 1
 execute if entity @s[scores={AnimationProg=1}] run data modify entity @s Pose.Head[2] set value -30f
@@ -12,3 +14,4 @@ execute if entity @s[scores={AnimationProg=28}] run data modify entity @s Pose.H
 execute if entity @s[scores={AnimationProg=29}] run data modify entity @s Pose.Head[2] set value 0f
 execute if entity @s[scores={AnimationProg=3..26}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^-0.5 ^0.4 ^0.5
 scoreboard players reset #temp Time
+tag @s[scores={AnimationProg=30}] remove grab

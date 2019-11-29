@@ -206,6 +206,8 @@ execute if entity @s[tag=dialog_other_get_amelia] run function medabots_server:d
 #execute if entity @s[tag=dialog_other_get_rob] run function medabots_server:dialog/other/get_rob
 #execute if entity @s[tag=dialog_other_get_zant] run function medabots_server:dialog/other/get_zant
 execute if entity @s[tag=dialog_other_magolor_appears] run function medabots_server:dialog/other/magolor_appears
+execute if entity @s[tag=dialog_other_rock_e_ultimategold] run function medabots_server:dialog/other/rock_e_ultimategold
+execute if entity @s[tag=dialog_other_rock_e_ultimategold_cleared] run function medabots_server:dialog/other/rock_e_ultimategold_cleared
 execute if entity @s[tag=dialog_other_ruins_in_b_fvbico] run function medabots_server:dialog/other/ruins_in_b_fvbico
 execute if entity @s[tag=dialog_other_ruins_in_b_fvbico_cleared] run function medabots_server:dialog/other/ruins_in_b_fvbico_cleared
 

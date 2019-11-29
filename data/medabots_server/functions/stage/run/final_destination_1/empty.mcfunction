@@ -7,4 +7,4 @@ scoreboard players add @s[scores={BattlingMedabots=1,Battle=1..}] KillStreak 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] positioned -2041 43 -196 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 
-execute as @e[scores={Stage=61}] at @s run teleport @s[y=0,dy=10] -2041 52 -220
+execute as @e[scores={Stage=61},tag=!dying] at @s run teleport @s[y=0,dy=10] -2041 52 -220

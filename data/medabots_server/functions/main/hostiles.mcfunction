@@ -9,7 +9,7 @@ execute if entity @s[type=!minecraft:item] if block ~ ~ ~ minecraft:comparator r
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
 # Instant death if you fall in the void
-tag @s[y=-80,dy=79,tag=!medabot] add dead
+tag @s[y=-80,dy=79,tag=!medabot,tag=!dying] add dead
 tag @s[y=-80,dy=79,tag=medabot] add dying
 
 # Effects

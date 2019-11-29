@@ -20,5 +20,11 @@ execute if entity @s[scores={HomeZ=-2147483648..}] store result entity @e[tag=bu
 execute if entity @s[scores={Moving=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[3] int 1 run scoreboard players get @s Moving
 execute if entity @s[scores={Range=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[4] int 1 run scoreboard players get @s Range
 execute if entity @s[scores={DelayTime=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[5] int 1 run scoreboard players get @s DelayTime
-execute if entity @s[scores={PowerNeeded=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[6] int 1 run scoreboard players get @s PowerNeeded
+execute if entity @s[scores={PowerNeeded=-2147483648..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[6] int 1 run scoreboard players get @s PowerNeeded
 execute if entity @s[scores={Speed=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[5] int 1 run scoreboard players get @s Speed
+
+teleport @s[tag=bomb] ~ ~ ~
+teleport @s[tag=balloon_bomb] ~ ~ ~
+teleport @s[tag=ice_block] ~ ~ ~
+teleport @s[tag=raft] ~ ~ ~
+teleport @s[tag=round_stone] ~ ~ ~

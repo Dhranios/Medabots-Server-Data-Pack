@@ -43,11 +43,11 @@ tag @s[tag=!disabled] remove cannot_move
 execute if entity @s[tag=attack,tag=!disabled] at @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run function medabots_server:items/medapart/melee_trap/hit
 
 # Clean up
-teleport @s[tag=dead,tag=!disabled] ~ -1000 ~
-execute if entity @s[tag=dead,tag=!disabled] run scoreboard players operation #temp GuardNr = @s GuardNr
-execute if entity @s[tag=dead,tag=!disabled] as @e[tag=guard_model,type=minecraft:area_effect_cloud] if score @s GuardNr = #temp GuardNr run kill @s
-execute if entity @s[tag=dead,tag=!disabled] as @e[scores={GuardNr=1..}] if score @s GuardNr > #temp GuardNr run scoreboard players remove @s GuardNr 1
-execute if entity @s[tag=dead,tag=!disabled] run scoreboard players reset #temp GuardNr
+teleport @s[tag=dead] ~ -1000 ~
+execute if entity @s[tag=dead] run scoreboard players operation #temp GuardNr = @s GuardNr
+execute if entity @s[tag=dead] as @e[tag=guard_model,type=minecraft:armor_stand] if score @s GuardNr = #temp GuardNr run kill @s
+execute if entity @s[tag=dead] as @e[scores={GuardNr=1..}] if score @s GuardNr > #temp GuardNr run scoreboard players remove @s GuardNr 1
+execute if entity @s[tag=dead] run scoreboard players reset #temp GuardNr
 
 # Model
 execute if entity @s[tag=!dead] run function medabots_server:animations/guard

@@ -6,7 +6,7 @@ advancement grant @s[scores={Battle=1..},tag=!no_end] only medabots_server:stage
 execute if entity @s[scores={Battle=1..},tag=!no_end] positioned -1985 43 -196 run function medabots_server:stage/clear
 tag @s remove no_end
 
-execute as @e[scores={Stage=62}] at @s run teleport @s[y=0,dy=10] -2041 52 -220
+execute as @e[scores={Stage=62},tag=!dying] at @s run teleport @s[y=0,dy=10] -2041 52 -220
 
 execute store result score #temp Time run bossbar get medabots_server:master_hand/2 value
 execute if score #temp Time matches ..180 if entity @s[scores={Battle=1..},tag=!crazy_hand_spawned] positioned -1991 43 -221 rotated -90 0 run function medabots_server:spawn_entities/crazy_hand/2

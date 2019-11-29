@@ -101,5 +101,14 @@ scoreboard players set @s[scores={MusicType=54}] Music 222
 advancement grant @s[scores={MusicType=54}] only medabots_server:special_items/jukebox/master_hand_2
 advancement grant @s[scores={MusicType=55}] only medabots_server:special_items/jukebox/boss_mae
 advancement grant @s[scores={MusicType=56}] only medabots_server:special_items/jukebox/mr_referee
+playsound medabots_server:music.credits_intro music @s[scores={MusicType=57}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=57}] Music 454
+advancement grant @s[scores={MusicType=57}] only medabots_server:special_items/jukebox/credits
+playsound medabots_server:music.stage.cleared_intro music @s[scores={MusicType=58}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=58}] Music 40
+advancement grant @s[scores={MusicType=58}] only medabots_server:special_items/jukebox/stage_cleared
+playsound medabots_server:music.stage.failed_intro music @s[scores={MusicType=59}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=59}] Music 129
+advancement grant @s[scores={MusicType=59}] only medabots_server:special_items/jukebox/stage_failed
 
 scoreboard players operation @s[scores={Music=0}] PrevMusicType = @s MusicType

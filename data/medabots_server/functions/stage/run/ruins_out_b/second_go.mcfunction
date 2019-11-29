@@ -71,7 +71,7 @@ execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1842.
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1841.5,y=45,z=-520.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1849.5,y=45,z=-509.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=16,Medabot=0..,Battle=1..},type=minecraft:skeleton] add dead
-execute if entity @s[tag=mission_success] as @a[scores={Stage=16,Medabot=0..,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/leave_server_enforced
+execute if entity @s[tag=mission_success] as @a[scores={Stage=16,Medabot=0..,Battle=1..2},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:ruins_out_b/robattle players
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

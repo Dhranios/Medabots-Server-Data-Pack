@@ -111,3 +111,12 @@ playsound medabots_server:music.boss_mae music @s[scores={MusicType=55}] ~ ~ ~ 1
 scoreboard players set @s[scores={MusicType=55}] Music 597
 playsound medabots_server:music.entity.mr_referee music @s[scores={MusicType=56}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=56}] Music 247
+playsound medabots_server:music.credits music @s[scores={MusicType=57}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=57}] Music 1208
+playsound medabots_server:music.stage.cleared music @s[scores={MusicType=58}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=58}] Music 256
+playsound medabots_server:music.stage.failed music @s[scores={MusicType=59}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=59}] Music 835
+
+scoreboard players operation @s[scores={MusicType=58..59,OldMusicType=1..}] MusicType = @s OldMusicType
+scoreboard players reset @s[scores={MusicType=58..59,OldMusicType=1..}] OldMusicType

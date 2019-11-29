@@ -8,9 +8,9 @@ execute if entity @s[scores={JukeboxSetting=3,Dialog=0}] unless entity @s[scores
 execute if entity @s[scores={JukeboxSetting=4,Dialog=0}] unless entity @s[scores={JukeboxChannel=2}] run function medabots_server:items/jukebox/channel/stage
 execute if entity @s[scores={JukeboxSetting=5,Dialog=0}] unless entity @s[scores={JukeboxChannel=3}] run function medabots_server:items/jukebox/channel/boss
 execute if entity @s[scores={JukeboxSetting=6,Dialog=0}] unless entity @s[scores={JukeboxChannel=4}] run function medabots_server:items/jukebox/channel/dialog
-execute if entity @s[scores={JukeboxSetting=7,Dialog=0,JukeboxChannel=0,Jukebox=..5}] run function medabots_server:items/jukebox/track/next
+execute if entity @s[scores={JukeboxSetting=7,Dialog=0,JukeboxChannel=0,Jukebox=..6}] run function medabots_server:items/jukebox/track/next
 execute if entity @s[scores={JukeboxSetting=7,Dialog=0,JukeboxChannel=1,Jukebox=..7}] run function medabots_server:items/jukebox/track/next
-execute if entity @s[scores={JukeboxSetting=7,Dialog=0,JukeboxChannel=2,Jukebox=..23}] run function medabots_server:items/jukebox/track/next
+execute if entity @s[scores={JukeboxSetting=7,Dialog=0,JukeboxChannel=2,Jukebox=..25}] run function medabots_server:items/jukebox/track/next
 execute if entity @s[scores={JukeboxSetting=7,Dialog=0,JukeboxChannel=3,Jukebox=..1}] run function medabots_server:items/jukebox/track/next
 execute if entity @s[scores={JukeboxSetting=7,Dialog=0,JukeboxChannel=4,Jukebox=..19}] run function medabots_server:items/jukebox/track/next
 execute if entity @s[scores={JukeboxSetting=8,Dialog=0,Jukebox=1..}] run function medabots_server:items/jukebox/track/previous

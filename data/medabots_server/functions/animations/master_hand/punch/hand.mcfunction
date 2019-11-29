@@ -8,3 +8,4 @@ execute if entity @s[scores={AnimationProg=88..94}] store result entity @s Pose.
 execute if entity @s[scores={AnimationProg=95..101}] store result entity @s Pose.Head[0] float 1 run scoreboard players remove #temp Time 2
 execute if entity @s[scores={AnimationProg=102..109}] store result entity @s Pose.Head[0] float 1 run scoreboard players add #temp Time 2
 scoreboard players reset #temp Time
+tag @s[scores={AnimationProg=110}] remove punch

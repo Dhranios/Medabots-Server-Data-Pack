@@ -1,1 +1,2 @@
-summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:gold_pass"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:advancements.special_items.pass.gold"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
+summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:paper",Count:1b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:gold_pass"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:advancements.special_items.passes.gold"}'}}},Tags:["hostile"],Age:-32768s}
+tag @s add spawned_pass

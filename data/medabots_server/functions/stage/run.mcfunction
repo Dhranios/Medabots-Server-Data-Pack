@@ -176,6 +176,7 @@ execute if entity @s[scores={Stage=51}] unless entity @s[scores={StageVersion=1.
 execute if entity @s[scores={Stage=51,StageVersion=1}] run function medabots_server:stage/run/mt_battle/wave_1
 execute if entity @s[scores={Stage=52}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/grassland_e/custom
 execute if entity @s[scores={Stage=53}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/rock_e/custom
+execute if entity @s[scores={Stage=53,StageVersion=1}] run function medabots_server:stage/run/rock_e/dev_ultimategold
 execute if entity @s[scores={Stage=54}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/jungle_e/custom
 execute if entity @s[scores={Stage=55}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/seashore_e/custom
 execute if entity @s[scores={Stage=56}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/snowfield_e/custom

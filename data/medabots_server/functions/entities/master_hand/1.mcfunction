@@ -1,8 +1,12 @@
 # Keep in bounds
-execute store result entity @s[tag=idle] Pos[2] double 1 run scoreboard players get @s HomeZ
+execute store result entity @s[tag=idle] Pos[2] double 0.01 run scoreboard players get @s HomeZ
 execute at @s[tag=idle] facing entity @e[tag=target,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
 
-execute if score @s Health < @s LastHealth run playsound medabots_server:entity.master_hand.damage hostile @a ~ ~ ~ 1
+# Set dead
+tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
+
+execute unless entity @s[tag=dying,tag=!dead] if score @s Health < @s LastHealth run playsound medabots_server:entity.master_hand.damage hostile @a ~ ~ ~ 1
+execute if entity @s[tag=dying,tag=!dead] run playsound medabots_server:entity.master_hand.death1 hostile @a ~ ~ ~ 1
 
 # Select random attack
 scoreboard players set @s[scores={Dialog=20}] Dialog 0
@@ -11,14 +15,14 @@ execute if entity @a[distance=..30,tag=medabot,tag=!enemy_medabot] run scoreboar
 scoreboard players add @s[scores={Dialog=1..19}] Dialog 1
 #execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","jet"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","ram"],Duration:1}
-#execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crush"],Duration:1}
+execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crush"],Duration:1}
 #execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","gun"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","grab"],Duration:1}
-#execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","poke"],Duration:1}
+execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","poke"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","punch"],Duration:1}
-#execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","slap"],Duration:1}
+execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","slap"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","drill"],Duration:1}
-#execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","walk"],Duration:1}
+execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","walk"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run tag @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_select] add selected
 execute if entity @e[tag=random_select,tag=selected,tag=jet] run tag @s add attack_jet
 execute if entity @e[tag=random_select,tag=selected,tag=ram] run tag @s add attack_ram
@@ -30,7 +34,7 @@ execute if entity @e[tag=random_select,tag=selected,tag=punch] run tag @s add at
 execute if entity @e[tag=random_select,tag=selected,tag=slap] run tag @s add attack_slap
 execute if entity @e[tag=random_select,tag=selected,tag=drill] run tag @s add attack_drill
 execute if entity @e[tag=random_select,tag=selected,tag=walk] run tag @s add attack_walk
-execute if entity @e[tag=random_select,tag=selected] run tag @s remove idle
+tag @s[scores={Dialog=20}] remove idle
 kill @e[type=minecraft:area_effect_cloud,tag=random_select]
 tag @s remove cooperate
 

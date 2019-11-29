@@ -3,9 +3,9 @@ scoreboard players set @e[distance=..0.7,tag=master_hand] Time 0
 scoreboard players set @e[distance=..0.7,tag=master_hand] Dialog 0
 teleport @e[distance=..0.7,tag=master_hand] ~ ~ ~ ~ ~
 execute as @e[distance=..0.7,tag=master_hand] store result score @s HomeRot run data get entity @s Rot[0]
-execute as @e[distance=..0.7,tag=master_hand] store result score @s HomeX run data get entity @s Pos[0]
-execute as @e[distance=..0.7,tag=master_hand] store result score @s HomeY run data get entity @s Pos[1]
-execute as @e[distance=..0.7,tag=master_hand] store result score @s HomeZ run data get entity @s Pos[2]
+execute as @e[distance=..0.7,tag=master_hand] store result score @s HomeX run data get entity @s Pos[0] 100
+execute as @e[distance=..0.7,tag=master_hand] store result score @s HomeY run data get entity @s Pos[1] 100
+execute as @e[distance=..0.7,tag=master_hand] store result score @s HomeZ run data get entity @s Pos[2] 100
 scoreboard players operation @e[distance=..0.7,tag=master_hand] MasterHandNr > @e[tag=master_hand] MasterHandNr
 scoreboard players add @e[distance=..0.7,tag=master_hand] MasterHandNr 1
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["hand","master_hand_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:6}}]}

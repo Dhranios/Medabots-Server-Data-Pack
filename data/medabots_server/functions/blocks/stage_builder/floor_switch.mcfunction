@@ -2,8 +2,6 @@
 execute if entity @s[tag=green_floor_switch] run function medabots_server:set_blocks/floor_switch/green
 execute if entity @s[tag=yellow_floor_switch] run function medabots_server:set_blocks/floor_switch/yellow
 execute if entity @s[tag=blue_floor_switch] run function medabots_server:set_blocks/floor_switch/blue
-execute if entity @s[tag=negative] run tag @e[distance=..0.7,tag=floor_switch] add negative
-execute if entity @s[tag=negative] run tag @e[distance=..0.7,tag=floor_switch] add toggle
 tag @e[distance=..0.7,tag=floor_switch] add custom_stage
 
 # Give additional data

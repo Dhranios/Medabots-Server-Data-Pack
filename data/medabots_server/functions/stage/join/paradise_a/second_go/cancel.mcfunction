@@ -11,7 +11,7 @@ execute if entity @s[tag=-1] run tag @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag
 execute if entity @s[tag=-1] run tag @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=4] remove 4
 execute if entity @s[tag=-1] run tag @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=5] remove 5
 execute if entity @s[tag=-1] run tag @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] remove 6
-execute if entity @s[tag=-1] run tag @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=6] remove 7
+execute if entity @s[tag=-1] run tag @a[x=-1761,y=51,z=-730,dx=94,dy=4,dz=94,tag=7] remove 7
 execute if entity @s[tag=-1] run scoreboard players set @s Battle 0
 execute if entity @s[tag=-1] run tag @s remove -1
 

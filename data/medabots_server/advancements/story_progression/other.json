@@ -44,6 +44,12 @@
         },
         "ruins_in_b_fvbico_cleared": {
             "trigger": "minecraft:impossible"
+        },
+        "rock_e_ultimategold": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_e_ultimategold_cleared": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

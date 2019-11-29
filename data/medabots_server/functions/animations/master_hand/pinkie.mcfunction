@@ -13,52 +13,52 @@ tag @s[tag=!appearing] remove was_appearing
 tag @s[tag=appearing] add was_appearing
 tag @s[tag=appearing] remove appearing
 
-execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=idle,limit=1] run tag @s add idle
-execute if entity @s[tag=idle] run function medabots_server:animations/master_hand/idle/pinkie
-scoreboard players set @s[tag=!idle,tag=was_idle] AnimationProg 0
-data merge entity @s[tag=!idle,tag=was_idle] {Pose:{Head:[0.001f,0.001f,0.001f]}}
-tag @s[tag=!idle] remove was_idle
-tag @s[tag=idle] add was_idle
-tag @s[tag=idle] remove idle
+execute if entity @s[tag=!was_appearing,tag=!fast_idle,tag=!grab,tag=!grab_success,tag=!ram,tag=!punch,tag=!drill,tag=!walk_start,tag=!walk,tag=!walk_stop,tag=!walk_kick,tag=!slap,tag=!crush,tag=!poke] run function medabots_server:animations/master_hand/idle/pinkie
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fast_idle,limit=1] run scoreboard players set @s[tag=!fast_idle] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fast_idle,limit=1] run tag @s add fast_idle
 execute if entity @s[tag=fast_idle] run function medabots_server:animations/master_hand/fast_idle/pinkie
-scoreboard players set @s[tag=!fast_idle,tag=was_fast_idle] AnimationProg 0
-tag @s[tag=!fast_idle] remove was_fast_idle
-tag @s[tag=fast_idle] add was_fast_idle
-tag @s[tag=fast_idle] remove fast_idle
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run scoreboard players set @s[tag=!grab] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run tag @s add grab
 execute if entity @s[tag=grab] run function medabots_server:animations/master_hand/grab/pinkie
-scoreboard players set @s[tag=!grab,tag=was_grab] AnimationProg 0
-tag @s[tag=!grab] remove was_grab
-tag @s[tag=grab] add was_grab
-tag @s[tag=grab] remove grab
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab_success,limit=1] run scoreboard players set @s[tag=!grab_success] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab_success,limit=1] run tag @s add grab_success
 execute if entity @s[tag=grab_success] run function medabots_server:animations/master_hand/grab_success/pinkie
-scoreboard players set @s[tag=!grab_success,tag=was_grab_success] AnimationProg 0
-tag @s[tag=!grab_success] remove was_grab_success
-tag @s[tag=grab_success] add was_grab_success
-tag @s[tag=grab_success] remove grab_success
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=ram,limit=1] run scoreboard players set @s[tag=!ram] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=ram,limit=1] run tag @s add ram
 execute if entity @s[tag=ram] run function medabots_server:animations/master_hand/ram/pinkie
-scoreboard players set @s[tag=!ram,tag=was_ram] AnimationProg 0
-tag @s[tag=!ram] remove was_ram
-tag @s[tag=ram] add was_ram
-tag @s[tag=ram] remove ram
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=punch,limit=1] run scoreboard players set @s[tag=!punch] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=punch,limit=1] run tag @s add punch
 execute if entity @s[tag=punch] run function medabots_server:animations/master_hand/punch/pinkie
-scoreboard players set @s[tag=!punch,tag=was_punch] AnimationProg 0
-tag @s[tag=!punch] remove was_punch
-tag @s[tag=punch] add was_punch
-tag @s[tag=punch] remove punch
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=drill,limit=1] run scoreboard players set @s[tag=!drill] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=drill,limit=1] run tag @s add drill
 execute if entity @s[tag=drill] run function medabots_server:animations/master_hand/drill/pinkie
-scoreboard players set @s[tag=!drill,tag=was_drill] AnimationProg 0
-tag @s[tag=!drill] remove was_drill
-tag @s[tag=drill] add was_drill
-tag @s[tag=drill] remove drill
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_start,limit=1] run scoreboard players set @s[tag=!walk_start] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_start,limit=1] run tag @s add walk_start
+execute if entity @s[tag=walk_start] run function medabots_server:animations/master_hand/walk_start/pinkie
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_stop,limit=1] run scoreboard players set @s[tag=!walk_stop] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_stop,limit=1] run tag @s add walk_stop
+execute if entity @s[tag=walk_stop] run function medabots_server:animations/master_hand/walk_stop/pinkie
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_kick,limit=1] run scoreboard players set @s[tag=!walk_kick] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_kick,limit=1] run tag @s add walk_kick
+execute if entity @s[tag=walk_kick] run function medabots_server:animations/master_hand/walk_kick/pinkie
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=slap,limit=1] run scoreboard players set @s[tag=!slap] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=slap,limit=1] run tag @s add slap
+execute if entity @s[tag=slap] run function medabots_server:animations/master_hand/slap/pinkie
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=crush,limit=1] run scoreboard players set @s[tag=!crush] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=crush,limit=1] run tag @s add crush
+execute if entity @s[tag=crush] run function medabots_server:animations/master_hand/crush/pinkie
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run scoreboard players set @s[tag=!poke] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run tag @s add poke
+execute if entity @s[tag=poke] run function medabots_server:animations/master_hand/poke/pinkie

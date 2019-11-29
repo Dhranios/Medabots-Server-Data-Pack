@@ -100,10 +100,10 @@ execute if entity @s[scores={Fall=5..,Sound=0}] run playsound medabots_server:en
 execute if entity @s[scores={Fall=5..,Sound=0}] run scoreboard players set @s Sound 10
 execute if entity @s[scores={Run=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.run player @s ~ ~ ~ 1
 execute if entity @s[scores={Run=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 6
-execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.under_water player @s ~ ~ ~ 1
-execute if entity @s[scores={WalkUnderWater=5..,Sound=0}] run scoreboard players set @s Sound 17
-execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.on_water player @s ~ ~ ~ 1
-execute if entity @s[scores={WalkOnWater=5..,Sound=0}] run scoreboard players set @s Sound 17
+execute if entity @s[scores={WalkUnderWater=5..,Sound=0},gamemode=!spectator] run playsound medabots_server:entity.medabot.move.under_water player @s ~ ~ ~ 1
+execute if entity @s[scores={WalkUnderWater=5..,Sound=0},gamemode=!spectator] run scoreboard players set @s Sound 17
+execute if entity @s[scores={WalkOnWater=5..,Sound=0},gamemode=!spectator] run playsound medabots_server:entity.medabot.move.on_water player @s ~ ~ ~ 1
+execute if entity @s[scores={WalkOnWater=5..,Sound=0},gamemode=!spectator] run scoreboard players set @s Sound 17
 
 # Reset movement checks
 tag @s[tag=jumping] remove jumping

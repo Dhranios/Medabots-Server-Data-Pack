@@ -10,6 +10,8 @@ playsound medabots_server:music.map_underground music @s[scores={Jukebox=5},adva
 scoreboard players set @s[scores={Jukebox=5},advancements={medabots_server:special_items/jukebox/map_underground=true}] Music 1233
 playsound medabots_server:music.medawatch music @s[scores={Jukebox=6},advancements={medabots_server:special_items/jukebox/medawatch=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=6},advancements={medabots_server:special_items/jukebox/medawatch=true}] Music 453
+playsound medabots_server:music.credits music @s[scores={Jukebox=7},advancements={medabots_server:special_items/jukebox/credits=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=7},advancements={medabots_server:special_items/jukebox/credits=true}] Music 1208
 
 playsound medabots_server:item.jukebox.interference music @s[scores={Music=0}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0}] Music 20

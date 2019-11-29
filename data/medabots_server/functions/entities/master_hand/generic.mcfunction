@@ -1,3 +1,10 @@
+# Set dead
+tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
+
+execute unless entity @s[tag=dying,tag=!dead] if score @s Health < @s LastHealth run playsound medabots_server:entity.master_hand.damage hostile @a ~ ~ ~ 1
+execute if entity @s[tag=dying,tag=!dead] run playsound medabots_server:entity.master_hand.final_hit4 hostile @a ~ ~ ~ 1
+execute if entity @s[tag=dying,tag=!dead] run playsound medabots_server:entity.master_hand.death4 hostile @a ~ ~ ~ 1
+
 # Select random attack
 scoreboard players set @s[scores={Dialog=20}] Dialog 0
 execute unless entity @s[scores={Dialog=0..}] run scoreboard players add @s Dialog 0
@@ -5,23 +12,23 @@ execute if entity @e[distance=..30,tag=medabot,tag=!enemy_medabot] run scoreboar
 scoreboard players add @s[scores={Dialog=1..19}] Dialog 1
 execute if entity @s[scores={Dialog=20}] at @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=crazy_hand,sort=nearest,limit=1] Stage run tag @s add cooperate
 #execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","catch"],Duration:1}
-#execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","twin_lasers"],Duration:1}
-#execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","double_jet"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","applaud"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","double_punch"],Duration:1}
+#execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","twin_lasers"],Duration:1}
+#execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","double_jet"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","ball_throw"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crawl_slam"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","jet"],Duration:1}
 execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","ram"],Duration:1}
-#execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crush"],Duration:1}
-#execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","lasers"],Duration:1}
+execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crush"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","gun"],Duration:1}
 execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","grab"],Duration:1}
-#execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","poke"],Duration:1}
+execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","poke"],Duration:1}
 execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","punch"],Duration:1}
-#execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","slap"],Duration:1}
+execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","slap"],Duration:1}
 execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","drill"],Duration:1}
-#execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","walk"],Duration:1}
+execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","walk"],Duration:1}
+#execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","lasers"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","sweep"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","snap"],Duration:1}
 #execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","wind"],Duration:1}
@@ -30,14 +37,14 @@ execute if entity @s[scores={Dialog=20},tag=!cooperate] run summon minecraft:are
 execute if entity @s[scores={Dialog=20}] run tag @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_select] add selected
 execute if entity @e[tag=random_select,tag=selected,tag=catch] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_catch
 execute if entity @e[tag=random_select,tag=selected,tag=catch] run tag @s add attack_catch
-execute if entity @e[tag=random_select,tag=selected,tag=twin_lasers] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_lasers
-execute if entity @e[tag=random_select,tag=selected,tag=twin_lasers] run tag @s add attack_lasers
-execute if entity @e[tag=random_select,tag=selected,tag=double_jet] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_jet
-execute if entity @e[tag=random_select,tag=selected,tag=double_jet] run tag @s add attack_jet
 execute if entity @e[tag=random_select,tag=selected,tag=applaud] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_applaud
 execute if entity @e[tag=random_select,tag=selected,tag=applaud] run tag @s add attack_applaud
 execute if entity @e[tag=random_select,tag=selected,tag=double_punch] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_double_punch
 execute if entity @e[tag=random_select,tag=selected,tag=double_punch] run tag @s add attack_double_punch
+execute if entity @e[tag=random_select,tag=selected,tag=twin_lasers] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_lasers
+execute if entity @e[tag=random_select,tag=selected,tag=twin_lasers] run tag @s add attack_lasers
+execute if entity @e[tag=random_select,tag=selected,tag=double_jet] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_jet
+execute if entity @e[tag=random_select,tag=selected,tag=double_jet] run tag @s add attack_jet
 execute if entity @e[tag=random_select,tag=selected,tag=ball_throw] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_ball_throw
 execute if entity @e[tag=random_select,tag=selected,tag=ball_throw] run tag @s add attack_ball_throw
 execute if entity @e[tag=random_select,tag=selected,tag=crawl_slam] as @e[tag=crazy_hand,tag=cooperate] if score @s Stage = @e[distance=..0.1,tag=master_hand,sort=nearest,limit=1] Stage run tag @s add attack_crawl_slam
@@ -45,13 +52,13 @@ execute if entity @e[tag=random_select,tag=selected,tag=crawl_slam] run tag @s a
 execute if entity @e[tag=random_select,tag=selected,tag=jet] run tag @s add attack_jet
 execute if entity @e[tag=random_select,tag=selected,tag=ram] run tag @s add attack_ram
 execute if entity @e[tag=random_select,tag=selected,tag=crush] run tag @s add attack_crush
-execute if entity @e[tag=random_select,tag=selected,tag=lasers] run tag @s add attack_lasers
 execute if entity @e[tag=random_select,tag=selected,tag=gun] run tag @s add attack_gun
 execute if entity @e[tag=random_select,tag=selected,tag=grab] run tag @s add attack_grab
 execute if entity @e[tag=random_select,tag=selected,tag=poke] run tag @s add attack_poke
 execute if entity @e[tag=random_select,tag=selected,tag=punch] run tag @s add attack_punch
 execute if entity @e[tag=random_select,tag=selected,tag=slap] run tag @s add attack_slap
 execute if entity @e[tag=random_select,tag=selected,tag=drill] run tag @s add attack_drill
+execute if entity @e[tag=random_select,tag=selected,tag=lasers] run tag @s add attack_lasers
 execute if entity @e[tag=random_select,tag=selected,tag=sweep] run tag @s add attack_sweep
 execute if entity @e[tag=random_select,tag=selected,tag=walk] run tag @s add attack_walk
 execute if entity @e[tag=random_select,tag=selected,tag=snap] run tag @s add attack_snap

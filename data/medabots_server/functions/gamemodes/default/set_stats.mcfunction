@@ -49,9 +49,6 @@ scoreboard players operation @s LegsArmor = @s MaxLegsArmor
 # Activate parts
 function medabots_server:items/enable_medaparts
 
-# Spawn gold pass if level is above 50
-execute if entity @s[level=50..,advancements={medabots_server:special_items/passes/gold=false}] run function medabots_server:spawn_entities/pass/gold
-
 # Model
 function medabots_server:entities/medabot/spawn_model
 effect give @s minecraft:invisibility 1000000 0 true

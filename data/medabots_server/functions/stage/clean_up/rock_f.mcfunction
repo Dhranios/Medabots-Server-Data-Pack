@@ -10,5 +10,7 @@ scoreboard players set @s[scores={Stage=60,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=60,Battle=0}] Battle 0
 teleport @s[scores={Stage=60,Battle=0}] -1890 51 -666 -180 0
 tag @e[scores={Stage=60},type=!minecraft:player] add dead
+data merge block -1891 52 -696 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/rock_f/play"}}'}
+setblock -1891 53 -698 minecraft:redstone_block
 clear @s minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}
 execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}

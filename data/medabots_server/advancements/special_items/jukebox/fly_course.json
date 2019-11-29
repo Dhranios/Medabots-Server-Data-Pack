@@ -12,7 +12,7 @@
         "announce_to_chat": false,
         "hidden": true
     },
-    "parent": "medabots_server:special_items/jukebox/stage_selection",
+    "parent": "medabots_server:special_items/jukebox/stage_failed",
     "criteria": {
         "give": {
             "trigger": "minecraft:impossible"
