@@ -41,8 +41,8 @@ execute if entity @s[scores={Time=26},tag=has_target] positioned ^1 ^-2 ^0.4 as 
 execute if entity @s[scores={Time=26},tag=has_target] positioned ^1 ^ ^0.4 as @e[tag=target,limit=1,distance=..2] at @s rotated as @e[type=minecraft:ghast,tag=master_hand,limit=1,scores={Time=26}] facing ^ ^-2 ^-2 if block ^ ^ ^-1 minecraft:air unless block ^ ^ ^-2 minecraft:air run teleport @s ^ ^ ^-1
 execute if entity @s[scores={Time=28..29},tag=has_target] run teleport @s ~ ~-1 ~
 execute if entity @s[scores={Time=29}] rotated ~ 0 run teleport @s ^1 ^ ^
-tag @s[scores={Time=35}] add idle
-tag @s[scores={Time=35}] remove walk_kick
-tag @s[scores={Time=35}] remove has_target
-tag @s[scores={Time=35}] remove attack_walk
-scoreboard players set @s[scores={Time=35}] Time 0
+tag @s[scores={Time=38}] add idle
+tag @s[scores={Time=38}] remove walk_kick
+tag @s[scores={Time=38}] remove has_target
+tag @s[scores={Time=38}] remove attack_walk
+scoreboard players set @s[scores={Time=38}] Time 0
