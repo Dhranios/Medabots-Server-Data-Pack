@@ -135,9 +135,5 @@ execute if entity @s[tag=death_message,tag=!had_death] run tellraw @a {"translat
 tag @s[tag=death_message] add had_death
 tag @s[tag=death_message] remove death_message
 
-# Remove 5 medallars
-scoreboard players set @s[tag=!retry,scores={Money=..4}] Money 0
-scoreboard players remove @s[tag=!retry,scores={Money=5..}] Money 5
-
 # no message? try again
 execute if entity @s[tag=!had_death,tag=!retry] run function medabots_server:other/death_message_retry

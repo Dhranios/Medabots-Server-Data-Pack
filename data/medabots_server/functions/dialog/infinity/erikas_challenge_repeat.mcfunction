@@ -6,7 +6,7 @@ execute as @e[tag=cutscene] if score @s DialogNr = #temp DialogNr run tag @s add
 scoreboard players add @s Dialog 1
 execute if entity @s[scores={Dialog=1}] positioned -391 55 14 run function medabots_server:spawn_entities/cutscene/erika
 execute if entity @s[scores={Dialog=1..}] at @e[tag=erika,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=erika,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.erikas_challenge_repeat.1"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.erikas_challenge_repeat.1"}]}
 tag @s[scores={Dialog=132}] remove dialog_infinity_erikas_challenge_repeat
 scoreboard players reset @s[scores={Dialog=132}] DialogNr
 scoreboard players set @s[scores={Dialog=132}] Dialog 0

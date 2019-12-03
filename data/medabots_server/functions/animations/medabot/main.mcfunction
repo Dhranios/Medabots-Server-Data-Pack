@@ -11,13 +11,13 @@ execute if entity @s[tag=left_arm,tag=!dying] run function medabots_server:anima
 execute if entity @s[tag=right_arm,tag=!dying] run function medabots_server:animations/medabot/right_arm
 execute if entity @s[tag=chest,tag=!dying] run function medabots_server:animations/medabot/chest
 execute if entity @s[tag=head,tag=!dying] run function medabots_server:animations/medabot/head
-execute if entity @s[tag=hips,tag=dying] run function medabots_server:animations/medabot/death/legs
+execute if entity @s[tag=hips,tag=dying] run function medabots_server:animations/medabot/death/hips
 execute if entity @s[tag=leg,tag=dying] run function medabots_server:animations/medabot/death/legs
-execute if entity @s[tag=tail,tag=dying] run function medabots_server:animations/medabot/death/legs
+execute if entity @s[tag=tail,tag=dying] run function medabots_server:animations/medabot/death/hips
 execute if entity @s[tag=wormtail,tag=dying] run function medabots_server:animations/medabot/death/legs
 execute if entity @s[tag=left_arm,tag=dying] run function medabots_server:animations/medabot/death/left_arm
 execute if entity @s[tag=right_arm,tag=dying] run function medabots_server:animations/medabot/death/right_arm
-execute if entity @s[tag=chest,tag=dying] run function medabots_server:animations/medabot/death/head
+execute if entity @s[tag=chest,tag=dying] run function medabots_server:animations/medabot/death/chest
 execute if entity @s[tag=head,tag=dying] run function medabots_server:animations/medabot/death/head
 scoreboard players set @s[tag=!dancing] AnimationProg 0
 tag @s[tag=dancing] remove dancing

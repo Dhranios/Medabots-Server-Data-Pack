@@ -9,8 +9,8 @@ execute if entity @s[scores={Dialog=1}] positioned -379 55 -56 run function meda
 execute if entity @s[scores={Dialog=1}] run tag @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] add dancing
 execute if entity @s[scores={Dialog=1..}] at @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..}] at @e[tag=erika,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=erika,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.jammy_explained_repeat.1"}]}
-tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.jammy_explained_repeat.2"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained_repeat.1"}]}
+tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained_repeat.2"}]}
 tag @s[scores={Dialog=126}] remove dialog_infinity_jammy_explained_repeat
 scoreboard players reset @s[scores={Dialog=126}] DialogNr
 scoreboard players set @s[scores={Dialog=126}] Dialog 0

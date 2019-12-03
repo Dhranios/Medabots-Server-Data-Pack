@@ -15,16 +15,16 @@ execute at @s as @e[x=-1621,y=51,z=-433,tag=kid,distance=..1] run scoreboard pla
 execute if entity @s[scores={Dialog=1..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..}] as @e[tag=kid,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1620 51 -431 115 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.1"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.1"}]}
 execute if entity @s[scores={Dialog=2}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1620 51 -386
 execute if entity @s[scores={Dialog=2}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=3..222}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=222}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=222}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
-tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.2"}]}
-tellraw @s[scores={Dialog=90}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.3"}]}
-tellraw @s[scores={Dialog=114}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.4"}]}
-tellraw @s[scores={Dialog=162}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.5"}]}
+tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.2"}]}
+tellraw @s[scores={Dialog=90}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.3"}]}
+tellraw @s[scores={Dialog=114}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.4"}]}
+tellraw @s[scores={Dialog=162}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_jungle_b.5"}]}
 scoreboard players set @s[scores={Dialog=222}] MusicType 1
 scoreboard players set @s[scores={Dialog=222}] Music 0
 tag @s[scores={Dialog=222}] remove dialog_infinity_rubberobo_enters_jungle_b

@@ -9,8 +9,8 @@ execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -1772 5
 execute at @s as @e[x=-1772,y=50,z=-281,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1..95}] at @e[tag=kid,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=kid,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1772 50 -285 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_laboratory_a.1"}]}
-tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_laboratory_a.2"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_laboratory_a.1"}]}
+tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_laboratory_a.2"}]}
 execute if entity @s[scores={Dialog=96}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=96}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=97..}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

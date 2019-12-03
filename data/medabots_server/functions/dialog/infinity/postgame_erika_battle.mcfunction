@@ -12,7 +12,7 @@ execute if entity @s[scores={Dialog=1..71},tag=!give_medal] at @e[tag=erika,tag=
 execute if entity @s[scores={Dialog=1..307},tag=give_medal] at @e[tag=erika,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=erika,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tag @s[scores={Dialog=1},advancements={medabots_server:get_all_medabots/wave_1/alien_medal=false}] add give_medal
 teleport @s[scores={Dialog=1}] -1949 51 -564 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.1"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.1"}]}
 execute if entity @s[scores={Dialog=72},tag=!give_medal] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=72},tag=!give_medal] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=72..},tag=!give_medal] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
@@ -22,10 +22,10 @@ scoreboard players set @s[scores={Dialog=167},tag=!give_medal] Music 0
 tag @s[scores={Dialog=167},tag=!give_medal] remove dialog_infinity_postgame_erika_battle
 scoreboard players reset @s[scores={Dialog=167},tag=!give_medal] DialogNr
 scoreboard players set @s[scores={Dialog=167},tag=!give_medal] Dialog 0
-tellraw @s[scores={Dialog=72},tag=give_medal] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.2"}]}
-tellraw @s[scores={Dialog=176},tag=give_medal] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.3"}]}
-tellraw @s[scores={Dialog=200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.4"}]}
-tellraw @s[scores={Dialog=208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.5"}]}
+tellraw @s[scores={Dialog=72},tag=give_medal] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.2"}]}
+tellraw @s[scores={Dialog=176},tag=give_medal] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.3"}]}
+tellraw @s[scores={Dialog=200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.4"}]}
+tellraw @s[scores={Dialog=208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.5"}]}
 execute if entity @s[scores={Dialog=288},tag=!already_gave_items] run function medabots_server:give_items/medal/alien
 tag @s[scores={Dialog=288}] add already_gave_items
 execute if entity @s[scores={Dialog=308}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540

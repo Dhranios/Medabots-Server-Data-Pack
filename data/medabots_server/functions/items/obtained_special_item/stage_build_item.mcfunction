@@ -18,8 +18,9 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"raft"}}}]}] run function medabots_server:items/obtained_special_item/raft
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"fan"}}}]}] run function medabots_server:items/obtained_special_item/fan
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"laser_trap"}}}]}] run function medabots_server:items/obtained_special_item/laser_trap
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"balloon_bomb"}}}]}] run function medabots_server:items/obtained_special_item/balloon_bomb
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"alarm"}}}]}] run function medabots_server:items/obtained_special_item/alarm
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"rubberobo"}}}]}] run function medabots_server:items/obtained_special_item/rubberobo
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"alarm"}}}]}] run function medabots_server:items/obtained_special_item/alarm
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"balloon_bomb"}}}]}] run function medabots_server:items/obtained_special_item/balloon_bomb
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"jammy"}}}]}] run function medabots_server:items/obtained_special_item/jammy
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"mission"}}}]}] run function medabots_server:items/obtained_special_item/mission
 

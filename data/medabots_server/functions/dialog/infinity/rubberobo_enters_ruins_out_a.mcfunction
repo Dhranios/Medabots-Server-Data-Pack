@@ -14,19 +14,19 @@ execute if entity @s[scores={Dialog=1}] as @e[tag=rubberobo,tag=this_dialog,limi
 teleport @s[scores={Dialog=1}] -410 55 -40 40 0
 teleport @s[scores={Dialog=1..711}] -410 55 -40
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 43.5 ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.1"}]}
-tellraw @s[scores={Dialog=8}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.2"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.1"}]}
+tellraw @s[scores={Dialog=8}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.2"}]}
 execute if entity @s[scores={Dialog=10}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~
-tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.3"}]}
+tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.3"}]}
 execute if entity @s[scores={Dialog=30}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
-tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.4"}]}
+tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.4"}]}
 execute if entity @s[scores={Dialog=50}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~
 execute if entity @s[scores={Dialog=70}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
-tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.5"}]}
+tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.5"}]}
 execute if entity @s[scores={Dialog=90}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~
-tellraw @s[scores={Dialog=96}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.6"}]}
-tellraw @s[scores={Dialog=116}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.7"}]}
-tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.8"}]}
+tellraw @s[scores={Dialog=96}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.6"}]}
+tellraw @s[scores={Dialog=116}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.7"}]}
+tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.8"}]}
 execute if entity @s[scores={Dialog=152}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -429 55 -28
 execute if entity @s[scores={Dialog=152}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=153..187}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
@@ -37,8 +37,8 @@ execute if entity @s[scores={Dialog=188}] run tag @e[tag=kid,tag=this_dialog,lim
 execute if entity @s[scores={Dialog=188..252}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=253}] as @e[tag=kid,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=253}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 160 ~
-tellraw @s[scores={Dialog=253}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.9"}]}
-tellraw @s[scores={Dialog=285}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.10"}]}
+tellraw @s[scores={Dialog=253}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.9"}]}
+tellraw @s[scores={Dialog=285}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.10"}]}
 execute if entity @s[scores={Dialog=309}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=309..322}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=322}] run setblock -431 53 -20 minecraft:redstone_block
@@ -53,7 +53,7 @@ execute if entity @s[scores={Dialog=370}] as @e[tag=rubberobo,tag=this_dialog,li
 execute if entity @s[scores={Dialog=370}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
 execute if entity @s[scores={Dialog=390}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~
 execute if entity @s[scores={Dialog=410}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
-tellraw @s[scores={Dialog=410}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.11"}]}
+tellraw @s[scores={Dialog=410}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.11"}]}
 execute if entity @s[scores={Dialog=426}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -429 55 -19
 execute if entity @s[scores={Dialog=426}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=426..443}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
@@ -66,7 +66,7 @@ execute if entity @s[scores={Dialog=520}] as @e[tag=rubberobo,tag=this_dialog,li
 execute if entity @s[scores={Dialog=544}] run setblock -431 53 -20 minecraft:dirt
 execute if entity @s[scores={Dialog=521..546}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=546}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s remove running
-tellraw @s[scores={Dialog=546}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.12"}]}
+tellraw @s[scores={Dialog=546}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.12"}]}
 execute if entity @s[scores={Dialog=570}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~
 execute if entity @s[scores={Dialog=590}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
 execute if entity @s[scores={Dialog=610}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~
@@ -78,10 +78,10 @@ execute if entity @s[scores={Dialog=710}] run teleport @e[tag=rubberobo,tag=this
 execute if entity @s[scores={Dialog=710}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 scoreboard players set @s[scores={Dialog=710}] MusicType 1
 scoreboard players set @s[scores={Dialog=710}] Music 0
-tellraw @s[scores={Dialog=710}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.13"}]}
-tellraw @s[scores={Dialog=734}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.14"}]}
-tellraw @s[scores={Dialog=750}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.15","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=774}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.16"}]}
+tellraw @s[scores={Dialog=710}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.13"}]}
+tellraw @s[scores={Dialog=734}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.14"}]}
+tellraw @s[scores={Dialog=750}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.15","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=774}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.16"}]}
 execute if entity @s[scores={Dialog=781..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -426 55 -15
 execute if entity @s[scores={Dialog=781..}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=782..919}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
@@ -95,19 +95,19 @@ execute if entity @s[scores={Dialog=888}] run tag @e[tag=kid,tag=this_dialog,lim
 execute if entity @s[scores={Dialog=888..913}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=913}] as @e[tag=kid,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=913..}] at @e[tag=kid,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=kid,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=913}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.17"}]}
+tellraw @s[scores={Dialog=913}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.17"}]}
 execute if entity @s[scores={Dialog=929..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=kid,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=929}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.18"}]}
-tellraw @s[scores={Dialog=969}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.19"}]}
-tellraw @s[scores={Dialog=1001}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.20"}]}
-tellraw @s[scores={Dialog=1025}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.21"}]}
-tellraw @s[scores={Dialog=1049}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.22"}]}
-tellraw @s[scores={Dialog=1097}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.23"}]}
-tellraw @s[scores={Dialog=1129}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.24"}]}
-tellraw @s[scores={Dialog=1145}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.25"}]}
-tellraw @s[scores={Dialog=1177}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.26"}]}
-tellraw @s[scores={Dialog=1193}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.27"}]}
-tellraw @s[scores={Dialog=1225}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.28"}]}
+tellraw @s[scores={Dialog=929}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.18"}]}
+tellraw @s[scores={Dialog=969}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.19"}]}
+tellraw @s[scores={Dialog=1001}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.20"}]}
+tellraw @s[scores={Dialog=1025}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.21"}]}
+tellraw @s[scores={Dialog=1049}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.22"}]}
+tellraw @s[scores={Dialog=1097}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.23"}]}
+tellraw @s[scores={Dialog=1129}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.24"}]}
+tellraw @s[scores={Dialog=1145}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.25"}]}
+tellraw @s[scores={Dialog=1177}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.26"}]}
+tellraw @s[scores={Dialog=1193}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.27"}]}
+tellraw @s[scores={Dialog=1225}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_out_a.28"}]}
 advancement grant @s[scores={Dialog=1289}] only medabots_server:special_items/passes/robo_2
 tag @s[scores={Dialog=1289}] remove dialog_infinity_rubberobo_enters_ruins_out_a
 scoreboard players reset @s[scores={Dialog=1289}] DialogNr

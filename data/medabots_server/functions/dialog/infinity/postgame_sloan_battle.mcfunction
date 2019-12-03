@@ -12,8 +12,8 @@ execute if entity @s[scores={Dialog=1}] positioned -2000 51 -605 run function me
 execute if entity @s[scores={Dialog=1..59}] at @e[tag=sloan,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=sloan,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..59}] at @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1999 51 -608 0 0 
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.postgame_sloan_battle.1"}]}
-tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.totalizer"},{"translate":"medabots_server:dialog.infinity.postgame_sloan_battle.2"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_sloan_battle.1"}]}
+tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.totalizer","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_sloan_battle.2"}]}
 execute if entity @s[scores={Dialog=60}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=60}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=61..}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

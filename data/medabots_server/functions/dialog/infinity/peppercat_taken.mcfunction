@@ -10,12 +10,12 @@ scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -438 55 -2 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=1..187}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.1"}]}
-tellraw @s[scores={Dialog=20}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.2"}]}
-tellraw @s[scores={Dialog=28}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.3"}]}
-tellraw @s[scores={Dialog=60}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.4"}]}
-tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.5"}]}
-tellraw @s[scores={Dialog=140}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.6"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.1"}]}
+tellraw @s[scores={Dialog=20}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.2"}]}
+tellraw @s[scores={Dialog=28}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.3"}]}
+tellraw @s[scores={Dialog=60}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.4"}]}
+tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.5"}]}
+tellraw @s[scores={Dialog=140}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.6"}]}
 execute if entity @s[scores={Dialog=188}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -423 55 -25
 execute if entity @s[scores={Dialog=188}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add running
 execute if entity @s[scores={Dialog=189..}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425

@@ -15,19 +15,19 @@ execute if entity @s[scores={Dialog=1..279}] at @e[tag=erika,tag=this_dialog,lim
 execute if entity @s[scores={Dialog=1..279}] at @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=erika,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1811 51 -683 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.1"}]}
-tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.2"}]}
-tellraw @s[scores={Dialog=152}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.3"}]}
-tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.4"}]}
-tellraw @s[scores={Dialog=208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.5"}]}
-tellraw @s[scores={Dialog=216}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.6","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.1"}]}
+tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.2"}]}
+tellraw @s[scores={Dialog=152}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.3"}]}
+tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.4"}]}
+tellraw @s[scores={Dialog=208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.5"}]}
+tellraw @s[scores={Dialog=216}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.6","with":[{"selector":"@s"}]}]}
 execute if entity @s[scores={Dialog=280}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1811 51 -637
 execute if entity @s[scores={Dialog=280}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=281..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=280}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1811 51 -637
 execute if entity @s[scores={Dialog=280}] run tag @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=281..}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-tellraw @s[scores={Dialog=320}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.7"}]}
+tellraw @s[scores={Dialog=320}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.7"}]}
 tag @s[scores={Dialog=481}] remove dialog_infinity_erika_is_out_of_the_race
 scoreboard players set @s[scores={Dialog=481}] MusicType 1
 scoreboard players set @s[scores={Dialog=481}] Music 0

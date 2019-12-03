@@ -1,5 +1,5 @@
 # Set the closest entity to the killer
-scoreboard players set @e[limit=1,sort=nearest,distance=0.1..30,tag=hostile,tag=killerable,scores={Killer=0}] Killer 1
+scoreboard players set @e[limit=1,sort=nearest,distance=0.1..30,tag=hostile,tag=killerable] Killer 1
 
 # Try again
 tag @s add retry

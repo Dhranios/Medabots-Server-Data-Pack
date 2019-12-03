@@ -15,12 +15,12 @@ execute if entity @s[scores={Dialog=1}] run tag @e[tag=select_corps,tag=this_dia
 execute if entity @s[scores={Dialog=2..81}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=82}] as @e[tag=select_corps,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=82..255}] at @e[tag=select_corps,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=select_corps,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.1"}]}
-tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.2"}]}
-tellraw @s[scores={Dialog=120}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.3"}]}
-tellraw @s[scores={Dialog=128}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.4"}]}
-tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.5"}]}
-tellraw @s[scores={Dialog=200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.6"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.1"}]}
+tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.2"}]}
+tellraw @s[scores={Dialog=120}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.3"}]}
+tellraw @s[scores={Dialog=128}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.4"}]}
+tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.5"}]}
+tellraw @s[scores={Dialog=200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.6"}]}
 execute if entity @s[scores={Dialog=256}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=256}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=257..}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

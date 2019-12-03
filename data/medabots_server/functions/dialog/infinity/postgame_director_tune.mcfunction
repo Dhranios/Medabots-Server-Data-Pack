@@ -10,9 +10,9 @@ execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server
 execute if entity @s[scores={Dialog=1}] positioned -1949 51 -619 run function medabots_server:spawn_entities/cutscene/director_tune
 execute if entity @s[scores={Dialog=1..127}] at @e[tag=director_tune,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=director_tune,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1949 51 -616 -180 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune"},{"translate":"medabots_server:dialog.infinity.postgame_director_tune.1","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune"},{"translate":"medabots_server:dialog.infinity.postgame_director_tune.2"}]}
-tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune"},{"translate":"medabots_server:dialog.infinity.postgame_director_tune.3"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_director_tune.1","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_director_tune.2"}]}
+tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_director_tune.3"}]}
 execute if entity @s[scores={Dialog=128}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -640
 execute if entity @s[scores={Dialog=128}] run tag @e[tag=director_tune,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=129..}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

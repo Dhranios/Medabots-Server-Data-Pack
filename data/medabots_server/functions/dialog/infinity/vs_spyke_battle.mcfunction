@@ -18,19 +18,19 @@ execute if entity @s[scores={Dialog=1}] as @e[tag=samantha,tag=this_dialog,limit
 execute if entity @s[scores={Dialog=1}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 80 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 ~
 teleport @s[scores={Dialog=1}] -1999 51 -608 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.1"}]}
-tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.2","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=120}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.3"}]}
-tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.4"}]}
-tellraw @s[scores={Dialog=156}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.5"}]}
-tellraw @s[scores={Dialog=180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.6"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.1"}]}
+tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.2","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=120}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.3"}]}
+tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.4"}]}
+tellraw @s[scores={Dialog=156}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.5"}]}
+tellraw @s[scores={Dialog=180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.6"}]}
 execute if entity @s[scores={Dialog=188}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=188}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=189..269}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=188}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=188}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=189..275}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.7"}]}
+tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.7"}]}
 execute if entity @s[scores={Dialog=248}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=248}] as @e[tag=spyke,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=249..294}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
@@ -44,9 +44,9 @@ execute if entity @s[scores={Dialog=308}] as @e[tag=kid,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=288}] MusicType 1
 scoreboard players set @s[scores={Dialog=288}] Music 0
 execute if entity @s[scores={Dialog=308..391}] at @e[tag=kid,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=kid,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=308}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.8"}]}
-tellraw @s[scores={Dialog=328}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.9"}]}
-tellraw @s[scores={Dialog=368}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.10"}]}
+tellraw @s[scores={Dialog=308}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.8"}]}
+tellraw @s[scores={Dialog=328}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.9"}]}
+tellraw @s[scores={Dialog=368}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.10"}]}
 execute if entity @s[scores={Dialog=392},tag=!already_gave_items] run function medabots_server:give_items/medaparts/fancyroll
 tag @s[scores={Dialog=392}] add already_gave_items
 execute if entity @s[scores={Dialog=412}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585

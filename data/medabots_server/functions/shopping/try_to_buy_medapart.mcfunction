@@ -279,5 +279,5 @@ execute if entity @s[scores={BuyMedapart=278},advancements={medabots_server:get_
 execute if entity @s[scores={BuyMedapart=279},advancements={medabots_server:get_all_medabots/wave_1/galleom={right_arm=true}}] run function medabots_server:give_items/medaparts/galleom/jet_engine
 execute if entity @s[scores={BuyMedapart=280},advancements={medabots_server:get_all_medabots/wave_1/galleom={head=true}}] run function medabots_server:give_items/medaparts/galleom/armored_body
 
-tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman"},{"translate":"medabots_server:message.shop.thank_you.medapart"}]}
+tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman","color":"green"},{"translate":"medabots_server:message.shop.thank_you.medapart"}]}
 scoreboard players remove @s Money 100

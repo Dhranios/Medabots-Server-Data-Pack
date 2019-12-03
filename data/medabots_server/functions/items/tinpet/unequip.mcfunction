@@ -145,6 +145,7 @@ execute if entity @s[scores={EditingTinpet=6}] run data modify entity @s Invento
 execute if entity @s[scores={EditingTinpet=7}] run data modify entity @s Inventory[{Slot:7b}].tag.medabots_server.items set value {medal:{},head:{},right_arm:{},left_arm:{},legs:{}}
 execute if entity @s[scores={EditingTinpet=8}] run data modify entity @s Inventory[{Slot:8b}].tag.medabots_server.items set value {medal:{},head:{},right_arm:{},left_arm:{},legs:{}}
 
+tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.unequipped"}]}
 
 scoreboard players set @s UnequipTinpet 0
 scoreboard players enable @s UnequipTinpet

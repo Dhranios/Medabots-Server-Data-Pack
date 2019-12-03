@@ -14,10 +14,10 @@ execute if entity @s[scores={Dialog=1}] as @e[tag=peppercat,tag=!medabot_model,t
 execute if entity @s[scores={Dialog=80..151}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=80..151}] at @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1949 51 -616 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.1"}]}
-tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.2"}]}
-tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.3"}]}
-tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.4"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.1"}]}
+tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.2"}]}
+tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.3"}]}
+tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_samantha_battle.4"}]}
 execute if entity @s[scores={Dialog=152}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
 execute if entity @s[scores={Dialog=152}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=153..}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

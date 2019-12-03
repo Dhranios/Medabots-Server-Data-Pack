@@ -1,5 +1,5 @@
 tellraw @s[scores={ShopIndex0=1..}] {"translate":"medabots_server:message.medallar_count","color":"green","with":[{"score":{"objective":"Money","name":"@s"}}]}
-tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.tinpet_salesman"},{"translate":"medabots_server:message.shop.tinpet"}]}
+tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.tinpet_salesman","color":"green"},{"translate":"medabots_server:message.shop.tinpet"}]}
 tellraw @s[advancements={medabots_server:get_all_medabots/male_tinpet=true}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger Shopping set 18"},"with":[{"translate":"medabots_server:item.male_tinpet"},{"text":"3000"}]}
 tellraw @s[advancements={medabots_server:get_all_medabots/female_tinpet=true}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger Shopping set 19"},"with":[{"translate":"medabots_server:item.female_tinpet"},{"text":"3000"}]}
 tellraw @s[advancements={medabots_server:get_all_medabots/neutral_tinpet=true}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger Shopping set 20"},"with":[{"translate":"medabots_server:item.neutral_tinpet"},{"text":"12000"}]}

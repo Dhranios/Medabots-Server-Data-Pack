@@ -11,11 +11,11 @@ execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server
 execute if entity @s[scores={Dialog=1}] positioned -1716 51 -495 run function medabots_server:spawn_entities/cutscene/sloan
 execute if entity @s[scores={Dialog=1..115}] at @e[tag=sloan,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=sloan,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1715 51 -492 -180 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.sloans_pass.1"}]}
-tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.sloans_pass.2"}]}
-tellraw @s[scores={Dialog=48}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.sloans_pass.3"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.sloans_pass.1"}]}
+tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.sloans_pass.2"}]}
+tellraw @s[scores={Dialog=48}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.sloans_pass.3"}]}
 advancement grant @s[scores={Dialog=80}] only medabots_server:special_items/passes/laboratory_d
-tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.sloans_pass.4"}]}
+tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.sloans_pass.4"}]}
 execute if entity @s[scores={Dialog=116}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1716 51 -538
 execute if entity @s[scores={Dialog=116}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=117..}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

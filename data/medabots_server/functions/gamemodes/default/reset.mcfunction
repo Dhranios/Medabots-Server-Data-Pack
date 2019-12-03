@@ -33,6 +33,7 @@ clear @s minecraft:tipped_arrow
 
 # Remove medabot indexing
 tag @s remove hostile
+tag @s remove practice_robattle
 tag @s remove medabot
 tag @s remove enemy_medabot
 tag @s remove ally_medabot

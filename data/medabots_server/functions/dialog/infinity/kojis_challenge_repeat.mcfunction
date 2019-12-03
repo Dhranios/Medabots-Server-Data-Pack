@@ -8,8 +8,8 @@ execute if entity @s[scores={Dialog=1}] positioned -341 55 -74 run function meda
 execute if entity @s[scores={Dialog=1}] positioned -343 55 -75 run function medabots_server:spawn_entities/cutscene/koji
 execute if entity @s[scores={Dialog=1..}] at @e[tag=koji,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=koji,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..}] at @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji"},{"translate":"medabots_server:dialog.infinity.kojis_challenge_repeat.1"}]}
-tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji"},{"translate":"medabots_server:dialog.infinity.kojis_challenge_repeat.2"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji","color":"green"},{"translate":"medabots_server:dialog.infinity.kojis_challenge_repeat.1"}]}
+tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji","color":"green"},{"translate":"medabots_server:dialog.infinity.kojis_challenge_repeat.2"}]}
 tag @s[scores={Dialog=108}] remove dialog_infinity_kojis_challenge_repeat
 scoreboard players reset @s[scores={Dialog=108}] DialogNr
 scoreboard players set @s[scores={Dialog=108}] Dialog 0

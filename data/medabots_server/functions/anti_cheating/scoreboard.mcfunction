@@ -236,7 +236,7 @@ team modify AFK nametagVisibility never
 team modify AFK seeFriendlyInvisibles false
 team modify AFK prefix {"translate":"medabots_server:entity.team.afk","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.afk"}}}
 team modify AllyMedabot collisionRule never
-team modify AllyMedabot color green
+team modify AllyMedabot color blue
 team modify AllyMedabot friendlyFire false
 team modify AllyMedabot nametagVisibility hideForOtherTeams
 team modify AllyMedabot seeFriendlyInvisibles false
@@ -246,7 +246,7 @@ team modify Bot prefix {"translate":"medabots_server:entity.team.bot","extra":[{
 team modify Donator color gold
 team modify Donator prefix {"translate":"medabots_server:entity.team.donator","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.donator"}}}
 team modify EnemyMedabot collisionRule never
-team modify EnemyMedabot color green
+team modify EnemyMedabot color blue
 team modify EnemyMedabot friendlyFire false
 team modify EnemyMedabot nametagVisibility hideForOtherTeams
 team modify EnemyMedabot seeFriendlyInvisibles false
@@ -256,7 +256,7 @@ team modify Moderator prefix {"translate":"medabots_server:entity.team.moderator
 team modify MtBattleMaster color light_purple
 team modify MtBattleMaster prefix {"translate":"medabots_server:entity.team.mt_battle_master","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.mt_battle_master"}}}
 team modify NeutralMedabot collisionRule never
-team modify NeutralMedabot color green
+team modify NeutralMedabot color blue
 team modify NeutralMedabot friendlyFire true
 team modify NeutralMedabot nametagVisibility never
 team modify NeutralMedabot seeFriendlyInvisibles false

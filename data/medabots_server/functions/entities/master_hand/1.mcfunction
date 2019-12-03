@@ -11,7 +11,7 @@ execute if entity @s[tag=dying,tag=!dead] run playsound medabots_server:entity.m
 # Select random attack
 scoreboard players set @s[scores={Dialog=20}] Dialog 0
 execute unless entity @s[scores={Dialog=0..}] run scoreboard players add @s Dialog 0
-execute if entity @a[distance=..30,tag=medabot,tag=!enemy_medabot] run scoreboard players add @s[scores={Time=0,Dialog=0}] Dialog 1
+execute if entity @a[distance=..30,tag=target] run scoreboard players add @s[scores={Time=0,Dialog=0}] Dialog 1
 scoreboard players add @s[scores={Dialog=1..19}] Dialog 1
 #execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","jet"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","ram"],Duration:1}

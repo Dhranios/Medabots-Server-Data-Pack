@@ -10,8 +10,8 @@ execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server
 execute if entity @s[scores={Dialog=1}] positioned -1999 51 -605 run function medabots_server:spawn_entities/cutscene/karin
 execute if entity @s[scores={Dialog=1..135}] at @e[tag=karin,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=karin,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1999 51 -608 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.postgame_karin_battle.1","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.postgame_karin_battle.2"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_karin_battle.1","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_karin_battle.2"}]}
 execute if entity @s[scores={Dialog=136}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=136}] run tag @e[tag=karin,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=137..}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

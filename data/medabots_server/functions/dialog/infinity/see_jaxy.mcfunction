@@ -10,7 +10,7 @@ scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 execute if entity @s[scores={Dialog=1}] positioned -362 55 -120 run function medabots_server:spawn_entities/cutscene/jaxy
 execute if entity @s[scores={Dialog=1}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 40 ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.see_jaxy.1"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.see_jaxy.1"}]}
 execute if entity @s[scores={Dialog=20}] at @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=40}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -362 55 -125
 execute if entity @s[scores={Dialog=41}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
@@ -19,7 +19,7 @@ execute if entity @s[scores={Dialog=65}] as @e[tag=jaxy,tag=!medabot_model,tag=t
 execute if entity @s[scores={Dialog=66..102}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=103}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -378 55 -109
 execute if entity @s[scores={Dialog=104..}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-tellraw @s[scores={Dialog=98}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.see_jaxy.2"}]}
+tellraw @s[scores={Dialog=98}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.see_jaxy.2"}]}
 tag @s[scores={Dialog=114}] remove dialog_infinity_see_jaxy
 scoreboard players set @s[scores={Dialog=114}] MusicType 1
 scoreboard players set @s[scores={Dialog=114}] Music 0

@@ -8,8 +8,8 @@ execute if entity @s[scores={Dialog=1}] positioned -393 55 -93 run function meda
 execute if entity @s[scores={Dialog=1}] positioned -394 55 -95 run function medabots_server:spawn_entities/cutscene/karin
 execute if entity @s[scores={Dialog=1..}] at @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..}] at @e[tag=karin,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=karin,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin"},{"translate":"medabots_server:dialog.infinity.karins_challenge_repeat.1"}]}
-tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.karins_challenge_repeat.2"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.karins_challenge_repeat.1"}]}
+tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.karins_challenge_repeat.2"}]}
 tag @s[scores={Dialog=106}] remove dialog_infinity_karins_challenge_repeat
 scoreboard players reset @s[scores={Dialog=106}] DialogNr
 scoreboard players set @s[scores={Dialog=106}] Dialog 0

@@ -12,9 +12,9 @@ execute if entity @s[scores={Dialog=1}] positioned -1998 51 -557 run function me
 execute if entity @s[scores={Dialog=1..127}] at @e[tag=doctor_haru,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=doctor_haru,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..127}] at @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1997 51 -560 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.postgame_doctor_haru_battle.1"}]}
-tellraw @s[scores={Dialog=48}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline"},{"translate":"medabots_server:dialog.infinity.postgame_doctor_haru_battle.2"}]}
-tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline"},{"translate":"medabots_server:dialog.infinity.postgame_doctor_haru_battle.3"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_doctor_haru_battle.1"}]}
+tellraw @s[scores={Dialog=48}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_doctor_haru_battle.2"}]}
+tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.caroline","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_doctor_haru_battle.3"}]}
 execute if entity @s[scores={Dialog=128}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=128}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=129..}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

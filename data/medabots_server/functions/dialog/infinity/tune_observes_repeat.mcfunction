@@ -7,7 +7,7 @@ scoreboard players add @s Dialog 1
 execute if entity @s[scores={Dialog=1}] positioned -411 55 -31 run function medabots_server:spawn_entities/cutscene/director_tune
 execute if entity @s[scores={Dialog=1..}] at @e[tag=director_tune,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=director_tune,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 teleport @s[x=-410,y=55,z=-42,distance=..6] -415 55 -34
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune"},{"translate":"medabots_server:dialog.infinity.tune_observes_repeat.1"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.tune_observes_repeat.1"}]}
 tag @s[scores={Dialog=84}] remove dialog_infinity_tune_observes_repeat
 scoreboard players reset @s[scores={Dialog=84}] DialogNr
 scoreboard players set @s[scores={Dialog=84}] Dialog 0

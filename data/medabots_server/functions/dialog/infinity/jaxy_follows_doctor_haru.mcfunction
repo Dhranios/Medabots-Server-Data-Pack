@@ -13,8 +13,8 @@ execute if entity @s[scores={Dialog=1}] as @e[tag=jaxy,tag=!medabot_model,tag=th
 execute if entity @s[scores={Dialog=2}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -472 55 -68
 execute if entity @s[scores={Dialog=2}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2..124}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.1"}]}
-tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.2","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.1"}]}
+tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.2","with":[{"selector":"@s"}]}]}
 execute if entity @s[scores={Dialog=40}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=40}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=40..140}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125

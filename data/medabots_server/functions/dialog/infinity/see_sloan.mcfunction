@@ -7,10 +7,10 @@ scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/infinity see_sloan
 execute if entity @s[scores={Dialog=1}] positioned -302 55 -14 run function medabots_server:spawn_entities/cutscene/sloan
 execute if entity @s[scores={Dialog=1..}] at @e[tag=sloan,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=sloan,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.see_sloan.1","with":[{"selector":"@s"}]}]}
-tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.see_sloan.2"}]}
-tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan"},{"translate":"medabots_server:dialog.infinity.see_sloan.3"}]}
-tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.see_sloan.4"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.see_sloan.1","with":[{"selector":"@s"}]}]}
+tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.see_sloan.2"}]}
+tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.see_sloan.3"}]}
+tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.see_sloan.4"}]}
 tag @s[scores={Dialog=112}] remove dialog_infinity_see_sloan
 scoreboard players reset @s[scores={Dialog=112}] DialogNr
 scoreboard players set @s[scores={Dialog=112}] Dialog 0

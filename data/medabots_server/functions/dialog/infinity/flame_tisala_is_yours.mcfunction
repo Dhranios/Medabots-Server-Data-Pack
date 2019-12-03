@@ -13,20 +13,20 @@ execute if entity @s[scores={Dialog=1}] positioned -1727 50 -572 run function me
 execute if entity @s[scores={Dialog=1..243}] at @e[tag=doctor_haru,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=doctor_haru,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 teleport @s[scores={Dialog=1}] -1727 50 -575 0 0
-tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.1"}]}
-tellraw @s[scores={Dialog=20}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.2"}]}
-tellraw @s[scores={Dialog=36}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.3"}]}
-tellraw @s[scores={Dialog=76}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.4"}]}
-tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.5"}]}
-tellraw @s[scores={Dialog=116}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.6"}]}
-tellraw @s[scores={Dialog=148}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.7"}]}
-tellraw @s[scores={Dialog=180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.8"}]}
-tellraw @s[scores={Dialog=212}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.9"}]}
+tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.1"}]}
+tellraw @s[scores={Dialog=20}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.2"}]}
+tellraw @s[scores={Dialog=36}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.3"}]}
+tellraw @s[scores={Dialog=76}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.4"}]}
+tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.5"}]}
+tellraw @s[scores={Dialog=116}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.6"}]}
+tellraw @s[scores={Dialog=148}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.7"}]}
+tellraw @s[scores={Dialog=180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.8"}]}
+tellraw @s[scores={Dialog=212}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.9"}]}
 execute if entity @s[scores={Dialog=244}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1727 50 -542
 execute if entity @s[scores={Dialog=244}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=245..}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-tellraw @s[scores={Dialog=284}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.10"}]}
-tellraw @s[scores={Dialog=324}] {"translate":"chat.type.text","with":[{"selector":"@s"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.11"}]}
+tellraw @s[scores={Dialog=284}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.10"}]}
+tellraw @s[scores={Dialog=324}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.11"}]}
 scoreboard players set @s[scores={Dialog=385}] MusicType 1
 scoreboard players set @s[scores={Dialog=385}] Music 0
 tag @s[scores={Dialog=385}] remove dialog_infinity_flame_tisala_is_yours

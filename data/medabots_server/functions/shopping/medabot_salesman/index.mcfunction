@@ -77,7 +77,7 @@ execute if entity @s[scores={ShopIndex1=21,ShopIndex2=14,ShopIndex3=9}] run func
 execute if entity @s[scores={ShopIndex1=22,ShopIndex2=1,ShopIndex3=12}] run function medabots_server:shopping/medabot_salesman/val
 execute if entity @s[scores={ShopIndex1=23,ShopIndex2=5,ShopIndex3=1}] run function medabots_server:shopping/medabot_salesman/wea
 
-tellraw @s[tag=!success] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.no_medabot"}]}
+tellraw @s[tag=!success] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman","color":"green"},{"translate":"medabots_server:message.shop.no_medabot"}]}
 scoreboard players reset @s ShopIndex2
 tag @s remove success
 tag @s[tag=final] remove trading

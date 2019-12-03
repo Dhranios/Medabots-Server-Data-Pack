@@ -1,7 +1,7 @@
 tag @s add success
 execute if entity @s[advancements={medabots_server:get_all_medabots/wave_1/boarbooster={legs=false,left_arm=false,right_arm=false,head=false}}] run tag @s add out_of_stock
-tellraw @s[tag=out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.not_available"}]}
-tellraw @s[tag=!out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.medapart"}]}
+tellraw @s[tag=out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman","color":"green"},{"translate":"medabots_server:message.shop.not_available"}]}
+tellraw @s[tag=!out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman","color":"green"},{"translate":"medabots_server:message.shop.medapart"}]}
 tag @s remove out_of_stock
 tellraw @s[advancements={medabots_server:get_all_medabots/wave_1/boarbooster={legs=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 61"},"with":[{"translate":"medabots_server:entity.boarbooster","extra":[{"text":" "},{"translate":"medabots_server:item.boarbooster_mashglow"}]},{"text":"100"}]}
 tellraw @s[advancements={medabots_server:get_all_medabots/wave_1/boarbooster={left_arm=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 62"},"with":[{"translate":"medabots_server:entity.boarbooster","extra":[{"text":" "},{"translate":"medabots_server:item.boarbooster_wollybond"}]},{"text":"100"}]}

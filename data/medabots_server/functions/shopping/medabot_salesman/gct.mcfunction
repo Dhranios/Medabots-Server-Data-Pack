@@ -1,7 +1,7 @@
 tag @s add success
 execute if entity @s[advancements={medabots_server:get_all_medabots/wave_1/potato_insect={legs=false,left_arm=false,right_arm=false,head=false}}] run tag @s add out_of_stock
-tellraw @s[tag=out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.not_available"}]}
-tellraw @s[tag=!out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman"},{"translate":"medabots_server:message.shop.medapart"}]}
+tellraw @s[tag=out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman","color":"green"},{"translate":"medabots_server:message.shop.not_available"}]}
+tellraw @s[tag=!out_of_stock] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman","color":"green"},{"translate":"medabots_server:message.shop.medapart"}]}
 tag @s remove out_of_stock
 tellraw @s[advancements={medabots_server:get_all_medabots/wave_1/potato_insect={legs=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 197"},"with":[{"translate":"medabots_server:entity.potato_insect","extra":[{"text":" "},{"translate":"medabots_server:item.potato_insect_caterpie"}]},{"text":"100"}]}
 tellraw @s[advancements={medabots_server:get_all_medabots/wave_1/potato_insect={left_arm=true}}] {"translate":"medabots_server:message.shop.buy","clickEvent":{"action":"run_command","value":"/trigger BuyMedapart set 198"},"with":[{"translate":"medabots_server:entity.potato_insect","extra":[{"text":" "},{"translate":"medabots_server:item.potato_insect_attenderskin"}]},{"text":"100"}]}

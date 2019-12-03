@@ -1,5 +1,5 @@
-tellraw @s[tag=!equipped] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.tinpet_salesman"},{"translate":"medabots_server:message.shop.sell_again"}]}
-tellraw @s[tag=equipped] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.tinpet_salesman"},{"translate":"medabots_server:message.shop.sell_again.equipped_tinpet"}]}
+tellraw @s[tag=!equipped] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.tinpet_salesman","color":"green"},{"translate":"medabots_server:message.shop.sell_again"}]}
+tellraw @s[tag=equipped] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.tinpet_salesman","color":"green"},{"translate":"medabots_server:message.shop.sell_again.equipped_tinpet"}]}
 tag @s[tag=equipped] remove equipped
 execute if entity @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{part:"tinpet"}}}]}] run tellraw @s {"translate":"medabots_server:message.shop.sell.more.1","clickEvent":{"action":"run_command","value":"/trigger ShopIndex1 set 1"},"with":[{"text":"750"},{"nbt":"Inventory[{Slot:0b}].tag.display.Name","entity":"@s","interpret":true}]}
 execute if entity @s[nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"tinpet"}}}]}] run tellraw @s {"translate":"medabots_server:message.shop.sell.more.1","clickEvent":{"action":"run_command","value":"/trigger ShopIndex1 set 2"},"with":[{"text":"750"},{"nbt":"Inventory[{Slot:1b}].tag.display.Name","entity":"@s","interpret":true}]}

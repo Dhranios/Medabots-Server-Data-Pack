@@ -1,12 +1,12 @@
 # Mission text
 execute unless entity @s[scores={Dialog=0..}] run scoreboard players set @s Dialog 0
 scoreboard players add @s[scores={Dialog=..80}] Dialog 1
-execute store result score #temp Stage run scoreboard players get @s Stage
+scoreboard players operation #temp Stage = @s Stage
 execute as @e if score @s Stage = #temp Stage run tag @s add this_mission
-execute if entity @s[scores={Dialog=1}] as @e[tag=cannon,type=minecraft:zombie] if score @s Stage = #temp Stage run tag @s remove enabled
-execute if entity @s[scores={Dialog=1}] as @e[tag=!medabot] if score @s Stage = #temp Stage run tag @s add disabled
-# Try to save a lot of resources by not ticking objects in stages when in a mission, if they are not part of the mission
-#execute if entity @s[scores={Dialog=1}] as @e[tag=!medabot,tag=!mission_entity] if score @s Stage = #temp Stage run tag @s add no_ticking
+execute if entity @s[scores={Dialog=1}] as @e[tag=cannon,type=minecraft:zombie,tag=this_mission] run tag @s remove enabled
+execute if entity @s[scores={Dialog=1}] as @e[tag=!medabot,tag=this_mission] run tag @s add disabled
+execute if entity @s[scores={Dialog=2}] as @e[tag=medabot,tag=!enemy_medabot,tag=this_mission] at @s facing entity @e[tag=medabot,tag=enemy_medabot,tag=this_mission,sort=nearest,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=2}] as @e[tag=medabot,tag=enemy_medabot,tag=this_mission] at @s facing entity @e[tag=medabot,tag=!enemy_medabot,tag=this_mission,sort=nearest,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=8}] run title @a[tag=this_mission,tag=!enemy_medabot] title {"translate":"medabots_server:message.stage.mission","color":"green"}
 execute if entity @s[scores={Dialog=8}] run title @a[tag=this_mission,tag=enemy_medabot] title {"translate":"medabots_server:message.stage.mission.enemy","color":"green"}
 execute if entity @s[scores={Dialog=32},tag=destroy_all_cannons] run title @a[tag=this_mission] title {"translate":"medabots_server:message.stage.mission.cannons","color":"green"}
