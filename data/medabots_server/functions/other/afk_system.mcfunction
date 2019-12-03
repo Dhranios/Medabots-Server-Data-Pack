@@ -127,6 +127,8 @@ scoreboard players set @s[scores={Flying=1..}] Flying 0
 scoreboard players set @s[scores={Minecart=1..}] Minecart 0
 scoreboard players set @s[scores={Horse=1..}] Horse 0
 scoreboard players set @s[scores={Pig=1..}] Pig 0
+tag @s[tag=fell] remove fell
+tag @s[scores={Fall=1..}] add fell
 scoreboard players set @s[scores={Fall=1..}] Fall 0
 tag @s[tag=sneak_pos] remove sneak_pos
 tag @s[scores={Sneaking=1..}] add sneak_pos

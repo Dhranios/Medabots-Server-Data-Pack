@@ -202,7 +202,6 @@ execute if entity @s[tag=dialog_other_get_amelia] run function medabots_server:d
 #execute if entity @s[tag=dialog_other_get_master_core] run function medabots_server:dialog/other/get_master_core
 #execute if entity @s[tag=dialog_other_get_metal_general] run function medabots_server:dialog/other/get_metal_general
 #execute if entity @s[tag=dialog_other_get_mewtwo] run function medabots_server:dialog/other/get_mewtwo
-#execute if entity @s[tag=dialog_other_get_nino] run function medabots_server:dialog/other/get_nino
 #execute if entity @s[tag=dialog_other_get_rob] run function medabots_server:dialog/other/get_rob
 #execute if entity @s[tag=dialog_other_get_zant] run function medabots_server:dialog/other/get_zant
 execute if entity @s[tag=dialog_other_magolor_appears] run function medabots_server:dialog/other/magolor_appears
@@ -213,5 +212,6 @@ execute if entity @s[tag=dialog_other_ruins_in_b_fvbico_cleared] run function me
 
 # Clashable
 #execute if entity @s[tag=dialog_other_get_darknut] unless entity @s[tag=!get_darknut_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_darknut
+#execute if entity @s[tag=dialog_other_get_nino] unless entity @s[tag=!get_nino_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_nino
 #execute if entity @s[tag=dialog_other_get_sphere_doomers] unless entity @s[tag=!get_sphere_doomers_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_sphere_doomers
 execute if entity @s[tag=dialog_other_get_suzumega_hummer] unless entity @s[tag=!get_suzumega_hummer_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_suzumega_hummer

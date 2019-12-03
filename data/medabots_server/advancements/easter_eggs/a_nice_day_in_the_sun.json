@@ -1,7 +1,8 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:chainmail_helmet"
+            "item": "minecraft:skeleton_skull",
+			"nbt": "{CustomModelData:1}"
         },
         "title": {
             "translate": "medabots_server:advancements.easter_eggs.a_nice_day_in_the_sun"

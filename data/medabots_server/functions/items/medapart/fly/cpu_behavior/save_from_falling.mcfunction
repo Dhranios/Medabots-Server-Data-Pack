@@ -7,6 +7,8 @@ execute if block ~ ~ ~1 minecraft:black_wool run tag @s add select_legs_now
 execute if block ~ ~ ~2 minecraft:black_wool run tag @s add select_legs_now
 execute if block ~ ~ ~-1 minecraft:black_wool run tag @s add select_legs_now
 execute if block ~ ~ ~-2 minecraft:black_wool run tag @s add select_legs_now
+execute unless block ~ ~2 ~ minecraft:air run tag @s remove select_legs_now
+execute unless block ~ ~3 ~ minecraft:air run tag @s remove select_legs_now
 
 tag @s[tag=select_legs_now] add legs_selected
 tag @s[tag=select_legs_now] remove left_arm_selected

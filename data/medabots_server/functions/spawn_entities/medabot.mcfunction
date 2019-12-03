@@ -40,6 +40,9 @@ execute if data entity @s Item.tag.medabots_server.cpu_data.medabot_name run dat
 execute unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"enemy"}}}}}] unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"ally"}}}}}] run tag @e[tag=new_medabot,limit=1] add neutral_medabot
 execute if entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"enemy"}}}}}] run tag @e[tag=new_medabot,limit=1] add enemy_medabot
 execute if entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"ally"}}}}}] run tag @e[tag=new_medabot,limit=1] add ally_medabot
+execute unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"enemy"}}}}}] unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"ally"}}}}}] run team join NeutralMedabot @e[tag=new_medabot,limit=1]
+execute if entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"enemy"}}}}}] run team join EnemyMedabot @e[tag=new_medabot,limit=1]
+execute if entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"ally"}}}}}] run team join AllyMedabot @e[tag=new_medabot,limit=1]
 
 # Set tinpet type
 execute if entity @s[nbt={Item:{tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}}] run tag @e[tag=new_medabot,limit=1] add male_tinpet

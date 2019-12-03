@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:paper"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.preliminary_match"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.preliminary_match.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/preliminary_match"
+    }
+}

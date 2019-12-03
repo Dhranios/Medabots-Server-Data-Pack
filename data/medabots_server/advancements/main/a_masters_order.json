@@ -10,7 +10,7 @@
             "translate": "medabots_server:advancements.main.a_masters_order.description"
         }
     },
-    "parent": "medabots_server:main/root",
+    "parent": "medabots_server:main/preliminary_match",
     "criteria": {
         "give": {
             "trigger": "minecraft:impossible"

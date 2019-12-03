@@ -90,6 +90,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1714 45 -705 minecraft:iron_door[open=true] if block -1710 45 -701 minecraft:air if entity @s[x=-1716,y=45,z=-705,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_a/second_go_battle/4
 execute if entity @e[x=-1713.5,y=45,z=-698.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=21,Medabot=0..,Battle=1..2}]
+execute if entity @e[x=-1713.5,y=45,z=-698.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if entity @e[scores={Stage=21,Medabot=0..,Battle=1..},type=minecraft:skeleton,tag=dying] run advancement grant @s only medabots_server:main/preliminary_match
 title @s[scores={BattlingMedabots=1,Battle=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run scoreboard players set @e[x=-1713.5,y=45,z=-704.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,Battle=1..}] run kill @e[x=-1761,y=0,z=-730,dx=94,dy=49,dz=94,tag=mission,type=minecraft:area_effect_cloud]
