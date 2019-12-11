@@ -24,10 +24,16 @@ execute store result score @e[tag=new,limit=1] DelayTime run data get entity @s 
 execute store result score @e[tag=new,limit=1] PowerNeeded run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[6]
 execute store result score @e[tag=new,limit=1] Speed run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[7]
 
-execute at @e[tag=new,tag=starting_area] run teleport @a[tag=building_player,limit=1] ~ ~ ~ 0 0
+execute at @e[tag=new,tag=starting_area] if block ~ ~-1 ~ minecraft:air run function medabots_server:set_blocks/bridge
+execute at @e[tag=new,tag=starting_area] if block ~ ~-1 ~ minecraft:water if block ~ ~-2 ~ minecraft:water run function medabots_server:set_blocks/bridge
+execute at @e[tag=new,tag=starting_area]run teleport @a[tag=building_player,limit=1] ~ ~-1 ~ 0 0
+execute at @e[tag=new,tag=starting_area] unless block ~ ~-1 ~ minecraft:water run teleport @a[tag=building_player,limit=1] ~ ~ ~ 0 0
 kill @e[tag=new,tag=starting_area]
 
-execute if entity @e[tag=new,limit=1,tag=goal_area] as @e[distance=..0.7,tag=enemy_medabot] at @e[tag=new,limit=1,tag=goal_area] run function medabots_server:entities/mission/enemy_medabot
+execute at @e[tag=new,tag=goal_area] if block ~ ~-1 ~ minecraft:air run function medabots_server:set_blocks/bridge
+execute at @e[tag=new,tag=goal_area] if block ~ ~-1 ~ minecraft:water if block ~ ~-2 ~ minecraft:water run function medabots_server:set_blocks/bridge
+execute if entity @e[tag=new,limit=1,tag=goal_area] as @e[distance=..0.7,tag=enemy_medabot] at @e[tag=new,limit=1,tag=goal_area] if block ~ ~-1 ~ minecraft:water positioned ~ ~-1 ~ run function medabots_server:entities/mission/enemy_medabot
+execute if entity @e[tag=new,limit=1,tag=goal_area] as @e[distance=..0.7,tag=enemy_medabot] at @e[tag=new,limit=1,tag=goal_area] unless block ~ ~-1 ~ minecraft:water run function medabots_server:entities/mission/enemy_medabot
 
 execute as @e[distance=..0.7,tag=mission] unless entity @s[tag=!run_until_the_time_is_up,tag=!defeat_all_guards] run tag @e[tag=new,limit=1,tag=guard,tag=!pot,tag=!action_floor] add mission_entity
 execute as @e[distance=..0.7,tag=mission] unless entity @s[tag=!run_until_the_time_is_up,tag=!destroy_all_cannons] run tag @e[tag=new,limit=1,tag=cannon,tag=!pot,tag=!action_floor] add mission_entity
