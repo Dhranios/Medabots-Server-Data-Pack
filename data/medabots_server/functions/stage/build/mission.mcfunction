@@ -13,6 +13,15 @@ tag @s[tag=impossible] remove impossible
 execute if entity @s[tag=!failed] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage"}}}]}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.none_selected","color":"red"}
 execute if entity @s[tag=!failed] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage"}}}]}] run tag @s add failed
 
+execute if entity @s[tag=!failed] run loot spawn ~ ~ ~ loot medabots_server:gameplay/get_player_name
+execute if entity @s[tag=!failed] store success score #temp Money run data modify entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}},limit=1] Item.tag.SkullOwner.Name set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.owner
+execute if entity @s[tag=!failed] run kill @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}}]
+execute if entity @s[tag=!failed] if score #temp Money = 1 run tag @s add not_yours
+execute if entity @s[tag=!failed] run scoreboard players reset #temp Money
+execute if entity @s[tag=!failed] run tellraw @s[tag=not_yours] {"translate":"medabots_server:message.stage.stage_builder.mission.other_owner","color":"yellow"}
+execute if entity @s[tag=!failed] run tag @s[tag=not_yours] add failed
+tag @s remove not_yours
+
 execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["mission"]}]}}}]}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.contains_mission","color":"red"}
 execute if entity @s[tag=!failed] if entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{id:"medabots_server:custom_stage",stage_data:[{object:["mission"]}]}}}]}] run tag @s add failed
 
