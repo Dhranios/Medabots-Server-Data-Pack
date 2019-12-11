@@ -5,7 +5,9 @@ execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Mus
 scoreboard players set @s MusicType 1
 function medabots_server:other/death
 execute if entity @s[tag=!stage_builder] run function medabots_server:gamemodes/default/reset
-execute at @e[x=-2066,y=0,z=-245,dx=51,dy=53,dz=51,tag=master_hand,tag=!dying] run playsound medabots_server:entity.master_hand.laugh1 hostile @s ~ ~ ~ 10
-execute at @e[x=-2066,y=0,z=-245,dx=51,dy=53,dz=51,tag=master_hand,tag=!dying] run tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.master_hand","color":"green"},{"translate":"medabots_server:message.master_hand.spawn.1"}]}
-execute unless entity @a[x=-2066,y=0,z=-245,dx=51,dy=53,dz=51,tag=medabot] run function medabots_server:stage/clean_up/final_destination_1
+execute at @e[scores={Stage=61},tag=master_hand,tag=!dying] run playsound medabots_server:entity.master_hand.laugh1 hostile @s ~ ~ ~ 10
+execute at @e[scores={Stage=61},tag=master_hand,tag=!dying] run tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.master_hand","color":"green"},{"translate":"medabots_server:message.master_hand.spawn.1"}]}
+tag @s add leave_stage
+function medabots_server:stage/try/final_destination_1/enter
+tag @s remove leave_stage
 scoreboard players set @s KillStreak 0

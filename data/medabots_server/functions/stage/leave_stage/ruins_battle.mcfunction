@@ -5,4 +5,6 @@ execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Mus
 scoreboard players set @s MusicType 1
 function medabots_server:other/death
 execute if entity @s[tag=!stage_builder] run function medabots_server:gamemodes/default/reset
-execute unless entity @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42,tag=medabot] run function medabots_server:stage/clean_up/ruins_battle
+tag @s add leave_stage
+function medabots_server:stage/try/ruins_battle/enter
+tag @s remove leave_stage
