@@ -49,7 +49,6 @@ tellraw @s[scores={Dialog=600}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=632}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.20"}]}
 execute if entity @s[scores={Dialog=664}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -640
 execute if entity @s[scores={Dialog=664}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=665..669}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=669}] run kill @e[tag=gillgirl,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=669}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.21"}]}
 tellraw @s[scores={Dialog=685}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy.22"}]}

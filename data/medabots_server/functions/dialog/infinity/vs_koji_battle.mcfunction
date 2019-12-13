@@ -26,8 +26,6 @@ tellraw @s[scores={Dialog=92}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=116}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.roks","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_koji_battle.7"}]}
 execute if entity @s[scores={Dialog=132}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=132}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=133..232}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=133..227}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=232}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=227}] run tag @e[tag=koji,tag=this_dialog,limit=1] add dead
 scoreboard players set @s[scores={Dialog=182}] MusicType 1

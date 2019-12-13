@@ -18,7 +18,6 @@ tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=140}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_taken.6"}]}
 execute if entity @s[scores={Dialog=188}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -423 55 -25
 execute if entity @s[scores={Dialog=188}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=189..}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 tag @s[scores={Dialog=268}] remove dialog_infinity_peppercat_taken
 scoreboard players set @s[scores={Dialog=268}] MusicType 1
 scoreboard players set @s[scores={Dialog=268}] Music 0

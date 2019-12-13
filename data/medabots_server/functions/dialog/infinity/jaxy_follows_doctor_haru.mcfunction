@@ -12,27 +12,22 @@ execute at @s as @e[x=-472,y=55,z=-68,tag=kid,distance=..1] run scoreboard playe
 execute if entity @s[scores={Dialog=1}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 85 ~
 execute if entity @s[scores={Dialog=2}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -472 55 -68
 execute if entity @s[scores={Dialog=2}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2..124}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.1"}]}
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxy_follows_doctor_haru.2","with":[{"selector":"@s"}]}]}
 execute if entity @s[scores={Dialog=40}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=40}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=40..140}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=140}] run kill @e[tag=kid,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=60}] MusicType 43
 scoreboard players set @s[scores={Dialog=60}] Music 0
 execute if entity @s[scores={Dialog=125}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=126..155}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=135}] run fill -476 55 -72 -476 57 -65 minecraft:red_wool replace minecraft:redstone_block
 execute if entity @s[scores={Dialog=155}] run fill -476 55 -72 -476 57 -65 minecraft:redstone_block replace minecraft:red_wool
 execute if entity @s[scores={Dialog=155}] run kill @e[tag=doctor_haru,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=155}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -472 55 -69
 execute if entity @s[scores={Dialog=155}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=156..240}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=240}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=240}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=300}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=301..330}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=305}] run fill -476 55 -72 -476 57 -65 minecraft:red_wool replace minecraft:redstone_block
 execute if entity @s[scores={Dialog=325}] run fill -476 55 -72 -476 57 -65 minecraft:redstone_block replace minecraft:red_wool
 scoreboard players set @s[scores={Dialog=330}] MusicType 1

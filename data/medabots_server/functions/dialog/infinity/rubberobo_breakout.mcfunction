@@ -23,7 +23,6 @@ scoreboard players set @s[scores={Dialog=104}] Music 0
 execute if entity @s[scores={Dialog=104}] positioned -1779 50 -300 run function medabots_server:spawn_entities/cutscene/rubberobo
 execute if entity @s[scores={Dialog=104}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 ~
 execute if entity @s[scores={Dialog=104}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=105..167}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=167}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=167}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 tellraw @s[scores={Dialog=168}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_breakout.6"}]}
@@ -32,7 +31,6 @@ tellraw @s[scores={Dialog=184}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=192}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_breakout.9"}]}
 execute if entity @s[scores={Dialog=216}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1773 50 -300
 execute if entity @s[scores={Dialog=216}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=217..271}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=271}] as @e[tag=koji,tag=this_dialog,limit=1] run tag @s remove walking
 scoreboard players set @s[scores={Dialog=271}] MusicType 38
 scoreboard players set @s[scores={Dialog=271}] Music 0
@@ -58,7 +56,6 @@ tellraw @s[scores={Dialog=963}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=971}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_breakout.29"}]}
 execute if entity @s[scores={Dialog=1035}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1772 50 -251
 execute if entity @s[scores={Dialog=1035}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1036..1260}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 advancement grant @s[scores={Dialog=1260}] only medabots_server:special_items/passes/robo_1
 scoreboard players set @s[scores={Dialog=1260}] MusicType 1
 scoreboard players set @s[scores={Dialog=1260}] Music 0

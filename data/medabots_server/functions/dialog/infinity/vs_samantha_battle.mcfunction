@@ -26,7 +26,6 @@ scoreboard players set @s[scores={Dialog=168}] MusicType 39
 scoreboard players set @s[scores={Dialog=168}] Music 0
 tellraw @s[scores={Dialog=168}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.5"}]}
 execute if entity @s[scores={Dialog=168}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=169..225}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=225}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=226}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=179..2242}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s facing entity @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -66,7 +65,6 @@ tellraw @s[scores={Dialog=1148}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.31"}]}
 tellraw @s[scores={Dialog=1252}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.32"}]}
 execute if entity @s[scores={Dialog=1260}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1260..1267}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1268}] as @e[tag=samantha,tag=this_dialog,limit=1] run tag @s remove walking
 tellraw @s[scores={Dialog=1268}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.33"}]}
 tellraw @s[scores={Dialog=1292}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.34"}]}
@@ -88,7 +86,6 @@ tellraw @s[scores={Dialog=1720}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1728}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.47"}]}
 tellraw @s[scores={Dialog=1744}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.48"}]}
 execute if entity @s[scores={Dialog=1752}] run tag @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1753..1764}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1764}] run tag @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 tellraw @s[scores={Dialog=1758}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.49"}]}
 tellraw @s[scores={Dialog=1766}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.50"}]}
@@ -109,13 +106,11 @@ tellraw @s[scores={Dialog=2090}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2114}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.65"}]}
 execute if entity @s[scores={Dialog=2138}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=2138}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2139..2243}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2243}] run kill @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=2198}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.66"}]}
 tellraw @s[scores={Dialog=2206}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.67"}]}
 execute if entity @s[scores={Dialog=2224}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=2224}] run tag @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2225..2329}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2329}] run kill @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=2243}] MusicType 35
 scoreboard players set @s[scores={Dialog=2243}] Music 0
@@ -127,7 +122,6 @@ tellraw @s[scores={Dialog=2283}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2299}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.72"}]}
 execute if entity @s[scores={Dialog=2323}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=2323}] as @e[tag=samantha,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=2324..2370}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=2370}] run kill @e[tag=samantha,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=2370}] MusicType 1
 scoreboard players set @s[scores={Dialog=2370}] Music 0

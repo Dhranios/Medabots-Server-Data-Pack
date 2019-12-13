@@ -52,7 +52,6 @@ execute if entity @s[scores={Stage=48}] unless entity @e[scores={Stage=48,Battle
 execute if entity @s[scores={Stage=49}] unless entity @e[scores={Stage=49,Battle=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/ruins_battle
 execute if entity @s[scores={Stage=50}] unless entity @e[scores={Stage=50,Battle=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/park_battle
 execute if entity @s[scores={Stage=51}] unless entity @e[scores={Stage=51,Battle=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/mt_battle
-execute if entity @s[scores={Stage=51}] unless entity @e[scores={Stage=51,Battle=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/mt_battle
 execute if entity @s[scores={Stage=52}] unless entity @e[scores={Stage=52,Battle=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/grassland_e
 execute if entity @s[scores={Stage=53}] unless entity @e[scores={Stage=53,Battle=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/rock_e
 execute if entity @s[scores={Stage=54}] unless entity @e[scores={Stage=54,Battle=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/jungle_e

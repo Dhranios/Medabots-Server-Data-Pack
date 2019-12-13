@@ -12,7 +12,6 @@ execute if entity @s[scores={Dialog=1}] positioned -394 55 -52 run function meda
 teleport @s[x=-394,y=55,z=-52,distance=..4] -399 55 -52
 execute if entity @s[scores={Dialog=1}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
 execute if entity @s[scores={Dialog=1}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2..81}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=82}] as @e[tag=select_corps,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=82..255}] at @e[tag=select_corps,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=select_corps,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.1"}]}
@@ -23,7 +22,6 @@ tellraw @s[scores={Dialog=136}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.select_corps_warning.6"}]}
 execute if entity @s[scores={Dialog=256}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=256}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=257..}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=297}] remove dialog_infinity_select_corps_warning
 scoreboard players set @s[scores={Dialog=297}] MusicType 1
 scoreboard players set @s[scores={Dialog=297}] Music 0

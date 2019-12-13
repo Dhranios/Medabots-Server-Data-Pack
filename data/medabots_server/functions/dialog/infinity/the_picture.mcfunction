@@ -34,7 +34,6 @@ tellraw @s[scores={Dialog=368}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=384}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.roks","color":"green"},{"translate":"medabots_server:dialog.infinity.the_picture.14"}]}
 execute if entity @s[scores={Dialog=392}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -401 55 -52
 execute if entity @s[scores={Dialog=392}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=393..425}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=419..425}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~-0.425 ~ ~
 execute if entity @s[scores={Dialog=425}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=412..425}] at @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] run particle minecraft:dust 1 1 0 1 ~ ~1 ~ 1 2 1 0 30
@@ -78,10 +77,8 @@ tellraw @s[scores={Dialog=1703}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1719}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.roks","color":"green"},{"translate":"medabots_server:dialog.infinity.the_picture.47"}]}
 execute if entity @s[scores={Dialog=1735}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -415 55 -28
 execute if entity @s[scores={Dialog=1735}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1736..1855}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1735}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -415 55 -28
 execute if entity @s[scores={Dialog=1735}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1736..1855}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1855}] run kill @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1855}] run kill @e[tag=koji,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=1795}] MusicType 1
@@ -90,11 +87,9 @@ tellraw @s[scores={Dialog=1795}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1851}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.the_picture.49"}]}
 execute if entity @s[scores={Dialog=1867}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -414 55 -77
 execute if entity @s[scores={Dialog=1867}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1868..1987}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1987}] run kill @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1867}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -397 55 -51
 execute if entity @s[scores={Dialog=1867}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1868..1886}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1887}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
 execute if entity @s[scores={Dialog=1887}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 tellraw @s[scores={Dialog=1867}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.the_picture.50"}]}

@@ -18,7 +18,6 @@ advancement grant @s[scores={Dialog=80}] only medabots_server:special_items/pass
 tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.sloans_pass.4"}]}
 execute if entity @s[scores={Dialog=116}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1716 51 -538
 execute if entity @s[scores={Dialog=116}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=117..}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=318}] remove dialog_infinity_sloans_pass
 scoreboard players set @s[scores={Dialog=318}] MusicType 1
 scoreboard players set @s[scores={Dialog=318}] Music 0

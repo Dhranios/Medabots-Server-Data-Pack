@@ -15,7 +15,6 @@ teleport @s[scores={Dialog=1}] -1949 51 -564 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_erika_battle.1"}]}
 execute if entity @s[scores={Dialog=72},tag=!give_medal] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=72},tag=!give_medal] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=72..},tag=!give_medal] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=167},tag=!give_medal] KillStreak 0
 scoreboard players set @s[scores={Dialog=167},tag=!give_medal] MusicType 1
 scoreboard players set @s[scores={Dialog=167},tag=!give_medal] Music 0
@@ -30,7 +29,6 @@ execute if entity @s[scores={Dialog=288},tag=!already_gave_items] run function m
 tag @s[scores={Dialog=288}] add already_gave_items
 execute if entity @s[scores={Dialog=308}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=308}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=309..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=403}] KillStreak 0
 scoreboard players set @s[scores={Dialog=403}] MusicType 1
 scoreboard players set @s[scores={Dialog=403}] Music 0

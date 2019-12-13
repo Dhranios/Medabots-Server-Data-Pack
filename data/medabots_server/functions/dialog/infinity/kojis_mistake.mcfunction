@@ -21,7 +21,6 @@ execute at @s as @e[x=-387,y=55,z=-95,tag=kid,distance=..1] run scoreboard playe
 execute if entity @s[scores={Dialog=48}] run summon minecraft:armor_stand -386 55 -95 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","kid_2","cutscene","this_dialog"],Rotation:[-140.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:2433312}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:8351306}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:14736603}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
 execute at @s as @e[x=-386,y=55,z=-95,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=49}] run tag @e[tag=kid,tag=this_dialog] add walking
-execute if entity @s[scores={Dialog=49..108}] as @e[tag=kid,tag=this_dialog] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=108}] as @e[tag=kid,tag=this_dialog] run tag @s remove walking
 execute if entity @s[scores={Dialog=48..391}] as @e[tag=koji,tag=this_dialog,limit=1] at @s facing entity @e[tag=kid,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=48..391}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=kid,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -36,7 +35,6 @@ tellraw @s[scores={Dialog=272}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=296}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.kojis_mistake.8"}]}
 execute if entity @s[scores={Dialog=321}] as @e[tag=kid,tag=this_dialog] at @s run teleport @s ~ ~ ~ -145 0
 execute if entity @s[scores={Dialog=321}] run tag @e[tag=kid,tag=this_dialog] add walking
-execute if entity @s[scores={Dialog=322..392}] as @e[tag=kid,tag=this_dialog] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=328}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.kojis_mistake.9"}]}
 tellraw @s[scores={Dialog=360}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.kojis_mistake.10"}]}
 execute if entity @s[scores={Dialog=392}] run kill @e[tag=kid,tag=this_dialog]
@@ -87,14 +85,10 @@ tellraw @s[scores={Dialog=2528}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2552}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.roks","color":"green"},{"translate":"medabots_server:dialog.infinity.kojis_mistake.48"}]}
 execute if entity @s[scores={Dialog=2568}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -374 55 -111
 execute if entity @s[scores={Dialog=2568}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2569..2636}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2568}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -374 55 -111
 execute if entity @s[scores={Dialog=2568}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2569..2636}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2637}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -374 55 -119
 execute if entity @s[scores={Dialog=2637}] as @e[tag=roks,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -374 55 -119
-execute if entity @s[scores={Dialog=2638..}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=2638..}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=2698}] MusicType 1
 scoreboard players set @s[scores={Dialog=2698}] Music 0
 tag @s[scores={Dialog=2698}] remove dialog_infinity_kojis_mistake

@@ -30,7 +30,6 @@ tellraw @s[scores={Dialog=144}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.blue_man","color":"green"},{"translate":"medabots_server:dialog.infinity.blue_man_defeated.7"}]}
 execute if entity @s[scores={Dialog=184}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
 execute if entity @s[scores={Dialog=184}] run tag @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=185..}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=224}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.blue_man_defeated.8"}]}
 tag @s[scores={Dialog=332}] remove dialog_infinity_blue_man_defeated
 scoreboard players set @s[scores={Dialog=332}] MusicType 1

@@ -50,14 +50,12 @@ tellraw @s[scores={Dialog=840}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=896}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.new_look_new_chances.24"}]}
 execute if entity @s[scores={Dialog=920}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
 execute if entity @s[scores={Dialog=920}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=921..1018}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1018}] run kill @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=940}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.new_look_new_chances.25"}]}
 tellraw @s[scores={Dialog=948}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.new_look_new_chances.26"}]}
 tellraw @s[scores={Dialog=964}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.new_look_new_chances.27"}]}
 execute if entity @s[scores={Dialog=980}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
 execute if entity @s[scores={Dialog=980}] run tag @e[tag=karin,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=981..1088}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1088}] run kill @e[tag=karin,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=1000}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.new_look_new_chances.28"}]}
 tellraw @s[scores={Dialog=1024}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.new_look_new_chances.29"}]}

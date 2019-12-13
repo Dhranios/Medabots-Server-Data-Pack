@@ -25,7 +25,6 @@ tellraw @s[scores={Dialog=354}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=450}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.opening_battle.10"}]}
 execute if entity @s[scores={Dialog=474}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
 execute if entity @s[scores={Dialog=474}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=475..563}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=563}] remove dialog_infinity_opening_battle
 scoreboard players set @s[scores={Dialog=563}] MusicType 1
 scoreboard players set @s[scores={Dialog=563}] Music 0

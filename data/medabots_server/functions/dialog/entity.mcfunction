@@ -9,6 +9,10 @@ tag @a[tag=this_dialog] remove this_dialog
 
 function medabots_server:animations/cutscene_entity
 
+teleport @s[tag=walking] ^ ^ ^0.2125
+teleport @s[tag=running,tag=!rubberobo] ^ ^ ^0.425
+teleport @s[tag=running,tag=rubberobo] ^ ^ ^0.2125
+
 tag @s[tag=refresh] add refreshed
 tag @s[tag=!refresh] add refresh
 tag @s[tag=refreshed] remove refresh

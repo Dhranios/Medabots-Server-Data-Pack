@@ -21,7 +21,6 @@ tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=144}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_rock_a.5"}]}
 execute if entity @s[scores={Dialog=208}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1604 51 -117
 execute if entity @s[scores={Dialog=208}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=209..348}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=348}] run kill @e[tag=kid,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=348}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_rock_a.6"}]}
 tellraw @s[scores={Dialog=404}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_rock_a.7"}]}
@@ -44,7 +43,6 @@ tellraw @s[scores={Dialog=900}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=908}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_rock_a.23"}]}
 execute if entity @s[scores={Dialog=924}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1605 51 -180
 execute if entity @s[scores={Dialog=924}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=925..}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1064}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=1064}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 scoreboard players set @s[scores={Dialog=1064}] MusicType 1

@@ -28,11 +28,9 @@ execute if entity @s[scores={Dialog=200}] positioned -1540 50 -550 run function 
 execute if entity @s[scores={Dialog=200}] positioned -1542 50 -550 run function medabots_server:spawn_entities/cutscene/koji
 execute if entity @s[scores={Dialog=200}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 execute if entity @s[scores={Dialog=200}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=201..304}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=304}] run tag @e[tag=erika,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=200}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 execute if entity @s[scores={Dialog=200}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=201..304}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=304}] run tag @e[tag=koji,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=305..1543}] at @e[tag=erika,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=erika,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=305..}] at @e[tag=koji,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=koji,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -66,7 +64,6 @@ tellraw @s[scores={Dialog=1424}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1488}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.38"}]}
 execute if entity @s[scores={Dialog=1544}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1541 50 -549
 execute if entity @s[scores={Dialog=1544}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1545..1564}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1565}] run tag @e[tag=erika,tag=this_dialog,limit=1] remove walking
 tellraw @s[scores={Dialog=1544}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.39"}]}
 tellraw @s[scores={Dialog=1552}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.40"}]}
@@ -79,7 +76,6 @@ tellraw @s[scores={Dialog=1744}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1760}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.47"}]}
 execute if entity @s[scores={Dialog=1784}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1541 50 -549
 execute if entity @s[scores={Dialog=1784}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1785..1870}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1870}] run kill @e[tag=erika,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=1824}] MusicType 22
 scoreboard players set @s[scores={Dialog=1824}] Music 0

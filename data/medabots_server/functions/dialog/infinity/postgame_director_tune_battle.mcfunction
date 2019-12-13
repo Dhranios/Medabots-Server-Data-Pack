@@ -14,7 +14,6 @@ tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate"
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_director_tune_battle.2"}]}
 execute if entity @s[scores={Dialog=48}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
 execute if entity @s[scores={Dialog=48}] run tag @e[tag=director_tune,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=49..}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=142}] KillStreak 0
 scoreboard players set @s[scores={Dialog=142}] MusicType 1
 scoreboard players set @s[scores={Dialog=142}] Music 0

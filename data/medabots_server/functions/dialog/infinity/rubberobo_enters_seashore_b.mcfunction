@@ -25,7 +25,6 @@ tellraw @s[scores={Dialog=288}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=328}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_seashore_b.10"}]}
 execute if entity @s[scores={Dialog=392}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1716 51 -442
 execute if entity @s[scores={Dialog=392}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=393..588}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=588}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=588}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=452..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~

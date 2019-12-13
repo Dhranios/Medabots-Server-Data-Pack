@@ -1,4 +1,4 @@
-data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data append value {position:[0,0,0],object:[""],nbt:{},additional_data:[0,0,0,0,0,0,0,0]}
+data modify entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data append value {position:[0,0,0],object:[""],nbt:{},additional_data:[0,0,0,0,0,0,0,0,0]}
 
 teleport @s[tag=bomb] ~ ~1 ~
 teleport @s[tag=balloon_bomb] ~ ~1 ~
@@ -21,7 +21,8 @@ execute if entity @s[scores={Moving=0..}] store result entity @e[tag=build_stage
 execute if entity @s[scores={Range=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[4] int 1 run scoreboard players get @s Range
 execute if entity @s[scores={DelayTime=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[5] int 1 run scoreboard players get @s DelayTime
 execute if entity @s[scores={PowerNeeded=-2147483648..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[6] int 1 run scoreboard players get @s PowerNeeded
-execute if entity @s[scores={Speed=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[5] int 1 run scoreboard players get @s Speed
+execute if entity @s[scores={Speed=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[7] int 1 run scoreboard players get @s Speed
+execute if entity @s[scores={StageIndex=0..}] store result entity @e[tag=build_stage,limit=1] Item.tag.medabots_server.stage_data[-1].additional_data[8] int 1 run scoreboard players get @s StageIndex
 
 teleport @s[tag=bomb] ~ ~ ~
 teleport @s[tag=balloon_bomb] ~ ~ ~

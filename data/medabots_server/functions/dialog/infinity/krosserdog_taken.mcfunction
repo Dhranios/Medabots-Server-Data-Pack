@@ -18,7 +18,6 @@ tellraw @s[scores={Dialog=88}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=104}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.krosserdog_taken.6"}]}
 execute if entity @s[scores={Dialog=160}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -375 55 -112
 execute if entity @s[scores={Dialog=160}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=161..}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 tag @s[scores={Dialog=230}] remove dialog_infinity_krosserdog_taken
 scoreboard players set @s[scores={Dialog=230}] MusicType 1
 scoreboard players set @s[scores={Dialog=230}] Music 0

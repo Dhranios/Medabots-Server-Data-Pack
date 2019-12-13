@@ -41,7 +41,6 @@ execute if entity @s[scores={Dialog=960},tag=!passed_on_medal] run teleport @e[t
 execute if entity @s[scores={Dialog=960..1468},tag=!passed_on_medal] at @e[tag=shrimplips,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=shrimplips,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=960..},tag=passed_on_medal] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] facing entity @e[tag=kid,tag=joins,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=960}] run tag @e[tag=kid,tag=joins,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=960..970}] as @e[tag=kid,tag=joins,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=970}] as @e[tag=kid,tag=joins,tag=this_dialog,limit=1] run tag @s remove walking
 tellraw @s[scores={Dialog=960}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.14"}]}
 tellraw @s[scores={Dialog=1000}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.15"}]}
@@ -61,7 +60,6 @@ tellraw @s[scores={Dialog=1428}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=1436}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.shrimplips_is_recruiting.25"}]}
 execute if entity @s[scores={Dialog=1468}] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ~ ~ ~ -80 0
 execute if entity @s[scores={Dialog=1468}] as @e[tag=shrimplips,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=1469..1548}] as @e[tag=shrimplips,tag=this_dialog,limit=1] if entity @s[scores={Dialog=1}] run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=1549}] run kill @e[tag=shrimplips,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=1508}] MusicType 1
 scoreboard players set @s[scores={Dialog=1508}] Music 0

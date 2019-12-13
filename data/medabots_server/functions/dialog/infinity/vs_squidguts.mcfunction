@@ -35,7 +35,6 @@ tellraw @s[scores={Dialog=600}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=664}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.19"}]}
 execute if entity @s[scores={Dialog=786}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
 execute if entity @s[scores={Dialog=786}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=787..866}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=866}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add dead
 tellraw @s[scores={Dialog=826}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.20"}]}
 execute if entity @s[scores={Dialog=858..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~

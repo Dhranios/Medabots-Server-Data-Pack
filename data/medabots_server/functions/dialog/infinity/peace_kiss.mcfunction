@@ -35,7 +35,6 @@ tellraw @s[scores={Dialog=328}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=368}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peace_kiss","color":"green"},{"translate":"medabots_server:dialog.infinity.peace_kiss.12"}]}
 execute if entity @s[scores={Dialog=408}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1814 51 -535
 execute if entity @s[scores={Dialog=408}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=409..}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=448}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.peace_kiss.13"}]}
 tag @s[scores={Dialog=606}] remove dialog_infinity_peace_kiss
 scoreboard players set @s[scores={Dialog=606}] MusicType 1

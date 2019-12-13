@@ -51,6 +51,9 @@ execute if entity @s[tag=!failed,tag=!found_door] run tellraw @s {"translate":"m
 execute if entity @s[tag=!failed,tag=!found_door] run tag @s add failed
 tag @s remove found_door
 
+execute if entity @s[tag=!failed] run scoreboard players operation #temp Stage = @s[tag=!failed] Stage
+execute if entity @s[tag=!failed] run scoreboard players set #temp StageIndex 0
+execute if entity @s[tag=!failed] as @e[tag=mission,type=minecraft:armor_stand] if score @s Stage = #temp Stage run scoreboard players add #temp StageIndex 1
 execute if entity @s[tag=!failed,scores={StageBuild=47}] run function medabots_server:stage/build/clear_goal
 execute if entity @s[tag=!failed,scores={StageBuild=47}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","robattle"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
 execute if entity @s[tag=!failed,scores={StageBuild=48}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","defeat_the_enemy"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
@@ -64,7 +67,9 @@ execute if entity @s[tag=!failed,y_rotation=0..-180,tag=!north,tag=!south] run t
 execute if entity @s[tag=!failed,y_rotation=-90..90,tag=!east,tag=!west] run tag @e[distance=..0.7,tag=mission] add north
 execute if entity @s[tag=!failed,y_rotation=90..-90,tag=!east,tag=!west] run tag @e[distance=..0.7,tag=mission] add south
 execute if entity @s[tag=!failed,y_rotation=-180..0,tag=!north,tag=!south] run tag @e[distance=..0.7,tag=mission] add west
-
+execute if entity @s[tag=!failed] run scoreboard players operation @e[distance=..0.7,tag=mission] StageIndex = #temp StageIndex
+scoreboard players reset #temp Stage
+scoreboard players reset #temp StageIndex
 tag @s remove east
 tag @s remove north
 tag @s remove south

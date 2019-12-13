@@ -19,7 +19,6 @@ tellraw @s[scores={Dialog=256}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=288}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_jungle_b.6"}]}
 execute if entity @s[scores={Dialog=296}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1620 51 -386
 execute if entity @s[scores={Dialog=296}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=297..}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=487}] remove dialog_infinity_rubberobo_leaves_jungle_b
 scoreboard players reset @s[scores={Dialog=487}] DialogNr
 scoreboard players set @s[scores={Dialog=487}] Dialog 0

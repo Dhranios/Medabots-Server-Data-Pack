@@ -38,7 +38,6 @@ tellraw @s[scores={Dialog=1144}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1176}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.seaslug_returns.23"}]}
 execute if entity @s[scores={Dialog=1200}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1715 51 -730
 execute if entity @s[scores={Dialog=1200}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1201..}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=1240}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.seaslug_returns.24"}]}
 tellraw @s[scores={Dialog=1264}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.seaslug_returns.25"}]}
 tellraw @s[scores={Dialog=1328}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.seaslug_returns.26"}]}

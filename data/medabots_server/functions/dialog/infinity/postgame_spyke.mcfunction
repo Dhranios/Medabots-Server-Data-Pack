@@ -15,7 +15,6 @@ tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=88}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_spyke.3"}]}
 execute if entity @s[scores={Dialog=152}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -581
 execute if entity @s[scores={Dialog=152}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=153..}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=236}] KillStreak 1
 scoreboard players set @s[scores={Dialog=236}] MusicType 1
 scoreboard players set @s[scores={Dialog=236}] Music 0

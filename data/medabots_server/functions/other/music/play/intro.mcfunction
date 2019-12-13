@@ -1,5 +1,5 @@
 advancement grant @s[scores={MusicType=1},advancements={medabots_server:story_progression/infinity={victory=false}}] only medabots_server:special_items/jukebox/map_overworld
-advancement grant @s[scores={MusicType=1},advancements={medabots_server:story_progression/infinity={victory=false}}] only medabots_server:special_items/jukebox/map_finished
+advancement grant @s[scores={MusicType=1},advancements={medabots_server:story_progression/infinity={victory=true}}] only medabots_server:special_items/jukebox/map_finished
 playsound medabots_server:music.map_beach_intro music @s[scores={MusicType=2}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=2}] Music 145
 advancement grant @s[scores={MusicType=2}] only medabots_server:special_items/jukebox/map_beach
@@ -81,9 +81,9 @@ advancement grant @s[scores={MusicType=45}] only medabots_server:special_items/j
 playsound medabots_server:music.entity.king_pharaoh_intro music @s[scores={MusicType=46}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=46}] Music 335
 advancement grant @s[scores={MusicType=46}] only medabots_server:special_items/jukebox/three_colors
-advancement grant @s[scores={MusicType=77}] only medabots_server:special_items/jukebox/intro
-advancement grant @s[scores={MusicType=78}] only medabots_server:special_items/jukebox/conspiracy
-advancement grant @s[scores={MusicType=79}] only medabots_server:special_items/jukebox/story
+advancement grant @s[scores={MusicType=47}] only medabots_server:special_items/jukebox/intro
+advancement grant @s[scores={MusicType=48}] only medabots_server:special_items/jukebox/conspiracy
+advancement grant @s[scores={MusicType=49}] only medabots_server:special_items/jukebox/story
 playsound medabots_server:music.map_welcome_underground_intro music @s[scores={MusicType=50}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=50}] Music 308
 advancement grant @s[scores={MusicType=50}] only medabots_server:special_items/jukebox/enter_the_underground

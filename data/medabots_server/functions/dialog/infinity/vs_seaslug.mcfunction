@@ -113,7 +113,6 @@ tellraw @s[scores={Dialog=3868}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=3900}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_seaslug.96"}]}
 execute if entity @s[scores={Dialog=3908}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -581
 execute if entity @s[scores={Dialog=3908}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=3909..}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 tag @s[scores={Dialog=3949}] remove dialog_infinity_vs_seaslug
 scoreboard players set @s[scores={Dialog=3949}] MusicType 1
 scoreboard players set @s[scores={Dialog=3949}] Music 0

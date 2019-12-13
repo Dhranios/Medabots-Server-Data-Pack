@@ -21,7 +21,6 @@ tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.5"}]}
 execute if entity @s[scores={Dialog=112}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1673 51 -116
 execute if entity @s[scores={Dialog=112}] as @e[tag=director_tune,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=113..187}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=187}] as @e[tag=director_tune,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=142..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=142}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.6","with":[{"selector":"@s"}]}]}

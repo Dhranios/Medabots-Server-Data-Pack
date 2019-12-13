@@ -76,11 +76,9 @@ tellraw @s[scores={Dialog=2062}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2110}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.53"}]}
 execute if entity @s[scores={Dialog=2118}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
 execute if entity @s[scores={Dialog=2118}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2119..2226}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2226}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=2118}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=2118}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=2119..2227}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2227}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=2227}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=2226..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~

@@ -21,7 +21,6 @@ execute if entity @s[scores={Dialog=344,Jukebox=1..}] run function medabots_serv
 execute if entity @s[scores={Dialog=344}] positioned -412 55 -72 run function medabots_server:spawn_entities/cutscene/seaslug
 execute if entity @s[scores={Dialog=344}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=344}] as @e[tag=seaslug,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=345..391}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=392}] as @e[tag=seaslug,tag=this_dialog,limit=1] run tag @s remove running
 execute if entity @s[scores={Dialog=392}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=344..2012}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=seaslug,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -63,7 +62,6 @@ tellraw @s[scores={Dialog=1672}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1728}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.smug_seaslug.42"}]}
 execute if entity @s[scores={Dialog=1760}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
 execute if entity @s[scores={Dialog=1760}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1761..1800}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1801}] as @e[tag=seaslug,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=1801}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 tellraw @s[scores={Dialog=1800}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.smug_seaslug.43"}]}
@@ -72,9 +70,7 @@ tellraw @s[scores={Dialog=1856}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1880}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.smug_seaslug.46"}]}
 execute if entity @s[scores={Dialog=1912}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
 execute if entity @s[scores={Dialog=1912}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1913..1982}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1983}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -20 0
-execute if entity @s[scores={Dialog=1984..2013}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=2013}] MusicType 1
 scoreboard players set @s[scores={Dialog=2013}] Music 0
 execute if entity @s[scores={Dialog=2013..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~

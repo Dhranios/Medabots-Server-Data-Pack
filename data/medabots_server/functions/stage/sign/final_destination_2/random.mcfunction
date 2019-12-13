@@ -1,5 +1,5 @@
-data merge block -1959 44 -197 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/final_destination_2/enter"}}'}
-setblock -1957 45 -197 minecraft:red_wool
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run data merge block -1959 44 -197 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/final_destination_2/enter"}}'}
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run setblock -1957 45 -197 minecraft:red_wool
 
 #loot spawn ~ ~ ~ loot medabots_server:gameplay/options/1
 #execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:1}}}] run function medabots_server:stage/try/final_destination_2/empty

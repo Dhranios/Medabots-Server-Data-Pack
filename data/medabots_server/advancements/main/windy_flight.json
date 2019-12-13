@@ -1,0 +1,22 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:elytra"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.windy_flight"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.windy_flight.description"
+        }
+    },
+    "parent": "medabots_server:main/kamikaze_bomber",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/main/windy_flight"
+    }
+}

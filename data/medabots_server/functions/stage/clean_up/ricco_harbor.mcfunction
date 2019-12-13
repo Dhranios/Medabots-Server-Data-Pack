@@ -8,6 +8,8 @@ scoreboard players set @s[scores={Stage=46,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=46,Battle=0}] Battle 0
 teleport @s[scores={Stage=46,Battle=0}] -1440 51 -158 -180 0
 tag @e[scores={Stage=46},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=46}] StageVersion
+scoreboard players reset @a[scores={Stage=46}] Stage
 data merge block -1441 52 -210 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ricco_harbor/play"}}'}
 setblock -1441 53 -212 minecraft:redstone_block
 tag @s remove achieve_screw_you_all

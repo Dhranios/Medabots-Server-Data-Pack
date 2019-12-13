@@ -76,10 +76,8 @@ tellraw @s[scores={Dialog=1880}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1888}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.erikas_challenge.43"}]}
 execute if entity @s[scores={Dialog=1928}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -412 55 -40
 execute if entity @s[scores={Dialog=1928}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1929..1968}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1928}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -412 55 -40
 execute if entity @s[scores={Dialog=1928}] run tag @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1929..1968}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1968}] run kill @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1968}] run kill @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1968}] as @e[tag=erika,tag=this_dialog,limit=1] positioned -391 55 14 facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~

@@ -6,15 +6,15 @@ execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run fun
 execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/try/tutorial
 
 # Run stage
-execute unless entity @s[scores={Gamemode=0..}] if entity @s[scores={Stage=0..},tag=stage_builder] run function medabots_server:stage/run
-execute unless entity @s[scores={Gamemode=0..}] if entity @s[scores={Stage=0..,Battle=1..},tag=main] run function medabots_server:stage/run
-execute unless entity @s[scores={Gamemode=0..}] if entity @s[scores={Stage=1..,Battle=1..},tag=!main] run function medabots_server:stage/non_main_run
-execute unless entity @s[scores={Gamemode=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=3}] run function medabots_server:stage/exit/enforced
-execute unless entity @s[scores={Gamemode=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..,Battle=0}] run function medabots_server:stage/exit/enforced
-execute unless entity @s[scores={Gamemode=0..}] if entity @s[scores={Stage=0..,LeaveStage=1..},tag=stage_builder] run function medabots_server:stage/exit/enforced
-execute unless entity @s[scores={Gamemode=0..}] if entity @s[scores={Stage=1..,LeaveStage=1..}] run function medabots_server:stage/exit
+execute if entity @s[scores={Stage=1..,LeaveStage=1..}] run function medabots_server:stage/exit
+execute if entity @s[scores={Stage=0..},tag=stage_builder] run function medabots_server:stage/run
+execute if entity @s[scores={Stage=0..,LeaveStage=1..},tag=stage_builder] run function medabots_server:stage/exit/enforced
+execute if entity @s[scores={Gamemode=0,Stage=0..,Battle=1..2},tag=main] run function medabots_server:stage/run
+execute if entity @s[scores={Gamemode=0,Stage=1..,Battle=1..2},tag=!main] run function medabots_server:stage/non_main_run
+execute if entity @s[scores={Gamemode=0,Stage=1..,LeaveStage=1..,Battle=3}] run function medabots_server:stage/exit/enforced
+execute if entity @s[scores={Gamemode=0,Stage=1..,LeaveStage=1..,Battle=0}] run function medabots_server:stage/exit/enforced
 execute if entity @s[scores={Gamemode=1}] run function medabots_server:stage/run_fly_course
-scoreboard players reset @s[scores={LeaveStage=1}] LeaveStage
+scoreboard players reset @s[scores={LeaveStage=0..}] LeaveStage
 
 # Stage builder
 execute if entity @s[tag=stage_builder] run function medabots_server:stage/builder

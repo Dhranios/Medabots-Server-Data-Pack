@@ -54,7 +54,6 @@ tellraw @s[scores={Dialog=224}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=304}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy.8"}]}
 execute if entity @s[scores={Dialog=328}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -574
 execute if entity @s[scores={Dialog=328}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=329..351}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=351}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=352..559}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s facing entity @e[tag=baroncastle,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=352}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy.9"}]}
@@ -79,7 +78,6 @@ tellraw @s[scores={Dialog=960}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=1008}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy.27"}]}
 execute if entity @s[scores={Dialog=1032}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
 execute if entity @s[scores={Dialog=1032}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1033..1102}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1102}] run kill @e[tag=shrimplips,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1072..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1052}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.shrimplips_jammy.28"}]}

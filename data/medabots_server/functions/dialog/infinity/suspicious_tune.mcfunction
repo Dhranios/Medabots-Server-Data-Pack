@@ -90,7 +90,6 @@ tellraw @s[scores={Dialog=3500}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=3524}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.72"}]}
 execute if entity @s[scores={Dialog=3556}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1809 51 -540
 execute if entity @s[scores={Dialog=3556}] run tag @e[tag=erika,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=3556..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 tellraw @s[scores={Dialog=3556}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.73"}]}
 tellraw @s[scores={Dialog=3564}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.74"}]}
 tellraw @s[scores={Dialog=3588}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.suspicious_tune.75"}]}

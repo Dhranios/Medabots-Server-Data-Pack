@@ -20,7 +20,6 @@ tellraw @s[scores={Dialog=120}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_seashore_a.5"}]}
 execute if entity @s[scores={Dialog=184}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -184
 execute if entity @s[scores={Dialog=184}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=185..319}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=319}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=319}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 scoreboard players set @s[scores={Dialog=319}] MusicType 1

@@ -53,12 +53,10 @@ execute if entity @s[scores={Dialog=1280}] positioned -439 9 -88 run function me
 execute if entity @s[scores={Dialog=1280}] positioned -440 9 -88 run function medabots_server:spawn_entities/cutscene/koji
 execute if entity @s[scores={Dialog=1280}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=1280}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1281..1303}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1303}] run tag @e[tag=koji,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=1304}] at @e[tag=koji,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=koji,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1280}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=1280}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1281..1303}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1303}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=1304}] at @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1282}] run setblock -440 7 -86 minecraft:redstone_block
@@ -85,19 +83,15 @@ tellraw @s[scores={Dialog=1980}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2028}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.the_final_battle.49"}]}
 execute if entity @s[scores={Dialog=2060}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=2060}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2061..2069}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2069}] run tag @e[tag=koji,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=2070..}] at @e[tag=koji,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=koji,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=2060}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
 execute if entity @s[scores={Dialog=2060}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2061..2069}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2069}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=2070..}] at @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=2060}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
 execute if entity @s[scores={Dialog=2060}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=2061..2067}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=2068}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
-execute if entity @s[scores={Dialog=2069..2082}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=2082}] run kill @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=2074}] run setblock -440 7 -86 minecraft:redstone_block
 execute if entity @s[scores={Dialog=2084}] run setblock -440 7 -86 minecraft:air

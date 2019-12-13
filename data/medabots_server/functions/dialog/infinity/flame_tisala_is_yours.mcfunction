@@ -24,7 +24,6 @@ tellraw @s[scores={Dialog=180}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=212}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.9"}]}
 execute if entity @s[scores={Dialog=244}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1727 50 -542
 execute if entity @s[scores={Dialog=244}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=245..}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=284}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.10"}]}
 tellraw @s[scores={Dialog=324}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.flame_tisala_is_yours.11"}]}
 scoreboard players set @s[scores={Dialog=385}] MusicType 1

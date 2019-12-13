@@ -1,0 +1,1 @@
+tellraw @s {"translate":"medabots_server:settings.arena_type.missing_cpu_support"}

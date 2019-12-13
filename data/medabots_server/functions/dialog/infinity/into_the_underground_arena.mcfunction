@@ -25,11 +25,8 @@ tellraw @s[scores={Dialog=312}] {"translate":"chat.type.text","with":[{"translat
 execute if entity @s[scores={Dialog=419}] run kill @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=328}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -469 55 -44
 execute if entity @s[scores={Dialog=328}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=329..418}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=419}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -470 55 -68
-execute if entity @s[scores={Dialog=420..529}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=530}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=531..}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 advancement grant @s[scores={Dialog=550}] only medabots_server:special_items/passes/research_lab
 execute if entity @s[scores={Dialog=550}] run fill -476 55 -72 -476 57 -65 minecraft:red_wool replace minecraft:redstone_block
 execute if entity @s[scores={Dialog=566}] run fill -476 55 -72 -476 57 -65 minecraft:redstone_block replace minecraft:red_wool

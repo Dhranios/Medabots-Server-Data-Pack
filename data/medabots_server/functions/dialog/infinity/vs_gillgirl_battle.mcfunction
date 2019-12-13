@@ -24,7 +24,6 @@ tellraw @s[scores={Dialog=192}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=208}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_gillgirl_battle.7"}]}
 execute if entity @s[scores={Dialog=240}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=240}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=241..290}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=291..1060}] at @e[tag=gillgirl,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=gillgirl,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=255},tag=!already_gave_items] run summon minecraft:item -1998 51 -601 {PickupDelay:427s,Tags:["cutscene","this_dialog"],Item:{id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b,Damage:6,CustomModelData:5,HideFlags:4,AttributeModifiers:[],display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.ghost_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.ghost_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.ghost_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{stage_item:0b,id:"medabots_server:ghost_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s,Invulnerable:1b}
 execute at @s as @e[x=-1997.5,y=51,z=-600.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players operation @s DialogNr = #temp DialogNr
@@ -64,24 +63,19 @@ tellraw @s[scores={Dialog=862}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=902}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_gillgirl_battle.24"}]}
 execute if entity @s[scores={Dialog=903}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost] at @s run teleport @s ~ ~ ~ facing -1998 51 -601
 execute if entity @s[scores={Dialog=903}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost] run tag @s add running
-execute if entity @s[scores={Dialog=904..939}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=936}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost] run tag @s remove running
 execute if entity @s[scores={Dialog=939}] if entity @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost] run kill @e[x=-1997.5,y=51,z=-600.5,type=minecraft:item,distance=..0.7,limit=1]
 execute if entity @s[scores={Dialog=920}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!ghost,tag=unicorn] at @s run teleport @s ~ ~ ~ facing -2000 51 -598
 execute if entity @s[scores={Dialog=920}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!ghost,tag=unicorn] run tag @s add running
-execute if entity @s[scores={Dialog=921..957}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!ghost,tag=unicorn] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=940}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!ghost,tag=unicorn] run tag @s remove running
 execute if entity @s[scores={Dialog=940}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost,tag=unicorn] at @s run teleport @s ~ ~ ~ facing -2000 51 -598
 execute if entity @s[scores={Dialog=940}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost,tag=unicorn] run tag @s add running
-execute if entity @s[scores={Dialog=941..957}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost,tag=unicorn] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=957}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=ghost,tag=unicorn] run tag @s remove running
 execute if entity @s[scores={Dialog=957}] if entity @e[tag=rubberobo,tag=this_dialog,limit=1,tag=unicorn] run kill @e[x=-1999.5,y=51,z=-597.5,type=minecraft:item,distance=..0.7,limit=1]
 execute if entity @s[scores={Dialog=958}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=unicorn] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=958}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=unicorn] run tag @s add running
-execute if entity @s[scores={Dialog=959..1017}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=unicorn] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=958}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!unicorn] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=958}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!unicorn] run tag @s add running
-execute if entity @s[scores={Dialog=959..1032}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!unicorn] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1017}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1,tag=unicorn] ~ -100 ~
 execute if entity @s[scores={Dialog=1017}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1,tag=unicorn] add dead
 execute if entity @s[scores={Dialog=1032}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1,tag=!unicorn] ~ -100 ~
@@ -92,7 +86,6 @@ tellraw @s[scores={Dialog=997}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=1029}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_gillgirl_battle.28"}]}
 execute if entity @s[scores={Dialog=1061}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=1061}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1062..1097}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1097}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add dead
 scoreboard players set @s[scores={Dialog=1097}] MusicType 1
 scoreboard players set @s[scores={Dialog=1097}] Music 0

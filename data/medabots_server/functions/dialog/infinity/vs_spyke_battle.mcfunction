@@ -26,20 +26,17 @@ tellraw @s[scores={Dialog=156}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.6"}]}
 execute if entity @s[scores={Dialog=188}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=188}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=189..269}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=188}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=188}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=189..275}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_battle.7"}]}
 execute if entity @s[scores={Dialog=248}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=248}] as @e[tag=spyke,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=249..294}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=269}] as @e[tag=samantha,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=275}] as @e[tag=sloan,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=294}] as @e[tag=spyke,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=271}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -2000 51 -606
 execute if entity @s[scores={Dialog=271}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=272..308}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=308}] as @e[tag=kid,tag=this_dialog,limit=1] run tag @s remove walking
 scoreboard players set @s[scores={Dialog=288}] MusicType 1
 scoreboard players set @s[scores={Dialog=288}] Music 0
@@ -51,7 +48,6 @@ execute if entity @s[scores={Dialog=392},tag=!already_gave_items] run function m
 tag @s[scores={Dialog=392}] add already_gave_items
 execute if entity @s[scores={Dialog=412}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=412}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=413..}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=508}] remove dialog_infinity_vs_spyke_battle
 tag @s[scores={Dialog=508}] remove already_gave_items
 scoreboard players reset @s[scores={Dialog=508}] DialogNr

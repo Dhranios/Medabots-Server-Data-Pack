@@ -31,7 +31,6 @@ tellraw @s[scores={Dialog=568}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=608}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy.16"}]}
 execute if entity @s[scores={Dialog=712}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -2000 51 -632
 execute if entity @s[scores={Dialog=712}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=713..}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=802}] remove dialog_infinity_squidguts_jammy
 scoreboard players set @s[scores={Dialog=802}] MusicType 1
 scoreboard players set @s[scores={Dialog=802}] Music 0

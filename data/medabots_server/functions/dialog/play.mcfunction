@@ -212,6 +212,6 @@ execute if entity @s[tag=dialog_other_ruins_in_b_fvbico_cleared] run function me
 
 # Clashable
 #execute if entity @s[tag=dialog_other_get_darknut] unless entity @s[tag=!get_darknut_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_darknut
-#execute if entity @s[tag=dialog_other_get_nino] unless entity @s[tag=!get_nino_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_nino
+execute if entity @s[tag=dialog_other_get_nino] unless entity @s[tag=!get_nino_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_nino
 #execute if entity @s[tag=dialog_other_get_sphere_doomers] unless entity @s[tag=!get_sphere_doomers_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_sphere_doomers
 execute if entity @s[tag=dialog_other_get_suzumega_hummer] unless entity @s[tag=!get_suzumega_hummer_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_suzumega_hummer

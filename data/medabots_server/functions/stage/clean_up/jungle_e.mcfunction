@@ -11,6 +11,8 @@ scoreboard players set @s[scores={Stage=54,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=54,Battle=0}] Battle 0
 teleport @s[scores={Stage=54,Battle=0}] -1908 51 -200 -180 0
 tag @e[scores={Stage=54},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=54}] StageVersion
+scoreboard players reset @a[scores={Stage=54}] Stage
 tag @e[scores={Stage=54},type=!minecraft:player,tag=barrier] add air
 tag @e[scores={Stage=54},type=!minecraft:player,tag=barrier] remove barrier
 data merge block -1909 52 -247 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/jungle_e/play"}}'}

@@ -100,9 +100,7 @@ tellraw @s[scores={Dialog=4116}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=4132}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.haru_and_tune.78"}]}
 execute if entity @s[scores={Dialog=4164}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -388 55 -54
 execute if entity @s[scores={Dialog=4164}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=4165..4282}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=4283}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -398 55 -54
-execute if entity @s[scores={Dialog=4284..4323}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=4323}] remove already_gave_items
 scoreboard players set @s[scores={Dialog=4323}] MusicType 1
 scoreboard players set @s[scores={Dialog=4323}] Music 0

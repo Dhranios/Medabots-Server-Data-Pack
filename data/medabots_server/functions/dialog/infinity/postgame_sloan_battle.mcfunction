@@ -16,10 +16,8 @@ tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate"
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.totalizer","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_sloan_battle.2"}]}
 execute if entity @s[scores={Dialog=60}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=60}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=61..}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=60}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=60}] run tag @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=61..}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=154}] KillStreak 0
 scoreboard players set @s[scores={Dialog=154}] MusicType 1
 scoreboard players set @s[scores={Dialog=154}] Music 0

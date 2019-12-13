@@ -1,8 +1,0 @@
-execute if entity @s[tag=-1] run tellraw @a {"translate":"medabots_server:message.stage.players.0","color":"green","with":[{"translate":"medabots_server:location.iceberg_a"}]}
-execute if entity @s[tag=-1] run data merge block -1703 51 -244 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute if entity @s[tag=-1] run setblock -1703 52 -246 minecraft:red_wool
-execute if entity @s[tag=-1] run teleport @s -1721 29 -220 90 0
-execute if entity @s[tag=-1] run data merge block -1705 51 -244 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/iceberg_a/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
-execute if entity @s[tag=-1] run setblock -1705 52 -246 minecraft:red_wool
-execute if entity @s[tag=-1] run scoreboard players set @s Battle 0
-execute if entity @s[tag=-1] run tag @s remove -1

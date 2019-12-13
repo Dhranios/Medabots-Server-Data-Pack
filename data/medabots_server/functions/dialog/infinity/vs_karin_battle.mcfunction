@@ -21,7 +21,6 @@ scoreboard players set @s[scores={Dialog=40}] MusicType 32
 scoreboard players set @s[scores={Dialog=40}] Music 0
 execute if entity @s[scores={Dialog=1}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=1}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=1..130}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=130}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ -100 ~
 execute if entity @s[scores={Dialog=130}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_karin_battle.3"}]}
@@ -29,7 +28,6 @@ tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=104}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_karin_battle.5"}]}
 execute if entity @s[scores={Dialog=1}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=1}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1..170}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=170}] run tag @e[tag=koji,tag=this_dialog,limit=1] add dead
 scoreboard players set @s[scores={Dialog=136}] MusicType 36
 scoreboard players set @s[scores={Dialog=136}] Music 0
@@ -44,7 +42,6 @@ tellraw @s[scores={Dialog=460}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=492}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_karin_battle.14"}]}
 execute if entity @s[scores={Dialog=516}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=516}] run tag @e[tag=karin,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=517..}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=610}] remove dialog_infinity_vs_karin_battle
 scoreboard players set @s[scores={Dialog=610}] MusicType 1
 scoreboard players set @s[scores={Dialog=610}] Music 0

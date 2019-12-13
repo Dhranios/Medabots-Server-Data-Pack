@@ -34,7 +34,6 @@ tellraw @s[scores={Dialog=716}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=740}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.tunes_tinpet.17"}]}
 execute if entity @s[scores={Dialog=780}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -411 55 -41
 execute if entity @s[scores={Dialog=780}] run tag @e[tag=director_tune,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=781..}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=860}] remove already_gave_items
 tag @s[scores={Dialog=860}] remove dialog_infinity_tunes_tinpet
 scoreboard players set @s[scores={Dialog=860}] MusicType 1

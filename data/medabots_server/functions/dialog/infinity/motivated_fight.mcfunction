@@ -60,10 +60,8 @@ tellraw @s[scores={Dialog=1594}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1618}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.krosserdog","color":"green"},{"translate":"medabots_server:dialog.infinity.motivated_fight.43"}]}
 execute if entity @s[scores={Dialog=1642}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -581
 execute if entity @s[scores={Dialog=1642}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1643..1722}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1642}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -581
 execute if entity @s[scores={Dialog=1642}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1643..1716}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1716}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=1722}] as @e[tag=spyke,tag=this_dialog,limit=1] run kill @s
 tellraw @s[scores={Dialog=1662}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.motivated_fight.44"}]}

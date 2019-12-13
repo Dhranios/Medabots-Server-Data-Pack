@@ -119,7 +119,6 @@ tellraw @s[scores={Dialog=4244}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=4332}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.bonus_area_pass.100"}]}
 execute if entity @s[scores={Dialog=4364}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=4364}] run tag @e[tag=director_tune,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=4365..}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=4424}] MusicType 1
 scoreboard players set @s[scores={Dialog=4424}] Music 0
 tellraw @s[scores={Dialog=4424}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.bonus_area_pass.101"}]}

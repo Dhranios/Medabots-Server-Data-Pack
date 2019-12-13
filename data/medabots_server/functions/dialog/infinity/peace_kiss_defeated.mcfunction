@@ -27,7 +27,6 @@ tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peace_kiss","color":"green"},{"translate":"medabots_server:dialog.infinity.peace_kiss_defeated.3"}]}
 execute if entity @s[scores={Dialog=56}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1813 51 -443
 execute if entity @s[scores={Dialog=56}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=56..253}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=253}] run kill @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=76}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.peace_kiss_defeated.4"}]}
 tellraw @s[scores={Dialog=100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.peace_kiss_defeated.5"}]}

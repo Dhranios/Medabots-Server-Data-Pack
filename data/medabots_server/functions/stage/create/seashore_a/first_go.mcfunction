@@ -119,9 +119,7 @@ execute positioned -1551 45 -194 run function medabots_server:set_blocks/door/so
 execute positioned -1534 45 -207 run function medabots_server:set_blocks/door/south/power_1
 execute positioned -1540 45 -222 run function medabots_server:set_blocks/door/south/power_0
 execute positioned -1509 45 -196 run function medabots_server:set_blocks/starting_area
-teleport @a[x=-1570,y=51,z=-247,dx=63,dy=4,dz=63,tag=-1] -1509 45 -196 0 0
-teleport @s[tag=-1] -1509 45 -196 0 0
-tag @a[x=-1509,y=45,z=-196,distance=..1] remove -1
+teleport @s -1509 45 -196 0 0
 bossbar set medabots_server:seashore_a/time value 0
 bossbar set medabots_server:seashore_a/time players @a[x=-1509,y=45,z=-196,distance=..1]
 scoreboard players set @a[x=-1509,y=45,z=-196,distance=..1] Battle 1

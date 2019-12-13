@@ -23,7 +23,6 @@ tellraw @s[scores={Dialog=96}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=104}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_ruins_in_b.5"}]}
 execute if entity @s[scores={Dialog=136}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1620 50 -481
 execute if entity @s[scores={Dialog=136}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=137..331}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=331}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=331}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 scoreboard players set @s[scores={Dialog=196}] MusicType 1
@@ -35,7 +34,6 @@ tag @s[scores={Dialog=292}] add already_gave_items
 tellraw @s[scores={Dialog=312}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_ruins_in_b.8"}]}
 execute if entity @s[scores={Dialog=328}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1620 50 -481
 execute if entity @s[scores={Dialog=328}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=328..523}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=523}] run tag @e[tag=kid,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=388..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=388}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_leaves_ruins_in_b.9"}]}

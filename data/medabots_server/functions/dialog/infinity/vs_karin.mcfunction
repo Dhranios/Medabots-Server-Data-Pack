@@ -24,7 +24,6 @@ tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=264}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_karin.8"}]}
 execute if entity @s[scores={Dialog=328}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -2000 51 -632
 execute if entity @s[scores={Dialog=328}] run tag @e[tag=karin,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=329..422}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=422}] as @e[tag=karin,tag=this_dialog,limit=1] run kill @s
 tellraw @s[scores={Dialog=368}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_karin.9"}]}
 tellraw @s[scores={Dialog=392}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_karin.10"}]}

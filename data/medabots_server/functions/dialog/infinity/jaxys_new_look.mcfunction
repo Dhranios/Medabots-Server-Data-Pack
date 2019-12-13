@@ -52,11 +52,9 @@ tellraw @s[scores={Dialog=796}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=820}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.21"}]}
 execute if entity @s[scores={Dialog=836}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -367 55 -71
 execute if entity @s[scores={Dialog=836}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=837..896}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=896}] run kill @e[tag=erika,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=836}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -367 55 -71
 execute if entity @s[scores={Dialog=836}] run tag @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=837..896}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=896}] run kill @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=876}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.22"}]}
 tellraw @s[scores={Dialog=908}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.23"}]}
@@ -64,7 +62,6 @@ tellraw @s[scores={Dialog=964}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=1012}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.25"}]}
 execute if entity @s[scores={Dialog=1020}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=1020}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1021..1090}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1090}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 teleport @s[scores={Dialog=1020..1094}] ~ ~ ~0.2125
 teleport @s[scores={Dialog=1095..}] -355 55 -73
@@ -91,15 +88,11 @@ tellraw @s[scores={Dialog=1752}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1784}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.46"}]}
 execute if entity @s[scores={Dialog=1824}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -352 55 -85
 execute if entity @s[scores={Dialog=1824}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1825..1894}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1895}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -342 55 -93
-execute if entity @s[scores={Dialog=1896..1944}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1944}] run kill @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1824}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -355 55 -76
 execute if entity @s[scores={Dialog=1824}] run tag @e[tag=karin,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1825..1854}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1855}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -342 55 -93
-execute if entity @s[scores={Dialog=1856..1944}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1944}] run kill @e[tag=karin,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=1844}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.47"}]}
 tellraw @s[scores={Dialog=1884}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxys_new_look.48"}]}

@@ -1,14 +1,6 @@
 # Reset the course data
-clear @s[scores={FlyCourse=0}] minecraft:elytra{medabots_server:{id:"medabots_server:fly_course_wings"}}
-clear @s[scores={FlyCourse=0}] minecraft:firework_rocket{medabots_server:{id:"medabots_server:fly_course_speed"}}
+execute if entity @s[scores={FlyCourse=0}] run function medabots_server:gamemode/fly_course/reset
 scoreboard players reset @s[scores={FlyCourse=0}] Stage
-scoreboard players reset @s[scores={FlyCourse=0}] FlyTime
-scoreboard players reset @s[scores={FlyCourse=0}] FlyCourseLapTime
-scoreboard players set @s[scores={FlyCourse=0}] Time 0
-scoreboard players set @s[scores={FlyCourse=0}] MusicType 1
-execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={FlyCourse=0}] Music 0
-scoreboard players reset @s[scores={FlyCourse=0}] Gamemode
-scoreboard players reset @s[scores={FlyCourse=0}] FlyCourse
 
 # Give the items
 tag @s[tag=fly_course_speed] remove fly_course_speed

@@ -16,7 +16,6 @@ tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=104}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_erika.4"}]}
 execute if entity @s[scores={Dialog=128}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
 execute if entity @s[scores={Dialog=128}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=129..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=231}] KillStreak 1
 scoreboard players set @s[scores={Dialog=231}] MusicType 1
 scoreboard players set @s[scores={Dialog=231}] Music 0

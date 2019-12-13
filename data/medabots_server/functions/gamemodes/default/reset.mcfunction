@@ -47,16 +47,9 @@ tag @s remove two_legged_legs
 tag @s remove wheel_legs
 tag @s remove tank_legs
 tag @s remove swim_legs
-tag @s remove 0
-tag @s remove 1
-tag @s remove 2
-tag @s remove 3
-tag @s remove 4
-tag @s remove 5
-tag @s remove 6
-tag @s remove 7
-tag @s remove 8
-tag @s remove 9
+scoreboard players reset @s StageIndex
+scoreboard players reset @s StageVersion
+scoreboard players reset @s NeededPlayers
 tag @s remove spawned_pass
 
 # Prevent health from ever dropping to the default 20, which'll cause severe issues
@@ -114,3 +107,4 @@ scoreboard players reset @s HeadPer
 scoreboard players reset @s HeadUsesPer
 scoreboard players reset @s Medabot
 scoreboard players reset @s Battle
+scoreboard players reset @s Gamemode

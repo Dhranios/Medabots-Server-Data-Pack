@@ -41,10 +41,8 @@ tellraw @s[scores={Dialog=724}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=740}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.spykes_pass.21"}]}
 execute if entity @s[scores={Dialog=772}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1810 51 -633
 execute if entity @s[scores={Dialog=772}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=773..}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=772}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1810 51 -633
 execute if entity @s[scores={Dialog=772}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=773..}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=969}] remove dialog_infinity_spykes_pass
 scoreboard players set @s[scores={Dialog=969}] MusicType 1
 scoreboard players set @s[scores={Dialog=969}] Music 0

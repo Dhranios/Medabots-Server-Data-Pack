@@ -29,7 +29,6 @@ scoreboard players set @s[scores={Dialog=480}] Music 0
 execute if entity @s[scores={Dialog=480}] positioned -1999 51 -585 run function medabots_server:spawn_entities/cutscene/select_corps
 execute if entity @s[scores={Dialog=480}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -601
 execute if entity @s[scores={Dialog=480}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=481..555}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=555}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=555..1127}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=500..1127}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s facing entity @e[tag=select_corps,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -53,10 +52,8 @@ tellraw @s[scores={Dialog=1016}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1040}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.29"}]}
 execute if entity @s[scores={Dialog=1128}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=1128}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1129..}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1128}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
 execute if entity @s[scores={Dialog=1128}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1129..}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=1148}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.30"}]}
 tag @s[scores={Dialog=1198}] remove dialog_infinity_squidguts_jammy_battle
 scoreboard players set @s[scores={Dialog=1198}] MusicType 1

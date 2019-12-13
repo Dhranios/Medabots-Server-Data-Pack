@@ -23,17 +23,14 @@ tellraw @s[scores={Dialog=104}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=112}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_screws_battle.4","with":[{"selector":"@s"}]}]}
 execute if entity @s[scores={Dialog=160}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=160}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=161..235}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=235}] run kill @e[tag=samantha,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=132}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_screws_battle.5"}]}
 tellraw @s[scores={Dialog=172}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_screws_battle.6"}]}
 execute if entity @s[scores={Dialog=172}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=172}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=173..247}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=247}] run kill @e[tag=spyke,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=172}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=172}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=173..247}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=247}] run kill @e[tag=sloan,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=248}] MusicType 1
 scoreboard players set @s[scores={Dialog=248}] Music 0

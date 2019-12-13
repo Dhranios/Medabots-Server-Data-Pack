@@ -38,7 +38,6 @@ scoreboard players set @s[scores={Dialog=568}] Music 0
 execute if entity @s[scores={Dialog=568}] positioned -1570 51 -255 run function medabots_server:spawn_entities/cutscene/erika
 execute if entity @s[scores={Dialog=568}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -175 ~
 execute if entity @s[scores={Dialog=568}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=569..678}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=678}] as @e[tag=erika,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=569..2581}] as @e[tag=kid,tag=this_dialog,limit=1] at @s facing entity @e[tag=erika,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=678..2325}] at @e[tag=erika,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=erika,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -95,8 +94,6 @@ execute if entity @s[scores={Dialog=2582}] as @e[tag=kid,tag=this_dialog,limit=1
 execute if entity @s[scores={Dialog=2582}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1570 51 -252
 execute if entity @s[scores={Dialog=2582}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2582}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2583..}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=2583..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=2712}] MusicType 1
 scoreboard players set @s[scores={Dialog=2712}] Music 0
 tag @s[scores={Dialog=2712}] remove dialog_infinity_rubberobo_leaves_ruins_out_a

@@ -14,7 +14,6 @@ tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate"
 tellraw @s[scores={Dialog=96}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_jaxy_battle.2"}]}
 execute if entity @s[scores={Dialog=144}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=144}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=145..}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=224}] KillStreak 0
 scoreboard players set @s[scores={Dialog=224}] MusicType 1
 scoreboard players set @s[scores={Dialog=224}] Music 0

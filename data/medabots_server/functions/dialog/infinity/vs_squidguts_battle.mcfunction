@@ -32,7 +32,6 @@ tellraw @s[scores={Dialog=640}] {"translate":"chat.type.text","with":[{"translat
 execute if entity @s[scores={Dialog=640}] positioned -1997 51 -540 run function medabots_server:spawn_entities/cutscene/rubberobo
 execute if entity @s[scores={Dialog=641}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1995 51 -556
 execute if entity @s[scores={Dialog=641}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=642..717}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=717}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s remove running
 execute if entity @s[scores={Dialog=660..1613}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=718..3273}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -85,12 +84,10 @@ tellraw @s[scores={Dialog=3194}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=3218}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_squidguts_battle.61"}]}
 execute if entity @s[scores={Dialog=3274}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=3274}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=3275..3350}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3350}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=3350}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=3274}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=3274}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=3275..3350}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3350}] run teleport @e[tag=squidguts,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=3290},tag=!already_gave_items] run summon minecraft:item -1998 51 -553 {PickupDelay:212s,Tags:["cutscene","this_dialog"],Item:{id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b,Damage:6,CustomModelData:5,HideFlags:4,AttributeModifiers:[],display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.spider_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.spider_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.spider_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.part.wave","with":[{"text":"1"}]}']},medabots_server:{stage_item:0b,id:"medabots_server:spider_medal",move:"medaforce_charge",part:"medal",activated:0b,version:1}}},Tags:["hostile","do_not_teleport"],Age:-32768s,Invulnerable:1b}
 execute at @s as @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] run scoreboard players operation @s DialogNr = #temp DialogNr
@@ -122,28 +119,23 @@ execute at @s as @e[x=-1997,y=51,z=-540,tag=rubberobo,distance=..1] if entity @e
 execute at @s as @e[x=-1997,y=51,z=-540,tag=rubberobo,distance=..1] if entity @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1] run tag @s add spider
 execute if entity @s[scores={Dialog=3902}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight] at @s run teleport @s ~ ~ ~ facing -1996 51 -550
 execute if entity @s[scores={Dialog=3902}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight] run tag @s add running
-execute if entity @s[scores={Dialog=3903..3950}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3950}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight] run tag @s remove running
 execute if entity @s[scores={Dialog=3950}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight] run kill @e[x=-1995.5,y=51,z=-549.5,type=minecraft:item,distance=..0.7,limit=1]
 execute if entity @s[scores={Dialog=3902}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider,tag=!knight] at @s run teleport @s ~ ~ ~ facing -1998 51 -553
 execute if entity @s[scores={Dialog=3902}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider,tag=!knight] run tag @s add running
-execute if entity @s[scores={Dialog=3903..3965}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider,tag=!knight] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3965}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider,tag=!knight] run tag @s remove running
 execute if entity @s[scores={Dialog=3965}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider,tag=!knight] run kill @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1]
 execute if entity @s[scores={Dialog=3950}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=spider] at @s run teleport @s ~ ~ ~ facing -1998 51 -553
 execute if entity @s[scores={Dialog=3950}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=spider] run tag @s add running
-execute if entity @s[scores={Dialog=3951..3967}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=spider] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=3967}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=spider] run tag @s remove running
 execute if entity @s[scores={Dialog=3967}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=spider] run kill @e[x=-1997.5,y=51,z=-552.5,type=minecraft:item,distance=..0.7,limit=1]
 tellraw @s[scores={Dialog=3950}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_squidguts_battle.67"}]}
 execute if entity @s[scores={Dialog=3968}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=3968}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider] run tag @s add running
-execute if entity @s[scores={Dialog=3969..4030}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=4030}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider] ~ -100 ~
 execute if entity @s[scores={Dialog=4030}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1,tag=spider] add dead
 execute if entity @s[scores={Dialog=3968}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=!spider] at @s run teleport @s ~ ~ ~ facing -1997 51 -540
 execute if entity @s[scores={Dialog=3968}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=!spider] run tag @s add running
-execute if entity @s[scores={Dialog=3969..4015}] as @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=!spider] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=4015}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=!spider] ~ -100 ~
 execute if entity @s[scores={Dialog=4015}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1,tag=knight,tag=!spider] add dead
 tag @s[scores={Dialog=4030}] remove dialog_infinity_vs_squidguts_battle

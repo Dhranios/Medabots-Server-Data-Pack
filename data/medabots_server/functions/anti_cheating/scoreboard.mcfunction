@@ -118,6 +118,7 @@ scoreboard objectives add Moving dummy
 scoreboard objectives add MtBattle dummy
 scoreboard objectives add Music dummy
 scoreboard objectives add MusicType dummy
+scoreboard objectives add NeededPlayers dummy
 scoreboard objectives add NoDefendTime dummy
 scoreboard objectives add Offline minecraft.custom:minecraft.leave_game
 scoreboard objectives add OldMusicType dummy
@@ -162,6 +163,7 @@ scoreboard objectives add Sound dummy
 scoreboard objectives add Speed dummy
 scoreboard objectives add Stage dummy
 scoreboard objectives add StageBuild trigger
+scoreboard objectives add StageIndex dummy
 scoreboard objectives add StageVersion dummy
 scoreboard objectives add Stars dummy
 scoreboard objectives add Steps dummy

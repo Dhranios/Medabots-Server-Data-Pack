@@ -40,7 +40,6 @@ execute if entity @s[scores={Dialog=840..1020}] as @e[tag=kid,tag=this_dialog,li
 tellraw @s[scores={Dialog=840}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_interview.18"}]}
 execute if entity @s[scores={Dialog=696}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1810 51 -446
 execute if entity @s[scores={Dialog=696}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=697..896}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=896}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s remove running
 execute if entity @s[scores={Dialog=896}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 scoreboard players set @s[scores={Dialog=856}] MusicType 32
@@ -56,7 +55,6 @@ tellraw @s[scores={Dialog=936}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=1008}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_interview.24"}]}
 execute if entity @s[scores={Dialog=1008}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1813 51 -443
 execute if entity @s[scores={Dialog=1008}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=1009..1021}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1021}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=1021}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 tellraw @s[scores={Dialog=1032}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_interview.25"}]}
@@ -72,10 +70,8 @@ tellraw @s[scores={Dialog=1152}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1192}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_interview.31"}]}
 execute if entity @s[scores={Dialog=1280}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1813 51 -443
 execute if entity @s[scores={Dialog=1280}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1281..1470}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1280}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1813 51 -443
 execute if entity @s[scores={Dialog=1280}] run tag @e[tag=kid,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1281..1470}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=1470}] remove dialog_infinity_rubberobo_interview
 scoreboard players reset @s[scores={Dialog=1470}] DialogNr
 scoreboard players set @s[scores={Dialog=1470}] Dialog 0

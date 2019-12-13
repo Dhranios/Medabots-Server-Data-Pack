@@ -1,4 +1,4 @@
-execute unless entity @s[tag=racer] if entity @s[scores={Dialog=0,Verified=3}] run function medabots_server:gamemodes/fly_course
+execute unless entity @s[tag=racer] if entity @s[scores={Dialog=0,Verified=3}] run function medabots_server:gamemodes/fly_course/set_stats
 execute unless entity @s[tag=racer] run scoreboard players set @s[scores={Dialog=0,Verified=3}] Stage 2
 execute unless entity @s[tag=racer] run tag @s[scores={Dialog=0,Verified=3}] add training
 execute unless entity @s[tag=racer] run teleport @s[scores={Dialog=0,Verified=3}] -160.0 112 -118.0 -180 0

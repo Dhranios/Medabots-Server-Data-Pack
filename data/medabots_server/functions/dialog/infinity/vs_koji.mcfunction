@@ -32,11 +32,8 @@ execute if entity @s[scores={Dialog=456}] run teleport @e[tag=roks,tag=!medabot_
 execute if entity @s[scores={Dialog=456}] run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] -406 55 -119 90 0
 teleport @s[scores={Dialog=456}] -406 55 -118 90 0
 execute if entity @s[scores={Dialog=456}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=457..}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=456}] run tag @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=457..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=457}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=457..}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=464}] run setblock -412 53 -118 minecraft:redstone_block
 execute if entity @s[scores={Dialog=487}] run setblock -412 53 -118 minecraft:air
 scoreboard players set @s[scores={Dialog=487}] MusicType 1

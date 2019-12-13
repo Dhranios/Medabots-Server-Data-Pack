@@ -15,7 +15,6 @@ tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=104}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_max_battle.3"}]}
 execute if entity @s[scores={Dialog=120}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=120}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=121..}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=215}] KillStreak 0
 scoreboard players set @s[scores={Dialog=215}] MusicType 1
 scoreboard players set @s[scores={Dialog=215}] Music 0

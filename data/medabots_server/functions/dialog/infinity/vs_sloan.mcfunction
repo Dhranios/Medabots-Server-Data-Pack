@@ -24,10 +24,8 @@ execute if entity @s[scores={Dialog=168..191}] as @e[tag=totalizer,tag=!medabot_
 tellraw @s[scores={Dialog=168}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.sloan","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_sloan.5"}]}
 execute if entity @s[scores={Dialog=192}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -640
 execute if entity @s[scores={Dialog=192}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=193..272}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=192}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -640
 execute if entity @s[scores={Dialog=192}] run tag @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=193..268}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=268}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] run kill @s
 tag @s[scores={Dialog=272}] remove dialog_infinity_vs_sloan
 scoreboard players set @s[scores={Dialog=272}] MusicType 1

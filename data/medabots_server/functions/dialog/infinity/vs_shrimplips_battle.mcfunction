@@ -20,7 +20,6 @@ tellraw @s[scores={Dialog=96}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips_battle.5"}]}
 execute if entity @s[scores={Dialog=200}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
 execute if entity @s[scores={Dialog=200}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=201..298}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=298}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add dead
 tellraw @s[scores={Dialog=240}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips_battle.6"}]}
 tag @s[scores={Dialog=298}] remove dialog_infinity_vs_shrimplips_battle

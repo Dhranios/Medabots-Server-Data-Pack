@@ -15,7 +15,6 @@ tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_doctor_haru.3"}]}
 execute if entity @s[scores={Dialog=104}] as @e[tag=doctor_haru,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -581
 execute if entity @s[scores={Dialog=104}] run tag @e[tag=doctor_haru,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=105..}] as @e[tag=doctor_haru,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=188}] KillStreak 3
 scoreboard players set @s[scores={Dialog=188}] MusicType 1
 scoreboard players set @s[scores={Dialog=188}] Music 0

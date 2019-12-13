@@ -52,9 +52,7 @@ tellraw @s[scores={Dialog=1448}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1456}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.jaxy_is_happy.34"}]}
 execute if entity @s[scores={Dialog=1488}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -430 55 -86
 execute if entity @s[scores={Dialog=1488}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1489..1648}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1648}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -429 55 -82
-execute if entity @s[scores={Dialog=1649..}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=1668}] remove dialog_infinity_jaxy_is_happy
 scoreboard players set @s[scores={Dialog=1668}] MusicType 1
 scoreboard players set @s[scores={Dialog=1668}] Music 0

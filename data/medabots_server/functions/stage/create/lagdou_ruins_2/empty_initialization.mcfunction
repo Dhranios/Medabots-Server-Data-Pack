@@ -1,13 +1,15 @@
-function medabots_server:gamemodes/default/set_stats
-tag @s add -1
-tag @s add main
-tag @s add ally_medabot
-scoreboard players set @s StageVersion 1
-execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/lagdou_ruins_2/empty
-execute if entity @s[tag=vs_cpus] positioned -1266 41 -9 rotated -180 0 run function medabots_server:stage/create/lagdou_ruins_2/random_cpu
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run function medabots_server:gamemodes/default/set_stats
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s StageIndex -1
+scoreboard players set @s[scores={ArenaType=0}] NeededPlayers 1
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s[scores={ArenaType=1..3}] NeededPlayers 3
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run tag @s add main
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run tag @s[scores={ArenaType=0..2}] add ally_medabot
+execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s StageVersion 1
+execute if entity @s[tag=vs_cpus,scores={ArenaType=0..1}] run function medabots_server:stage/create/lagdou_ruins_2/empty
+execute if entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run function medabots_server:stage/sign/generic/missing_cpu_support
+execute if entity @s[tag=!vs_cpus] run function medabots_server:stage/join/lagdou_ruins_2/try_to_complete
 execute if entity @s[tag=!vs_cpus,tag=!random_arena_version] run teleport @s -1295 51 -32 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1294 53 -60 minecraft:redstone_block
-execute if entity @s[tag=!vs_cpus] run data merge block -1294 52 -58 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot] run function medabots_server:stage/join/lagdou_ruins_2/empty/0"}}'}
-execute if entity @s[tag=!vs_cpus] run tellraw @a {"translate":"medabots_server:message.stage.players.1","color":"green","with":[{"translate":"medabots_server:location.lagdou_ruins_2"}]}
+execute if entity @s[tag=!vs_cpus] run data merge block -1294 52 -58 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"execute if entity @s[tag=!medabot] run function medabots_server:stage/join/lagdou_ruins_2/try"}}'}
 execute if entity @s[tag=!vs_cpus] run setblock -1296 53 -60 minecraft:redstone_block
-execute if entity @s[tag=!vs_cpus] run data merge block -1296 52 -58 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/join/lagdou_ruins_2/empty/cancel"}}',Text3:'{"translate":"medabots_server:sign.stage.cancel"}'}
+execute if entity @s[tag=!vs_cpus] run data merge block -1296 52 -58 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/join/lagdou_ruins_2/cancel"}}',Text3:'{"translate":"medabots_server:sign.stage.cancel"}'}

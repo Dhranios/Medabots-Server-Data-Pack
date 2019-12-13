@@ -31,7 +31,6 @@ tellraw @s[scores={Dialog=144}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper","color":"green"},{"translate":"medabots_server:dialog.infinity.red_pepper_defeated.7"}]}
 execute if entity @s[scores={Dialog=240}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1715 51 -446
 execute if entity @s[scores={Dialog=240}] run tag @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=241..433}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=280}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.red_pepper_defeated.8"}]}
 tellraw @s[scores={Dialog=296}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper","color":"green"},{"translate":"medabots_server:dialog.infinity.red_pepper_defeated.9"}]}
 tellraw @s[scores={Dialog=352}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.red_pepper_defeated.10"}]}

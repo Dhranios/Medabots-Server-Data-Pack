@@ -23,10 +23,8 @@ tellraw @s[scores={Dialog=208}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=216}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.6","with":[{"selector":"@s"}]}]}
 execute if entity @s[scores={Dialog=280}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1811 51 -637
 execute if entity @s[scores={Dialog=280}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=281..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=280}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1811 51 -637
 execute if entity @s[scores={Dialog=280}] run tag @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=281..}] as @e[tag=brass,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=320}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.erika_is_out_of_the_race.7"}]}
 tag @s[scores={Dialog=481}] remove dialog_infinity_erika_is_out_of_the_race
 scoreboard players set @s[scores={Dialog=481}] MusicType 1

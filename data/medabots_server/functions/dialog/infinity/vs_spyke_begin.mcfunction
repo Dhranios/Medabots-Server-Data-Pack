@@ -46,7 +46,6 @@ tellraw @s[scores={Dialog=704}] {"translate":"chat.type.text","with":[{"translat
 execute if entity @s[scores={Dialog=712}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -319 55 5.0
 execute if entity @s[scores={Dialog=712}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=713..926}] facing entity @e[tag=spyke,tag=this_dialog,limit=1] feet run teleport @s -319 55 3.0 ~ ~
-execute if entity @s[scores={Dialog=713..727}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=728}] as @e[tag=spyke,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=728}] at @e[tag=spyke,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=spyke,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=728}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.20"}]}
@@ -56,19 +55,13 @@ tellraw @s[scores={Dialog=835}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=851}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_spyke_begin.24"}]}
 execute if entity @s[scores={Dialog=867}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -338 55 8
 execute if entity @s[scores={Dialog=867}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=868..933}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=867}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -338 55 8
 execute if entity @s[scores={Dialog=867}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=868..950}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=867}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -338 55 8
 execute if entity @s[scores={Dialog=867}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=868..958}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=934}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -349 55 6
-execute if entity @s[scores={Dialog=935..}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=951}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -349 55 6
-execute if entity @s[scores={Dialog=952..}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=959}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -349 55 6
-execute if entity @s[scores={Dialog=960..}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=927}] MusicType 1
 scoreboard players set @s[scores={Dialog=927}] Music 0
 execute if entity @s[scores={Dialog=927..991}] facing entity @e[tag=kid,tag=this_dialog,limit=1] feet run teleport @s -319 55 3.0 ~ ~

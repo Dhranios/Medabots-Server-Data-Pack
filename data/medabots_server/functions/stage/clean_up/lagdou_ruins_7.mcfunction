@@ -12,6 +12,8 @@ scoreboard players set @s[scores={Stage=42,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=42,Battle=0}] Battle 0
 teleport @s[scores={Stage=42,Battle=0}] -1280 51 -171 -180 0
 tag @e[scores={Stage=42},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=42}] StageVersion
+scoreboard players reset @a[scores={Stage=42}] Stage
 data merge block -1281 52 -178 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/lagdou_ruins_7/play"}}'}
 setblock -1281 53 -180 minecraft:redstone_block
 execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}

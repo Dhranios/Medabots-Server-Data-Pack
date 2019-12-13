@@ -34,7 +34,6 @@ tellraw @s[scores={Dialog=692}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=716}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.harus_tinpet.17"}]}
 execute if entity @s[scores={Dialog=756}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -425 55 -87
 execute if entity @s[scores={Dialog=756}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=757..}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=796}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.harus_tinpet.18"}]}
 tag @s[scores={Dialog=844}] remove already_gave_items
 tag @s[scores={Dialog=844}] remove dialog_infinity_harus_tinpet

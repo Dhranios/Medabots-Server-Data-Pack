@@ -39,7 +39,6 @@ tellraw @s[scores={Dialog=1276}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1316}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.amelia","color":"green"},{"translate":"medabots_server:dialog.other.get_amelia.18"}]}
 execute if entity @s[scores={Dialog=1372}] as @e[tag=amelia,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1361 51 -46
 execute if entity @s[scores={Dialog=1372}] run tag @e[tag=amelia,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1371..}] as @e[tag=amelia,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=1512}] remove get_amelia_dialog
 tag @s[scores={Dialog=1512}] remove dialog_other_get_amelia
 tag @s[scores={Dialog=1512}] remove already_gave_items

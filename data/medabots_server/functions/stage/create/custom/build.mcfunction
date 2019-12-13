@@ -23,6 +23,7 @@ execute store result score @e[tag=new,limit=1] Range run data get entity @s Item
 execute store result score @e[tag=new,limit=1] DelayTime run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[5]
 execute store result score @e[tag=new,limit=1] PowerNeeded run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[6]
 execute store result score @e[tag=new,limit=1] Speed run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[7]
+execute store result score @e[tag=new,limit=1] StageIndex run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[8]
 execute at @e[tag=new,tag=starting_area] run teleport @a[tag=building_player,limit=1] ~ ~ ~ 0 0
 
 execute as @e[tag=new,limit=1,tag=mission] at @s run teleport @s ~ ~-3 ~

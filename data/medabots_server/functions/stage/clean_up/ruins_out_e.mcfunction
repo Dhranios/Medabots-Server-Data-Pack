@@ -9,6 +9,9 @@ scoreboard players set @s[scores={Stage=58,Battle=0}] Music 0
 scoreboard players set @s[scores={Stage=58,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=58,Battle=0}] Battle 0
 teleport @s[scores={Stage=58,Battle=0}] -1892 51 -489 -180 0
+tag @e[scores={Stage=58},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=58}] StageVersion
+scoreboard players reset @a[scores={Stage=58}] Stage
 data merge block -1893 52 -536 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_out_e/play"}}'}
 setblock -1893 53 -538 minecraft:redstone_block
 clear @s minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}

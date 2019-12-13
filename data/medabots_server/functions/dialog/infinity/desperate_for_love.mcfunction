@@ -19,7 +19,6 @@ tellraw @s[scores={Dialog=88}] {"translate":"chat.type.text","with":[{"selector"
 tellraw @s[scores={Dialog=128}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.desperate_for_love.5"}]}
 execute if entity @s[scores={Dialog=160}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -321 55 -87
 execute if entity @s[scores={Dialog=160}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=161..255}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=255}] as @e[tag=samantha,tag=this_dialog,limit=1] run tag @s remove walking
 tellraw @s[scores={Dialog=180}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.desperate_for_love.6"}]}
 teleport @s[scores={Dialog=256}] -405 55 -118 90 0
@@ -94,13 +93,10 @@ tellraw @s[scores={Dialog=2436}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2500}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.desperate_for_love.67"}]}
 execute if entity @s[scores={Dialog=2516}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=2516}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2517..2548}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2548}] run kill @e[tag=samantha,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=2516}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -410 55 -118
 execute if entity @s[scores={Dialog=2516}] run tag @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2517..2528}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2529}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
-execute if entity @s[scores={Dialog=2530..2548}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2548}] run kill @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=2523}] run setblock -412 53 -118 minecraft:redstone_block
 execute if entity @s[scores={Dialog=2546}] run setblock -412 53 -118 minecraft:air

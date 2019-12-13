@@ -22,10 +22,8 @@ tellraw @s[scores={Dialog=152}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=216}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.the_final_stage.5"}]}
 execute if entity @s[scores={Dialog=248}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1635 51 -638
 execute if entity @s[scores={Dialog=248}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=249..}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=248}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1635 51 -638
 execute if entity @s[scores={Dialog=248}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=249..}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=375}] remove dialog_infinity_the_final_stage
 scoreboard players set @s[scores={Dialog=375}] MusicType 1
 scoreboard players set @s[scores={Dialog=375}] Music 0

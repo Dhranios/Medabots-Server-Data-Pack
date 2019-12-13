@@ -35,7 +35,6 @@ tellraw @s[scores={Dialog=1880}] {"translate":"chat.type.text","with":[{"text":"
 tellraw @s[scores={Dialog=1968}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.21"}]}
 execute if entity @s[scores={Dialog=2040}] as @e[tag=ultimategold,tag=this_dialog] at @s run teleport @s ~ ~ ~ facing -1860 51 -251
 execute if entity @s[scores={Dialog=2040}] run tag @e[tag=ultimategold,tag=this_dialog] add walking
-execute if entity @s[scores={Dialog=2041..}] as @e[tag=ultimategold,tag=this_dialog] at @s run teleport @s ^ ^ ^0.2125
 tellraw @s[scores={Dialog=2100}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.22"}]}
 tellraw @s[scores={Dialog=2100}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.22"}]}
 tag @s[scores={Dialog=2245}] remove dialog_other_rock_e_ultimategold_cleared

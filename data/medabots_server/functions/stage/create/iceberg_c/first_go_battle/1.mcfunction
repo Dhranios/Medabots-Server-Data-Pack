@@ -21,10 +21,10 @@ effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s Battle 2
 teleport @s -1541 44 -671
-effect give @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=1] minecraft:night_vision 2 0 true
-effect give @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=1] minecraft:blindness 2 0 true
-scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=1] Battle 2
-teleport @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,tag=1] -1541 44 -675
+effect give @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,scores={StageIndex=1}] minecraft:night_vision 2 0 true
+effect give @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,scores={StageIndex=1}] minecraft:blindness 2 0 true
+scoreboard players set @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,scores={StageIndex=1}] Battle 2
+teleport @a[x=-1570,y=50,z=-685,dx=60,dy=4,dz=74,scores={StageIndex=1}] -1541 44 -675
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}
 tag @e[sort=random,type=minecraft:area_effect_cloud,tag=referee_marker,limit=1] add selected

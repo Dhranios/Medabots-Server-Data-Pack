@@ -17,7 +17,6 @@ execute if entity @s[scores={Dialog=344}] run summon minecraft:armor_stand -1860
 execute if entity @s[scores={Dialog=344}] as @e[x=-1860,y=51,z=-251,tag=ultimategold,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=344}] as @e[tag=ultimategold,tag=this_dialog] at @s run teleport @s ~ ~ ~ facing -1861 51 -295
 execute if entity @s[scores={Dialog=344}] run tag @e[tag=ultimategold,tag=this_dialog] add walking
-execute if entity @s[scores={Dialog=345..551}] as @e[tag=ultimategold,tag=this_dialog] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=551}] run tag @e[tag=ultimategold,tag=this_dialog] remove walking
 execute if entity @s[scores={Dialog=552..}] at @e[tag=ultimategold,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=ultimategold,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=384..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=ultimategold,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~

@@ -21,7 +21,6 @@ execute if entity @s[scores={Dialog=296}] as @e[tag=rubberobo,tag=this_dialog,li
 execute if entity @s[scores={Dialog=306..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=296}] run setblock -349 53 -14 minecraft:redstone_block
 execute if entity @s[scores={Dialog=297}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=297..316}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=316}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=310}] run setblock -349 53 -14 minecraft:dirt
 tellraw @s[scores={Dialog=316}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_snowfield_b.5"}]}
@@ -38,7 +37,6 @@ tellraw @s[scores={Dialog=724}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=732}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_snowfield_b.16"}]}
 execute if entity @s[scores={Dialog=748}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=748}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=749..884}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=884}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=884}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead
 tellraw @s[scores={Dialog=788}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_snowfield_b.17"}]}

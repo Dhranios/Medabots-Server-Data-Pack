@@ -17,11 +17,37 @@ execute positioned -1961 45 -560 run function medabots_server:set_blocks/acceler
 execute positioned -1950 45 -561 run function medabots_server:set_blocks/wall
 execute positioned -1951 45 -562 run function medabots_server:set_blocks/wall
 execute positioned -1952 45 -563 run function medabots_server:set_blocks/wall
-teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,tag=-1] -1967 45 -552 -90 0
-teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,tag=0] -1956 45 -551 90 0
-teleport @s[tag=-1] -1967 45 -552 -90 0
-tag @a[x=-1967,y=45,z=-552,distance=..1] remove -1
-tag @a[x=-1956,y=45,z=-551,distance=..1] remove 0
+
+execute if entity @s[scores={ArenaType=0}] run teleport @s -1967 45 -552 0 0
+execute if entity @s[scores={ArenaType=0}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=0}] -1956 45 -551 0 0
+execute if entity @s[scores={ArenaType=0},tag=vs_cpus,tag=!story_battle] positioned -1956 45 -551 run function medabots_server:stage/create/park_battle/random_enemy
+
+execute if entity @s[scores={ArenaType=1}] run teleport @s -1967 45 -552 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=0}] -1956 45 -551 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=1}] -1955 45 -553 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=2}] -1954 45 -549 0 0
+execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1956 45 -551 run function medabots_server:stage/create/park_battle/random_enemy
+execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1955 45 -553 run function medabots_server:stage/create/park_battle/random_enemy
+execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1954 45 -549 run function medabots_server:stage/create/park_battle/random_enemy
+
+execute if entity @s[scores={ArenaType=2}] run teleport @s -1967 45 -552 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=0}] -1967 45 -550 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=1}] -1956 45 -551 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=2}] -1956 45 -553 0 0
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1967 45 -550 run function medabots_server:stage/create/generic/get_ally
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1956 45 -551 run function medabots_server:stage/create/park_battle/random_enemy
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1956 45 -553 run function medabots_server:stage/create/park_battle/random_enemy
+
+execute if entity @s[scores={ArenaType=3}] run teleport @s -1967 45 -552 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=0}] -1956 45 -551 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=1}] -1962 45 -546 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1973,y=51,z=-589,dx=50,dy=4,dz=50,scores={StageIndex=2}] -1961 45 -557 0 0
+execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1956 45 -551 run function medabots_server:stage/create/park_battle/random_neutral
+execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1962 45 -546 run function medabots_server:stage/create/park_battle/random_neutral
+execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1961 45 -557 run function medabots_server:stage/create/park_battle/random_neutral
+
+summon minecraft:armor_stand -1962 45 -555 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Rotation:[0.0f,0.0f]}
+
 scoreboard players set @a[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] Stage 50
 scoreboard players set @a[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] Battle 1
 execute as @a[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0

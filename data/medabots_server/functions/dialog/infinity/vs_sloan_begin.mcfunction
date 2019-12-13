@@ -50,9 +50,6 @@ execute if entity @s[scores={Dialog=784}] as @e[tag=spyke,tag=this_dialog,limit=
 execute if entity @s[scores={Dialog=784}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=784}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=784}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=785..}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=785..}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
-execute if entity @s[scores={Dialog=785..}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 scoreboard players set @s[scores={Dialog=982}] MusicType 1
 scoreboard players set @s[scores={Dialog=982}] Music 0
 tag @s[scores={Dialog=982}] remove dialog_infinity_vs_sloan_begin

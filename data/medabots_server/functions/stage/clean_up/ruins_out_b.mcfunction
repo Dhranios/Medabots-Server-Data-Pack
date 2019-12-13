@@ -11,6 +11,8 @@ scoreboard players set @s[scores={Stage=16,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=16,Battle=0}] Battle 0
 teleport @s[scores={Stage=16,Battle=0}] -1813 51 -489 -180 0
 tag @e[scores={Stage=16},type=!minecraft:player] add dead
+scoreboard players reset @a[scores={Stage=16}] StageVersion
+scoreboard players reset @a[scores={Stage=16}] Stage
 tag @e[scores={Stage=16},type=!minecraft:player,tag=barrier] add air
 tag @e[scores={Stage=16},type=!minecraft:player,tag=barrier] remove barrier
 data merge block -1814 52 -535 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_out_b/play"}}'}

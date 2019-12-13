@@ -104,7 +104,6 @@ execute if entity @s[scores={Dialog=4196..4263}] at @e[tag=erika,tag=this_dialog
 tellraw @s[scores={Dialog=4216}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.suspicious_haru.76"}]}
 execute if entity @s[scores={Dialog=4264}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 0
 execute if entity @s[scores={Dialog=4264}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=4265..}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 tag @s[scores={Dialog=4345}] remove dialog_infinity_suspicious_haru
 scoreboard players set @s[scores={Dialog=4345}] MusicType 1
 scoreboard players set @s[scores={Dialog=4345}] Music 0

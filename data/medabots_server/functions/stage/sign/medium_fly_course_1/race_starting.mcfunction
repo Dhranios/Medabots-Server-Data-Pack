@@ -1,4 +1,4 @@
-execute as @a[x=-89,y=120,z=-82,dx=6,dy=3,dz=8,tag=racer] at @s run function medabots_server:gamemodes/fly_course
+execute as @a[x=-89,y=120,z=-82,dx=6,dy=3,dz=8,tag=racer] at @s run function medabots_server:gamemodes/fly_course/set_stats
 scoreboard players set @a[x=-89,y=120,z=-82,dx=6,dy=3,dz=8,tag=racer] Stage 2
 teleport @a[x=-89,y=120,z=-82,dx=6,dy=3,dz=8,tag=0,limit=1] -160 112 -122 -180 0
 teleport @a[x=-89,y=120,z=-82,dx=6,dy=3,dz=8,tag=1,limit=1] -162 112 -122 -180 0

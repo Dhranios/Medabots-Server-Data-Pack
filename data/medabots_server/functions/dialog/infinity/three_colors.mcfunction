@@ -81,11 +81,9 @@ execute if entity @s[scores={Dialog=793}] positioned -1538 51 -117 as @e[tag=med
 execute if entity @s[scores={Dialog=793}] as @e[x=-1538,y=51,z=-117,tag=peace_kiss,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=793}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1529 51 -150
 execute if entity @s[scores={Dialog=793}] run tag @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=794..952}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=952}] run tag @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=793}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1526 51 -151
 execute if entity @s[scores={Dialog=793}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=794..963}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=963}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 tellraw @s[scores={Dialog=952}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.27"}]}
 tellraw @s[scores={Dialog=984}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peace_kiss","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.28"}]}
@@ -101,11 +99,9 @@ tellraw @s[scores={Dialog=1200}] {"translate":"chat.type.text","with":[{"transla
 execute if entity @s[scores={Dialog=1232..}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=baroncastle,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1200}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
 execute if entity @s[scores={Dialog=1200}] run tag @e[tag=kid,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=1201..1277}] as @e[tag=kid,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=1277}] run kill @e[tag=kid,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1220}] as @e[tag=baroncastle,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
 execute if entity @s[scores={Dialog=1220}] run tag @e[tag=baroncastle,tag=!medabot_model,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=1221..1294}] as @e[tag=baroncastle,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.425
 execute if entity @s[scores={Dialog=1294}] run kill @e[tag=baroncastle,tag=!medabot_model,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=1232}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.36"}]}
 tellraw @s[scores={Dialog=1256}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.37"}]}
@@ -118,13 +114,11 @@ tellraw @s[scores={Dialog=1430}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1470}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.blue_man","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.44"}]}
 execute if entity @s[scores={Dialog=1486}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1532 51 -148
 execute if entity @s[scores={Dialog=1486}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1487..1517}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1517}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=1518}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1517}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peace_kiss","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.45"}]}
 execute if entity @s[scores={Dialog=1533}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1532 51 -150
 execute if entity @s[scores={Dialog=1533}] run tag @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1534..1547}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1548}] run tag @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=1549}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1548}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.46"}]}
@@ -166,11 +160,9 @@ tellraw @s[scores={Dialog=2424}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2448}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.red_pepper","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.75"}]}
 execute if entity @s[scores={Dialog=2472}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
 execute if entity @s[scores={Dialog=2472}] run tag @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2473..2620}] as @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2620}] run kill @e[tag=peace_kiss,tag=!medabot_model,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=2472}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
 execute if entity @s[scores={Dialog=2472}] run tag @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2473..2630}] as @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=2630}] run kill @e[tag=red_pepper,tag=!medabot_model,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=2512}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.76"}]}
 tellraw @s[scores={Dialog=2528}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.77"}]}
@@ -178,7 +170,6 @@ tellraw @s[scores={Dialog=2552}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2576}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.blue_man","color":"green"},{"translate":"medabots_server:dialog.infinity.three_colors.79"}]}
 execute if entity @s[scores={Dialog=2592}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1540 51 -180
 execute if entity @s[scores={Dialog=2592}] run tag @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=2593..2728}] as @e[tag=blue_man,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 advancement grant @s[scores={Dialog=2728}] only medabots_server:special_items/passes/three_colors
 tag @s[scores={Dialog=2728}] remove dialog_infinity_three_colors
 scoreboard players set @s[scores={Dialog=2728}] MusicType 1
