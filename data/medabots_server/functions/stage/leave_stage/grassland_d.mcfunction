@@ -6,4 +6,6 @@ scoreboard players set @s MusicType 1
 function medabots_server:other/death
 execute if entity @s[tag=!stage_builder] run function medabots_server:gamemodes/default/reset
 tag @s[tag=stage_builder] remove stage_builder
-execute unless entity @a[x=-1600,y=0,z=-750,dx=62,dy=49,dz=62,tag=medabot] run function medabots_server:stage/clean_up/grassland_d
+tag @s add leave_stage
+function medabots_server:stage/try/grassland_d/enter
+tag @s remove leave_stage

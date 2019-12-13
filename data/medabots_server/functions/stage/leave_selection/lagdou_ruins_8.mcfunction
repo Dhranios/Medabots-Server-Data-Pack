@@ -3,4 +3,6 @@ scoreboard players reset @s Stage
 scoreboard players set @s PrevMusicType 0
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 1
-execute unless entity @a[x=-1319,y=0,z=-2,dx=59,dy=48,dz=62,tag=medabot] run function medabots_server:stage/clean_up/lagdou_ruins_8
+tag @s add leave_stage
+function medabots_server:stage/try/lagdou_ruins_8/enter
+tag @s remove leave_stage
