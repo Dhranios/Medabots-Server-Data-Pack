@@ -19,10 +19,10 @@ fill -1292 36 25 -1290 36 30 minecraft:oak_slab[waterlogged=true,type=bottom]
 fill -1286 36 22 -1275 36 24 minecraft:oak_slab[waterlogged=true,type=bottom]
 fill -1292 36 16 -1287 36 18 minecraft:oak_slab[waterlogged=true,type=bottom]
 fill -1304 36 19 -1293 36 21 minecraft:oak_slab[waterlogged=true,type=bottom]
-scoreboard players set @a[scores={Stage=43},tag=enemy_medabot] Music 0
-scoreboard players set @a[scores={Stage=43},tag=enemy_medabot] MusicType 1
-scoreboard players set @a[scores={Stage=43},tag=enemy_medabot] Battle 0
-teleport @a[scores={Stage=43},tag=enemy_medabot] -1290 49 29 -180 0
+scoreboard players set @a[scores={Stage=43},tag=medabot,distance=0.1..] Music 0
+scoreboard players set @a[scores={Stage=43},tag=medabot,distance=0.1..] MusicType 1
+scoreboard players set @a[scores={Stage=43},tag=medabot,distance=0.1..] Battle 0
+teleport @a[scores={Stage=43},tag=medabot,distance=0.1..] -1290 49 29 -180 0
 scoreboard players set @s[scores={Stage=43,Battle=0}] Music 0
 scoreboard players set @s[scores={Stage=43,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=43,Battle=0}] Battle 0

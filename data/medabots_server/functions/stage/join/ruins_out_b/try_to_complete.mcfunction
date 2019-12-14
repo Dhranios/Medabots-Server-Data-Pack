@@ -11,7 +11,7 @@ execute if score #temp NeededPlayers matches 0 run setblock -1812 53 -537 minecr
 execute if score #temp NeededPlayers matches 0 run data merge block -1814 52 -535 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/ruins_out_b/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if score #temp NeededPlayers matches 0 run setblock -1814 53 -537 minecraft:red_wool
 
-#execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/ruins_out_b/custom_vs_players
+execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/ruins_out_b/custom
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/ruins_out_b/first_go
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/ruins_out_b/second_go
 #execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=3}] run function medabots_server:stage/create/ruins_out_b/rubberobo

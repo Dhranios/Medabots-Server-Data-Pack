@@ -11,7 +11,7 @@ execute if score #temp NeededPlayers matches 0 run setblock -1889 52 -605 minecr
 execute if score #temp NeededPlayers matches 0 run data merge block -1891 51 -603 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/boxer/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if score #temp NeededPlayers matches 0 run setblock -1891 52 -605 minecraft:red_wool
 
-#execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/boxer/custom_vs_players
+execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/boxer/custom
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/boxer/first_go
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/boxer/second_go
 

@@ -11,7 +11,7 @@ execute if score #temp NeededPlayers matches 0 run setblock -1672 53 -181 minecr
 execute if score #temp NeededPlayers matches 0 run data merge block -1674 52 -179 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/jungle_a/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if score #temp NeededPlayers matches 0 run setblock -1674 53 -181 minecraft:red_wool
 
-#execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/jungle_a/custom_vs_players
+execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/jungle_a/custom
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/jungle_a/first_go
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/jungle_a/second_go
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=3}] run function medabots_server:stage/create/jungle_a/rubberobo

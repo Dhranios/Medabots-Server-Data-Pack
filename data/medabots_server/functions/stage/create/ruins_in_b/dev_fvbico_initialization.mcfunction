@@ -1,6 +1,6 @@
 function medabots_server:gamemodes/default/set_stats
 scoreboard players set @s StageIndex -1
-scoreboard players set @s NeededPlayers 1
+scoreboard players set @s NeededPlayers 5
 tag @s add main
 scoreboard players set @s StageVersion 4
 execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ruins_in_b/dev_fvbico

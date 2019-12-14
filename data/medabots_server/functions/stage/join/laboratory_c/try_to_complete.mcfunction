@@ -11,7 +11,7 @@ execute if score #temp NeededPlayers matches 0 run setblock -1585 52 -622 minecr
 execute if score #temp NeededPlayers matches 0 run data merge block -1587 51 -619 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/laboratory_c/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if score #temp NeededPlayers matches 0 run setblock -1587 52 -621 minecraft:red_wool
 
-#execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/laboratory_c/custom_vs_players
+execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/laboratory_c/custom
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/laboratory_c/first_go
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/laboratory_c/second_go
 

@@ -3,10 +3,10 @@ fill -1318 45 -208 -1376 46 -276 minecraft:wall_torch[facing=east] replace minec
 fill -1318 45 -208 -1376 46 -276 minecraft:wall_torch[facing=north] replace minecraft:redstone_wall_torch[facing=north]
 fill -1318 45 -208 -1376 46 -276 minecraft:wall_torch[facing=south] replace minecraft:redstone_wall_torch[facing=south]
 fill -1318 45 -208 -1376 46 -276 minecraft:wall_torch[facing=west] replace minecraft:redstone_wall_torch[facing=west]
-scoreboard players set @a[scores={Stage=40},tag=enemy_medabot] Music 0
-scoreboard players set @a[scores={Stage=40},tag=enemy_medabot] MusicType 1
-scoreboard players set @a[scores={Stage=40},tag=enemy_medabot] Battle 0
-teleport @a[scores={Stage=40},tag=enemy_medabot] -1346 50 -219 -180 0
+scoreboard players set @a[scores={Stage=40},tag=medabot,distance=0.1..] Music 0
+scoreboard players set @a[scores={Stage=40},tag=medabot,distance=0.1..] MusicType 1
+scoreboard players set @a[scores={Stage=40},tag=medabot,distance=0.1..] Battle 0
+teleport @a[scores={Stage=40},tag=medabot,distance=0.1..] -1346 50 -219 -180 0
 scoreboard players set @s[scores={Stage=40,Battle=0}] Music 0
 scoreboard players set @s[scores={Stage=40,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=40,Battle=0}] Battle 0

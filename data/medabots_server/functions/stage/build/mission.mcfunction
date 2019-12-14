@@ -16,7 +16,7 @@ execute if entity @s[tag=!failed] unless entity @s[nbt={Inventory:[{Slot:-106b,t
 execute if entity @s[tag=!failed] run loot spawn ~ ~ ~ loot medabots_server:gameplay/get_player_name
 execute if entity @s[tag=!failed] store success score #temp Money run data modify entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}},limit=1] Item.tag.SkullOwner.Name set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.owner
 execute if entity @s[tag=!failed] run kill @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}}]
-execute if entity @s[tag=!failed] if score #temp Money = 1 run tag @s add not_yours
+execute if entity @s[tag=!failed] if score #temp Money matches 1 run tag @s add not_yours
 execute if entity @s[tag=!failed] run scoreboard players reset #temp Money
 execute if entity @s[tag=!failed] run tellraw @s[tag=not_yours] {"translate":"medabots_server:message.stage.stage_builder.mission.other_owner","color":"yellow"}
 execute if entity @s[tag=!failed] run tag @s[tag=not_yours] add failed
@@ -64,12 +64,12 @@ execute if entity @s[tag=!failed] run scoreboard players operation #temp Stage =
 execute if entity @s[tag=!failed] run scoreboard players set #temp StageIndex 0
 execute if entity @s[tag=!failed] as @e[tag=mission,type=minecraft:armor_stand] if score @s Stage = #temp Stage run scoreboard players add #temp StageIndex 1
 execute if entity @s[tag=!failed,scores={StageBuild=47}] run function medabots_server:stage/build/clear_goal
-execute if entity @s[tag=!failed,scores={StageBuild=47}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","robattle"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
-execute if entity @s[tag=!failed,scores={StageBuild=48}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","defeat_the_enemy"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
-execute if entity @s[tag=!failed,scores={StageBuild=49}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","defeat_all_guards"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
-execute if entity @s[tag=!failed,scores={StageBuild=50}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","destroy_all_cannons"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
-execute if entity @s[tag=!failed,scores={StageBuild=51}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","run_until_the_time_is_up"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
-execute if entity @s[tag=!failed,scores={StageBuild=52}] run summon minecraft:armor_stand ~ ~ ~ {"Tags":["no_ticking","mission","open_the_exit_door"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
+execute if entity @s[tag=!failed,scores={StageBuild=47}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","robattle"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
+execute if entity @s[tag=!failed,scores={StageBuild=48}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","defeat_the_enemy"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
+execute if entity @s[tag=!failed,scores={StageBuild=49}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","defeat_all_guards"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
+execute if entity @s[tag=!failed,scores={StageBuild=50}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","destroy_all_cannons"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
+execute if entity @s[tag=!failed,scores={StageBuild=51}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","run_until_the_time_is_up"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
+execute if entity @s[tag=!failed,scores={StageBuild=52}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","open_the_exit_door"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
 execute if entity @s[tag=!failed] run data modify entity @e[distance=..0.7,tag=mission,limit=1] ArmorItems[3] set from entity @s Inventory[{Slot:-106b}]
 execute if entity @s[tag=!failed] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.medabot","color":"yellow"}
 execute if entity @s[tag=!failed,y_rotation=0..-180,tag=!north,tag=!south] run tag @e[distance=..0.7,tag=mission] add east
@@ -77,6 +77,7 @@ execute if entity @s[tag=!failed,y_rotation=-90..90,tag=!east,tag=!west] run tag
 execute if entity @s[tag=!failed,y_rotation=90..-90,tag=!east,tag=!west] run tag @e[distance=..0.7,tag=mission] add south
 execute if entity @s[tag=!failed,y_rotation=-180..0,tag=!north,tag=!south] run tag @e[distance=..0.7,tag=mission] add west
 execute if entity @s[tag=!failed] run scoreboard players operation @e[distance=..0.7,tag=mission] StageIndex = #temp StageIndex
+execute if entity @s[tag=!failed] run scoreboard players add @s NeededPlayers 1
 scoreboard players reset #temp Stage
 scoreboard players reset #temp StageIndex
 tag @s remove east

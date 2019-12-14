@@ -2,10 +2,10 @@ execute as @e[x=-1665,y=0,z=-704,dx=62,dy=49,dz=63,type=!minecraft:player] unles
 fill -1665 43 -704 -1604 43 -642 minecraft:air replace minecraft:barrier
 bossbar set medabots_server:ruins_out_c/time players
 bossbar set medabots_server:ruins_out_c/robattle players
-scoreboard players set @a[scores={Stage=27},tag=enemy_medabot] Music 0
-scoreboard players set @a[scores={Stage=27},tag=enemy_medabot] MusicType 22
-scoreboard players set @a[scores={Stage=27},tag=enemy_medabot] Battle 0
-teleport @a[scores={Stage=27},tag=enemy_medabot] -1635 50 -673 -180 0
+scoreboard players set @a[scores={Stage=27},tag=medabot,distance=0.1..] Music 0
+scoreboard players set @a[scores={Stage=27},tag=medabot,distance=0.1..] MusicType 22
+scoreboard players set @a[scores={Stage=27},tag=medabot,distance=0.1..] Battle 0
+teleport @a[scores={Stage=27},tag=medabot,distance=0.1..] -1635 50 -673 -180 0
 scoreboard players set @s[scores={Stage=27,Battle=0}] Music 0
 scoreboard players set @s[scores={Stage=27,Battle=0}] MusicType 22
 scoreboard players set @s[scores={Stage=27,Battle=0}] Battle 0

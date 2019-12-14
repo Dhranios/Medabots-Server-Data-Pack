@@ -58,7 +58,7 @@ tag @s[tag=done,tag=!finished] add finished
 execute if entity @s[tag=done,tag=finished,tag=custom_stage] store result score @s BattlingMedabots if entity @e[scores={Medabot=0..,Battle=1..2},tag=this_robattle]
 tag @s[scores={BattlingMedabots=1},tag=custom_stage] add mission_success
 execute if entity @s[tag=mission_success] run tag @a[tag=this_robattle] add remove_bossbar
-execute if entity @s[tag=mission_success] run tag @a[tag=clear_stage] add remove_bossbar
+execute if entity @s[tag=mission_success] run tag @a[tag=this_robattle] add clear_stage
 scoreboard players reset @s[scores={BattlingMedabots=1..},tag=custom_stage] BattlingMedabots
 scoreboard players reset #temp Stage
 

@@ -1,10 +1,10 @@
 execute as @e[x=-1824,y=41,z=-438,dx=60,dy=7,dz=90,type=!minecraft:player] unless entity @s[scores={Stage=15}] run scoreboard players set @s Stage 15
 bossbar set medabots_server:iceberg_b/time players
 bossbar set medabots_server:iceberg_b/robattle players
-scoreboard players set @a[scores={Stage=15},tag=enemy_medabot] Music 0
-scoreboard players set @a[scores={Stage=15},tag=enemy_medabot] MusicType 1
-scoreboard players set @a[scores={Stage=15},tag=enemy_medabot] Battle 0
-teleport @a[scores={Stage=15},tag=enemy_medabot] -1795 50 -394 -180 0
+scoreboard players set @a[scores={Stage=15},tag=medabot,distance=0.1..] Music 0
+scoreboard players set @a[scores={Stage=15},tag=medabot,distance=0.1..] MusicType 1
+scoreboard players set @a[scores={Stage=15},tag=medabot,distance=0.1..] Battle 0
+teleport @a[scores={Stage=15},tag=medabot,distance=0.1..] -1795 50 -394 -180 0
 scoreboard players set @s[scores={Stage=15,Battle=0}] Music 0
 scoreboard players set @s[scores={Stage=15,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=15,Battle=0}] Battle 0

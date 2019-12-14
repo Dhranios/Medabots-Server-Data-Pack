@@ -1,8 +1,8 @@
 execute as @e[x=-1329,y=0,z=-115,dx=61,dy=50,dz=61,type=!minecraft:player] unless entity @s[scores={Stage=36}] run scoreboard players set @s Stage 36
-scoreboard players set @a[scores={Stage=36},tag=enemy_medabot] Music 0
-scoreboard players set @a[scores={Stage=36},tag=enemy_medabot] MusicType 1
-scoreboard players set @a[scores={Stage=36},tag=enemy_medabot] Battle 0
-teleport @a[scores={Stage=36},tag=enemy_medabot] -1298 51 -87 -180 0
+scoreboard players set @a[scores={Stage=36},tag=medabot,distance=0.1..] Music 0
+scoreboard players set @a[scores={Stage=36},tag=medabot,distance=0.1..] MusicType 1
+scoreboard players set @a[scores={Stage=36},tag=medabot,distance=0.1..] Battle 0
+teleport @a[scores={Stage=36},tag=medabot,distance=0.1..] -1298 51 -87 -180 0
 scoreboard players set @s[scores={Stage=36,Battle=0}] Music 0
 scoreboard players set @s[scores={Stage=36,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=36,Battle=0}] Battle 0

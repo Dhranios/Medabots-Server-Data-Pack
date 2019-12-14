@@ -1,3 +1,4 @@
+scoreboard players set @s NeededPlayers 0
 tag @s add stage_builder
 scoreboard players set @s Stage 17
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0

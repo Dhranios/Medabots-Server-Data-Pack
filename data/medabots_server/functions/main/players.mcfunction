@@ -6,8 +6,8 @@ execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run fun
 execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/try/tutorial
 
 # Run stage
-execute if entity @s[scores={Stage=1..,LeaveStage=1..}] run function medabots_server:stage/exit
-execute if entity @s[scores={Stage=0..},tag=stage_builder] run function medabots_server:stage/run
+execute if entity @s[scores={Stage=1..,LeaveStage=1..},tag=!stage_builder] run function medabots_server:stage/exit
+execute if entity @s[scores={Stage=1..},tag=stage_builder] run function medabots_server:stage/run
 execute if entity @s[scores={Stage=0..,LeaveStage=1..},tag=stage_builder] run function medabots_server:stage/exit/enforced
 execute if entity @s[scores={Gamemode=0,Stage=0..,Battle=1..2},tag=main] run function medabots_server:stage/run
 execute if entity @s[scores={Gamemode=0,Stage=1..,Battle=1..2},tag=!main] run function medabots_server:stage/non_main_run

@@ -11,6 +11,6 @@ execute if score #temp NeededPlayers matches 0 run setblock -1891 53 -698 minecr
 execute if score #temp NeededPlayers matches 0 run data merge block -1889 52 -696 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/rock_f/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if score #temp NeededPlayers matches 0 run setblock -1889 53 -698 minecraft:red_wool
 
-#execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/rock_f/custom_vs_players
+execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/rock_f/custom
 
 scoreboard players reset #temp NeededPlayers

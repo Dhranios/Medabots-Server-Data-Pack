@@ -3,10 +3,10 @@ fill -1854 44 -633 -1764 44 -540 minecraft:air replace minecraft:barrier
 bossbar set medabots_server:park_a/time players
 bossbar set medabots_server:park_a/robattle players
 bossbar set medabots_server:park_a/time max 72000
-scoreboard players set @a[scores={Stage=19},tag=enemy_medabot] Music 0
-scoreboard players set @a[scores={Stage=19},tag=enemy_medabot] MusicType 1
-scoreboard players set @a[scores={Stage=19},tag=enemy_medabot] Battle 0
-teleport @a[scores={Stage=19},tag=enemy_medabot] -1809 51 -587 -180 0
+scoreboard players set @a[scores={Stage=19},tag=medabot,distance=0.1..] Music 0
+scoreboard players set @a[scores={Stage=19},tag=medabot,distance=0.1..] MusicType 1
+scoreboard players set @a[scores={Stage=19},tag=medabot,distance=0.1..] Battle 0
+teleport @a[scores={Stage=19},tag=medabot,distance=0.1..] -1809 51 -587 -180 0
 scoreboard players set @s[scores={Stage=19,Battle=0}] Music 0
 scoreboard players set @s[scores={Stage=19,Battle=0}] MusicType 1
 scoreboard players set @s[scores={Stage=19,Battle=0}] Battle 0

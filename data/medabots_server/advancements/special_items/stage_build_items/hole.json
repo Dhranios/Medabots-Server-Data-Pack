@@ -1,0 +1,25 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond_pickaxe",
+			"nbt": "{Unbreakable:1b,Damage:7}"
+        },
+        "title": {
+            "translate": "medabots_server:block.hole"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.taken"
+        },
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "medabots_server:special_items/stage_build_items/stone",
+    "criteria": {
+        "obtained": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/special_items/stage_build_items/hole"
+    }
+}

@@ -11,6 +11,6 @@ execute if score #temp NeededPlayers matches 0 run setblock -1954 52 -392 minecr
 execute if score #temp NeededPlayers matches 0 run data merge block -1952 51 -389 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/iceberg_e/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute if score #temp NeededPlayers matches 0 run setblock -1952 52 -391 minecraft:red_wool
 
-#execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/iceberg_e/custom_vs_players
+execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/iceberg_e/custom
 
 scoreboard players reset #temp NeededPlayers

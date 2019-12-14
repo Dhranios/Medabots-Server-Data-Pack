@@ -28,10 +28,11 @@ execute if entity @e[distance=..0.7,tag=robattle] run tellraw @s {"translate":"m
 execute as @e[distance=..0.7,tag=pot,tag=dead] run function medabots_server:stage/build/put_out_of_pot
 execute as @e[distance=..0.7,tag=action_floor,tag=dead] run function medabots_server:stage/build/put_out_of_action_floor
 
-execute as @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players operation #temp Stage = @s Stage
+execute if entity @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players operation #temp Stage = @s Stage
 execute as @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players operation #temp StageIndex = @s StageIndex
 execute as @e[distance=..0.7,tag=mission,tag=dead] as @e[tag=mission,type=minecraft:armor_stand] if score @s Stage = #temp Stage if score @s StageIndex > #temp StageIndex run scoreboard players remove @s StageIndex 1
-execute as @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players reset #temp Stage
-execute as @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players reset #temp StageIndex
+execute if entity @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players reset #temp Stage
+execute if entity @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players reset #temp StageIndex
+execute if entity @e[distance=..0.7,tag=mission,tag=dead] run scoreboard players remove @s NeededPlayers 1
 
 scoreboard players reset @s StageBuild
