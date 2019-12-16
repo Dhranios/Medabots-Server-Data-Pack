@@ -4,29 +4,29 @@ fill -1314 47 -119 -1376 49 -200 minecraft:redstone_wall_torch[facing=south] rep
 fill -1314 47 -119 -1376 49 -200 minecraft:redstone_wall_torch[facing=west] replace minecraft:wall_torch[facing=west]
 
 execute if entity @s[scores={ArenaType=0}] run teleport @s -1321 45 -123 0 0
-execute if entity @s[scores={ArenaType=0}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=0}] -1369 45 -186 0 0
+execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=39}] -1369 45 -186 0 0
 execute if entity @s[scores={ArenaType=0},tag=vs_cpus] positioned -1369 45 -186 run function medabots_server:stage/create/lagdou_ruins_4/random_enemy
 
 execute if entity @s[scores={ArenaType=1}] run teleport @s -1321 45 -123 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=0}] -1369 45 -186 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=1}] -1371 45 -187 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=2}] -1367 45 -188 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=39}] -1369 45 -186 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=39}] -1371 45 -187 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=39}] -1367 45 -188 0 0
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus] positioned -1369 45 -186 run function medabots_server:stage/create/lagdou_ruins_4/random_enemy
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus] positioned -1371 45 -187 run function medabots_server:stage/create/lagdou_ruins_4/random_enemy
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus] positioned -1367 45 -188 run function medabots_server:stage/create/lagdou_ruins_4/random_enemy
 
 execute if entity @s[scores={ArenaType=2}] run teleport @s -1321 45 -123 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=0}] -1321 45 -125 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=1}] -1369 45 -186 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=2}] -1371 45 -186 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=39}] -1321 45 -125 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=39}] -1369 45 -186 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=39}] -1371 45 -186 0 0
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus] positioned -1321 45 -125 run function medabots_server:stage/create/generic/get_ally
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus] positioned -1369 45 -186 run function medabots_server:stage/create/lagdou_ruins_4/random_enemy
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus] positioned -1371 45 -186 run function medabots_server:stage/create/lagdou_ruins_4/random_enemy
 
 execute if entity @s[scores={ArenaType=3}] run teleport @s -1321 45 -123 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=0}] -1369 45 -186 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=1}] -1318 45 -198 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1376,y=50,z=-205,dx=62,dy=4,dz=86,scores={StageIndex=2}] -1375 45 -123 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=39}] -1369 45 -186 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=39}] -1318 45 -198 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=39}] -1375 45 -123 0 0
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned -1369 45 -186 run function medabots_server:stage/create/lagdou_ruins_4/random_neutral
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned -1318 45 -198 run function medabots_server:stage/create/lagdou_ruins_4/random_neutral
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned -1375 45 -123 run function medabots_server:stage/create/lagdou_ruins_4/random_neutral

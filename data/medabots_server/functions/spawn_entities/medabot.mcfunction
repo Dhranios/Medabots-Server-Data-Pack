@@ -3,6 +3,7 @@ summon minecraft:skeleton ~ ~ ~ {Silent:1b,CustomNameVisisble:1b,ArmorItems:[{},
 scoreboard players set @e[tag=new_medabot,limit=1] Killer 0
 scoreboard players set @e[tag=new_medabot,limit=1] Charge 0
 scoreboard players set @e[tag=new_medabot,limit=1] Battle 2
+scoreboard players set @e[tag=new_medabot,limit=1] Money 5
 data modify entity @e[tag=new_medabot,limit=1] Rotation set from entity @s Rotation
 
 # Spawn model parts

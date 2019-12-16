@@ -1,6 +1,6 @@
 # Reset the course data
-execute if entity @s[scores={FlyCourse=0}] run function medabots_server:gamemode/fly_course/reset
 scoreboard players reset @s[scores={FlyCourse=0}] Stage
+execute if entity @s[scores={FlyCourse=0}] run function medabots_server:gamemode/fly_course/reset
 
 # Give the items
 tag @s[tag=fly_course_speed] remove fly_course_speed

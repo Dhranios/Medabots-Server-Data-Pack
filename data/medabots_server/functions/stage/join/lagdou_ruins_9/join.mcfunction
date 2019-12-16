@@ -1,6 +1,6 @@
 tellraw @s {"translate":"medabots_server:message.stage.player.wait","color":"green"}
 scoreboard players set @s StageIndex -1
-execute at @a[scores={StageIndex=-1..,Stage=44,Gamemode=0}] run function medabots_server:stage/join/lagdou_ruins_9/get_next_index
+function medabots_server:stage/join/lagdou_ruins_9/get_next_index
 tag @s remove index_free
 function medabots_server:gamemodes/default/set_stats
 scoreboard players set @s Stage 44

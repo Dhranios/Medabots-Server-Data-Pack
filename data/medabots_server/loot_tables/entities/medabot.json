@@ -1,24 +1,3 @@
 {
-    "type": "minecraft:entity",
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "minecraft:item",
-                    "name": "minecraft:diamond",
-                    "functions": [
-                        {
-                            "function": "minecraft:set_nbt",
-                            "tag": "{CustomModelData:1,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medallar\"}'},medabots_server:{stage_item:1b,id:\"medabots_server:medallar\"}}"
-                        },
-                        {
-                            "function": "minecraft:set_count",
-                            "count": 5
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
+    "type": "minecraft:entity"
 }

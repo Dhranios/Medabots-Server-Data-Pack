@@ -4,7 +4,7 @@ scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={Selec
 scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_mermaid_medaforce"}}}]}] Medaforce -4
 scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_ghost_medaforce"}}}]}] Medaforce -5
 scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_monkey_medaforce"}}}]}] Medaforce -6
-scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_spidar_medaforce"}}}]}] Medaforce -7
+scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_spider_medaforce"}}}]}] Medaforce -7
 scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_question_medaforce"}}}]}] Medaforce -8
 scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_chameleon_medaforce"}}}]}] Medaforce -9
 scoreboard players set @s[scores={Medaforce=2},tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,id:"medabots_server:activate_knight_medaforce"}}}]}] Medaforce -10
@@ -111,6 +111,9 @@ scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={Selec
 scoreboard players set @s[scores={LeftArmArmor=1..},tag=!ineffective_left,nbt={SelectedItemSlot:1,Inventory:[{Slot:1b,tag:{medabots_server:{activated:1b,move:"shooting_trap",part:"left_arm"}}}]}] MedapartType 35
 scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt={SelectedItemSlot:2,Inventory:[{Slot:2b,tag:{medabots_server:{activated:1b,move:"shooting_trap",part:"right_arm"}}}]}] MedapartType 35
 scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"shooting_trap",part:"head"}}}]}] MedapartType 35
+scoreboard players set @s[scores={LeftArmArmor=1..},tag=!ineffective_left,nbt={SelectedItemSlot:1,Inventory:[{Slot:1b,tag:{medabots_server:{activated:1b,move:"melee_trap",part:"left_arm"}}}]}] MedapartType 23
+scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt={SelectedItemSlot:2,Inventory:[{Slot:2b,tag:{medabots_server:{activated:1b,move:"melee_trap",part:"right_arm"}}}]}] MedapartType 23
+scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"melee_trap",part:"head"}}}]}] MedapartType 23
 scoreboard players set @s[scores={LeftArmArmor=1..},tag=!ineffective_left,nbt={SelectedItemSlot:1,Inventory:[{Slot:1b,tag:{medabots_server:{activated:1b,move:"heal",part:"left_arm"}}}]}] MedapartType 16
 scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt={SelectedItemSlot:2,Inventory:[{Slot:2b,tag:{medabots_server:{activated:1b,move:"heal",part:"right_arm"}}}]}] MedapartType 16
 scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"heal",part:"head"}}}]}] MedapartType 16
