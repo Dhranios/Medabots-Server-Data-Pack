@@ -65,9 +65,8 @@ tag @s[scores={DeathTime=101}] remove crushed
 tag @s[scores={DeathTime=101}] remove dying
 tag @s[scores={DeathTime=101}] remove had_death
 tag @s[scores={DeathTime=101}] remove retry
-tag @s[scores={DeathTime=101}] remove enemy_medabot
 tag @s[scores={DeathTime=101}] remove story_battle
-scoreboard players set @s[scores={DeathTime=101}] Battle 0
+execute if entity @s[scores={DeathTime=101}] run function medabots_server:gamemodes/default/reset
 scoreboard players set @s[scores={DeathTime=101,Jukebox=1..}] MusicType 1
 scoreboard players set @s[scores={DeathTime=101,Jukebox=1..,Stage=23..29}] MusicType 22
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={DeathTime=101}] PrevMusicType 0

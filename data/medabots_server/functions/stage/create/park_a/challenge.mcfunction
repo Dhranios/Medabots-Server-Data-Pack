@@ -221,7 +221,7 @@ teleport @s -1807 45 -555 0 0
 bossbar set medabots_server:park_a/time max 8400
 bossbar set medabots_server:park_a/time value 8400
 bossbar set medabots_server:park_a/time players @s
-scoreboard players set @s Battle 1
+scoreboard players set @s State 1
 scoreboard players set @a[scores={Gamemode=0,Stage=19}] Stage 19
 execute as @a[scores={Gamemode=0,Stage=19}] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[scores={Gamemode=0,Stage=19}] MusicType 16

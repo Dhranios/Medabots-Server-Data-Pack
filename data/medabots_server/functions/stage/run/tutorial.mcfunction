@@ -26,9 +26,9 @@ scoreboard players add @s[scores={Dialog=897..1102}] Dialog 1
 tellraw @s[scores={Dialog=898}] {"translate":"medabots_server:dialog.tutorial.12","color":"green"}
 tellraw @s[scores={Dialog=944}] {"translate":"medabots_server:dialog.tutorial.13","color":"green"}
 tellraw @s[scores={Dialog=1102}] {"translate":"medabots_server:dialog.tutorial.14","color":"green"}
-execute if entity @s[scores={Dialog=1102}] run scoreboard players set @e[scores={Stage=0},tag=enemy_medabot] Battle 1
+execute if entity @s[scores={Dialog=1102}] run scoreboard players set @e[scores={Stage=0},tag=enemy_medabot] State 1
 execute unless score @s LegsArmor = @s MaxLegsArmor run scoreboard players add @s[scores={Dialog=1103}] Dialog 1
-execute if entity @s[scores={Dialog=1104}] run scoreboard players set @e[scores={Stage=0},tag=enemy_medabot] Battle 2
+execute if entity @s[scores={Dialog=1104}] run scoreboard players set @e[scores={Stage=0},tag=enemy_medabot] State 2
 execute if entity @s[scores={Dialog=1104}] run scoreboard players set @e[scores={Stage=0},tag=enemy_medabot] Time 950
 execute if entity @s[scores={Dialog=1104}] run teleport @e[tag=enemy_medabot,scores={Stage=0}] -1884 45 -630
 execute if entity @s[scores={Dialog=1104}] run replaceitem entity @e[tag=enemy_medabot,scores={Stage=0}] weapon.mainhand minecraft:air
@@ -49,7 +49,7 @@ execute as @e[x=-1888,y=42,z=-633,dx=31,dy=7,dz=27] unless entity @s[scores={Sta
 execute if entity @s[scores={Dialog=1467}] positioned -1884 45 -630 run tag @e[distance=..0.7,tag=enemy_medabot] add dead
 scoreboard players set @s[scores={Dialog=1467}] MusicType 1
 scoreboard players set @s[scores={Dialog=1467}] Music 0
-scoreboard players set @s[scores={Dialog=1467}] Battle 0
+scoreboard players set @s[scores={Dialog=1467}] State 0
 teleport @s[scores={Dialog=1467}] -286 55 -52.0 -90 0
 scoreboard players set @s[scores={Dialog=1467}] Dialog 0
 scoreboard players reset @s SelfDestruct

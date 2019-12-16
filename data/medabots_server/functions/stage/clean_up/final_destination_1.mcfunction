@@ -2,12 +2,12 @@ execute as @e[x=-2066,y=0,z=-245,dx=51,dy=53,dz=51,type=!minecraft:player] unles
 bossbar set medabots_server:master_hand/1 players
 scoreboard players set @a[scores={Stage=61},tag=medabot,distance=0.1..] Music 0
 scoreboard players set @a[scores={Stage=61},tag=medabot,distance=0.1..] MusicType 1
-scoreboard players set @a[scores={Stage=61},tag=medabot,distance=0.1..] Battle 0
+scoreboard players set @a[scores={Stage=61},tag=medabot,distance=0.1..] State 0
 teleport @a[scores={Stage=61},tag=medabot,distance=0.1..] -2041 43 -196 -180 0
-scoreboard players set @s[scores={Stage=61,Battle=0}] Music 0
-scoreboard players set @s[scores={Stage=61,Battle=0}] MusicType 1
-scoreboard players set @s[scores={Stage=61,Battle=0}] Battle 0
-teleport @s[scores={Stage=61,Battle=0}] -2041 43 -196 -180 0
+scoreboard players set @s[scores={Stage=61,State=0}] Music 0
+scoreboard players set @s[scores={Stage=61,State=0}] MusicType 1
+scoreboard players set @s[scores={Stage=61,State=0}] State 0
+teleport @s[scores={Stage=61,State=0}] -2041 43 -196 -180 0
 tag @e[scores={Stage=61},type=!minecraft:player] add dead
 scoreboard players reset @a[scores={Stage=61}] StageVersion
 scoreboard players reset @a[scores={Stage=61}] Stage

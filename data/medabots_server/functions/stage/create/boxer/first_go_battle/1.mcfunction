@@ -20,11 +20,11 @@ execute positioned -1862 44 -566 run function medabots_server:set_blocks/mirror/
 scoreboard players set @e[x=-1875.5,y=44,z=-570.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1865 44 -572
 effect give @a[scores={StageIndex=1,Gamemode=0,Stage=29}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=1,Gamemode=0,Stage=29}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=1,Gamemode=0,Stage=29}] Battle 2
+scoreboard players set @a[scores={StageIndex=1,Gamemode=0,Stage=29}] State 2
 teleport @a[scores={StageIndex=1,Gamemode=0,Stage=29}] -1862 44 -571
 summon minecraft:area_effect_cloud -1863 44 -572 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","defeat_the_enemy"],Duration:2147483647}
 bossbar set medabots_server:boxer/robattle value 3600

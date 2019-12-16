@@ -21,11 +21,11 @@ execute positioned -1675 45 -530 run function medabots_server:set_blocks/hole/de
 scoreboard players set @e[x=-1680.5,y=45,z=-516.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1681 45 -524
 effect give @a[scores={StageIndex=3,Gamemode=0,Stage=14}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=3,Gamemode=0,Stage=14}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=3,Gamemode=0,Stage=14}] Battle 2
+scoreboard players set @a[scores={StageIndex=3,Gamemode=0,Stage=14}] State 2
 teleport @a[scores={StageIndex=3,Gamemode=0,Stage=14}] -1682 45 -528
 summon minecraft:area_effect_cloud -1679 45 -527 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","open_the_exit_door"],Duration:2147483647}
 bossbar set medabots_server:snowfield_b/robattle value 3600

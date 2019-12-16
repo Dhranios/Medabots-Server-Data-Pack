@@ -161,7 +161,7 @@ teleport @s -1629 45 -127 0 0
 bossbar set medabots_server:rock_a/time value 0
 bossbar set medabots_server:rock_a/time players @s
 tag @s add main
-scoreboard players set @s Battle 1
+scoreboard players set @s State 1
 scoreboard players set @s Stage 2
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 8

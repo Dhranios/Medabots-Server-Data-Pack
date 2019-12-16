@@ -166,7 +166,7 @@ teleport @s -1509 45 -196 0 0
 bossbar set medabots_server:seashore_a/time value 0
 bossbar set medabots_server:seashore_a/time players @s
 tag @s add main
-scoreboard players set @s Battle 1
+scoreboard players set @s State 1
 scoreboard players set @s Stage 4
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 10

@@ -26,7 +26,7 @@ execute positioned -1890 44 -548 run function medabots_server:set_blocks/startin
 teleport @s -1890 44 -548 0 0
 bossbar set medabots_server:boxer/time value 0
 bossbar set medabots_server:boxer/time players @s
-scoreboard players set @s Battle 1
+scoreboard players set @s State 1
 scoreboard players set @a[scores={Gamemode=0,Stage=29}] Stage 29
 execute as @a[scores={Gamemode=0,Stage=29}] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[scores={Gamemode=0,Stage=29}] MusicType 21

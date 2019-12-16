@@ -82,7 +82,7 @@ scoreboard players set @s MedabotMet 0
 scoreboard players set @s Message 0
 scoreboard players set @s Medabot 0
 scoreboard players set @s Death 0
-scoreboard players set @s Battle 0
+scoreboard players set @s State 0
 scoreboard players set @s UsePart 0
 scoreboard players set @s Trading 0
 scoreboard players set @s Time 0

@@ -1,12 +1,12 @@
-execute unless entity @e[scores={Stage=26},tag=hide_normal_time] run bossbar set medabots_server:iceberg_c/time players @s[scores={Battle=1..}]
+execute unless entity @e[scores={Stage=26},tag=hide_normal_time] run bossbar set medabots_server:iceberg_c/time players @s[scores={State=1..}]
 execute unless entity @e[scores={Stage=26},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:iceberg_c/time value
 execute unless entity @e[scores={Stage=26},tag=hide_normal_time] store result bossbar medabots_server:iceberg_c/time value run scoreboard players operation #temp Time += #1 Constants
 execute if entity @e[scores={Stage=26},tag=hide_normal_time] store result score #temp Time run bossbar get medabots_server:iceberg_c/robattle value
-execute if entity @e[scores={Stage=26},tag=hide_normal_time] if entity @e[scores={Stage=26,Medabot=0..,Battle=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:iceberg_c/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
+execute if entity @e[scores={Stage=26},tag=hide_normal_time] if entity @e[scores={Stage=26,Medabot=0..,State=1},tag=enemy_medabot,tag=!dying] store result bossbar medabots_server:iceberg_c/robattle value if score #temp Time matches 1.. run scoreboard players operation #temp Time -= #1 Constants
 execute if entity @e[scores={Stage=26},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1570,y=41,z=-685,dx=60,dy=7,dz=74,tag=mission,type=minecraft:area_effect_cloud] at @s run function medabots_server:stage/mission_time_up
 execute if entity @e[scores={Stage=26},tag=hide_normal_time] if score #temp Time matches 0 as @e[x=-1570,y=41,z=-685,dx=60,dy=7,dz=74,tag=mr_referee,type=minecraft:armor_stand] at @s run function medabots_server:stage/referee_decides
-execute if entity @s[scores={Battle=0},tag=!stage_builder] run function medabots_server:stage/clean_up/iceberg_c
-execute if entity @s[scores={Battle=0},tag=!stage_builder] run function medabots_server:other/death
+execute if entity @s[scores={State=0},tag=!stage_builder] run function medabots_server:stage/clean_up/iceberg_c
+execute if entity @s[scores={State=0},tag=!stage_builder] run function medabots_server:other/death
 scoreboard players reset #temp Time
 execute if entity @s[tag=remove_bossbar] run bossbar set medabots_server:iceberg_c/robattle players
 tag @s[tag=remove_bossbar] remove remove_bossbar

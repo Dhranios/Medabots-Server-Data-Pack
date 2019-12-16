@@ -22,11 +22,11 @@ scoreboard players set @e[x=-1902.5,y=44,z=-571.5,distance=..0.7,tag=door,scores
 scoreboard players set @e[x=-1898.5,y=44,z=-560.5,distance=..0.7,tag=door,scores={PowerNeeded=0..1}] PowerNeeded 2
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1889 44 -565
 effect give @a[scores={StageIndex=7,Gamemode=0,Stage=29}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=7,Gamemode=0,Stage=29}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=7,Gamemode=0,Stage=29}] Battle 2
+scoreboard players set @a[scores={StageIndex=7,Gamemode=0,Stage=29}] State 2
 teleport @a[scores={StageIndex=7,Gamemode=0,Stage=29}] -1890 44 -578
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}

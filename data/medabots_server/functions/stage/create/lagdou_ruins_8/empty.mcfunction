@@ -30,6 +30,6 @@ execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned -1306 44 35 ru
 summon minecraft:armor_stand -1294 39 35 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[-145.0f,0.0f]}
 
 scoreboard players set @a[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62] Stage 43
-scoreboard players set @a[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62] Battle 1
+scoreboard players set @a[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62] State 1
 execute as @a[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @a[x=-1319,y=35,z=-2,dx=59,dy=14,dz=62] MusicType 20

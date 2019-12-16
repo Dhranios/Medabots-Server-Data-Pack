@@ -11,11 +11,11 @@ execute positioned -1850 45 -516 run function medabots_server:set_blocks/action_
 scoreboard players set @e[x=-1842.5,y=45,z=-510.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1848 45 -512
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=16}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=16}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=16}] Battle 2
+scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=16}] State 2
 teleport @a[scores={StageIndex=0,Gamemode=0,Stage=16}] -1853 45 -512
 summon minecraft:area_effect_cloud -1850 45 -510 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","destroy_all_cannons"],Duration:2147483647}
 bossbar set medabots_server:ruins_out_b/robattle value 3600

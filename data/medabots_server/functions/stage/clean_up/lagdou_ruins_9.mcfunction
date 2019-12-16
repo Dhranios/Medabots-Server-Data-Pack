@@ -6,12 +6,12 @@ fill -1261 48 -223 -1313 48 -291 minecraft:wall_torch[facing=west] replace minec
 fill -1314 46 -291 -1261 46 -223 minecraft:air replace minecraft:fire
 scoreboard players set @a[scores={Stage=44},tag=medabot,distance=0.1..] Music 0
 scoreboard players set @a[scores={Stage=44},tag=medabot,distance=0.1..] MusicType 1
-scoreboard players set @a[scores={Stage=44},tag=medabot,distance=0.1..] Battle 0
+scoreboard players set @a[scores={Stage=44},tag=medabot,distance=0.1..] State 0
 teleport @a[scores={Stage=44},tag=medabot,distance=0.1..] -1288 51 -256 -180 0
-scoreboard players set @s[scores={Stage=44,Battle=0}] Music 0
-scoreboard players set @s[scores={Stage=44,Battle=0}] MusicType 1
-scoreboard players set @s[scores={Stage=44,Battle=0}] Battle 0
-teleport @s[scores={Stage=44,Battle=0}] -1288 51 -256 -180 0
+scoreboard players set @s[scores={Stage=44,State=0}] Music 0
+scoreboard players set @s[scores={Stage=44,State=0}] MusicType 1
+scoreboard players set @s[scores={Stage=44,State=0}] State 0
+teleport @s[scores={Stage=44,State=0}] -1288 51 -256 -180 0
 tag @e[scores={Stage=44},type=!minecraft:player] add dead
 scoreboard players reset @a[scores={Stage=44}] StageVersion
 scoreboard players reset @a[scores={Stage=44}] Stage

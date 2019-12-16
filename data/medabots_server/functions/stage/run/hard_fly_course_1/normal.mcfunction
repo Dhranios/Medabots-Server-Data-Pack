@@ -140,13 +140,4 @@ advancement grant @s[scores={RingsTotal=3..},tag=lap_race] only medabots_server:
 advancement grant @s[scores={FlyCourseLapTime=..93,RingsTotal=196},tag=!lap_race] only medabots_server:developer_challenge/hard_fly_course_1_no_detours
 advancement grant @s[scores={FlyCourseLapTime=..93,RingsTotal=3},tag=lap_race] only medabots_server:developer_challenge/hard_fly_course_1_no_detours
 
-# End
-execute if entity @s[scores={FlyCourse=0}] run kill @e[type=minecraft:firework_rocket,distance=..2]
-teleport @s[scores={FlyCourse=0}] -465 90 267 90 0
-teleport @s[scores={FlyCourse=3}] -465 90 267 90 0
-tag @s[scores={FlyCourse=0},tag=training] remove training
-execute unless entity @a[scores={FlyCourse=0..2,Stage=3},tag=racer] if entity @s[scores={FlyCourse=3},tag=racer] run setblock -469 92 268 minecraft:sea_lantern
-execute unless entity @a[scores={FlyCourse=0..2,Stage=3},tag=racer] if entity @s[scores={FlyCourse=3},tag=racer] run data merge block -468 91 268 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/hard_fly_course_1/initiate_race"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}
-scoreboard players set @s[scores={FlyCourse=3},tag=racer] FlyCourse 4
-execute unless entity @a[scores={FlyCourse=0..2,Stage=3},tag=racer] if entity @s[scores={FlyCourse=5},tag=racer] run setblock -469 92 268 minecraft:sea_lantern
-execute unless entity @a[scores={FlyCourse=0..2,Stage=3},tag=racer] if entity @s[scores={FlyCourse=5},tag=racer] run data merge block -468 91 268 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/hard_fly_course_1/initiate_race"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}
+execute if entity @s[scores={State=3..},nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:fly_course_wings"}}}]}] run function medabots_server:stage/leave_stage/hard_fly_course_1

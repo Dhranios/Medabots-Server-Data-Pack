@@ -17,11 +17,11 @@ execute positioned -1605 45 -591 run function medabots_server:set_blocks/acceler
 scoreboard players set @e[x=-1617.5,y=45,z=-588.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1612 45 -592
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=22}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=22}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=22}] Battle 2
+scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=22}] State 2
 teleport @a[scores={StageIndex=0,Gamemode=0,Stage=22}] -1608 45 -592
 summon minecraft:area_effect_cloud -1610 45 -591 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","run_until_the_time_is_up"],Duration:2147483647}
 bossbar set medabots_server:paradise_b/robattle value 3600

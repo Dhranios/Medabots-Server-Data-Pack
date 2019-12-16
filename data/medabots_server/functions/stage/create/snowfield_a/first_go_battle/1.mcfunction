@@ -13,11 +13,11 @@ execute positioned -1658 45 -240 run function medabots_server:spawn_entities/ice
 scoreboard players set @e[x=-1651.5,y=45,z=-228.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1656 45 -233
 effect give @a[scores={StageIndex=1,Gamemode=0,Stage=5}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=1,Gamemode=0,Stage=5}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=1,Gamemode=0,Stage=5}] Battle 2
+scoreboard players set @a[scores={StageIndex=1,Gamemode=0,Stage=5}] State 2
 teleport @a[scores={StageIndex=1,Gamemode=0,Stage=5}] -1660 45 -233
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}

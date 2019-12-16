@@ -5,12 +5,12 @@ bossbar set medabots_server:park_a/robattle players
 bossbar set medabots_server:park_a/time max 72000
 scoreboard players set @a[scores={Stage=19},tag=medabot,distance=0.1..] Music 0
 scoreboard players set @a[scores={Stage=19},tag=medabot,distance=0.1..] MusicType 1
-scoreboard players set @a[scores={Stage=19},tag=medabot,distance=0.1..] Battle 0
+scoreboard players set @a[scores={Stage=19},tag=medabot,distance=0.1..] State 0
 teleport @a[scores={Stage=19},tag=medabot,distance=0.1..] -1809 51 -587 -180 0
-scoreboard players set @s[scores={Stage=19,Battle=0}] Music 0
-scoreboard players set @s[scores={Stage=19,Battle=0}] MusicType 1
-scoreboard players set @s[scores={Stage=19,Battle=0}] Battle 0
-teleport @s[scores={Stage=19,Battle=0}] -1809 51 -587 -180 0
+scoreboard players set @s[scores={Stage=19,State=0}] Music 0
+scoreboard players set @s[scores={Stage=19,State=0}] MusicType 1
+scoreboard players set @s[scores={Stage=19,State=0}] State 0
+teleport @s[scores={Stage=19,State=0}] -1809 51 -587 -180 0
 tag @e[scores={Stage=19},type=!minecraft:player] add dead
 scoreboard players reset @a[scores={Stage=19}] StageVersion
 scoreboard players reset @a[scores={Stage=19}] Stage

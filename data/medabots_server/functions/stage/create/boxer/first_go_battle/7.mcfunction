@@ -3,11 +3,11 @@ execute unless entity @a[scores={StageIndex=7,Gamemode=0,Stage=29}] run summon m
 scoreboard players set @e[x=-1890.5,y=44,z=-557.5,distance=..0.7,tag=door,scores={PowerAmount=0}] PowerAmount 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1890 44 -569
 effect give @a[scores={StageIndex=7,Gamemode=0,Stage=29}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=7,Gamemode=0,Stage=29}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=7,Gamemode=0,Stage=29}] Battle 2
+scoreboard players set @a[scores={StageIndex=7,Gamemode=0,Stage=29}] State 2
 teleport @a[scores={StageIndex=7,Gamemode=0,Stage=29}] -1889 44 -574
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}

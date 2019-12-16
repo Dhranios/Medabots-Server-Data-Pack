@@ -106,5 +106,5 @@ scoreboard players reset @s RightArmPer
 scoreboard players reset @s HeadPer
 scoreboard players reset @s HeadUsesPer
 scoreboard players reset @s Medabot
-scoreboard players reset @s Battle
+scoreboard players reset @s State
 scoreboard players reset @s Gamemode

@@ -18,11 +18,11 @@ execute positioned -1912 44 -570 run function medabots_server:set_blocks/hammer_
 scoreboard players set @e[x=-1903.5,y=44,z=-571.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1906 44 -572
 effect give @a[scores={StageIndex=5,Gamemode=0,Stage=29}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=5,Gamemode=0,Stage=29}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=5,Gamemode=0,Stage=29}] Battle 2
+scoreboard players set @a[scores={StageIndex=5,Gamemode=0,Stage=29}] State 2
 teleport @a[scores={StageIndex=5,Gamemode=0,Stage=29}] -1918 44 -572
 summon minecraft:area_effect_cloud -1916 44 -571 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","defeat_the_enemy"],Duration:2147483647}
 bossbar set medabots_server:boxer/robattle value 3600

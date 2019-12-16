@@ -3,11 +3,11 @@ execute unless entity @a[scores={StageIndex=0,Gamemode=0,Stage=3}] run summon mi
 scoreboard players set @e[x=-1661.5,y=45,z=-123.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1654 45 -127
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=3}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=3}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=3}] Battle 2
+scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=3}] State 2
 teleport @a[scores={StageIndex=0,Gamemode=0,Stage=3}] -1651 45 -126
 summon minecraft:area_effect_cloud -1652 45 -127 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","defeat_the_enemy"],Duration:2147483647}
 bossbar set medabots_server:jungle_a/robattle value 3600

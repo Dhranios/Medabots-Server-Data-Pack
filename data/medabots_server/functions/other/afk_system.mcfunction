@@ -1,6 +1,6 @@
 # Settings options show on un-AFKing
 execute unless entity @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0,UsePart=0}] run tellraw @s[scores={AFKTime=1200..}] {"translate":"medabots_server:settings.click.2","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 2"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.click"}},"extra":[{"text":"\n"},{"translate":"medabots_server:settings.click.3","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 3"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.click"}}},{"text":"\n"},{"translate":"medabots_server:message.pending_tasks","color":"aqua","clickEvent":{"action":"run_command","value":"/trigger TaskCheck set 1"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:message.pending_tasks.click"}}}]}
-execute unless entity @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0,UsePart=0}] unless entity @s[scores={Gamemode=0,Battle=3}] run tellraw @s[scores={AFKTime=1200..,Stage=1..}] {"translate":"medabots_server:message.stage.want_to_leave","color":"green","clickEvent":{"action":"run_command","value":"/trigger LeaveStage set 1"}}
+execute unless entity @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0,UsePart=0}] unless entity @s[scores={Gamemode=0,State=3}] run tellraw @s[scores={AFKTime=1200..,Stage=1..,Gamemode=0}] {"translate":"medabots_server:message.stage.want_to_leave","color":"green","clickEvent":{"action":"run_command","value":"/trigger LeaveStage set 1"}}
 
 # Leave AFK team
 team leave @s[team=AFK,scores={Walk=1..}]
@@ -22,14 +22,14 @@ team leave @s[team=AFK,scores={Drop=1..}]
 team leave @s[team=AFK,scores={Offline=1..}]
 team leave @s[team=AFK,scores={UsePart=1..}]
 team leave @s[team=AFK,scores={Trading=1..}]
-execute unless entity @s[scores={Battle=0..}] run team leave @s[team=AllyMedabot]
-execute unless entity @s[scores={Battle=0..}] run team leave @s[team=EnemyMedabot]
-execute unless entity @s[scores={Battle=0..}] run team leave @s[team=NeutralMedabot]
+execute unless entity @s[scores={State=0..}] run team leave @s[team=AllyMedabot]
+execute unless entity @s[scores={State=0..}] run team leave @s[team=EnemyMedabot]
+execute unless entity @s[scores={State=0..}] run team leave @s[team=NeutralMedabot]
 
 # Join correct team
-team join AllyMedabot @s[team=!AFK,tag=ally_medabot,scores={Battle=1..}]
-team join EnemyMedabot @s[team=!AFK,tag=enemy_medabot,scores={Battle=1..}]
-team join NeutralMedabot @s[team=!AFK,tag=!ally_medabot,tag=!enemy_medabot,scores={Battle=1..}]
+team join AllyMedabot @s[team=!AFK,tag=ally_medabot,scores={State=1..}]
+team join EnemyMedabot @s[team=!AFK,tag=enemy_medabot,scores={State=1..}]
+team join NeutralMedabot @s[team=!AFK,tag=!ally_medabot,tag=!enemy_medabot,tag=medabot,scores={State=1..}]
 team join Moderator @s[team=!AFK,team=!AllyMedabot,team=!EnemyMedabot,team=!NeutralMedabot,scores={Moderator=1}]
 team join MtBattleMaster @s[team=!AFK,team=!AllyMedabot,team=!EnemyMedabot,team=!NeutralMedabot,team=!Moderator,scores={MtBattle=1}]
 team join Donor @s[team=!AFK,team=!AllyMedabot,team=!EnemyMedabot,team=!NeutralMedabot,team=!Moderator,team=!MtBattleMaster,scores={Donor=1}]

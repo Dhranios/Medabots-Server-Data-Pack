@@ -11,7 +11,7 @@ tag @s[scores={Time=0,Dialog=2}] remove left_arm_selected
 tag @s[scores={Time=0,Dialog=2}] remove right_arm_selected
 tag @s[scores={Time=0,Dialog=2}] remove head_selected
 tag @s[scores={Time=0,Dialog=2}] remove medaforce_selected
-execute unless entity @s[scores={Medaforce=1}] if entity @a[distance=..16,scores={Battle=1}] run scoreboard players add @s[scores={Battle=1,Time=0,Dialog=0},tag=!dying] Dialog 1
+execute unless entity @s[scores={Medaforce=1}] if entity @a[distance=..16,scores={State=1}] run scoreboard players add @s[scores={State=1,Time=0,Dialog=0},tag=!dying] Dialog 1
 execute unless entity @s[scores={Medaforce=1}] run scoreboard players add @s[scores={Dialog=1..59}] Dialog 1
 scoreboard players add @s[scores={Dialog=-200..-1}] Dialog 1
 execute if entity @s[scores={Dialog=60,LegsArmor=1..},tag=fly_legs,tag=!no_legs] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","legs"],Duration:1}
@@ -20,7 +20,7 @@ execute if entity @s[scores={Dialog=60,LeftArmArmor=1..}] run summon minecraft:a
 execute if entity @s[scores={Dialog=60,RightArmArmor=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","right"],Duration:1}
 execute if entity @s[scores={Dialog=60,HeadUses=1..}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","head"],Duration:1}
 execute if entity @s[scores={Dialog=60},tag=!blocked_medaforce] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","medaforce"],Duration:1}
-execute if entity @s[scores={Dialog=60,HeadUses=0,LeftArmArmor=..0,RightArmArmor=..0},tag=blocked_medaforce] if entity @a[distance=..5,scores={Battle=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","self_destruct"],Duration:1}
+execute if entity @s[scores={Dialog=60,HeadUses=0,LeftArmArmor=..0,RightArmArmor=..0},tag=blocked_medaforce] if entity @a[distance=..5,scores={State=1}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","self_destruct"],Duration:1}
 execute if entity @s[scores={Dialog=60}] run tag @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_select] add success
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run tag @s add legs_selected
 execute if entity @e[type=minecraft:area_effect_cloud,tag=random_select,tag=success,tag=legs] run scoreboard players set @s[tag=fly_legs] Dialog -200

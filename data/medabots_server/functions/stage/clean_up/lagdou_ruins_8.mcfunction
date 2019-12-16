@@ -21,12 +21,12 @@ fill -1292 36 16 -1287 36 18 minecraft:oak_slab[waterlogged=true,type=bottom]
 fill -1304 36 19 -1293 36 21 minecraft:oak_slab[waterlogged=true,type=bottom]
 scoreboard players set @a[scores={Stage=43},tag=medabot,distance=0.1..] Music 0
 scoreboard players set @a[scores={Stage=43},tag=medabot,distance=0.1..] MusicType 1
-scoreboard players set @a[scores={Stage=43},tag=medabot,distance=0.1..] Battle 0
+scoreboard players set @a[scores={Stage=43},tag=medabot,distance=0.1..] State 0
 teleport @a[scores={Stage=43},tag=medabot,distance=0.1..] -1290 49 29 -180 0
-scoreboard players set @s[scores={Stage=43,Battle=0}] Music 0
-scoreboard players set @s[scores={Stage=43,Battle=0}] MusicType 1
-scoreboard players set @s[scores={Stage=43,Battle=0}] Battle 0
-teleport @s[scores={Stage=43,Battle=0}] -1290 49 29 -180 0
+scoreboard players set @s[scores={Stage=43,State=0}] Music 0
+scoreboard players set @s[scores={Stage=43,State=0}] MusicType 1
+scoreboard players set @s[scores={Stage=43,State=0}] State 0
+teleport @s[scores={Stage=43,State=0}] -1290 49 29 -180 0
 tag @e[scores={Stage=43},type=!minecraft:player] add dead
 scoreboard players reset @a[scores={Stage=43}] StageVersion
 scoreboard players reset @a[scores={Stage=43}] Stage

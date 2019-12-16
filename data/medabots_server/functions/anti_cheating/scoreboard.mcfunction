@@ -14,7 +14,7 @@ scoreboard objectives add ArenaType dummy
 scoreboard objectives add ArrowID dummy
 scoreboard objectives add Attack minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add AuxiliaryTime dummy
-scoreboard objectives add Battle dummy
+scoreboard objectives add State dummy
 scoreboard objectives add BattlingMedabots dummy
 scoreboard objectives add Boat minecraft.custom:minecraft.boat_one_cm
 scoreboard objectives add BugTime dummy
@@ -81,6 +81,7 @@ scoreboard objectives add JukeboxSetting trigger
 scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer dummy
 scoreboard objectives add KillStreak dummy
+scoreboard objectives add Laps dummy
 scoreboard objectives add LastHealth dummy
 scoreboard objectives add LastPlaceTime dummy
 scoreboard objectives add LeaveStage trigger
@@ -128,6 +129,7 @@ scoreboard objectives add OtherZ dummy
 scoreboard objectives add OverheatingFly dummy
 scoreboard objectives add OverheatingMedal dummy
 scoreboard objectives add ParalyzeTime dummy
+scoreboard objectives add PayedFee dummy
 scoreboard objectives add PerfectGuardTime dummy
 scoreboard objectives add Pig minecraft.custom:minecraft.pig_one_cm
 scoreboard objectives add PosX dummy
@@ -198,6 +200,7 @@ scoreboard players set #1 Constants 1
 scoreboard players set #2 Constants 2
 scoreboard players set #4 Constants 4
 scoreboard players set #5 Constants 5
+scoreboard players set #9 Constants 9
 scoreboard players set #10 Constants 10
 scoreboard players set #20 Constants 20
 scoreboard players set #40 Constants 40

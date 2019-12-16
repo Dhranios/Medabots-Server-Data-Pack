@@ -23,11 +23,11 @@ execute positioned -1878 45 -294 run function medabots_server:set_blocks/spring_
 scoreboard players set @e[x=-1873.5,y=45,z=-301.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1874 45 -301
 effect give @a[scores={StageIndex=5,Gamemode=0,Stage=53}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=5,Gamemode=0,Stage=53}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=5,Gamemode=0,Stage=53}] Battle 2
+scoreboard players set @a[scores={StageIndex=5,Gamemode=0,Stage=53}] State 2
 teleport @a[scores={StageIndex=5,Gamemode=0,Stage=53}] -1825 45 -322
 summon minecraft:area_effect_cloud -1875 45 -299 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","open_the_exit_door"],Duration:2147483647}
 bossbar set medabots_server:rock_e/robattle value 3600

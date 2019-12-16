@@ -1,7 +1,7 @@
-execute positioned ~-4 ~3 ~-4 run tag @a[scores={Battle=1},dx=8,dy=4,dz=8] add building_player
+execute positioned ~-4 ~3 ~-4 run tag @a[scores={State=1},dx=8,dy=4,dz=8] add building_player
 effect give @a[tag=building_player] minecraft:night_vision 2 0 true
 effect give @a[tag=building_player] minecraft:blindness 2 0 true
-scoreboard players set @a[tag=building_player] Battle 2
+scoreboard players set @a[tag=building_player] State 2
 tag @a[tag=building_player] add add_bossbar
 
 execute positioned ~ ~3 ~ run tag @e[distance=..0.7,tag=door,type=minecraft:area_effect_cloud] add dead

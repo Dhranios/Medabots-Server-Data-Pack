@@ -9,11 +9,11 @@ execute positioned -1703 44 -203 run function medabots_server:set_blocks/pot/6_m
 scoreboard players set @e[x=-1709.5,y=44,z=-208.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1707 44 -208
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=6}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=6}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=6}] Battle 2
+scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=6}] State 2
 teleport @a[scores={StageIndex=0,Gamemode=0,Stage=6}] -1702 44 -207
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}

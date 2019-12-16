@@ -7,11 +7,11 @@ execute positioned -1788 44 -411 run function medabots_server:set_blocks/whirlpo
 scoreboard players set @e[x=-1772.5,y=44,z=-390.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1766 44 -398
 effect give @a[scores={StageIndex=2,Gamemode=0,Stage=15}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=2,Gamemode=0,Stage=15}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=2,Gamemode=0,Stage=15}] Battle 2
+scoreboard players set @a[scores={StageIndex=2,Gamemode=0,Stage=15}] State 2
 teleport @a[scores={StageIndex=2,Gamemode=0,Stage=15}] -1767 44 -402
 summon minecraft:area_effect_cloud -1765 44 -400 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","defeat_all_guards"],Duration:2147483647}
 bossbar set medabots_server:iceberg_b/robattle value 3600

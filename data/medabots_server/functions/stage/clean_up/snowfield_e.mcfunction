@@ -3,12 +3,12 @@ bossbar set medabots_server:snowfield_e/time players
 bossbar set medabots_server:snowfield_e/robattle players
 scoreboard players set @a[scores={Stage=56},tag=medabot,distance=0.1..] Music 0
 scoreboard players set @a[scores={Stage=56},tag=medabot,distance=0.1..] MusicType 1
-scoreboard players set @a[scores={Stage=56},tag=medabot,distance=0.1..] Battle 0
+scoreboard players set @a[scores={Stage=56},tag=medabot,distance=0.1..] State 0
 teleport @a[scores={Stage=56},tag=medabot,distance=0.1..] -1866 51 -399 -180 0
-scoreboard players set @s[scores={Stage=56,Battle=0}] Music 0
-scoreboard players set @s[scores={Stage=56,Battle=0}] MusicType 1
-scoreboard players set @s[scores={Stage=56,Battle=0}] Battle 0
-teleport @s[scores={Stage=56,Battle=0}] -1866 51 -399 -180 0
+scoreboard players set @s[scores={Stage=56,State=0}] Music 0
+scoreboard players set @s[scores={Stage=56,State=0}] MusicType 1
+scoreboard players set @s[scores={Stage=56,State=0}] State 0
+teleport @s[scores={Stage=56,State=0}] -1866 51 -399 -180 0
 tag @e[scores={Stage=56},type=!minecraft:player] add dead
 scoreboard players reset @a[scores={Stage=56}] StageVersion
 scoreboard players reset @a[scores={Stage=56}] Stage

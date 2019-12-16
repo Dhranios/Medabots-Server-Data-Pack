@@ -32,4 +32,4 @@ summon minecraft:armor_stand -2041 43 -223 {Invisible:1b,Marker:1b,Small:1b,Cust
 scoreboard players set @a[scores={Gamemode=0,Stage=61}] Stage 61
 scoreboard players set @a[scores={Gamemode=0,Stage=61}] MusicType 51
 execute as @a[scores={Gamemode=0,Stage=61}] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-scoreboard players set @a[scores={Gamemode=0,Stage=61}] Battle 1
+scoreboard players set @a[scores={Gamemode=0,Stage=61}] State 1

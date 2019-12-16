@@ -11,11 +11,11 @@ execute positioned -1822 44 -430 run function medabots_server:spawn_entities/ice
 scoreboard players set @e[x=-1808.5,y=44,z=-423.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1816 44 -433
 effect give @a[scores={StageIndex=1,Gamemode=0,Stage=15}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=1,Gamemode=0,Stage=15}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=1,Gamemode=0,Stage=15}] Battle 2
+scoreboard players set @a[scores={StageIndex=1,Gamemode=0,Stage=15}] State 2
 teleport @a[scores={StageIndex=1,Gamemode=0,Stage=15}] -1820 44 -433
 summon minecraft:area_effect_cloud -1817 44 -432 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","destroy_all_cannons"],Duration:2147483647}
 bossbar set medabots_server:iceberg_b/robattle value 3600

@@ -46,13 +46,8 @@ execute if entity @s[x=-162,y=112,z=-123,dx=3,dy=3,dz=0,scores={Rings=19},y_rota
 advancement grant @s[scores={RingsTotal=58..},tag=!lap_race] only medabots_server:stages/wave_1/medium_fly_course_1
 advancement grant @s[scores={RingsTotal=3..},tag=lap_race] only medabots_server:stages/wave_1/medium_fly_course_1
 
-# End
-execute if entity @s[scores={FlyCourse=0}] run kill @e[type=minecraft:firework_rocket,distance=..2]
-teleport @s[scores={FlyCourse=0}] -86 120 -78 90 0
-teleport @s[scores={FlyCourse=3}] -86 120 -78 90 0
-tag @s[scores={FlyCourse=0},tag=training] remove training
-execute unless entity @a[scores={FlyCourse=0..2,Stage=2},tag=racer] if entity @s[scores={FlyCourse=3},tag=racer] run setblock -90 122 -77 minecraft:sea_lantern
-execute unless entity @a[scores={FlyCourse=0..2,Stage=2},tag=racer] if entity @s[scores={FlyCourse=3},tag=racer] run data merge block -89 121 -77 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/medium_fly_course_1/initiate_race"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}
-scoreboard players set @s[scores={FlyCourse=3},tag=racer] FlyCourse 4
-execute unless entity @a[scores={FlyCourse=0..2,Stage=2},tag=racer] if entity @s[scores={FlyCourse=5},tag=racer] run setblock -90 122 -77 minecraft:sea_lantern
-execute unless entity @a[scores={FlyCourse=0..2,Stage=2},tag=racer] if entity @s[scores={FlyCourse=5},tag=racer] run data merge block -89 121 -77 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/medium_fly_course_1/initiate_race"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}
+execute if entity @s[scores={State=3..},nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:fly_course_wings"}}}]}] run function medabots_server:stage/leave_stage/medium_fly_course_1
+
+execute unless entity @a[scores={State=0..2,Stage=2,StageVersion=2}] run setblock -90 122 -77 minecraft:sea_lantern
+execute unless entity @a[scores={State=0..2,Stage=2,StageVersion=2}] run data merge block -89 121 -77 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/medium_fly_course_1/initiate_race"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}
+execute unless entity @a[scores={State=0..2,Stage=2,StageVersion=2}] unless entity @a[scores={State=3,Stage=2,StageVersion=2},tag=calculate_results] run tag @s add calculate_results

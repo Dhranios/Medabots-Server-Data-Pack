@@ -21,11 +21,11 @@ execute positioned -1780 44 -783 run function medabots_server:set_blocks/glass
 scoreboard players set @e[x=-1777.5,y=44,z=-790.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1785 44 -788
 effect give @a[scores={StageIndex=3,Gamemode=0,Stage=34}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=3,Gamemode=0,Stage=34}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=3,Gamemode=0,Stage=34}] Battle 2
+scoreboard players set @a[scores={StageIndex=3,Gamemode=0,Stage=34}] State 2
 teleport @a[scores={StageIndex=3,Gamemode=0,Stage=34}] -1787 44 -788
 summon minecraft:area_effect_cloud -1787 44 -789 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","open_the_exit_door"],Duration:2147483647}
 bossbar set medabots_server:ruins_in_d/robattle value 3600

@@ -26,7 +26,7 @@ replaceitem entity @s[nbt={Inventory:[{Slot:4b,tag:{medabots_server:{id:"medabot
 # Set to in-battle and set the killer score
 tag @s add hostile
 tag @s add medabot
-scoreboard players set @s Battle 3
+scoreboard players set @s State 3
 scoreboard players set @s Gamemode 0
 function medabots_server:other/killer/score
 

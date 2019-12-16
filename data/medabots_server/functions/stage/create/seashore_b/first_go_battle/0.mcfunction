@@ -12,11 +12,11 @@ execute positioned -1760 45 -368 run function medabots_server:set_blocks/bridge
 scoreboard players set @e[x=-1746.5,y=45,z=-353.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1752 44 -360
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=13}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=13}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=13}] Battle 2
+scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=13}] State 2
 teleport @a[scores={StageIndex=0,Gamemode=0,Stage=13}] -1757 44 -359
 summon minecraft:area_effect_cloud -1755 44 -361 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","destroy_all_cannons"],Duration:2147483647}
 bossbar set medabots_server:seashore_b/robattle value 3600

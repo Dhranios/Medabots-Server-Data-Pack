@@ -4,7 +4,7 @@ execute if score #temp Money matches 10 run tellraw @s {"translate":"medabots_se
 scoreboard players reset #temp Money
 
 scoreboard players add @s GamemodeTime 1
-execute if entity @s[scores={GamemodeTime=200}] run scoreboard players set @s Battle 1
+execute if entity @s[scores={GamemodeTime=200}] run scoreboard players set @s State 1
 execute if entity @s[scores={GamemodeTime=201}] run scoreboard players set @s MaxHeadArmor 1
 execute if entity @s[scores={GamemodeTime=201}] run scoreboard players set @s HeadArmor 1
 execute if entity @s[scores={GamemodeTime=201}] run function medabots_server:gamemode/muder_mystery_start

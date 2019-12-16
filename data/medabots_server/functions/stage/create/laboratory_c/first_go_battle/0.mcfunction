@@ -21,11 +21,11 @@ execute positioned -1579 44 -614 run function medabots_server:set_blocks/acceler
 scoreboard players set @e[x=-1585.5,y=44,z=-597.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1586 44 -608
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=28}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=28}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=28}] Battle 2
+scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=28}] State 2
 teleport @a[scores={StageIndex=0,Gamemode=0,Stage=28}] -1585 44 -612
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","1"]}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["referee_marker","2"]}

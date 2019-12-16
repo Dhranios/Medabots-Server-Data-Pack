@@ -64,7 +64,4 @@ execute if entity @s[x=-162,y=112,z=-123,dx=3,dy=3,dz=0,scores={Time=..210}] unl
 # Cleared the stage
 advancement grant @s[scores={RingsTotal=100..}] only medabots_server:stages/wave_1/medium_fly_course_1_challenge
 
-# End
-execute if entity @s[scores={FlyCourse=0}] run kill @e[type=minecraft:firework_rocket,distance=..2]
-teleport @s[scores={FlyCourse=0}] -86 120 -78 90 0
-tag @s[scores={FlyCourse=0},tag=challenge] remove challenge
+execute if entity @s[scores={State=3..},nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:fly_course_wings"}}}]}] run function medabots_server:stage/leave_stage/medium_fly_course_1

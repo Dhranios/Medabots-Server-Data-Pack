@@ -58,13 +58,13 @@ function medabots_server:items/pot_breaker
 tag @s[scores={Time=0}] remove head_selected
 tag @s[scores={Time=0}] remove right_arm_selected
 tag @s[scores={Time=0}] remove left_arm_selected
-execute if entity @s[scores={Time=0,Battle=1,UsePart=1..}] run function medabots_server:items/medapart/activate/player
+execute if entity @s[scores={Time=0,State=1,UsePart=1..}] run function medabots_server:items/medapart/activate/player
 
 # Static flying
-tag @s[scores={Battle=1,UsePart=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] add static_flying 
-tag @s[scores={Battle=1,UsePart=1..},tag=static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] remove static_fly
-tag @s[scores={Battle=1,UsePart=1..},tag=static_flying] add static_fly
-tag @s[scores={Battle=1,UsePart=1..},tag=static_flying] remove static_flying
+tag @s[scores={State=1,UsePart=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] add static_flying 
+tag @s[scores={State=1,UsePart=1..},tag=static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] remove static_fly
+tag @s[scores={State=1,UsePart=1..},tag=static_flying] add static_fly
+tag @s[scores={State=1,UsePart=1..},tag=static_flying] remove static_flying
 
 # Check status effects
 execute if entity @s[tag=!checked_effects,nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}}] run function medabots_server:effects/check

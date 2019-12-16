@@ -3,12 +3,12 @@ bossbar set medabots_server:seashore_c/time players
 bossbar set medabots_server:seashore_c/robattle players
 scoreboard players set @a[scores={Stage=25},tag=medabot,distance=0.1..] Music 0
 scoreboard players set @a[scores={Stage=25},tag=medabot,distance=0.1..] MusicType 22
-scoreboard players set @a[scores={Stage=25},tag=medabot,distance=0.1..] Battle 0
+scoreboard players set @a[scores={Stage=25},tag=medabot,distance=0.1..] State 0
 teleport @a[scores={Stage=25},tag=medabot,distance=0.1..]  -180 0
-scoreboard players set @s[scores={Stage=25,Battle=0}] Music 0
-scoreboard players set @s[scores={Stage=25,Battle=0}] MusicType 22
-scoreboard players set @s[scores={Stage=25,Battle=0}] Battle 0
-teleport @s[scores={Stage=25,Battle=0}] -1540 50 -578 -180 0
+scoreboard players set @s[scores={Stage=25,State=0}] Music 0
+scoreboard players set @s[scores={Stage=25,State=0}] MusicType 22
+scoreboard players set @s[scores={Stage=25,State=0}] State 0
+teleport @s[scores={Stage=25,State=0}] -1540 50 -578 -180 0
 tag @e[scores={Stage=25},type=!minecraft:player] add dead
 scoreboard players reset @a[scores={Stage=25}] StageVersion
 scoreboard players reset @a[scores={Stage=25}] Stage

@@ -18,11 +18,11 @@ execute positioned -1561 44 -474 run function medabots_server:set_blocks/stone
 scoreboard players set @e[x=-1556.5,y=44,z=-462.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
-scoreboard players set @s Battle 2
+scoreboard players set @s State 2
 teleport @s -1557 44 -469
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=23}] minecraft:night_vision 2 0 true
 effect give @a[scores={StageIndex=0,Gamemode=0,Stage=23}] minecraft:blindness 2 0 true
-scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=23}] Battle 2
+scoreboard players set @a[scores={StageIndex=0,Gamemode=0,Stage=23}] State 2
 teleport @a[scores={StageIndex=0,Gamemode=0,Stage=23}] -1557 44 -474
 summon minecraft:area_effect_cloud -1556 44 -473 {CustomName:'{"translate":"medabots_server:entity.mission"}',Tags:["mission","hide_normal_time","destroy_all_cannons"],Duration:2147483647}
 bossbar set medabots_server:grassland_c/robattle value 3600

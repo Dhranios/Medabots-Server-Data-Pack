@@ -10,6 +10,6 @@ scoreboard players set @s AFKTime 0
 tellraw @s[tag=hostile] {"translate":"medabots_server:message.anti_cheating.log","color":"red"}
 execute if entity @s[tag=hostile] run tellraw @a[team=Moderator] {"translate":"medabots_server:message.anti_cheating.log.mod","color":"red","with":[{"selector":"@s"}]}
 scoreboard players add @s[tag=hostile] Warning 1
-execute if entity @s[scores={Battle=3}] run function medabots_server:gamemodes/default/reset
+execute if entity @s[scores={State=3}] run function medabots_server:gamemodes/default/reset
 execute if entity @s[tag=hostile] run function medabots_server:entities/medabot/spawn_model
 
