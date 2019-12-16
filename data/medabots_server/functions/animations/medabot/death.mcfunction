@@ -41,13 +41,13 @@ execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=ally_medabot] run tag @
 execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Stage
 execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Drop
 tag @s[scores={DeathTime=1}] remove me
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1},type=minecraft:player] positioned ~ 3 ~ run function medabots_server:items/lose_medallars
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1},type=!minecraft:player] run loot spawn ~ 3 ~ kill @s
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ run function medabots_server:items/lose_medallars
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run loot spawn ~ 3 ~ loot medabots_server:entities/medabot
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add medabot_loot
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=enemy_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add enemy_loot
 execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=ally_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add ally_loot
-execute if entity @s[y=2,dy=255,scores={DeathTime=1},type=minecraft:player] run function medabots_server:items/lose_medallars
-execute if entity @s[y=2,dy=255,scores={DeathTime=1},type=!minecraft:player] run loot spawn ~ ~ ~ kill @s
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run function medabots_server:items/lose_medallars
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run loot spawn ~ ~ ~ loot medabots_server:entities/medabot
 execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run tag @e[distance=..1,type=minecraft:item] add medabot_loot
 execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=enemy_medabot] run tag @e[distance=..1,type=minecraft:item] add enemy_loot
 execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=ally_medabot] run tag @e[distance=..1,type=minecraft:item] add ally_loot
