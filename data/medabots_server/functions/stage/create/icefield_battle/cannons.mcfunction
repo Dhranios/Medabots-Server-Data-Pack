@@ -16,29 +16,29 @@ execute positioned -1983 45 -619 run function medabots_server:set_blocks/acceler
 execute positioned -1988 45 -625 run function medabots_server:set_blocks/accelerator/west
 
 execute if entity @s[scores={ArenaType=0}] run teleport @s -1998 45 -612 0 0
-execute if entity @s[scores={ArenaType=0}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=0}] -1999 45 -605 0 0
+execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=48}] -1999 45 -605 0 0
 execute if entity @s[scores={ArenaType=0},tag=vs_cpus,tag=!story_battle] positioned -1999 45 -605 run function medabots_server:stage/create/icefield_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=1}] run teleport @s -1998 45 -612 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=0}] -1999 45 -605 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=1}] -1997 45 -604 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=2}] -2001 45 -603 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=48}] -1999 45 -605 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=48}] -1997 45 -604 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=48}] -2001 45 -603 0 0
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1999 45 -605 run function medabots_server:stage/create/icefield_battle/random_enemy
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1997 45 -604 run function medabots_server:stage/create/icefield_battle/random_enemy
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -2001 45 -603 run function medabots_server:stage/create/icefield_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=2}] run teleport @s -1998 45 -612 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=0}] -2000 45 -612 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=1}] -1999 45 -605 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=2}] -1997 45 -605 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=48}] -2000 45 -612 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=48}] -1999 45 -605 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=48}] -1997 45 -605 0 0
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -2000 45 -612 run function medabots_server:stage/create/generic/get_ally
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1999 45 -605 run function medabots_server:stage/create/icefield_battle/random_enemy
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1997 45 -605 run function medabots_server:stage/create/icefield_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=3}] run teleport @s -1998 45 -612 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=0}] -1999 45 -605 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=1}] -2002 45 -609 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-2022,y=51,z=-632,dx=48,dy=4,dz=48,scores={StageIndex=2}] -1995 45 -608 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=48}] -1999 45 -605 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=48}] -2002 45 -609 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=48}] -1995 45 -608 0 0
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1999 45 -605 run function medabots_server:stage/create/icefield_battle/random_neutral
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -2002 45 -609 run function medabots_server:stage/create/icefield_battle/random_neutral
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1995 45 -608 run function medabots_server:stage/create/icefield_battle/random_neutral

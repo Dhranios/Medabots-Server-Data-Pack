@@ -157,12 +157,8 @@ execute positioned -1779 44 -415 run function medabots_server:set_blocks/door/so
 execute positioned -1817 44 -352 run function medabots_server:set_blocks/starting_area
 teleport @s -1817 44 -352 0 0
 bossbar set medabots_server:iceberg_b/time value 0
-bossbar set medabots_server:iceberg_b/time players @a[x=-1817,y=44,z=-352,distance=..1]
-scoreboard players set @a[x=-1817,y=44,z=-352,distance=..1] Battle 1
-scoreboard players set @a[x=-1817,y=44,z=-352,distance=..1] Stage 15
-execute as @a[x=-1817,y=44,z=-352,distance=..1] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-scoreboard players set @a[x=-1817,y=44,z=-352,distance=..1] MusicType 12
-scoreboard players set @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=medabot] Battle 3
-scoreboard players set @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=medabot] Stage 15
-execute as @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=medabot] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-scoreboard players set @a[x=-1824,y=50,z=-438,dx=60,dy=4,dz=90,tag=medabot] MusicType 12
+bossbar set medabots_server:iceberg_b/time players @s
+scoreboard players set @s Battle 1
+scoreboard players set @a[scores={Gamemode=0,Stage=15}] Stage 15
+execute as @a[scores={Gamemode=0,Stage=15}] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
+scoreboard players set @a[scores={Gamemode=0,Stage=15}] MusicType 12

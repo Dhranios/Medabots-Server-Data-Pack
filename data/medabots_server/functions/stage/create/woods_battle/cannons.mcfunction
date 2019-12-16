@@ -18,29 +18,29 @@ execute positioned -1952 45 -596 run function medabots_server:spawn_entities/can
 execute positioned -1945 45 -596 run function medabots_server:spawn_entities/cannon/still/north/delay_2
 
 execute if entity @s[scores={ArenaType=0}] run teleport @s -1943 45 -617 0 0
-execute if entity @s[scores={ArenaType=0}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=0}] -1954 45 -616 0 0
+execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=47}] -1954 45 -616 0 0
 execute if entity @s[scores={ArenaType=0},tag=vs_cpus,tag=!story_battle] positioned -1954 45 -616 run function medabots_server:stage/create/woods_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=1}] run teleport @s -1943 45 -617 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=0}] -1954 45 -616 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=1}] -1955 45 -614 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=2}] -1956 45 -618 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=47}] -1954 45 -616 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=47}] -1955 45 -614 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=47}] -1956 45 -618 0 0
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1954 45 -616 run function medabots_server:stage/create/woods_battle/random_enemy
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1955 45 -614 run function medabots_server:stage/create/woods_battle/random_enemy
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1956 45 -618 run function medabots_server:stage/create/woods_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=2}] run teleport @s -1943 45 -617 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=0}] -1943 45 -615 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=1}] -1954 45 -616 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=2}] -1954 45 -618 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=47}] -1943 45 -615 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=47}] -1954 45 -616 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=47}] -1954 45 -618 0 0
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1943 45 -615 run function medabots_server:stage/create/generic/get_ally
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1954 45 -616 run function medabots_server:stage/create/woods_battle/random_enemy
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1954 45 -618 run function medabots_server:stage/create/woods_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=3}] run teleport @s -1943 45 -617 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=0}] -1954 45 -616 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=1}] -1948 45 -611 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[x=-1972,y=51,z=-640,dx=48,dy=4,dz=48,scores={StageIndex=2}] -1949 45 -622 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=47}] -1954 45 -616 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=47}] -1948 45 -611 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=47}] -1949 45 -622 0 0
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1954 45 -616 run function medabots_server:stage/create/woods_battle/random_neutral
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1948 45 -611 run function medabots_server:stage/create/woods_battle/random_neutral
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1949 45 -622 run function medabots_server:stage/create/woods_battle/random_neutral

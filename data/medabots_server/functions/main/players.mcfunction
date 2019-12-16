@@ -1,4 +1,10 @@
-# Re-give items seen by advancements
+# Verify resource pack
+execute if entity @s[scores={Offline=1..}] run function medabots_server:settings/resource_pack_verification/ask
+execute unless entity @s[scores={Verified=0..}] run function medabots_server:settings/resource_pack_verification/ask
+execute if entity @s[scores={Verified=1}] run function medabots_server:settings/resource_pack_verification/waiting
+execute if entity @s[scores={Verified=2}] run function medabots_server:settings/resource_pack_verification/verified
+
+# Re-give new items so they are seen by advancements
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar_cent",stage_item:0b}}}]}] run function medabots_server:items/put_medallar_cents_on_bank
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run function medabots_server:items/give_obtained_item
 
@@ -57,12 +63,6 @@ function medabots_server:effects/recharge
 
 # Loop music
 function medabots_server:other/music
-
-# Verify resource pack
-execute if entity @s[scores={Offline=1..}] run function medabots_server:settings/resource_pack_verification/ask
-execute unless entity @s[scores={Verified=0..}] run function medabots_server:settings/resource_pack_verification/ask
-execute if entity @s[scores={Verified=1}] run function medabots_server:settings/resource_pack_verification/waiting
-execute if entity @s[scores={Verified=2}] run function medabots_server:settings/resource_pack_verification/verified
 
 # Upgrade path, not used yet as the server is still in development
 #execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{version:1}}}]}] run function medabots_server:update/upgrade_path/1
