@@ -4,10 +4,6 @@ execute unless entity @s[scores={Verified=0..}] run function medabots_server:set
 execute if entity @s[scores={Verified=1}] run function medabots_server:settings/resource_pack_verification/waiting
 execute if entity @s[scores={Verified=2}] run function medabots_server:settings/resource_pack_verification/verified
 
-# Re-give new items so they are seen by advancements
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar_cent",stage_item:0b}}}]}] run function medabots_server:items/put_medallar_cents_on_bank
-execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:0b}}}]}] run function medabots_server:items/give_obtained_item
-
 # Tutorial
 execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/try/tutorial
 

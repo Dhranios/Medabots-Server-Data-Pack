@@ -1,6 +1,6 @@
-execute if entity @e[tag=this_medabot,tag=drowned,limit=1] run tag @s add drowned
-execute if entity @e[tag=this_medabot,tag=crushed,limit=1] run tag @s add crushed
-execute if entity @e[tag=this_medabot,tag=!drowned,tag=!crushed,limit=1] run tag @s add normal_death
+execute if entity @e[tag=this_medabot,tag=drowned,limit=1] run tag @s[tag=!not_yet] add drowned
+execute if entity @e[tag=this_medabot,tag=crushed,limit=1] run tag @s[tag=!not_yet] add crushed
+execute if entity @e[tag=this_medabot,tag=!drowned,tag=!crushed,limit=1] run tag @s[tag=!not_yet] add normal_death
 execute if entity @e[tag=this_medabot,tag=dying,limit=1] run tag @s[tag=!not_yet] add dying
 execute if entity @s[tag=legs,tag=!dying] run function medabots_server:animations/medabot/split_legs
 execute if entity @s[tag=hips,tag=!dying] run function medabots_server:animations/medabot/hips

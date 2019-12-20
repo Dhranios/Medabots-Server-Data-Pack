@@ -66,3 +66,4 @@ execute if entity @s[scores={Stage=64}] run function medabots_server:stage/leave
 execute if entity @s[scores={Stage=65}] run function medabots_server:stage/leave_selection/subspace_1
 execute if entity @s[scores={Stage=66}] run function medabots_server:stage/leave_selection/subspace_2
 execute if entity @s[scores={Stage=67}] run function medabots_server:stage/leave_selection/subspace_3
+execute if entity @s[scores={Stage=68}] run function medabots_server:stage/leave_selection/arena

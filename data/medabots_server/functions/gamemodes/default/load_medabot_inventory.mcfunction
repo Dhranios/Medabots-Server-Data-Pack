@@ -20,6 +20,7 @@ data modify entity @s Inventory[{Slot:2b}].tag merge from entity @e[tag=tinpet,l
 data modify entity @s Inventory[{Slot:3b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.head.tag
 data modify entity @s Inventory[{Slot:4b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.medal.tag
 replaceitem entity @s hotbar.8 minecraft:diamond_axe{CustomModelData:1,Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker.description"}']},AttributeModifiers:[],HideFlags:62,CanDestroy:["minecraft:chest"],medabots_server:{id:"medabots_server:pot_breaker"}}
+replaceitem entity @s inventory.8 minecraft:chest{CustomModelData:1,Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.loot_container"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.loot_container.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.loot_container.items","with":["0"]}']},AttributeModifiers:[],HideFlags:62,medabots_server:{id:"medabots_server:loot_container",items:[]}}
 
 tag @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] add fly_legs
 tag @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{move:"float"}}}]}] add float_legs

@@ -3,7 +3,7 @@ execute at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run
 
 # Look left/right
 execute store result entity @s Rotation[0] float 0.01 run data get entity @e[type=minecraft:ghast,tag=this_master_hand,limit=1] Rotation[0] 100
-execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}
+execute unless data entity @s Pose.Head[0] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=!appeared,limit=1] run tag @s add appearing
 execute if entity @s[tag=appearing] run function medabots_server:animations/master_hand/appearing/ring_finger
@@ -13,7 +13,7 @@ tag @s[tag=!appearing] remove was_appearing
 tag @s[tag=appearing] add was_appearing
 tag @s[tag=appearing] remove appearing
 
-execute if entity @s[tag=!was_appearing,tag=!fast_idle,tag=!grab,tag=!grab_success,tag=!ram,tag=!punch,tag=!drill,tag=!walk_start,tag=!walk,tag=!walk_stop,tag=!walk_kick,tag=!slap,tag=!crush,tag=!poke] run function medabots_server:animations/master_hand/idle/ring_finger
+execute if entity @s[tag=!was_appearing,tag=!fast_idle,tag=!grab,tag=!grab_success,tag=!ram,tag=!punch,tag=!drill,tag=!walk_start,tag=!walk,tag=!walk_stop,tag=!walk_kick,tag=!slap,tag=!crush,tag=!poke,tag=!gun_1,tag=!gun_3] run function medabots_server:animations/master_hand/idle/ring_finger
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fast_idle,limit=1] run scoreboard players set @s[tag=!fast_idle] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fast_idle,limit=1] run tag @s add fast_idle
@@ -62,3 +62,11 @@ execute if entity @s[tag=crush] run function medabots_server:animations/master_h
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run scoreboard players set @s[tag=!poke] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run tag @s add poke
 execute if entity @s[tag=poke] run function medabots_server:animations/master_hand/poke/ring_finger
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_1,limit=1] run scoreboard players set @s[tag=!gun_1] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_1,limit=1] run tag @s add gun_1
+execute if entity @s[tag=gun_1] run function medabots_server:animations/master_hand/gun_1/ring_finger
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_3,limit=1] run scoreboard players set @s[tag=!gun_3] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_3,limit=1] run tag @s add gun_3
+execute if entity @s[tag=gun_3] run function medabots_server:animations/master_hand/gun_3/ring_finger

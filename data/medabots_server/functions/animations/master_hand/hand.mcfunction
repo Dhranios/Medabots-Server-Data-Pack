@@ -3,7 +3,7 @@ execute at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run
 
 # Look left/right
 execute store result entity @s Rotation[0] float 0.01 run data get entity @e[type=minecraft:ghast,tag=this_master_hand,limit=1] Rotation[0] 100
-execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}
+execute unless data entity @s Pose.Head[0] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run scoreboard players set @s[tag=!grab] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run tag @s add grab
@@ -44,3 +44,11 @@ execute if entity @s[tag=crush] run function medabots_server:animations/master_h
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run scoreboard players set @s[tag=!poke] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run tag @s add poke
 execute if entity @s[tag=poke] run function medabots_server:animations/master_hand/poke/hand
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_1,limit=1] run scoreboard players set @s[tag=!gun_1] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_1,limit=1] run tag @s add gun_1
+execute if entity @s[tag=gun_1] run function medabots_server:animations/master_hand/gun_1/hand
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_3,limit=1] run scoreboard players set @s[tag=!gun_3] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_3,limit=1] run tag @s add gun_3
+execute if entity @s[tag=gun_3] run function medabots_server:animations/master_hand/gun_3/hand

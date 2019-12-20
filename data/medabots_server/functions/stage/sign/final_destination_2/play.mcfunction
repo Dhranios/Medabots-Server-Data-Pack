@@ -2,9 +2,9 @@ execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:it
 teleport @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] -1985 12 -251 90 0
 execute if entity @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] run data merge block -1959 44 -197 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/final_destination_2/enter"}}'}
 execute if entity @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] run setblock -1957 45 -197 minecraft:red_wool
-execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure] Music 0
-scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure] MusicType 4
-scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure] Stage 62
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] Music 0
+scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] MusicType 4
+scoreboard players set @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] Stage 62
 execute if entity @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/arena_settings
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
 execute unless entity @s[scores={Dialog=0},advancements={medabots_server:special_items/passes/smash_melee=true}] run tellraw @s {"translate":"medabots_server:message.stage.requires.not_matching","with":[{"translate":"medabots_server:message.stage.requirements.final_destination_2.0"}]}

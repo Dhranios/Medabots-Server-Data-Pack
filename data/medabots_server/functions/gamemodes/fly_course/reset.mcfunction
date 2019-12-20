@@ -7,6 +7,7 @@ scoreboard players reset @s FlyCourseLapTime
 scoreboard players reset @s PayedFee
 scoreboard players reset @s StageIndex
 scoreboard players reset @s LastPlaceTime
+scoreboard players set @s FlyTime 0
 scoreboard players set @s Time 0
 scoreboard players set @s MusicType 1
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0

@@ -66,6 +66,7 @@ execute if entity @s[scores={Stage=64}] unless entity @e[scores={Stage=64,State=
 execute if entity @s[scores={Stage=65}] unless entity @e[scores={Stage=65,State=1..2},tag=ally_medabot] run function medabots_server:stage/leave_stage/subspace_1
 execute if entity @s[scores={Stage=66}] unless entity @e[scores={Stage=66,State=1..2},tag=ally_medabot] run function medabots_server:stage/leave_stage/subspace_2
 execute if entity @s[scores={Stage=67}] unless entity @e[scores={Stage=67,State=1..2},tag=ally_medabot] run function medabots_server:stage/leave_stage/subspace_3
+execute if entity @s[scores={Stage=68}] unless entity @e[scores={Stage=68,State=1..2},tag=ally_medabot] run function medabots_server:stage/leave_stage/arena
 
 # Is in combat, so kill instead
 execute if entity @s[scores={State=1..2}] run function medabots_server:other/kill

@@ -56,19 +56,9 @@ tag @s remove spawned_pass
 effect give @s minecraft:health_boost 1000000 19 true
 effect give @s minecraft:instant_health 1 19 true
 
-# Re-give items who have stage_item:1b
+# Re-give items
 clear @s minecraft:diamond_pickaxe{medabots_server:{id:"medabots_server:help"}}
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:purple_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/purple_plant
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:blue_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/blue_plant
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:light_blue_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/light_blue_plant
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:green_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/green_plant
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:yellow_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/yellow_plant
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:orange_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/orange_plant
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:red_plant",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/red_plant
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:gold_pass",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/gold_pass
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",stage_item:1b}}}]}] run function medabots_server:items/obtained_special_item/stage_build_item
-execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar",stage_item:1b}}}]}] run function medabots_server:items/put_medallars_on_bank
-execute at @s[nbt={Inventory:[{tag:{medabots_server:{stage_item:1b}}}]}] run function medabots_server:items/give_obtained_item
+execute at @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",items:[{}]}}}]}] run function medabots_server:items/give_obtained_item
 
 # Restore inventory
 function medabots_server:gamemodes/default/load_old_inventory

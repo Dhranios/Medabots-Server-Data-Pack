@@ -47,12 +47,6 @@ effect give @s[scores={State=2..3}] minecraft:resistance 9 1 true
 scoreboard players set @s[scores={Time=..-1}] Time 0
 execute unless entity @s[scores={Time=-100..}] run scoreboard players set @s Time 0
 
-# Part breaks
-execute if entity @s[scores={LegsArmor=0}] run function medabots_server:items/break_medapart
-execute if entity @s[scores={LeftArmArmor=0}] run function medabots_server:items/break_medapart
-execute if entity @s[scores={RightArmArmor=0}] run function medabots_server:items/break_medapart
-execute if entity @s[scores={HeadArmor=0}] run function medabots_server:items/break_medapart
-
 # Global timer for the medaforce
 scoreboard players add @s MedaforceTimer 1
 scoreboard players set @s[scores={MedaforceTimer=6..}] MedaforceTimer 0

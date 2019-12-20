@@ -1,3 +1,9 @@
+# Part breaks
+execute if entity @s[scores={LegsArmor=0},tag=hostile] run function medabots_server:items/break_medapart
+execute if entity @s[scores={LeftArmArmor=0},tag=hostile] run function medabots_server:items/break_medapart
+execute if entity @s[scores={RightArmArmor=0},tag=hostile] run function medabots_server:items/break_medapart
+execute if entity @s[scores={HeadArmor=0},tag=hostile] run function medabots_server:items/break_medapart
+
 # Death animation
 execute if entity @s[tag=dying] run function medabots_server:animations/medabot/death
 

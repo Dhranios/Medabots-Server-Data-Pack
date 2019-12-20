@@ -59,7 +59,7 @@ execute if entity @s[scores={BuyMedapart=58},advancements={medabots_server:get_a
 execute if entity @s[scores={BuyMedapart=59},advancements={medabots_server:get_all_medabots/wave_1/bluesdog={right_arm=true}}] run function medabots_server:give_items/medaparts/bluesdog/aim_rifle
 execute if entity @s[scores={BuyMedapart=60},advancements={medabots_server:get_all_medabots/wave_1/bluesdog={head=true}}] run function medabots_server:give_items/medaparts/bluesdog/headcannon
 execute if entity @s[scores={BuyMedapart=61},advancements={medabots_server:get_all_medabots/wave_1/boarbooster={legs=true}}] run function medabots_server:give_items/medaparts/boarbooster/mashglow
-execute if entity @s[scores={BuyMedapart=62},advancements={medabots_server:get_all_medabots/wave_1/boarbooster={left_arm=true}}] run function medabots_server:give_items/medaparts/boarbooster/wollybond
+execute if entity @s[scores={BuyMedapart=62},advancements={medabots_server:get_all_medabots/wave_1/boarbooster={left_arm=true}}] run function medabots_server:give_items/medaparts/boarbooster/woolybond
 execute if entity @s[scores={BuyMedapart=63},advancements={medabots_server:get_all_medabots/wave_1/boarbooster={right_arm=true}}] run function medabots_server:give_items/medaparts/boarbooster/drillrill
 execute if entity @s[scores={BuyMedapart=64},advancements={medabots_server:get_all_medabots/wave_1/boarbooster={head=true}}] run function medabots_server:give_items/medaparts/boarbooster/boartusk
 execute if entity @s[scores={BuyMedapart=65},advancements={medabots_server:get_all_medabots/wave_1/crimson_king={legs=true}}] run function medabots_server:give_items/medaparts/crimson_king/wannafly

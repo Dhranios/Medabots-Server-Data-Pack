@@ -1,2 +1,2 @@
 function medabots_server:set_blocks/pot
-replaceitem block ~ ~ ~ container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:1,HideFlags:4,CustomModelData:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:yellow_plant",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.yellow_plant"}'}}
+replaceitem block ~ ~ ~ container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:1,HideFlags:4,CustomModelData:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:plant",type:"yellow",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.yellow_plant"}'}}

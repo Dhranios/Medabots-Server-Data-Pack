@@ -1,5 +1,5 @@
 # Penalty for dying, losing all items you got in that stage
-clear @s #minecraft:all{medabots_server:{stage_item:1b}}
+clear @s minecraft:chest{medabots_server:{id:"medabots_server:loot_container"}}
 
 # Remove kill streak
 scoreboard players set @s KillStreak 0

@@ -195,3 +195,5 @@ execute if entity @s[scores={Stage=64,StageVersion=2}] run function medabots_ser
 execute if entity @s[scores={Stage=65,StageVersion=1}] run function medabots_server:stage/run/subspace_1/empty
 execute if entity @s[scores={Stage=66,StageVersion=1}] run function medabots_server:stage/run/subspace_2/empty
 execute if entity @s[scores={Stage=67,StageVersion=1}] run function medabots_server:stage/run/subspace_3/empty
+execute if entity @s[scores={Stage=68}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/arena/players
+execute if entity @s[scores={Stage=68,StageVersion=1}] run function medabots_server:stage/run/arena/bosses

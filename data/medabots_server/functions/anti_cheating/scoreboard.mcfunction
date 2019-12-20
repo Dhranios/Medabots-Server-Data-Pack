@@ -41,7 +41,6 @@ scoreboard objectives add EditingTinpet dummy
 scoreboard objectives add EffectTimer dummy
 scoreboard objectives add Fall minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add Fly dummy
-scoreboard objectives add FlyCourse dummy
 scoreboard objectives add FlyCourseFee dummy
 scoreboard objectives add FlyCourseLapTime dummy
 scoreboard objectives add FlyCourseLaps dummy

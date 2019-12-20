@@ -4,5 +4,4 @@ data modify entity @e[type=minecraft:item,limit=1,tag=replacing_item] Owner.M se
 data modify entity @e[type=minecraft:item,limit=1,tag=replacing_item] Owner.L set from entity @s UUIDLeast
 replaceitem entity @s inventory.14 minecraft:air
 data remove entity @e[type=minecraft:item,limit=1,tag=replacing_item,nbt={Item:{tag:{medabots_server:{stage_item:0b}}}}] Item.tag.medabots_server.stage_item
-data merge entity @e[type=minecraft:item,limit=1,tag=replacing_item,nbt={Item:{tag:{medabots_server:{stage_item:1b}}}}] {Item:{tag:{medabots_server:{stage_item:0b}}}}
 tag @e[type=minecraft:item,limit=1,tag=replacing_item] remove replacing_item

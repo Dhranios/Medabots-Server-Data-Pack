@@ -38,9 +38,9 @@ execute if entity @s[scores={Medabot=12,Message=2}] run tellraw @a {"translate":
 execute if entity @s[scores={Medabot=13,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.fly_falcon.kill.1"}]}
 execute if entity @s[scores={Medabot=13,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.fly_falcon.kill.2"}]}
 execute if entity @s[scores={Medabot=13,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.fly_falcon.kill.3"}]}
-execute if entity @s[scores={Medabot=14,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.blacksname.kill.1"}]}
-execute if entity @s[scores={Medabot=14,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.blacksname.kill.2"}]}
-execute if entity @s[scores={Medabot=14,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.blacksname.kill.3"}]}
+execute if entity @s[scores={Medabot=14,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.blackstag.kill.1"}]}
+execute if entity @s[scores={Medabot=14,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.blackstag.kill.2"}]}
+execute if entity @s[scores={Medabot=14,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.blackstag.kill.3"}]}
 execute if entity @s[scores={Medabot=15,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.arcbeetle.kill.1"}]}
 execute if entity @s[scores={Medabot=15,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.arcbeetle.kill.2"}]}
 execute if entity @s[scores={Medabot=15,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.arcbeetle.kill.3"}]}
@@ -161,9 +161,9 @@ execute if entity @s[scores={Medabot=53,Message=2}] run tellraw @a {"translate":
 execute if entity @s[scores={Medabot=54,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.metal_general.kill.1"}]}
 execute if entity @s[scores={Medabot=54,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.metal_general.kill.2"}]}
 execute if entity @s[scores={Medabot=54,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.metal_general.kill.3"}]}
-execute if entity @s[scores={Medabot=55,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.sumilidonad.kill.1"}]}
-execute if entity @s[scores={Medabot=55,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.sumilidonad.kill.2"}]}
-execute if entity @s[scores={Medabot=55,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.sumilidonad.kill.3"}]}
+execute if entity @s[scores={Medabot=55,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.smilidonad.kill.1"}]}
+execute if entity @s[scores={Medabot=55,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.smilidonad.kill.2"}]}
+execute if entity @s[scores={Medabot=55,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.smilidonad.kill.3"}]}
 execute if entity @s[scores={Medabot=56,Message=0}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.warbonnet.kill.1"}]}
 execute if entity @s[scores={Medabot=56,Message=1}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.warbonnet.kill.2"}]}
 execute if entity @s[scores={Medabot=56,Message=2}] run tellraw @a {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.warbonnet.kill.3"}]}
