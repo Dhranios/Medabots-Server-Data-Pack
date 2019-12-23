@@ -20,6 +20,7 @@ execute if block ~ ~-1 ~ minecraft:green_terracotta run tag @s add green_terraco
 execute if block ~ ~-1 ~ minecraft:lime_terracotta run tag @s add lime_terracotta
 execute if block ~ ~-1 ~ minecraft:yellow_terracotta run tag @s add yellow_terracotta
 execute if block ~ ~-1 ~ minecraft:gray_terracotta run tag @s add gray_terracotta
+execute if block ~ ~-1 ~ minecraft:purple_terracotta run tag @s add purple_terracotta
 execute if block ~ ~-1 ~ minecraft:blue_ice run tag @s add blue_ice
 execute if block ~ ~-1 ~ minecraft:polished_granite run tag @s add polished_granite
 execute if block ~ ~-1 ~ minecraft:red_wool run tag @s add red_wool

@@ -1,3 +1,4 @@
+execute at @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:stage_build_item"}}}}] run data remove entity @s Inventory[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore[3]
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"accelerator"}}}}] run function medabots_server:items/obtained_special_item/stage_build_item/accelerator
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"action_floor"}}}}] run function medabots_server:items/obtained_special_item/stage_build_item/action_floor
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:stage_build_item",type:"alarm"}}}}] run function medabots_server:items/obtained_special_item/stage_build_item/alarm

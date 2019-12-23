@@ -20,6 +20,7 @@ execute if entity @s[tag=green_terracotta] run setblock ~ ~-1 ~ minecraft:green_
 execute if entity @s[tag=lime_terracotta] run setblock ~ ~-1 ~ minecraft:lime_terracotta
 execute if entity @s[tag=yellow_terracotta] run setblock ~ ~-1 ~ minecraft:yellow_terracotta
 execute if entity @s[tag=gray_terracotta] run setblock ~ ~-1 ~ minecraft:gray_terracotta
+execute if entity @s[tag=purple_terracotta] run setblock ~ ~-1 ~ minecraft:purple_terracotta
 execute if entity @s[tag=blue_ice] run setblock ~ ~-1 ~ minecraft:blue_ice
 execute if entity @s[tag=polished_granite] run setblock ~ ~-1 ~ minecraft:polished_granite
 execute if entity @s[tag=red_wool] run setblock ~ ~-1 ~ minecraft:red_wool

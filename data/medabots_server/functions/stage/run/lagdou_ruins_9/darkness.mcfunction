@@ -133,4 +133,4 @@ execute if entity @e[type=minecraft:area_effect_cloud,tag=fire_marker,tag=59,tag
 execute if entity @e[type=minecraft:area_effect_cloud,tag=fire_marker,tag=60,tag=selected] run fill -1266 46 -261 -1264 46 -259 minecraft:fire[age=15,up=false,north=false,south=false,west=false,east=false] replace minecraft:air
 execute if entity @e[type=minecraft:area_effect_cloud,tag=fire_marker,tag=61,tag=selected] run fill -1272 46 -261 -1270 46 -259 minecraft:fire[age=15,up=false,north=false,south=false,west=false,east=false] replace minecraft:air
 kill @e[type=minecraft:area_effect_cloud,tag=fire_marker]
-execute unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=fire_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["fire_timer,type=minecraft:area_effect_cloud"],Duration:240}
+execute unless entity @e[x=-1314,y=41,z=-291,dx=53,dy=9,dz=68,tag=fire_timer,type=minecraft:area_effect_cloud] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.stage_randomizing_marker"}',Tags:["fire_timer"],Duration:240}

@@ -52,9 +52,9 @@ execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run loot spawn ~ ~ ~ loot 
 execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run tag @e[distance=..1,type=minecraft:item] add medabot_loot
 execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=enemy_medabot] run tag @e[distance=..1,type=minecraft:item] add enemy_loot
 execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=ally_medabot] run tag @e[distance=..1,type=minecraft:item] add ally_loot
-scoreboard players set @s[y=-80,dy=79,scores={DeathTime=1}] DeathTime 99
+scoreboard players set @s[y=-80,dy=79,scores={DeathTime=4}] DeathTime 99
 execute if entity @s[scores={DeathTime=1..99},type=minecraft:player] positioned as @e[tag=this_medabot,tag=chest,limit=1] rotated as @s rotated ~ 0 run teleport @s ^0.105 ^2 ^-1.5 facing entity @e[tag=this_medabot,tag=chest,limit=1]
-teleport @s[scores={DeathTime=1..},type=!minecraft:player] ~ -50 ~
+teleport @s[scores={DeathTime=4..},type=!minecraft:player] ~ -50 ~
 execute if entity @s[scores={DeathTime=100}] run function medabots_server:other/death
 execute if entity @s[scores={DeathTime=100},type=minecraft:player] run function medabots_server:stage/exit/enforced
 tag @s[scores={DeathTime=100},type=!minecraft:player] add dead

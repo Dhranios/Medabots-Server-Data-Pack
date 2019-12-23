@@ -3,5 +3,7 @@ execute if block ~ ~2 ~ minecraft:wall_torch[facing=north] run tag @s add north_
 execute if block ~ ~2 ~ minecraft:wall_torch[facing=south] run tag @s add south_wall_torch_2
 execute if block ~ ~2 ~ minecraft:wall_torch[facing=west] run tag @s add west_wall_torch_2
 execute if block ~ ~2 ~ minecraft:oak_leaves run tag @s add oak_leaves_2
+execute if block ~ ~2 ~ minecraft:purple_terracotta run tag @s add purple_terracotta_2
 
 execute if block ~ ~3 ~ minecraft:oak_leaves run tag @s add oak_leaves_3
+execute if block ~ ~3 ~ minecraft:purple_terracotta run tag @s add purple_terracotta_3

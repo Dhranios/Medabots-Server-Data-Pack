@@ -58,7 +58,7 @@ effect give @s minecraft:instant_health 1 19 true
 
 # Re-give items
 clear @s minecraft:diamond_pickaxe{medabots_server:{id:"medabots_server:help"}}
-execute at @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",items:[{}]}}}]}] run function medabots_server:items/give_obtained_item
+execute unless entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",medallars:0d}}}]}] at @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",items:[{}]}}}]}] run function medabots_server:items/give_obtained_item
 
 # Restore inventory
 function medabots_server:gamemodes/default/load_old_inventory
