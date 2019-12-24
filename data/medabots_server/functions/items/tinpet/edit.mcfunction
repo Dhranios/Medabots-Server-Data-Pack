@@ -9,6 +9,6 @@ tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:i
 scoreboard players enable @s UnequipTinpet
 
 # Medawatch music
-scoreboard players operation @s OldMusicType = @s MusicType
+execute unless entity @s[scores={MusicType=58..59}] run scoreboard players operation @s OldMusicType = @s MusicType
 scoreboard players set @s MusicType 31
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0

@@ -10,8 +10,8 @@ scoreboard players set @s[scores={Stage=15,State=0}] MusicType 1
 scoreboard players set @s[scores={Stage=15,State=0}] State 0
 teleport @s[scores={Stage=15,State=0}] -1795 50 -394 -180 0
 tag @e[scores={Stage=15},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=15}] StageVersion
-scoreboard players reset @a[scores={Stage=15}] Stage
+scoreboard players reset @a[scores={Stage=15},distance=0.1..] StageVersion
+scoreboard players reset @a[scores={Stage=15},distance=0.1..] Stage
 data merge block -1796 51 -437 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/iceberg_b/play"}}'}
 setblock -1796 52 -439 minecraft:redstone_block
 clear @s minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}

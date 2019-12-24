@@ -118,5 +118,6 @@ scoreboard players set @s[scores={MusicType=58}] Music 256
 playsound medabots_server:music.stage.failed music @s[scores={MusicType=59}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=59}] Music 835
 
+tag @s[scores={MusicType=58..59,OldMusicType=1..}] add not_yet
 scoreboard players operation @s[scores={MusicType=58..59,OldMusicType=1..}] MusicType = @s OldMusicType
 scoreboard players reset @s[scores={MusicType=58..59,OldMusicType=1..}] OldMusicType

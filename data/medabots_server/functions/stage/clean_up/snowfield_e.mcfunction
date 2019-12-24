@@ -10,8 +10,8 @@ scoreboard players set @s[scores={Stage=56,State=0}] MusicType 1
 scoreboard players set @s[scores={Stage=56,State=0}] State 0
 teleport @s[scores={Stage=56,State=0}] -1866 51 -399 -180 0
 tag @e[scores={Stage=56},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=56}] StageVersion
-scoreboard players reset @a[scores={Stage=56}] Stage
+scoreboard players reset @a[scores={Stage=56},distance=0.1..] StageVersion
+scoreboard players reset @a[scores={Stage=56},distance=0.1..] Stage
 data merge block -1867 52 -438 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/snowfield_e/play"}}'}
 setblock -1867 53 -440 minecraft:redstone_block
 execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}

@@ -11,8 +11,8 @@ scoreboard players set @s[scores={Stage=52,State=0}] MusicType 1
 scoreboard players set @s[scores={Stage=52,State=0}] State 0
 teleport @s[scores={Stage=52,State=0}] -1812 51 -200 -180 0
 tag @e[scores={Stage=52},type=!minecraft:player] add dead
-scoreboard players reset @a[scores={Stage=52}] StageVersion
-scoreboard players reset @a[scores={Stage=52}] Stage
+scoreboard players reset @a[scores={Stage=52},distance=0.1..] StageVersion
+scoreboard players reset @a[scores={Stage=52},distance=0.1..] Stage
 tag @e[scores={Stage=52},type=!minecraft:player,tag=barrier] add air
 tag @e[scores={Stage=52},type=!minecraft:player,tag=barrier] remove barrier
 data merge block -1813 52 -247 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/grassland_e/play"}}'}
