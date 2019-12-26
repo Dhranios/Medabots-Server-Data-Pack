@@ -19,7 +19,7 @@ execute if block -1856 44 -472 minecraft:light_blue_wool run scoreboard players 
 execute if block -1856 44 -472 minecraft:blue_wool run scoreboard players set @e[x=-1854.5,y=45,z=-468.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1856 44 -472 minecraft:light_blue_wool run scoreboard players set @e[x=-1853.5,y=45,z=-470.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1856 44 -472 minecraft:blue_wool run scoreboard players set @e[x=-1853.5,y=45,z=-470.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute as @e[x=-1858,y=0,z=-536,dx=94,dy=50,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=16}] run scoreboard players set @s Stage 16
+execute as @e[x=-1858,y=0,z=-536,dx=94,dy=50,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 16
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/ruins_out_b
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/ruins_out_b_rubberobo
 tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={rubberobo_enters_ruins_out_b=true,rubberobo_leaves_ruins_out_b=false}}] add dialog_infinity_rubberobo_leaves_ruins_out_b

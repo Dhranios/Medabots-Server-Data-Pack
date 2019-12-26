@@ -106,7 +106,7 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard playe
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:ruins_in_b/robattle players
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1666,y=0,z=-572,dx=92,dy=49,dz=92,tag=mission,type=minecraft:area_effect_cloud]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute as @e[x=-1666,y=0,z=-572,dx=92,dy=49,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=17}] run scoreboard players set @s Stage 17
+execute as @e[x=-1666,y=0,z=-572,dx=92,dy=49,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 17
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/ruins_in_b
 advancement grant @s[tag=clear_stage] only medabots_server:developer_challenge/ruins_in_b_fvbico
 tag @s[tag=clear_stage,advancements={medabots_server:story_progression/other={ruins_in_b_fvbico=true,ruins_in_b_fvbico_cleared=false}}] add dialog_other_ruins_in_b_fvbico_cleared

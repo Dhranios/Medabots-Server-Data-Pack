@@ -15,7 +15,7 @@ execute if block -1617 44 -226 minecraft:blue_wool run scoreboard players set @e
 execute if block -1663 44 -187 minecraft:light_blue_wool run scoreboard players set @e[x=-1656.5,y=45,z=-210.5,distance=..0.7,tag=spring_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1663 44 -187 minecraft:blue_wool run scoreboard players set @e[x=-1656.5,y=45,z=-210.5,distance=..0.7,tag=spring_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecraft:lime_wool if block -1627 44 -232 minecraft:lime_wool if block -1643 44 -236 minecraft:lime_wool run scoreboard players set @e[x=-1660.5,y=45,z=-242,dx=6,dy=1,dz=19,tag=laser_trap,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=5}] run scoreboard players set @s Stage 5
+execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 5
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/snowfield_a
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/snowfield_a_second_go
 execute if entity @s[tag=clear_stage] positioned -1620 51 -216 run function medabots_server:stage/clear

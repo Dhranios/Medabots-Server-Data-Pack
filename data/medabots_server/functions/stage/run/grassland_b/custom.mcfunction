@@ -15,6 +15,6 @@ execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:grassland_
 execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:grassland_b/robattle value 3600
 tag @s[tag=add_bossbar] remove add_bossbar
 execute as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=build_stage,type=minecraft:item,limit=1] run data modify entity @s Item.tag.display.Lore[0] set value '{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.location","with":[{"translate":"medabots_server:location.grassland_b"}]}'
-execute as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=10}] run scoreboard players set @s Stage 10
+execute as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 10
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/grassland_b
 execute if entity @s[tag=clear_stage] positioned -1540 51 -367 run function medabots_server:stage/clear

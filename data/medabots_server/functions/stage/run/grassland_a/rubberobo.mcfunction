@@ -16,7 +16,7 @@ execute if block -1537 44 -169 minecraft:yellow_wool run scoreboard players set 
 execute if block -1537 44 -169 minecraft:orange_wool run scoreboard players set @e[x=-1547.5,y=45,z=-171.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1542 44 -174 minecraft:yellow_wool run scoreboard players set @e[x=-1548.5,y=45,z=-171.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1542 44 -174 minecraft:orange_wool run scoreboard players set @e[x=-1548.5,y=45,z=-171.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=1}] run scoreboard players set @s Stage 1
+execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 1
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/grassland_a
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/grassland_a_rubberobo
 tag @s[tag=clear_stage,advancements={medabots_server:story_progression/infinity={rubberobo_enters_grassland_a=true,rubberobo_leaves_grassland_a=false}}] add dialog_infinity_rubberobo_leaves_grassland_a

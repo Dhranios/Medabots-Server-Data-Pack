@@ -122,7 +122,7 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard playe
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:ruins_in_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute as @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=8}] run scoreboard players set @s Stage 8
+execute as @e[x=-1729,y=43,z=-344,dx=90,dy=7,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 8
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/ruins_in_a
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/ruins_in_a_second_go
 execute if entity @s[tag=clear_stage] positioned -1683 50 -259 run function medabots_server:stage/clear

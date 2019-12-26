@@ -35,7 +35,7 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set meda
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1845 44 -788 minecraft:iron_door[open=true] if entity @s[x=-1846,y=44,z=-791,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_d/first_go_battle/1
 execute if entity @e[x=-1856,y=41,z=-811,dx=61,dy=7,dz=78,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=35,Medabot=0..,State=1..2}]
-execute as @e[x=-1856,y=41,z=-811,dx=61,dy=7,dz=78,type=!minecraft:player] unless entity @s[scores={Stage=35}] run scoreboard players set @s Stage 35
+execute as @e[x=-1856,y=41,z=-811,dx=61,dy=7,dz=78,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 35
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/laboratory_d
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/laboratory_d_first_go
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:laboratory_d/robattle players

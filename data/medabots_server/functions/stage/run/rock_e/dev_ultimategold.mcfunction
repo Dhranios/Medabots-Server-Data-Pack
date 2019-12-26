@@ -116,7 +116,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s BattlingMedabots
 execute if block -1875 45 -332 minecraft:iron_door[open=true] if entity @s[x=-1878,y=45,z=-334,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_e/dev_ultimategold_battle/9
 execute if entity @e[x=-1906,y=42,z=-345,dx=93,dy=7,dz=95,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=53,Medabot=0..,State=1..2}]
-execute as @e[x=-1906,y=42,z=-345,dx=93,dy=7,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=53}] run scoreboard players set @s Stage 53
+execute as @e[x=-1906,y=42,z=-345,dx=93,dy=7,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 53
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/rock_e
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:developer_challenge/rock_e_ultimategold
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:rock_e/robattle players

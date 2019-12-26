@@ -45,7 +45,7 @@ tellraw @s[scores={Dialog=1305}] {"translate":"medabots_server:dialog.tutorial.1
 tellraw @s[scores={Dialog=1465}] {"translate":"medabots_server:dialog.tutorial.18","color":"green"}
 execute if entity @s[scores={Dialog=1466}] if entity @e[tag=enemy_medabot,scores={Stage=0},nbt={HurtTime:9s}] run scoreboard players add @s Dialog 1
 tellraw @s[scores={Dialog=1467}] {"translate":"medabots_server:dialog.tutorial.19","color":"green"}
-execute as @e[x=-1888,y=42,z=-633,dx=31,dy=7,dz=27] unless entity @s[scores={Stage=0}] run scoreboard players set @s Stage 0
+execute as @e[x=-1888,y=42,z=-633,dx=31,dy=7,dz=27] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 0
 execute if entity @s[scores={Dialog=1467}] positioned -1884 45 -630 run tag @e[distance=..0.7,tag=enemy_medabot] add dead
 scoreboard players set @s[scores={Dialog=1467}] MusicType 1
 scoreboard players set @s[scores={Dialog=1467}] Music 0

@@ -127,7 +127,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1806 45 -598 minecraft:iron_door[open=true] if entity @s[x=-1808,y=45,z=-598,dx=3,dy=3,dz=3] run function medabots_server:stage/create/park_a/challenge_battle/1
 execute if entity @e[x=-1854,y=0,z=-633,dx=91,dy=49,dz=94,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=19,Medabot=0..,State=1..2}]
-execute as @e[x=-1854,y=0,z=-633,dx=91,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=19}] run scoreboard players set @s Stage 19
+execute as @e[x=-1854,y=0,z=-633,dx=91,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 19
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/park_a
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/park_a_challenge
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:park_a/robattle players

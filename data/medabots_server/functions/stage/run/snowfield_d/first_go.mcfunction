@@ -21,7 +21,7 @@ execute if block -1560 44 -764 minecraft:lime_wool run scoreboard players set @e
 execute if block -1560 44 -764 minecraft:lime_wool run scoreboard players set @e[x=-1555.5,y=45,z=-761.5,distance=..0.7,tag=gas_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1563 45 -796 minecraft:iron_door[open=true] if entity @s[x=-1563,y=45,z=-797,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_d/first_go_battle/0
 execute if entity @e[x=-1602,y=42,z=-815,dx=61,dy=7,dz=62,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=32,Medabot=0..,State=1..2}]
-execute as @e[x=-1602,y=42,z=-815,dx=61,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=32}] run scoreboard players set @s Stage 32
+execute as @e[x=-1602,y=42,z=-815,dx=61,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 32
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/snowfield_d
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/snowfield_d_first_go
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:snowfield_d/robattle players
