@@ -11,8 +11,8 @@ execute if entity @s[scores={DeathTime=1}] run function medabots_server:effects/
 execute as @e[tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
 execute if entity @s[scores={DeathTime=1}] run tag @e[tag=this_medabot] add not_yet
 tag @s[scores={DeathTime=1}] add this_medabot
-execute if entity @s[scores={DeathTime=1}] as @e[tag=this_medabot] unless entity @s[scores={DeathTime=1}] run function medabots_server:animations/medabot/main
-execute if entity @s[scores={DeathTime=1}] as @e[tag=this_medabot] unless entity @s[scores={DeathTime=1}] run function medabots_server:animations/medabot/main
+execute at @s[scores={DeathTime=1}] as @e[tag=this_medabot] unless entity @s[scores={DeathTime=1}] run function medabots_server:animations/medabot/main
+execute at @s[scores={DeathTime=1}] as @e[tag=this_medabot] unless entity @s[scores={DeathTime=1}] run function medabots_server:animations/medabot/main
 tag @s[scores={DeathTime=1}] remove this_medabot
 execute if entity @s[scores={DeathTime=1}] run tag @e[tag=this_medabot] remove not_yet
 gamemode spectator @s[scores={DeathTime=1}]
@@ -56,7 +56,6 @@ scoreboard players set @s[y=-80,dy=79,scores={DeathTime=4}] DeathTime 99
 execute if entity @s[scores={DeathTime=1..99},type=minecraft:player] positioned as @e[tag=this_medabot,tag=chest,limit=1] rotated as @s rotated ~ 0 run teleport @s ^0.105 ^2 ^-1.5 facing entity @e[tag=this_medabot,tag=chest,limit=1]
 teleport @s[scores={DeathTime=4..},type=!minecraft:player] ~ -50 ~
 execute if entity @s[scores={DeathTime=100}] run function medabots_server:other/death
-execute if entity @s[scores={DeathTime=100},type=minecraft:player] run function medabots_server:stage/exit/enforced
 tag @s[scores={DeathTime=100},type=!minecraft:player] add dead
 execute if entity @s[scores={DeathTime=100}] at @e[tag=this_medabot,tag=chest,limit=1] positioned ~ ~0.7 ~ run particle minecraft:cloud ~ ~ ~ 1 1 1 0 30
 execute if entity @s[scores={DeathTime=100}] run kill @e[tag=this_medabot]
@@ -67,13 +66,10 @@ tag @s[scores={DeathTime=101}] remove dying
 tag @s[scores={DeathTime=101}] remove had_death
 tag @s[scores={DeathTime=101}] remove retry
 tag @s[scores={DeathTime=101}] remove story_battle
-scoreboard players set @s[scores={DeathTime=101,Jukebox=1..}] MusicType 1
-scoreboard players set @s[scores={DeathTime=101,Jukebox=1..,Stage=23..29}] MusicType 22
-execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={DeathTime=101}] PrevMusicType 0
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={DeathTime=101}] MusicType 59
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={DeathTime=101}] OldMusicType 1
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={DeathTime=101,Stage=23..29}] OldMusicType 22
-execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={DeathTime=101}] Music 0
+execute if entity @s[scores={DeathTime=101},type=minecraft:player] run function medabots_server:stage/exit/enforced
 scoreboard players reset @s[scores={DeathTime=101}] DeathTime
 scoreboard players reset #temp MedabotNr
 tag @e[tag=this_medabot] remove this_medabot
