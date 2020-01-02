@@ -5,7 +5,7 @@ execute positioned -1698 44 -233 run function medabots_server:spawn_entities/can
 execute positioned -1704 44 -222 run function medabots_server:spawn_entities/cannon/search/north/delay_4/1_medallar_cent
 execute positioned -1730 44 -241 run function medabots_server:spawn_entities/cannon/search/south/delay_4/1_medallar_cent
 execute positioned -1747 44 -242 run function medabots_server:spawn_entities/cannon/search/south/delay_4/1_medallar_cent
-execute positioned -1755 44 -232 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/2_medallar_cents
+execute positioned -1755 44 -232 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/2_medallar_cents
 execute positioned -1698 44 -190 run function medabots_server:spawn_entities/cannon/search/north/delay_4
 execute positioned -1694 44 -189 run function medabots_server:spawn_entities/cannon/search/north/delay_4
 execute positioned -1697 46 -194 run function medabots_server:spawn_entities/item/jammy_help
@@ -60,7 +60,7 @@ execute positioned -1741 44 -237 run function medabots_server:set_blocks/mirror/
 execute positioned -1741 44 -238 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1758 44 -237 run function medabots_server:set_blocks/mirror/-45
 execute positioned -1759 44 -238 run function medabots_server:set_blocks/mirror/-45
-execute positioned -1734 44 -221 run function medabots_server:set_blocks/action_floor/cannon/swiffle/west/delay_4/power_1
+execute positioned -1734 44 -221 run function medabots_server:set_blocks/action_floor/cannon/swivel/west/delay_4/power_1
 execute positioned -1732 44 -225 run function medabots_server:set_blocks/action_floor/guard/medium/power_1
 execute positioned -1723 44 -219 run function medabots_server:set_blocks/action_floor/guard/medium/power_1
 execute positioned -1721 44 -207 run function medabots_server:set_blocks/action_floor/cannon/search/north/delay_4/power_1

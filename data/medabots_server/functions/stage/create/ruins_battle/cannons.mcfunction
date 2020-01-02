@@ -1,19 +1,19 @@
-execute positioned -1982 45 -573 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
-execute positioned -1982 45 -563 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_3
-execute positioned -1982 45 -558 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
-execute positioned -1982 45 -548 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
-execute positioned -2011 45 -548 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4
-execute positioned -2011 45 -558 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_3
-execute positioned -2011 45 -563 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4
-execute positioned -2011 45 -573 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4
-execute positioned -2009 45 -575 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4
-execute positioned -1999 45 -575 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_3
-execute positioned -1994 45 -575 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4
-execute positioned -1984 45 -575 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4
-execute positioned -1984 45 -546 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_4
-execute positioned -1994 45 -546 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_3
-execute positioned -1999 45 -546 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_4
-execute positioned -2009 45 -546 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_4
+execute positioned -1982 45 -573 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4
+execute positioned -1982 45 -563 run function medabots_server:spawn_entities/cannon/swivel/west/delay_3
+execute positioned -1982 45 -558 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4
+execute positioned -1982 45 -548 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4
+execute positioned -2011 45 -548 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4
+execute positioned -2011 45 -558 run function medabots_server:spawn_entities/cannon/swivel/east/delay_3
+execute positioned -2011 45 -563 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4
+execute positioned -2011 45 -573 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4
+execute positioned -2009 45 -575 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4
+execute positioned -1999 45 -575 run function medabots_server:spawn_entities/cannon/swivel/south/delay_3
+execute positioned -1994 45 -575 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4
+execute positioned -1984 45 -575 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4
+execute positioned -1984 45 -546 run function medabots_server:spawn_entities/cannon/swivel/north/delay_4
+execute positioned -1994 45 -546 run function medabots_server:spawn_entities/cannon/swivel/north/delay_3
+execute positioned -1999 45 -546 run function medabots_server:spawn_entities/cannon/swivel/north/delay_4
+execute positioned -2009 45 -546 run function medabots_server:spawn_entities/cannon/swivel/north/delay_4
 
 execute if entity @s[scores={ArenaType=0}] run teleport @s -1997 45 -564 0 0
 execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1996 45 -557 0 0

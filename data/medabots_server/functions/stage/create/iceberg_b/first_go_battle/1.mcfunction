@@ -3,8 +3,8 @@ execute unless entity @a[scores={StageIndex=1,Gamemode=0,Stage=15}] run summon m
 execute positioned -1812 44 -428 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1821 44 -435 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1821 44 -431 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1822 44 -432 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/mission
-execute positioned -1822 44 -434 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/mission
+execute positioned -1822 44 -432 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4/mission
+execute positioned -1822 44 -434 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4/mission
 execute positioned -1819 44 -424 run function medabots_server:spawn_entities/cannon/search/west/delay_4/mission
 execute positioned -1821 44 -430 run function medabots_server:spawn_entities/ice_block
 execute positioned -1822 44 -430 run function medabots_server:spawn_entities/ice_block

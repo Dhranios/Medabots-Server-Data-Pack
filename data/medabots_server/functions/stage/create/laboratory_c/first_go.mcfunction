@@ -1,9 +1,9 @@
 execute positioned -1592 44 -589 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1579 44 -589 run function medabots_server:spawn_entities/guard/medium
-execute positioned -1593 44 -587 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/10_medallar_cents
-execute positioned -1593 44 -591 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/10_medallar_cents
-execute positioned -1578 44 -587 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/10_medallar_cents
-execute positioned -1578 44 -591 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/10_medallar_cents
+execute positioned -1593 44 -587 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4/10_medallar_cents
+execute positioned -1593 44 -591 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4/10_medallar_cents
+execute positioned -1578 44 -587 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/10_medallar_cents
+execute positioned -1578 44 -591 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/10_medallar_cents
 execute positioned -1583 44 -578 run function medabots_server:set_blocks/pot
 execute positioned -1583 44 -580 run function medabots_server:set_blocks/pot
 execute positioned -1588 44 -578 run function medabots_server:set_blocks/pot

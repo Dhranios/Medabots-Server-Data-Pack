@@ -7,10 +7,10 @@ execute if entity @s[tag=detect,tag=looking,tag=east] run function medabots_serv
 execute if entity @s[tag=detect,tag=looking,tag=north] run function medabots_server:spawn_entities/cannon/tripwire/north/delay_1
 execute if entity @s[tag=detect,tag=looking,tag=south] run function medabots_server:spawn_entities/cannon/tripwire/south/delay_1
 execute if entity @s[tag=detect,tag=looking,tag=west] run function medabots_server:spawn_entities/cannon/tripwire/west/delay_1
-execute if entity @s[tag=!detect,tag=rotating,tag=east] run function medabots_server:spawn_entities/cannon/swiffle/east/delay_1
-execute if entity @s[tag=!detect,tag=rotating,tag=north] run function medabots_server:spawn_entities/cannon/swiffle/north/delay_1
-execute if entity @s[tag=!detect,tag=rotating,tag=south] run function medabots_server:spawn_entities/cannon/swiffle/south/delay_1
-execute if entity @s[tag=!detect,tag=rotating,tag=west] run function medabots_server:spawn_entities/cannon/swiffle/west/delay_1
+execute if entity @s[tag=!detect,tag=rotating,tag=east] run function medabots_server:spawn_entities/cannon/swivel/east/delay_1
+execute if entity @s[tag=!detect,tag=rotating,tag=north] run function medabots_server:spawn_entities/cannon/swivel/north/delay_1
+execute if entity @s[tag=!detect,tag=rotating,tag=south] run function medabots_server:spawn_entities/cannon/swivel/south/delay_1
+execute if entity @s[tag=!detect,tag=rotating,tag=west] run function medabots_server:spawn_entities/cannon/swivel/west/delay_1
 execute if entity @s[tag=!detect,tag=looking,tag=east] run function medabots_server:spawn_entities/cannon/still/east/delay_1
 execute if entity @s[tag=!detect,tag=looking,tag=north] run function medabots_server:spawn_entities/cannon/still/north/delay_1
 execute if entity @s[tag=!detect,tag=looking,tag=south] run function medabots_server:spawn_entities/cannon/still/south/delay_1

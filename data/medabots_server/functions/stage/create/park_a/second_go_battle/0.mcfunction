@@ -3,12 +3,12 @@ execute unless entity @a[scores={StageIndex=0,Gamemode=0,Stage=19}] run summon m
 execute positioned -1802 45 -575 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
 execute positioned -1818 45 -585 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
 execute positioned -1802 45 -596 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
-execute positioned -1795 45 -587 run function medabots_server:set_blocks/action_floor/cannon/swiffle/west/delay_4/power_0
-execute positioned -1795 45 -584 run function medabots_server:set_blocks/action_floor/cannon/swiffle/west/delay_4/power_0
-execute positioned -1808 45 -577 run function medabots_server:set_blocks/action_floor/cannon/swiffle/north/delay_4/power_0
-execute positioned -1812 45 -579 run function medabots_server:set_blocks/action_floor/cannon/swiffle/east/delay_4/power_0
-execute positioned -1812 45 -592 run function medabots_server:set_blocks/action_floor/cannon/swiffle/east/delay_4/power_0
-execute positioned -1808 45 -595 run function medabots_server:set_blocks/action_floor/cannon/swiffle/south/delay_4/power_0
+execute positioned -1795 45 -587 run function medabots_server:set_blocks/action_floor/cannon/swivel/west/delay_4/power_0
+execute positioned -1795 45 -584 run function medabots_server:set_blocks/action_floor/cannon/swivel/west/delay_4/power_0
+execute positioned -1808 45 -577 run function medabots_server:set_blocks/action_floor/cannon/swivel/north/delay_4/power_0
+execute positioned -1812 45 -579 run function medabots_server:set_blocks/action_floor/cannon/swivel/east/delay_4/power_0
+execute positioned -1812 45 -592 run function medabots_server:set_blocks/action_floor/cannon/swivel/east/delay_4/power_0
+execute positioned -1808 45 -595 run function medabots_server:set_blocks/action_floor/cannon/swivel/south/delay_4/power_0
 scoreboard players set @e[x=-1793.5,y=45,z=-584.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true

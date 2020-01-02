@@ -10,10 +10,10 @@ execute positioned -1945 45 -637 run function medabots_server:spawn_entities/can
 execute positioned -1952 45 -637 run function medabots_server:spawn_entities/cannon/search/south/delay_2
 execute positioned -1959 45 -626 run function medabots_server:spawn_entities/cannon/still/north/delay_2
 execute positioned -1938 45 -626 run function medabots_server:spawn_entities/cannon/still/north/delay_2
-execute positioned -1928 45 -613 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_2
-execute positioned -1928 45 -619 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_2
-execute positioned -1969 45 -613 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_2
-execute positioned -1969 45 -620 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_2
+execute positioned -1928 45 -613 run function medabots_server:spawn_entities/cannon/swivel/west/delay_2
+execute positioned -1928 45 -619 run function medabots_server:spawn_entities/cannon/swivel/west/delay_2
+execute positioned -1969 45 -613 run function medabots_server:spawn_entities/cannon/swivel/east/delay_2
+execute positioned -1969 45 -620 run function medabots_server:spawn_entities/cannon/swivel/east/delay_2
 execute positioned -1952 45 -596 run function medabots_server:spawn_entities/cannon/still/north/delay_2
 execute positioned -1945 45 -596 run function medabots_server:spawn_entities/cannon/still/north/delay_2
 

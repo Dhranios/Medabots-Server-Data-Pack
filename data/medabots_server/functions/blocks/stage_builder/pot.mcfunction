@@ -10,10 +10,10 @@ execute if entity @s[tag=cannon,tag=detect,tag=looking,tag=east] run function me
 execute if entity @s[tag=cannon,tag=detect,tag=looking,tag=north] run function medabots_server:set_blocks/pot/cannon/tripwire/north/delay_4
 execute if entity @s[tag=cannon,tag=detect,tag=looking,tag=south] run function medabots_server:set_blocks/pot/cannon/tripwire/south/delay_4
 execute if entity @s[tag=cannon,tag=detect,tag=looking,tag=west] run function medabots_server:set_blocks/pot/cannon/tripwire/west/delay_4
-execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=east] run function medabots_server:set_blocks/pot/cannon/swiffle/east/delay_4
-execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=north] run function medabots_server:set_blocks/pot/cannon/swiffle/north/delay_4
-execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=south] run function medabots_server:set_blocks/pot/cannon/swiffle/south/delay_4
-execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=west] run function medabots_server:set_blocks/pot/cannon/swiffle/west/delay_4
+execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=east] run function medabots_server:set_blocks/pot/cannon/swivel/east/delay_4
+execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=north] run function medabots_server:set_blocks/pot/cannon/swivel/north/delay_4
+execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=south] run function medabots_server:set_blocks/pot/cannon/swivel/south/delay_4
+execute if entity @s[tag=cannon,tag=!detect,tag=rotating,tag=west] run function medabots_server:set_blocks/pot/cannon/swivel/west/delay_4
 execute if entity @s[tag=cannon,tag=!detect,tag=looking,tag=east] run function medabots_server:set_blocks/pot/cannon/still/east/delay_4
 execute if entity @s[tag=cannon,tag=!detect,tag=looking,tag=north] run function medabots_server:set_blocks/pot/cannon/still/north/delay_4
 execute if entity @s[tag=cannon,tag=!detect,tag=looking,tag=south] run function medabots_server:set_blocks/pot/cannon/still/south/delay_4

@@ -7,8 +7,8 @@ execute positioned -1828 45 -569 run function medabots_server:spawn_entities/gua
 execute positioned -1825 45 -613 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1830 45 -613 run function medabots_server:spawn_entities/guard/medium
 execute positioned -1834 45 -613 run function medabots_server:spawn_entities/guard/medium
-execute positioned -1804 45 -569 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4/4_medallar_cents
-execute positioned -1809 45 -569 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4/4_medallar_cents
+execute positioned -1804 45 -569 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4/4_medallar_cents
+execute positioned -1809 45 -569 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4/4_medallar_cents
 execute positioned -1821 45 -561 run function medabots_server:spawn_entities/cannon/search/north/delay_4
 execute positioned -1826 45 -557 run function medabots_server:spawn_entities/cannon/search/east/delay_4
 execute positioned -1829 45 -565 run function medabots_server:spawn_entities/cannon/search/south/delay_4

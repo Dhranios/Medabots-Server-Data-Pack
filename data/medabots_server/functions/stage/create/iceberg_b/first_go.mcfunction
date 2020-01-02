@@ -1,15 +1,15 @@
 execute positioned -1813 44 -380 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1815 44 -394 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1801 44 -430 run function medabots_server:spawn_entities/guard/slow
-execute positioned -1799 44 -367 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
-execute positioned -1792 44 -357 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
-execute positioned -1789 44 -353 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_4
-execute positioned -1815 44 -406 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_3
-execute positioned -1789 44 -438 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4
-execute positioned -1796 44 -421 run function medabots_server:spawn_entities/cannon/swiffle/north/delay_4
-execute positioned -1783 44 -403 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4
-execute positioned -1780 44 -394 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/4_medallar_cents
-execute positioned -1783 44 -412 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/6_medallar_cents
+execute positioned -1799 44 -367 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4
+execute positioned -1792 44 -357 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4
+execute positioned -1789 44 -353 run function medabots_server:spawn_entities/cannon/swivel/north/delay_4
+execute positioned -1815 44 -406 run function medabots_server:spawn_entities/cannon/swivel/west/delay_3
+execute positioned -1789 44 -438 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4
+execute positioned -1796 44 -421 run function medabots_server:spawn_entities/cannon/swivel/north/delay_4
+execute positioned -1783 44 -403 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4
+execute positioned -1780 44 -394 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/4_medallar_cents
+execute positioned -1783 44 -412 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4/6_medallar_cents
 execute positioned -1789 44 -437 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1799 44 -428 run function medabots_server:spawn_entities/item/6_medallar_cents
 execute positioned -1778 44 -362 run function medabots_server:spawn_entities/ice_block/north
@@ -91,7 +91,7 @@ execute positioned -1800 44 -403 run function medabots_server:set_blocks/pot
 execute positioned -1800 44 -405 run function medabots_server:set_blocks/pot
 replaceitem block -1800 44 -405 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:6,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_jack"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.infect"}','{"italic":false,"color":"white","translate":"medabots_server:move.infect.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.maxsnake"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.maxsnake_jack.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:maxsnake_jack",gender:0b,move:"infect",part:"left_arm",armor:45,power:38,activated:0b,version:1}}
 execute positioned -1800 44 -406 run function medabots_server:set_blocks/pot
-execute positioned -1799 44 -405 run function medabots_server:set_blocks/pot/cannon/swiffle/west/delay_4
+execute positioned -1799 44 -405 run function medabots_server:set_blocks/pot/cannon/swivel/west/delay_4
 execute positioned -1817 44 -407 run function medabots_server:set_blocks/pot
 execute positioned -1818 44 -407 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1821 44 -413 run function medabots_server:set_blocks/pot/2_medallar_cents

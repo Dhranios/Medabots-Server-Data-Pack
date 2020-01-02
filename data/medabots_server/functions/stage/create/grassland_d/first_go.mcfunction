@@ -23,9 +23,9 @@ execute positioned -1567 45 -700 run function medabots_server:spawn_entities/can
 execute positioned -1562 45 -700 run function medabots_server:spawn_entities/cannon/still/south/delay_4
 execute positioned -1557 45 -698 run function medabots_server:spawn_entities/cannon/still/south/delay_4
 execute positioned -1553 45 -697 run function medabots_server:spawn_entities/cannon/still/south/delay_4
-execute positioned -1574 45 -709 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4
-execute positioned -1565 45 -711 run function medabots_server:spawn_entities/cannon/swiffle/south/delay_4
-execute positioned -1567 45 -704 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4
+execute positioned -1574 45 -709 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4
+execute positioned -1565 45 -711 run function medabots_server:spawn_entities/cannon/swivel/south/delay_4
+execute positioned -1567 45 -704 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4
 execute positioned -1594 45 -716 run function medabots_server:spawn_entities/cannon/still/east/delay_4
 execute positioned -1596 45 -717 run function medabots_server:spawn_entities/cannon/still/east/delay_4
 execute positioned -1598 45 -715 run function medabots_server:spawn_entities/cannon/still/east/delay_4

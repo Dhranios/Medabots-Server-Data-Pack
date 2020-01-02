@@ -30,9 +30,9 @@ execute positioned -1686 45 -407 run function medabots_server:spawn_entities/can
 execute positioned -1686 45 -416 run function medabots_server:spawn_entities/cannon/search/south/delay_4/2_medallar_cents
 execute positioned -1694 45 -407 run function medabots_server:spawn_entities/cannon/search/north/delay_4/2_medallar_cents
 execute positioned -1694 45 -416 run function medabots_server:spawn_entities/cannon/search/south/delay_4/2_medallar_cents
-execute positioned -1688 45 -435 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/2_medallar_cents
-execute positioned -1688 45 -436 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/2_medallar_cents
-execute positioned -1688 45 -437 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/2_medallar_cents
+execute positioned -1688 45 -435 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/2_medallar_cents
+execute positioned -1688 45 -436 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/2_medallar_cents
+execute positioned -1688 45 -437 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/2_medallar_cents
 execute positioned -1715 45 -440 run function medabots_server:spawn_entities/cannon/search/east/delay_4/2_medallar_cents
 execute positioned -1715 45 -434 run function medabots_server:spawn_entities/cannon/search/south/delay_4/2_medallar_cents
 execute positioned -1721 45 -431 run function medabots_server:spawn_entities/cannon/search/south/delay_4/2_medallar_cents

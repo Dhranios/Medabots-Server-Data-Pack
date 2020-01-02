@@ -22,8 +22,8 @@ execute positioned -1540 45 -177 run function medabots_server:spawn_entities/gua
 execute positioned -1556 45 -174 run function medabots_server:spawn_entities/guard/medium/6_medallar_cents
 execute positioned -1557 45 -123 run function medabots_server:spawn_entities/cannon/still/east/delay_4/1_medallar_cent
 execute positioned -1562 45 -128 run function medabots_server:spawn_entities/cannon/still/south/delay_4/1_medallar_cent
-execute positioned -1558 45 -130 run function medabots_server:spawn_entities/cannon/swiffle/west/delay_4/1_medallar_cent
-execute positioned -1565 45 -133 run function medabots_server:spawn_entities/cannon/swiffle/east/delay_4/1_medallar_cent
+execute positioned -1558 45 -130 run function medabots_server:spawn_entities/cannon/swivel/west/delay_4/1_medallar_cent
+execute positioned -1565 45 -133 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4/1_medallar_cent
 execute positioned -1555 45 -136 run function medabots_server:spawn_entities/cannon/tripwire/west/delay_4/1_medallar_cent
 execute positioned -1560 45 -138 run function medabots_server:spawn_entities/cannon/tripwire/south/delay_4/1_medallar_cent
 execute positioned -1566 45 -141 run function medabots_server:spawn_entities/cannon/search/east/delay_4/1_medallar_cent

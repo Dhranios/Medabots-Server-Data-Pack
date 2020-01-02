@@ -47,7 +47,7 @@ execute positioned -1566 44 -501 run function medabots_server:set_blocks/pot/20_
 execute positioned -1565 44 -500 run function medabots_server:set_blocks/pot/red_plant
 execute positioned -1541 44 -498 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1533 44 -500 run function medabots_server:set_blocks/pot/bomb/delay_5
-execute positioned -1545 44 -487 run function medabots_server:set_blocks/pot/cannon/swiffle/west/delay_4
+execute positioned -1545 44 -487 run function medabots_server:set_blocks/pot/cannon/swivel/west/delay_4
 execute positioned -1546 44 -487 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1547 44 -488 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1548 44 -487 run function medabots_server:set_blocks/pot/2_medallar_cents
