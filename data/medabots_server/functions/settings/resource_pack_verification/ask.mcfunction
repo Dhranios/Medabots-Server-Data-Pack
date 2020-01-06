@@ -11,5 +11,5 @@ tellraw @s[tag=hostile] {"translate":"medabots_server:message.anti_cheating.log"
 execute if entity @s[tag=hostile] run tellraw @a[team=Moderator] {"translate":"medabots_server:message.anti_cheating.log.mod","color":"red","with":[{"selector":"@s"}]}
 scoreboard players add @s[tag=hostile] Warning 1
 execute if entity @s[scores={State=3}] run function medabots_server:gamemodes/default/reset
-execute if entity @s[tag=hostile] run function medabots_server:entities/medabot/spawn_model
+execute if entity @s[scores={Gamemode=0,State=1..}] run function medabots_server:entities/medabot/spawn_model
 

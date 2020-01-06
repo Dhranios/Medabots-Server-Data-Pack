@@ -105,3 +105,6 @@ execute if entity @s[tag=!dying] run function medabots_server:entities/medabot/a
 execute unless entity @s[scores={TransformLTime=1..}] unless entity @s[scores={TransformRTime=1..}] unless entity @s[scores={TransformHTime=1..}] run tag @s add no_transform
 execute if entity @s[tag=!no_transform] run function medabots_server:effects/transformed
 tag @s remove no_transform
+
+# Model
+execute if entity @s[tag=!dead] run function medabots_server:animations/medabot
