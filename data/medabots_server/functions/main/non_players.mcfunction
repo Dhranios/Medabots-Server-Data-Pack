@@ -26,6 +26,9 @@ execute if entity @s[type=minecraft:snowball] run function medabots_server:main/
 execute if entity @s[tag=rubberobo,nbt={HurtTime:5s}] unless entity @s[scores={Stage=1..}] run function medabots_server:entities/rubberobo/caught
 execute if entity @s[tag=rubberobo,scores={Stage=1..},tag=!disabled] run function medabots_server:entities/rubberobo
 
+# Make Medabots do things
+execute if entity @s[type=minecraft:skeleton,tag=medabot] run function medabots_server:entities/medabot
+
 # Make the guards do things
 execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_server:entities/guard
 

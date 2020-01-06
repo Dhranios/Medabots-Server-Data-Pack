@@ -27,6 +27,3 @@ execute if entity @s[scores={NoDefendTime=1..}] run function medabots_server:eff
 execute if entity @s[scores={ParalyzeTime=1..}] run function medabots_server:effects/paralyzed
 execute if entity @s[scores={PerfectGuardTime=1..}] run function medabots_server:effects/perfectly_guarding
 execute if entity @s[scores={ScoutTime=1..}] run function medabots_server:effects/scouting
-
-# A CPU
-execute if entity @s[tag=medabot] run function medabots_server:main/computer_medabots

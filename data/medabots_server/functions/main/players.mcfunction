@@ -15,6 +15,7 @@ execute if entity @s[scores={Gamemode=0,Stage=0..,State=1..2},tag=main] run func
 execute if entity @s[scores={Gamemode=0,Stage=1..,State=1..2},tag=!main] run function medabots_server:stage/non_main_run
 execute if entity @s[scores={Gamemode=0,Stage=1..,LeaveStage=1..,State=3}] run function medabots_server:stage/exit/enforced
 execute if entity @s[scores={Gamemode=0,Stage=1..,LeaveStage=1..,State=0}] run function medabots_server:stage/exit/enforced
+execute if entity @s[scores={Gamemode=0,State=1..}] run function medabots_server:entities/medabot
 execute if entity @s[scores={Gamemode=1}] run function medabots_server:stage/run_fly_course
 scoreboard players reset @s[scores={LeaveStage=0..}] LeaveStage
 
@@ -32,15 +33,6 @@ execute if entity @s[scores={Moderator=0}] run function medabots_server:main/non
 
 # No cheating!
 function #medabots_server:anti_cheating
-
-# Send a killer message depending on parts
-execute if entity @s[scores={Killer=1..}] run function medabots_server:other/killer
-
-# Players are medabots
-function medabots_server:main/medabots
-
-# Make players in combat do something
-execute if entity @s[tag=hostile] run function medabots_server:main/hostile_players
 
 # Functions that run on every player that is not in combat
 execute if entity @s[tag=!hostile] run function medabots_server:main/non_hostile_players

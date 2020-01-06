@@ -1,11 +1,14 @@
 # Part breaks
-execute if entity @s[scores={LegsArmor=0},tag=hostile] run function medabots_server:items/break_medapart
-execute if entity @s[scores={LeftArmArmor=0},tag=hostile] run function medabots_server:items/break_medapart
-execute if entity @s[scores={RightArmArmor=0},tag=hostile] run function medabots_server:items/break_medapart
-execute if entity @s[scores={HeadArmor=0},tag=hostile] run function medabots_server:items/break_medapart
+execute if entity @s[scores={LegsArmor=0}] run function medabots_server:items/break_medapart
+execute if entity @s[scores={LeftArmArmor=0}] run function medabots_server:items/break_medapart
+execute if entity @s[scores={RightArmArmor=0}] run function medabots_server:items/break_medapart
+execute if entity @s[scores={HeadArmor=0}] run function medabots_server:items/break_medapart
 
 # Death animation
 execute if entity @s[tag=dying] run function medabots_server:animations/medabot/death
+
+# Send a killer message depending on parts
+execute if entity @s[scores={Killer=1..}] run function medabots_server:other/killer
 
 # No vanilla combat
 effect give @s minecraft:weakness 1000000 127 true
@@ -93,8 +96,10 @@ execute if entity @s[scores={SelfDestruct=1..}] run function medabots_server:ite
 # Forget the part
 scoreboard players set @s[scores={Time=900..950}] Time 0
 
-# In combat
-execute if entity @s[tag=hostile,tag=!dying] run function medabots_server:main/hostile_medabots
+# Sub-functions
+execute if entity @s[type=!minecraft:player] run function medabots_server:entities/medabot/cpu
+execute if entity @s[type=minecraft:player] run function medabots_server:entities/medabot/player
+execute if entity @s[tag=!dying] run function medabots_server:entities/medabot/active
 
 # Transform timers
 execute unless entity @s[scores={TransformLTime=1..}] unless entity @s[scores={TransformRTime=1..}] unless entity @s[scores={TransformHTime=1..}] run tag @s add no_transform
