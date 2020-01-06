@@ -6,16 +6,15 @@ execute at @e[tag=this_medabot,tag=chest,limit=1] rotated ~ 0 run teleport @s ^ 
 
 # Look left/right
 execute if entity @e[tag=edge_grabbing,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add edge_grabbing
-execute store result entity @s Rotation[0] float 0.01 run data get entity @e[tag=this_medabot,limit=1] Rotation[0] 100
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=-180] at @s run teleport @s[y_rotation=0..120] ~ ~ ~ 120 ~
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=-180] at @s run teleport @s[y_rotation=-120..0] ~ ~ ~ -120 ~
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=-90] at @s run teleport @s[y_rotation=-30..90] ~ ~ ~ -30 ~
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=-90] at @s run teleport @s[y_rotation=90..-150] ~ ~ ~ -150 ~
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=0] at @s run teleport @s[y_rotation=-180..-60] ~ ~ ~ -60 ~
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=0] at @s run teleport @s[y_rotation=60..-180] ~ ~ ~ 60 ~
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=90] at @s run teleport @s[y_rotation=-90..30] ~ ~ ~ 30 ~
-execute if entity @e[tag=this_medabot,tag=chest,y_rotation=90] at @s run teleport @s[y_rotation=150..-90] ~ ~ ~ 150 ~
-
+execute as @e[tag=this_medabot,tag=chest,limit=1] if entity @s[scores={MedabotRotation=..2147483647}] run scoreboard players operation #temp MedabotRotation = @s MedabotRotation
+execute store result score @s HomeRot run data get entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[0] 1000
+scoreboard players add @s[scores={HomeRot=..0}] HomeRot 360000
+scoreboard players operation @s RotationDif = #temp MedabotRotation
+execute if entity @s[scores={RotationDif=..90000,HomeRot=270000..}] run scoreboard players add @s RotationDif 360000
+execute if entity @s[scores={RotationDif=270000..,HomeRot=..90000}] run scoreboard players remove @s RotationDif 360000
+scoreboard players operation @s RotationDif -= @s HomeRot
+execute unless entity @s[scores={RotationDif=-50000..50000}] run scoreboard players operation @s HomeRot -= RotationDif
+execute store result entity @s Rotation[0] float 0.001 run scoreboard players get @s HomeRot
 
 # Look up/down
 execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}

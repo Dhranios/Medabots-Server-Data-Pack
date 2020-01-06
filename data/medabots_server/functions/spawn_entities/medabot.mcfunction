@@ -27,7 +27,7 @@ execute store result score #head Medabot run data get entity @s Item.tag.medabot
 execute store result score #right_arm Medabot run data get entity @s Item.tag.medabots_server.items.right_arm.tag.CustomModelData
 execute store result score #left_arm Medabot run data get entity @s Item.tag.medabots_server.items.left_arm.tag.CustomModelData
 execute store result score #legs Medabot run data get entity @s Item.tag.medabots_server.items.legs.tag.CustomModelData
-execute if score #head Medabot = #right_arm Medabot if score #head Medabot = #left_arm Medabot if score #head Medabot = #legs Medabot store result score @e[tag=new_medabot,limit=1] Medabot run scoreboard players get #head Medabot
+execute if score #head Medabot = #right_arm Medabot if score #head Medabot = #left_arm Medabot if score #head Medabot = #legs Medabot run scoreboard players operation @e[tag=new_medabot,limit=1] Medabot = #head Medabot
 scoreboard players reset #head Medabot
 scoreboard players reset #right_arm Medabot
 scoreboard players reset #left_arm Medabot
