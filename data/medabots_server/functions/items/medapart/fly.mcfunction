@@ -17,6 +17,12 @@ execute if entity @s[scores={LegsArmor=1..,Fly=1..2}] run function medabots_serv
 # CPU behavior
 execute if entity @s[scores={LegsArmor=1..},tag=fly_legs,type=!minecraft:player] run function medabots_server:items/medapart/fly/cpu_behavior
 
+# Carrying
+tag @s add me
+execute if entity @s[tag=carrying,tag=ally_medabot] positioned ~ ~-1.7 ~ as @e[tag=ally_medabot,tag=carried,sort=nearest,limit=1] run function medabots_server:items/medapart/fly/carrying
+execute if entity @s[tag=carrying,tag=enemy_medabot] positioned ~ ~-1.7 ~ as @e[tag=enemy_medabot,tag=carried,sort=nearest,limit=1] run function medabots_server:items/medapart/fly/carrying
+tag @s remove me
+
 # Limit flying to 8 seconds
 execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s FlyTime 0
 scoreboard players set @s[nbt={OnGround:1b}] FlyTime 0

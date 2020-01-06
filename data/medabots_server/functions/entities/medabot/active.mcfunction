@@ -10,6 +10,11 @@ execute if entity @s[tag=wheel_legs,scores={State=1..2}] run function medabots_s
 execute if entity @s[tag=tank_legs,scores={State=1..2}] run function medabots_server:items/medapart/tank
 function medabots_server:items/medapart/swim
 
+execute if entity @s[tag=carried] run function medabots_server:items/medapart/fly/carried
+
+execute if entity @s[tag=!carried,tag=!sneak_pos,tag=!dying,nbt={OnGround:0b},tag=ally_medabot] unless entity @s[scores={LegsArmor=1..},tag=fly_legs] run function medabots_server:items/medapart/fly/carry_me
+execute if entity @s[tag=!carried,tag=!sneak_pos,tag=!dying,nbt={OnGround:0b},tag=enemy_medabot] unless entity @s[scores={LegsArmor=1..},tag=fly_legs] run function medabots_server:items/medapart/fly/carry_me
+
 # Medaforce getting blocked
 execute if entity @s[tag=medaforce_block] run function medabots_server:effects/blocked_medaforce_toggle
 
