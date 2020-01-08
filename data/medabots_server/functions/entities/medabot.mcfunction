@@ -97,9 +97,9 @@ execute if entity @s[scores={SelfDestruct=1..}] run function medabots_server:ite
 scoreboard players set @s[scores={Time=900..950}] Time 0
 
 # Sub-functions
+execute if entity @s[tag=!dying] run function medabots_server:entities/medabot/active
 execute if entity @s[type=!minecraft:player] run function medabots_server:entities/medabot/cpu
 execute if entity @s[type=minecraft:player] run function medabots_server:entities/medabot/player
-execute if entity @s[tag=!dying] run function medabots_server:entities/medabot/active
 
 # Transform timers
 execute unless entity @s[scores={TransformLTime=1..}] unless entity @s[scores={TransformRTime=1..}] unless entity @s[scores={TransformHTime=1..}] run tag @s add no_transform

@@ -1,10 +1,6 @@
 # Move with
 execute at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^ ^
 
-# Look left/right
-execute store result entity @s Rotation[0] float 0.01 run data get entity @e[type=minecraft:ghast,tag=this_master_hand,limit=1] Rotation[0] 100
-execute unless data entity @s Pose.Head[0] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}
-
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run scoreboard players set @s[tag=!grab] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run tag @s add grab
 execute if entity @s[tag=grab] run function medabots_server:animations/master_hand/grab/hand

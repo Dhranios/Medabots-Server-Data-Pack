@@ -120,6 +120,7 @@ tag @s[scores={Walk=1..}] add walking
 tag @s[scores={WalkOnWater=1..}] add walking
 tag @s[scores={WalkUnderWater=1..}] add walking
 tag @s[scores={Swimming=1..}] add walking
+tag @s[nbt={OnGround:0b}] add walking
 scoreboard players set @s[scores={Walk=1..}] Walk 0
 scoreboard players set @s[scores={WalkOnWater=1..}] WalkOnWater 0
 scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0

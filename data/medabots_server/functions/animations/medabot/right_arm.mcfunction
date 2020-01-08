@@ -29,7 +29,6 @@ scoreboard players reset #temp Time
 execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s[tag=!sneak_pos] {Pose:{Head:[0.0f,0.0f,0.001f]}}
 execute if entity @e[tag=edge_grabbing,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add edge_grabbing
 data merge entity @s[tag=!edge_grabbing,tag=was_edge_grabbing] {Pose:{Head:[0.0f,0.0f,0.001f]}}
-execute if entity @e[nbt={OnGround:0b},tag=this_medabot,tag=!medabot_model,limit=1] run tag @s[tag=!fly,tag=!float] add in_air
 data merge entity @s[tag=!selected,tag=!guarding,tag=!walking,tag=!running,tag=!sneaking,tag=!edge_grabbing,tag=!dancing,tag=!carried] {Pose:{Head:[0.0f,0.0f,0.001f]}}
 data merge entity @s[tag=!selected,tag=carried] {Pose:{Head:[-140.0f,0.0f,0.001f]}}
 tag @s[tag=walk_animation_other_way,tag=!walking,tag=!running,tag=!sneaking] remove walk_animation_other_way
@@ -51,5 +50,4 @@ tag @s[tag=guarding] remove guarding
 tag @s[tag=was_edge_grabbing] remove was_edge_grabbing
 tag @s[tag=edge_grabbing] add was_edge_grabbing
 tag @s[tag=edge_grabbing] remove edge_grabbing
-tag @s[tag=in_air] remove in_air
 execute if entity @s[tag=dancing] run function medabots_server:animations/medabot/dancing/right_arm

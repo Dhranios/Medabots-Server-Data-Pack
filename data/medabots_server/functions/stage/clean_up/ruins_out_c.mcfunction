@@ -15,7 +15,7 @@ scoreboard players reset @a[scores={Stage=27},distance=0.1..] StageVersion
 scoreboard players reset @a[scores={Stage=27},distance=0.1..] Stage
 tag @e[scores={Stage=27},type=!minecraft:player,tag=barrier] add air
 tag @e[scores={Stage=27},type=!minecraft:player,tag=barrier] remove barrier
-data merge block -1636 51 -704 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_out_c/play"}}'}
-setblock -1636 52 -706 minecraft:redstone_block
+data merge block -1636 51 -701 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_out_c/play"}}'}
+setblock -1636 52 -703 minecraft:redstone_block
 clear @s minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}
 execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}
