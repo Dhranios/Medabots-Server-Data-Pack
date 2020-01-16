@@ -1,6 +1,6 @@
 execute if entity @s[tag=salesman,tag=traded_with] as @a[tag=trading,distance=..4,scores={Trading=2,Dialog=0}] run function medabots_server:shopping/salesman
 
-execute if entity @s[tag=mineral_buyer,tag=traded_with] as @a[tag=trading,distance=..4,scores={Trading=2,Dialog=0}] run function medabots_server:shopping/mineral_buyer
+execute if entity @s[tag=loot_buyer,tag=traded_with] as @a[tag=trading,distance=..4,scores={Trading=2,Dialog=0}] run function medabots_server:shopping/loot_buyer
 
 execute if entity @s[tag=medabot_salesman,tag=traded_with] as @a[tag=trading,distance=..4,scores={Trading=2,Dialog=0}] unless entity @s[scores={ShopIndex0=-1..}] run function medabots_server:shopping/medabot_salesman
 execute if entity @s[tag=medabot_salesman] as @a[tag=trading_with_medabot_salesman,distance=..4,scores={Dialog=0,ShopIndex0=1}] unless entity @s[scores={ShopIndex1=-1..}] unless entity @s[scores={ShopIndex2=-1..}] run function medabots_server:shopping/medabot_salesman/0

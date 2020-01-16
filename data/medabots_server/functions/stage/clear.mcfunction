@@ -1,9 +1,9 @@
 execute if entity @s[scores={Jukebox=1..}] run scoreboard players set @s MusicType 1
-execute if entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Stage=23..39}] MusicType 22
+execute if entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Stage=23..29}] MusicType 22
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s PrevMusicType 0
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s MusicType 58
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s OldMusicType 1
-execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Stage=23..39}] OldMusicType 22
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Stage=23..29}] OldMusicType 22
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 teleport @s ~ ~ ~ -180 0
 tag @s remove crazy_hand_spawned
