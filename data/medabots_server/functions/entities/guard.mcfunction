@@ -21,6 +21,7 @@ teleport @s[tag=!dying,scores={ConfuseTime=1..},tag=!disabled] ~ ~ ~ ~-18 ~
 # Attack
 execute unless block ~ ~ ~ minecraft:water unless block ~ ~ ~1 #medabots_server:guard_pathables unless block ~ ~ ~1 #minecraft:slabs[type=bottom] unless block ~ ~ ~-1 #medabots_server:guard_pathables unless block ~ ~ ~-1 #minecraft:slabs[type=bottom] unless block ~1 ~ ~ #medabots_server:guard_pathables unless block ~1 ~ ~ #minecraft:slabs[type=bottom] unless block ~-1 ~ ~ #medabots_server:guard_pathables unless block ~-1 ~ ~ #minecraft:slabs[type=bottom] run tag @s[tag=!disabled] add cannot_move
 execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^0.5 if entity @a[tag=hostile,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
+execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^1 ^0.5 if entity @a[tag=hostile,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
 
 # Walk to target or random location
 tag @s remove walking
