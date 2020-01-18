@@ -3,6 +3,7 @@ execute if entity @s[scores={DeathTime=1}] run playsound medabots_server:entity.
 data merge entity @s[scores={DeathTime=1}] {AbsorptionAmount:1000000.0f}
 execute if entity @s[scores={DeathTime=1}] run loot spawn ~ ~ ~ kill @s
 execute if entity @s[scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
+execute if entity @s[scores={DeathTime=1}] as @e[distance=..1] unless entity @s[type=!minecraft:item,type=!minecraft:experience_orb] run data merge entity @s {Invulnerable:1b}
 execute if entity @s[scores={DeathTime=1}] run fill ~ ~2 ~ ~ ~2 ~ minecraft:air replace minecraft:barrier
 execute if entity @s[scores={DeathTime=1}] run fill ~ ~ ~ ~ ~ ~ minecraft:air replace minecraft:iron_block
 execute if entity @s[scores={DeathTime=1}] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt

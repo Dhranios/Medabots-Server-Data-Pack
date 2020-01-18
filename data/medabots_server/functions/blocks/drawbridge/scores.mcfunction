@@ -144,10 +144,6 @@ execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:black_glazed_terraco
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=west] run tag @s add west_black_glazed_terracotta_1
 execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:barrier run tag @s add barrier_1
 # Delete this
-execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:cyan_terracotta run tag @s add cyan_terracotta_1
-execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:cyan_terracotta run tag @s add cyan_terracotta_1
-execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:cyan_terracotta run tag @s add cyan_terracotta_1
-execute if entity @s[tag=south] if block ~ ~-1 ~1 minecraft:cyan_terracotta run tag @s add cyan_terracotta_1
 execute if entity @s[tag=east] if block ~1 ~-1 ~ minecraft:stone_bricks run tag @s add stone_bricks_1
 execute if entity @s[tag=west] if block ~-1 ~-1 ~ minecraft:stone_bricks run tag @s add stone_bricks_1
 execute if entity @s[tag=north] if block ~ ~-1 ~-1 minecraft:stone_bricks run tag @s add stone_bricks_1

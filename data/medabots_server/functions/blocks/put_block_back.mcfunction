@@ -37,4 +37,3 @@ execute if entity @s[tag=west_black_glazed_terracotta] run setblock ~ ~-1 ~ mine
 execute if entity @s[tag=barrier] run setblock ~ ~-1 ~ minecraft:barrier
 # Delete this
 execute if entity @s[tag=stone_bricks] run setblock ~ ~-1 ~ minecraft:stone_bricks
-execute if entity @s[tag=cyan_terracotta] run setblock ~ ~-1 ~ minecraft:cyan_terracotta

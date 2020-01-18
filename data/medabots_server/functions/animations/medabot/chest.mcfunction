@@ -12,6 +12,8 @@ execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={H
 execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] at @s[tag=!moving_straight] facing entity @e[tag=this_medabot,tag=!medabot_model,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[tag=!edge_grabbing,tag=!carried] at @s[tag=moving_straight] rotated as @e[tag=this_medabot,tag=!medabot_model,limit=1] rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] store result score @s MedabotRotation run data get entity @s Rotation[0] 1000
+scoreboard players remove @s[scores={MedabotRotation=360000..}] MedabotRotation 360000
+scoreboard players add @s[scores={MedabotRotation=..-1}] MedabotRotation 360000
 
 # Get rotation
 execute store result score @s HomeRot run data get entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[0] 1000
@@ -20,12 +22,12 @@ execute unless entity @s[scores={MedabotRotation=..2147483647}] run scoreboard p
 scoreboard players operation @s RotationDif = @s MedabotRotation
 
 # Rotated based on looking direction
-execute if entity @s[tag=!moving_straight,scores={RotationDif=..90000,HomeRot=270000..}] run scoreboard players add @s RotationDif 360000
-execute if entity @s[tag=!moving_straight,scores={RotationDif=270000..,HomeRot=..90000}] run scoreboard players remove @s RotationDif 360000
+execute if entity @s[scores={RotationDif=..90000,HomeRot=270000..}] run scoreboard players add @s RotationDif 360000
+execute if entity @s[scores={RotationDif=270000..,HomeRot=..90000}] run scoreboard players remove @s RotationDif 360000
 scoreboard players operation @s RotationDif -= @s HomeRot
-execute unless entity @s[tag=!moving_straight,scores={RotationDif=-50000..50000},tag=!edge_grabbing,tag=!carried] run function medabots_server:animations/medabot/rotate_body
-scoreboard players remove @s[tag=!moving_straight,scores={MedabotRotation=360000..}] MedabotRotation 360000
-scoreboard players add @s[tag=!moving_straight,scores={MedabotRotation=..0}] MedabotRotation 360000
+execute unless entity @s[scores={RotationDif=-50000..50000},tag=!edge_grabbing,tag=!carried] run function medabots_server:animations/medabot/rotate_body
+scoreboard players remove @s[scores={MedabotRotation=360000..}] MedabotRotation 360000
+scoreboard players add @s[scores={MedabotRotation=..0}] MedabotRotation 360000
 execute store result entity @s[tag=!moving_straight,tag=!edge_grabbing,tag=!carried] Rotation[0] float 0.001 run scoreboard players get @s MedabotRotation
 tag @s remove moving_straight
 

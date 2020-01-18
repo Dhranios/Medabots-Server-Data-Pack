@@ -37,4 +37,3 @@ execute if block ~ ~-1 ~ minecraft:black_glazed_terracotta[facing=west] run tag 
 execute if block ~ ~-1 ~ minecraft:barrier run tag @s add barrier
 # Delete this
 execute if block ~ ~-1 ~ minecraft:stone_bricks run tag @s add stone_bricks
-execute if block ~ ~-1 ~ minecraft:cyan_terracotta run tag @s add cyan_terracotta

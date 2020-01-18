@@ -11,6 +11,7 @@ execute if entity @s[scores={DeathTime=1}] run summon minecraft:experience_orb ~
 execute if entity @s[scores={DeathTime=1}] run summon minecraft:experience_orb ~-1 ~ ~1 {Value:1s}
 execute if entity @s[scores={DeathTime=1}] run summon minecraft:experience_orb ~1 ~ ~-1 {Value:1s}
 execute if entity @s[scores={DeathTime=1}] run summon minecraft:experience_orb ~-1 ~ ~-1 {Value:1s}
+execute if entity @s[scores={DeathTime=1}] as @e[distance=..3] unless entity @s[type=!minecraft:item,type=!minecraft:experience_orb] run data merge entity @s {Invulnerable:1b}
 execute if entity @s[scores={DeathTime=1..19}] run teleport @s ~ ~0.4 ~-0.8
 execute if entity @s[scores={DeathTime=20..24}] run teleport @s ~ ~ ~-0.8
 execute if entity @s[scores={DeathTime=25..34}] run teleport @s ~ ~-0.4 ~-0.4

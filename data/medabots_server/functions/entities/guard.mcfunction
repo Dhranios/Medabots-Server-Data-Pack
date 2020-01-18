@@ -51,3 +51,4 @@ execute if entity @s[tag=dead] run scoreboard players reset #temp GuardNr
 
 # Model
 execute if entity @s[tag=!dead] run function medabots_server:animations/guard
+data merge entity @s {Invulnerable:0b}
