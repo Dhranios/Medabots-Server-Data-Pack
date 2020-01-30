@@ -16,7 +16,11 @@ execute store result score #temp Stage run data get entity @s Inventory[{Slot:-1
 execute if score #temp Stage = @s Stage run tag @s[tag=!no_custom] add cleared_custom_stage
 scoreboard players reset #temp Stage
 scoreboard players reset @s Stage
-data modify entity @s[tag=cleared_custom_stage] Inventory[{Slot:-106b}].tag.medabots_server.cleared set value 1b
-data modify entity @s[tag=cleared_custom_stage] Inventory[{Slot:-106b}].tag.display.Lore[3] set value '{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.cleared","with":[{"color":"green","translate":"medabots_server:item.custom_stage.cleared.yes"}]}'
+execute if entity @s[tag=cleared_custom_stage] run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
+execute if entity @s[tag=cleared_custom_stage] run data modify block -286 0 -52 Items[0] merge from entity @s Inventory[{Slot:-106b}]
+execute if entity @s[tag=cleared_custom_stage] run data modify block -286 0 -52 Items[0].tag.medabots_server.cleared set value 1b
+execute if entity @s[tag=cleared_custom_stage] run data modify block -286 0 -52 Items[0].tag.display.Lore[3] set value '{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.cleared","with":[{"color":"green","translate":"medabots_server:item.custom_stage.cleared.yes"}]}'
+execute if entity @s[tag=cleared_custom_stage] run loot replace entity @s weapon.offhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute if entity @s[tag=cleared_custom_stage] run setblock -286 0 -52 minecraft:bedrock
 tag @s remove no_custom
 tag @s remove cleared_custom_stage

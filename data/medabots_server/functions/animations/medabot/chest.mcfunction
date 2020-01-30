@@ -7,10 +7,9 @@ execute store result score @s HomeX run scoreboard players get @e[tag=this_medab
 execute store result score @s HomeZ run scoreboard players get @e[tag=this_medabot,tag=!medabot_model,limit=1] OtherZ
 scoreboard players operation @s HomeX -= @s PosX
 scoreboard players operation @s HomeZ -= @s PosZ
-execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] at @s positioned ^ ^.38 ^.25 rotated as @e[tag=this_medabot,tag=!medabot_model,limit=1] rotated ~ 0 positioned ^ ^ ^3 if entity @e[tag=this_medabot,tag=!medabot_model,limit=1,distance=..2.99] run tag @s add moving_straight
-execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] at @s positioned ^ ^.38 ^.25 rotated as @e[tag=this_medabot,tag=!medabot_model,limit=1] rotated ~ 0 positioned ^ ^ ^-3 if entity @e[tag=this_medabot,tag=!medabot_model,limit=1,distance=..2.99] run tag @s add moving_straight
-execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] at @s[tag=!moving_straight] facing entity @e[tag=this_medabot,tag=!medabot_model,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[tag=!edge_grabbing,tag=!carried] at @s[tag=moving_straight] rotated as @e[tag=this_medabot,tag=!medabot_model,limit=1] rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] at @s positioned ^ ^.38 ^.25 rotated as @e[tag=this_medabot,tag=!medabot_model,limit=1] rotated ~ 0 positioned ^ ^ ^-0.5 if entity @e[tag=this_medabot,tag=!medabot_model,limit=1,distance=..0.49] run tag @s add moving_backwards
+execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] at @s[tag=!moving_backwards] facing entity @e[tag=this_medabot,tag=!medabot_model,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[tag=!edge_grabbing,tag=!carried] at @s[tag=moving_backwards] rotated as @e[tag=this_medabot,tag=!medabot_model,limit=1] rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[tag=!edge_grabbing,tag=!carried] unless entity @s[scores={HomeX=0,HomeZ=0}] store result score @s MedabotRotation run data get entity @s Rotation[0] 1000
 scoreboard players remove @s[scores={MedabotRotation=360000..}] MedabotRotation 360000
 scoreboard players add @s[scores={MedabotRotation=..-1}] MedabotRotation 360000
@@ -28,8 +27,8 @@ scoreboard players operation @s RotationDif -= @s HomeRot
 execute unless entity @s[scores={RotationDif=-50000..50000},tag=!edge_grabbing,tag=!carried] run function medabots_server:animations/medabot/rotate_body
 scoreboard players remove @s[scores={MedabotRotation=360000..}] MedabotRotation 360000
 scoreboard players add @s[scores={MedabotRotation=..0}] MedabotRotation 360000
-execute store result entity @s[tag=!moving_straight,tag=!edge_grabbing,tag=!carried] Rotation[0] float 0.001 run scoreboard players get @s MedabotRotation
-tag @s remove moving_straight
+execute store result entity @s[tag=!moving_backwards,tag=!edge_grabbing,tag=!carried] Rotation[0] float 0.001 run scoreboard players get @s MedabotRotation
+tag @s remove moving_backwards
 
 # Move with
 execute if entity @a[tag=sneak_pos,tag=this_medabot,limit=1] run tag @s add sneak_pos

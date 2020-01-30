@@ -5,7 +5,11 @@ tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:male_tinpet"
 tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}}] add female_tinpet
 tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:neutral_tinpet"}}}}] add neutral_tinpet
 
-data modify entity @s SelectedItem.tag.medabots_server merge value {activated:1b}
+setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
+data modify block -286 0 -52 Items[0] merge from entity @s SelectedItem
+data modify block -286 0 -52 Items[0].tag.medabots_server merge value {activated:1b}
+loot replace entity @s weapon.mainhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+setblock -286 0 -52 minecraft:bedrock
 
 function medabots_server:gamemodes/default/load_medabot_inventory
 

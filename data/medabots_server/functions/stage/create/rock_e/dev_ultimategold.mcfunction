@@ -134,6 +134,7 @@ execute positioned -1846 45 -312 run function medabots_server:set_blocks/wall
 execute positioned -1844 45 -310 run function medabots_server:set_blocks/wall
 execute positioned -1840 45 -310 run function medabots_server:set_blocks/wall
 execute positioned -1852 45 -326 run function medabots_server:set_blocks/wall
+execute positioned -1887 45 -314 run function medabots_server:set_blocks/wall
 execute positioned -1829 45 -266 run function medabots_server:set_blocks/door/west/power_0
 execute positioned -1825 45 -278 run function medabots_server:set_blocks/door/south/power_1
 execute positioned -1820 45 -312 run function medabots_server:set_blocks/door/south/power_0

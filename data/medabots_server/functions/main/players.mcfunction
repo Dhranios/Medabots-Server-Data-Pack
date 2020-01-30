@@ -7,6 +7,9 @@ execute if entity @s[scores={Verified=2}] run function medabots_server:settings/
 # Tutorial
 execute if entity @s[tag=try_tutorial_level] run function medabots_server:stage/try/tutorial
 
+# Make players who did nothing for 1 minute invulnerable
+function medabots_server:other/afk_system
+
 # Run stage
 execute if entity @s[scores={Gamemode=0,Stage=1..,LeaveStage=1..},tag=!stage_builder] run function medabots_server:stage/exit
 execute if entity @s[scores={Stage=1..},tag=stage_builder] run function medabots_server:stage/run
@@ -24,9 +27,6 @@ execute if entity @s[tag=stage_builder] run function medabots_server:stage/build
 
 # Make the random server messages appear
 function medabots_server:other/random_message
-
-# Make players who did nothing for 1 minute invulnerable
-function medabots_server:other/afk_system
 
 # Functions that run on every player on the server except mods
 execute if entity @s[scores={Moderator=0}] run function medabots_server:main/non_mods

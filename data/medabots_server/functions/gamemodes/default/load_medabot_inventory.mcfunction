@@ -9,16 +9,14 @@ loot replace entity @s armor.head mine -286 0 -52 minecraft:golden_pickaxe{phi:{
 setblock -286 0 -52 minecraft:bedrock
 
 # Load Medaparts
-replaceitem entity @s hotbar.0 minecraft:fishing_rod{Unbreakable:1b}
-replaceitem entity @s hotbar.1 minecraft:fishing_rod{Unbreakable:1b}
-replaceitem entity @s hotbar.2 minecraft:fishing_rod{Unbreakable:1b}
-replaceitem entity @s hotbar.3 minecraft:fishing_rod{Unbreakable:1b}
-replaceitem entity @s hotbar.4 minecraft:fishing_rod{Unbreakable:1b}
-data modify entity @s Inventory[{Slot:0b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.legs.tag
-data modify entity @s Inventory[{Slot:1b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.left_arm.tag
-data modify entity @s Inventory[{Slot:2b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.right_arm.tag
-data modify entity @s Inventory[{Slot:3b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.head.tag
-data modify entity @s Inventory[{Slot:4b}].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.medal.tag
+setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:1b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:2b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:3b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:4b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}}]}
+data modify block -286 0 -52 Items[0].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.legs.tag
+data modify block -286 0 -52 Items[1].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.left_arm.tag
+data modify block -286 0 -52 Items[2].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.right_arm.tag
+data modify block -286 0 -52 Items[3].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.head.tag
+data modify block -286 0 -52 Items[4].tag merge from entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.medal.tag
+loot replace entity @s hotbar.0 5 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+setblock -286 0 -52 minecraft:bedrock
 replaceitem entity @s hotbar.8 minecraft:diamond_axe{CustomModelData:1,Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.pot_breaker.description"}']},AttributeModifiers:[],HideFlags:62,CanDestroy:["minecraft:chest"],medabots_server:{id:"medabots_server:pot_breaker"}}
 replaceitem entity @s inventory.8 minecraft:chest{CustomModelData:1,Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.loot_container"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.loot_container.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.loot_container.items","with":["0"]}','{"italic":false,"color":"white","translate":"medabots_server:item.loot_container.medallars","with":[{"translate":"medabots_server:item.loot_container.medallars.value","with":["0","0","0"]}]}']},AttributeModifiers:[],HideFlags:62,medabots_server:{id:"medabots_server:loot_container",medallars:0d,items:[]}}
 
