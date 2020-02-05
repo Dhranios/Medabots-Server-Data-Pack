@@ -5,6 +5,7 @@ execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_vers
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] Music 0
 scoreboard players set @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] MusicType 4
 scoreboard players set @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] Stage 49
+scoreboard players set @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] Gamemode 0
 execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/arena_settings
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_squidguts=true,vs_squidguts_battle=false}},scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_seaslug=true,vs_seaslug_battle=false}},scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle

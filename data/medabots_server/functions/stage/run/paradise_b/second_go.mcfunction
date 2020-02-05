@@ -56,5 +56,6 @@ execute as @e[x=-1665,y=42,z=-638,dx=64,dy=7,dz=63,type=!minecraft:player] unles
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/paradise_b
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/paradise_b_second_go
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:paradise_b/robattle players
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/get_score/time_damage_money
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] positioned -1634 51 -607 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

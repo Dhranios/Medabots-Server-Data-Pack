@@ -25,5 +25,6 @@ execute as @e[x=-1602,y=42,z=-815,dx=61,dy=7,dz=62,type=!minecraft:player] unles
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/snowfield_d
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/snowfield_d_first_go
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:snowfield_d/robattle players
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/get_score/time_damage_money
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] positioned -1572 51 -784 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

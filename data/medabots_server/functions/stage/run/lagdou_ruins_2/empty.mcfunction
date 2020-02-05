@@ -6,5 +6,6 @@ execute as @e[scores={Stage=37},tag=practice_battle] run tag @e[scores={Stage=37
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/lagdou_ruins_2
 advancement grant @s[scores={BattlingMedabots=1,State=1..},advancements={medabots_server:stages/wave_1/lagdou_ruins_2_first_go=true}] only medabots_server:stages/wave_1/lagdou_ruins_2_second_go
 advancement grant @s[scores={BattlingMedabots=1,State=1..},advancements={medabots_server:stages/wave_1/lagdou_ruins_2_first_go=false}] only medabots_server:stages/wave_1/lagdou_ruins_2_first_go
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] positioned -1295 51 -32 run function medabots_server:stage/clear
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=37}] run function medabots_server:stage/get_score/time_damage_kills
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=37}] positioned -1295 51 -32 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

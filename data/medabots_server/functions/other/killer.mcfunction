@@ -10,4 +10,5 @@ scoreboard players set @s[scores={Message=3},type=!minecraft:player] Message 0
 execute if entity @s[scores={Killer=1}] run function medabots_server:other/killer/message
 
 # Reset killer score
+execute if entity @s[scores={Killer=1}] run scoreboard players add @s TotalKills 1
 scoreboard players set @s[scores={Killer=1}] Killer 0

@@ -27,3 +27,11 @@ execute at @s[tag=!refresh] run teleport @s ~ ~ ~ ~-0.1 ~
 execute at @s[tag=refresh] run teleport @s ~ ~ ~ ~0.1 ~
 data merge entity @s[tag=!refresh] {Air:0}
 data merge entity @s[tag=refresh] {Air:1}
+
+# Store old position
+scoreboard players operation @s OtherX = @s PosX
+scoreboard players operation @s OtherY = @s PosY
+scoreboard players operation @s OtherZ = @s PosZ
+execute store result score @s PosX run data get entity @s Pos[0] 100
+execute store result score @s PosY run data get entity @s Pos[1] 100
+execute store result score @s PosZ run data get entity @s Pos[2] 100

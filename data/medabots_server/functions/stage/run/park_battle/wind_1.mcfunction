@@ -5,5 +5,6 @@ execute as @e[x=-1973,y=0,z=-589,dx=50,dy=50,dz=50,type=!minecraft:player] unles
 execute as @e[scores={Stage=50},tag=practice_battle] run tag @e[scores={Stage=50},tag=medabot] add practice_robattle
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/park_battle
 tag @s[scores={BattlingMedabots=1,State=1..},tag=story_battle,advancements={medabots_server:story_progression/infinity={new_look_new_chances=true,new_look_new_chances_battle=false}}] add dialog_infinity_new_look_new_chances_battle
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] positioned -1949 51 -564 run function medabots_server:stage/clear
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=50}] run function medabots_server:stage/get_score/time_damage_kills
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=50}] positioned -1949 51 -564 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

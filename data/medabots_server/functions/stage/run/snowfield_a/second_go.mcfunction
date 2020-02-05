@@ -18,4 +18,5 @@ execute if block -1649 44 -227 minecraft:lime_wool if block -1632 44 -225 minecr
 execute as @e[x=-1668,y=43,z=-247,dx=105,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 5
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/snowfield_a
 advancement grant @s[tag=clear_stage] only medabots_server:stages/wave_1/snowfield_a_second_go
+execute if entity @s[tag=clear_stage] run function medabots_server:stage/get_score/time_damage_money
 execute if entity @s[tag=clear_stage] positioned -1620 51 -216 run function medabots_server:stage/clear

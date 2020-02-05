@@ -78,3 +78,11 @@ execute if entity @s[tag=dead] as @e[scores={MedabotNr=1..}] if score @s Medabot
 teleport @s[tag=dead] ~ -1000 ~
 scoreboard players reset #temp MedabotNr
 execute if entity @s[nbt=!{ArmorItems:[{id:"minecraft:structure_void"}]}] run replaceitem entity @s armor.head minecraft:structure_void
+
+# Store old position
+scoreboard players operation @s OtherX = @s PosX
+scoreboard players operation @s OtherY = @s PosY
+scoreboard players operation @s OtherZ = @s PosZ
+execute store result score @s PosX run data get entity @s Pos[0] 100
+execute store result score @s PosY run data get entity @s Pos[1] 100
+execute store result score @s PosZ run data get entity @s Pos[2] 100

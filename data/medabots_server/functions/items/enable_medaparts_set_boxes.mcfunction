@@ -42,4 +42,18 @@ setblock -286 1 -52 minecraft:shulker_box
 data modify block -286 1 -52 Items set from entity @s ArmorItems[3].tag.medabots_server.items
 data modify block -286 1 -52 Items[{tag:{medabots_server:{activated:0b}}}].tag.display.Lore append value '{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}'
 data modify block -286 1 -52 Items[{tag:{medabots_server:{activated:0b}}}].tag.medabots_server.activated set value 1b
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:0b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:1b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:2b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:3b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:4b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:5b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:6b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:7b}]
+data remove entity @s ArmorItems[3].tag.medabots_server.items[{Slot:8b}]
+data modify entity @s ArmorItems[3].tag.medabots_server.items[{Slot:-106b}] merge value {Slot:0b}
+setblock -287 0 -52 minecraft:shulker_box
+data modify block -287 0 -52 Items set from entity @s ArmorItems[3].tag.medabots_server.items
+data modify block -287 0 -52 Items[{tag:{medabots_server:{activated:0b}}}].tag.display.Lore append value '{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}'
+data modify block -287 0 -52 Items[{tag:{medabots_server:{activated:0b}}}].tag.medabots_server.activated set value 1b
 kill @s

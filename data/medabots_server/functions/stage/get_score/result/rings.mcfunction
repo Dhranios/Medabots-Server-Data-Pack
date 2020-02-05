@@ -1,0 +1,2 @@
+tellraw @s {"translate":"medabots_server:message.stage.score.results.rings","color":"green","with":[{"score":{"objective":"RingsTotal","name":"@s"}},{"score":{"objective":"Rings","name":"@s"}}]}
+scoreboard players operation @s Score += @s RingsTotal

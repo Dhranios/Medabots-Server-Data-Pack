@@ -47,6 +47,9 @@ tag @s remove two_legged_legs
 tag @s remove wheel_legs
 tag @s remove tank_legs
 tag @s remove swim_legs
+tag @s remove dying
+tag @s remove had_death
+tag @s remove retry
 scoreboard players reset @s StageIndex
 scoreboard players reset @s StageVersion
 scoreboard players reset @s NeededPlayers
@@ -58,22 +61,23 @@ effect give @s minecraft:instant_health 1 19 true
 
 # Re-give items
 clear @s minecraft:diamond_pickaxe{medabots_server:{id:"medabots_server:help"}}
-execute unless entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",medallars:0d}}}]}] at @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",items:[{}]}}}]}] run function medabots_server:items/give_obtained_item
+execute unless entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",medallars:0d}}}]}] at @s run function medabots_server:items/give_obtained_item
+execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",items:[{}]}}}]}] at @s run function medabots_server:items/give_obtained_item
 
 # Restore inventory
 function medabots_server:gamemodes/default/load_old_inventory
 
 # Remove dropped Medapart
 setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:1b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:2b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:3b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:4b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:5b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:6b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:7b,id:"minecraft:stone",Count:1b,tag:{remove:1b}},{Slot:8b,id:"minecraft:stone",Count:1b,tag:{remove:1b}}]}
-data modify block -286 0 -52 Items[0] merge from entity @s Inventory[{Slot:0b}]
-data modify block -286 0 -52 Items[1] merge from entity @s Inventory[{Slot:1b}]
-data modify block -286 0 -52 Items[2] merge from entity @s Inventory[{Slot:2b}]
-data modify block -286 0 -52 Items[3] merge from entity @s Inventory[{Slot:3b}]
-data modify block -286 0 -52 Items[4] merge from entity @s Inventory[{Slot:4b}]
-data modify block -286 0 -52 Items[5] merge from entity @s Inventory[{Slot:5b}]
-data modify block -286 0 -52 Items[6] merge from entity @s Inventory[{Slot:6b}]
-data modify block -286 0 -52 Items[7] merge from entity @s Inventory[{Slot:7b}]
-data modify block -286 0 -52 Items[8] merge from entity @s Inventory[{Slot:8b}]
+data modify block -286 0 -52 Items[0] set from entity @s Inventory[{Slot:0b}]
+data modify block -286 0 -52 Items[1] set from entity @s Inventory[{Slot:1b}]
+data modify block -286 0 -52 Items[2] set from entity @s Inventory[{Slot:2b}]
+data modify block -286 0 -52 Items[3] set from entity @s Inventory[{Slot:3b}]
+data modify block -286 0 -52 Items[4] set from entity @s Inventory[{Slot:4b}]
+data modify block -286 0 -52 Items[5] set from entity @s Inventory[{Slot:5b}]
+data modify block -286 0 -52 Items[6] set from entity @s Inventory[{Slot:6b}]
+data modify block -286 0 -52 Items[7] set from entity @s Inventory[{Slot:7b}]
+data modify block -286 0 -52 Items[8] set from entity @s Inventory[{Slot:8b}]
 execute if entity @s[tag=drop_head] run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.head set value {}
 execute if entity @s[tag=drop_head] run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.display.Lore[1] set value '{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}'
 execute if entity @s[tag=drop_right_arm] run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.right_arm set value {}
@@ -111,3 +115,5 @@ scoreboard players reset @s HeadUsesPer
 scoreboard players reset @s Medabot
 scoreboard players reset @s State
 scoreboard players reset @s Gamemode
+scoreboard players reset @s DeathTime
+gamemode adventure @s

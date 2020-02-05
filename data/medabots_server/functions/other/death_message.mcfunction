@@ -14,3 +14,4 @@ execute if entity @s[tag=!had_death] as @e[scores={Killer=1},limit=1,sort=neares
 
 # no message? try again
 execute if entity @s[tag=!had_death,tag=!retry] run function medabots_server:other/death_message/retry
+tag @s[tag=had_death] remove had_death

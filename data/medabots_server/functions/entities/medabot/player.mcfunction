@@ -79,6 +79,7 @@ tag @s[scores={Time=0}] remove head_selected
 tag @s[scores={Time=0}] remove right_arm_selected
 tag @s[scores={Time=0}] remove left_arm_selected
 execute if entity @s[scores={Time=0,State=1,UsePart=1..}] run function medabots_server:items/medapart/activate/player
+execute if entity @s[scores={State=1}] run scoreboard players add @s TotalTime 1
 
 # Static flying
 tag @s[scores={State=1,UsePart=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{activated:1b,move:"fly",part:"legs"}}}]}] add static_flying 
@@ -91,6 +92,7 @@ execute if entity @s[tag=!checked_effects,nbt={SelectedItem:{tag:{medabots_serve
 tag @s[tag=checked_effects,nbt=!{SelectedItem:{tag:{medabots_server:{id:"medabots_server:pot_breaker"}}}}] remove checked_effects
 
 # Damage the selected part
+execute if entity @s[scores={Damage=1..}] run scoreboard players operation @s TotalDamage += @s Damage
 execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=fell] if score @s LegsArmor < @s Damage run scoreboard players set @s LegsArmor 0
 execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=fell] if score @s LegsArmor >= @s Damage run scoreboard players operation @s LegsArmor -= @s Damage
 execute if entity @s[scores={Damage=1..,LegsArmor=1..},nbt={SelectedItemSlot:0}] unless entity @s[scores={LegsArmor=0..},tag=fell] unless entity @s[scores={NoDefendTime=1..}] if score @s LegsArmor < @s Damage run scoreboard players set @s LegsArmor 0

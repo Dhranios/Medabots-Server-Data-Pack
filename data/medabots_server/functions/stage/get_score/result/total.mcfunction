@@ -1,0 +1,1 @@
+tellraw @s {"translate":"medabots_server:message.stage.score.results.total","color":"gold","with":[{"score":{"objective":"Score","name":"@s"}}]}

@@ -5,3 +5,4 @@ setblock -1542 52 -686 minecraft:redstone_block
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 22
 scoreboard players reset @s Stage
+scoreboard players reset @s Gamemode

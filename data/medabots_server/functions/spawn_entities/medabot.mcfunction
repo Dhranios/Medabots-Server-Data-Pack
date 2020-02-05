@@ -7,10 +7,10 @@ scoreboard players set @e[tag=new_medabot,limit=1] Money 5
 data modify entity @e[tag=new_medabot,limit=1] Rotation set from entity @s Rotation
 
 # Spawn model parts
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","head","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","right_arm","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","left_arm","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","legs","medabot_model","model_piece"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","head","medabot_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","right_arm","medabot_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","left_arm","medabot_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","legs","medabot_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 scoreboard players operation @e[tag=new_medabot,limit=1] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
 scoreboard players add @e[tag=new_medabot,limit=1] MedabotNr 1
 execute as @e[tag=new_model] run scoreboard players operation @s MedabotNr = @e[tag=new_medabot,limit=1] MedabotNr

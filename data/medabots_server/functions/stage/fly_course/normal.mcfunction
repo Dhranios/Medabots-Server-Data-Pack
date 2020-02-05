@@ -35,7 +35,7 @@ scoreboard players operation @s[scores={State=2}] FlyCourseLapTime = @s FlyTime
 scoreboard players operation @s[scores={State=2}] FlyCourseLapTime /= #20 Constants
 title @s[scores={State=2}] actionbar {"translate":"medabots_server:message.stage.fly_course.rings","color":"green","with":[{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"},{"score":{"name":"@s","objective":"FlyCourseTime"},"color":"green"}]}
 
-tellraw @s[scores={State=4}] {"translate":"medabots_server:message.stage.fly_course.results","color":"green","with":[{"score":{"name":"@s","objective":"Rings"},"color":"green"},{"score":{"name":"@s","objective":"RingsTotal"},"color":"green"}]}
+execute if entity @s[scores={State=4}] run function medabots_server:stage/get_score/rings
 
 # Fly couse checker, in case of lag, goes from your last position, to your new position, to see if you flew through any rings
 execute if entity @s[scores={State=2}] run function medabots_server:stage/fly_course/checker

@@ -1,3 +1,6 @@
+# No vanilla combat
+effect give @s minecraft:weakness 1000000 127 true
+
 # Re-give new items so they are seen by advancements
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}]}] unless entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",medallars:0d}}}]}] run function medabots_server:items/loot_container/give_medallars
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:medallar",stage_item:0b}}}]}] run function medabots_server:items/put_medallars_on_bank

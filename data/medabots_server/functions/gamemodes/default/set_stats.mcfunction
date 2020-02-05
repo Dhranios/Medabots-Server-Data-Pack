@@ -32,6 +32,9 @@ tag @s add hostile
 tag @s add medabot
 scoreboard players set @s State 3
 scoreboard players set @s Gamemode 0
+scoreboard players set @s TotalDamage 0
+scoreboard players set @s TotalKills 0
+scoreboard players set @s TotalTime 0
 function medabots_server:other/killer/score
 
 # Set the stats' max values

@@ -49,7 +49,7 @@ execute as @e[x=-1888,y=42,z=-633,dx=31,dy=7,dz=27] unless entity @s[scores={Sta
 execute if entity @s[scores={Dialog=1467}] positioned -1884 45 -630 run tag @e[distance=..0.7,tag=enemy_medabot] add dead
 scoreboard players set @s[scores={Dialog=1467}] MusicType 1
 scoreboard players set @s[scores={Dialog=1467}] Music 0
-scoreboard players set @s[scores={Dialog=1467}] State 0
+execute if entity @s[scores={Dialog=1467}] run function medabots_server:gamemodes/default/reset
 teleport @s[scores={Dialog=1467}] -286 55 -52.0 -90 0
 scoreboard players set @s[scores={Dialog=1467}] Dialog 0
 scoreboard players reset @s SelfDestruct

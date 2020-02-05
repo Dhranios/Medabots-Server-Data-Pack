@@ -13,7 +13,6 @@ execute if entity @s[tag=mirror,tag=!disabled] run function medabots_server:bloc
 # Make custom stage missions act
 execute if entity @s[tag=mission,tag=!disabled] run function medabots_server:entities/mission
 
-# Medabot model animations
-execute as @s[tag=model_piece] run function medabots_server:animations/model_piece
-
-kill @s[tag=life_time]
+# Inventory entities shouldn't exist post-processing
+tag @s[tag=inventory] add dead
+tag @s[tag=life_time] add dead

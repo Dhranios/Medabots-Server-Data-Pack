@@ -13,7 +13,10 @@ execute if entity @s[scores={StageIndex=-1}] run data merge block -1980 51 -535 
 execute if entity @s[scores={StageIndex=-1}] run setblock -1980 52 -537 minecraft:red_wool
 execute if entity @s[scores={StageIndex=-1}] as @a[scores={Stage=59,Gamemode=0,StageIndex=0..}] run function medabots_server:gamemodes/default/reset
 execute if entity @s[scores={StageIndex=-1}] run scoreboard players reset @a[scores={Stage=59,StageIndex=0..}] Stage
-execute if entity @s[scores={StageIndex=-1}] run function medabots_server:gamemodes/default/reset
+execute if entity @s[scores={StageIndex=-1}] run tag @s add me
+execute if entity @s[tag=me] run function medabots_server:gamemodes/default/reset
+execute if entity @s[tag=me] run scoreboard players set @s Gamemode 0
+execute if entity @s[tag=me] run tag @s remove met
 
 scoreboard players operation #temp StageIndex = @s[scores={StageIndex=0..}] StageIndex
 execute if entity @s[scores={StageIndex=0..}] as @a[scores={Stage=59,Gamemode=0}] if score @s StageIndex > #temp StageIndex run scoreboard players remove @s StageIndex 1

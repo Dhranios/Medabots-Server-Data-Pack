@@ -27,9 +27,9 @@ execute if entity @s[tag=left_arm_selected] run kill @e[tag=left_arm,tag=this_mo
 execute if entity @s[tag=right_arm_selected] run kill @e[tag=right_arm,tag=this_model]
 execute if entity @s[tag=head_selected] run kill @e[tag=head,tag=this_model]
 execute if entity @s[tag=head_selected] run kill @e[tag=chest,tag=this_model]
-execute if entity @s[tag=left_arm_selected] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["left_arm","medabot_model","model_piece","new"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-execute if entity @s[tag=right_arm_selected] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model","model_piece","new"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-execute if entity @s[tag=head_selected] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model","model_piece","new"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+execute if entity @s[tag=left_arm_selected] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["left_arm","medabot_model","model_piece","new","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+execute if entity @s[tag=right_arm_selected] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model","model_piece","new","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+execute if entity @s[tag=head_selected] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model","model_piece","new","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add male_tinpet
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add female_tinpet
 execute if entity @s[nbt={Inventory:[{Slot:16b,tag:{medabots_server:{id:"medabots_server:neutral_tinpet"}}}]}] run tag @e[tag=medabot_model,tag=new] add neutral_tinpet

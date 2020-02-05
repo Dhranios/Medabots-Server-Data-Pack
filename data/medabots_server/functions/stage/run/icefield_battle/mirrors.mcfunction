@@ -6,5 +6,6 @@ execute as @e[scores={Stage=48},tag=practice_battle] run tag @e[scores={Stage=48
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/icefield_battle
 tag @s[scores={BattlingMedabots=1,State=1..},tag=story_battle,advancements={medabots_server:story_progression/infinity={vs_gillgirl=true,vs_gillgirl_battle=false}}] add dialog_infinity_vs_gillgirl_battle
 tag @s[scores={BattlingMedabots=1,State=1..,KillStreak=1},tag=story_battle] add dialog_infinity_postgame_sloan_battle
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] positioned -1999 51 -608 run function medabots_server:stage/clear
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=48}] run function medabots_server:stage/get_score/time_damage_kills
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=48}] positioned -1999 51 -608 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

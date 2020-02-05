@@ -6,7 +6,7 @@ execute if entity @e[tag=dancing,tag=this_medabot,tag=!medabot_model,limit=1] ru
 execute if entity @e[tag=carried,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add carried
 execute if entity @e[tag=walking,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add walking
 execute if entity @e[tag=running,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add running
-execute if entity @e[tag=sneakng,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add sneakng
+execute if entity @e[tag=sneaking,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add sneaking
 execute if entity @s[tag=legs,tag=!dying] run function medabots_server:animations/medabot/split_legs
 execute if entity @s[tag=hips,tag=!dying] run function medabots_server:animations/medabot/hips
 execute if entity @s[tag=leg,tag=!dying] run function medabots_server:animations/medabot/leg
@@ -29,7 +29,7 @@ tag @s[tag=dancing] remove dancing
 tag @s[tag=carried] remove carried
 tag @s[tag=walking] remove walking
 tag @s[tag=running] remove running
-tag @s[tag=sneakng] remove sneakng
+tag @s[tag=sneaking] remove sneaking
 data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2

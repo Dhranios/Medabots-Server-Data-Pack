@@ -1,0 +1,2 @@
+tellraw @s {"translate":"medabots_server:message.stage.score.results.damage","color":"green","with":[{"score":{"objective":"TotalDamage","name":"@s"}}]}
+scoreboard players operation @s Score -= @s TotalDamage

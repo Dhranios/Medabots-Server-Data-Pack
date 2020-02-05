@@ -85,27 +85,22 @@ execute if entity @s[scores={AFKTime=2400}] run playsound medabots_server:entity
 tellraw @s[scores={AFKTime=2400}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:message.metabee.hurry_up"}]}
 
 # Make sounds
-execute if entity @s[tag=medabot,scores={Damage=1..}] run playsound medabots_server:entity.medabot.damage player @s ~ ~ ~ 1
+execute if entity @s[scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!medabot] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!medabot] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run scoreboard players set @s Sound 8
+execute if entity @s[scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!medabot] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
+execute if entity @s[scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!medabot] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run scoreboard players set @s Sound 8
+execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run playsound medabots_server:entity.medabot.move.mod player @s ~ ~ ~ .1
+execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run scoreboard players set @s Sound 20
 execute if entity @s[tag=medabot,scores={Run=0,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ 1
 execute if entity @s[tag=medabot,scores={Run=1..,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ 1
-execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
-execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run scoreboard players set @s Sound 8
-execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2
-execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run scoreboard players set @s Sound 8
 execute if entity @s[tag=medabot,scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ 1
 execute if entity @s[tag=medabot,scores={Swimming=5..,Sound=0}] run scoreboard players set @s Sound 2
-execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0}] unless entity @s[tag=action_mode,tag=!hostile] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ 1
-execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0}] unless entity @s[tag=action_mode,tag=!hostile] run scoreboard players set @s Sound 8
-execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] unless block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ 1
-execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] unless block ~ ~ ~ minecraft:stone_slab[type=bottom] run scoreboard players set @s Sound 8
-execute if entity @s[tag=medabot,scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run playsound medabots_server:entity.medabot.move.mod player @s ~ ~ ~ .1
-execute if entity @s[tag=medabot,scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run scoreboard players set @s Sound 20
+execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ 1
+execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 8
 execute if entity @s[tag=medabot,scores={Fall=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.fall player @s ~ ~ ~ 1
 execute if entity @s[tag=medabot,scores={Fall=5..,Sound=0}] run scoreboard players set @s Sound 10
-execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0}] unless entity @s[tag=action_mode,tag=!hostile] run playsound medabots_server:entity.medabot.move.run player @s ~ ~ ~ 1
-execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0}] unless entity @s[tag=action_mode,tag=!hostile] run scoreboard players set @s Sound 6
-execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] unless block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.run player @s ~ ~ ~ 1
-execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!hostile] unless block ~ ~ ~ minecraft:stone_slab[type=bottom] run scoreboard players set @s Sound 6
+execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.run player @s ~ ~ ~ 1
+execute if entity @s[tag=medabot,scores={Run=5..,Jump=0,Sound=0}] run scoreboard players set @s Sound 6
 execute if entity @s[tag=medabot,scores={WalkUnderWater=5..,Sound=0},gamemode=!spectator] run playsound medabots_server:entity.medabot.move.under_water player @s ~ ~ ~ 1
 execute if entity @s[tag=medabot,scores={WalkUnderWater=5..,Sound=0},gamemode=!spectator] run scoreboard players set @s Sound 17
 execute if entity @s[tag=medabot,scores={WalkOnWater=5..,Sound=0},gamemode=!spectator] run playsound medabots_server:entity.medabot.move.on_water player @s ~ ~ ~ 1
@@ -120,7 +115,7 @@ tag @s[scores={Walk=1..}] add walking
 tag @s[scores={WalkOnWater=1..}] add walking
 tag @s[scores={WalkUnderWater=1..}] add walking
 tag @s[scores={Swimming=1..}] add walking
-tag @s[nbt={OnGround:0b}] add walking
+execute if entity @s[nbt={OnGround:0b}] if block ~ ~-0.01 ~ minecraft:air run tag @s add walking
 scoreboard players set @s[scores={Walk=1..}] Walk 0
 scoreboard players set @s[scores={WalkOnWater=1..}] WalkOnWater 0
 scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0

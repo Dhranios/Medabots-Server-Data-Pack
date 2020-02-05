@@ -148,6 +148,7 @@ scoreboard objectives add RingsTotal dummy
 scoreboard objectives add RobattleMusic dummy
 scoreboard objectives add RotationDif dummy
 scoreboard objectives add Run minecraft.custom:minecraft.sprint_one_cm
+scoreboard objectives add Score dummy
 scoreboard objectives add ScoutTime dummy
 scoreboard objectives add SelfDestruct minecraft.dropped:minecraft.gold_ingot
 scoreboard objectives add SelfDestructTime dummy
@@ -171,6 +172,10 @@ scoreboard objectives add Steps dummy
 scoreboard objectives add Swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add TaskCheck trigger
 scoreboard objectives add Time dummy
+scoreboard objectives add TotalDamage dummy
+scoreboard objectives add TotalKills dummy
+scoreboard objectives add TotalMoney dummy
+scoreboard objectives add TotalTime dummy
 scoreboard objectives add Trading minecraft.custom:minecraft.talked_to_villager
 scoreboard objectives add TransactionValue dummy
 scoreboard objectives add TransformHID dummy
@@ -199,6 +204,7 @@ scoreboard players set #1 Constants 1
 scoreboard players set #2 Constants 2
 scoreboard players set #4 Constants 4
 scoreboard players set #5 Constants 5
+scoreboard players set #6 Constants 6
 scoreboard players set #9 Constants 9
 scoreboard players set #10 Constants 10
 scoreboard players set #20 Constants 20
@@ -206,6 +212,7 @@ scoreboard players set #40 Constants 40
 scoreboard players set #70 Constants 70
 scoreboard players set #80 Constants 80
 scoreboard players set #100 Constants 100
+scoreboard players set #200 Constants 200
 scoreboard players set #1000 Constants 1000
 scoreboard players set #1005 Constants 1005
 scoreboard players set #10000 Constants 10000
