@@ -42,6 +42,7 @@ execute if entity @s[scores={ShopIndex1=102}] if entity @s[nbt=!{Inventory:[{Slo
 execute if entity @s[scores={ShopIndex1=103}] if entity @s[nbt=!{Inventory:[{Slot:103b,tag:{medabots_server:{items:{medal:{tag:{medabots_server:{part:"medal"}}}}}}}]},nbt=!{Inventory:[{Slot:103b,tag:{medabots_server:{items:{head:{tag:{medabots_server:{part:"head"}}}}}}}]},nbt=!{Inventory:[{Slot:103b,tag:{medabots_server:{items:{right_arm:{tag:{medabots_server:{part:"right_arm"}}}}}}}]},nbt=!{Inventory:[{Slot:103b,tag:{medabots_server:{items:{left_arm:{tag:{medabots_server:{part:"left_arm"}}}}}}}]},nbt=!{Inventory:[{Slot:103b,tag:{medabots_server:{items:{legs:{tag:{medabots_server:{part:"legs"}}}}}}}]}] run tag @s remove equipped
 execute if entity @s[scores={ShopIndex1=150}] if entity @s[nbt=!{Inventory:[{Slot:-106b,tag:{medabots_server:{items:{medal:{tag:{medabots_server:{part:"medal"}}}}}}}]},nbt=!{Inventory:[{Slot:-106b,tag:{medabots_server:{items:{head:{tag:{medabots_server:{part:"head"}}}}}}}]},nbt=!{Inventory:[{Slot:-106b,tag:{medabots_server:{items:{right_arm:{tag:{medabots_server:{part:"right_arm"}}}}}}}]},nbt=!{Inventory:[{Slot:-106b,tag:{medabots_server:{items:{left_arm:{tag:{medabots_server:{part:"left_arm"}}}}}}}]},nbt=!{Inventory:[{Slot:-106b,tag:{medabots_server:{items:{legs:{tag:{medabots_server:{part:"legs"}}}}}}}]}] run tag @s remove equipped
 
+tag @s[tag=!equipped] add sold_item
 execute if entity @s[scores={ShopIndex1=1}] run replaceitem entity @s[tag=!equipped] hotbar.0 minecraft:air
 execute if entity @s[scores={ShopIndex1=2}] run replaceitem entity @s[tag=!equipped] hotbar.1 minecraft:air
 execute if entity @s[scores={ShopIndex1=3}] run replaceitem entity @s[tag=!equipped] hotbar.2 minecraft:air
@@ -86,5 +87,4 @@ execute if entity @s[scores={ShopIndex1=150}] run replaceitem entity @s[tag=!equ
 
 tellraw @s[tag=equipped] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.tinpet_salesman","color":"green"},{"translate":"medabots_server:message.shop.tinpet_equipped"}]}
 scoreboard players add @s[tag=!equipped] Money 750
-advancements revoke @s only medabots_server:system_triggers/shopping/moved_item
 function medabots_server:shopping/tinpet_salesman/sell_again

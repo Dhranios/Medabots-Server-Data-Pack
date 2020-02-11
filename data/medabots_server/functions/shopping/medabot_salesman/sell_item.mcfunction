@@ -1,5 +1,6 @@
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman","color":"green"},{"translate":"medabots_server:message.shop.sold"}]}
 scoreboard players add @s Money 25
+tag @s add sold_item
 execute if entity @s[scores={ShopIndex1=1}] run replaceitem entity @s hotbar.0 minecraft:air
 execute if entity @s[scores={ShopIndex1=2}] run replaceitem entity @s hotbar.1 minecraft:air
 execute if entity @s[scores={ShopIndex1=3}] run replaceitem entity @s hotbar.2 minecraft:air
@@ -41,5 +42,4 @@ execute if entity @s[scores={ShopIndex1=101}] run replaceitem entity @s armor.le
 execute if entity @s[scores={ShopIndex1=102}] run replaceitem entity @s armor.chest minecraft:air
 execute if entity @s[scores={ShopIndex1=103}] run replaceitem entity @s armor.head minecraft:air
 execute if entity @s[scores={ShopIndex1=150}] run replaceitem entity @s weapon.offhand minecraft:air
-advancements revoke @s only medabots_server:system_triggers/shopping/moved_item
 function medabots_server:shopping/medabot_salesman/sell_again
