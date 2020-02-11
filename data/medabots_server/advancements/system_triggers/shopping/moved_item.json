@@ -1,0 +1,10 @@
+{
+    "criteria": {
+        "move_item": {
+            "trigger": "minecraft:inventory_changed"
+        }
+    },
+	"rewards": {
+		"function": "medabots_server:shopping/prevent_selling"
+	}
+}
