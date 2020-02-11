@@ -6,6 +6,7 @@ execute if entity @s[tag=coarse_dirt] run setblock ~ ~-1 ~ minecraft:coarse_dirt
 execute if entity @s[tag=sand] run setblock ~ ~-1 ~ minecraft:sand
 execute if entity @s[tag=packed_ice] run setblock ~ ~-1 ~ minecraft:packed_ice
 execute if entity @s[tag=smooth_stone] run setblock ~ ~-1 ~ minecraft:smooth_stone
+execute if entity @s[tag=smooth_stone_slabs] run setblock ~ ~-1 ~ minecraft:smooth_stone_slab[type=double]
 execute if entity @s[tag=waterlogged_top_jungle_slab] run setblock ~ ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true]
 execute if entity @s[tag=waterlogged_top_oak_slab] run setblock ~ ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true]
 execute if entity @s[tag=waterlogged_top_dark_oak_slab] run setblock ~ ~-1 ~ minecraft:dark_oak_slab[type=top,waterlogged=true]
@@ -35,5 +36,3 @@ execute if entity @s[tag=south_black_glazed_terracotta] run setblock ~ ~-1 ~ min
 execute if entity @s[tag=east_black_glazed_terracotta] run setblock ~ ~-1 ~ minecraft:black_glazed_terracotta[facing=east]
 execute if entity @s[tag=west_black_glazed_terracotta] run setblock ~ ~-1 ~ minecraft:black_glazed_terracotta[facing=west]
 execute if entity @s[tag=barrier] run setblock ~ ~-1 ~ minecraft:barrier
-# Delete this
-execute if entity @s[tag=stone_bricks] run setblock ~ ~-1 ~ minecraft:stone_bricks

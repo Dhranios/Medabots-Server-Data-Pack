@@ -1,8 +1,7 @@
-execute if entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run data merge block -2000 52 -632 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/woods_battle/play"}}'}
-execute if entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run setblock -2000 53 -634 minecraft:redstone_block
-execute if entity @s[tag=vs_cpus,scores={ArenaType=2..3}] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-execute if entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s MusicType 4
-execute if entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s Stage 49
+execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
+scoreboard players set @s MusicType 4
+scoreboard players set @s Stage 49
+scoreboard players set @s Gamemode 0
 
 loot spawn ~ ~ ~ loot medabots_server:gameplay/options/8
 execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:1}}}] run function medabots_server:stage/try/ruins_battle/walls

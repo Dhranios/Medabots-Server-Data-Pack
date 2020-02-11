@@ -24,12 +24,12 @@ execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positio
 execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1998 45 -555 run function medabots_server:stage/create/ruins_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=2}] run teleport @s -1997 45 -564 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1997 45 -562 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1995 45 -564 0 0
 execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=49}] -1996 45 -557 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] -1996 45 -559 0 0
-execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1997 45 -562 run function medabots_server:stage/create/generic/get_ally
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] -1994 45 -557 0 0
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1995 45 -564 run function medabots_server:stage/create/generic/get_ally
 execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1996 45 -557 run function medabots_server:stage/create/ruins_battle/random_enemy
-execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1996 45 -559 run function medabots_server:stage/create/ruins_battle/random_enemy
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1994 45 -557 run function medabots_server:stage/create/ruins_battle/random_enemy
 
 execute if entity @s[scores={ArenaType=3}] run teleport @s -1997 45 -564 0 0
 execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1996 45 -557 0 0

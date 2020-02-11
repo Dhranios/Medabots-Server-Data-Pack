@@ -11,6 +11,7 @@ execute if entity @s[tag=east,tag=coarse_dirt_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ mine
 execute if entity @s[tag=east,tag=sand_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:sand replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=packed_ice_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:packed_ice replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=smooth_stone_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:smooth_stone replace minecraft:oak_planks
+execute if entity @s[tag=east,tag=smooth_stone_slabs_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:smooth_stone_slab[type=double] replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=waterlogged_top_jungle_slab_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=waterlogged_top_oak_slab_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=east,tag=waterlogged_top_dark_oak_slab_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:dark_oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
@@ -47,6 +48,7 @@ execute if entity @s[tag=west,tag=coarse_dirt_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ mi
 execute if entity @s[tag=west,tag=sand_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:sand replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=packed_ice_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:packed_ice replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=smooth_stone_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:smooth_stone replace minecraft:oak_planks
+execute if entity @s[tag=west,tag=smooth_stone_slabs_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:smooth_stone_slab[type=double] replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=waterlogged_top_jungle_slab_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:jungle_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=waterlogged_top_oak_slab_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=west,tag=waterlogged_top_dark_oak_slab_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:dark_oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
@@ -83,6 +85,7 @@ execute if entity @s[tag=north,tag=coarse_dirt_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 m
 execute if entity @s[tag=north,tag=sand_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:sand replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=packed_ice_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:packed_ice replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=smooth_stone_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:smooth_stone replace minecraft:oak_planks
+execute if entity @s[tag=north,tag=smooth_stone_slabs_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:smooth_stone_slab[type=double] replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=waterlogged_top_jungle_slab_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:jungle_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=waterlogged_top_oak_slab_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=north,tag=waterlogged_top_dark_oak_slab_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:dark_oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
@@ -119,6 +122,7 @@ execute if entity @s[tag=south,tag=coarse_dirt_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 min
 execute if entity @s[tag=south,tag=sand_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:sand replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=packed_ice_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:packed_ice replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=smooth_stone_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:smooth_stone replace minecraft:oak_planks
+execute if entity @s[tag=south,tag=smooth_stone_slabs_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:smooth_stone_slab[type=double] replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=waterlogged_top_jungle_slab_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:jungle_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=waterlogged_top_oak_slab_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=waterlogged_top_dark_oak_slab_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:dark_oak_slab[type=top,waterlogged=true] replace minecraft:oak_planks
@@ -147,7 +151,3 @@ execute if entity @s[tag=south,tag=south_black_glazed_terracotta_1] run fill ~ ~
 execute if entity @s[tag=south,tag=east_black_glazed_terracotta_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=east] replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=west_black_glazed_terracotta_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:black_glazed_terracotta[facing=west] replace minecraft:oak_planks
 execute if entity @s[tag=south,tag=barrier_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:barrier replace minecraft:oak_planks
-execute if entity @s[tag=east,tag=stone_bricks_1] run fill ~1 ~-1 ~ ~1 ~-1 ~ minecraft:stone_bricks replace minecraft:oak_planks
-execute if entity @s[tag=west,tag=stone_bricks_1] run fill ~-1 ~-1 ~ ~-1 ~-1 ~ minecraft:stone_bricks replace minecraft:oak_planks
-execute if entity @s[tag=north,tag=stone_bricks_1] run fill ~ ~-1 ~-1 ~ ~-1 ~-1 minecraft:stone_bricks replace minecraft:oak_planks
-execute if entity @s[tag=south,tag=stone_bricks_1] run fill ~ ~-1 ~1 ~ ~-1 ~1 minecraft:stone_bricks replace minecraft:oak_planks

@@ -1,0 +1,89 @@
+{
+	"condition": "minecraft:alternative",
+	"terms": [
+		{
+			"condition": "minecraft:location_check",
+			"offsetX": 1,
+			"predicate": {
+				"block": {
+					"tag": "medabots_server:guard_pathables"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetX": -1,
+			"predicate": {
+				"block": {
+					"tag": "medabots_server:guard_pathables"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetZ": 1,
+			"predicate": {
+				"block": {
+					"tag": "medabots_server:guard_pathables"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetZ": -1,
+			"predicate": {
+				"block": {
+					"tag": "medabots_server:guard_pathables"
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetX": 1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:slabs",
+					"state": {
+						"type": "bottom"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetX": -1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:slabs",
+					"state": {
+						"type": "bottom"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetZ": 1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:slabs",
+					"state": {
+						"type": "bottom"
+					}
+				}
+			}
+		},
+		{
+			"condition": "minecraft:location_check",
+			"offsetZ": -1,
+			"predicate": {
+				"block": {
+					"tag": "minecraft:slabs",
+					"state": {
+						"type": "bottom"
+					}
+				}
+			}
+		}
+	]
+}

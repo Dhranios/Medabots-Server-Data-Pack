@@ -28,6 +28,12 @@ execute if entity @s[tag=stage_builder] run function medabots_server:stage/build
 # Make the random server messages appear
 function medabots_server:other/random_message
 
+# Play dialogs/cutscenes
+execute unless entity @s[scores={Gamemode=0,State=1..2}] run function medabots_server:dialog/try
+
+# Books
+execute unless entity @s[scores={Gamemode=0}] run function #medabots_server:books
+
 # Functions that run on every player on the server except mods
 execute if entity @s[scores={Moderator=0}] run function medabots_server:main/non_mods
 

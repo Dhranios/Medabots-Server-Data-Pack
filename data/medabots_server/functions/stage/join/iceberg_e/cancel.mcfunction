@@ -1,16 +1,16 @@
-execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run data merge block -1954 51 -390 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run setblock -1954 52 -392 minecraft:red_wool
+execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run data merge block -1957 51 -407 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
+execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run setblock -1957 52 -409 minecraft:red_wool
 execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}
-execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run data merge block -1952 51 -389 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/iceberg_e/play"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
+execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run data merge block -1955 51 -407 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/iceberg_e/play"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
 execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] as @a[scores={Stage=57,Gamemode=0}] run function medabots_server:gamemodes/default/reset
 execute unless entity @a[scores={Stage=57,Gamemode=0,StageIndex=-1},limit=1] run scoreboard players reset @a[scores={Stage=57}] Stage
 
 execute if entity @s[scores={StageIndex=-1}] run tellraw @a {"translate":"medabots_server:message.stage.players.0","color":"green","with":[{"translate":"medabots_server:location.iceberg_e"}]}
-execute if entity @s[scores={StageIndex=-1}] run data merge block -1954 51 -390 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute if entity @s[scores={StageIndex=-1}] run setblock -1954 52 -392 minecraft:red_wool
+execute if entity @s[scores={StageIndex=-1}] run data merge block -1957 51 -407 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
+execute if entity @s[scores={StageIndex=-1}] run setblock -1957 52 -409 minecraft:red_wool
 teleport @s[scores={StageIndex=-1}] -1955 29 -385 90 0
-execute if entity @s[scores={StageIndex=-1}] run data merge block -1952 51 -389 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/iceberg_e/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
-execute if entity @s[scores={StageIndex=-1}] run setblock -1952 52 -391 minecraft:red_wool
+execute if entity @s[scores={StageIndex=-1}] run data merge block -1955 51 -407 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/iceberg_e/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
+execute if entity @s[scores={StageIndex=-1}] run setblock -1955 52 -409 minecraft:red_wool
 execute if entity @s[scores={StageIndex=-1}] as @a[scores={Stage=57,Gamemode=0,StageIndex=0..}] run function medabots_server:gamemodes/default/reset
 execute if entity @s[scores={StageIndex=-1}] run scoreboard players reset @a[scores={Stage=57,StageIndex=0..}] Stage
 execute if entity @s[scores={StageIndex=-1}] run tag @s add me

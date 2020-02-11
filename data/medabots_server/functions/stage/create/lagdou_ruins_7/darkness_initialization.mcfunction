@@ -1,12 +1,11 @@
-execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run function medabots_server:gamemodes/default/set_stats
-execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s StageIndex -1
+function medabots_server:gamemodes/default/set_stats
+scoreboard players set @s StageIndex -1
 scoreboard players set @s[scores={ArenaType=0}] NeededPlayers 1
-execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s[scores={ArenaType=1..3}] NeededPlayers 3
-execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run tag @s add main
-execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run tag @s[scores={ArenaType=0..2}] add ally_medabot
-execute unless entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run scoreboard players set @s StageVersion 2
-execute if entity @s[tag=vs_cpus,scores={ArenaType=0..1}] run function medabots_server:stage/create/lagdou_ruins_7/darkness
-execute if entity @s[tag=vs_cpus,scores={ArenaType=2..3}] run function medabots_server:stage/sign/generic/missing_cpu_support
+scoreboard players set @s[scores={ArenaType=1..3}] NeededPlayers 3
+tag @s add main
+tag @s[scores={ArenaType=0..2}] add ally_medabot
+scoreboard players set @s StageVersion 2
+execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/lagdou_ruins_7/darkness
 execute if entity @s[tag=!vs_cpus] run function medabots_server:stage/join/lagdou_ruins_7/try_to_complete
 execute if entity @s[tag=!vs_cpus,tag=!random_arena_version] run teleport @s -1280 51 -171 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock -1279 53 -180 minecraft:redstone_block

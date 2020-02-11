@@ -18,14 +18,8 @@ execute anchored eyes if block ^ ^ ^ minecraft:water run effect give @s minecraf
 tag @e[distance=..3,tag=!talk,team=Passive] add talk 
 tag @e[distance=..3,tag=!talk,team=Rubberobo] add talk
 
-# Play dialogs/cutscenes
-function medabots_server:dialog/try
-
 # Prevent self-destruct at stage enter
 scoreboard players reset @s SelfDestruct
-
-# Books
-function #medabots_server:books
 
 # Set up Medabot
 execute if entity @s[scores={EditingTinpet=0}] unless entity @s[nbt={Inventory:[{Slot:0b,tag:{medabots_server:{part:"tinpet"}}}]}] run function medabots_server:items/tinpet/stop_editing
@@ -37,12 +31,15 @@ execute if entity @s[scores={EditingTinpet=5}] unless entity @s[nbt={Inventory:[
 execute if entity @s[scores={EditingTinpet=6}] unless entity @s[nbt={Inventory:[{Slot:6b,tag:{medabots_server:{part:"tinpet"}}}]}] run function medabots_server:items/tinpet/stop_editing
 execute if entity @s[scores={EditingTinpet=7}] unless entity @s[nbt={Inventory:[{Slot:7b,tag:{medabots_server:{part:"tinpet"}}}]}] run function medabots_server:items/tinpet/stop_editing
 execute if entity @s[scores={EditingTinpet=8}] unless entity @s[nbt={Inventory:[{Slot:8b,tag:{medabots_server:{part:"tinpet"}}}]}] run function medabots_server:items/tinpet/stop_editing
-execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] run function medabots_server:items/tinpet/stop_editing
+execute if entity @s[scores={EditingTinpet=9}] unless entity @s[nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{part:"tinpet"}}}]}] run function medabots_server:items/tinpet/stop_editing
+execute if entity @s[scores={UsePart=1..,EditingTinpet=0..8},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] run function medabots_server:items/tinpet/stop_editing
+execute if entity @s[scores={UsePart=1..,EditingTinpet=9}] unless entity @s[nbt={SelectedItem:{}}] run function medabots_server:items/tinpet/stop_editing
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"medal"}}}}] run function medabots_server:items/tinpet/equip_medal
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"head"}}}}] run function medabots_server:items/tinpet/equip_head
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"right_arm"}}}}] run function medabots_server:items/tinpet/equip_right_arm
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"left_arm"}}}}] run function medabots_server:items/tinpet/equip_left_arm
 execute if entity @s[scores={UsePart=1..,EditingTinpet=0..},nbt={SelectedItem:{tag:{medabots_server:{part:"legs"}}}}] run function medabots_server:items/tinpet/equip_legs
 execute if entity @s[scores={UsePart=1..,Dialog=0,Trading=0},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] unless entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/edit
+execute if entity @s[scores={UsePart=1..,Dialog=0,Trading=0},nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{part:"tinpet"}}}]}] unless entity @s[scores={EditingTinpet=0..}] unless entity @s[nbt={SelectedItem:{}}] run function medabots_server:items/tinpet/edit
 execute if entity @s[scores={UnequipTinpet=1..}] run function medabots_server:items/tinpet/unequip
 tellraw @s[scores={UsePart=1..,Dialog=1..},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] {"translate":"medabots_server:message.tinpet.dialog","color":"green"}
