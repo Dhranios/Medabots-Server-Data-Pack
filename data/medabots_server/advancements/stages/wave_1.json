@@ -309,6 +309,15 @@
         "final_destination_4_master_hand": {
             "trigger": "minecraft:impossible"
         },
+        "subspace_1": {
+            "trigger": "minecraft:impossible"
+        },
+        "subspace_2": {
+            "trigger": "minecraft:impossible"
+        },
+        "subspace_3": {
+            "trigger": "minecraft:impossible"
+        },
         "lagdou_ruins_1_first_go": {
             "trigger": "minecraft:impossible"
         },
@@ -376,6 +385,21 @@
             "trigger": "minecraft:impossible"
         },
         "hard_fly_course_1_challenge": {
+            "trigger": "minecraft:impossible"
+        },
+        "ricco_harbor": {
+            "trigger": "minecraft:impossible"
+        },
+        "egg_engines": {
+            "trigger": "minecraft:impossible"
+        },
+        "palace_of_twilight": {
+            "trigger": "minecraft:impossible"
+        },
+        "another_dimension": {
+            "trigger": "minecraft:impossible"
+        },
+        "dreadnought_galaxy": {
             "trigger": "minecraft:impossible"
         }
     },

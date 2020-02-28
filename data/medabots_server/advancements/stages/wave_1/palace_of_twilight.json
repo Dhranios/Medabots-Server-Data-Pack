@@ -1,0 +1,30 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:coal_block"
+        },
+        "title": {
+            "translate": "medabots_server:location.palace_of_twilight"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.everlasting_combat",
+			"with": [
+				{
+					"translate": "medabots_server:entity.argorok"
+				},
+				{
+					"translate": "medabots_server:location.palace_of_twilight"
+				}
+			]
+        }
+    },
+	"parent": "medabots_server:stages/wave_1/egg_engines",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/stages/wave_1/palace_of_twilight"
+    }
+}

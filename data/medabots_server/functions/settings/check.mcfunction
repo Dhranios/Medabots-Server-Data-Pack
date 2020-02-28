@@ -102,7 +102,7 @@ tag @s[tag=toggle_random_arena_version,tag=!medabot] remove toggle_random_arena_
 tag @s[scores={SettingsCheck=12},tag=random_arena_version,tag=!medabot] remove random_arena_version
 
 # Toggle arena type
-tellraw @s[scores={SettingsCheck=13},tag=medabot] {"translate":"medabots_server:settings.in_race","color":"blue"}
+tellraw @s[scores={SettingsCheck=13},tag=medabot] {"translate":"medabots_server:settings.in_stage","color":"blue"}
 scoreboard players add @s[scores={SettingsCheck=13},tag=!medabot] ArenaType 1
 scoreboard players set @s[scores={SettingsCheck=13,ArenaType=4},tag=!medabot] ArenaType 0
 tellraw @s[scores={SettingsCheck=13,ArenaType=0},tag=!medabot] {"translate":"medabots_server:settings.modified.arena_type","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 13"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.arena_type.1v1"}]}

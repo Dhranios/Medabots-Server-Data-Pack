@@ -9,7 +9,7 @@ tag @s[tag=!appearing] remove was_appearing
 tag @s[tag=appearing] add was_appearing
 tag @s[tag=appearing] remove appearing
 
-execute if entity @s[tag=!was_appearing,tag=!fast_idle,tag=!grab,tag=!grab_success,tag=!ram,tag=!punch,tag=!drill,tag=!walk_start,tag=!walk,tag=!walk_stop,tag=!walk_kick,tag=!slap,tag=!crush,tag=!poke,tag=!gun_1,tag=!gun_3] run function medabots_server:animations/master_hand/idle/ring_finger
+execute if entity @s[tag=!was_appearing,tag=!fast_idle,tag=!grab,tag=!grab_success,tag=!ram,tag=!punch,tag=!drill,tag=!walk_start,tag=!walk,tag=!walk_stop,tag=!walk_kick,tag=!slap,tag=!crush,tag=!poke,tag=!gun_1,tag=!gun_3,tag=!dash] run function medabots_server:animations/master_hand/idle/ring_finger
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fast_idle,limit=1] run scoreboard players set @s[tag=!fast_idle] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fast_idle,limit=1] run tag @s add fast_idle
@@ -54,6 +54,10 @@ execute if entity @s[tag=slap] run function medabots_server:animations/master_ha
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=crush,limit=1] run scoreboard players set @s[tag=!crush] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=crush,limit=1] run tag @s add crush
 execute if entity @s[tag=crush] run function medabots_server:animations/master_hand/crush/ring_finger
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=dash,limit=1] run scoreboard players set @s[tag=!dash] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=dash,limit=1] run tag @s add dash
+execute if entity @s[tag=dash] run function medabots_server:animations/master_hand/dash/ring_finger
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run scoreboard players set @s[tag=!poke] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=poke,limit=1] run tag @s add poke

@@ -4,6 +4,7 @@ execute if entity @e[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93,tag=mr_referee,type=m
 execute as @e[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 46
 execute as @e[scores={Stage=46},tag=practice_battle] run tag @e[scores={Stage=46},tag=medabot] add practice_robattle
 execute as @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/ricco_harbor
+advancement grant @a[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/ricco_harbor
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=46}] run function medabots_server:stage/get_score/time_damage_kills
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=46}] positioned -1440 51 -158 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

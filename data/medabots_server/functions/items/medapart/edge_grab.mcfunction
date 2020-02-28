@@ -2,8 +2,8 @@
 scoreboard players set @s EdgeGrabAble 0
 
 # Check for grabbing a ledge for certain users
-execute if block ~ ~-1 ~ minecraft:air run scoreboard players set @s[gamemode=survival,tag=!sneak_pos] EdgeGrabAble 1
-execute if block ~ ~-1 ~ minecraft:air run scoreboard players set @s[gamemode=adventure,tag=!sneak_pos] EdgeGrabAble 1
+execute if block ~ ~-1 ~ minecraft:air if block ~ ~ ~ #medabots_server:edge_grab/looking run scoreboard players set @s[gamemode=survival,tag=!sneak_pos] EdgeGrabAble 1
+execute if block ~ ~-1 ~ minecraft:air if block ~ ~ ~ #medabots_server:edge_grab/looking run scoreboard players set @s[gamemode=adventure,tag=!sneak_pos] EdgeGrabAble 1
 
 # Check blocks depending on rotation
 execute if entity @s[y_rotation=-135..-45,scores={EdgeGrabAble=1}] run function medabots_server:items/medapart/edge_grab/east

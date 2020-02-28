@@ -1,27 +1,27 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:black_wool"
+            "item": "minecraft:black_concrete"
         },
         "title": {
-            "translate": "medabots_server:location.final_destination_3"
+            "translate": "medabots_server:location.subspace_2"
         },
         "description": {
             "translate": "medabots_server:advancements.stages.clear",
 			"with": [
 				{
-					"translate": "medabots_server:location.final_destination_3"
+					"translate": "medabots_server:location.subspace_2"
 				}
 			]
         }
     },
-	"parent": "medabots_server:stages/wave_1/subspace_3",
+	"parent": "medabots_server:stages/wave_1/subspace_1",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"
         }
     },
     "rewards": {
-        "function": "medabots_server:advancements/stages/wave_1/final_destination_3"
+        "function": "medabots_server:advancements/stages/wave_1/subspace_2"
     }
 }

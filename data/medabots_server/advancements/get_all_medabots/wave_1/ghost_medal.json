@@ -2,7 +2,7 @@
     "display": {
         "icon": {
             "item": "minecraft:fishing_rod",
-            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:3}"
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:4}"
         },
         "title": {
             "translate": "medabots_server:advancements.get_all_medabots.ghost_medal"

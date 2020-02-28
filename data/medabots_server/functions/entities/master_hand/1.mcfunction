@@ -14,7 +14,7 @@ execute unless entity @s[scores={Dialog=0..}] run scoreboard players add @s Dial
 execute if entity @a[distance=..30,tag=target] run scoreboard players add @s[scores={Time=0,Dialog=0}] Dialog 1
 scoreboard players add @s[scores={Dialog=1..19}] Dialog 1
 #execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","jet"],Duration:1}
-execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","ram"],Duration:1}
+execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","dash"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","crush"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","gun"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","grab"],Duration:1}
@@ -25,7 +25,7 @@ execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud 
 execute if entity @s[scores={Dialog=20}] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","walk"],Duration:1}
 execute if entity @s[scores={Dialog=20}] run tag @e[sort=random,limit=1,type=minecraft:area_effect_cloud,tag=random_select] add selected
 execute if entity @e[tag=random_select,tag=selected,tag=jet] run tag @s add attack_jet
-execute if entity @e[tag=random_select,tag=selected,tag=ram] run tag @s add attack_ram
+execute if entity @e[tag=random_select,tag=selected,tag=dash] run tag @s add attack_dash
 execute if entity @e[tag=random_select,tag=selected,tag=crush] run tag @s add attack_crush
 execute if entity @e[tag=random_select,tag=selected,tag=gun] run tag @s[scores={Health=151..}] add attack_gun_1
 execute if entity @e[tag=random_select,tag=selected,tag=gun] run tag @s[scores={Health=..150}] add attack_gun_3
@@ -41,7 +41,8 @@ tag @s remove cooperate
 
 # https://supersmashbros.fandom.com/wiki/Master_Hand
 # Execute attack
-execute if entity @s[tag=attack_ram] run function medabots_server:entities/master_hand/ram
+execute if entity @s[tag=attack_jet] run function medabots_server:entities/master_hand/jet
+execute if entity @s[tag=attack_dash] run function medabots_server:entities/master_hand/dash
 execute if entity @s[tag=attack_crush] run function medabots_server:entities/master_hand/crush
 execute if entity @s[tag=attack_gun_1] run function medabots_server:entities/master_hand/gun_1
 execute if entity @s[tag=attack_gun_3] run function medabots_server:entities/master_hand/gun_3

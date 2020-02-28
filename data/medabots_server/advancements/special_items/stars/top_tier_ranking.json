@@ -4,10 +4,10 @@
             "item": "minecraft:nether_star"
         },
         "title": {
-            "translate": "medabots_server:advancements.special_items.stars.clear_player_mt_battle"
+            "translate": "medabots_server:advancements.special_items.stars.top_tier_ranking"
         },
         "description": {
-            "translate": "medabots_server:advancements.special_items.stars.clear_player_mt_battle.description"
+            "translate": "medabots_server:advancements.special_items.stars.top_tier_ranking.description"
         },
         "announce_to_chat": false,
         "hidden": true
