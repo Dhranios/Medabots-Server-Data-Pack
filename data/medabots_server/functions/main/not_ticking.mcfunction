@@ -15,3 +15,4 @@ execute if entity @s[tag=west,tag=accelerator] run fill ~ ~ ~ ~ ~ ~ minecraft:co
 
 # Model
 execute if entity @s[tag=guard,tag=!action_floor,tag=!pot] run function medabots_server:animations/guard
+execute if entity @s[tag=cannon,tag=!action_floor,tag=!pot] run function medabots_server:animations/cannon

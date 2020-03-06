@@ -65,7 +65,7 @@ execute if block -1767 44 -490 minecraft:lime_wool run scoreboard players set @e
 execute if block -1767 44 -490 minecraft:lime_wool run scoreboard players set @e[x=-1766.5,y=45,z=-490.5,distance=..0.7,tag=laser_trap,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1843 45 -511 minecraft:iron_door[open=true] if block -1842 45 -521 minecraft:iron_door[open=false] if entity @s[x=-1846,y=45,z=-513,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_b/second_go_battle/0
 execute if entity @e[x=-1849.5,y=45,z=-509.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=16,Medabot=0..,State=1..2}]
-execute if entity @e[x=-1849.5,y=45,z=-509.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[scores={Stage=16},tag=cannon,type=minecraft:zombie,tag=mission_entity] run tag @s add mission_success
+execute if entity @e[x=-1849.5,y=45,z=-509.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[scores={Stage=16},tag=cannon,type=minecraft:husk,tag=mission_entity] run tag @s add mission_success
 title @s[tag=mission_success] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1842.5,y=45,z=-510.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1841.5,y=45,z=-520.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1

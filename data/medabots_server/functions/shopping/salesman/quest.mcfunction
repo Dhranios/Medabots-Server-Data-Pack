@@ -1,0 +1,8 @@
+tag @s[scores={ShopIndex0=1},advancements={medabots_server:story_progression/infinity={vs_squidguts_battle=true},medabots_server:story_progression/other={salesman_knight_medal=false}}] add dialog_other_salesman_knight_medal
+tag @s[scores={ShopIndex0=2},advancements={medabots_server:story_progression/infinity={vs_squidguts_battle=true},medabots_server:story_progression/other={salesman_spider_medal=false}}] add dialog_other_salesman_spider_medal
+tag @s[scores={ShopIndex0=3},advancements={medabots_server:story_progression/infinity={vs_gillgirl_battle=true},medabots_server:story_progression/other={salesman_ghost_medal=false}}] add dialog_other_salesman_ghost_medal
+tag @s[scores={ShopIndex0=4},advancements={medabots_server:story_progression/infinity={vs_gillgirl_battle=true},medabots_server:story_progression/other={salesman_unicorn_medal=false}}] add dialog_other_salesman_unicorn_medal
+tag @s[scores={ShopIndex0=5},advancements={medabots_server:story_progression/infinity={shrimplips_is_recruiting=true},medabots_server:story_progression/other={salesman_monkey_medal=false}}] add dialog_other_salesman_monkey_medal
+tag @s[scores={ShopIndex0=6},advancements={medabots_server:story_progression/infinity={seaslug_returns=true},medabots_server:story_progression/other={salesman_chameleon_medal=false}}] add dialog_other_salesman_chameleon_medal
+tag @s[scores={ShopIndex0=7},advancements={medabots_server:story_progression/infinity={seaslug_returns=true},medabots_server:story_progression/other={salesman_mermaid_medal=false}}] add dialog_other_salesman_mermaid_medal
+scoreboard players reset @s ShopIndex0

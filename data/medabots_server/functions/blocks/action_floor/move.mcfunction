@@ -10,3 +10,4 @@ execute as @e[distance=..0.4,tag=round_stone,type=minecraft:falling_block] run d
 
 # Model
 execute if entity @s[tag=guard] run function medabots_server:animations/guard
+execute if entity @s[tag=cannon] run function medabots_server:animations/cannon

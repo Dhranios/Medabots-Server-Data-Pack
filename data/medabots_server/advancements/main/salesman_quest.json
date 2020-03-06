@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:diamond",
+            "nbt": "{CustomModelData:1}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.salesman_quest"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.salesman_quest.description"
+        }
+    },
+    "parent": "medabots_server:main/root",
+    "criteria": {
+        "start_a_quest": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

@@ -140,6 +140,9 @@ tag @s[scores={Sneak=1..}] add sneaking
 scoreboard players set @s[scores={Sneak=1..}] Sneak 0
 execute if entity @s[scores={Trading=1},tag=trading] run function medabots_server:shopping/reset
 scoreboard players set @s[scores={Trading=1..}] Trading 2
+tellraw @s[scores={Trading=1..,Dialog=1..}] {"translate":"medabots_server:message.shop.dialog","color":"green"}
+execute if entity @s[scores={Trading=1..,Dialog=1..}] run tag @s[tag=trading] remove trading
+execute if entity @s[scores={Trading=1..,Dialog=1..}] run scoreboard players set @s Trading 0
 execute if entity @s[scores={Trading=1..},tag=!trading] run function medabots_server:shopping/target_villager
 scoreboard players set @s[scores={Trading=1..},tag=trading] Trading 0
 execute unless entity @e[tag=shop,distance=..4,limit=1] run tag @s[tag=trading] remove trading

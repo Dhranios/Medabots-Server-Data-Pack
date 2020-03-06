@@ -26,7 +26,7 @@ tag @s add selected
 scoreboard players add @s[tag=!done] Dialog 1
 scoreboard players operation #temp Stage = @s Stage
 execute as @e if score @s Stage = #temp Stage run tag @s add this_robattle
-execute if entity @s[scores={Dialog=2}] as @e[tag=cannon,type=minecraft:zombie,tag=this_robattle] run tag @s remove enabled
+execute if entity @s[scores={Dialog=2}] as @e[tag=cannon,type=minecraft:husk,tag=this_robattle] run tag @s remove enabled
 execute if entity @s[scores={Dialog=2}] as @e[tag=!medabot,tag=this_robattle] run tag @s add disabled
 execute if entity @s[scores={Dialog=2},tag=!done] as @e[tag=medabot,tag=!enemy_medabot,tag=!ally_medabot,tag=this_robattle] at @s facing entity @e[tag=medabot,tag=this_robattle,sort=nearest,limit=1,distance=0.1..] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=2},tag=!done] as @e[tag=medabot,tag=ally_medabot,tag=this_robattle] at @s facing entity @e[tag=medabot,tag=!ally_medabot,tag=this_robattle,sort=nearest,limit=1] feet run teleport @s ~ ~ ~ ~ ~

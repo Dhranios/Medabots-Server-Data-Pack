@@ -1,0 +1,2 @@
+kill @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",type:"borrowed_camera"}}}}]
+tag @s[advancements={medabots_server:main/salesman_quest/spider_medal={start_the_quest=true,find_the_item=false}}] add dialog_other_salesman_spider_medal_item

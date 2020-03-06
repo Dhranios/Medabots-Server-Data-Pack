@@ -21,6 +21,7 @@ scoreboard objectives add BugTime dummy
 scoreboard objectives add BugTimer dummy
 scoreboard objectives add BuyMedapart trigger
 scoreboard objectives add CannonFire dummy
+scoreboard objectives add CannonNr dummy
 scoreboard objectives add ChaosTime dummy
 scoreboard objectives add Charge dummy
 scoreboard objectives add Cloud dummy

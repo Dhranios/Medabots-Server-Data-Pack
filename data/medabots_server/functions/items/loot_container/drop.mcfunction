@@ -27,3 +27,4 @@ tag @s[tag=available] remove available
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:plant",stage_item:0b}}}}] run function medabots_server:items/obtained_special_item/plant
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:pass",stage_item:0b}}}}] run function medabots_server:items/obtained_special_item/pass
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:stage_build_item",stage_item:0b}}}}] run function medabots_server:items/obtained_special_item/stage_build_item
+execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",stage_item:0b}}}}] run function medabots_server:items/obtained_special_item/salesman_quest

@@ -50,6 +50,72 @@
         },
         "rock_e_ultimategold_cleared": {
             "trigger": "minecraft:impossible"
+        },
+        "salesman_knight_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_knight_medal_item": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_knight_medal_end": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_spider_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_spider_medal_item": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_spider_medal_end": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_ghost_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_ghost_medal_one_down": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_ghost_medal_report": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_ghost_medal_arrest": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_ghost_medal_end": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_unicorn_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_unicorn_medal_item": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_unicorn_medal_return": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_unicorn_medal_expert": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_unicorn_medal_end": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_monkey_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_monkey_medal_end": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_chameleon_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_chameleon_medal_end": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_mermaid_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_mermaid_medal_end": {
+            "trigger": "minecraft:impossible"
         }
     }
 }

@@ -1,0 +1,2 @@
+kill @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",type:"mysterious_artifact"}}}}]
+tag @s[advancements={medabots_server:main/salesman_quest/unicorn_medal={start_the_quest=true,find_the_item=false}}] add dialog_other_salesman_unicorn_medal_item

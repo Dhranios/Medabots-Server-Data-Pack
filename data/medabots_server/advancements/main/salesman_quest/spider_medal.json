@@ -1,0 +1,26 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:6}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.salesman_quest.spider_medal"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.salesman_quest.spider_medal.description"
+        }
+    },
+    "parent": "medabots_server:main/salesman_quest",
+    "criteria": {
+        "start_the_quest": {
+            "trigger": "minecraft:impossible"
+        },
+        "find_the_item": {
+            "trigger": "minecraft:impossible"
+        },
+        "end_the_quest": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

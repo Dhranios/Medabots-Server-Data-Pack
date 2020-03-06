@@ -33,6 +33,8 @@ execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned -1241 44 -177 
 
 summon minecraft:armor_stand -1280 44 -162 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[-180.0f,0.0f]}
 
+execute if entity @s[advancements={medabots_server:main/salesman_quest/unicorn_medal={start_the_quest=true,find_the_item=false}}] positioned -1253 44 -201 run function medabots_server:spawn_entities/item/salesman_quest/mysterious_artifact
+
 scoreboard players set @a[x=-1311,y=40,z=-220,dx=74,dy=9,dz=77] Stage 42
 scoreboard players set @a[x=-1311,y=40,z=-220,dx=74,dy=9,dz=77] State 1
 execute as @a[x=-1311,y=40,z=-220,dx=74,dy=9,dz=77] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0

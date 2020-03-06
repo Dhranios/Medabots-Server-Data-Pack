@@ -21,4 +21,4 @@ execute if block ~ ~ ~ minecraft:water positioned ~ ~1 ~ if entity @s[scores={Sp
 execute if block ~ ~ ~ minecraft:water positioned ~ ~1 ~ if entity @s[scores={Speed=4}] if block ^ ^ ^0.4 #medabots_server:guard_pathables run teleport @s ^ ^ ^0.2 ~ ~
 execute if block ~ ~ ~ minecraft:water positioned ~ ~1 ~ if entity @s[scores={Speed=4}] if block ^ ^ ^0.4 #minecraft:slabs[type=bottom] align y run teleport @s ^ ^0.5 ^0.2 ~ ~
 
-execute at @s if block ~ ~ ~ minecraft:air positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run teleport @s ~ ~ ~ ~ ~
+execute at @s if block ~ ~ ~ minecraft:air positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.8] run teleport @s ~ ~ ~ ~ ~

@@ -33,9 +33,7 @@ execute if entity @s[type=minecraft:skeleton,tag=medabot] run function medabots_
 execute if entity @s[type=minecraft:creeper,tag=guard] run function medabots_server:entities/guard
 
 # Make the cannons do things
-tag @s[type=minecraft:zombie,tag=cannon,tag=!enabled,nbt={AbsorptionAmount:0.0f}] add enabled
-tag @s[type=minecraft:zombie,tag=cannon,tag=!enabled,tag=dead] add enabled
-execute if entity @s[type=minecraft:zombie,tag=cannon,tag=enabled,tag=!disabled] run function medabots_server:entities/cannon
+execute if entity @s[type=minecraft:husk,tag=cannon] run function medabots_server:entities/cannon
 
 # Make the jammy do things
 execute if entity @s[type=minecraft:pig,tag=jammy,tag=!disabled] run function medabots_server:blocks/jammy

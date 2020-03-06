@@ -32,6 +32,7 @@ execute if block -1522 44 -366 minecraft:yellow_wool run scoreboard players set 
 execute if block -1522 45 -340 minecraft:iron_door[open=true] if block -1518 45 -335 minecraft:air if entity @s[x=-1524,y=45,z=-340,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_b/second_go_battle/0
 execute if entity @e[x=-1520.5,y=45,z=-328.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=10,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
+execute if entity @s[scores={BattlingMedabots=1,State=1..},advancements={medabots_server:main/salesman_quest/ghost_medal={report_to_salesman=true,arrest_the_burgler=false}}] run scoreboard players set #SalesmanArrest Dialog 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1521.5,y=45,z=-339.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:grassland_b/robattle players
@@ -51,6 +52,7 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1559 45 -385 minecraft:iron_door[open=true] if entity @s[x=-1560,y=45,z=-388,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_b/second_go_battle/2
 execute if entity @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=10,Medabot=0..,State=1..2}]
 execute as @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 10
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] if score #SalesmanArrest Dialog matches 1 run tag @s add dialog_other_salesman_ghost_medal_arrest
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/grassland_b
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/grassland_b_second_go
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:grassland_b/robattle players

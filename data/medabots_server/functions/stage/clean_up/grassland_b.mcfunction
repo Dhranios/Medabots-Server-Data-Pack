@@ -16,3 +16,4 @@ data merge block -1541 52 -414 {Text1:'{"text":"","clickEvent":{"action":"run_co
 setblock -1541 53 -416 minecraft:redstone_block
 clear @s minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}
 execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}
+scoreboard players reset #SalesmanArrest Dialog

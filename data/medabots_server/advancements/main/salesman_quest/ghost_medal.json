@@ -1,0 +1,32 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:4}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.salesman_quest.ghost_medal"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.salesman_quest.ghost_medal.description"
+        }
+    },
+    "parent": "medabots_server:main/salesman_quest",
+    "criteria": {
+        "start_the_quest": {
+            "trigger": "minecraft:impossible"
+        },
+        "find_first_suspect": {
+            "trigger": "minecraft:impossible"
+        },
+        "report_to_salesman": {
+            "trigger": "minecraft:impossible"
+        },
+        "arrest_the_burgler": {
+            "trigger": "minecraft:impossible"
+        },
+        "end_the_quest": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

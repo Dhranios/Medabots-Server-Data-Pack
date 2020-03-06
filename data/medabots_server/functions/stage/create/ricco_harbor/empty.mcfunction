@@ -29,6 +29,8 @@ execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned -1439 28 -197 
 
 summon minecraft:armor_stand -1426 38 -159 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[-180.0f,0.0f]}
 
+execute if entity @s[advancements={medabots_server:main/salesman_quest/knight_medal={start_the_quest=true,find_the_item=false}}] positioned -1480 13 -144 run function medabots_server:spawn_entities/item/salesman_quest/lost_cargo
+
 scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] Stage 46
 scoreboard players set @a[x=-1504,y=8,z=-210,dx=275,dy=41,dz=93] State 1
 loot spawn -1443 16 -157 loot medabots_server:gameplay/random_chance/1_in_84
