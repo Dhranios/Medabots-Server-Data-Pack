@@ -10,7 +10,7 @@ execute at @s[scores={Moving=4}] run clone ~ ~1 ~1 ~ ~ ~1 ~ ~ ~ replace move
 scoreboard players reset @s Moving
 
 # Remove if pot is broken
-execute at @s unless block ~ ~ ~ minecraft:iron_block unless block ~ ~ ~ minecraft:chest run tag @s add broken
+execute at @s unless block ~ ~ ~ minecraft:black_stained_glass unless block ~ ~ ~ minecraft:chest run tag @s add broken
 
 # Drop contents if the pot gets broken
 execute if entity @s[tag=broken] at @s if block ~ ~ ~ minecraft:chest run function medabots_server:blocks/pot/broken

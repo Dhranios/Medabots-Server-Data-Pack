@@ -28,6 +28,7 @@ execute if entity @s[tag=tinpet_salesman] as @a[tag=trading_with_tinpet_salesman
 execute if entity @s[tag=tinpet_salesman] as @a[tag=trading_with_tinpet_salesman,distance=..4,scores={Dialog=0,ShopIndex1=1..,ShopIndex0=2,ShopIndex2=-1..}] run function medabots_server:shopping/tinpet_salesman/sell_item
 
 execute if entity @a[tag=trading,distance=..4,scores={Dialog=0},limit=1] run data merge entity @s[tag=traded_with] {NoAI:1b}
+execute if entity @a[tag=trading,distance=..4,scores={Dialog=0},limit=1,sort=nearest] unless entity @a[distance=..4,scores={Dialog=1..},limit=1,sort=nearest] run teleport @s ~ ~ ~ facing entity @a[tag=trading,distance=..4,scores={Dialog=0},limit=1,sort=nearest]
 execute unless entity @a[tag=trading,distance=..4,scores={Dialog=0},limit=1] run data remove entity @s NoAI
 tag @s remove traded_with
 

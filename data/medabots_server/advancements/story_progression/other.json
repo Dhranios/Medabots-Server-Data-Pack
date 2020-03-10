@@ -51,6 +51,12 @@
         "rock_e_ultimategold_cleared": {
             "trigger": "minecraft:impossible"
         },
+        "ruins_out_e_fvbico": {
+            "trigger": "minecraft:impossible"
+        },
+        "ruins_out_e_fvbico_cleared": {
+            "trigger": "minecraft:impossible"
+        },
         "salesman_knight_medal": {
             "trigger": "minecraft:impossible"
         },

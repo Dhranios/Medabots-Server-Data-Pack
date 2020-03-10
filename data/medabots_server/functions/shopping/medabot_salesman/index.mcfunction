@@ -80,5 +80,3 @@ execute if entity @s[scores={ShopIndex1=23,ShopIndex2=5,ShopIndex3=1}] run funct
 tellraw @s[tag=!success] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medabot_salesman","color":"green"},{"translate":"medabots_server:message.shop.no_medabot"}]}
 scoreboard players reset @s ShopIndex2
 tag @s remove success
-tag @s[tag=final] remove trading
-tag @s remove final

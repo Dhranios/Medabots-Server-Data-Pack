@@ -1,0 +1,39 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:book"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.easter_eggs.change_of_shifts"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.easter_eggs.change_of_shifts.description"
+        },
+        "hidden": true
+    },
+    "parent": "medabots_server:easter_eggs/root",
+    "criteria": {
+        "position": {
+            "trigger": "minecraft:location",
+            "conditions": {
+                "position": {
+                    "x": {
+                        "min": -156,
+                        "max": -150
+                    },
+                    "y": {
+                        "min": 56,
+                        "max": 57
+                    },
+                    "z": {
+                        "min": 6,
+                        "max": 9
+                    }
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/easter_eggs"
+    }
+}

@@ -5,4 +5,4 @@ execute if entity @s[tag=4_medallar_cents] run function medabots_server:spawn_en
 execute if entity @s[tag=6_medallar_cents] run function medabots_server:spawn_entities/guard/medium/6_medallar_cents
 execute if entity @s[tag=10_medallar_cents] run function medabots_server:spawn_entities/guard/medium/10_medallar_cents
 execute if entity @s[tag=20_medallar_cents] run function medabots_server:spawn_entities/guard/medium/20_medallar_cents
-scoreboard players operation @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=!pot] Speed = @s DelayTime
+scoreboard players operation @e[distance=..0.7,tag=guard] Speed = @s DelayTime

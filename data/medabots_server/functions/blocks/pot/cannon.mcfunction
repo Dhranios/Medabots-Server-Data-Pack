@@ -110,4 +110,4 @@ execute if entity @s[tag=detect,tag=rotating,tag=north,tag=4_medallar_cents] run
 execute if entity @s[tag=detect,tag=rotating,tag=north,tag=6_medallar_cents] run function medabots_server:spawn_entities/cannon/search/north/delay_4/6_medallar_cents
 execute if entity @s[tag=detect,tag=rotating,tag=north,tag=10_medallar_cents] run function medabots_server:spawn_entities/cannon/search/north/delay_4/10_medallar_cents
 execute if entity @s[tag=detect,tag=rotating,tag=north,tag=20_medallar_cents] run function medabots_server:spawn_entities/cannon/search/north/delay_4/20_medallar_cents
-scoreboard players operation @e[distance=..0.7,type=minecraft:area_effect_cloud,tag=!pot] DelayTime = @s DelayTime
+scoreboard players operation @e[distance=..0.7,tag=cannon] DelayTime = @s DelayTime

@@ -221,7 +221,7 @@ scoreboard players set Medabots: ServerStats 70
 scoreboard players set Medals: ServerStats 12
 scoreboard players set Bosses: ServerStats 15
 scoreboard players set Enemies: ServerStats 9
-scoreboard players set Dev_Mode_Versions: ServerStats 2
+scoreboard players set Dev_Mode_Versions: ServerStats 3
 
 # Re-add any teams that may have been removed
 team add Advanced {"translate":"medabots_server:scoreboard.team.advanced"}

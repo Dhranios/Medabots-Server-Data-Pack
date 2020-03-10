@@ -10,6 +10,5 @@ execute if entity @s[scores={ShopIndex1=21}] run function medabots_server:shoppi
 execute if entity @s[scores={ShopIndex1=28}] run function medabots_server:shopping/medal_salesman/question_mark
 
 tellraw @s[tag=!success] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.medal_salesman","color":"green"},{"translate":"medabots_server:message.shop.no_medal"}]}
-scoreboard players reset @s ShopIndex2
+scoreboard players reset @s ShopIndex1
 tag @s remove success
-tag @s remove trading

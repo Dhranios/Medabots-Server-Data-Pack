@@ -12,7 +12,7 @@ teleport @s[scores={Stage=58,State=0}] -1892 51 -489 -180 0
 tag @e[scores={Stage=58},type=!minecraft:player] add dead
 scoreboard players reset @a[scores={Stage=58},distance=0.1..] StageVersion
 scoreboard players reset @a[scores={Stage=58},distance=0.1..] Stage
-data merge block -1891 52 -534 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_out_e/play"}}'}
-setblock -1891 53 -536 minecraft:redstone_block
+data merge block -1893 52 -534 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/ruins_out_e/play"}}'}
+setblock -1893 53 -536 minecraft:redstone_block
 clear @s minecraft:written_book{medabots_server:{id:"medabots_server:stage_builder"}}
 execute if block ~ ~ ~ minecraft:oak_wall_sign run tellraw @s {"translate":"medabots_server:message.stage.available_again","color":"green"}

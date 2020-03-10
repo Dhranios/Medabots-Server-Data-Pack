@@ -1,2 +1,2 @@
 function medabots_server:spawn_entities/cannon/still/east
-scoreboard players set @e[distance=..0.7,tag=cannon] DelayTime 40
+scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] DelayTime 40
