@@ -11,4 +11,4 @@ fill ~ ~ ~ ~ ~ ~ minecraft:black_stained_glass replace minecraft:chest
 
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["body","cannon_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:12}}]}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","cannon_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:13}}]}
-execute as @e[tag=cannon,tag=!pot,tag=!action_floor_model,distance=..0.1] unless entity @s[scores={CannonNr=1..}] run scoreboard players operation @s CannonNr = @e[distance=..0.1,limit=1,tag=cannon,tag=!pot,tag=!action_floor] CannonNr
+execute as @e[tag=cannon_model,distance=..0.1] unless entity @s[scores={CannonNr=1..}] run scoreboard players operation @s CannonNr = @e[distance=..0.1,limit=1,tag=cannon,tag=!pot,tag=!action_floor] CannonNr

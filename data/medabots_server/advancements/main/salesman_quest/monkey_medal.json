@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:5}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.salesman_quest.monkey_medal"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.salesman_quest.monkey_medal.description"
+        }
+    },
+    "parent": "medabots_server:main/salesman_quest",
+    "criteria": {
+        "start_the_quest": {
+            "trigger": "minecraft:impossible"
+        },
+        "find_doctor_haru": {
+            "trigger": "minecraft:impossible"
+        },
+        "clear_the_stage": {
+            "trigger": "minecraft:impossible"
+        },
+        "end_the_quest": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

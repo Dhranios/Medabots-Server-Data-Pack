@@ -64,3 +64,5 @@ tag @s[advancements={medabots_server:story_progression/infinity={erikas_challeng
 tag @s[advancements={medabots_server:story_progression/infinity={bonus_area_pass=true,kojis_challenge=false}},x=-343,y=55,z=-75,distance=..4] add dialog_infinity_kojis_challenge
 tag @s[advancements={medabots_server:story_progression/infinity={kojis_challenge=true,kojis_pass=false},medabots_server:main/true_medafighter=false},x=-343,y=55,z=-75,distance=..4] add dialog_infinity_kojis_challenge_repeat
 tag @s[advancements={medabots_server:story_progression/infinity={kojis_challenge=true,kojis_pass=false},medabots_server:main/true_medafighter=true},x=-343,y=55,z=-75,distance=..4] add dialog_infinity_kojis_pass
+
+tag @s[advancements={medabots_server:story_progression/other={salesman_monkey_medal=true,salesman_monkey_medal_haru=false}},x=-448,y=55,z=-107,distance=..4] add dialog_other_salesman_monkey_medal_haru

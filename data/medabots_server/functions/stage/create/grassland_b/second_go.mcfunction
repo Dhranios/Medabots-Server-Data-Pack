@@ -75,10 +75,10 @@ execute positioned -1560 45 -410 run function medabots_server:spawn_entities/raf
 execute positioned -1520 45 -368 run function medabots_server:set_blocks/alarm/power_1
 execute positioned -1520 45 -364 run function medabots_server:set_blocks/alarm/power_1
 execute positioned -1547 45 -336 run function medabots_server:set_blocks/fan/north/off/range_11
-execute positioned -1568 45 -351 run function medabots_server:set_blocks/action_floor/round_stone/east/power_0
-execute positioned -1569 45 -352 run function medabots_server:set_blocks/action_floor/round_stone/east/power_0
-execute positioned -1569 45 -353 run function medabots_server:set_blocks/action_floor/round_stone/east/power_0
-execute positioned -1569 45 -354 run function medabots_server:set_blocks/action_floor/round_stone/east/power_0
+execute positioned -1568 45 -351 run function medabots_server:set_blocks/action_floor/round_stone/east/power_1
+execute positioned -1569 45 -352 run function medabots_server:set_blocks/action_floor/round_stone/east/power_1
+execute positioned -1569 45 -353 run function medabots_server:set_blocks/action_floor/round_stone/east/power_1
+execute positioned -1569 45 -354 run function medabots_server:set_blocks/action_floor/round_stone/east/power_1
 execute positioned -1521 45 -348 run function medabots_server:set_blocks/action_floor/guard/slow/1_medallar_cent/power_0
 execute positioned -1526 45 -351 run function medabots_server:set_blocks/action_floor/guard/slow/1_medallar_cent/power_0
 execute positioned -1517 45 -352 run function medabots_server:set_blocks/action_floor/guard/slow/1_medallar_cent/power_0

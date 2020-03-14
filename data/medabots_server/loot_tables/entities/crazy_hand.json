@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:snow_block",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.crazy_hand_remains\"}'},medabots_server:{stage_item:1b,id:\"medabots_server:crazy_hand_remains\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 25
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/boss"
+                }
+            ]
+        }
+    ]
+}

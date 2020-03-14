@@ -82,7 +82,6 @@ execute if block ~ ~-1 ~ minecraft:bricks if block ~ ~3 ~ minecraft:brick_slab r
 
 # Stage cleanup
 teleport @s[tag=dead] ~ -100 ~
-kill @s[tag=dead]
 
 # Fall in holes, lava, water and craters
 execute at @s if block ~ ~-1 ~ minecraft:air run teleport @s ~ ~-0.2 ~

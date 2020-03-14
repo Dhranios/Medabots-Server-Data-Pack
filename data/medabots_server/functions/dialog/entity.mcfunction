@@ -5,6 +5,7 @@ execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model,tag=!player_is_he
 execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model,tag=!player_is_here] as @e[scores={MedabotNr=1..},tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run kill @s
 execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model,tag=!player_is_here] as @e[scores={MedabotNr=1..},tag=medabot_model] if score @s MedabotNr > #temp MedabotNr run scoreboard players remove @s MedabotNr 1
 scoreboard players reset #temp MedabotNr
+scoreboard players reset #temp DialogNr
 teleport @s[tag=!player_is_here] ~ -1000 ~
 kill @s[tag=!player_is_here]
 tag @s[tag=player_is_here] remove player_is_here

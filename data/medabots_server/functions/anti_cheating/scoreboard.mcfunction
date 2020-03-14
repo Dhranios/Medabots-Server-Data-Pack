@@ -27,6 +27,7 @@ scoreboard objectives add Charge dummy
 scoreboard objectives add Cloud dummy
 scoreboard objectives add ConfuseTime dummy
 scoreboard objectives add Constants dummy
+scoreboard objectives add CrazyHandNr dummy
 scoreboard objectives add Damage dummy
 scoreboard objectives add DeathTime dummy
 scoreboard objectives add DefenseTime dummy

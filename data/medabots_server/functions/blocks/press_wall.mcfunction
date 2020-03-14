@@ -18,7 +18,7 @@ tag @s[tag=dead] remove powered
 tag @s[tag=dead] remove dead
 execute if entity @s[tag=dying,scores={Time=..0}] run fill ~ ~ ~ ~ ~3 ~ minecraft:air
 execute if entity @s[tag=dying,scores={Time=..0}] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
-kill @s[tag=dying,scores={Time=..0}]
+tag @s[tag=dying,scores={Time=..0}] add dead
 
 # Takes time
 tag @s[scores={Time=10,Range=2},tag=powered] add cannot_extend

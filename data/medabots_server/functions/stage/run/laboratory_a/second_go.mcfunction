@@ -88,5 +88,6 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabot
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/laboratory_a_second_go
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:laboratory_a/robattle players
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/get_score/time_damage_money
+tag @s[scores={BattlingMedabots=1,State=1..},advancements={medabots_server:story_progression/other={salesman_monkey_medal_haru=true,salesman_monkey_medal_stage=false}}] add dialog_other_salesman_monkey_medal_stage
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] positioned -1772 50 -285 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

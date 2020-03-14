@@ -108,6 +108,12 @@
         "salesman_monkey_medal": {
             "trigger": "minecraft:impossible"
         },
+        "salesman_monkey_medal_haru": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_monkey_medal_stage": {
+            "trigger": "minecraft:impossible"
+        },
         "salesman_monkey_medal_end": {
             "trigger": "minecraft:impossible"
         },

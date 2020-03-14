@@ -10,4 +10,4 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @a[scores={Stage=62}] positioned -1985 43 -196 run function medabots_server:stage/clear
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 
-execute as @e[scores={Stage=62},tag=!dying] at @s run teleport @s[y=0,dy=10] -2041 52 -220
+execute as @e[scores={Stage=62},tag=!dying] at @s run teleport @s[y=0,dy=10] -1985 52 -221

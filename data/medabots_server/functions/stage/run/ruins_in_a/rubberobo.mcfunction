@@ -35,9 +35,9 @@ execute if block -1723 43 -289 minecraft:orange_wool if block -1723 43 -286 mine
 execute if block -1716 43 -297 minecraft:yellow_wool run scoreboard players set @e[x=-1716.5,y=44,z=-298.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1716 43 -297 minecraft:orange_wool run scoreboard players set @e[x=-1716.5,y=44,z=-298.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1727 43 -303 minecraft:lime_wool run scoreboard players set @e[x=-1716.5,y=44,z=-316.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1650 43 -269 minecraft:lime_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,tag=press_wall,type=minecraft:area_effect_cloud] add enabled
-execute if block -1651 43 -286 minecraft:yellow_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,tag=press_wall,type=minecraft:area_effect_cloud] add enabled
-execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run tag @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,tag=press_wall,type=minecraft:area_effect_cloud] remove enabled
+execute if block -1650 43 -269 minecraft:lime_wool run scoreboard players set @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1651 43 -286 minecraft:yellow_wool run scoreboard players set @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1651 43 -286 minecraft:orange_wool if block -1650 43 -269 minecraft:green_wool run scoreboard players set @e[x=-1657,y=44,z=-284,dx=15,dy=3,dz=11,tag=press_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1694 44 -259 minecraft:iron_door[open=true] run scoreboard players set @e[x=-1646.5,y=44,z=-289.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1712 43 -286 minecraft:yellow_wool run scoreboard players set @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1712 43 -286 minecraft:orange_wool run scoreboard players set @e[x=-1708.5,y=44,z=-279.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
