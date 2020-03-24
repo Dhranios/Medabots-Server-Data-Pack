@@ -103,6 +103,7 @@ scoreboard objectives add MaxLeftArmArmor dummy
 scoreboard objectives add MaxLegsArmor dummy
 scoreboard objectives add MaxRightArmArmor dummy
 scoreboard objectives add Medabot dummy
+scoreboard objectives add MedabotLevel dummy
 scoreboard objectives add MedabotNr dummy
 scoreboard objectives add MedabotRotation dummy
 scoreboard objectives add Medaforce dummy

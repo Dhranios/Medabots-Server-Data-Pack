@@ -14,7 +14,7 @@ execute positioned -1541 45 -188 run function medabots_server:spawn_entities/can
 execute positioned -1548 45 -192 run function medabots_server:spawn_entities/cannon/swivel/east/delay_4/1_medallar_cent
 execute positioned -1556 45 -191 run function medabots_server:spawn_entities/cannon/still/south/delay_4/1_medallar_cent
 execute positioned -1559 45 -204 run function medabots_server:spawn_entities/cannon/search/south/delay_4/2_medallar_cents
-execute positioned -1563 45 -217 run function medabots_server:spawn_entities/cannon/search/west/delay_4/1_medallar_cent
+execute positioned -1563 45 -217 run function medabots_server:spawn_entities/cannon/search/west/delay_4/6_medallar_cents
 execute positioned -1555 45 -214 run function medabots_server:spawn_entities/cannon/search/west/delay_4
 execute positioned -1565 45 -204 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1566 45 -210 run function medabots_server:spawn_entities/item/2_medallar_cents
@@ -44,7 +44,7 @@ execute positioned -1549 45 -187 run function medabots_server:set_blocks/pot
 execute positioned -1547 45 -207 run function medabots_server:set_blocks/pot
 execute positioned -1547 45 -205 run function medabots_server:set_blocks/pot
 execute positioned -1548 45 -208 run function medabots_server:set_blocks/pot
-execute positioned -1548 45 -206 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1548 45 -206 run function medabots_server:set_blocks/pot/guard/slow/6_medallar_cents
 execute positioned -1549 45 -207 run function medabots_server:set_blocks/pot
 execute positioned -1549 45 -205 run function medabots_server:set_blocks/pot
 execute positioned -1550 45 -208 run function medabots_server:set_blocks/pot

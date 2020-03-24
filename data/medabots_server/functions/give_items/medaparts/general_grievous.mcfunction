@@ -1,0 +1,4 @@
+function medabots_server:give_items/medaparts/general_grievous/claw_rush
+function medabots_server:give_items/medaparts/general_grievous/trust_surge
+function medabots_server:give_items/medaparts/general_grievous/unrelenting_advance
+function medabots_server:give_items/medaparts/general_grievous/beating_heart

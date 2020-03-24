@@ -11,7 +11,7 @@
             "translate": "medabots_server:advancements.get_all_medabots.magolor.description"
         }
     },
-    "parent": "medabots_server:get_all_medabots/wave_1/darknut",
+    "parent": "medabots_server:get_all_medabots/wave_1/general_grievous",
     "criteria": {
         "head": {
             "trigger": "minecraft:inventory_changed",

@@ -23,6 +23,7 @@ execute positioned -1664 45 -176 run function medabots_server:spawn_entities/can
 execute positioned -1673 45 -175 run function medabots_server:spawn_entities/cannon/still/south/delay_4
 execute positioned -1699 45 -133 run function medabots_server:spawn_entities/item/4_medallar_cents
 execute positioned -1697 45 -133 run function medabots_server:spawn_entities/item/4_medallar_cents
+execute positioned -1661 45 -150 run function medabots_server:spawn_entities/item/4_medallar_cents
 execute positioned -1646 45 -176 run function medabots_server:spawn_entities/item/20_medallar_cents
 execute positioned -1692 45 -148 run function medabots_server:spawn_entities/item/2_medallar_cents
 execute positioned -1694 45 -151 run function medabots_server:spawn_entities/item/2_medallar_cents

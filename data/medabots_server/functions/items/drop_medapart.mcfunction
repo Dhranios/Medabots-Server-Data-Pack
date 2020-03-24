@@ -6,7 +6,9 @@ summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Medapart Selectio
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Medapart Selection"}',Tags:["medapart_selection","right_arm"],Duration:1}
 summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Medapart Selection"}',Tags:["medapart_selection","head"],Duration:1}
 tag @e[type=minecraft:area_effect_cloud,tag=medapart_selection,sort=random,limit=1] add selected
-summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:fishing_rod",Count:1b},Tags:["medapart_drop"],PickupDelay:1s,Age:5995s}
+summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:fishing_rod",Count:1b},Tags:["medapart_drop","medabot_loot"],PickupDelay:1s,Age:5995s}
+execute if entity @s[tag=enemy_medabot] run tag @e[type=minecraft:item,tag=medapart_drop,distance=..1,limit=1] add enemy_loot
+execute if entity @s[tag=ally_medabot] run tag @e[type=minecraft:item,tag=medapart_drop,distance=..1,limit=1] add ally_loot
 execute if entity @e[type=minecraft:area_effect_cloud,tag=medapart_selection,tag=selected,tag=legs] run data modify entity @e[type=minecraft:item,tag=medapart_drop,distance=..1,limit=1] Item.tag set from entity @e[tag=this_model,limit=1,tag=hips] ArmorItems[3].tag
 execute if entity @e[type=minecraft:area_effect_cloud,tag=medapart_selection,tag=selected,tag=legs] run data modify entity @e[type=minecraft:item,tag=medapart_drop,distance=..1,limit=1] Item.tag.Damage set value 1
 execute if entity @e[type=minecraft:area_effect_cloud,tag=medapart_selection,tag=selected,tag=legs] run tellraw @s {"translate":"medabots_server:message.lost_medapart","color":"red","with":[{"nbt":"ArmorItems[3].tag.display.Name","entity":"@e[tag=this_model,limit=1,tag=hips]","interpret":true,"color":"red"}]}

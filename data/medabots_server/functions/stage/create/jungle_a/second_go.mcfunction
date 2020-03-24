@@ -23,6 +23,7 @@ execute positioned -1664 45 -176 run function medabots_server:spawn_entities/can
 execute positioned -1673 45 -175 run function medabots_server:spawn_entities/cannon/still/south/delay_4
 execute positioned -1699 45 -133 run function medabots_server:spawn_entities/item/4_medallar_cents
 execute positioned -1697 45 -133 run function medabots_server:spawn_entities/item/4_medallar_cents
+execute positioned -1661 45 -150 run function medabots_server:spawn_entities/item/4_medallar_cents
 execute positioned -1651 45 -156 run function medabots_server:spawn_entities/item/20_medallar_cents
 summon minecraft:item -1646 45 -176 {Item:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"hole",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.hole"}]}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
 execute positioned -1692 45 -148 run function medabots_server:spawn_entities/item/2_medallar_cents

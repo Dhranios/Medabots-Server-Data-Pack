@@ -1,6 +1,6 @@
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 4
-scoreboard players set @s Stage 49
+scoreboard players set @s Stage 48
 scoreboard players set @s Gamemode 0
 
 loot spawn ~ ~ ~ loot medabots_server:gameplay/options/8

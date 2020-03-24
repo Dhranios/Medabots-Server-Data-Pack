@@ -278,6 +278,10 @@ execute if entity @s[scores={BuyMedapart=277},advancements={medabots_server:get_
 execute if entity @s[scores={BuyMedapart=278},advancements={medabots_server:get_all_medabots/wave_1/galleom={left_arm=true}}] run function medabots_server:give_items/medaparts/galleom/flaming_engine
 execute if entity @s[scores={BuyMedapart=279},advancements={medabots_server:get_all_medabots/wave_1/galleom={right_arm=true}}] run function medabots_server:give_items/medaparts/galleom/jet_engine
 execute if entity @s[scores={BuyMedapart=280},advancements={medabots_server:get_all_medabots/wave_1/galleom={head=true}}] run function medabots_server:give_items/medaparts/galleom/armored_body
+execute if entity @s[scores={BuyMedapart=281},advancements={medabots_server:get_all_medabots/wave_1/general_grievous={legs=true}}] run function medabots_server:give_items/medaparts/general_grievous/claw_rush
+execute if entity @s[scores={BuyMedapart=282},advancements={medabots_server:get_all_medabots/wave_1/general_grievous={left_arm=true}}] run function medabots_server:give_items/medaparts/general_grievous/trust_surge
+execute if entity @s[scores={BuyMedapart=283},advancements={medabots_server:get_all_medabots/wave_1/general_grievous={right_arm=true}}] run function medabots_server:give_items/medaparts/general_grievous/unrelenting_advance
+execute if entity @s[scores={BuyMedapart=284},advancements={medabots_server:get_all_medabots/wave_1/general_grievous={head=true}}] run function medabots_server:give_items/medaparts/general_grievous/beating_heart
 
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman","color":"green"},{"translate":"medabots_server:message.shop.thank_you.medapart"}]}
 scoreboard players remove @s Money 100

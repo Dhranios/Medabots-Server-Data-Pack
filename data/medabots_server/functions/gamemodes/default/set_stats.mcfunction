@@ -21,6 +21,7 @@ scoreboard players set @s Gamemode 0
 scoreboard players set @s TotalDamage 0
 scoreboard players set @s TotalKills 0
 scoreboard players set @s TotalTime 0
+scoreboard players operation @s MedabotLevel = @s Level
 function medabots_server:other/killer/score
 
 # Set the stats' max values

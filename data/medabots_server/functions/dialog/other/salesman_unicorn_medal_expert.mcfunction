@@ -2,6 +2,7 @@ execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:it
 scoreboard players add @s Dialog 1
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/other salesman_unicorn_medal_expert
 execute as @e[tag=librarian,distance=..4,limit=1] at @s run teleport @s ~ ~ ~ facing entity @a[distance=..4,scores={Dialog=1..},limit=1,sort=nearest]
+data merge entity @e[tag=salesman,distance=..4,limit=1] {NoAI:1b}
 execute unless block ~ ~ ~ minecraft:air{loaded:true} at @s at @e[tag=salesman_dialog,sort=nearest,limit=1,distance=..1] run teleport @s ~ ~ ~
 execute at @s run kill @e[tag=salesman_dialog,sort=nearest,limit=1,distance=..1]
 execute at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["salesman_dialog"],Duration:2}

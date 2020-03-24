@@ -76,6 +76,8 @@ execute if entity @s[nbt={Item:{tag:{medabots_server:{items:{medal:{tag:{medabot
 execute if entity @s[nbt={Item:{tag:{medabots_server:{items:{medal:{tag:{medabots_server:{id:"medabots_server:unicorn_medal"}}}}}}}}] run tag @e[tag=new_medabot,limit=1] add unicorn_medal
 execute if entity @s[nbt={Item:{tag:{medabots_server:{items:{medal:{tag:{medabots_server:{id:"medabots_server:devil_medal"}}}}}}}}] run tag @e[tag=new_medabot,limit=1] add devil_medal
 
+execute store result score @e[tag=new_medabot,limit=1] MedabotLevel run data get entity @s Item.tag.medabots_server.cpu_data.level
+
 # Set stats
 execute store result score @e[tag=new_medabot,limit=1] MaxHeadUses run data get entity @s Item.tag.medabots_server.items.head.tag.medabots_server.uses
 execute store result score @e[tag=new_medabot,limit=1] MaxHeadArmor run data get entity @s Item.tag.medabots_server.items.head.tag.medabots_server.armor

@@ -513,6 +513,16 @@
                             "tag": "{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:71,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_jet_engine\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.hammer.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"100\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.galleom\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_jet_engine.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:galleom_jet_engine\",gender:0b,move:\"hammer\",part:\"right_arm\",armor:100,power:50,activated:1b,version:1}}"
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:3,Unswordable:1b,HideFlags:4,CustomModelData:72,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.general_grievous_unrelenting_advance\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.sword\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.sword.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.infinite\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"40\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.general_grievous\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.general_grievous_unrelenting_advance.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:general_grievous_unrelenting_advance\",gender:0b,move:\"sword\",part:\"right_arm\",armor:40,power:50,activated:1b,version:1}}"
+                        }
+                    ]
                 }
             ]
         }

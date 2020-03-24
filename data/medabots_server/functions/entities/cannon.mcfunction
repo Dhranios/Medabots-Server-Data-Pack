@@ -43,17 +43,24 @@ execute unless entity @s[scores={FreezeTime=1..}] unless entity @s[scores={Paral
 # Allow rotating only on the second tick
 scoreboard players set @s[scores={Time=-1}] Time 20
 
-# Place part of self
-execute at @s[tag=!dead,tag=!dying] run fill ~ ~2 ~ ~ ~2 ~ minecraft:black_stained_glass replace minecraft:air
-execute at @s[tag=!dead,tag=!dying] run fill ~ ~ ~ ~ ~ ~ minecraft:black_stained_glass replace minecraft:air
-execute if entity @s[tag=dead,tag=!dying] run fill ~ ~2 ~ ~ ~2 ~ minecraft:air replace minecraft:black_stained_glass
-execute if entity @s[tag=dead,tag=!dying] run fill ~ ~ ~ ~ ~ ~ minecraft:air replace minecraft:black_stained_glass
-execute if entity @s[tag=dead,tag=!dying] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
+# Prevent collision from messing up, and any damage it receives goes to the main entity
+execute as @e[distance=..0.4,tag=cannon_blockade] run data merge entity @s {Rotation:[0.0d,0.0d]}
+execute as @e[distance=..0.4,tag=cannon_blockade] run effect give @s minecraft:invisibility 1000000 0 true
+execute as @e[distance=..0.4,tag=cannon_blockade] store result score #temp Health run data get entity @s AbsorptionAmount 100
+scoreboard players remove #temp Health 100000
+execute store result score #temp2 Health run data get entity @s AbsorptionAmount 100
+scoreboard players operation #temp2 Health += #temp Health
+execute store result entity @s AbsorptionAmount float 0.01 run scoreboard players get #temp2 Health
+scoreboard players reset #temp Health
+scoreboard players reset #temp2 Health
+execute as @e[distance=..0.4,tag=cannon_blockade] run data merge entity @s {Health:20.0f,Air:300s,Peek:1b,AbsorptionAmount:1000.0f}
+
 
 # Clean up
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp CannonNr = @s CannonNr
 execute if entity @s[tag=dead] as @e[tag=cannon_model,type=minecraft:armor_stand] if score @s CannonNr = #temp CannonNr run kill @s
+execute if entity @s[tag=dead] as @e[tag=cannon_blockade,type=minecraft:shulker] if score @s CannonNr = #temp CannonNr run kill @s
 execute if entity @s[tag=dead] as @e[scores={CannonNr=1..}] if score @s CannonNr > #temp CannonNr run scoreboard players remove @s CannonNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp CannonNr
 

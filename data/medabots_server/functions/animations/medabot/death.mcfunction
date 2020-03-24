@@ -15,6 +15,29 @@ execute at @s[scores={DeathTime=1}] as @e[tag=this_medabot] unless entity @s[sco
 execute at @s[scores={DeathTime=1}] as @e[tag=this_medabot] unless entity @s[scores={DeathTime=1}] run function medabots_server:animations/medabot/main
 tag @s[scores={DeathTime=1}] remove this_medabot
 execute if entity @s[scores={DeathTime=1}] run tag @e[tag=this_medabot] remove not_yet
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
+experience add @s[scores={DeathTime=1}] -5 points
+execute store result score #temp Stage run scoreboard players get @s[scores={DeathTime=1}] Stage
+tag @s[scores={DeathTime=1}] add me
+execute if entity @s[scores={DeathTime=1}] run scoreboard players set #temp Drop -1
+execute if entity @s[scores={DeathTime=1},tag=!practice_battle,tag=!practice_robattle] as @e[tag=medabot,tag=!practice_battle,tag=!me,tag=!dying] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 1
+execute if entity @s[scores={DeathTime=1},tag=!practice_battle,tag=!practice_robattle] as @e[tag=medabot,tag=practice_battle,tag=!me,tag=!dying] if score @s Stage = #temp Stage run scoreboard players set #temp Drop -1
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] unless score #temp Drop matches -1 positioned ~ 3 ~ run function medabots_server:items/drop_medapart
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] unless score #temp Drop matches -1 run function medabots_server:items/drop_medapart
+execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Stage
+execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Drop
+tag @s[scores={DeathTime=1}] remove me
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ run function medabots_server:items/lose_medallars
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run loot spawn ~ 3 ~ loot medabots_server:entities/medabot
+execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ as @e[distance=..1] unless entity @s[type=!minecraft:item,type=!minecraft:experience_orb] run data merge entity @s {Invulnerable:1b}
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run function medabots_server:items/lose_medallars
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run loot spawn ~ ~ ~ loot medabots_server:entities/medabot
+execute if entity @s[y=2,dy=255,scores={DeathTime=1}] as @e[distance=..1] unless entity @s[type=!minecraft:item,type=!minecraft:experience_orb] run data merge entity @s {Invulnerable:1b}
 gamemode spectator @s[scores={DeathTime=1}]
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Time 950
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Damage 0
@@ -22,38 +45,6 @@ replaceitem entity @s[scores={DeathTime=1},type=!minecraft:player] weapon.mainha
 execute if entity @s[scores={DeathTime=1}] run function medabots_server:effects/clear
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function medabots_server:other/death
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function medabots_server:other/death_message
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run summon minecraft:experience_orb ~ 3 ~ {Value:1s}
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run summon minecraft:experience_orb ~ ~ ~ {Value:1s}
-execute store result score #temp Stage run scoreboard players get @s[scores={DeathTime=1}] Stage
-tag @s[scores={DeathTime=1}] add me
-execute if entity @s[scores={DeathTime=1}] run scoreboard players set #temp Drop -1
-execute if entity @s[scores={DeathTime=1},tag=!practice_battle,tag=!practice_robattle] as @e[tag=medabot,tag=!practice_battle,tag=!me,tag=!dying] if score @s Stage = #temp Stage run scoreboard players set #temp Drop 1
-execute if entity @s[scores={DeathTime=1},tag=!practice_battle,tag=!practice_robattle] as @e[tag=medabot,tag=practice_battle,tag=!me,tag=!dying] if score @s Stage = #temp Stage run scoreboard players set #temp Drop -1
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] unless score #temp Drop matches -1 positioned ~ 3 ~ run function medabots_server:items/drop_medapart
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=enemy_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add enemy_loot
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=ally_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add ally_loot
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] unless score #temp Drop matches -1 run function medabots_server:items/drop_medapart
-execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=enemy_medabot] run tag @e[distance=..1,type=minecraft:item] add enemy_loot
-execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=ally_medabot] run tag @e[distance=..1,type=minecraft:item] add ally_loot
-execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Stage
-execute if entity @s[scores={DeathTime=1}] run scoreboard players reset #temp Drop
-tag @s[scores={DeathTime=1}] remove me
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ run function medabots_server:items/lose_medallars
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] run loot spawn ~ 3 ~ loot medabots_server:entities/medabot
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add medabot_loot
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=enemy_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add enemy_loot
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1},tag=ally_medabot] positioned ~ 3 ~ run tag @e[distance=..1,type=minecraft:item] add ally_loot
-execute if entity @s[y=-80,dy=79,scores={DeathTime=1}] positioned ~ 3 ~ as @e[distance=..1] unless entity @s[type=!minecraft:item,type=!minecraft:experience_orb] run data merge entity @s {Invulnerable:1b}
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run function medabots_server:items/lose_medallars
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run loot spawn ~ ~ ~ loot medabots_server:entities/medabot
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] run tag @e[distance=..1,type=minecraft:item] add medabot_loot
-execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=enemy_medabot] run tag @e[distance=..1,type=minecraft:item] add enemy_loot
-execute if entity @s[y=2,dy=255,scores={DeathTime=1},tag=ally_medabot] run tag @e[distance=..1,type=minecraft:item] add ally_loot
-execute if entity @s[y=2,dy=255,scores={DeathTime=1}] as @e[distance=..1] unless entity @s[type=!minecraft:item,type=!minecraft:experience_orb] run data merge entity @s {Invulnerable:1b}
 scoreboard players set @s[y=-80,dy=79,scores={DeathTime=4}] DeathTime 99
 execute if entity @s[scores={DeathTime=1..99},type=minecraft:player] positioned as @e[tag=this_medabot,tag=chest,limit=1] rotated as @s rotated ~ 0 run teleport @s ^0.105 ^2 ^-1.5 facing entity @e[tag=this_medabot,tag=chest,limit=1]
 teleport @s[scores={DeathTime=4..},type=!minecraft:player] ~ -50 ~

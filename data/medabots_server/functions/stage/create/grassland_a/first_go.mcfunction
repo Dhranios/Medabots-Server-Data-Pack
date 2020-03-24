@@ -107,7 +107,7 @@ execute positioned -1565 45 -173 run function medabots_server:set_blocks/pot/1_m
 execute positioned -1565 45 -172 run function medabots_server:set_blocks/pot
 replaceitem block -1565 45 -172 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"stone",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.stone"}]}'}}
 execute positioned -1565 45 -171 run function medabots_server:set_blocks/pot/guard/slow/1_medallar_cent
-execute positioned -1566 45 -172 run function medabots_server:set_blocks/pot/10_medallar_cents
+execute positioned -1566 45 -172 run function medabots_server:set_blocks/pot/20_medallar_cents
 execute positioned -1534 45 -142 run function medabots_server:set_blocks/stone
 execute positioned -1534 45 -141 run function medabots_server:set_blocks/stone
 execute positioned -1538 45 -140 run function medabots_server:set_blocks/stone

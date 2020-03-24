@@ -1,0 +1,29 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:9}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.salesman_quest.chameleon_medal"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.salesman_quest.chameleon_medal.description"
+        }
+    },
+    "parent": "medabots_server:main/salesman_quest/monkey_medal",
+    "criteria": {
+        "start_the_quest": {
+            "trigger": "minecraft:impossible"
+        },
+        "find_the_three_colors": {
+            "trigger": "minecraft:impossible"
+        },
+        "defeat_the_three_colors": {
+            "trigger": "minecraft:impossible"
+        },
+        "end_the_quest": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

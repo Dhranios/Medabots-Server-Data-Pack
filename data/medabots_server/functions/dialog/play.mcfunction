@@ -198,6 +198,7 @@ execute if entity @s[tag=dialog_infinity_postgame_doctor_haru_battle] run functi
 # Other
 execute if entity @s[tag=dialog_other_get_amelia] run function medabots_server:dialog/other/get_amelia
 #execute if entity @s[tag=dialog_other_get_galleom] run function medabots_server:dialog/other/get_galleom
+#execute if entity @s[tag=dialog_other_get_general_grievous] run function medabots_server:dialog/other/get_general_grievous
 #execute if entity @s[tag=dialog_other_get_magolor] run function medabots_server:dialog/other/get_magolor
 #execute if entity @s[tag=dialog_other_get_master_core] run function medabots_server:dialog/other/get_master_core
 #execute if entity @s[tag=dialog_other_get_metal_general] run function medabots_server:dialog/other/get_metal_general
@@ -221,7 +222,9 @@ execute if entity @s[tag=dialog_other_salesman_unicorn_medal_expert] run functio
 execute if entity @s[tag=dialog_other_salesman_monkey_medal] run function medabots_server:dialog/other/salesman_monkey_medal
 execute if entity @s[tag=dialog_other_salesman_monkey_medal_haru] run function medabots_server:dialog/other/salesman_monkey_medal_haru
 execute if entity @s[tag=dialog_other_salesman_monkey_medal_stage] run function medabots_server:dialog/other/salesman_monkey_medal_stage
-#execute if entity @s[tag=dialog_other_salesman_chameleon_medal] run function medabots_server:dialog/other/salesman_chameleon_medal
+execute if entity @s[tag=dialog_other_salesman_chameleon_medal] run function medabots_server:dialog/other/salesman_chameleon_medal
+execute if entity @s[tag=dialog_other_salesman_chameleon_medal_vs] run function medabots_server:dialog/other/salesman_chameleon_medal_vs
+execute if entity @s[tag=dialog_other_salesman_chameleon_medal_battle] run function medabots_server:dialog/other/salesman_chameleon_medal_battle
 #execute if entity @s[tag=dialog_other_salesman_mermaid_medal] run function medabots_server:dialog/other/salesman_mermaid_medal
 
 # Clashable
@@ -239,3 +242,4 @@ execute if entity @s[tag=dialog_other_salesman_unicorn_medal_item] unless entity
 execute if entity @s[tag=dialog_other_salesman_unicorn_medal_return] unless entity @s[tag=!salesman_unicorn_medal_return_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_unicorn_medal_return
 execute if entity @s[tag=dialog_other_salesman_unicorn_medal_end] unless entity @s[tag=!salesman_unicorn_medal_end_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_unicorn_medal_end
 execute if entity @s[tag=dialog_other_salesman_monkey_medal_end] unless entity @s[tag=!salesman_monkey_medal_end_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_monkey_medal_end
+execute if entity @s[tag=dialog_other_salesman_chameleon_medal_end] unless entity @s[tag=!salesman_chameleon_medal_end_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_chameleon_medal_end

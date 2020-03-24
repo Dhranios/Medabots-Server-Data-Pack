@@ -69,6 +69,7 @@ execute if entity @s[scores={ShopIndex1=19,ShopIndex2=14,ShopIndex3=1}] run func
 execute if entity @s[scores={ShopIndex1=19,ShopIndex2=16,ShopIndex3=9}] run function medabots_server:shopping/medabot_salesman/spi
 execute if entity @s[scores={ShopIndex1=19,ShopIndex2=19,ShopIndex3=2}] run function medabots_server:shopping/medabot_salesman/ssb
 execute if entity @s[scores={ShopIndex1=19,ShopIndex2=20,ShopIndex3=7}] run function medabots_server:shopping/medabot_salesman/stg
+execute if entity @s[scores={ShopIndex1=19,ShopIndex2=20,ShopIndex3=23}] run function medabots_server:shopping/medabot_salesman/stw
 execute if entity @s[scores={ShopIndex1=19,ShopIndex2=26,ShopIndex3=13}] run function medabots_server:shopping/medabot_salesman/szm
 execute if entity @s[scores={ShopIndex1=20,ShopIndex2=15,ShopIndex3=20}] run function medabots_server:shopping/medabot_salesman/tot
 execute if entity @s[scores={ShopIndex1=20,ShopIndex2=18,ShopIndex3=9}] run function medabots_server:shopping/medabot_salesman/tri

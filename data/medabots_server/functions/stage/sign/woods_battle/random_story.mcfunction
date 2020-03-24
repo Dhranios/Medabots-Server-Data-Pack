@@ -1,5 +1,7 @@
 data merge block -1950 52 -640 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/woods_battle/enter"}}'}
 setblock -1950 53 -642 minecraft:red_wool
+scoreboard players set @s Stage 47
+scoreboard players set @s Gamemode 0
 
 execute if entity @s[advancements={medabots_server:story_progression/infinity={opening=true,opening_battle=false}}] run function medabots_server:stage/try/woods_battle/story_battle
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_koji=true,vs_koji_battle=false}}] run function medabots_server:stage/try/woods_battle/story_battle

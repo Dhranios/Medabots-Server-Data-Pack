@@ -11,7 +11,7 @@
             "translate": "medabots_server:advancements.main.salesman_quest.monkey_medal.description"
         }
     },
-    "parent": "medabots_server:main/salesman_quest",
+    "parent": "medabots_server:main/salesman_quest/unicorn_medal",
     "criteria": {
         "start_the_quest": {
             "trigger": "minecraft:impossible"

@@ -513,6 +513,16 @@
                             "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:71,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_armored_body\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.missile\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.missile.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.more\",\"with\":[{\"text\":\"20\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"200\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.galleom\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.galleom_armored_body.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:galleom_armored_body\",gender:0b,move:\"missile\",part:\"head\",armor:200,power:80,uses:20,activated:1b,version:1}}"
                         }
                     ]
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:fishing_rod",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:72,display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.general_grievous_beating_heart\"}',Lore:['{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.scout\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:move.scout.description\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.uses.more\",\"with\":[{\"text\":\"7\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.armor\",\"with\":[{\"text\":\"80\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.male\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:entity.general_grievous\"}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.medapart.wave\",\"with\":[{\"text\":\"1\"}]}','{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.general_grievous_beating_heart.model\"}','{\"italic\":false,\"color\":\"green\",\"translate\":\"medabots_server:item.medapart.activated\"}']},medabots_server:{id:\"medabots_server:general_grievous_beating_heart\",gender:0b,move:\"scout\",part:\"head\",armor:80,power:10,uses:7,activated:1b,version:1}}"
+                        }
+                    ]
                 }
             ]
         }

@@ -4,6 +4,7 @@ execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progre
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progression/infinity={shrimplips_jammy=true,shrimplips_jammy_battle=false}}] run function medabots_server:stage/try/park_battle/story_battle/shrimplips_jammy
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progression/infinity={new_look_new_chances=true,new_look_new_chances_battle=false}}] run function medabots_server:stage/try/park_battle/story_battle/new_look_new_chances
 execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progression/infinity={vs_max=true,erikas_pass=false}}] run function medabots_server:stage/try/park_battle/story_battle/vs_max
+execute if entity @s[tag=valid_tinpet,advancements={medabots_server:story_progression/other={salesman_chameleon_medal_vs=true,salesman_chameleon_medal_battle=false}}] unless entity @s[advancements={medabots_server:story_progression/infinity={vs_max=true,erikas_pass=false}}] run function medabots_server:stage/try/park_battle/story_battle/salesman_chameleon_medal
 execute if entity @s[tag=valid_tinpet,scores={KillStreak=1}] run function medabots_server:stage/try/park_battle/story_battle/postgame_erika
 execute if entity @s[tag=valid_tinpet,scores={KillStreak=2}] run function medabots_server:stage/try/park_battle/story_battle/postgame_max
 execute if entity @s[tag=valid_tinpet,tag=!story_battle] run tellraw @s {"translate":"medabots_server:message.stage.no_story","color":"green"}

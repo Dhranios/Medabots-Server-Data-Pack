@@ -5,7 +5,7 @@ data merge entity @s[nbt={Item:{tag:{medabots_server:{id:"medabots_server:medall
 scoreboard players add @s[scores={Time=..59}] Time 1
 execute unless entity @s[scores={Time=0..}] run scoreboard players add @s[nbt={Thrower:{}}] Time 1
 execute if entity @s[scores={Stage=0..}] run data merge entity @s[tag=!do_not_teleport] {PickupDelay:0s}
-execute unless entity @s[scores={Stage=0..}] run data merge entity @s[tag=!do_not_teleport,nbt=!{PickupDelay:0s}] {PickupDelay:40s}
+execute unless entity @s[scores={Stage=0..}] run data merge entity @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{activated:1b}}}}] {PickupDelay:0s}
 execute if entity @s[scores={Time=60},nbt={Owner:{}},tag=!break,tag=!falling,tag=!damage_ball] run function medabots_server:items/replace
 data modify entity @s[nbt={Thrower:{}},nbt=!{Owner:{}},tag=!break,tag=!falling,tag=!damage_ball] Owner merge from entity @s Thrower
 execute if entity @s[tag=medabot_loot] store result score #temp Stage run scoreboard players get @s Stage

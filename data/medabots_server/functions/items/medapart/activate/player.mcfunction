@@ -45,7 +45,7 @@ scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt=
 scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"falling",part:"head"}}}]}] MedapartType 9
 scoreboard players set @s[scores={LeftArmArmor=1..},tag=!ineffective_left,nbt={SelectedItemSlot:1,Inventory:[{Slot:1b,tag:{medabots_server:{activated:1b,move:"confuse",part:"left_arm"}}}]}] MedapartType 6
 scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt={SelectedItemSlot:2,Inventory:[{Slot:2b,tag:{medabots_server:{activated:1b,move:"confuse",part:"right_arm"}}}]}] MedapartType 6
-scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"falling",part:"head"}}}]}] MedapartType 6
+scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"confuse",part:"head"}}}]}] MedapartType 6
 scoreboard players set @s[scores={LeftArmArmor=1..},tag=!ineffective_left,nbt={SelectedItemSlot:1,Inventory:[{Slot:1b,tag:{medabots_server:{activated:1b,move:"no_defend",part:"left_arm"}}}]}] MedapartType 27
 scoreboard players set @s[scores={RightArmArmor=1..},tag=!ineffective_right,nbt={SelectedItemSlot:2,Inventory:[{Slot:2b,tag:{medabots_server:{activated:1b,move:"no_defend",part:"right_arm"}}}]}] MedapartType 27
 scoreboard players set @s[scores={HeadUses=1..},tag=!ineffective_head,nbt={SelectedItemSlot:3,Inventory:[{Slot:3b,tag:{medabots_server:{activated:1b,move:"no_defend",part:"head"}}}]}] MedapartType 27

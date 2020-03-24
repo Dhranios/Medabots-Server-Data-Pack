@@ -58,7 +58,7 @@ execute positioned -1602 45 -142 run function medabots_server:set_blocks/pot
 execute positioned -1597 45 -151 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1612 45 -143 run function medabots_server:set_blocks/pot/guard/slow
 execute positioned -1627 45 -139 run function medabots_server:set_blocks/pot/4_medallar_cents
-execute positioned -1631 45 -143 run function medabots_server:set_blocks/pot/1_medallar_cent
+execute positioned -1631 45 -143 run function medabots_server:set_blocks/pot
 execute positioned -1634 45 -146 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1634 45 -151 run function medabots_server:set_blocks/pot/1_medallar_cent
 execute positioned -1632 45 -151 run function medabots_server:set_blocks/pot/4_medallar_cents

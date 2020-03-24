@@ -5,10 +5,8 @@ scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] 
 scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] DelayTime 0
 scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] Time 20
 scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] Killer 0
-fill ~ ~2 ~ ~ ~2 ~ minecraft:black_stained_glass replace minecraft:air
-fill ~ ~ ~ ~ ~ ~ minecraft:black_stained_glass replace minecraft:air
-fill ~ ~ ~ ~ ~ ~ minecraft:black_stained_glass replace minecraft:chest
 
-summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["body","cannon_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:12}}]}
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["body","cannon_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:12}}],Passengers:[{id:"minecraft:shulker",Silent:1b,NoAI:1b,AbsorptionAmount:1000.0f,DeathLootTable:"minecraft:empty",Peek:1b,Tags:["cannon_blockade","hostile"],ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,Amplifier:0b,ShowParticles:0b}]}]}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","cannon_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:13}}]}
 execute as @e[tag=cannon_model,distance=..0.1] unless entity @s[scores={CannonNr=1..}] run scoreboard players operation @s CannonNr = @e[distance=..0.1,limit=1,tag=cannon,tag=!pot,tag=!action_floor] CannonNr
+execute as @e[tag=cannon_blockaxe,distance=..0.1] unless entity @s[scores={CannonNr=1..}] run scoreboard players operation @s CannonNr = @e[distance=..0.1,limit=1,tag=cannon,tag=!pot,tag=!action_floor] CannonNr

@@ -231,6 +231,9 @@
         "nino": {
             "trigger": "minecraft:impossible"
         },
+        "general_grievous": {
+            "trigger": "minecraft:impossible"
+        },
         "alien_medal": {
             "trigger": "minecraft:impossible"
         },

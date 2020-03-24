@@ -9,6 +9,9 @@
         "get_galleom": {
             "trigger": "minecraft:impossible"
         },
+        "get_general_grievous": {
+            "trigger": "minecraft:impossible"
+        },
         "get_magolor": {
             "trigger": "minecraft:impossible"
         },
@@ -118,6 +121,12 @@
             "trigger": "minecraft:impossible"
         },
         "salesman_chameleon_medal": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_chameleon_medal_vs": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_chameleon_medal_battle": {
             "trigger": "minecraft:impossible"
         },
         "salesman_chameleon_medal_end": {
