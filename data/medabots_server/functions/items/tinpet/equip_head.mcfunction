@@ -42,6 +42,16 @@ tellraw @s[tag=valid,scores={EditingTinpet=7},nbt={Inventory:[{Slot:7b,tag:{meda
 tellraw @s[tag=valid,scores={EditingTinpet=8},nbt={Inventory:[{Slot:8b,tag:{medabots_server:{items:{head:{Count:1b}}}}}]}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.equipped.switched","with":[{"nbt":"SelectedItem.tag.display.Lore[5]","interpret":true,"entity":"@s","extra":[{"text":" "},{"nbt":"SelectedItem.tag.display.Name","interpret":true,"entity":"@s"}]},{"nbt":"Inventory[{Slot:8b}].tag.display.Lore[1]","interpret":true,"entity":"@s"}]}]}
 tellraw @s[tag=valid,scores={EditingTinpet=9},nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{items:{head:{Count:1b}}}}}]}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.equipped.switched","with":[{"nbt":"SelectedItem.tag.display.Lore[5]","interpret":true,"entity":"@s","extra":[{"text":" "},{"nbt":"SelectedItem.tag.display.Name","interpret":true,"entity":"@s"}]},{"nbt":"Inventory[{Slot:-106b}].tag.display.Lore[1]","interpret":true,"entity":"@s"}]}]}
 
+# Update model
+execute if entity @s[tag=valid] run scoreboard players operation #temp MedabotNr = @s MedabotNr
+execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=head] if score @s MedabotNr = #temp MedabotNr run kill @s
+execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=chest] if score @s MedabotNr = #temp MedabotNr run kill @s
+execute if entity @s[tag=valid] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+execute at @s[tag=valid] as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = #temp MedabotNr
+execute at @s[tag=valid] as @e[tag=head,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] SelectedItem
+execute if entity @s[tag=valid] run scoreboard players reset #temp MedabotNr
+execute if entity @s[tag=valid] run tag @e[tag=medabot_model,tag=new] remove new
+
 # Give equipped head back
 execute if entity @s[tag=valid] run summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:totem_of_undying",Count:1b},Tags:["do_not_teleport","replacement"],PickupDelay:1s}
 execute if entity @s[tag=valid,scores={EditingTinpet=0}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:0b}].tag.medabots_server.items.head

@@ -1,4 +1,5 @@
 # Move to spectator area
+execute if entity @s[scores={Stage=0}] run function medabots_server:stage/leave_stage/robattle
 execute if entity @s[scores={Stage=1}] run function medabots_server:stage/leave_stage/grassland_a
 execute if entity @s[scores={Stage=2}] run function medabots_server:stage/leave_stage/rock_a
 execute if entity @s[scores={Stage=3}] run function medabots_server:stage/leave_stage/jungle_a

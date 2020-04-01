@@ -43,8 +43,8 @@ tag @s[tag=see_goal_area,tag=!seen_goal_area,scores={Time=20}] add seen_goal_are
 # Walk 1 block after turning to follow wall
 scoreboard players set @s[scores={Time=0},tag=walk_1_block,tag=downed] Time 16
 scoreboard players set @s[scores={Time=0},tag=walk_1_block,tag=!downed] Time 8
-execute if entity @s[scores={Time=1},tag=walk_1_block,tag=!turn_left] rotated ~ 0 if block ^1 ^ ^ minecraft:air if block ^1 ^1 ^ minecraft:air run tag @s remove follow_wall
-execute if entity @s[scores={Time=1},tag=walk_1_block,tag=turn_left] rotated ~ 0 if block ^-1 ^ ^ minecraft:air if block ^-1 ^1 ^ minecraft:air run tag @s remove follow_wall
+execute if entity @s[scores={Time=1},tag=walk_1_block,tag=!turn_left] rotated ~ 0 positioned ^1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run tag @s remove follow_wall
+execute if entity @s[scores={Time=1},tag=walk_1_block,tag=turn_left] rotated ~ 0 positioned ^-1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run tag @s remove follow_wall
 tag @s[scores={Time=1},tag=walk_1_block] remove walk_1_block
 
 # Dead end?
@@ -54,14 +54,14 @@ execute if entity @s[scores={Time=0}] run function medabots_server:entities/rubb
 execute if entity @s[tag=walking,scores={Time=0},tag=!walk_1_block] run function medabots_server:entities/rubberobo/wall
 
 # Follow the wall on my side
-execute if entity @s[tag=walking,scores={Time=0},tag=!turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 if block ^1 ^ ^ minecraft:air if block ^1 ^1 ^ minecraft:air run scoreboard players set @s Time -20
-execute if entity @s[tag=walking,scores={Time=0},tag=turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 if block ^-1 ^ ^ minecraft:air if block ^-1 ^1 ^ minecraft:air run scoreboard players set @s Time -20
-execute if entity @s[tag=walking,scores={Time=-20},tag=!turn_left,tag=follow_wall] rotated ~ 0 if block ^1 ^ ^ minecraft:air if block ^1 ^1 ^ minecraft:air run tag @s add walk_1_block
-execute if entity @s[tag=walking,scores={Time=-20},tag=turn_left,tag=follow_wall] rotated ~ 0 if block ^-1 ^ ^ minecraft:air if block ^-1 ^1 ^ minecraft:air run tag @s add walk_1_block
-execute if entity @s[tag=walking,scores={Time=0},tag=!turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 if block ^1 ^ ^ minecraft:barrier if block ^1 ^1 ^ minecraft:barrier run scoreboard players set @s Time -20
-execute if entity @s[tag=walking,scores={Time=0},tag=turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 if block ^-1 ^ ^ minecraft:barrier if block ^-1 ^1 ^ minecraft:barrier run scoreboard players set @s Time -20
-execute if entity @s[tag=walking,scores={Time=-20},tag=!turn_left,tag=follow_wall] rotated ~ 0 if block ^1 ^ ^ minecraft:barrier if block ^1 ^1 ^ minecraft:barrier run tag @s add walk_1_block
-execute if entity @s[tag=walking,scores={Time=-20},tag=turn_left,tag=follow_wall] rotated ~ 0 if block ^-1 ^ ^ minecraft:barrier if block ^-1 ^1 ^ minecraft:barrier run tag @s add walk_1_block
+execute if entity @s[tag=walking,scores={Time=0},tag=!turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 positioned ^1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run scoreboard players set @s Time -20
+execute if entity @s[tag=walking,scores={Time=0},tag=turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 positioned ^-1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run scoreboard players set @s Time -20
+execute if entity @s[tag=walking,scores={Time=-20},tag=!turn_left,tag=follow_wall] rotated ~ 0 positioned ^1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run tag @s add walk_1_block
+execute if entity @s[tag=walking,scores={Time=-20},tag=turn_left,tag=follow_wall] rotated ~ 0 positioned ^-1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:air unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run tag @s add walk_1_block
+execute if entity @s[tag=walking,scores={Time=0},tag=!turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 positioned ^1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:barrier unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run scoreboard players set @s Time -20
+execute if entity @s[tag=walking,scores={Time=0},tag=turn_left,tag=follow_wall,tag=!walk_1_block] rotated ~ 0 positioned ^-1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:barrier unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run scoreboard players set @s Time -20
+execute if entity @s[tag=walking,scores={Time=-20},tag=!turn_left,tag=follow_wall] rotated ~ 0 positioned ^1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:barrier unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run tag @s add walk_1_block
+execute if entity @s[tag=walking,scores={Time=-20},tag=turn_left,tag=follow_wall] rotated ~ 0 positioned ^-1 ^ ^ if block ~ ~ ~ minecraft:air if block ~ ~1 ~ minecraft:barrier unless entity @e[type=minecraft:husk,distance=..0.7,tag=cannon] run tag @s add walk_1_block
 
 # Not downed after a while
 tag @s[tag=downed,tag=!walking,scores={Time=0}] remove downed

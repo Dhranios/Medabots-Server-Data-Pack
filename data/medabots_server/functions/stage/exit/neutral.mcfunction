@@ -1,6 +1,7 @@
 tag @s add me
 
 # Move to spectator area
+execute if entity @s[scores={Stage=0}] unless entity @e[scores={Stage=0,State=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/robattle
 execute if entity @s[scores={Stage=1}] unless entity @e[scores={Stage=1,State=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/grassland_a
 execute if entity @s[scores={Stage=2}] unless entity @e[scores={Stage=2,State=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/rock_a
 execute if entity @s[scores={Stage=3}] unless entity @e[scores={Stage=3,State=1..2},tag=medabot,tag=!me] run function medabots_server:stage/leave_stage/jungle_a

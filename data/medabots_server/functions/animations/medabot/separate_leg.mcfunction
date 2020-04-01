@@ -6,6 +6,7 @@ execute store result entity @e[distance=..0.7,tag=new,limit=1] ArmorItems[3].tag
 scoreboard players operation @e[distance=..0.7,tag=new,limit=1] Time = #temp Time
 scoreboard players operation @e[distance=..0.7,tag=new,limit=1] Time %= #2 Constants
 scoreboard players operation @e[tag=model_piece,tag=new,limit=1] MedabotNr = @s MedabotNr
+execute if entity @s[tag=tinpet_editing] run tag @e[tag=model_piece,tag=new,limit=1] add tinpet_editing
 execute if entity @s[tag=cutscene] run tag @e[tag=model_piece,tag=new,limit=1] add cutscene
 execute if entity @s[tag=male_tinpet] run tag @e[tag=model_piece,tag=new,limit=1] add male_tinpet
 execute if entity @s[tag=female_tinpet] run tag @e[tag=model_piece,tag=new,limit=1] add female_tinpet

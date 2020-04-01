@@ -142,8 +142,8 @@ execute if entity @s[scores={Dialog=3041}] as @e[tag=dragonbeetle_1,tag=!medabot
 execute if entity @s[scores={Dialog=3041}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 40 0
 execute if entity @s[scores={Dialog=3041}] as @e[tag=dragonbeetle_2,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 40 0
 execute if entity @s[scores={Dialog=3041}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 40 0
-execute if entity @s[scores={Dialog=3103}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] run tag @s add running
-execute if entity @s[scores={Dialog=3111}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] run tag @s add running
+execute if entity @s[scores={Dialog=3103}] as @e[tag=rubberobo_2,tag=this_dialog,limit=1] run tag @s remove running
+execute if entity @s[scores={Dialog=3111}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] run tag @s remove running
 execute if entity @s[scores={Dialog=3113}] run tag @e[tag=dragonbeetle_2,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=3114}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 0
 execute if entity @s[scores={Dialog=3121}] as @e[tag=dragonbeetle_1,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 40 0

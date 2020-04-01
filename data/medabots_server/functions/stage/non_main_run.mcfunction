@@ -1,3 +1,4 @@
+execute if entity @s[scores={Stage=0}] run function medabots_server:stage/non_main_run/robattle
 execute if entity @s[scores={Stage=36}] run function medabots_server:stage/non_main_run/lagdou_ruins_1
 execute if entity @s[scores={Stage=37}] run function medabots_server:stage/non_main_run/lagdou_ruins_2
 execute if entity @s[scores={Stage=38}] run function medabots_server:stage/non_main_run/lagdou_ruins_3

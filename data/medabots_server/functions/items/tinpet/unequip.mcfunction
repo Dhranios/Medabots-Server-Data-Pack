@@ -1,3 +1,8 @@
+# Update model
+scoreboard players operation #temp MedabotNr = @s MedabotNr
+execute as @e[tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run kill @s
+scoreboard players reset #temp MedabotNr
+
 # Only if there's a medal equipped
 execute if entity @s[scores={EditingTinpet=0},nbt={Inventory:[{Slot:0b,tag:{medabots_server:{items:{medal:{tag:{medabots_server:{part:"medal"}}}}}}}]}] run tag @s add valid
 execute if entity @s[scores={EditingTinpet=1},nbt={Inventory:[{Slot:1b,tag:{medabots_server:{items:{medal:{tag:{medabots_server:{part:"medal"}}}}}}}]}] run tag @s add valid

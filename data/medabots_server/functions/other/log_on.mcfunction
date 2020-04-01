@@ -11,6 +11,9 @@ team leave @s
 tag @a[tag=message] remove message
 scoreboard players reset @s RandomMessage
 
+execute if entity @s[scores={EditingTinpet=1..}] run function medabots_server:items/tinpet/stop_editing
+execute unless entity @s[tag=!awaiting_response,tag=!challenged_to_robattle] run scoreboard players set @s PlayerInteract -1
+
 # No music when logging in
 scoreboard players set @s PrevMusicType 0
 scoreboard players set @s Music 0

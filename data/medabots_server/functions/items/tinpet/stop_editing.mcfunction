@@ -7,3 +7,9 @@ tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:i
 scoreboard players operation @s MusicType = @s OldMusicType
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players reset @s OldMusicType
+
+scoreboard players operation #temp MedabotNr = @s MedabotNr
+execute as @e[tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run kill @s
+execute as @e[scores={MedabotNr=1..}] if score @s MedabotNr > #temp MedabotNr run scoreboard players remove @s MedabotNr 1
+scoreboard players reset @s MedabotNr
+scoreboard players reset #temp MedabotNr

@@ -20,6 +20,15 @@ tellraw @s[scores={EditingTinpet=7},nbt={Inventory:[{Slot:7b,tag:{medabots_serve
 tellraw @s[scores={EditingTinpet=8},nbt={Inventory:[{Slot:8b,tag:{medabots_server:{items:{medal:{Count:1b}}}}}]}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.equipped.switched","with":[{"nbt":"SelectedItem.tag.display.Name","interpret":true,"entity":"@s"},{"nbt":"Inventory[{Slot:8b}].tag.display.Lore[0]","interpret":true,"entity":"@s"}]}]}
 tellraw @s[scores={EditingTinpet=9},nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{items:{medal:{Count:1b}}}}}]}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.equipped.switched","with":[{"nbt":"SelectedItem.tag.display.Name","interpret":true,"entity":"@s"},{"nbt":"Inventory[{Slot:-106b}].tag.display.Lore[0]","interpret":true,"entity":"@s"}]}]}
 
+# Update model
+scoreboard players operation #temp MedabotNr = @s MedabotNr
+execute as @e[tag=medabot_model,tag=medal] if score @s MedabotNr = #temp MedabotNr run kill @s
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["medal","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = #temp MedabotNr
+execute at @s as @e[tag=medal,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] SelectedItem
+scoreboard players reset #temp MedabotNr
+tag @e[tag=medabot_model,tag=new] remove new
+
 # Give equipped medal back
 summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:totem_of_undying",Count:1b},Tags:["do_not_teleport","replacement"],PickupDelay:1s}
 execute if entity @s[scores={EditingTinpet=0}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:0b}].tag.medabots_server.items.medal

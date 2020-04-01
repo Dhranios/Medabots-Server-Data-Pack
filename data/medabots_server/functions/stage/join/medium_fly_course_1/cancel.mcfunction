@@ -1,11 +1,11 @@
 execute unless entity @a[scores={Stage=2,Gamemode=1,StageIndex=-1},limit=1] run data merge block -89 121 -79 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/fly_course_no_race"}}'}
 execute unless entity @a[scores={Stage=2,Gamemode=1,StageIndex=-1},limit=1] run setblock -90 122 -79 minecraft:diamond_block
-execute unless entity @a[scores={Stage=2,Gamemode=1,StageIndex=-1},limit=1] run tellraw @s {"translate":"medabots_server:message.stage.fly_course.canceled","color":"green","with":[{"translate":"medabots_server:location.fly_course.medium"},{"text":"1"}]}
+execute unless entity @a[scores={Stage=2,Gamemode=1,StageIndex=-1},limit=1] run tellraw @s {"translate":"medabots_server:message.stage.fly_course.canceled","color":"green","with":[{"translate":"medabots_server:location.medium_fly_course_1"}]}
 execute unless entity @a[scores={Stage=2,Gamemode=1,StageIndex=-1},limit=1] run data merge block -89 121 -77 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/medium_fly_course_1/initiate_race"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}
 execute unless entity @a[scores={Stage=2,Gamemode=1,StageIndex=-1},limit=1] as @a[scores={Stage=2,Gamemode=1}] run scoreboard players operation @s Money += @s PayedFee
 execute unless entity @a[scores={Stage=2,Gamemode=1,StageIndex=-1},limit=1] as @a[scores={Stage=2,Gamemode=1}] run function medabots_server:gamemodes/fly_course/reset
 
-execute if entity @s[scores={StageIndex=-1}] run tellraw @a {"translate":"medabots_server:message.stage.fly_course.canceled","color":"green","with":[{"translate":"medabots_server:location.fly_course.medium"},{"text":"1"}]}
+execute if entity @s[scores={StageIndex=-1}] run tellraw @a {"translate":"medabots_server:message.stage.fly_course.canceled","color":"green","with":[{"translate":"medabots_server:location.medium_fly_course_1"}]}
 execute if entity @s[scores={StageIndex=-1}] run data merge block -89 121 -79 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/fly_course_no_race"}}'}
 execute if entity @s[scores={StageIndex=-1}] run setblock -90 122 -79 minecraft:diamond_block
 execute if entity @s[scores={StageIndex=-1}] run data merge block -89 121 -77 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/medium_fly_course_1/initiate_race"}}',Text3:'{"translate":"medabots_server:sign.stage.fly_course.race"}'}

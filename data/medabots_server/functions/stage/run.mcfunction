@@ -1,4 +1,5 @@
-execute if entity @s[scores={Stage=0}] run function medabots_server:stage/run/tutorial
+execute if entity @s[scores={Stage=0}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/robattle
+execute if entity @s[scores={Stage=0,StageVersion=1}] run function medabots_server:stage/run/tutorial
 execute if entity @s[scores={Stage=1}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/grassland_a/custom
 execute if entity @s[scores={Stage=1,StageVersion=1}] run function medabots_server:stage/run/grassland_a/first_go
 execute if entity @s[scores={Stage=1,StageVersion=2}] run function medabots_server:stage/run/grassland_a/second_go

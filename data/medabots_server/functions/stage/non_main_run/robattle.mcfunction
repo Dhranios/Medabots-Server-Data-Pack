@@ -1,0 +1,1 @@
+execute at @e[tag=mr_referee,type=minecraft:armor_stand,tag=finished,distance=..30,limit=1] unless entity @a[scores={Stage=0,Medabot=0..,State=1..},tag=main,distance=..30] run tag @s add main

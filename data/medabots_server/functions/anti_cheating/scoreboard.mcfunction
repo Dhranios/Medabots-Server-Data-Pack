@@ -134,6 +134,7 @@ scoreboard objectives add ParalyzeTime dummy
 scoreboard objectives add PayedFee dummy
 scoreboard objectives add PerfectGuardTime dummy
 scoreboard objectives add Pig minecraft.custom:minecraft.pig_one_cm
+scoreboard objectives add PlayerInteract trigger
 scoreboard objectives add PosX dummy
 scoreboard objectives add PosY dummy
 scoreboard objectives add PosZ dummy
@@ -219,7 +220,7 @@ scoreboard players set #200 Constants 200
 scoreboard players set #1000 Constants 1000
 scoreboard players set #1005 Constants 1005
 scoreboard players set #10000 Constants 10000
-scoreboard players set Medabots: ServerStats 70
+scoreboard players set Medabots: ServerStats 71
 scoreboard players set Medals: ServerStats 12
 scoreboard players set Bosses: ServerStats 15
 scoreboard players set Enemies: ServerStats 9

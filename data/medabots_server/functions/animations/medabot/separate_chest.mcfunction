@@ -3,6 +3,7 @@ data modify entity @e[tag=model_piece,tag=new_chest,limit=1] ArmorItems[3] merge
 data modify entity @e[tag=model_piece,tag=new_chest,limit=1] ArmorItems[3].id set value "minecraft:carrot_on_a_stick"
 data modify entity @e[tag=model_piece,tag=new_chest,limit=1] ArmorItems[3].tag.Damage set value 24
 scoreboard players operation @e[tag=model_piece,tag=new_chest,limit=1] MedabotNr = @s MedabotNr
+execute if entity @s[tag=tinpet_editing] run tag @e[tag=model_piece,tag=new_chest,limit=1] add tinpet_editing
 execute if entity @s[tag=cutscene] run tag @e[tag=model_piece,tag=new_chest,limit=1] add cutscene
 execute if entity @s[tag=male_tinpet] run tag @e[tag=model_piece,tag=new_chest,limit=1] add male_tinpet
 execute if entity @s[tag=female_tinpet] run tag @e[tag=model_piece,tag=new_chest,limit=1] add female_tinpet

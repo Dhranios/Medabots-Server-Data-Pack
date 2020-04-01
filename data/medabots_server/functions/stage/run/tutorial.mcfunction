@@ -51,6 +51,7 @@ scoreboard players set @s[scores={Dialog=1467}] MusicType 1
 scoreboard players set @s[scores={Dialog=1467}] Music 0
 execute if entity @s[scores={Dialog=1467}] run function medabots_server:gamemodes/default/reset
 teleport @s[scores={Dialog=1467}] -286 55 -52.0 -90 0
+scoreboard players reset @s[scores={Dialog=1467}] Stage
 scoreboard players set @s[scores={Dialog=1467}] Dialog 0
 scoreboard players reset @s SelfDestruct
 scoreboard players reset @s SelfDestructTime
