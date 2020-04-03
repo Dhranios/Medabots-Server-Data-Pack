@@ -32,6 +32,7 @@ effect clear @s minecraft:invisibility
 clear @s minecraft:tipped_arrow
 
 # Remove medabot indexing
+gamemode adventure @s[tag=dying]
 tag @s remove hostile
 tag @s remove practice_robattle
 tag @s remove medabot
@@ -116,4 +117,3 @@ scoreboard players reset @s Medabot
 scoreboard players reset @s State
 scoreboard players reset @s Gamemode
 scoreboard players reset @s DeathTime
-gamemode adventure @s

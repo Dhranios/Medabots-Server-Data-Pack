@@ -29,23 +29,6 @@ execute if entity @s[y=-80,dy=79,tag=!had_death] run tellraw @a {"translate":"me
 tag @s[y=-80,dy=79] add had_death
 tag @s[y=-80,dy=79] add dying
 
-# Get Armor %
-scoreboard players operation @s LegsPer = @s LegsArmor
-scoreboard players operation @s LeftArmPer = @s LeftArmArmor
-scoreboard players operation @s RightArmPer = @s RightArmArmor
-scoreboard players operation @s HeadPer = @s HeadArmor
-scoreboard players operation @s HeadUsesPer = @s HeadUses
-scoreboard players operation @s LegsPer *= #100 Constants
-scoreboard players operation @s LeftArmPer *= #100 Constants
-scoreboard players operation @s RightArmPer *= #100 Constants
-scoreboard players operation @s HeadPer *= #100 Constants
-scoreboard players operation @s HeadUsesPer *= #100 Constants
-scoreboard players operation @s LegsPer /= @s MaxLegsArmor
-scoreboard players operation @s LeftArmPer /= @s MaxLeftArmArmor
-scoreboard players operation @s RightArmPer /= @s MaxRightArmArmor
-scoreboard players operation @s HeadPer /= @s MaxHeadArmor
-scoreboard players operation @s HeadUsesPer /= @s MaxHeadUses
-
 # Set Armor colors
 scoreboard players set @s[scores={LegsArmor=..0}] LegsDanger 3
 scoreboard players set @s[scores={LeftArmArmor=..0}] LeftArmDanger 3

@@ -1,0 +1,13 @@
+{
+    "values": [
+        "medabots_server:entities/medabot/cpu/preferences/heal",
+        "medabots_server:entities/medabot/cpu/preferences/repair",
+        "medabots_server:entities/medabot/cpu/preferences/blocking",
+        "medabots_server:entities/medabot/cpu/preferences/guard",
+        "medabots_server:entities/medabot/cpu/preferences/status_clear",
+        "medabots_server:entities/medabot/cpu/preferences/trap",
+        "medabots_server:entities/medabot/cpu/preferences/melee",
+        "medabots_server:entities/medabot/cpu/preferences/ranged",
+        "medabots_server:entities/medabot/cpu/preferences/charge_medaforce"
+    ]
+}

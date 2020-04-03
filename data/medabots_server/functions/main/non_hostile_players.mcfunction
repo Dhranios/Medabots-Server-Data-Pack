@@ -44,4 +44,4 @@ execute if entity @s[scores={UsePart=1..,Dialog=0,Trading=0},nbt={SelectedItem:{
 execute if entity @s[scores={UsePart=1..,Dialog=0,Trading=0},nbt={Inventory:[{Slot:-106b,tag:{medabots_server:{part:"tinpet"}}}]}] unless entity @s[scores={PlayerInteract=1..}] unless entity @s[nbt={SelectedItem:{}}] run function medabots_server:items/tinpet/edit
 execute if entity @s[scores={UnequipTinpet=1..}] run function medabots_server:items/tinpet/unequip
 tellraw @s[scores={UsePart=1..,Dialog=1..},nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}] {"translate":"medabots_server:message.tinpet.dialog","color":"green"}
-execute if entity @s[scores={EditingTinpet=1..}] run function medabots_server:items/tinpet/editing
+execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/editing
