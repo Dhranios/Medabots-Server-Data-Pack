@@ -7,7 +7,7 @@
                 {
                     "type": "minecraft:loot_table",
                     "name": "medabots_server:gameplay/transform/right_arm/male",
-                    "weight": 51
+                    "weight": 52
                 },
                 {
                     "type": "minecraft:loot_table",

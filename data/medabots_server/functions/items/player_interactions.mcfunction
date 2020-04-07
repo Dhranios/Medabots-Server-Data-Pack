@@ -14,6 +14,7 @@ execute unless entity @s[tag=!awaiting_trade_response,tag=!asked_to_trade] run f
 execute if entity @s[scores={PlayerInteract=4,Dialog=0},tag=sneak_pos] run function medabots_server:items/player_interactions/trade/accept_trade
 execute if entity @s[scores={PlayerInteract=-2,Dialog=0}] run function medabots_server:items/player_interactions/trade/cancel
 execute unless entity @s[scores={PlayerInteract=1..}] run scoreboard players enable @s PlayerInteract
+execute if entity @s[scores={PlayerInteract=4}] run scoreboard players enable @s PlayerInteract
 scoreboard players set @s[scores={Dialog=1..}] PlayerInteract 0
 scoreboard players set @s[scores={PlayerInteract=1,Dialog=0},gamemode=!adventure] PlayerInteract 0
 scoreboard players set @s[scores={PlayerInteract=2,Dialog=0},gamemode=!adventure] PlayerInteract -1

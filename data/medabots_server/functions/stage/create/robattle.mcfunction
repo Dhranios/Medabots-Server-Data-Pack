@@ -6,7 +6,7 @@ execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @a[dis
 scoreboard players set @a[distance=..10,tag=awaiting_challenge_response,scores={State=1}] MusicType 0
 scoreboard players set @a[distance=..10,tag=challenged_to_robattle,scores={State=1}] MusicType 0
 summon minecraft:armor_stand ^2 ^ ^ {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","robattle_center"]}
-execute positioned ^2 ^ ^ as @e[type=minecraft:armor_stand,distance=..0.7,limit=1] run teleport @s ~ ~ ~ facing ^ ^ ^-2
+execute positioned ^2 ^ ^ as @e[type=minecraft:armor_stand,distance=..0.7,limit=1] run teleport @s ~ ~ ~ facing ^-2 ^ ^
 execute positioned ^2 ^ ^ run scoreboard players set @e[type=minecraft:armor_stand,distance=..0.7,limit=1] Stage 0
 scoreboard players set @a[distance=..10,tag=awaiting_challenge_response,scores={State=1}] PlayerInteract 0
 scoreboard players set @a[distance=..10,tag=challenged_to_robattle,scores={State=1}] PlayerInteract 0

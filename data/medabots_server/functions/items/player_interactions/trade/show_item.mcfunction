@@ -5,6 +5,10 @@ execute if entity @s[tag=awaiting_trade_response] as @e[type=minecraft:armor_sta
 execute if entity @s[tag=asked_to_trade] as @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] positioned ~ ~-1 ~ facing entity @a[distance=..10,tag=awaiting_trade_response] feet rotated ~ 0 run teleport @s ~ ~1 ~ ~ ~
 
 data modify entity @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] ArmorItems[3] merge from entity @s Inventory[{Slot:-106b}]
-execute as @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] run data modify entity @s CustomName set from entity @s ArmorItems[3].Count
+tag @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] add this_entity
+setblock -286 0 -52 minecraft:oak_sign{Text1:'{"entity":"@e[tag=this_entity,limit=1]","nbt":"ArmorItems[3].Count"}'}
+data modify entity @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] CustomName set from block -286 0 -52 Text1
+setblock -286 0 -52 minecraft:bedrock
+tag @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] remove this_entity
 execute unless entity @s[nbt={Inventory:[{Slot:-106b}]}] run data remove entity @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] ArmorItems[3]
 execute unless entity @s[nbt={Inventory:[{Slot:-106b}]}] run data modify entity @e[type=minecraft:armor_stand,distance=..0.7,tag=trade_item,limit=1] CustomName set value '{"text":""}'
