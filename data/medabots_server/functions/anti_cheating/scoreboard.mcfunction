@@ -52,6 +52,7 @@ scoreboard objectives add FlyCourseTime dummy
 scoreboard objectives add FlyHackTime dummy
 scoreboard objectives add FlyTime dummy
 scoreboard objectives add Flying minecraft.custom:minecraft.fly_one_cm
+scoreboard objectives add ForwardAmount dummy
 scoreboard objectives add FreezeTime dummy
 scoreboard objectives add Gamemode dummy
 scoreboard objectives add GamemodeTime dummy
@@ -86,6 +87,7 @@ scoreboard objectives add Laps dummy
 scoreboard objectives add LastHealth dummy
 scoreboard objectives add LastPlaceTime dummy
 scoreboard objectives add LeaveStage trigger
+scoreboard objectives add LeftAmount dummy
 scoreboard objectives add LeftArmArmor dummy
 scoreboard objectives add LeftArmDanger dummy
 scoreboard objectives add LeftArmPer dummy
@@ -189,6 +191,7 @@ scoreboard objectives add TransformLTime dummy
 scoreboard objectives add TransformRID dummy
 scoreboard objectives add TransformRTime dummy
 scoreboard objectives add UnequipTinpet trigger
+scoreboard objectives add UpAmount dummy
 scoreboard objectives add UpToDate dummy
 scoreboard objectives add UsePart minecraft.used:minecraft.fishing_rod
 scoreboard objectives add Verified trigger

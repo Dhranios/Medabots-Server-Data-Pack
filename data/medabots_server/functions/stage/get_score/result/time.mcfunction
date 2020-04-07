@@ -4,6 +4,7 @@ scoreboard players operation #temp TotalTime /= #20 Constants
 scoreboard players operation #temp TotalTime /= #6 Constants
 scoreboard players set #temp Money 100
 execute if score #temp TotalTime matches 1.. run scoreboard players operation #temp Money -= #temp TotalTime
+execute if score #temp Money matches ..0 run scoreboard players set #temp Money 0
 tellraw @s {"translate":"medabots_server:message.stage.score.results.time","color":"green","with":[{"score":{"objective":"Money","name":"#temp"}}]}
 scoreboard players operation @s Score += #temp Money
 scoreboard players reset #temp TotalTime
