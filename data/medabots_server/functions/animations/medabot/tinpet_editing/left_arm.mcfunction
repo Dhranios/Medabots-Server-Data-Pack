@@ -1,2 +1,3 @@
 # Move with
-execute at @a[tag=this_medabot,limit=1] rotated ~ 0 positioned ^ ^ ^2 facing entity @a[tag=this_medabot,limit=1] feet rotated ~ 0 run teleport @s ^0.25 ^-.35 ^ ~ ~
+execute at @e[tag=this_medabot,tag=hips,limit=1] rotated ~ 0 run teleport @s ^.25 ^.32 ^
+execute if entity @s[tag=!was_selected] store result entity @s Rotation[0] float 0.01 run data get entity @e[tag=this_medabot,tag=hips,limit=1] Rotation[0] 100
