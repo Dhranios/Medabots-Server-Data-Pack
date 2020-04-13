@@ -1,0 +1,1 @@
+tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data","color":"green","with":[{"translate":"medabots_server:entity.raft"}]}

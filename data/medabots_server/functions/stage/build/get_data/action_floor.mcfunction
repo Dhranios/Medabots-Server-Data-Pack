@@ -1,0 +1,3 @@
+tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables","color":"green","with":[{"translate":"medabots_server:block.action_floor"}]}
+tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.power","color":"green","with":[{"score":{"objective":"PowerNeeded","name":"@e[distance=..0.7,limit=1,tag=action_floor]"}}]}
+tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.bound","color":"green","with":[{"score":{"objective":"HomeX","name":"@e[distance=..0.7,limit=1,tag=action_floor]"}},{"score":{"objective":"HomeY","name":"@e[distance=..0.7,limit=1,tag=action_floor]"}},{"score":{"objective":"HomeZ","name":"@e[distance=..0.7,limit=1,tag=action_floor]"}}]}

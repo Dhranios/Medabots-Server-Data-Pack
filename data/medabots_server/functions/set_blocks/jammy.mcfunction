@@ -1,2 +1,3 @@
 summon minecraft:pig ~ ~ ~ {ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}],NoAI:1b,CustomName:'{"translate":"medabots_server:block.jammy"}',CustomNameVisible:0b,Invulnerable:0b,Health:100.0f,AbsorptionAmount:250.0f,Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.knockbackResistance",Base:1.0d}],PersistenceRequired:1b,Team:"StageEnemy",Silent:1b,Tags:["jammy","hostile"]}
 fill ~ ~ ~ ~ ~ ~ minecraft:end_rod[facing=up] replace minecraft:air
+fill ~ ~ ~ ~ ~ ~ minecraft:end_rod[facing=up] replace minecraft:chest

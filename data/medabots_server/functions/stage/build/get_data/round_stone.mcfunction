@@ -1,0 +1,11 @@
+tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables","color":"green","with":[{"translate":"medabots_server:entity.round_stone"}]}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={Moving=0},tag=!action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.none","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={Moving=1},tag=!action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.east","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={Moving=2},tag=!action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.south","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={Moving=3},tag=!action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.west","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={Moving=4},tag=!action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.north","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={DelayTime=0},tag=action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.none","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={DelayTime=1},tag=action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.east","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={DelayTime=2},tag=action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.south","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={DelayTime=3},tag=action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.west","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=round_stone,scores={DelayTime=4},tag=action_floor] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.moving.north","color":"green"}

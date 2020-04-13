@@ -1,0 +1,3 @@
+execute if entity @e[distance=..0.7,limit=1,tag=guard,scores={Speed=1}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables","color":"green","with":[{"translate":"medabots_server:entity.guard.slow"}]}
+execute if entity @e[distance=..0.7,limit=1,tag=guard,scores={Speed=2}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables","color":"green","with":[{"translate":"medabots_server:entity.guard.medium"}]}
+execute if entity @e[distance=..0.7,limit=1,tag=guard,scores={Speed=4}] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables","color":"green","with":[{"translate":"medabots_server:entity.guard.fast"}]}

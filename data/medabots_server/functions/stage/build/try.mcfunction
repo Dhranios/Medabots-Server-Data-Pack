@@ -7,7 +7,7 @@ execute if entity @s[scores={StageBuild=3}] run function medabots_server:stage/b
 execute if entity @s[scores={StageBuild=4},advancements={medabots_server:special_items/stage_build_items/action_floor=true}] run function medabots_server:stage/build/action_floor
 execute if entity @s[scores={StageBuild=5..7}] run function medabots_server:stage/build/floor_switch
 execute if entity @s[scores={StageBuild=8},tag=allowed,advancements={medabots_server:special_items/stage_build_items/stone=true}] run function medabots_server:stage/build/stone
-execute if entity @s[scores={StageBuild=9},advancements={medabots_server:special_items/accelerator=true}] run function medabots_server:stage/build/accelerator
+execute if entity @s[scores={StageBuild=9},advancements={medabots_server:special_items/stage_build_items/accelerator=true}] run function medabots_server:stage/build/accelerator
 execute if entity @s[scores={StageBuild=10..13},tag=allowed,advancements={medabots_server:special_items/stage_build_items/gas_floor=true}] run function medabots_server:stage/build/gas_floor
 execute if entity @s[scores={StageBuild=14},tag=allowed,advancements={medabots_server:special_items/stage_build_items/hole=true}] run function medabots_server:stage/build/hole
 execute if entity @s[scores={StageBuild=15},tag=allowed,advancements={medabots_server:special_items/stage_build_items/hammer_punch=true}] run function medabots_server:stage/build/hammer_punch
