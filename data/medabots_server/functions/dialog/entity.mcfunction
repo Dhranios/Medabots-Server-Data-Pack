@@ -12,9 +12,11 @@ tag @s[tag=player_is_here] remove player_is_here
 tag @a[tag=this_dialog] remove this_dialog
 
 # Model
+tag @s[tag=walking_animation] add walking
 execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model] run function medabots_server:animations/medabot
 
 function medabots_server:animations/cutscene_entity
+tag @s[tag=walking_animation] remove walking
 
 teleport @s[tag=walking] ^ ^ ^0.2125
 teleport @s[tag=running,tag=!rubberobo] ^ ^ ^0.425

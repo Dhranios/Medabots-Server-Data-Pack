@@ -1,10 +1,7 @@
-execute if entity @s[scores={Time=10}] run function medabots_server:items/medapart/total_recovery/20
-execute if entity @s[scores={Time=20..}] run function medabots_server:items/medapart/total_recovery/20..
-
 # Show particles at user
 particle minecraft:heart ~ ~1.55 ~ 0 0 0 1
 
-# MedapartID user
+# Heal user
 scoreboard players add @s HeadArmor 20
 execute if score @s HeadArmor > @s MaxHeadArmor run scoreboard players operation @s HeadArmor = @s MaxHeadArmor
 

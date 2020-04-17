@@ -273,10 +273,11 @@ scoreboard players set @s[scores={Dialog=8800}] Music 0
 tellraw @s[scores={Dialog=8800}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.the_underground_arena.179"}]}
 tellraw @s[scores={Dialog=8808}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.the_underground_arena.180"}]}
 tellraw @s[scores={Dialog=8832}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.the_underground_arena.181"}]}
-execute if entity @s[scores={Dialog=8864}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=8864..8873}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~0.2125 ~-0.10125
-execute if entity @s[scores={Dialog=8874..8883}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.2125 ~-0.10125
-execute if entity @s[scores={Dialog=8884}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] remove walking
+execute if entity @s[scores={Dialog=8864}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=doctor_haru,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=8864}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add walking_animation
+execute if entity @s[scores={Dialog=8864..8873}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~0.2125 ~0.10125
+execute if entity @s[scores={Dialog=8874..8883}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~-0.2125 ~0.10125
+execute if entity @s[scores={Dialog=8884}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] remove walking_animation
 execute if entity @s[scores={Dialog=8864}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 0
 execute if entity @s[scores={Dialog=8864}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=8885}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -70 0
