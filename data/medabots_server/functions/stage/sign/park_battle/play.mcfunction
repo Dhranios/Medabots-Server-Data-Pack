@@ -1,4 +1,5 @@
 execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
+execute if entity @s[tag=has_medabot_form] run function medabots_server:items/player_interactions/medabot/revert
 teleport @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] -1944 37 -565 90 0
 execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run data merge block -1950 52 -589 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/park_battle/enter"}}'}
 execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run setblock -1950 53 -591 minecraft:red_wool

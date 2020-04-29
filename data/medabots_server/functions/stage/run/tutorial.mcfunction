@@ -21,7 +21,7 @@ execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run scoreboar
 execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run effect give @e[distance=..0.7,tag=enemy_medabot] minecraft:resistance 1000000 9 true
 execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run scoreboard players set @e[distance=..0.7,tag=enemy_medabot] LeftArmArmor -1
 execute if entity @s[scores={Dialog=895}] positioned -1884 45 -611 run scoreboard players set @e[distance=..0.7,tag=enemy_medabot] LegsArmor -1
-execute if entity @s[scores={Dialog=896}] if entity @e[tag=enemy_medabot,scores={Stage=0},nbt={HurtTime:9s}] run scoreboard players add @s Dialog 1
+execute if entity @s[scores={Dialog=896}] if entity @e[tag=enemy_medabot,scores={Stage=0},nbt=!{HurtTime:0s}] run scoreboard players add @s Dialog 1
 scoreboard players add @s[scores={Dialog=897..1102}] Dialog 1
 tellraw @s[scores={Dialog=898}] {"translate":"medabots_server:dialog.tutorial.12","color":"green"}
 tellraw @s[scores={Dialog=944}] {"translate":"medabots_server:dialog.tutorial.13","color":"green"}
@@ -43,7 +43,7 @@ tellraw @s[scores={Dialog=1105}] {"translate":"medabots_server:dialog.tutorial.1
 tellraw @s[scores={Dialog=1177}] {"translate":"medabots_server:dialog.tutorial.16","color":"green"}
 tellraw @s[scores={Dialog=1305}] {"translate":"medabots_server:dialog.tutorial.17","color":"green"}
 tellraw @s[scores={Dialog=1465}] {"translate":"medabots_server:dialog.tutorial.18","color":"green"}
-execute if entity @s[scores={Dialog=1466}] if entity @e[tag=enemy_medabot,scores={Stage=0},nbt={HurtTime:9s}] run scoreboard players add @s Dialog 1
+execute if entity @s[scores={Dialog=1466}] if entity @e[tag=enemy_medabot,scores={Stage=0},nbt=!{HurtTime:0s}] run scoreboard players add @s Dialog 1
 tellraw @s[scores={Dialog=1467}] {"translate":"medabots_server:dialog.tutorial.19","color":"green"}
 execute as @e[x=-1888,y=42,z=-633,dx=31,dy=7,dz=27] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 0
 execute if entity @s[scores={Dialog=1467}] positioned -1884 45 -630 run tag @e[distance=..0.7,tag=enemy_medabot] add dead

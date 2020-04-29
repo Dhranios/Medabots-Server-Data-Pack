@@ -39,6 +39,7 @@ scoreboard players reset #legs Medabot
 # Set name
 data modify entity @e[tag=new_medabot,limit=1] CustomName set from entity @s Item.tag.medabots_server.items.head.tag.display.Lore[5]
 execute if data entity @s Item.tag.medabots_server.cpu_data.medabot_name run data modify entity @e[tag=new_medabot,limit=1] CustomName set from entity @s Item.tag.medabots_server.cpu_data.medabot_name
+execute if data entity @s Item.tag.medabots_server.cpu_data.medabot_name run tag @e[tag=new_medabot,limit=1] add try_special_message
 
 # Enemy, ally or neutral
 execute unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"enemy"}}}}}] unless entity @s[nbt={Item:{tag:{medabots_server:{cpu_data:{team:"ally"}}}}}] run tag @e[tag=new_medabot,limit=1] add neutral_medabot

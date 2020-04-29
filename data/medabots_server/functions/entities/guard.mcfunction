@@ -7,7 +7,9 @@ execute if entity @s[tag=dead,tag=!disabled] run function medabots_server:blocks
 scoreboard players remove @s[scores={Time=1..},tag=!disabled] Time 1
 
 # If hurt, freezes
-tag @s[nbt={HurtTime:9s},tag=!disabled] add hurt
+tag @s[nbt=!{HurtTime:0s},tag=!disabled,tag=!has_hurt] add hurt
+tag @s[nbt=!{HurtTime:0s},tag=!disabled] add has_hurt
+tag @s[nbt={HurtTime:0s},tag=!disabled] remove has_hurt
 
 # Effects
 scoreboard players set @s[scores={FreezeTime=1..},tag=!disabled] Time 40

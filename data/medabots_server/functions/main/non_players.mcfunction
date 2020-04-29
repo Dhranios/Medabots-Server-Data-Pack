@@ -23,7 +23,7 @@ execute if entity @s[type=minecraft:ghast] run function medabots_server:main/gha
 execute if entity @s[type=minecraft:snowball] run function medabots_server:main/snowballs
 
 # Functions that run on every Rubberobo
-execute if entity @s[tag=rubberobo,nbt={HurtTime:5s}] unless entity @s[scores={Stage=1..}] run function medabots_server:entities/rubberobo/caught
+execute if entity @s[tag=rubberobo,nbt=!{HurtTime:0s}] unless entity @s[scores={Stage=1..}] run function medabots_server:entities/rubberobo/caught
 execute if entity @s[tag=rubberobo,scores={Stage=1..},tag=!disabled] run function medabots_server:entities/rubberobo
 
 # Make Medabots do things

@@ -4,5 +4,6 @@ execute at @s run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["awaiting_resp
 
 execute if entity @s[scores={PlayerInteract=4}] positioned ~ ~1 ~ run function medabots_server:items/player_interactions/trade/show_item
 
+tag @s add interacting_with_player
 execute unless entity @a[distance=..10,tag=asked_to_trade] run scoreboard players set @s[tag=awaiting_trade_response] PlayerInteract -2
 execute unless entity @a[distance=..10,tag=awaiting_trade_response] run scoreboard players set @s[tag=asked_to_trade] PlayerInteract -2

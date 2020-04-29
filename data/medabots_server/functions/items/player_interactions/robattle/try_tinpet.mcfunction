@@ -2,7 +2,7 @@ execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet"}}}}]
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{part:"tinpet",items:{medal:{tag:{medabots_server:{part:"medal"}}},head:{tag:{medabots_server:{part:"head"}}},right_arm:{tag:{medabots_server:{part:"right_arm"}}},left_arm:{tag:{medabots_server:{part:"left_arm"}}},legs:{tag:{medabots_server:{part:"legs"}}}}}}}}] run function medabots_server:gamemodes/default/set_stats
 
 scoreboard players set @s[scores={State=3}] Stage 0
-tellraw @s[scores={State=3}] {"translate":"medabots_server:message.player_interactions.challenge.selected_tinpet","color":"green"}
+tellraw @s[scores={State=3}] {"translate":"medabots_server:message.player_interactions.robattle.selected_tinpet","color":"green"}
 
-execute if entity @a[distance=..10,tag=challenged_to_robattle,scores={State=3}] if entity @s[tag=awaiting_challenge_response,scores={State=3}] run function medabots_server:stage/create/robattle
-execute if entity @a[distance=..10,tag=awaiting_challenge_response,scores={State=3}] if entity @s[tag=challenged_to_robattle,scores={State=3}] run function medabots_server:stage/create/robattle
+execute if entity @a[distance=..10,tag=challenged_to_robattle,scores={State=3}] if entity @s[tag=awaiting_robattle_response,scores={State=3}] run function medabots_server:stage/create/robattle
+execute if entity @a[distance=..10,tag=awaiting_robattle_response,scores={State=3}] if entity @s[tag=challenged_to_robattle,scores={State=3}] run function medabots_server:stage/create/robattle

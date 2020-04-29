@@ -1,0 +1,3 @@
+execute if entity @s[scores={Dialog=0}] as @e[tag=medabot,tag=this_robattle,tag=!ally_medabot,tag=!enemy_medabot,scores={Medabot=1..},sort=random,limit=1,tag=!intro_message] run function medabots_server:other/intro_message
+execute if entity @s[scores={Dialog=0}] as @e[tag=medabot,tag=this_robattle,tag=ally_medabot,scores={Medabot=1..},sort=random,limit=1,tag=!intro_message] run function medabots_server:other/intro_message
+execute if entity @s[scores={Dialog=0}] as @e[tag=medabot,tag=this_robattle,tag=enemy_medabot,scores={Medabot=1..},sort=random,limit=1,tag=!intro_message] run function medabots_server:other/intro_message

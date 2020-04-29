@@ -24,6 +24,7 @@ tag @s add selected
 
 # "Look at the sky, the stars, and the universe, there is no better robattle referee in this whole universe than I, Mr. Referee! Enjoy the robattle from the bottom of your heart! Are you ready?"
 scoreboard players add @s[tag=!done] Dialog 1
+scoreboard players remove @s[tag=done,tag=!fully_done,scores={Dialog=1..}] Dialog 1
 scoreboard players operation #temp Stage = @s Stage
 execute as @e if score @s Stage = #temp Stage run tag @s add this_robattle
 execute if entity @s[scores={Dialog=2}] as @e[tag=cannon,type=minecraft:husk,tag=this_robattle] run tag @s remove enabled
@@ -43,16 +44,9 @@ execute if entity @s[tag=4,tag=!done] run function medabots_server:dialog/mr_ref
 execute if entity @s[tag=5,tag=!done] run function medabots_server:dialog/mr_referee/5
 execute if entity @s[tag=6,tag=!done] run function medabots_server:dialog/mr_referee/6
 execute if entity @s[tag=7,tag=!done] run function medabots_server:dialog/mr_referee/7
-execute if entity @s[tag=done,tag=!finished] run playsound medabots_server:entity.mr_referee.robattle voice @a[tag=this_robattle] ~ ~ ~ 1000
-execute if entity @s[tag=done,tag=!finished] run tellraw @a[tag=this_robattle] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.mr_referee","color":"green"},{"translate":"medabots_server:dialog.mr_referee.robattle"}]}
-execute if entity @s[tag=done,tag=!no_overwrite,tag=!finished] as @a[tag=this_robattle] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-execute if entity @s[tag=done,tag=!no_overwrite,tag=!finished] run scoreboard players set @a[tag=this_robattle] MusicType 26
-execute if entity @s[tag=done,tag=!no_overwrite,tag=!finished] at @e[tag=enemy_medabot,scores={State=2},tag=overwrite_robattle_music] run scoreboard players operation @a[tag=waiting_for_referee] MusicType = @e[tag=enemy_medabot,scores={State=2},tag=overwrite_robattle_music] MusicType
-execute if entity @s[tag=done,tag=!finished] run scoreboard players set @e[tag=this_robattle] State 1
-data merge entity @s[tag=done,tag=!finished] {Small:1b,Invisible:1b,ArmorItems:[{},{},{},{}]}
-scoreboard players set @s[tag=done,tag=!finished] Dialog 0
-execute if entity @s[tag=done,tag=!finished] as @e[tag=!medabot,tag=this_robattle] run tag @s remove disabled
-tag @s[tag=done,tag=!finished] add finished
+execute if entity @s[tag=done,tag=!finished,scores={Dialog=0}] run function medabots_server:dialog/mr_referee/medabot
+execute if entity @s[tag=done,tag=!finished,scores={Dialog=0}] run function medabots_server:dialog/mr_referee/robattle
+execute if entity @s[tag=finished,tag=!fully_done,scores={Dialog=0}] run function medabots_server:dialog/mr_referee/finish
 
 # Custom stage
 execute if entity @s[tag=done,tag=finished,tag=custom_stage] store result score @s BattlingMedabots if entity @e[scores={Medabot=0..,State=1..2},tag=this_robattle]

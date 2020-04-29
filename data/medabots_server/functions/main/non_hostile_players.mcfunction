@@ -1,6 +1,6 @@
 # No vanilla combat
 effect give @s minecraft:weakness 1000000 127 true
-effect give @s[nbt={HurtTime:9s}] minecraft:instant_health 1 19 true
+effect give @s[nbt=!{HurtTime:0s}] minecraft:instant_health 1 19 true
 
 # Re-give new items so they are seen by advancements
 execute at @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}]}] unless entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:loot_container",medallars:0d}}}]}] run function medabots_server:items/loot_container/give_medallars

@@ -35,7 +35,7 @@ execute if entity @s[tag=dead] run function medabots_server:entities/balloon_bom
 # Prevent model and collision from messing up
 execute as @e[distance=..0.4,tag=balloon_bomb] run data merge entity @s {Rotation:[0.0d,0.0d]}
 execute as @e[distance=..0.4,tag=balloon_bomb,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
-execute if entity @e[distance=..0.4,tag=balloon_bomb,type=minecraft:shulker,nbt={HurtTime:9s},tag=should_burst] run tag @s add burst
+execute if entity @e[distance=..0.4,tag=balloon_bomb,type=minecraft:shulker,nbt=!{HurtTime:0s},tag=should_burst] run tag @s add burst
 execute as @e[distance=..0.4,tag=balloon_bomb,tag=should_burst] run tag @s remove should_burst
 execute as @e[distance=..0.4,tag=balloon_bomb,tag=potential_burst] run tag @s add should_burst
 execute as @e[distance=..0.4,tag=balloon_bomb,tag=potential_burst] run tag @s remove potential_burst

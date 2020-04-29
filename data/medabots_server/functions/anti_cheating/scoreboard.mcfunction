@@ -24,6 +24,7 @@ scoreboard objectives add CannonFire dummy
 scoreboard objectives add CannonNr dummy
 scoreboard objectives add ChaosTime dummy
 scoreboard objectives add Charge dummy
+scoreboard objectives add ChessNr dummy
 scoreboard objectives add Cloud dummy
 scoreboard objectives add ConfuseTime dummy
 scoreboard objectives add Constants dummy
@@ -246,6 +247,7 @@ team add StageEnemy {"translate":"medabots_server:scoreboard.team.stage_enemy"}
 
 # Set team data
 team modify Advanced color aqua
+team modify Advanced seeFriendlyInvisibles false
 team modify Advanced prefix {"translate":"medabots_server:entity.team.advanced","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.advanced"}}}
 team modify AFK collisionRule never
 team modify AFK color black
@@ -260,8 +262,10 @@ team modify AllyMedabot nametagVisibility hideForOtherTeams
 team modify AllyMedabot seeFriendlyInvisibles false
 team modify AllyMedabot prefix {"translate":"medabots_server:entity.team.ally_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.ally_medabot"}}}
 team modify Bot color gray
+team modify Bot seeFriendlyInvisibles false
 team modify Bot prefix {"translate":"medabots_server:entity.team.bot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.bot"}}}
 team modify Donator color gold
+team modify Donator seeFriendlyInvisibles false
 team modify Donator prefix {"translate":"medabots_server:entity.team.donator","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.donator"}}}
 team modify EnemyMedabot collisionRule never
 team modify EnemyMedabot color blue
@@ -270,6 +274,7 @@ team modify EnemyMedabot nametagVisibility hideForOtherTeams
 team modify EnemyMedabot seeFriendlyInvisibles false
 team modify EnemyMedabot prefix {"translate":"medabots_server:entity.team.enemy_medabot","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.enemy_medabot"}}}
 team modify Moderator color red
+team modify Moderator seeFriendlyInvisibles false
 team modify Moderator prefix {"translate":"medabots_server:entity.team.moderator","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.moderator"}}}
 team modify MtBattleMaster color light_purple
 team modify MtBattleMaster prefix {"translate":"medabots_server:entity.team.mt_battle_master","extra":[{"text":" "}],"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:scoreboard.team.mt_battle_master"}}}

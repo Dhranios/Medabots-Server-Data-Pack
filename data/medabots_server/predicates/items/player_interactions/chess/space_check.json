@@ -1,0 +1,2504 @@
+{
+    "condition": "minecraft:inverted",
+    "term": {
+        "condition": "minecraft:alternative",
+        "terms": [
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 0,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 1,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 2,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 3,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 4,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 5,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 6,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 0
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 1
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 2
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 3
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 4
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 5
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 6
+            },
+            {
+                "condition": "minecraft:location_check",
+				"predicate": {
+					"block": {
+						"block": "minecraft:air"
+					}
+				},
+				"offsetX": 7,
+				"offsetY": -1,
+				"offsetZ": 7
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 0,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 0,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 1,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 2,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 3,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 4,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 5,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 6,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            },
+			{
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 0
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 1
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 2
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 3
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 4
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 5
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 6
+                }
+            },
+            {
+                "condition": "minecraft:inverted",
+                "term": {
+                    "condition": "minecraft:location_check",
+                    "predicate": {
+                        "block": {
+                            "block": "minecraft:air"
+                        }
+                    },
+                    "offsetX": 7,
+                    "offsetY": 1,
+                    "offsetZ": 7
+                }
+            }
+        ]
+    }
+}

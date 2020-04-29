@@ -1,4 +1,5 @@
 execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
+execute if entity @s[tag=has_medabot_form] run function medabots_server:items/player_interactions/medabot/revert
 teleport @s[scores={Dialog=0,Level=15..},advancements={medabots_server:stages/wave_1/lagdou_ruins_2_second_go=true},gamemode=adventure,tag=!random_arena_version] -1226 25 -26 90 0
 execute if entity @s[scores={Dialog=0,Level=15..},advancements={medabots_server:stages/wave_1/lagdou_ruins_2_second_go=true},gamemode=adventure,tag=!random_arena_version] run data merge block -1228 52 -58 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_3/enter"}}'}
 execute if entity @s[scores={Dialog=0,Level=15..},advancements={medabots_server:stages/wave_1/lagdou_ruins_2_second_go=true},gamemode=adventure,tag=!random_arena_version] run setblock -1228 53 -60 minecraft:red_wool

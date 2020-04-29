@@ -19,6 +19,7 @@ execute if entity @s[scores={Gamemode=0,Stage=1..,State=1..2},tag=!main] run fun
 execute if entity @s[scores={Gamemode=0,Stage=1..,LeaveStage=1..,State=3}] run function medabots_server:stage/exit/enforced
 execute if entity @s[scores={Gamemode=0,Stage=1..,LeaveStage=1..,State=0}] run function medabots_server:stage/exit/enforced
 execute if entity @s[scores={Gamemode=0,State=1..}] run function medabots_server:entities/medabot
+execute unless entity @s[scores={Gamemode=0,State=1..}] if entity @s[tag=has_medabot_form] run function medabots_server:animations/medabot
 execute if entity @s[scores={Gamemode=1}] run function medabots_server:stage/run_fly_course
 scoreboard players reset @s[scores={LeaveStage=0..}] LeaveStage
 
