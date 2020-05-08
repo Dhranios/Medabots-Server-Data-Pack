@@ -34,22 +34,32 @@ playsound medabots_server:music.stage.boxer music @s[scores={Jukebox=17},advance
 scoreboard players set @s[scores={Jukebox=17},advancements={medabots_server:special_items/jukebox/boxer=true}] Music 1666
 playsound medabots_server:music.edit music @s[scores={Jukebox=18},advancements={medabots_server:special_items/jukebox/custom_stage=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=18},advancements={medabots_server:special_items/jukebox/custom_stage=true}] Music 488
-playsound medabots_server:music.stage.pvp.lagdou_ruins1 music @s[scores={Jukebox=19},advancements={medabots_server:special_items/jukebox/lagdou_ruins_outside=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.lagdou_ruins_1 music @s[scores={Jukebox=19},advancements={medabots_server:special_items/jukebox/lagdou_ruins_outside=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=19},advancements={medabots_server:special_items/jukebox/lagdou_ruins_outside=true}] Music 1500
-playsound medabots_server:music.stage.pvp.lagdou_ruins2 music @s[scores={Jukebox=20},advancements={medabots_server:special_items/jukebox/lagdou_ruins_inside=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.lagdou_ruins_2 music @s[scores={Jukebox=20},advancements={medabots_server:special_items/jukebox/lagdou_ruins_inside=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=20},advancements={medabots_server:special_items/jukebox/lagdou_ruins_inside=true}] Music 1600
-playsound medabots_server:music.stage.pvp.lagdou_ruins3 music @s[scores={Jukebox=21},advancements={medabots_server:special_items/jukebox/lagdou_ruins_final=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.lagdou_ruins_3 music @s[scores={Jukebox=21},advancements={medabots_server:special_items/jukebox/lagdou_ruins_final=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=21},advancements={medabots_server:special_items/jukebox/lagdou_ruins_final=true}] Music 900
-playsound medabots_server:music.stage.pvp.ricco_harbor music @s[scores={Jukebox=22},advancements={medabots_server:special_items/jukebox/ricco_harbor=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.ricco_harbor music @s[scores={Jukebox=22},advancements={medabots_server:special_items/jukebox/ricco_harbor=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=22},advancements={medabots_server:special_items/jukebox/ricco_harbor=true}] Music 2440
-playsound medabots_server:music.stage.pvp.ricco_harbor_removed music @s[scores={Jukebox=23},advancements={medabots_server:special_items/jukebox/ricco_harbor_removed=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.ricco_harbor_removed music @s[scores={Jukebox=23},advancements={medabots_server:special_items/jukebox/ricco_harbor_removed=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=23},advancements={medabots_server:special_items/jukebox/ricco_harbor_removed=true}] Music 3640
-playsound medabots_server:music.stage.pvp.final_destination_1 music @s[scores={Jukebox=24},advancements={medabots_server:special_items/jukebox/final_destination_1=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.final_destination_1 music @s[scores={Jukebox=24},advancements={medabots_server:special_items/jukebox/final_destination_1=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=24},advancements={medabots_server:special_items/jukebox/final_destination_1=true}] Music 853
-playsound medabots_server:music.stage.pvp.final_destination_2 music @s[scores={Jukebox=25},advancements={medabots_server:special_items/jukebox/final_destination_2=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.final_destination_2 music @s[scores={Jukebox=25},advancements={medabots_server:special_items/jukebox/final_destination_2=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=25},advancements={medabots_server:special_items/jukebox/final_destination_2=true}] Music 1690
-playsound medabots_server:music.stage.mt_battle.stage music @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/mt_battle=true}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/mt_battle=true}] Music 1095
+playsound medabots_server:music.stage.arena.final_destination_3 music @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/final_destination_3=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/final_destination_3=true}] Music 1654
+playsound medabots_server:music.stage.arena.final_destination_4 music @s[scores={Jukebox=27},advancements={medabots_server:special_items/jukebox/final_destination_4=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=27},advancements={medabots_server:special_items/jukebox/final_destination_4=true}] Music 2710
+playsound medabots_server:music.stage.subspace_1 music @s[scores={Jukebox=28},advancements={medabots_server:special_items/jukebox/subspace_1=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=28},advancements={medabots_server:special_items/jukebox/subspace_1=true}] Music 1725
+playsound medabots_server:music.stage.subspace_2 music @s[scores={Jukebox=29},advancements={medabots_server:special_items/jukebox/subspace_2=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=29},advancements={medabots_server:special_items/jukebox/subspace_2=true}] Music 1725
+playsound medabots_server:music.stage.subspace_3 music @s[scores={Jukebox=30},advancements={medabots_server:special_items/jukebox/subspace_3=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=30},advancements={medabots_server:special_items/jukebox/subspace_2=true}] Music 2005
+playsound medabots_server:music.stage.mt_battle music @s[scores={Jukebox=31},advancements={medabots_server:special_items/jukebox/mt_battle=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=31},advancements={medabots_server:special_items/jukebox/mt_battle=true}] Music 1095
 
 playsound medabots_server:item.jukebox.interference music @s[scores={Music=0}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Music=0}] Music 20

@@ -14,13 +14,21 @@ playsound medabots_server:music.stage.park_intro music @s[scores={Jukebox=14},ad
 scoreboard players set @s[scores={Jukebox=14},advancements={medabots_server:special_items/jukebox/park=true}] Music 160
 playsound medabots_server:music.edit_intro music @s[scores={Jukebox=18},advancements={medabots_server:special_items/jukebox/custom_stage=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=18},advancements={medabots_server:special_items/jukebox/custom_stage=true}] Music 20
-playsound medabots_server:music.stage.pvp.ricco_harbor_intro music @s[scores={Jukebox=22},advancements={medabots_server:special_items/jukebox/ricco_harbor=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.ricco_harbor_intro music @s[scores={Jukebox=22},advancements={medabots_server:special_items/jukebox/ricco_harbor=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=22},advancements={medabots_server:special_items/jukebox/ricco_harbor=true}] Music 30
-playsound medabots_server:music.stage.pvp.final_destination_1_intro music @s[scores={Jukebox=24},advancements={medabots_server:special_items/jukebox/final_destination_1=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.final_destination_1_intro music @s[scores={Jukebox=24},advancements={medabots_server:special_items/jukebox/final_destination_1=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=24},advancements={medabots_server:special_items/jukebox/final_destination_1=true}] Music 30
-playsound medabots_server:music.stage.pvp.final_destination_2_intro music @s[scores={Jukebox=25},advancements={medabots_server:special_items/jukebox/final_destination_2=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.final_destination_2_intro music @s[scores={Jukebox=25},advancements={medabots_server:special_items/jukebox/final_destination_2=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=25},advancements={medabots_server:special_items/jukebox/final_destination_2=true}] Music 21
-playsound medabots_server:music.stage.mt_battle.stage_intro music @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/mt_battle=true}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/mt_battle=true}] Music 91
+playsound medabots_server:music.stage.arena.final_destination_3_intro music @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/final_destination_3=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/final_destination_3=true}] Music 119
+playsound medabots_server:music.stage.subspace_1_intro music @s[scores={Jukebox=28},advancements={medabots_server:special_items/jukebox/subspace_1=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=28},advancements={medabots_server:special_items/jukebox/subspace_1=true}] Music 40
+playsound medabots_server:music.stage.subspace_2_intro music @s[scores={Jukebox=29},advancements={medabots_server:special_items/jukebox/subspace_2=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=29},advancements={medabots_server:special_items/jukebox/subspace_2=true}] Music 82
+playsound medabots_server:music.stage.subspace_3_intro music @s[scores={Jukebox=30},advancements={medabots_server:special_items/jukebox/subspace_3=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=30},advancements={medabots_server:special_items/jukebox/subspace_3=true}] Music 255
+playsound medabots_server:music.stage.mt_battle_intro music @s[scores={Jukebox=31},advancements={medabots_server:special_items/jukebox/mt_battle=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=31},advancements={medabots_server:special_items/jukebox/mt_battle=true}] Music 91
 
-scoreboard players operation @s[scores={Music=0},advancements={medabots_server:special_items/jukebox/=true}] PrevJukebox = @s Jukebox
+scoreboard players operation @s[scores={Music=0}] PrevJukebox = @s Jukebox

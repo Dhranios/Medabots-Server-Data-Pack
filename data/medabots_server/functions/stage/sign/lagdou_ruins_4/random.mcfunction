@@ -1,3 +1,5 @@
+data merge block -1346 52 -133 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_4/enter"}}'}
+setblock -1346 53 -135 minecraft:red_wool
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 4
 scoreboard players set @s Stage 49

@@ -38,7 +38,7 @@ playsound medabots_server:music.map_underground_intro music @s[scores={MusicType
 scoreboard players set @s[scores={MusicType=22}] Music 176
 advancement grant @s[scores={MusicType=22}] only medabots_server:special_items/jukebox/map_underground
 advancement grant @s[scores={MusicType=23}] only medabots_server:special_items/jukebox/lagdou_ruins_final
-playsound medabots_server:music.stage.pvp.ricco_harbor_intro music @s[scores={MusicType=24}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.ricco_harbor_intro music @s[scores={MusicType=24}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=24}] Music 30
 advancement grant @s[scores={MusicType=24}] only medabots_server:special_items/jukebox/ricco_harbor
 advancement grant @s[scores={MusicType=25}] only medabots_server:special_items/jukebox/ricco_harbor_removed
@@ -87,13 +87,13 @@ advancement grant @s[scores={MusicType=49}] only medabots_server:special_items/j
 playsound medabots_server:music.map_welcome_underground_intro music @s[scores={MusicType=50}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=50}] Music 308
 advancement grant @s[scores={MusicType=50}] only medabots_server:special_items/jukebox/enter_the_underground
-playsound medabots_server:music.stage.pvp.final_destination_1_intro music @s[scores={MusicType=51}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.final_destination_1_intro music @s[scores={MusicType=51}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=51}] Music 30
 advancement grant @s[scores={MusicType=51}] only medabots_server:special_items/jukebox/final_destination_1
 playsound medabots_server:music.stage.boss.master_hand_1_intro music @s[scores={MusicType=52}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=52}] Music 452
 advancement grant @s[scores={MusicType=52}] only medabots_server:special_items/jukebox/master_hand_1
-playsound medabots_server:music.stage.pvp.final_destination_2_intro music @s[scores={MusicType=53}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.arena.final_destination_2_intro music @s[scores={MusicType=53}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=53}] Music 21
 advancement grant @s[scores={MusicType=53}] only medabots_server:special_items/jukebox/final_destination_2
 playsound medabots_server:music.stage.boss.master_hand_and_crazy_hand_2_intro music @s[scores={MusicType=54}] ~ ~ ~ 1000
@@ -110,5 +110,25 @@ advancement grant @s[scores={MusicType=58}] only medabots_server:special_items/j
 playsound medabots_server:music.stage.failed_intro music @s[scores={MusicType=59}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=59}] Music 129
 advancement grant @s[scores={MusicType=59}] only medabots_server:special_items/jukebox/stage_failed
+playsound medabots_server:music.stage.boss.master_hand_and_crazy_hand_3_intro music @s[scores={MusicType=60}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=60}] Music 173
+advancement grant @s[scores={MusicType=60}] only medabots_server:special_items/jukebox/master_hand_3
+advancement grant @s[scores={MusicType=61}] only medabots_server:special_items/jukebox/master_hand_4
+playsound medabots_server:music.stage.arena.final_destination_3_intro music @s[scores={MusicType=62}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=62}] Music 119
+advancement grant @s[scores={MusicType=62}] only medabots_server:special_items/jukebox/final_destination_3
+advancement grant @s[scores={MusicType=63}] only medabots_server:special_items/jukebox/final_destination_4
+playsound medabots_server:music.stage.subspace_1_intro music @s[scores={MusicType=64}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=64}] Music 40
+advancement grant @s[scores={MusicType=64}] only medabots_server:special_items/jukebox/subspace_1
+playsound medabots_server:music.stage.subspace_2_intro music @s[scores={MusicType=65}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=65}] Music 82
+advancement grant @s[scores={MusicType=65}] only medabots_server:special_items/jukebox/subspace_2
+playsound medabots_server:music.stage.subspace_3_intro music @s[scores={MusicType=66}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=66}] Music 255
+advancement grant @s[scores={MusicType=66}] only medabots_server:special_items/jukebox/subspace_3
+playsound medabots_server:music.stage.boss.master_core_intro music @s[scores={MusicType=67}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=67}] Music 59
+advancement grant @s[scores={MusicType=67}] only medabots_server:special_items/jukebox/master_core
 
 scoreboard players operation @s[scores={Music=0}] PrevMusicType = @s MusicType

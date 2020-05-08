@@ -55,7 +55,6 @@ scoreboard players reset #temp Health
 scoreboard players reset #temp2 Health
 execute as @e[distance=..0.4,tag=cannon_blockade] run data merge entity @s {Health:20.0f,Air:300s,Peek:1b,AbsorptionAmount:1000.0f}
 
-
 # Clean up
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp CannonNr = @s CannonNr

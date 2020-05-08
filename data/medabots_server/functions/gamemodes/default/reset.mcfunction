@@ -50,11 +50,10 @@ tag @s remove tank_legs
 tag @s remove swim_legs
 tag @s remove dying
 tag @s remove had_death
-tag @s remove retry
+tag @s remove spawned_pass
 scoreboard players reset @s StageIndex
 scoreboard players reset @s StageVersion
 scoreboard players reset @s NeededPlayers
-tag @s remove spawned_pass
 
 # Prevent health from ever dropping to the default 20, which'll cause severe issues
 effect give @s minecraft:health_boost 1000000 19 true

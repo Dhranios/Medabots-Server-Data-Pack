@@ -21,6 +21,7 @@ scoreboard players add @s[scores={Moving=1..,Steps=0..4}] Steps 1
 # Fall
 execute if entity @s[scores={Time=1}] if block ~ ~-0.2 ~ minecraft:air run playsound medabots_server:block.moving_block.fall block @a ~ ~ ~ 1
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
+execute at @s if block ~ ~-0.2 ~ minecraft:black_stained_glass run tag @s add fall
 execute at @s if block ~ ~-0.2 ~ minecraft:black_carpet run tag @s add fall
 execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
 execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall

@@ -1,8 +1,7 @@
-# Part breaks
-execute if entity @s[scores={LegsArmor=0}] run function medabots_server:items/break_medapart
-execute if entity @s[scores={LeftArmArmor=0}] run function medabots_server:items/break_medapart
-execute if entity @s[scores={RightArmArmor=0}] run function medabots_server:items/break_medapart
-execute if entity @s[scores={HeadArmor=0}] run function medabots_server:items/break_medapart
+# Trigger anti-tank
+execute if entity @e[type=minecraft:area_effect_cloud,tag=anti_tank,distance=..3,scores={DetectTime=40..},tag=!ally_team,tag=!enemy_team] run function medabots_server:items/medapart/anti_tank/hit
+execute if entity @s[tag=ally_medabot] if entity @e[type=minecraft:area_effect_cloud,tag=anti_tank,distance=..3,scores={DetectTime=40..},tag=enemy_team] run function medabots_server:items/medapart/anti_tank/hit
+execute if entity @s[tag=enemy_medabot] if entity @e[type=minecraft:area_effect_cloud,tag=anti_tank,distance=..3,scores={DetectTime=40..},tag=ally_team] run function medabots_server:items/medapart/anti_tank/hit
 
 # Get Armor %
 scoreboard players operation @s LegsPer = @s LegsArmor
@@ -122,6 +121,15 @@ execute if entity @s[type=minecraft:player] run function medabots_server:entitie
 execute unless entity @s[scores={TransformLTime=1..}] unless entity @s[scores={TransformRTime=1..}] unless entity @s[scores={TransformHTime=1..}] run tag @s add no_transform
 execute if entity @s[tag=!no_transform] run function medabots_server:effects/transformed
 tag @s remove no_transform
+
+# Part breaks
+execute if entity @s[scores={LegsArmor=0}] run function medabots_server:items/break_medapart
+execute if entity @s[scores={LeftArmArmor=0}] run function medabots_server:items/break_medapart
+execute if entity @s[scores={RightArmArmor=0}] run function medabots_server:items/break_medapart
+execute if entity @s[scores={HeadArmor=0}] run function medabots_server:items/break_medapart
+tag @s remove hit_by_melee_trap
+tag @s remove hit_by_shooting_trap
+tag @s remove hit_by_anti_tank
 
 # Model
 execute if entity @s[tag=!dead] run function medabots_server:animations/medabot

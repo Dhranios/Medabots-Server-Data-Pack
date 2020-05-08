@@ -8,7 +8,7 @@ execute if entity @s[scores={ChaosTime=1..}] run function medabots_server:effect
 execute if entity @s[scores={ConfuseTime=1..}] run function medabots_server:effects/confused
 execute if entity @s[scores={DefenseTime=1..}] run function medabots_server:effects/defending
 execute if entity @s[scores={FreezeTime=1..}] run function medabots_server:effects/frozen
-execute if entity @s[scores={HideTime=1..}] run function medabots_server:effects/hidden
+execute if entity @s[scores={HideTime=1..}] run function medabots_server:effects/hiding
 execute if entity @s[scores={HoldTime=1..}] run function medabots_server:effects/held
 execute if entity @s[scores={IneffectiveTime=1..}] run function medabots_server:effects/ineffective_part
 execute if entity @s[scores={InfectTime=1..}] run function medabots_server:effects/infected
@@ -25,9 +25,7 @@ execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/h
 execute if entity @s[level=50..,advancements={medabots_server:special_items/passes/gold=false},tag=!spawned_pass] run function medabots_server:spawn_entities/item/gold_pass
 
 # Instant death if you fall in the void
-execute if entity @s[y=-80,dy=79,tag=!had_death] run tellraw @a {"translate":"medabots_server:death.void","with":[{"selector":"@s"}]}
-tag @s[y=-80,dy=79] add had_death
-tag @s[y=-80,dy=79] add dying
+execute if entity @s[y=-80,dy=79,tag=!had_death] run function medabots_server:other/death/void
 
 # Set Armor colors
 scoreboard players set @s[scores={LegsArmor=..0}] LegsDanger 3

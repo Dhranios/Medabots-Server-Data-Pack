@@ -6,8 +6,8 @@ teleport @s[scores={Time=1..2}] ~ ~ ~ ~-45 ~
 execute if entity @s[scores={Time=20}] run playsound medabots_server:entity.crazy_hand.swipe hostile @a ~ ~ ~ 1
 execute as @s[scores={Time=20..29}] if block ^-4 ^ ^ minecraft:air if block ^-3 ^ ^ minecraft:air if block ^-2 ^ ^ minecraft:air if block ^-1 ^ ^ minecraft:air run teleport @s ^-2 ^ ^
 
-execute if entity @s[scores={Time=20..29}] run effect give @e[tag=target,limit=1,distance=..2] minecraft:instant_damage 1 1 true
-execute if entity @s[scores={Time=20..29}] as @e[tag=target,limit=1,distance=..2] positioned as @s if block ^-2 ^ ^ minecraft:air if block ^-1 ^ ^ minecraft:air run teleport @s ^-2 ^ ^
+execute if entity @s[scores={Time=20..29}] run effect give @e[tag=potential_target,distance=..2] minecraft:instant_damage 1 1 true
+execute if entity @s[scores={Time=20..29}] as @e[tag=potential_target,distance=..2] positioned as @s if block ^-2 ^ ^ minecraft:air if block ^-1 ^ ^ minecraft:air run teleport @s ^-2 ^ ^
 
 teleport @s[scores={Time=34..35}] ~ ~ ~ ~45 ~
 

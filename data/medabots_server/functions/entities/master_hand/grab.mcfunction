@@ -11,7 +11,7 @@ tag @s[scores={Time=61}] remove fast_idle
 tag @s[scores={Time=61}] add grab
 execute if entity @s[scores={Time=61..65}] run teleport @s ^ ^ ^0.75
 execute if entity @s[scores={Time=66..70}] run teleport @s ^ ^ ^0.25
-execute if entity @s[scores={Time=71}] if entity @e[tag=target,limit=1,distance=..2] run tag @s add has_target
+execute if entity @s[scores={Time=71}] if entity @e[tag=potential_target,distance=..2,tag=!last_known_location] run tag @s add has_target
 execute if entity @s[scores={Time=71},tag=has_target] run playsound medabots_server:entity.master_hand.grab hostile @a ~ ~ ~ 1
 execute if entity @s[scores={Time=71},tag=!has_target] run playsound medabots_server:entity.master_hand.grab_miss hostile @a ~ ~ ~ 1
 

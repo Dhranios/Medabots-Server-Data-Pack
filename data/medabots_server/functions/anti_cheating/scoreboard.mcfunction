@@ -146,6 +146,7 @@ scoreboard objectives add PowerNeeded dummy
 scoreboard objectives add PrevMusicType dummy
 scoreboard objectives add RandomMessage dummy
 scoreboard objectives add Range dummy
+scoreboard objectives add ReactionTime dummy
 scoreboard objectives add RightArmArmor dummy
 scoreboard objectives add RightArmDanger dummy
 scoreboard objectives add RightArmPer dummy

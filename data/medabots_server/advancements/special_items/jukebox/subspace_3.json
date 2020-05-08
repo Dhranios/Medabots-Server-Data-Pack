@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:music_disc_13"
+        },
+        "title": {
+            "translate": "medabots_server:item.jukebox.track.subspace_3"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.taken"
+        },
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "medabots_server:special_items/jukebox/subspace_2",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/special_items/jukebox/subspace_3"
+    }
+}

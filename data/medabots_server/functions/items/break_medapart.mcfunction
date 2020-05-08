@@ -15,5 +15,8 @@ scoreboard players set @s[scores={RightArmArmor=0}] RightArmArmor -1
 
 # Break head
 execute if entity @s[scores={HeadArmor=0}] run particle minecraft:cloud ~ ~ ~ 0 0 0 0.2 50
+execute if entity @s[tag=hit_by_melee_trap] run function medabots_server:other/death/melee_trap
+execute if entity @s[tag=hit_by_shooting_trap] run function medabots_server:other/death/melee_trap
+execute if entity @s[tag=hit_by_anti_tank] run function medabots_server:other/death/melee_trap
 tag @s[scores={HeadArmor=0}] add dying
 scoreboard players set @s[scores={HeadArmor=0}] HeadArmor -1

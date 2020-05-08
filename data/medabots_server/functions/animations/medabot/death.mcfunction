@@ -44,7 +44,7 @@ execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Damage 
 replaceitem entity @s[scores={DeathTime=1},type=!minecraft:player] weapon.mainhand minecraft:air
 execute if entity @s[scores={DeathTime=1}] run function medabots_server:effects/clear
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function medabots_server:other/death
-execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function medabots_server:other/death_message
+execute if entity @s[scores={DeathTime=1}] run function medabots_server:other/death_message
 scoreboard players set @s[y=-80,dy=79,scores={DeathTime=4}] DeathTime 99
 execute if entity @s[scores={DeathTime=1..99},type=minecraft:player] positioned as @e[tag=this_medabot,tag=chest,limit=1] rotated as @s rotated ~ 0 run teleport @s ^0.105 ^2 ^-1.5 facing entity @e[tag=this_medabot,tag=chest,limit=1]
 teleport @s[scores={DeathTime=4..},type=!minecraft:player] ~ -50 ~

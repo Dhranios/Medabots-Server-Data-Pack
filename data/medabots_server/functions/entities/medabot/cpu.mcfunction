@@ -29,11 +29,13 @@ tag @s remove fell_2
 
 # Target entity
 execute store result score #temp Stage run scoreboard players get @s Stage
+tag @s add me
 execute if entity @s[tag=enemy_medabot] as @e[tag=medabot,tag=!enemy_medabot,tag=!dying] if score @s Stage = #temp Stage run tag @s add potential_target
 execute if entity @s[tag=ally_medabot] as @e[tag=medabot,tag=!ally_medabot,tag=!dying] if score @s Stage = #temp Stage run tag @s add potential_target
-execute if entity @s[tag=!enemy_medabot,tag=!ally_medabot] as @e[tag=medabot,tag=!dying] if score @s Stage = #temp Stage run tag @s add potential_target
+execute if entity @s[tag=!enemy_medabot,tag=!ally_medabot] as @e[tag=medabot,tag=!dying,tag=!me] if score @s Stage = #temp Stage run tag @s add potential_target
 tag @s remove potential_target
 tag @e[tag=potential_target,limit=1,sort=nearest] add target
+tag @s remove me
 scoreboard players reset #temp Stage
 
 # Define current preference
@@ -49,7 +51,8 @@ tag @s[scores={Time=0,Dialog=0}] remove head_selected
 tag @s[scores={Time=0,Dialog=0}] remove medaforce_selected
 execute store result score #temp MedabotNr run scoreboard players get @s MedabotNr
 execute as @e[scores={MedabotNr=0..}] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
-execute if entity @s[tag=!dying,scores={State=1}] run function medabots_server:entities/medabot/cpu/preferences
+scoreboard players remove @s[scores={ReactionTime=1..}] ReactionTime 1
+execute if entity @s[scores={ReactionTime=0,Time=0,State=1},tag=!dying] run function medabots_server:entities/medabot/cpu/preferences
 scoreboard players reset #temp MedabotNr
 tag @e[tag=this_medabot] remove this_medabot
 

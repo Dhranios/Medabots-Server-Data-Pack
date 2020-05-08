@@ -1,6 +1,5 @@
 summon minecraft:armor_stand ^ ^ ^0.333 {CustomName:'{"translate":"medabots_server:move.laser"}',Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["laser","life_time"]}
-summon minecraft:armor_stand ^ ^ ^0.666 {CustomName:'{"translate":"medabots_server:move.laser"}',Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["laser","life_time"]}
-summon minecraft:armor_stand ^ ^ ^1 {CustomName:'{"translate":"medabots_server:move.laser"}',Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["laser","life_time"]}
+summon minecraft:armor_stand ^ ^ ^0.888 {CustomName:'{"translate":"medabots_server:move.laser"}',Invisible:1b,NoGravity:1b,ArmorItems:[{},{},{},{id:"minecraft:light_blue_stained_glass",Count:1b}],Marker:1b,Tags:["laser","life_time"]}
 execute as @e[tag=new] positioned as @s run teleport @s ~ ~ ~ ~ ~
 teleport @s ^ ^ ^1
 

@@ -1,6 +1,18 @@
 # Move with
 execute at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^ ^
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=catch,limit=1] run scoreboard players set @s[tag=!catch] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=catch,limit=1] run tag @s add catch
+execute if entity @s[tag=catch] run function medabots_server:animations/master_hand/catch/hand
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=applaud,limit=1] run scoreboard players set @s[tag=!applaud] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=applaud,limit=1] run tag @s add applaud
+execute if entity @s[tag=applaud] run function medabots_server:animations/master_hand/applaud/hand
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=double_punch,limit=1] run scoreboard players set @s[tag=!double_punch] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=double_punch,limit=1] run tag @s add double_punch
+execute if entity @s[tag=double_punch] run function medabots_server:animations/master_hand/double_punch/hand
+
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run scoreboard players set @s[tag=!grab] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab,limit=1] run tag @s add grab
 execute if entity @s[tag=grab] run function medabots_server:animations/master_hand/grab/hand
@@ -9,9 +21,17 @@ execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab_success,
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=grab_success,limit=1] run tag @s add grab_success
 execute if entity @s[tag=grab_success] run function medabots_server:animations/master_hand/grab_success/hand
 
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=jet,limit=1] run scoreboard players set @s[tag=!jet] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=jet,limit=1] run tag @s add jet
+execute if entity @s[tag=jet] run function medabots_server:animations/master_hand/jet/hand
+
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=punch,limit=1] run scoreboard players set @s[tag=!punch] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=punch,limit=1] run tag @s add punch
 execute if entity @s[tag=punch] run function medabots_server:animations/master_hand/punch/hand
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fake_out,limit=1] run scoreboard players set @s[tag=!fake_out] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=fake_out,limit=1] run tag @s add fake_out
+execute if entity @s[tag=fake_out] run function medabots_server:animations/master_hand/fake_out/hand
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=drill,limit=1] run scoreboard players set @s[tag=!drill] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=drill,limit=1] run tag @s add drill
@@ -19,7 +39,7 @@ execute if entity @s[tag=drill] run function medabots_server:animations/master_h
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_start,limit=1] run scoreboard players set @s[tag=!walk_start] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_start,limit=1] run tag @s add walk_start
-execute if entity @s[tag=walk_start] run function medabots_server:animations/master_hand/walk_start/hand
+execute if entity @s[tag=walk_start,tag=!walk_stop,tag=!walk_kick] run function medabots_server:animations/master_hand/walk_start/hand
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_stop,limit=1] run scoreboard players set @s[tag=!walk_stop] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=walk_stop,limit=1] run tag @s add walk_stop
@@ -32,6 +52,10 @@ execute if entity @s[tag=walk_kick] run function medabots_server:animations/mast
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=slap,limit=1] run scoreboard players set @s[tag=!slap] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=slap,limit=1] run tag @s add slap
 execute if entity @s[tag=slap] run function medabots_server:animations/master_hand/slap/hand
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=sweep,limit=1] run scoreboard players set @s[tag=!sweep] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=sweep,limit=1] run tag @s add sweep
+execute if entity @s[tag=sweep] run function medabots_server:animations/master_hand/sweep/hand
 
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=crush,limit=1] run scoreboard players set @s[tag=!crush] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=crush,limit=1] run tag @s add crush
@@ -48,3 +72,7 @@ execute if entity @s[tag=gun_1] run function medabots_server:animations/master_h
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_3,limit=1] run scoreboard players set @s[tag=!gun_3] AnimationProg 0
 execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=gun_3,limit=1] run tag @s add gun_3
 execute if entity @s[tag=gun_3] run function medabots_server:animations/master_hand/gun_3/hand
+
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=lasers,limit=1] run scoreboard players set @s[tag=!lasers] AnimationProg 0
+execute if entity @e[type=minecraft:ghast,tag=this_master_hand,tag=lasers,limit=1] run tag @s add lasers
+execute if entity @s[tag=lasers] run function medabots_server:animations/master_hand/lasers/hand

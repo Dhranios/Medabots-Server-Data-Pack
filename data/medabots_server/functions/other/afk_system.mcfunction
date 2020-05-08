@@ -93,6 +93,7 @@ execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderato
 execute if entity @s[scores={Flying=5..,Sound=0},gamemode=creative,team=Moderator,nbt={abilities:{flying:1b}}] run scoreboard players set @s Sound 20
 execute if entity @s[tag=medabot,scores={Run=0,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.jump player @s ~ ~ ~ 1
 execute if entity @s[tag=medabot,scores={Run=1..,Jump=1..,WalkUnderWater=0}] run playsound medabots_server:entity.medabot.move.leap player @s ~ ~ ~ 1
+execute if entity @s[tag=medabot,scores={Jump=1..,Sound=0}] run scoreboard players set @s Sound 1
 execute if entity @s[tag=medabot,scores={Swimming=5..,Sound=0}] run playsound medabots_server:entity.medabot.move.swim player @s ~ ~ ~ 1
 execute if entity @s[tag=medabot,scores={Swimming=5..,Sound=0}] run scoreboard players set @s Sound 2
 execute if entity @s[tag=medabot,scores={Walk=5..,Jump=0,Sound=0}] run playsound medabots_server:entity.medabot.move.walk player @s ~ ~ ~ 1

@@ -15,7 +15,7 @@ teleport @s[scores={Time=11..19}] ~ ~-4 ~
 execute if entity @s[scores={Time=11}] run playsound medabots_server:entity.master_hand.spin_land hostile @a ~ ~-40 ~ 1
 execute if entity @s[scores={Time=19}] run playsound medabots_server:entity.master_hand.spin_stop hostile @a ~ ~ ~ 1
 
-execute if entity @s[scores={Time=1..60}] run effect give @e[tag=target,limit=1,distance=..3] minecraft:instant_damage 1 0 true
+execute if entity @s[scores={Time=1..60}] run effect give @e[tag=potential_target,distance=..3] minecraft:instant_damage 1 0 true
 execute if entity @s[scores={Time=60}] unless block ~ ~-3 ~ minecraft:air run playsound medabots_server:entity.master_hand.spin_return hostile @a ~ ~ ~ 1
 teleport @s[scores={Time=68}] ~ ~1 ~
 teleport @s[scores={Time=70}] ~ ~-3 ~

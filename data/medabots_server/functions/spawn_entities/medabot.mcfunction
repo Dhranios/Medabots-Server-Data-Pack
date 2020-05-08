@@ -4,6 +4,7 @@ scoreboard players set @e[tag=new_medabot,limit=1] Killer 0
 scoreboard players set @e[tag=new_medabot,limit=1] Charge 0
 scoreboard players set @e[tag=new_medabot,limit=1] Dialog 0
 scoreboard players set @e[tag=new_medabot,limit=1] Time 0
+scoreboard players set @e[tag=new_medabot,limit=1] ReactionTime 0
 scoreboard players set @e[tag=new_medabot,limit=1] Sound 0
 scoreboard players set @e[tag=new_medabot,limit=1] State 2
 scoreboard players set @e[tag=new_medabot,limit=1] Money 5
