@@ -7,15 +7,15 @@ execute if entity @e[scores={Stage=25},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/seashore_c
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if block -1565 43 -591 minecraft:lime_wool run scoreboard players set @e[x=-1541.5,y=44,z=-602.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1563 43 -582 minecraft:blue_wool run scoreboard players set @e[x=-1528.5,y=44,z=-585.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1563 43 -582 minecraft:light_blue_wool run scoreboard players set @e[x=-1528.5,y=44,z=-585.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1518 43 -565 minecraft:lime_wool run scoreboard players set @e[x=-1520.5,y=44,z=-556.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1521 43 -556 minecraft:light_blue_wool run scoreboard players set @e[x=-1520.5,y=44,z=-556.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1518 43 -565 minecraft:green_wool if block -1521 43 -556 minecraft:blue_wool run scoreboard players set @e[x=-1520.5,y=44,z=-556.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1565 43 -591 minecraft:lime_wool run scoreboard players set @e[x=-1541.5,y=44,z=-602.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1563 43 -582 minecraft:blue_wool run scoreboard players set @e[x=-1528.5,y=44,z=-585.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1563 43 -582 minecraft:light_blue_wool run scoreboard players set @e[x=-1528.5,y=44,z=-585.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1518 43 -565 minecraft:lime_wool run scoreboard players set @e[x=-1520.5,y=44,z=-556.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1521 43 -556 minecraft:light_blue_wool run scoreboard players set @e[x=-1520.5,y=44,z=-556.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1518 43 -565 minecraft:green_wool if block -1521 43 -556 minecraft:blue_wool run scoreboard players set @e[x=-1520.5,y=44,z=-556.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1558 43 -596 minecraft:light_blue_wool run scoreboard players set @e[x=-1556.5,y=44,z=-595.5,distance=..0.7,tag=hammer_punch,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1558 43 -596 minecraft:blue_wool run scoreboard players set @e[x=-1556.5,y=44,z=-595.5,distance=..0.7,tag=hammer_punch,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1541 43 -556 minecraft:lime_wool run scoreboard players set @e[x=-1567.5,y=44,z=-555.5,distance=..0.7,tag=laser_trap,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1541 43 -556 minecraft:lime_wool run scoreboard players set @e[x=-1567.5,y=44,z=-555.5,distance=..0.7,tag=laser_trap,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1530 44 -587 minecraft:iron_trapdoor[open=true] if entity @s[x=-1531,y=44,z=-590,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_c/first_go_battle/0
 execute if entity @e[x=-1570,y=42,z=-608,dx=60,dy=7,dz=60,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=25,Medabot=0..,State=1..2}]
 execute as @e[x=-1570,y=42,z=-608,dx=60,dy=7,dz=60,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 25

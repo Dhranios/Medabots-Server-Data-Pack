@@ -8,23 +8,23 @@ execute if entity @e[scores={Stage=33},tag=hide_normal_time] if score #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/iceberg_d
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
 scoreboard players reset #temp Time
-execute if block -1726 43 -751 minecraft:lime_wool run scoreboard players set @e[x=-1725.5,y=44,z=-748.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1673 43 -755 minecraft:lime_wool run scoreboard players set @e[x=-1682.5,y=44,z=-756.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1686 43 -756 minecraft:yellow_wool run scoreboard players set @e[x=-1682.5,y=44,z=-756.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1673 43 -755 minecraft:green_wool if block -1686 43 -756 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-756.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1707 43 -793 minecraft:lime_wool run scoreboard players set @e[x=-1719.5,y=44,z=-766.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1715 43 -793 minecraft:lime_wool run scoreboard players set @e[x=-1719.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1718 43 -778 minecraft:yellow_wool run scoreboard players set @e[x=-1719.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1715 43 -793 minecraft:green_wool if block -1718 43 -778 minecraft:orange_wool run scoreboard players set @e[x=-1719.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1723 43 -780 minecraft:yellow_wool run scoreboard players set @e[x=-1722.5,y=44,z=-781.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1720 43 -786 minecraft:yellow_wool run scoreboard players set @e[x=-1722.5,y=44,z=-781.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1723 43 -780 minecraft:orange_wool if block -1720 43 -786 minecraft:orange_wool run scoreboard players set @e[x=-1722.5,y=44,z=-781.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1699 43 -792 minecraft:lime_wool run scoreboard players set @e[x=-1695.5,y=44,z=-780.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1700 43 -769 minecraft:yellow_wool if block -1692 43 -774 minecraft:yellow_wool if block -1681 43 -771 minecraft:yellow_wool if block -1680 43 -767 minecraft:yellow_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1700 43 -769 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1692 43 -774 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1681 43 -771 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1680 43 -767 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1726 43 -751 minecraft:lime_wool run scoreboard players set @e[x=-1725.5,y=44,z=-748.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1673 43 -755 minecraft:lime_wool run scoreboard players set @e[x=-1682.5,y=44,z=-756.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1686 43 -756 minecraft:yellow_wool run scoreboard players set @e[x=-1682.5,y=44,z=-756.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1673 43 -755 minecraft:green_wool if block -1686 43 -756 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-756.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1707 43 -793 minecraft:lime_wool run scoreboard players set @e[x=-1719.5,y=44,z=-766.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1715 43 -793 minecraft:lime_wool run scoreboard players set @e[x=-1719.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1718 43 -778 minecraft:yellow_wool run scoreboard players set @e[x=-1719.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1715 43 -793 minecraft:green_wool if block -1718 43 -778 minecraft:orange_wool run scoreboard players set @e[x=-1719.5,y=44,z=-777.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1723 43 -780 minecraft:yellow_wool run scoreboard players set @e[x=-1722.5,y=44,z=-781.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1720 43 -786 minecraft:yellow_wool run scoreboard players set @e[x=-1722.5,y=44,z=-781.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1723 43 -780 minecraft:orange_wool if block -1720 43 -786 minecraft:orange_wool run scoreboard players set @e[x=-1722.5,y=44,z=-781.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1699 43 -792 minecraft:lime_wool run scoreboard players set @e[x=-1695.5,y=44,z=-780.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1700 43 -769 minecraft:yellow_wool if block -1692 43 -774 minecraft:yellow_wool if block -1681 43 -771 minecraft:yellow_wool if block -1680 43 -767 minecraft:yellow_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1700 43 -769 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1692 43 -774 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1681 43 -771 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1680 43 -767 minecraft:orange_wool run scoreboard players set @e[x=-1682.5,y=44,z=-772.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1707 43 -793 minecraft:lime_wool run scoreboard players set @e[x=-1721.5,y=44,z=-767.5,distance=..0.7,tag=alarm,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1715 43 -793 minecraft:lime_wool run scoreboard players set @e[x=-1726.5,y=44,z=-776.5,distance=..0.7,tag=alarm,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1718 43 -778 minecraft:yellow_wool run scoreboard players set @e[x=-1726.5,y=44,z=-776.5,distance=..0.7,tag=alarm,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
@@ -32,8 +32,8 @@ execute if block -1715 43 -793 minecraft:green_wool if block -1718 43 -778 minec
 execute if block -1710 44 -737 minecraft:iron_trapdoor[open=true] if block -1696 44 -750 minecraft:barrier if entity @s[x=-1710,y=44,z=-738,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_d/first_go_battle/0
 execute if entity @e[x=-1704.5,y=44,z=-741.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=33},tag=cannon,type=minecraft:husk] run tag @s add mission_success
 title @s[tag=mission_success] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1709.5,y=44,z=-736.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1695.5,y=44,z=-749.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1709.5,y=44,z=-736.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1695.5,y=44,z=-749.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=-1729,y=41,z=-795,dx=62,dy=7,dz=62,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:iceberg_d/robattle players
 tag @s[tag=mission_success] remove mission_success

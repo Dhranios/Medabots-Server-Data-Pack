@@ -7,12 +7,12 @@ execute if entity @e[scores={Stage=4},tag=hide_normal_time] if score #temp Time 
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/seashore_a
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if block -1511 44 -190 minecraft:lime_wool run scoreboard players set @e[x=-1513.5,y=45,z=-215.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1549 44 -186 minecraft:lime_wool run scoreboard players set @e[x=-1532.5,y=45,z=-195.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1537 44 -187 minecraft:lime_wool run scoreboard players set @e[x=-1550.5,y=45,z=-193.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -206 minecraft:light_blue_wool run scoreboard players set @e[x=-1533.5,y=45,z=-206.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1551 44 -206 minecraft:lime_wool run scoreboard players set @e[x=-1533.5,y=45,z=-206.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1534 44 -206 minecraft:blue_wool if block -1551 44 -206 minecraft:green_wool run scoreboard players set @e[x=-1533.5,y=45,z=-206.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
+execute if block -1511 44 -190 minecraft:lime_wool run scoreboard players set @e[x=-1513.5,y=45,z=-215.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1549 44 -186 minecraft:lime_wool run scoreboard players set @e[x=-1532.5,y=45,z=-195.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1537 44 -187 minecraft:lime_wool run scoreboard players set @e[x=-1550.5,y=45,z=-193.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1534 44 -206 minecraft:light_blue_wool run scoreboard players set @e[x=-1533.5,y=45,z=-206.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1551 44 -206 minecraft:lime_wool run scoreboard players set @e[x=-1533.5,y=45,z=-206.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1534 44 -206 minecraft:blue_wool if block -1551 44 -206 minecraft:green_wool run scoreboard players set @e[x=-1533.5,y=45,z=-206.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1511 44 -190 minecraft:lime_wool run scoreboard players set @e[x=-1511.5,y=45,z=-214.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1511 44 -190 minecraft:lime_wool run scoreboard players set @e[x=-1510.5,y=45,z=-217.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1540 45 -222 minecraft:iron_trapdoor[open=true] if entity @s[x=-1541,y=45,z=-225,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_a/first_go_battle/0
