@@ -1,7 +1,3 @@
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.door"}',Tags:["door","east"],Invisible:1b,Marker:1b,Rotation:[-90.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:20}}]}
 function medabots_server:set_blocks/door
-tag @e[distance=..0.7,tag=door] add east
-setblock ~ ~ ~ minecraft:iron_door[facing=west,open=false,hinge=left,half=lower]
-setblock ~ ~1 ~ minecraft:iron_door[facing=west,open=false,hinge=left,half=upper]
-setblock ~ ~ ~-1 minecraft:iron_door[facing=west,open=false,hinge=right,half=lower]
-setblock ~ ~1 ~-1 minecraft:iron_door[facing=west,open=false,hinge=right,half=upper]
-fill ~ ~2 ~-1 ~ ~3 ~-1 minecraft:barrier replace minecraft:air
+fill ~ ~ ~ ~ ~3 ~-1 minecraft:barrier replace minecraft:air

@@ -18,7 +18,6 @@ execute if entity @s[scores={PerfectGuardTime=1..}] run function medabots_server
 execute if entity @s[scores={ScoutTime=1..}] run function medabots_server:effects/scouting
 
 # Block effects
-execute if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator/accel
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
 # Spawn gold pass if level is above 50

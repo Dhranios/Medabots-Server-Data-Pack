@@ -76,7 +76,7 @@ execute if block -1801 44 -710 minecraft:light_blue_wool run scoreboard players 
 execute if block -1801 44 -710 minecraft:blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-710.5,distance=..0.7,tag=laser_trap,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1801 44 -711 minecraft:light_blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-709.5,distance=..0.7,tag=spring_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1801 44 -711 minecraft:blue_wool run scoreboard players set @e[x=-1798.5,y=45,z=-709.5,distance=..0.7,tag=spring_wall,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1810 45 -668 minecraft:iron_door[open=true] if entity @s[x=-1812,y=45,z=-668,dx=3,dy=3,dz=3] run function medabots_server:stage/create/park_b/second_go_battle/0
+execute if block -1810 45 -668 minecraft:iron_trapdoor[open=true] if entity @s[x=-1812,y=45,z=-668,dx=3,dy=3,dz=3] run function medabots_server:stage/create/park_b/second_go_battle/0
 execute if entity @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=20,Medabot=0..,State=1..2}]
 execute as @e[x=-1857,y=0,z=-730,dx=94,dy=49,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 20
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/park_b

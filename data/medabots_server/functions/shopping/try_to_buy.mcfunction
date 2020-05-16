@@ -135,3 +135,10 @@ execute if score #temp Money matches ..99 run tellraw @s[scores={Shopping=22}] {
 execute if score #temp Money matches 100.. run tellraw @s[scores={Shopping=22}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.loot_buyer","color":"green"},{"translate":"medabots_server:message.shop.sold"}]}
 execute if score #temp Money matches 100.. run clear @s[scores={Shopping=22}] minecraft:snow_block{medabots_server:{id:"medabots_server:crazy_hand_remains"}} 100
 execute if score #temp Money matches 100.. run scoreboard players add @s[scores={Shopping=22}] Money 50
+
+# Sell 100 crazy hand remains
+execute store result score #temp Money run clear @s[scores={Shopping=23}] minecraft:gold_ingot{medabots_server:{id:"medabots_server:topmaniacs_blade"}} 0
+execute if score #temp Money matches ..35 run tellraw @s[scores={Shopping=23}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.loot_buyer","color":"green"},{"translate":"medabots_server:message.shop.too_expensive"}]}
+execute if score #temp Money matches 36.. run tellraw @s[scores={Shopping=23}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.loot_buyer","color":"green"},{"translate":"medabots_server:message.shop.sold"}]}
+execute if score #temp Money matches 36.. run clear @s[scores={Shopping=23}] minecraft:gold_ingot{medabots_server:{id:"medabots_server:topmaniacs_blade"}} 36
+execute if score #temp Money matches 36.. run scoreboard players add @s[scores={Shopping=23}] Money 50

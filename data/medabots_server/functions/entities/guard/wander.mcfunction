@@ -4,7 +4,7 @@ execute if entity @e[tag=this_move_target,type=minecraft:area_effect_cloud,limit
 effect give @s minecraft:resistance 9 1 true
 tag @s[tag=can_move] remove can_move
 execute positioned ^ ^ ^5.5 run tag @e[tag=medabot,distance=..5.5,tag=!enemy_medabot,tag=!dying,scores={State=1},tag=!was_hidden] add possible_targets
-execute positioned ^ ^ ^5.5 run tag @e[tag=last_known_location,distance=..5.5,scores={State=1}] add possible_targets
+execute positioned ^ ^ ^5.5 run tag @e[tag=last_known_location,distance=..5.5] add possible_targets
 tag @e[tag=possible_targets,sort=nearest,limit=1] add target
 execute if entity @e[tag=target,limit=1] facing entity @e[tag=target,limit=1] feet rotated ~ 0 positioned ^ ^ ^0.4 unless entity @e[distance=..0.2,type=!minecraft:area_effect_cloud] positioned as @s run function medabots_server:entities/guard/can_move_start
 execute if entity @s[tag=can_move] if entity @e[tag=target,limit=1] facing entity @e[tag=target,limit=1] feet rotated ~ 0 run function medabots_server:entities/guard/move

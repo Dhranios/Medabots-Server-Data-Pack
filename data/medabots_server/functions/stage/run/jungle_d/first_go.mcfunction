@@ -12,7 +12,7 @@ execute if block -1641 44 -757 minecraft:lime_wool run scoreboard players set @e
 execute if block -1636 44 -743 minecraft:lime_wool run scoreboard players set @e[x=-1627.5,y=45,z=-753.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1609 44 -762 minecraft:lime_wool run scoreboard players set @e[x=-1610.5,y=45,z=-733.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1653 44 -721 minecraft:lime_wool run scoreboard players set @e[x=-1633.5,y=45,z=-721.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1634 45 -718 minecraft:iron_door[open=true] if block -1647 45 -712 minecraft:iron_door[open=false] if entity @s[x=-1637,y=45,z=-719,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_d/first_go_battle/0
+execute if block -1634 45 -718 minecraft:iron_trapdoor[open=true] if block -1647 45 -712 minecraft:barrier if entity @s[x=-1637,y=45,z=-719,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_d/first_go_battle/0
 execute if entity @e[x=-1640.5,y=45,z=-712.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=31,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1633.5,y=45,z=-716.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
@@ -20,7 +20,7 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard playe
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1665,y=42,z=-768,dx=61,dy=7,dz=61,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:jungle_d/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block -1655 45 -724 minecraft:iron_door[open=true] if entity @s[x=-1656,y=45,z=-727,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_d/first_go_battle/1
+execute if block -1655 45 -724 minecraft:iron_trapdoor[open=true] if entity @s[x=-1656,y=45,z=-727,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_d/first_go_battle/1
 execute if entity @e[x=-1665,y=42,z=-768,dx=61,dy=7,dz=61,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=31,Medabot=0..,State=1..2}]
 execute as @e[x=-1665,y=42,z=-768,dx=61,dy=7,dz=61,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 31
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/jungle_d

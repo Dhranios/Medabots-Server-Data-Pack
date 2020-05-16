@@ -1,0 +1,24 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:music_disc_13"
+        },
+        "title": {
+            "translate": "medabots_server:item.jukebox.track.wave_1.koji"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.taken"
+        },
+        "announce_to_chat": false,
+        "hidden": true
+    },
+    "parent": "medabots_server:special_items/jukebox/wave_1/sad_haru",
+    "criteria": {
+        "give": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/special_items/jukebox/wave_1/koji"
+    }
+}

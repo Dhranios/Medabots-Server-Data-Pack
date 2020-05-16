@@ -1,0 +1,11 @@
+summon minecraft:cave_spider ~ ~ ~ {ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}],NoAI:1b,Silent:1b,CustomName:'{"translate":"medabots_server:entity.topman"}',Tags:["hostile","killerable","topman","rotated"],DeathLootTable:"medabots_server:entities/topman",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"generic.knockbackResistance",Base:1.0d},{Name:"generic.movementSpeed",Base:0.0d},{Name:"generic.maxHealth",Base:100.0d}],PersistenceRequired:1b,Team:"StageEnemy",AbsorptionAmount:20.0f,Health:100.0f}
+scoreboard players set @e[distance=..0.7,tag=topman] Sound 0
+scoreboard players set @e[distance=..0.7,tag=topman] Time 0
+scoreboard players set @e[distance=..0.7,tag=topman] Killer 0
+teleport @e[distance=..0.7,tag=topman] ~ ~ ~ ~ 0
+scoreboard players operation @e[distance=..0.7,tag=topman] TopmanNr > @e[tag=topman] TopmanNr
+scoreboard players add @e[distance=..0.7,tag=topman] TopmanNr 1
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["body","topman_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:25}}]}
+summon minecraft:armor_stand ~ ~ ~ {Rotation:[0.0f,0.0f],NoGravity:1b,Invisible:1b,Marker:1b,Tags:["hands","hands_0","topman_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:26}}]}
+summon minecraft:armor_stand ~ ~ ~ {Rotation:[-90.0f,0.0f],NoGravity:1b,Invisible:1b,Marker:1b,Tags:["hands","hands_1","topman_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:26}}]}
+execute as @e[tag=topman_model,distance=..0.1] unless entity @s[scores={TopmanNr=1..}] run scoreboard players operation @s TopmanNr = @e[distance=..0.1,limit=1,tag=topman] TopmanNr

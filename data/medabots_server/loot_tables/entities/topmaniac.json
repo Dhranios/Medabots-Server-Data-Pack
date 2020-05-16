@@ -1,0 +1,33 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:gold_ingot",
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{display:{Name:'{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.topmaniacs_blade\"}'},medabots_server:{stage_item:1b,id:\"medabots_server:topmaniacs_blade\"}}"
+                        },
+                        {
+                            "function": "minecraft:set_count",
+                            "count": 9
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:loot_table",
+                    "name": "medabots_server:entities/boss"
+                }
+            ]
+        }
+    ]
+}

@@ -92,3 +92,6 @@ execute if entity @s[tag=attack_rip] run function medabots_server:entities/crazy
 execute if entity @s[tag=attack_pink_pillars] run function medabots_server:entities/crazy_hand/pink_pillars
 execute if entity @s[tag=attack_shadowball_bash] run function medabots_server:entities/crazy_hand/shadowball_bash
 scoreboard players reset #temp Stage
+
+execute if entity @s[tag=mt_battle] store result bossbar medabots_server:crazy_hand/mt_battle value run data get entity @s AbsorptionAmount
+execute if entity @s[tag=arena] store result bossbar medabots_server:crazy_hand/arena value run data get entity @s AbsorptionAmount

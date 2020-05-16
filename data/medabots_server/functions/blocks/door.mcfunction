@@ -2,21 +2,33 @@
 execute if score @s PowerAmount >= @s PowerNeeded run tag @s[tag=!no_open] add powered
 execute unless score @s PowerAmount >= @s PowerNeeded run tag @s remove powered
 
+data modify entity @s[scores={Time=1}] ArmorItems[3].tag.CustomModelData set value 20
+data modify entity @s[scores={Time=2}] ArmorItems[3].tag.CustomModelData set value 21
+data modify entity @s[scores={Time=4}] ArmorItems[3].tag.CustomModelData set value 22
+data modify entity @s[scores={Time=6}] ArmorItems[3].tag.CustomModelData set value 23
+data modify entity @s[scores={Time=8}] ArmorItems[3].tag.CustomModelData set value 24
+data modify entity @s[scores={Time=9}] ArmorItems[3].tag.CustomModelData set value 25
+execute positioned ~ ~ ~-1 align xyz unless entity @e[dx=0,dy=4,dz=1,tag=!door] run scoreboard players remove @s[tag=!powered,tag=east,scores={Time=1..}] Time 1
+execute positioned ~-1 ~ ~ align xyz unless entity @e[dx=1,dy=4,dz=0,tag=!door] run scoreboard players remove @s[tag=!powered,tag=north,scores={Time=1..}] Time 1
+execute align xyz unless entity @e[dx=1,dy=4,dz=0,tag=!door] run scoreboard players remove @s[tag=!powered,tag=south,scores={Time=1..}] Time 1
+execute align xyz unless entity @e[dx=0,dy=4,dz=1,tag=!door] run scoreboard players remove @s[tag=!powered,tag=west,scores={Time=1..}] Time 1
+scoreboard players add @s[tag=powered,scores={Time=..9}] Time 1
+
 # Open the door
-execute if entity @s[tag=powered] if block ~ ~ ~ minecraft:iron_door[open=false] run function medabots_server:blocks/door/open
+execute if entity @s[tag=powered,scores={Time=9}] run function medabots_server:blocks/door/open
 
 # Close the door
-execute if entity @s[tag=!powered] if block ~ ~ ~ minecraft:iron_door[open=true] run function medabots_server:blocks/door/close
+execute if entity @s[tag=!powered,scores={Time=9}] run function medabots_server:blocks/door/close
 
 # Remove when cleaning up a stage
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=east] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=east] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:iron_door
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=north] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=north] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:iron_door
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=south] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=south] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air replace minecraft:iron_door
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=west] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead] unless entity @e[tag=!dead,distance=..0.7,tag=door] if block ~ ~ ~ minecraft:iron_door[facing=west] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:iron_door
+execute if entity @s[tag=dead,tag=east] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:barrier
+execute if entity @s[tag=dead,tag=east] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:iron_trapdoor
+execute if entity @s[tag=dead,tag=north] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air replace minecraft:barrier
+execute if entity @s[tag=dead,tag=north] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air replace minecraft:iron_trapdoor
+execute if entity @s[tag=dead,tag=south] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:barrier
+execute if entity @s[tag=dead,tag=south] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:iron_trapdoor
+execute if entity @s[tag=dead,tag=west] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:barrier
+execute if entity @s[tag=dead,tag=west] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:iron_trapdoor
 
 # Custom stage object powering
 execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

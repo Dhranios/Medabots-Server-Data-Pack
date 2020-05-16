@@ -19,6 +19,12 @@ execute if entity @s[type=minecraft:area_effect_cloud] run function medabots_ser
 # Functions that run on every ghast
 execute if entity @s[type=minecraft:ghast] run function medabots_server:main/ghasts
 
+# Functions that run on every topman
+execute if entity @s[type=minecraft:cave_spider,tag=topman] run function medabots_server:entities/topman
+
+# Functions that run on every topmaniac
+execute if entity @s[type=minecraft:spider,tag=topmaniac] run function medabots_server:entities/topmaniac
+
 # Functions that run on every snowball
 execute if entity @s[type=minecraft:snowball] run function medabots_server:main/snowballs
 

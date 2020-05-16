@@ -81,6 +81,7 @@ scoreboard objectives add InfectTimer dummy
 scoreboard objectives add Jukebox dummy
 scoreboard objectives add JukeboxChannel dummy
 scoreboard objectives add JukeboxSetting trigger
+scoreboard objectives add JukeboxWave dummy
 scoreboard objectives add Jump minecraft.custom:minecraft.jump
 scoreboard objectives add Killer dummy
 scoreboard objectives add KillStreak dummy
@@ -180,6 +181,8 @@ scoreboard objectives add Steps dummy
 scoreboard objectives add Swimming minecraft.custom:minecraft.swim_one_cm
 scoreboard objectives add TaskCheck trigger
 scoreboard objectives add Time dummy
+scoreboard objectives add TopmanNr dummy
+scoreboard objectives add TopmaniacNr dummy
 scoreboard objectives add TotalDamage dummy
 scoreboard objectives add TotalKills dummy
 scoreboard objectives add TotalMoney dummy

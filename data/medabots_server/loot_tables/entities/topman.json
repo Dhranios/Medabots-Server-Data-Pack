@@ -1,0 +1,25 @@
+{
+    "type": "minecraft:entity",
+    "pools": [
+        {
+            "rolls": 1,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:iron_nugget",
+                    "weight": 4,
+                    "functions": [
+                        {
+                            "function": "minecraft:set_nbt",
+                            "tag": "{medabots_server:{stage_item:1b}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "minecraft:empty",
+                    "weight": 6
+                }
+            ]
+        }
+    ]
+}

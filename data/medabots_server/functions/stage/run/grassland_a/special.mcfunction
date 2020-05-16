@@ -18,7 +18,7 @@ execute if block -1519 44 -152 minecraft:lime_wool run scoreboard players set @e
 execute if block -1519 44 -173 minecraft:yellow_wool run scoreboard players set @e[x=-1526.5,y=45,z=-170.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1519 44 -173 minecraft:orange_wool run scoreboard players set @e[x=-1526.5,y=45,z=-170.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1534 44 -168 minecraft:lime_wool if block -1536 44 -177 minecraft:lime_wool if block -1542 44 -167 minecraft:lime_wool if block -1542 44 -176 minecraft:lime_wool run scoreboard players set @e[x=-1546.5,y=45,z=-171.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1528 45 -171 minecraft:iron_door[open=true] if entity @s[x=-1531,y=45,z=-173,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_a/special_battle/0
+execute if block -1528 45 -171 minecraft:iron_trapdoor[open=true] if entity @s[x=-1531,y=45,z=-173,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_a/special_battle/0
 execute if entity @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=1,Medabot=0..,State=1..2}]
 execute as @e[x=-1570,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/grassland_a

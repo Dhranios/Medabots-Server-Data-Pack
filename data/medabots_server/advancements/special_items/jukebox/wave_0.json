@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:music_disc_wait"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.special_items.jukebox.wave_0"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.special_items.jukebox.wave_0.description"
+        },
+        "announce_to_chat": false
+    },
+    "parent": "medabots_server:special_items/jukebox",
+    "criteria": {
+        "got_a_music_disc": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

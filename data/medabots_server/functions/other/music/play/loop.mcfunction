@@ -133,6 +133,30 @@ playsound medabots_server:music.stage.subspace_3 music @s[scores={MusicType=66}]
 scoreboard players set @s[scores={MusicType=66}] Music 2005
 playsound medabots_server:music.stage.boss.master_core music @s[scores={MusicType=67}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=67}] Music 3800
+playsound medabots_server:music.stage.mt_battle_colosseum music @s[scores={MusicType=68}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=68}] Music 1280
+playsound medabots_server:music.stage.boss.topmaniac music @s[scores={MusicType=69}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=69}] Music 1115
+playsound medabots_server:music.stage.boss.magolor music @s[scores={MusicType=70}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=70}] Music 2153
+playsound medabots_server:music.stage.boss.magolor_soul music @s[scores={MusicType=71}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=71}] Music 2640
+playsound medabots_server:music.stage.boss.argorok music @s[scores={MusicType=72}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=72}] Music 1733
+playsound medabots_server:music.stage.boss.galleom_1 music @s[scores={MusicType=73}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=73}] Music 1332
+playsound medabots_server:music.stage.boss.galleom_2 music @s[scores={MusicType=74}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=74}] Music 2215
+playsound medabots_server:music.stage.boss.lor_starcutter music @s[scores={MusicType=75}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=75}] Music 1469
+playsound medabots_server:music.stage.boss.hr_d3 music @s[scores={MusicType=76}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=76}] Music 1487
+playsound medabots_server:music.stage.boss.dimentio music @s[scores={MusicType=77}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=77}] Music 1411
+playsound medabots_server:music.battle.dimentio music @s[scores={MusicType=78}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=78}] Music 1408
+playsound medabots_server:music.entity.dimentio music @s[scores={MusicType=79}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=79}] Music 669
 
 tag @s[scores={MusicType=58..59,OldMusicType=1..}] add not_yet
 scoreboard players operation @s[scores={MusicType=58..59,OldMusicType=1..}] MusicType = @s OldMusicType

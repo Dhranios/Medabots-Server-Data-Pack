@@ -1,0 +1,10 @@
+execute if entity @s[scores={JukeboxChannel=0}] unless score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/generic/intro
+execute if entity @s[scores={JukeboxChannel=0}] if score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/generic/loop
+execute if entity @s[scores={JukeboxChannel=1}] unless score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/battle/intro
+execute if entity @s[scores={JukeboxChannel=1}] if score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/battle/loop
+execute if entity @s[scores={JukeboxChannel=2}] unless score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/stage/intro
+execute if entity @s[scores={JukeboxChannel=2}] if score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/stage/loop
+execute if entity @s[scores={JukeboxChannel=3}] unless score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/boss/intro
+execute if entity @s[scores={JukeboxChannel=3}] if score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/boss/loop
+execute if entity @s[scores={JukeboxChannel=4}] unless score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/dialog/intro
+execute if entity @s[scores={JukeboxChannel=4}] if score @s Jukebox = @s PrevMusicType run function medabots_server:other/music/play_jukebox/wave_0/dialog/loop

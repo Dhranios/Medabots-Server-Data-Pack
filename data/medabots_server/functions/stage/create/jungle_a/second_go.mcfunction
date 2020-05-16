@@ -124,7 +124,6 @@ execute positioned -1645 45 -166 run function medabots_server:set_blocks/algae
 execute positioned -1643 45 -169 run function medabots_server:set_blocks/algae
 execute positioned -1643 45 -175 run function medabots_server:set_blocks/algae
 execute positioned -1644 45 -172 run function medabots_server:set_blocks/algae
-execute positioned -1682 45 -129 run function medabots_server:set_blocks/wall
 execute positioned -1680 45 -129 run function medabots_server:set_blocks/door/north/power_1
 execute positioned -1662 45 -124 run function medabots_server:set_blocks/door/west/power_0
 execute positioned -1661 45 -134 run function medabots_server:set_blocks/door/east/power_1

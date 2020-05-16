@@ -1,3 +1,1 @@
-function medabots_server:set_blocks/accelerator
-tag @e[distance=..0.7,tag=accelerator] add east
-fill ~ ~ ~ ~ ~ ~ minecraft:comparator[powered=false,mode=compare,facing=west] replace minecraft:air
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.accelerator"}',Tags:["accelerator","east"],Invisible:1b,Marker:1b,Rotation:[-90.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:18}}]}

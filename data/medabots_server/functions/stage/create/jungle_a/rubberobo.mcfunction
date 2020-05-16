@@ -117,7 +117,6 @@ execute positioned -1685 45 -148 run function medabots_server:set_blocks/bridge
 execute positioned -1684 45 -143 run function medabots_server:set_blocks/stone
 execute positioned -1686 45 -143 run function medabots_server:set_blocks/stone
 execute positioned -1685 45 -142 run function medabots_server:set_blocks/stone
-execute positioned -1682 45 -129 run function medabots_server:set_blocks/wall
 execute positioned -1646 45 -158 run function medabots_server:set_blocks/algae
 execute positioned -1648 45 -159 run function medabots_server:set_blocks/algae
 execute positioned -1647 45 -161 run function medabots_server:set_blocks/algae

@@ -1,3 +1,2 @@
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.fan"}',Tags:["fan","east"],Invisible:1b,Marker:1b,Rotation:[-90.0f,0.0f],Pose:{RightArm:[0.0f,0.0f,0.0f],Head:[90.0f,0.0f,0.0f]},HandItems:[{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:15}},{}],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:16}}]}
 function medabots_server:set_blocks/fan
-tag @e[distance=..0.7,tag=fan] add east
-setblock ~ ~1 ~ minecraft:furnace[facing=east]

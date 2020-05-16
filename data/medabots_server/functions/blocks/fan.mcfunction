@@ -21,17 +21,17 @@ execute if entity @s[scores={Time=10},tag=!dead] run playsound medabots_server:b
 
 # Move objects depending on the facing
 tag @s[scores={Moving=1..}] remove stopped
-execute if block ~ ~1 ~ minecraft:furnace[facing=north] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/north
-execute if block ~ ~1 ~ minecraft:furnace[facing=south] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/south
-execute if block ~ ~1 ~ minecraft:furnace[facing=east] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/east
-execute if block ~ ~1 ~ minecraft:furnace[facing=west] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/west
+execute if entity @s[tag=north] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/north
+execute if entity @s[tag=south] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/south
+execute if entity @s[tag=east] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/east
+execute if entity @s[tag=west] align xyz if entity @s[tag=!stopped] run function medabots_server:blocks/fan/west
 tag @s[scores={Moving=0}] add stopped
 
 # Remove when cleaning up stage
 execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
-kill @s[tag=dead]
 
 # Reset the timer
+execute if entity @s[tag=!dead,tag=!stopped] run function medabots_server:blocks/fan/rotate_blades
 scoreboard players set @s[scores={Time=10}] Time 0
 
 # Change the moving speed

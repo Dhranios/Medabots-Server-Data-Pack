@@ -10,11 +10,13 @@ execute if entity @s[tag=laser,tag=source] run function medabots_server:items/me
 # Who else but Mr. Referee has to referee the battles?
 execute if entity @s[tag=mr_referee] run function medabots_server:dialog/mr_referee
 
-# Make mirrors act
+# Make stage objects do something
 execute if entity @s[tag=mirror,tag=!disabled] run function medabots_server:blocks/mirror
-
-# Make custom stage missions act
 execute if entity @s[tag=mission,tag=!disabled] run function medabots_server:entities/mission
+execute if entity @s[tag=accelerator,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/accelerator
+execute if entity @s[tag=fan,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/fan
+execute if entity @s[tag=laser_trap,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/laser_trap
+execute if entity @s[tag=door,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/door
 
 # Inventory entities shouldn't exist post-processing
 tag @s[tag=inventory] add dead

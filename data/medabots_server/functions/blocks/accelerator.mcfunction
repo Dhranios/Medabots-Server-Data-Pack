@@ -1,10 +1,3 @@
-# Set accelerator
-execute if entity @s[tag=east] run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[facing=west,mode=compare,powered=false] replace minecraft:air
-execute if entity @s[tag=north] run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[facing=south,mode=compare,powered=false] replace minecraft:air
-execute if entity @s[tag=south] run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[facing=north,mode=compare,powered=false] replace minecraft:air
-execute if entity @s[tag=west] run fill ~ ~ ~ ~ ~ ~ minecraft:comparator[facing=east,mode=compare,powered=false] replace minecraft:air
-
-# Remove when cleaning up a stage
-execute if entity @s[tag=dead] run setblock ~ ~ ~ minecraft:air
-execute if entity @s[tag=dead] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
-kill @s[tag=dead]
+execute if entity @e[tag=hostile,type=!minecraft:shulker,type=!minecraft:area_effect_cloud,distance=..0.7] run function medabots_server:blocks/accelerator/accel
+data modify entity @s[scores={Time=1}] ArmorItems[3].tag.CustomModelData set value 18
+scoreboard players remove @s[scores={Time=1..}] Time 1

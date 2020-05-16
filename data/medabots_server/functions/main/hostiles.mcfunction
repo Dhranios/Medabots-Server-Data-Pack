@@ -5,7 +5,6 @@ execute if entity @s[type=!minecraft:item] run function medabots_server:items/me
 execute if entity @s[scores={Killer=1..}] run function medabots_server:other/killer
 
 # Block effects
-execute if entity @s[type=!minecraft:item] if block ~ ~ ~ minecraft:comparator run function medabots_server:blocks/accelerator/accel
 execute if entity @s[tag=hammer_punch_hit] run function medabots_server:blocks/hammer_punch/hit
 
 # Instant death if you fall in the void

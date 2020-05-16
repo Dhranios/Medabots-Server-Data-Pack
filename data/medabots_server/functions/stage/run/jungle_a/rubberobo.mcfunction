@@ -19,7 +19,7 @@ execute if block -1651 44 -156 minecraft:lime_wool run scoreboard players set @e
 execute if block -1680 44 -168 minecraft:lime_wool run scoreboard players set @e[x=-1679.5,y=45,z=-163.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1682 44 -170 minecraft:lime_wool run scoreboard players set @e[x=-1681.5,y=45,z=-173.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1684 44 -169 minecraft:lime_wool run scoreboard players set @e[x=-1683.5,y=45,z=-163.5,distance=..0.7,tag=action_floor,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1662 45 -124 minecraft:iron_door[open=true] if block -1661 45 -134 minecraft:iron_door[open=false] if entity @s[x=-1662,y=45,z=-125,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_a/rubberobo_battle/0
+execute if block -1662 45 -124 minecraft:iron_trapdoor[open=true] if block -1661 45 -134 minecraft:barrier if entity @s[x=-1662,y=45,z=-125,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_a/rubberobo_battle/0
 execute if entity @e[x=-1651.5,y=45,z=-126.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=3,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1661.5,y=45,z=-123.5,distance=..0.7,tag=door,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1

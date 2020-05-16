@@ -106,3 +106,6 @@ execute if entity @s[tag=attack_wind] run function medabots_server:entities/mast
 execute if entity @s[tag=attack_cards] run function medabots_server:entities/master_hand/cards
 execute if entity @s[tag=attack_spread_fire] run function medabots_server:entities/master_hand/spread_fire
 scoreboard players reset #temp Stage
+
+execute if entity @s[tag=mt_battle] store result bossbar medabots_server:master_hand/mt_battle value run data get entity @s AbsorptionAmount
+execute if entity @s[tag=arena] store result bossbar medabots_server:master_hand/arena value run data get entity @s AbsorptionAmount
