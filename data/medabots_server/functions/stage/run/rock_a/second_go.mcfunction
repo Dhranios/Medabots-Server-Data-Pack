@@ -7,9 +7,9 @@ execute if entity @e[scores={Stage=2},tag=hide_normal_time] if score #temp Time 
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/rock_a
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if block -1597 44 -159 minecraft:lime_wool run scoreboard players set @e[x=-1585.5,y=45,z=-163.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1617 44 -156 minecraft:light_blue_wool run scoreboard players set @e[x=-1616.5,y=45,z=-166.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1617 44 -156 minecraft:blue_wool run scoreboard players set @e[x=-1616.5,y=45,z=-166.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1596.5,y=45,z=-158.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1585.5,y=45,z=-163.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1616.5,y=45,z=-155.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1616.5,y=45,z=-166.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1616.5,y=45,z=-155.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=-1616.5,y=45,z=-166.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1616 45 -167 minecraft:iron_trapdoor[open=true] if entity @s[x=-1616,y=45,z=-168,dx=3,dy=3,dz=3] run function medabots_server:stage/create/rock_a/second_go_battle/0
 execute if entity @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=2,Medabot=0..,State=1..2}]
 execute as @e[x=-1636,y=43,z=-180,dx=63,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 2

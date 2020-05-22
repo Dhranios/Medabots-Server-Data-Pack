@@ -1,5 +1,5 @@
 # Sound!
-execute if entity @s[scores={Time=1}] run playsound medabots_server:block.action_floor block @a ~ ~ ~ 1
+execute if entity @s[scores={Time=1}] run playsound medabots_server:block.action_floor.open block @a ~ ~ ~ 1
 
 # Show a glow
 execute if entity @s[scores={Time=1}] run setblock ~ ~ ~ minecraft:snow[layers=4]

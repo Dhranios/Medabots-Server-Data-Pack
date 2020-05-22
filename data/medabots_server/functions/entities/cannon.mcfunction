@@ -13,7 +13,6 @@ scoreboard players set @s[scores={Time=9},tag=detected] CannonFire 1
 
 # Enemy found
 execute if entity @s[scores={Time=9,CannonFire=0..},tag=detect,tag=detected,tag=!dying,tag=!already_targetted,tag=enabled,tag=!disabled] run playsound medabots_server:entity.cannon.beep hostile @a ~ ~ ~ 1
-execute if entity @s[scores={Time=7,CannonFire=0..},tag=detect,tag=detected,tag=!dying,tag=!already_targetted,tag=enabled,tag=!disabled] run playsound medabots_server:entity.cannon.beep hostile @a ~ ~ ~ 1
 
 # Fire in the hole!
 execute if entity @s[scores={Time=0,CannonFire=1..},tag=!dying] unless entity @s[scores={IneffectiveTime=1..},tag=enabled,tag=!disabled] run function medabots_server:entities/cannon/fire

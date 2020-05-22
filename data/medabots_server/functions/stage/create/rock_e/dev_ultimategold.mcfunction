@@ -56,6 +56,7 @@ execute positioned -1833 45 -284 run function medabots_server:set_blocks/bridge
 execute positioned -1834 45 -284 run function medabots_server:set_blocks/bridge
 execute positioned -1891 45 -256 run function medabots_server:set_blocks/bridge
 execute positioned -1901 45 -256 run function medabots_server:set_blocks/bridge
+execute positioned -1905 45 -255 run function medabots_server:set_blocks/bridge
 execute positioned -1894 45 -281 run function medabots_server:set_blocks/bridge
 execute positioned -1897 45 -270 run function medabots_server:set_blocks/bridge
 execute positioned -1898 45 -270 run function medabots_server:set_blocks/bridge
@@ -84,6 +85,7 @@ execute positioned -1841 45 -326 run function medabots_server:set_blocks/bridge
 execute positioned -1844 45 -325 run function medabots_server:set_blocks/bridge
 execute positioned -1849 45 -325 run function medabots_server:set_blocks/bridge
 execute positioned -1850 45 -326 run function medabots_server:set_blocks/bridge
+execute positioned -1849 45 -326 run function medabots_server:set_blocks/bridge
 execute positioned -1848 45 -326 run function medabots_server:set_blocks/bridge
 execute positioned -1834 45 -327 run function medabots_server:set_blocks/bridge
 execute positioned -1833 45 -323 run function medabots_server:set_blocks/bridge

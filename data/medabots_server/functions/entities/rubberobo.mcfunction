@@ -2,7 +2,8 @@
 execute if entity @s[tag=respawning,scores={Time=0}] run function medabots_server:entities/rubberobo/respawn
 
 # Hurt means turn
-execute if entity @s[nbt=!{HurtTime:0s}] run function medabots_server:entities/rubberobo/hurt
+execute if entity @s[nbt=!{HurtTime:0s},tag=!hurt] run function medabots_server:entities/rubberobo/hurt
+tag @s[nbt={HurtTime:0s},tag=hurt] remove hurt
 
 execute align xz run teleport @s[scores={Time=1..40},tag=!respawning,tag=!turn_left,tag=walking,tag=!walk_1_block] ~0.5 ~ ~0.5 ~4.5 ~
 execute align xz run teleport @s[scores={Time=1..40},tag=!respawning,tag=turn_left,tag=walking,tag=!walk_1_block] ~0.5 ~ ~0.5 ~-4.5 ~
@@ -72,10 +73,14 @@ teleport @s[tag=walking,tag=!downed,scores={Time=1..},tag=walk_1_block] ^ ^ ^0.1
 teleport @s[tag=walking,tag=downed,scores={Time=0}] ^ ^ ^0.0625
 teleport @s[tag=walking,tag=!downed,scores={Time=0}] ^ ^ ^0.125
 teleport @s[tag=seen_goal_area,scores={Time=0}] ^ ^ ^0.125
-execute if entity @s[tag=walking,tag=!downed,scores={Time=0..40}] run playsound medabots_server:entity.rubberobo.walk neutral @a ~ ~ ~ 1
-execute if entity @s[tag=walking,tag=downed,scores={Time=0..40}] run playsound medabots_server:entity.rubberobo.walk_downed neutral @a ~ ~ ~ 1
-execute if entity @s[scores={Time=1..40},tag=!downed,tag=!see_goal_area,tag=!respawning] run playsound medabots_server:entity.rubberobo.walk neutral @a ~ ~ ~ 1
-execute if entity @s[scores={Time=1..40},tag=downed,tag=!see_goal_area,tag=!respawning] run playsound medabots_server:entity.rubberobo.walk_downed neutral @a ~ ~ ~ 1
+execute if entity @s[tag=walking,tag=!downed,scores={Time=0..40,Sound=0}] run playsound medabots_server:entity.rubberobo.walk neutral @a ~ ~ ~ 1
+execute if entity @s[tag=walking,tag=!downed,scores={Time=0..40,Sound=0}] run scoreboard players set @s Sound 80
+execute if entity @s[tag=walking,tag=downed,scores={Time=0..40,Sound=0}] run playsound medabots_server:entity.rubberobo.walk_downed neutral @a ~ ~ ~ 1
+execute if entity @s[tag=walking,tag=downed,scores={Time=0..40,Sound=0}] run scoreboard players set @s Sound 65
+execute if entity @s[scores={Time=1..40,Sound=0},tag=!downed,tag=!see_goal_area,tag=!respawning] run playsound medabots_server:entity.rubberobo.walk neutral @a ~ ~ ~ 1
+execute if entity @s[scores={Time=1..40,Sound=0},tag=!downed,tag=!see_goal_area,tag=!respawning] run scoreboard players set @s Sound 80
+execute if entity @s[scores={Time=1..40,Sound=0},tag=downed,tag=!see_goal_area,tag=!respawning] run playsound medabots_server:entity.rubberobo.walk_downed neutral @a ~ ~ ~ 1
+execute if entity @s[scores={Time=1..40,Sound=0},tag=downed,tag=!see_goal_area,tag=!respawning] run scoreboard players set @s Sound 65
 
 # At the goal
 execute if block ~ ~-1 ~ minecraft:bricks if block ~ ~3 ~ minecraft:brick_slab run tag @s add dead

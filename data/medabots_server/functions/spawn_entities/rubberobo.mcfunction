@@ -4,3 +4,4 @@ execute as @e[distance=..0.7,tag=rubberobo] store result score @s HomeX run data
 execute as @e[distance=..0.7,tag=rubberobo] store result score @s HomeY run data get entity @s Pos[1]
 execute as @e[distance=..0.7,tag=rubberobo] store result score @s HomeZ run data get entity @s Pos[2]
 scoreboard players set @e[distance=..0.7,tag=rubberobo] Time 0
+scoreboard players set @e[distance=..0.7,tag=rubberobo] Sound 0

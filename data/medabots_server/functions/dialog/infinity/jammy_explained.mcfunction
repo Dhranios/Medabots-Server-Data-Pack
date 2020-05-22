@@ -78,7 +78,7 @@ tellraw @s[scores={Dialog=1276}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1420}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained.35"}]}
 tellraw @s[scores={Dialog=1468}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained.36"}]}
 tellraw @s[scores={Dialog=1500}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained.37"}]}
-execute if entity @s[scores={Dialog=1508}] run setblock -379 55 -54 minecraft:end_rod
+execute if entity @s[scores={Dialog=1508}] positioned -379 55 -54 run function medabots_server:set_blocks/jammy
 scoreboard players set @s[scores={Dialog=1508}] MusicType 34
 scoreboard players set @s[scores={Dialog=1508}] Music 0
 tellraw @s[scores={Dialog=1528}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained.38"}]}
@@ -142,7 +142,7 @@ tellraw @s[scores={Dialog=3256}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=3280}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained.80"}]}
 tellraw @s[scores={Dialog=3312}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained.81"}]}
 tellraw @s[scores={Dialog=3360}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_explained.82"}]}
-execute if entity @s[scores={Dialog=3360}] run setblock -379 55 -54 minecraft:air
+execute if entity @s[scores={Dialog=3360}] run tag @e[x=-378.5,y=55,z=-53.5,distance=..0.7,tag=jammy,limit=1] add dead
 execute if entity @s[scores={Dialog=3058}] positioned -317 55 -24 run function medabots_server:spawn_entities/cutscene/roks
 execute if entity @s[scores={Dialog=3058}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -318 55 -30
 execute if entity @s[scores={Dialog=3058}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add jammed_walking

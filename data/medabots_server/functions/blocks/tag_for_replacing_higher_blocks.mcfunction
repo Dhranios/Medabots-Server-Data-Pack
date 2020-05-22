@@ -7,3 +7,5 @@ execute if block ~ ~2 ~ minecraft:purple_terracotta run tag @s add purple_terrac
 
 execute if block ~ ~3 ~ minecraft:oak_leaves run tag @s add oak_leaves_3
 execute if block ~ ~3 ~ minecraft:purple_terracotta run tag @s add purple_terracotta_3
+
+execute if block ~ ~2 ~ minecraft:air if block ~ ~3 ~ minecraft:air run tag @s add nothing_replaced

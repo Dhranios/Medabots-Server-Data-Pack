@@ -12,7 +12,6 @@ execute if entity @s[tag=edge_grab] run function medabots_server:items/medapart/
 # Make stage objects do something
 execute if entity @s[tag=mission] run function medabots_server:stage/mission
 execute if entity @s[tag=spring_wall,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/spring_wall
-execute if entity @s[tag=floor_switch,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/floor_switch
 execute if entity @s[tag=raft,tag=!stage_builder,tag=!disabled] positioned ~ ~0.375 ~ run function medabots_server:entities/raft
 execute if entity @s[tag=round_stone,tag=!action_floor,tag=!stage_builder,tag=!disabled] positioned ~ ~0.375 ~ run function medabots_server:entities/round_stone
 execute if entity @s[tag=ice_block,tag=!action_floor,tag=!stage_builder,tag=!disabled] positioned ~ ~0.375 ~ run function medabots_server:entities/ice_block
@@ -23,17 +22,16 @@ execute if entity @s[tag=balloon_bomb,tag=!action_floor,tag=!pot,tag=!stage_buil
 execute if entity @s[tag=bomb,tag=!action_floor,tag=!pot,tag=!stage_builder,tag=!disabled] positioned ~ ~0.375 ~ run function medabots_server:entities/bomb
 execute if entity @s[tag=press_wall,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/press_wall
 execute if entity @s[tag=gas_floor,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/gas_floor
-execute if entity @s[tag=alarm,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/alarm
 execute if entity @s[tag=hammer_punch,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/hammer_punch
 execute if entity @s[tag=hole,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/hole
-execute if entity @s[tag=wall,tag=!stage_builder,tag=!disabled,tag=dead] run function medabots_server:blocks/wall/clean_up
-execute if entity @s[tag=glass,tag=!stage_builder,tag=!disabled,tag=dead] run function medabots_server:blocks/glass/clean_up
+execute if entity @s[tag=wall,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/wall
+execute if entity @s[tag=glass,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/glass
+execute if entity @s[tag=bridge,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/bridge
+execute if entity @s[tag=stone,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/stone
 execute if entity @s[tag=pot,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/pot
 execute if entity @s[tag=starting_area,tag=!stage_builder,tag=!disabled,tag=dead] run function medabots_server:blocks/starting_area/clean_up
 execute if entity @s[tag=goal_area,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/goal_area
 execute if entity @s[tag=algae,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/algae
-execute if entity @s[tag=bridge,tag=!stage_builder,tag=!disabled,tag=dead] run function medabots_server:blocks/bridge/clean_up
-execute if entity @s[tag=stone,tag=!stage_builder,tag=!disabled,tag=dead] run function medabots_server:blocks/stone/clean_up
 execute if entity @s[tag=whirlpool,tag=!stage_builder,tag=!disabled,tag=dead] run function medabots_server:blocks/whirlpool/clean_up
 
 # Stage builder

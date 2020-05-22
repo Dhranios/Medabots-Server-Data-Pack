@@ -7,7 +7,8 @@ scoreboard players remove @s[scores={Time=..-1}] Time 1
 execute positioned ~ ~-1 ~ if entity @e[tag=hostile,type=!minecraft:item,distance=..0.7] run scoreboard players remove @s[scores={Time=0}] Time 1
 
 # Ambient sound
-execute if entity @s[scores={Time=0}] run playsound medabots_server:block.hole.ambient hostile @a ~ ~ ~ 1
+execute if entity @s[scores={Time=0,Sound=0}] run playsound medabots_server:block.hole.ambient hostile @a ~ ~ ~ 0.2
+execute if entity @s[scores={Time=0,Sound=0}] run scoreboard players set @s Sound 80
 
 # Looks
 execute if entity @s[scores={Time=-1..0},tag=!dead] run setblock ~ ~-1 ~ minecraft:black_carpet

@@ -1,0 +1,2 @@
+execute if block ~ ~-1 ~ minecraft:petrified_oak_slab[type=double,waterlogged=false] run setblock ~ ~-1 ~ minecraft:air
+execute if block ~ ~-1 ~ minecraft:petrified_oak_slab[type=double,waterlogged=true] run setblock ~ ~-1 ~ minecraft:water

@@ -8,11 +8,11 @@ execute if entity @e[scores={Stage=31},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/jungle_d
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if block -1641 44 -757 minecraft:lime_wool run scoreboard players set @e[x=-1640.5,y=45,z=-758.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1636 44 -743 minecraft:lime_wool run scoreboard players set @e[x=-1627.5,y=45,z=-753.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1609 44 -762 minecraft:lime_wool run scoreboard players set @e[x=-1610.5,y=45,z=-733.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1653 44 -721 minecraft:lime_wool run scoreboard players set @e[x=-1633.5,y=45,z=-721.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1634 45 -718 minecraft:iron_trapdoor[open=true] if block -1647 45 -712 minecraft:barrier if entity @s[x=-1637,y=45,z=-719,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_d/first_go_battle/0
+execute if entity @e[x=-1640.5,y=45,z=-756.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1640.5,y=45,z=-758.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1635.5,y=45,z=-742.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1627.5,y=45,z=-753.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1608.5,y=45,z=-761.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1610.5,y=45,z=-733.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1652.5,y=45,z=-720.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1633.5,y=45,z=-721.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if block -1634 45 -718 minecraft:iron_trapdoor[open=true] if block -1647 45 -712 minecraft:black_stained_glass if entity @s[x=-1637,y=45,z=-719,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_d/first_go_battle/0
 execute if entity @e[x=-1640.5,y=45,z=-712.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=31,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1633.5,y=45,z=-716.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1

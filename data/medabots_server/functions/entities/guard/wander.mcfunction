@@ -6,10 +6,10 @@ tag @s[tag=can_move] remove can_move
 execute positioned ^ ^ ^5.5 run tag @e[tag=medabot,distance=..5.5,tag=!enemy_medabot,tag=!dying,scores={State=1},tag=!was_hidden] add possible_targets
 execute positioned ^ ^ ^5.5 run tag @e[tag=last_known_location,distance=..5.5] add possible_targets
 tag @e[tag=possible_targets,sort=nearest,limit=1] add target
-execute if entity @e[tag=target,limit=1] facing entity @e[tag=target,limit=1] feet rotated ~ 0 positioned ^ ^ ^0.4 unless entity @e[distance=..0.2,type=!minecraft:area_effect_cloud] positioned as @s run function medabots_server:entities/guard/can_move_start
+execute if entity @e[tag=target,limit=1] facing entity @e[tag=target,limit=1] feet rotated ~ 0 positioned ^ ^ ^0.4 unless entity @e[distance=..0.2,type=!minecraft:area_effect_cloud,tag=!floor_switch,limit=1] positioned as @s run function medabots_server:entities/guard/can_move_start
 execute if entity @s[tag=can_move] if entity @e[tag=target,limit=1] facing entity @e[tag=target,limit=1] feet rotated ~ 0 run function medabots_server:entities/guard/move
 execute if entity @s[tag=!has_move_target] unless entity @e[tag=target,limit=1] run function medabots_server:entities/guard/spawn_move_target
-execute unless entity @e[tag=target,limit=1] facing entity @e[tag=this_move_target,type=minecraft:area_effect_cloud,limit=1] feet rotated ~ 0 positioned ^ ^ ^0.4 unless entity @e[distance=..0.2,type=!minecraft:area_effect_cloud,limit=1] positioned as @s run function medabots_server:entities/guard/can_move_start
+execute unless entity @e[tag=target,limit=1] facing entity @e[tag=this_move_target,type=minecraft:area_effect_cloud,limit=1] feet rotated ~ 0 positioned ^ ^ ^0.4 unless entity @e[distance=..0.2,type=!minecraft:area_effect_cloud,tag=!floor_switch,limit=1] positioned as @s run function medabots_server:entities/guard/can_move_start
 execute if entity @s[tag=can_move] unless entity @e[tag=target,limit=1] facing entity @e[tag=this_move_target,type=minecraft:area_effect_cloud,limit=1] feet rotated ~ 0 run function medabots_server:entities/guard/move
 execute if entity @s[tag=!can_move] run scoreboard players set @s Time 30
 execute unless entity @e[tag=target,limit=1] if entity @e[tag=this_move_target,type=minecraft:area_effect_cloud,limit=1,distance=..1.1] run scoreboard players set @s Time 30

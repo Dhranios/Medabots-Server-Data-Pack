@@ -11,3 +11,4 @@ tag @s[tag=10_medallar_cents] remove 10_medallar_cents
 tag @s[tag=20_medallar_cents] remove 20_medallar_cents
 tag @s add entity_exists
 scoreboard players set @s Time -100
+playsound medabots_server:block.action_floor.close block @a ~ ~ ~ 1

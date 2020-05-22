@@ -203,6 +203,7 @@ scoreboard objectives add Verified trigger
 scoreboard objectives add Walk minecraft.custom:minecraft.walk_one_cm
 scoreboard objectives add WalkOnWater minecraft.custom:minecraft.walk_on_water_one_cm
 scoreboard objectives add WalkUnderWater minecraft.custom:minecraft.walk_under_water_one_cm
+scoreboard objectives add WallLength dummy
 
 # Set slots
 scoreboard objectives setdisplay sidebar ServerStats

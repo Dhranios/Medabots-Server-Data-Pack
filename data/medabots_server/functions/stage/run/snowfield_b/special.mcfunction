@@ -8,33 +8,33 @@ execute if entity @e[scores={Stage=14},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/snowfield_b
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if block -1705 44 -467 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1704 44 -467 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1706 44 -466 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1709 44 -465 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1708 44 -465 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1704 44 -464 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1708 44 -463 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1707 44 -463 minecraft:light_blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1708 44 -467 minecraft:lime_wool if block -1707 44 -463 minecraft:blue_wool if block -1708 44 -463 minecraft:blue_wool if block -1704 44 -464 minecraft:blue_wool if block -1708 44 -465 minecraft:blue_wool if block -1709 44 -465 minecraft:blue_wool if block -1706 44 -466 minecraft:blue_wool if block -1704 44 -467 minecraft:blue_wool if block -1705 44 -467 minecraft:blue_wool run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1726 44 -453 minecraft:lime_wool run scoreboard players set @e[x=-1728.5,y=45,z=-450.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1705 44 -509 minecraft:orange_wool run scoreboard players set @e[x=-1702.5,y=45,z=-508.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1705 44 -509 minecraft:yellow_wool run scoreboard players set @e[x=-1702.5,y=45,z=-508.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1719 44 -461 minecraft:lime_wool run scoreboard players add #temp PowerAmount 1
-execute if block -1729 44 -491 minecraft:lime_wool run scoreboard players add #temp PowerAmount 1
-execute if block -1711 44 -511 minecraft:lime_wool run scoreboard players add #temp PowerAmount 1
-execute if block -1704 44 -516 minecraft:lime_wool run scoreboard players add #temp PowerAmount 1
-execute if block -1749 44 -455 minecraft:lime_wool run scoreboard players add #temp PowerAmount 2
-execute if block -1746 44 -496 minecraft:lime_wool run scoreboard players add #temp PowerAmount 2
-execute if block -1673 44 -481 minecraft:lime_wool run scoreboard players add #temp PowerAmount 2
-execute if block -1686 44 -534 minecraft:lime_wool run scoreboard players add #temp PowerAmount 2
+execute if entity @e[x=-1704.5,y=45,z=-466.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1703.5,y=45,z=-466.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1705.5,y=45,z=-465.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1708.5,y=45,z=-464.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1707.5,y=45,z=-464.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1703.5,y=45,z=-463.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1707.5,y=45,z=-462.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1706.5,y=45,z=-462.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1707.5,y=45,z=-466.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] if entity @e[x=-1706.5,y=45,z=-462.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=-1707.5,y=45,z=-462.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=-1703.5,y=45,z=-463.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=-1707.5,y=45,z=-464.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=-1708.5,y=45,z=-464.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=-1705.5,y=45,z=-465.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=-1703.5,y=45,z=-466.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=-1704.5,y=45,z=-466.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=-1708.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1725.5,y=45,z=-452.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1728.5,y=45,z=-450.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1704.5,y=45,z=-508.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=-1702.5,y=45,z=-508.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1704.5,y=45,z=-508.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1702.5,y=45,z=-508.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1718.5,y=45,z=-460.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 1
+execute if entity @e[x=-1728.5,y=45,z=-490.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 1
+execute if entity @e[x=-1710.5,y=45,z=-510.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 1
+execute if entity @e[x=-1703.5,y=45,z=-515.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 1
+execute if entity @e[x=-1748.5,y=45,z=-454.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 2
+execute if entity @e[x=-1745.5,y=45,z=-495.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 2
+execute if entity @e[x=-1672.5,y=45,z=-480.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 2
+execute if entity @e[x=-1685.5,y=45,z=-533.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add #temp PowerAmount 2
 execute if score #temp PowerAmount matches 8.. run scoreboard players set @e[x=-1746.5,y=45,z=-512.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 scoreboard players reset #temp PowerAmount
-execute if block -1705 44 -509 minecraft:orange_wool run scoreboard players set @e[x=-1704.5,y=45,z=-509.5,distance=..0.7,tag=alarm,type=minecraft:area_effect_cloud,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1705 44 -509 minecraft:yellow_wool run scoreboard players set @e[x=-1704.5,y=45,z=-509.5,distance=..0.7,tag=alarm,type=minecraft:area_effect_cloud,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1704.5,y=45,z=-508.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=-1704.5,y=45,z=-509.5,distance=..0.7,tag=alarm,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1704.5,y=45,z=-508.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1704.5,y=45,z=-509.5,distance=..0.7,tag=alarm,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1737 45 -461 minecraft:iron_trapdoor[open=true] unless block -1749 44 -455 minecraft:lime_wool if entity @s[x=-1740,y=45,z=-463,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/special_battle/0
 execute if entity @e[x=-1744.5,y=45,z=-457.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,State=1..2}]
-execute if entity @e[x=-1744.5,y=45,z=-457.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if block -1749 44 -455 minecraft:lime_wool run tag @s add mission_success
+execute if entity @e[x=-1744.5,y=45,z=-457.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if entity @e[x=-1748.5,y=45,z=-454.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,State=1..},type=minecraft:skeleton] add dead
 execute if entity @s[tag=mission_success] as @a[scores={Stage=14,Medabot=0..,State=1..2},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
@@ -45,7 +45,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1751 45 -488 minecraft:iron_trapdoor[open=true] unless block -1746 44 -496 minecraft:lime_wool if entity @s[x=-1754,y=45,z=-490,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/special_battle/1
 execute if entity @e[x=-1755.5,y=45,z=-489.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,State=1..2}]
-execute if entity @e[x=-1755.5,y=45,z=-489.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if block -1746 44 -496 minecraft:lime_wool run tag @s add mission_success
+execute if entity @e[x=-1755.5,y=45,z=-489.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if entity @e[x=-1745.5,y=45,z=-495.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,State=1..},type=minecraft:skeleton] add dead
 execute if entity @s[tag=mission_success] as @a[scores={Stage=14,Medabot=0..,State=1..2},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
@@ -56,7 +56,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1684 45 -487 minecraft:iron_trapdoor[open=true] unless block -1673 44 -481 minecraft:lime_wool if entity @s[x=-1684,y=45,z=-488,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/special_battle/2
 execute if entity @e[x=-1675.5,y=45,z=-484.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,State=1..2}]
-execute if entity @e[x=-1675.5,y=45,z=-484.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if block -1673 44 -481 minecraft:lime_wool run tag @s add mission_success
+execute if entity @e[x=-1675.5,y=45,z=-484.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if entity @e[x=-1672.5,y=45,z=-480.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,State=1..},type=minecraft:skeleton] add dead
 execute if entity @s[tag=mission_success] as @a[scores={Stage=14,Medabot=0..,State=1..2},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
@@ -67,7 +67,7 @@ tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1681 45 -517 minecraft:iron_trapdoor[open=true] unless block -1686 44 -534 minecraft:lime_wool if entity @s[x=-1682,y=45,z=-520,dx=3,dy=3,dz=3] run function medabots_server:stage/create/snowfield_b/special_battle/3
 execute if entity @e[x=-1678.5,y=45,z=-526.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=14,Medabot=0..,State=1..2}]
-execute if entity @e[x=-1678.5,y=45,z=-526.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if block -1686 44 -534 minecraft:lime_wool run tag @s add mission_success
+execute if entity @e[x=-1678.5,y=45,z=-526.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] if entity @e[x=-1685.5,y=45,z=-533.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=14,Medabot=0..,State=1..},type=minecraft:skeleton] add dead
 execute if entity @s[tag=mission_success] as @a[scores={Stage=14,Medabot=0..,State=1..2},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}

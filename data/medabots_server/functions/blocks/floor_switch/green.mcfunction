@@ -1,2 +1,2 @@
 scoreboard players set @s[tag=trigger] Time 1
-execute if entity @s[scores={Time=1..}] run setblock ~ ~-1 ~ minecraft:lime_wool
+data modify entity @s[scores={Time=1..}] ArmorItems[3].tag.CustomModelData set value 27

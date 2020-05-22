@@ -1,0 +1,16 @@
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=east,open=false] run tag @s add continue
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=west,open=false] run tag @s add continue
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=north,open=true] run tag @s add continue
+execute at @s[y_rotation=-135..-45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=south,open=true] run tag @s add continue
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=east,open=true] run tag @s add continue
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=west,open=true] run tag @s add continue
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=north,open=false] run tag @s add continue
+execute at @s[y_rotation=-45..45] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=south,open=false] run tag @s add continue
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=east,open=false] run tag @s add continue
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=west,open=false] run tag @s add continue
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=north,open=true] run tag @s add continue
+execute at @s[y_rotation=45..135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=south,open=true] run tag @s add continue
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=east,open=true] run tag @s add continue
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=west,open=true] run tag @s add continue
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=north,open=false] run tag @s add continue
+execute at @s[y_rotation=135..-135] positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:iron_trapdoor[facing=south,open=false] run tag @s add continue

@@ -1,6 +1,7 @@
 execute if entity @e[distance=..0.7,tag=pot,tag=!cannon,tag=!guard,tag=!bomb,tag=!balloon_bomb,tag=!jammy] run tag @s add allowed
 execute if block ~ ~-1 ~ minecraft:air run tag @s remove allowed
 execute if block ~ ~-1 ~ minecraft:water run tag @s remove allowed
+execute positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:water if entity @e[distance=..0.7,tag=raft,limit=1] run tag @s add allowed
 execute if block ~ ~-1 ~ minecraft:barrier run tag @s remove allowed
 
 execute store result score #temp Stage run scoreboard players get @s Stage

@@ -1,3 +1,2 @@
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.floor_switch"}',Tags:["floor_switch","green_floor_switch"],Invisible:1b,Marker:1b,Rotation:[0.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:26}}]}
 function medabots_server:set_blocks/floor_switch
-tag @e[distance=..0.7,tag=floor_switch] add green_floor_switch
-setblock ~ ~-1 ~ minecraft:green_wool

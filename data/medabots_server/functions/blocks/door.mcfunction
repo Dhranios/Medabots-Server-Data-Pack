@@ -1,6 +1,6 @@
 # Is this door powered?
-execute if score @s PowerAmount >= @s PowerNeeded run tag @s[tag=!no_open] add powered
-execute unless score @s PowerAmount >= @s PowerNeeded run tag @s remove powered
+execute if score @s PowerAmount >= @s PowerNeeded run tag @s[tag=!no_open,scores={Time=0}] add powered
+execute unless score @s PowerAmount >= @s PowerNeeded run tag @s[scores={Time=10}] remove powered
 
 data modify entity @s[scores={Time=1}] ArmorItems[3].tag.CustomModelData set value 20
 data modify entity @s[scores={Time=2}] ArmorItems[3].tag.CustomModelData set value 21
@@ -15,10 +15,10 @@ execute align xyz unless entity @e[dx=0,dy=4,dz=1,tag=!door] run scoreboard play
 scoreboard players add @s[tag=powered,scores={Time=..9}] Time 1
 
 # Open the door
-execute if entity @s[tag=powered,scores={Time=9}] run function medabots_server:blocks/door/open
+execute if entity @s[tag=powered,scores={Time=2}] run function medabots_server:blocks/door/open
 
 # Close the door
-execute if entity @s[tag=!powered,scores={Time=9}] run function medabots_server:blocks/door/close
+execute if entity @s[tag=!powered,scores={Time=8}] run function medabots_server:blocks/door/close
 
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead,tag=east] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:barrier

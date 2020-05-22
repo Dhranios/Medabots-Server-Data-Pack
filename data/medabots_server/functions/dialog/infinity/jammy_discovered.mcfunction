@@ -29,7 +29,7 @@ tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate
 tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.4"}]}
 tellraw @s[scores={Dialog=88}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.5"}]}
 tellraw @s[scores={Dialog=128}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.6"}]}
-execute if entity @s[scores={Dialog=168}] run setblock -1604 51 -348 minecraft:end_rod[facing=up]
+execute if entity @s[scores={Dialog=168}] positioned -1604 51 -348 run function medabots_server:set_blocks/jammy
 tellraw @s[scores={Dialog=188}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.7"}]}
 tellraw @s[scores={Dialog=204}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.brass","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.8"}]}
 tellraw @s[scores={Dialog=236}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.9"}]}
@@ -77,7 +77,7 @@ tellraw @s[scores={Dialog=1802}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=1818}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.43"}]}
 tellraw @s[scores={Dialog=1874}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.44"}]}
 tellraw @s[scores={Dialog=1922}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.45"}]}
-execute if entity @s[scores={Dialog=1986}] run setblock -1604 51 -348 minecraft:air
+execute if entity @s[scores={Dialog=1986}] run tag @e[x=-1603.5,y=51,z=-347.5,distance=..0.7,tag=jammy,limit=1] add dead
 tellraw @s[scores={Dialog=1986}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.46"}]}
 tellraw @s[scores={Dialog=2090}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.47"}]}
 tellraw @s[scores={Dialog=2106}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.jammy_discovered.48"}]}

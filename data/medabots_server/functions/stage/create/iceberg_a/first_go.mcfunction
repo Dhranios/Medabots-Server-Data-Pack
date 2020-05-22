@@ -115,6 +115,7 @@ execute positioned -1685 44 -193 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1681 44 -193 run function medabots_server:set_blocks/pot/6_medallar_cents
 execute positioned -1680 44 -194 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1680 44 -188 run function medabots_server:set_blocks/pot/guard/slow
+execute positioned -1711 44 -220 run function medabots_server:set_blocks/bridge
 execute positioned -1695 44 -240 run function medabots_server:set_blocks/bridge
 execute positioned -1694 44 -240 run function medabots_server:set_blocks/bridge
 execute positioned -1693 44 -240 run function medabots_server:set_blocks/bridge

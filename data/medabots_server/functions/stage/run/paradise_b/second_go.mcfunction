@@ -8,16 +8,16 @@ execute if entity @e[scores={Stage=22},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/paradise_b
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if block -1646 44 -632 minecraft:lime_wool run scoreboard players set @e[x=-1644.5,y=45,z=-628.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1643 44 -623 minecraft:lime_wool run scoreboard players set @e[x=-1647.5,y=45,z=-612.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block -1638 44 -636 minecraft:yellow_wool run scoreboard players remove @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] Moving 1
-execute if block -1638 44 -636 minecraft:yellow_wool run tag @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] add changed
-execute if block -1638 44 -636 minecraft:yellow_wool run scoreboard players add @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] Moving 1
-execute if block -1638 44 -636 minecraft:yellow_wool run tag @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] add changed
-execute if block -1638 44 -636 minecraft:orange_wool run scoreboard players add @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] Moving 1
-execute if block -1638 44 -636 minecraft:orange_wool run tag @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] remove changed
-execute if block -1638 44 -636 minecraft:orange_wool run scoreboard players remove @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] Moving 1
-execute if block -1638 44 -636 minecraft:orange_wool run tag @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] remove changed
+execute if entity @e[x=-1645.5,y=45,z=-631.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1644.5,y=45,z=-628.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1642.5,y=45,z=-622.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1647.5,y=45,z=-612.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players remove @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] Moving 1
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run tag @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] add changed
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players add @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] Moving 1
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run tag @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=!changed] add changed
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players add @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] Moving 1
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run tag @e[x=-1635.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] remove changed
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players remove @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] Moving 1
+execute if entity @e[x=-1637.5,y=45,z=-635.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run tag @e[x=-1653.5,y=45,z=-634.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] remove changed
 execute if block -1618 45 -589 minecraft:iron_trapdoor[open=true] if block -1615 45 -593 minecraft:air if entity @s[x=-1619,y=45,z=-592,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/second_go_battle/0
 execute if entity @e[x=-1609.5,y=45,z=-590.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1..2}]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @e[x=-1609.5,y=45,z=-590.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=22}] run tag @s remove run_until_the_time_is_up
