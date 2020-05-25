@@ -11,15 +11,15 @@ execute if entity @s[tag=neutral_tinpet] run tag @e[tag=model_piece,tag=new,limi
 execute if entity @s[tag=cutscene] run scoreboard players operation @e[tag=model_piece,tag=new,limit=1] DialogNr = @s DialogNr
 tag @e[tag=model_piece,tag=new,limit=1] remove new
 
-scoreboard players operation #temp MedabotNr = @s MedabotNr
-execute as @e[tag=model_piece,tag=source] if score @s MedabotNr = #temp MedabotNr run tag @s add me
+scoreboard players operation #temp_2 MedabotNr = @s MedabotNr
+execute as @e[tag=model_piece,tag=source] if score @s MedabotNr = #temp_2 MedabotNr run tag @s add me
 execute store result score @e[tag=me,limit=1] UpAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.height
 tag @e[tag=me,limit=1] remove me
-scoreboard players reset #temp MedabotNr
+scoreboard players reset #temp_2 MedabotNr
 
 execute if score #temp Time matches 1.. run function medabots_server:animations/medabot/separate_leg
-execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{has_tail:1b}}}}]}] run function medabots_server:animations/medabot/separate_tail
-execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{has_wormtail:1b}}}}]}] run function medabots_server:animations/medabot/separate_wormtail
+execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{tail:{}}}}}]}] run function medabots_server:animations/medabot/separate_tail
+execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{wormtail:{}}}}}]}] run function medabots_server:animations/medabot/separate_wormtail
 
 scoreboard players reset #temp_2 Time
 scoreboard players reset #temp Time

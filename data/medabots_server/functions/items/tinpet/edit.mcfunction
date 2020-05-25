@@ -17,6 +17,7 @@ execute unless entity @s[scores={MusicType=58..59}] run scoreboard players opera
 scoreboard players set @s MusicType 31
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 
+summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["source","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["legs","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["left_arm","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}

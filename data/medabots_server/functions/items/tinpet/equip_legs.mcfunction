@@ -44,11 +44,13 @@ tellraw @s[tag=valid,scores={EditingTinpet=9},nbt={Inventory:[{Slot:-106b,tag:{m
 
 # Update model
 execute if entity @s[tag=valid] run scoreboard players operation #temp MedabotNr = @s MedabotNr
+execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=source] if score @s MedabotNr = #temp MedabotNr run kill @s
 execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=legs] if score @s MedabotNr = #temp MedabotNr run kill @s
 execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=hips] if score @s MedabotNr = #temp MedabotNr run kill @s
 execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=leg] if score @s MedabotNr = #temp MedabotNr run kill @s
 execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=tail] if score @s MedabotNr = #temp MedabotNr run kill @s
 execute if entity @s[tag=valid] as @e[tag=medabot_model,tag=wormtail] if score @s MedabotNr = #temp MedabotNr run kill @s
+execute if entity @s[tag=valid] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["source","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 execute if entity @s[tag=valid] run summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["legs","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 execute at @s[tag=valid] as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = #temp MedabotNr
 execute at @s[tag=valid] as @e[tag=legs,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] SelectedItem
