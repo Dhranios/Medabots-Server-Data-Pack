@@ -100,6 +100,7 @@ scoreboard objectives add LegsDanger dummy
 scoreboard objectives add LegsPer dummy
 scoreboard objectives add Level level
 scoreboard objectives add LifeTime dummy
+scoreboard objectives add LoadedChunks dummy
 scoreboard objectives add MasterHandNr dummy
 scoreboard objectives add MaxHeadArmor dummy
 scoreboard objectives add MaxHeadUses dummy

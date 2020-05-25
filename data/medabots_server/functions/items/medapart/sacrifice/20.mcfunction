@@ -1,8 +1,10 @@
 # Set which part is activated
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:bezelga_helming"}}}]}] MedapartID 1
-scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:bezelga_helmight"}}}]}] MedapartID 2
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:abyss_greater_pro_fence"}}}]}] MedapartID 3
-scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:abyss_greater_burst"}}}]}] MedapartID 4
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:bezelga_helming"}}}]}] MedapartID 1
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:bezelga_helmight"}}}]}] MedapartID 2
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:abyss_greater_pro_fence"}}}]}] MedapartID 3
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:abyss_greater_burst"}}}]}] MedapartID 4
+clear @s[tag=right_arm_selected] minecraft:fishing_rod{medabots_server:{part:"right_arm",activated:1b}}
+clear @s[tag=left_arm_selected] minecraft:fishing_rod{medabots_server:{part:"left_arm",activated:1b}}
 
 # Give the weapon
 replaceitem entity @s weapon.offhand minecraft:tipped_arrow{CustomModelData:1,Potion:"minecraft:water",CustomPotionColor:16777215,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bullet"}'},CustomPotionEffects:[{Id:18b,Amplifier:7b,Duration:0,Ambient:1b,ShowParticles:0b}],medabots_server:{id:"medabots_server:bullet"}}

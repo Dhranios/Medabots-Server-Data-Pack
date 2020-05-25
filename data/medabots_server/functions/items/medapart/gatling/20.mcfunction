@@ -1,12 +1,15 @@
 # Set which part is activated
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:saikachis_blaster"}}}]}] MedapartID 1
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:aimflash_tripod"}}}]}] MedapartID 2
-scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:sailor_multi_pateri_vulcan"}}}]}] MedapartID 3
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:blackbeetle_blackblaster"}}}]}] MedapartID 4
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:arcbeetle_ignition"}}}]}] MedapartID 5
-scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:zant_zant_helmet"}}}]}] MedapartID 6
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:saikachis_blaster"}}}]}] MedapartID 1
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:aimflash_tripod"}}}]}] MedapartID 2
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:sailor_multi_pateri_vulcan"}}}]}] MedapartID 3
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:blackbeetle_blackblaster"}}}]}] MedapartID 4
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:arcbeetle_ignition"}}}]}] MedapartID 5
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:zant_zant_helmet"}}}]}] MedapartID 6
 scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:warbonnet_range_shooter"}}}]}] MedapartID 7
 scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:metabee_sub_machie_gun"}}}]}] MedapartID 8
+clear @s[tag=right_arm_selected] minecraft:fishing_rod{medabots_server:{part:"right_arm",activated:1b}}
+clear @s[tag=left_arm_selected] minecraft:fishing_rod{medabots_server:{part:"left_arm",activated:1b}}
+clear @s[tag=head_selected] minecraft:fishing_rod{medabots_server:{part:"head",activated:1b}}
 
 # Give the weapon and ammo depending on charge
 execute unless entity @s[scores={ScoutTime=1..}] run replaceitem entity @s[tag=left_arm_selected,scores={Drop=0}] hotbar.1 minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.gatling"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.gatling"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},medabots_server:{id:"medabots_server:gatling"}}

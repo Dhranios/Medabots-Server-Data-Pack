@@ -1,4 +1,5 @@
 # Give back the original medal
+clear @s minecraft:fishing_rod{medabots_server:{part:"medal",activated:1b}}
 replaceitem entity @s[tag=hostile] hotbar.4 minecraft:gold_ingot{CustomModelData:5,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.monkey_medal"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.monkey_medal"}','{"italic":false,"color":"white","translate":"medabots_server:move.monkey_medal.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}']},medabots_server:{id:"medabots_server:monkey_medal",move:"medaforce_charge",part:"medal",activated:1b,version:1}} 50
 
 # Finish the move

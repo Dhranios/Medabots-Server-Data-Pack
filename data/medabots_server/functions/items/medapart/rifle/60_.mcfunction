@@ -19,9 +19,9 @@ replaceitem entity @s[scores={MedapartID=11,Drop=0},tag=hostile] hotbar.2 minecr
 replaceitem entity @s[scores={MedapartID=12,Drop=0},tag=hostile] hotbar.1 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:46,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.amelia_spear"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.rifle"}','{"italic":false,"color":"white","translate":"medabots_server:move.rifle.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"65"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.amelia"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.amelia_spear.model"}','{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}']},medabots_server:{id:"medabots_server:amelia_spear",gender:1b,move:"rifle",part:"left_arm",armor:65,power:25,activated:1b,version:1}}
 
 # Finish the move
-scoreboard players reset @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
-scoreboard players reset @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
-scoreboard players reset @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{part:"head"}}}]}] MedapartType
+scoreboard players reset @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head"}}}]}] MedapartType
 scoreboard players reset @s[type=!minecraft:player] MedapartType
 scoreboard players reset @s[tag=!hostile] MedapartType
 execute unless entity @s[scores={MedapartType=1..}] run scoreboard players reset @s MedapartID

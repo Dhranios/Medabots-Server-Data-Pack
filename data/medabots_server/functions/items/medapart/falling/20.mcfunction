@@ -1,8 +1,8 @@
 # Set which part is activated
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{Slot:1b,tag:{medabots_server:{id:"medabots_server:baroncastle_gatemonarch"}}}]}] MedapartID 1
-scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{Slot:2b,tag:{medabots_server:{id:"medabots_server:magicalcard_onetwotree"}}}]}] MedapartID 2
-scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:aimflash_strobe"}}}]}] MedapartID 3
-scoreboard players set @s[tag=head_selected,nbt={Inventory:[{Slot:3b,tag:{medabots_server:{id:"medabots_server:baroncastle_king_balcony"}}}]}] MedapartID 4
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:baroncastle_gatemonarch"}}}]}] MedapartID 1
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:magicalcard_onetwotree"}}}]}] MedapartID 2
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:aimflash_strobe"}}}]}] MedapartID 3
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:baroncastle_king_balcony"}}}]}] MedapartID 4
 
 # Give the weapon
 execute unless entity @s[scores={ScoutTime=1..}] run replaceitem entity @s[tag=left_arm_selected,scores={Drop=0},tag=!ally_medabot,tag=!enemy_medabot] hotbar.1 minecraft:yellow_wool{CustomModelData:1,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.falling"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.falling"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.drop"}']},medabots_server:{id:"medabots_server:falling",team:"none"}}

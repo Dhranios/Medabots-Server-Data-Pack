@@ -8,6 +8,9 @@ replaceitem entity @s[tag=left_arm_selected,scores={Drop=0,ScoutTime=1..}] hotba
 replaceitem entity @s[tag=right_arm_selected,scores={Drop=0,ScoutTime=1..}] hotbar.2 minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.laser"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.laser"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},Enchantments:[{id:"minecraft:power",lvl:7s}],medabots_server:{id:"medabots_server:laser"}}
 replaceitem entity @s[tag=head_selected,scores={Drop=0,ScoutTime=1..}] hotbar.3 minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.laser"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.laser"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},Enchantments:[{id:"minecraft:power",lvl:7s}],medabots_server:{id:"medabots_server:laser"}}
 replaceitem entity @s[scores={ScoutTime=1..},type=!minecraft:player] weapon.mainhand minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.laser"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.laser"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},Enchantments:[{id:"minecraft:power",lvl:7s}],medabots_server:{id:"medabots_server:laser"}}
+clear @s[tag=right_arm_selected] minecraft:fishing_rod{medabots_server:{part:"right_arm",activated:1b}}
+clear @s[tag=left_arm_selected] minecraft:fishing_rod{medabots_server:{part:"left_arm",activated:1b}}
+clear @s[tag=head_selected] minecraft:fishing_rod{medabots_server:{part:"head",activated:1b}}
 
 # Remove from head uses if this was the head part
 scoreboard players remove @s[tag=head_selected] HeadUses 1
