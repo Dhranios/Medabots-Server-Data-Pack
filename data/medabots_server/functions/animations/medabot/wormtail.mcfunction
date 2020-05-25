@@ -1,6 +1,5 @@
 # Move with
-execute at @e[tag=this_medabot,tag=hips,limit=1] rotated ~ 0 run teleport @s ^ ^ ^
-execute store result entity @s Rotation[0] float 0.01 run data get entity @e[tag=this_medabot,tag=hips,limit=1] Rotation[0] 100
+execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s ^ ^ ^ ~ ~
 
 # Walk animation
 execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s[tag=!sneak_pos] {Pose:{Head:[0.001f,0.001f,0.001f]}}

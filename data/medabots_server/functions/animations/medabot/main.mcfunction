@@ -8,7 +8,10 @@ execute if entity @e[tag=walking,tag=this_medabot,tag=!medabot_model,limit=1] ru
 execute if entity @e[tag=running,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add running
 execute if entity @e[tag=sneak_pos,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add sneak_pos
 execute if entity @e[tag=sneaking,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add sneaking
+tag @s[tag=walking,tag=sneak_pos] add sneaking
+tag @s[tag=walking,tag=sneak_pos] remove walking
 execute if entity @s[tag=legs] run function medabots_server:animations/medabot/split_legs
+execute if entity @s[tag=source,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/source
 execute if entity @s[tag=hips,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/hips
 execute if entity @s[tag=leg,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/leg
 execute if entity @s[tag=tail,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/tail
@@ -25,6 +28,7 @@ execute if entity @s[tag=left_arm,tag=dying] run function medabots_server:animat
 execute if entity @s[tag=right_arm,tag=dying] run function medabots_server:animations/medabot/death/right_arm
 execute if entity @s[tag=chest,tag=dying] run function medabots_server:animations/medabot/death/chest
 execute if entity @s[tag=head,tag=dying] run function medabots_server:animations/medabot/death/head
+execute if entity @s[tag=source,tag=tinpet_editing] run function medabots_server:animations/medabot/tinpet_editing/source
 execute if entity @s[tag=hips,tag=tinpet_editing] run function medabots_server:animations/medabot/tinpet_editing/hips
 execute if entity @s[tag=leg,tag=tinpet_editing] run function medabots_server:animations/medabot/tinpet_editing/leg
 execute if entity @s[tag=tail,tag=tinpet_editing] run function medabots_server:animations/medabot/tinpet_editing/tail

@@ -9,11 +9,10 @@ data merge entity @s[tag=guarding] {Pose:{Head:[-90.0f,48.0f,0.001f]}}
 
 # Move with
 execute if entity @a[tag=sneak_pos,tag=this_medabot,limit=1] run tag @s add sneak_pos
-execute at @e[tag=this_medabot,tag=hips,limit=1] rotated ~ 0 run teleport @s[tag=!sneak_pos,tag=!guarding] ^.25 ^.32 ^
-execute at @e[tag=this_medabot,tag=hips,limit=1] rotated ~ 0 run teleport @s[tag=sneak_pos,tag=!guarding] ^.25 ^.26 ^
-execute at @e[tag=this_medabot,tag=hips,limit=1] rotated ~ 0 run teleport @s[tag=!sneak_pos,tag=guarding] ^.2 ^.32 ^
-execute at @e[tag=this_medabot,tag=hips,limit=1] rotated ~ 0 run teleport @s[tag=sneak_pos,tag=guarding] ^.2 ^.26 ^
-execute if entity @s[tag=!was_selected] store result entity @s Rotation[0] float 0.01 run data get entity @e[tag=this_medabot,tag=hips,limit=1] Rotation[0] 100
+execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s[tag=!sneak_pos,tag=!guarding] ^.25 ^.32 ^ ~ ~
+execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s[tag=sneak_pos,tag=!guarding] ^.25 ^.26 ^ ~ ~
+execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s[tag=!sneak_pos,tag=guarding] ^.2 ^.32 ^ ~ ~
+execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s[tag=sneak_pos,tag=guarding] ^.2 ^.26 ^ ~ ~
 
 # Equipped arms
 execute if entity @a[nbt={SelectedItemSlot:1},tag=this_medabot,limit=1,scores={State=1..2}] run tag @s add selected
