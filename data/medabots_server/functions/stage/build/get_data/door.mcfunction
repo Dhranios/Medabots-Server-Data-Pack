@@ -1,7 +1,5 @@
 tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables","color":"green","with":[{"translate":"medabots_server:block.door"}]}
-execute if entity @e[distance=..0.7,limit=1,tag=door,tag=north] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.facing.north","color":"green"}
-execute if entity @e[distance=..0.7,limit=1,tag=door,tag=south] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.facing.south","color":"green"}
-execute if entity @e[distance=..0.7,limit=1,tag=door,tag=east] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.facing.east","color":"green"}
-execute if entity @e[distance=..0.7,limit=1,tag=door,tag=west] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.facing.west","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=door,tag=x] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.axis.x","color":"green"}
+execute if entity @e[distance=..0.7,limit=1,tag=door,tag=z] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.axis.z","color":"green"}
 tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.power","color":"green","with":[{"score":{"objective":"PowerNeeded","name":"@e[distance=..0.7,limit=1,tag=door]"}}]}
 tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.bound","color":"green","with":[{"score":{"objective":"HomeX","name":"@e[distance=..0.7,limit=1,tag=door]"}},{"score":{"objective":"HomeY","name":"@e[distance=..0.7,limit=1,tag=door]"}},{"score":{"objective":"HomeZ","name":"@e[distance=..0.7,limit=1,tag=door]"}}]}

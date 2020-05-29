@@ -17,7 +17,6 @@ execute if entity @s[tag=round_stone,tag=!action_floor,tag=!stage_builder,tag=!d
 execute if entity @s[tag=ice_block,tag=!action_floor,tag=!stage_builder,tag=!disabled] positioned ~ ~0.375 ~ run function medabots_server:entities/ice_block
 execute if entity @s[tag=thin_ice,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/thin_ice
 execute if entity @s[tag=drawbridge,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/drawbridge
-execute if entity @s[tag=action_floor,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/action_floor
 execute if entity @s[tag=balloon_bomb,tag=!action_floor,tag=!pot,tag=!stage_builder,tag=!disabled] positioned ~ ~0.375 ~ run function medabots_server:entities/balloon_bomb
 execute if entity @s[tag=bomb,tag=!action_floor,tag=!pot,tag=!stage_builder,tag=!disabled] positioned ~ ~0.375 ~ run function medabots_server:entities/bomb
 execute if entity @s[tag=press_wall,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/press_wall

@@ -10,10 +10,10 @@ execute positioned -1990 45 -552 run function medabots_server:set_blocks/press_w
 execute positioned -2003 45 -552 run function medabots_server:set_blocks/press_wall/east/range_5/power_0
 execute positioned -2005 45 -554 run function medabots_server:set_blocks/press_wall/north/range_5/power_0
 execute positioned -2005 45 -567 run function medabots_server:set_blocks/press_wall/south/range_5/power_0
-execute positioned -1997 45 -569 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1988 45 -561 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1996 45 -552 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -2005 45 -560 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1997 45 -569 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1988 45 -561 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1997 45 -552 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -2005 45 -561 run function medabots_server:set_blocks/door/z/power_1
 
 execute if entity @s[scores={ArenaType=0}] run teleport @s -1997 45 -564 0 0
 execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1996 45 -557 0 0

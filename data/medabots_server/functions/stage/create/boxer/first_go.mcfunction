@@ -14,14 +14,14 @@ execute positioned -1886 44 -568 run function medabots_server:set_blocks/wall
 execute positioned -1887 44 -574 run function medabots_server:set_blocks/wall
 execute positioned -1890 44 -572 run function medabots_server:set_blocks/wall
 execute positioned -1889 44 -571 run function medabots_server:set_blocks/wall
-execute positioned -1891 44 -558 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1879 44 -562 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1876 44 -571 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1880 44 -582 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1889 44 -585 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1900 44 -581 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1903 44 -572 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1899 44 -561 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1891 44 -558 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1879 44 -562 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1876 44 -571 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1880 44 -583 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1889 44 -585 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1901 44 -581 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1903 44 -573 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1899 44 -561 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1890 44 -548 run function medabots_server:set_blocks/starting_area
 teleport @s -1890 44 -548 0 0
 bossbar set medabots_server:boxer/time value 0

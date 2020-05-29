@@ -10,7 +10,8 @@ execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:barrier if block ~ ~-
 execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:black_stained_glass positioned ~ ~-1 ~ if entity @e[distance=..0.7,tag=ice_block] run tag @s add continue
 execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:barrier if block ~ ~-1 ~ minecraft:cut_sandstone positioned ~ ~-1 ~ if entity @e[distance=..0.7,tag=mirror] run tag @s add mirror
 execute at @s positioned ~ ~1.325 ~ if entity @e[distance=..0.7,tag=balloon_bomb] run tag @s add balloon_bomb
-execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:barrier if block ~ ~-1 ~ minecraft:chest positioned ~ ~-1 ~ if entity @e[distance=..0.7,tag=pot] run tag @s add pot
+execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:air if block ~ ~-1 ~ minecraft:black_stained_glass positioned ~ ~-1 ~ if entity @e[distance=..0.7,tag=pot] run tag @s add pot
+execute at @s positioned ~ ~1.7 ~ if block ~ ~ ~ minecraft:black_stained_glass if block ~ ~1 ~ minecraft:air if entity @e[distance=..0.7,tag=pot] run tag @s add pot
 execute at @s positioned ~ ~1.7 ~ as @e[distance=..0.7,tag=!me,tag=!ice_block,type=!minecraft:armor_stand,type=!minecraft:area_effect_cloud,type=!minecraft:item,type=!minecraft:experience_orb] if data entity @s Health run tag @e[tag=me] add hit
 execute at @s positioned ~ ~0.7 ~ as @e[distance=..0.7,tag=!me,tag=!ice_block,type=!minecraft:armor_stand,type=!minecraft:area_effect_cloud,type=!minecraft:item,type=!minecraft:experience_orb] if data entity @s Health run tag @e[tag=me] add hit
 execute if entity @s[tag=!continue,tag=!mirror,tag=!balloon_bomb,tag=!pot,tag=!hit] run function medabots_server:items/medapart/laser/move/door
@@ -27,5 +28,6 @@ tag @s[tag=!continue,tag=!mirror] add dead
 tag @s remove continue
 tag @s remove mirror
 tag @s remove me
+tag @s remove pot
 scoreboard players remove @s Steps 1
 execute if entity @s[tag=!dead,scores={Steps=1..}] at @s run function medabots_server:items/medapart/laser/move

@@ -128,7 +128,7 @@ execute positioned -1541 45 -293 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1544 45 -293 run function medabots_server:set_blocks/pot
 # Stage build item pot
 execute positioned -1543 45 -309 run function medabots_server:set_blocks/pot
-replaceitem block -1543 45 -309 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"hammer_punch",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.hammer_punch"}]}'}}
+execute positioned -1543 45 -309 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"hammer_punch",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.hammer_punch"}]}'}}}}
 execute positioned -1542 45 -310 run function medabots_server:set_blocks/pot
 execute positioned -1541 45 -309 run function medabots_server:set_blocks/pot
 execute positioned -1594 45 -309 run function medabots_server:set_blocks/pot
@@ -138,7 +138,7 @@ execute positioned -1576 45 -284 run function medabots_server:set_blocks/pot/gua
 execute positioned -1586 45 -284 run function medabots_server:set_blocks/pot/guard/slow
 # Medapart pot
 execute positioned -1575 45 -262 run function medabots_server:set_blocks/pot
-replaceitem block -1575 45 -262 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:21,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kanehachi_mk2_swick"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.multi_legged"}','{"italic":false,"color":"white","translate":"medabots_server:move.multi_legged.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.defense","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.kanehachi_mk2"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.kanehachi_mk2_swick.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:kanehachi_mk2_swick",gender:0b,move:"multi_legged",part:"legs",armor:40,defense:40,activated:0b,model_data:{height:0,leg_offset:[{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0}]},version:1}}
+execute positioned -1575 45 -262 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:21,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kanehachi_mk2_swick"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.multi_legged"}','{"italic":false,"color":"white","translate":"medabots_server:move.multi_legged.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.defense","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"40"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.kanehachi_mk2"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.kanehachi_mk2_swick.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:kanehachi_mk2_swick",gender:0b,move:"multi_legged",part:"legs",armor:40,defense:40,activated:0b,model_data:{height:0,leg_offset:[{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0},{l:0,u:0,f:0}]},version:1}}}}
 execute positioned -1578 45 -262 run function medabots_server:set_blocks/pot
 execute positioned -1581 45 -257 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1586 45 -258 run function medabots_server:set_blocks/pot/bomb/delay_5
@@ -195,12 +195,12 @@ execute positioned -1578 45 -283 run function medabots_server:set_blocks/bridge
 execute positioned -1576 45 -284 run function medabots_server:set_blocks/bridge
 execute positioned -1586 45 -284 run function medabots_server:set_blocks/bridge
 execute positioned -1552 45 -260 run function medabots_server:set_blocks/accelerator/north
-execute positioned -1513 45 -296 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1514 45 -296 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1568 45 -310 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1568 45 -264 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1622 45 -300 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1610 45 -308 run function medabots_server:set_blocks/door/north/power_0
+execute positioned -1513 45 -296 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1514 45 -296 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1568 45 -310 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1568 45 -264 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1623 45 -300 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1611 45 -308 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1567 45 -312 run function medabots_server:set_blocks/goal_area
 execute positioned -1568 45 -256 run function medabots_server:set_blocks/starting_area
 teleport @s -1568 45 -256 0 0

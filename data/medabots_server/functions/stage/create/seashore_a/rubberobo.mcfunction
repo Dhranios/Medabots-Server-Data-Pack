@@ -94,7 +94,7 @@ execute positioned -1509 45 -225 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1514 45 -223 run function medabots_server:set_blocks/pot/guard/slow/4_medallar_cents
 # Medapart pot
 execute positioned -1510 45 -223 run function medabots_server:set_blocks/pot
-replaceitem block -1510 45 -223 container.0 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:22,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_enticed"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.missile"}','{"italic":false,"color":"white","translate":"medabots_server:move.missile.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"5"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"75"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.abyss_greater"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_enticed.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:abyss_greater_enticed",gender:0b,move:"missile",part:"head",armor:75,power:29,uses:5,activated:0b,version:1}}
+execute positioned -1510 45 -223 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:22,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_enticed"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.missile"}','{"italic":false,"color":"white","translate":"medabots_server:move.missile.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"5"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"75"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.abyss_greater"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_enticed.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:abyss_greater_enticed",gender:0b,move:"missile",part:"head",armor:75,power:29,uses:5,activated:0b,version:1}}}}
 execute positioned -1511 45 -192 run function medabots_server:set_blocks/bridge
 execute positioned -1528 45 -193 run function medabots_server:set_blocks/bridge
 execute positioned -1529 45 -193 run function medabots_server:set_blocks/bridge
@@ -154,10 +154,10 @@ execute positioned -1546 45 -189 run function medabots_server:set_blocks/wall
 execute positioned -1550 45 -213 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1550 45 -215 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1543 45 -215 run function medabots_server:set_blocks/accelerator/west
-execute positioned -1533 45 -196 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1551 45 -194 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1534 45 -207 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1515 45 -230 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1533 45 -196 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1551 45 -194 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1534 45 -207 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1515 45 -230 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1538 45 -228 run function medabots_server:set_blocks/goal_area
 execute positioned -1509 45 -196 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 3

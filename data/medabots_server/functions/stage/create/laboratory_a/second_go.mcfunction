@@ -128,7 +128,7 @@ execute positioned -1753 44 -252 run function medabots_server:set_blocks/pot/can
 execute positioned -1751 44 -254 run function medabots_server:set_blocks/pot
 # Medapart pot
 execute positioned -1750 44 -254 run function medabots_server:set_blocks/pot
-replaceitem block -1750 44 -254 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:18,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheaptrap"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap"}','{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.shoot_spider"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheaptrap.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:shoot_spider_cheaptrap",gender:0b,move:"melee_trap",part:"left_arm",armor:45,power:30,activated:0b,version:1}}
+execute positioned -1750 44 -254 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:18,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheaptrap"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap"}','{"italic":false,"color":"white","translate":"medabots_server:move.melee_trap.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.shoot_spider"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.shoot_spider_cheaptrap.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:shoot_spider_cheaptrap",gender:0b,move:"melee_trap",part:"left_arm",armor:45,power:30,activated:0b,version:1}}}}
 execute positioned -1749 44 -253 run function medabots_server:set_blocks/pot
 execute positioned -1750 44 -252 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1754 44 -282 run function medabots_server:set_blocks/pot
@@ -206,19 +206,19 @@ execute positioned -1744 44 -272 run function medabots_server:set_blocks/acceler
 execute positioned -1743 44 -273 run function medabots_server:set_blocks/accelerator/east
 execute positioned -1742 44 -274 run function medabots_server:set_blocks/accelerator/east
 execute positioned -1808 44 -319 run function medabots_server:set_blocks/accelerator/east
-execute positioned -1763 44 -271 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1761 44 -271 run function medabots_server:set_blocks/door/west/power_0
-execute positioned -1754 44 -277 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1752 44 -262 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1754 44 -285 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1746 44 -271 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1773 44 -278 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1788 44 -288 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1799 44 -272 run function medabots_server:set_blocks/door/north/power_0
-execute positioned -1810 44 -291 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1793 44 -314 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1772 44 -315 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1772 44 -313 run function medabots_server:set_blocks/door/north/power_0
+execute positioned -1763 44 -271 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1761 44 -271 run function medabots_server:set_blocks/door/z/power_0
+execute positioned -1754 44 -277 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1753 44 -262 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1754 44 -285 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1746 44 -271 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1773 44 -278 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1788 44 -289 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1800 44 -272 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1810 44 -291 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1793 44 -314 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1773 44 -315 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1773 44 -313 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1773 44 -255 run function medabots_server:set_blocks/starting_area
 teleport @s -1773 44 -255 0 0
 bossbar set medabots_server:laboratory_a/time value 0

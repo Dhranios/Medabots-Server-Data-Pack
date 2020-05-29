@@ -74,7 +74,7 @@ execute positioned -1578 45 -348 run function medabots_server:set_blocks/pot/bal
 execute positioned -1576 45 -355 run function medabots_server:set_blocks/pot/balloon_bomb
 # Medapart pot
 execute positioned -1576 45 -360 run function medabots_server:set_blocks/pot
-replaceitem block -1576 45 -360 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:31,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.dragonbeetle_heavyweighter"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.press"}','{"italic":false,"color":"white","translate":"medabots_server:move.press.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"70"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.dragonbeetle"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.dragonbeetle_heavyweighter.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:dragonbeetle_heavyweighter",gender:0b,move:"press",part:"right_arm",armor:70,power:18,activated:0b,version:1}}
+execute positioned -1576 45 -360 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:31,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.dragonbeetle_heavyweighter"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.press"}','{"italic":false,"color":"white","translate":"medabots_server:move.press.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"70"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.dragonbeetle"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.dragonbeetle_heavyweighter.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:dragonbeetle_heavyweighter",gender:0b,move:"press",part:"right_arm",armor:70,power:18,activated:0b,version:1}}}}
 execute positioned -1578 45 -362 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1576 45 -363 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1578 45 -365 run function medabots_server:set_blocks/pot/guard/slow
@@ -145,13 +145,13 @@ execute positioned -1586 45 -342 run function medabots_server:set_blocks/wall
 execute positioned -1586 45 -348 run function medabots_server:set_blocks/wall
 execute positioned -1575 45 -358 run function medabots_server:set_blocks/wall
 execute positioned -1578 45 -358 run function medabots_server:set_blocks/wall
-execute positioned -1614 45 -332 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1590 45 -333 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1595 45 -344 run function medabots_server:set_blocks/door/west/power_0
-execute positioned -1583 45 -343 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1577 45 -358 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1622 45 -359 run function medabots_server:set_blocks/door/west/power_0
-execute positioned -1615 45 -372 run function medabots_server:set_blocks/door/west/power_0
+execute positioned -1615 45 -332 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1591 45 -333 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1595 45 -344 run function medabots_server:set_blocks/door/z/power_0
+execute positioned -1583 45 -343 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1577 45 -358 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1622 45 -359 run function medabots_server:set_blocks/door/z/power_0
+execute positioned -1615 45 -372 run function medabots_server:set_blocks/door/z/power_0
 execute positioned -1605 45 -323 run function medabots_server:set_blocks/starting_area
 teleport @s -1605 45 -323 0 0
 bossbar set medabots_server:rock_b/time value 0

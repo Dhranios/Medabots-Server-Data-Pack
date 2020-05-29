@@ -1,4 +1,4 @@
-teleport @s ~ ~0.028 ~
+teleport @s ~ ~0.056 ~
 data merge entity @s {Air:1}
 data merge entity @s {Air:0}
 execute as @e[distance=..0.4,tag=ice_block] run data merge entity @s {Rotation:[0.0d,0.0d]}

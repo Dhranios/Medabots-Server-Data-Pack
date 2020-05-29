@@ -96,7 +96,7 @@ execute positioned -1565 45 -174 run function medabots_server:set_blocks/pot/gua
 execute positioned -1564 45 -172 run function medabots_server:set_blocks/pot/bomb/delay_5
 # Medapart pot
 execute positioned -1565 45 -172 run function medabots_server:set_blocks/pot
-replaceitem block -1565 45 -172 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:29,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_drillril"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.break"}','{"italic":false,"color":"white","translate":"medabots_server:move.break.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.boarbooster"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_drillril.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:boarbooster_drillril",gender:1b,move:"break",part:"right_arm",armor:50,power:30,activated:0b,version:1}}
+execute positioned -1565 45 -172 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:29,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_drillril"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.break"}','{"italic":false,"color":"white","translate":"medabots_server:move.break.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.boarbooster"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_drillril.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:boarbooster_drillril",gender:1b,move:"break",part:"right_arm",armor:50,power:30,activated:0b,version:1}}}}
 execute positioned -1565 45 -171 run function medabots_server:set_blocks/pot/guard/medium
 execute positioned -1535 45 -142 run function medabots_server:set_blocks/stone
 execute positioned -1535 45 -141 run function medabots_server:set_blocks/stone
@@ -123,16 +123,16 @@ execute positioned -1559 45 -143 run function medabots_server:set_blocks/wall
 execute positioned -1514 45 -168 run function medabots_server:set_blocks/wall
 execute positioned -1522 45 -171 run function medabots_server:set_blocks/wall
 execute positioned -1566 45 -171 run function medabots_server:set_blocks/wall
-execute positioned -1517 45 -128 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1535 45 -158 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1548 45 -172 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1549 45 -172 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1517 45 -128 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1535 45 -158 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1528 45 -172 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1547 45 -173 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1548 45 -173 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1549 45 -173 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1567 45 -171 run function medabots_server:set_blocks/jammy
 execute positioned -1551 45 -171 run function medabots_server:set_blocks/goal_area
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area

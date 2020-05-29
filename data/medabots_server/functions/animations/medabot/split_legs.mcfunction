@@ -23,4 +23,4 @@ execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{wormtai
 
 scoreboard players reset #temp_2 Time
 scoreboard players reset #temp Time
-kill @s
+tag @s add dead

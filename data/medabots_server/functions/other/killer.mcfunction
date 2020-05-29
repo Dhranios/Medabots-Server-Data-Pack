@@ -7,7 +7,7 @@ scoreboard players add @s[tag=killerable,type=!minecraft:player] Message 1
 scoreboard players set @s[scores={Message=3},type=!minecraft:player] Message 0
 
 # Send the killer message
-execute if entity @s[scores={Killer=1..}] run function medabots_server:other/killer/message
+execute if entity @s[scores={Killer=1..},tag=!dying] run function medabots_server:other/killer/message
 
 # Reset killer score
 scoreboard players add @s[scores={Killer=1..},tag=killed_player] TotalKills 1

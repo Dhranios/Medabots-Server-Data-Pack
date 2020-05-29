@@ -123,7 +123,7 @@ execute positioned -1542 45 -310 run function medabots_server:set_blocks/pot/bom
 execute positioned -1541 45 -309 run function medabots_server:set_blocks/pot/light_blue_plant
 # Medapart pot
 execute positioned -1567 45 -265 run function medabots_server:set_blocks/pot
-replaceitem block -1567 45 -265 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_troyan_horse"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.wheel"}','{"italic":false,"color":"white","translate":"medabots_server:move.wheel.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.defense","with":[{"text":"32"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"60"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.knight_armor"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_troyan_horse.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:knight_armor_troyan_horse",gender:0b,move:"wheel",part:"legs",armor:60,defense:32,activated:0b,model_data:{height:0,leg_offset:[]},version:1}}
+execute positioned -1567 45 -265 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_troyan_horse"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.wheel"}','{"italic":false,"color":"white","translate":"medabots_server:move.wheel.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.defense","with":[{"text":"32"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"60"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.knight_armor"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_troyan_horse.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:knight_armor_troyan_horse",gender:0b,move:"wheel",part:"legs",armor:60,defense:32,activated:0b,model_data:{height:0,leg_offset:[]},version:1}}}}
 execute positioned -1592 45 -309 run function medabots_server:set_blocks/pot
 execute positioned -1593 45 -310 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1594 45 -309 run function medabots_server:set_blocks/pot
@@ -183,12 +183,12 @@ execute positioned -1612 45 -292 run function medabots_server:set_blocks/wall
 execute positioned -1623 45 -300 run function medabots_server:set_blocks/wall
 execute positioned -1622 45 -300 run function medabots_server:set_blocks/wall
 execute positioned -1612 45 -308 run function medabots_server:set_blocks/wall
-execute positioned -1513 45 -296 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1514 45 -296 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1568 45 -310 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1568 45 -264 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1610 45 -308 run function medabots_server:set_blocks/door/north/power_0
-execute positioned -1624 45 -284 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1513 45 -296 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1514 45 -296 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1568 45 -310 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1568 45 -264 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1611 45 -308 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1624 45 -285 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1567 45 -312 run function medabots_server:set_blocks/goal_area
 execute positioned -1568 45 -256 run function medabots_server:set_blocks/starting_area
 teleport @s -1568 45 -256 0 0

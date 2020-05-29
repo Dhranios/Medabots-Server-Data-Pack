@@ -138,7 +138,7 @@ execute positioned -1810 45 -691 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1812 45 -693 run function medabots_server:set_blocks/pot
 # Medapart pot
 execute positioned -1785 45 -644 run function medabots_server:set_blocks/pot
-replaceitem block -1785 45 -644 container.0 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_clearshield"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.defense"}','{"italic":false,"color":"white","translate":"medabots_server:move.defense.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"8"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"100"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.knight_armor"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_clearshield.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:knight_armor_clearshield",gender:0b,move:"defense",part:"head",armor:100,power:52,uses:8,activated:0b,version:1}}
+execute positioned -1785 45 -644 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_clearshield"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.defense"}','{"italic":false,"color":"white","translate":"medabots_server:move.defense.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"8"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"100"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.knight_armor"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.knight_armor_clearshield.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:knight_armor_clearshield",gender:0b,move:"defense",part:"head",armor:100,power:52,uses:8,activated:0b,version:1}}}}
 execute positioned -1816 45 -705 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1805 45 -705 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1805 45 -716 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -162,7 +162,7 @@ execute positioned -1769 45 -684 run function medabots_server:set_blocks/pot/2_m
 execute positioned -1767 45 -684 run function medabots_server:set_blocks/pot/2_medallar_cents
 # Stage build item pot
 execute positioned -1768 45 -685 run function medabots_server:set_blocks/pot
-replaceitem block -1768 45 -685 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"mirror",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.mirror"}]}'}}
+execute positioned -1768 45 -685 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"mirror",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.mirror"}]}'}}}}
 execute positioned -1769 45 -686 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1767 45 -686 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1779 45 -684 run function medabots_server:set_blocks/pot
@@ -240,12 +240,12 @@ execute positioned -1818 45 -711 run function medabots_server:set_blocks/glass
 execute positioned -1810 45 -712 run function medabots_server:set_blocks/glass
 execute positioned -1803 45 -714 run function medabots_server:set_blocks/glass
 execute positioned -1810 45 -718 run function medabots_server:set_blocks/glass
-execute positioned -1802 45 -675 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1811 45 -695 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1799 45 -684 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1774 45 -681 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1810 45 -672 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1810 45 -668 run function medabots_server:set_blocks/door/north/power_0
+execute positioned -1802 45 -675 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1811 45 -695 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1799 45 -684 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1774 45 -681 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1811 45 -672 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1811 45 -668 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1811 45 -678 run function medabots_server:set_blocks/starting_area
 teleport @s -1811 45 -678 0 0
 bossbar set medabots_server:park_b/time value 0

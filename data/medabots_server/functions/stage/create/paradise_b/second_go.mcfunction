@@ -147,13 +147,13 @@ execute positioned -1639 45 -595 run function medabots_server:set_blocks/whirlpo
 execute positioned -1631 45 -599 run function medabots_server:set_blocks/whirlpool
 execute positioned -1626 45 -614 run function medabots_server:set_blocks/whirlpool
 execute positioned -1636 45 -632 run function medabots_server:set_blocks/whirlpool
-execute positioned -1618 45 -589 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1656 45 -589 run function medabots_server:set_blocks/door/north/power_0
-execute positioned -1650 45 -600 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1644 45 -607 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1645 45 -629 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1648 45 -613 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1659 45 -628 run function medabots_server:set_blocks/door/north/power_0
+execute positioned -1618 45 -589 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1657 45 -589 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1650 45 -600 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1644 45 -607 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1645 45 -629 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1649 45 -613 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1660 45 -628 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1611 45 -582 run function medabots_server:set_blocks/starting_area
 teleport @s -1611 45 -582 0 0
 bossbar set medabots_server:paradise_b/time value 0

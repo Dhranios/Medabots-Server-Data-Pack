@@ -12,10 +12,10 @@ execute positioned -1999 45 -598 run function medabots_server:spawn_entities/bal
 execute positioned -1991 45 -600 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1988 45 -609 run function medabots_server:spawn_entities/balloon_bomb
 execute positioned -1991 45 -617 run function medabots_server:spawn_entities/balloon_bomb
-execute positioned -1999 45 -621 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1986 45 -609 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1998 45 -596 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -2011 45 -608 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1999 45 -621 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1986 45 -609 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1999 45 -596 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -2011 45 -609 run function medabots_server:set_blocks/door/z/power_1
 
 execute if entity @s[scores={ArenaType=0}] run teleport @s -1998 45 -612 0 0
 execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=48}] -1999 45 -605 0 0

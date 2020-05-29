@@ -154,7 +154,7 @@ execute positioned -1652 44 -542 run function medabots_server:set_blocks/pot
 execute positioned -1653 44 -550 run function medabots_server:set_blocks/pot
 # Medallar pot
 execute positioned -1647 44 -550 run function medabots_server:set_blocks/pot
-replaceitem block -1647 44 -550 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:5,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kasou_touchu_shitake"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.no_defend"}','{"italic":false,"color":"white","translate":"medabots_server:move.no_defend.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"60"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.kasou_touchu"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.kasou_touchu_shitake.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:kasou_touchu_shitake",gender:0b,move:"no_defend",part:"right_arm",armor:60,power:16,activated:0b,version:1}}
+execute positioned -1647 44 -550 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:5,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.kasou_touchu_shitake"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.no_defend"}','{"italic":false,"color":"white","translate":"medabots_server:move.no_defend.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"60"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.kasou_touchu"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.kasou_touchu_shitake.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:kasou_touchu_shitake",gender:0b,move:"no_defend",part:"right_arm",armor:60,power:16,activated:0b,version:1}}}}
 execute positioned -1663 44 -567 run function medabots_server:set_blocks/pot
 execute positioned -1640 44 -544 run function medabots_server:set_blocks/pot
 execute positioned -1638 44 -544 run function medabots_server:set_blocks/pot
@@ -191,11 +191,11 @@ execute positioned -1653 44 -502 run function medabots_server:set_blocks/wall
 execute positioned -1610 44 -543 run function medabots_server:set_blocks/wall
 execute positioned -1610 44 -544 run function medabots_server:set_blocks/wall
 execute positioned -1610 44 -545 run function medabots_server:set_blocks/wall
-execute positioned -1663 44 -508 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1653 44 -508 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1621 44 -532 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1645 44 -566 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1621 44 -552 run function medabots_server:set_blocks/door/south/power_0
+execute positioned -1663 44 -508 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1653 44 -508 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1621 44 -532 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1645 44 -567 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1621 44 -552 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1620 44 -486 run function medabots_server:set_blocks/starting_area
 teleport @s -1620 44 -486 0 0
 bossbar set medabots_server:ruins_in_b/time value 0

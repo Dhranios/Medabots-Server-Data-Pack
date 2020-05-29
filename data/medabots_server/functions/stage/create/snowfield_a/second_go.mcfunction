@@ -159,9 +159,9 @@ execute positioned -1652 45 -206 run function medabots_server:set_blocks/acceler
 execute positioned -1655 45 -210 run function medabots_server:set_blocks/accelerator/east
 execute positioned -1652 45 -228 run function medabots_server:set_blocks/wall
 execute positioned -1652 45 -231 run function medabots_server:set_blocks/wall
-execute positioned -1598 45 -213 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1590 45 -207 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1652 45 -229 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1599 45 -213 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1591 45 -207 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1652 45 -230 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1660 45 -234 run function medabots_server:set_blocks/goal_area
 execute positioned -1594 45 -243 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 2

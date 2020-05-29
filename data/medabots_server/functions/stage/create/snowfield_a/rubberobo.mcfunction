@@ -114,7 +114,7 @@ execute positioned -1577 45 -236 run function medabots_server:set_blocks/pot
 execute positioned -1575 45 -238 run function medabots_server:set_blocks/pot/6_medallar_cents
 # Medapa pot
 execute positioned -1576 45 -201 run function medabots_server:set_blocks/pot
-replaceitem block -1576 45 -201 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:22,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_pro_fence"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice"}','{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.1"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.abyss_greater"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_pro_fence.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:abyss_greater_pro_fence",gender:0b,move:"sacrifice",part:"left_arm",armor:50,power:54,activated:0b,version:1}}
+execute positioned -1576 45 -201 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:22,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_pro_fence"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice"}','{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.1"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.abyss_greater"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_pro_fence.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:abyss_greater_pro_fence",gender:0b,move:"sacrifice",part:"left_arm",armor:50,power:54,activated:0b,version:1}}}}
 execute positioned -1610 45 -211 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1615 45 -209 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1610 45 -214 run function medabots_server:set_blocks/pot/4_medallar_cents
@@ -166,9 +166,9 @@ execute positioned -1652 45 -206 run function medabots_server:set_blocks/acceler
 execute positioned -1655 45 -210 run function medabots_server:set_blocks/accelerator/east
 execute positioned -1652 45 -228 run function medabots_server:set_blocks/wall
 execute positioned -1652 45 -231 run function medabots_server:set_blocks/wall
-execute positioned -1598 45 -213 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1590 45 -207 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1652 45 -229 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1599 45 -213 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1591 45 -207 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1652 45 -230 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1660 45 -234 run function medabots_server:set_blocks/goal_area
 execute positioned -1594 45 -243 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 3

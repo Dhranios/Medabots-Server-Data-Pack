@@ -97,7 +97,7 @@ execute positioned -1770 45 -472 run function medabots_server:set_blocks/pot/gua
 execute positioned -1769 45 -471 run function medabots_server:set_blocks/pot/guard/medium
 # Stage build item pot
 execute positioned -1768 45 -446 run function medabots_server:set_blocks/pot
-replaceitem block -1768 45 -446 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"spring_wall",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.spring_wall"}]}'}}
+execute positioned -1768 45 -446 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"spring_wall",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.spring_wall"}]}'}}}}
 execute positioned -1770 45 -447 run function medabots_server:set_blocks/pot/balloon_bomb
 execute positioned -1770 45 -446 run function medabots_server:set_blocks/pot/jammy
 execute positioned -1774 45 -447 run function medabots_server:set_blocks/pot/4_medallar_cents
@@ -105,7 +105,7 @@ execute positioned -1845 45 -447 run function medabots_server:set_blocks/pot/bom
 execute positioned -1846 45 -446 run function medabots_server:set_blocks/pot/bomb/delay_5
 # Medapart pot
 execute positioned -1846 45 -447 run function medabots_server:set_blocks/pot
-replaceitem block -1846 45 -447 container.0 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:29,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_boartusk"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}','{"italic":false,"color":"white","translate":"medabots_server:move.hammer.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"12"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"55"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.boarbooster"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_boartusk.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:boarbooster_boartusk",gender:1b,move:"hammer",part:"head",armor:55,power:28,uses:12,activated:0b,version:1}}
+execute positioned -1846 45 -447 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:29,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_boartusk"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}','{"italic":false,"color":"white","translate":"medabots_server:move.hammer.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"12"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"55"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.female"}','{"italic":false,"color":"white","translate":"medabots_server:entity.boarbooster"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.boarbooster_boartusk.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:boarbooster_boartusk",gender:1b,move:"hammer",part:"head",armor:55,power:28,uses:12,activated:0b,version:1}}}}
 execute positioned -1847 45 -447 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1830 45 -472 run function medabots_server:set_blocks/pot
 execute positioned -1832 45 -472 run function medabots_server:set_blocks/pot
@@ -204,11 +204,11 @@ execute positioned -1816 45 -488 run function medabots_server:set_blocks/wall
 execute positioned -1815 45 -488 run function medabots_server:set_blocks/wall
 execute positioned -1788 45 -488 run function medabots_server:set_blocks/wall
 execute positioned -1787 45 -488 run function medabots_server:set_blocks/wall
-execute positioned -1798 45 -447 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1825 45 -446 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1812 45 -475 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1800 45 -482 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1775 45 -482 run function medabots_server:set_blocks/door/west/power_1
+execute positioned -1798 45 -447 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1825 45 -447 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1812 45 -475 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1800 45 -482 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1775 45 -482 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1770 45 -482 run function medabots_server:set_blocks/goal_area
 execute positioned -1811 45 -454 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 3

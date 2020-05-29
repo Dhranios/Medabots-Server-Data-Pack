@@ -134,7 +134,7 @@ execute positioned -1730 45 -386 run function medabots_server:set_blocks/pot/gua
 execute positioned -1731 45 -391 run function medabots_server:set_blocks/pot/cannon/swivel/east/delay_4
 # Medapart pot
 execute positioned -1737 45 -392 run function medabots_server:set_blocks/pot
-replaceitem block -1737 45 -392 container.0 minecraft:fishing_rod{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:30,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.dondoguu_dokan"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.float"}','{"italic":false,"color":"white","translate":"medabots_server:move.float.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.defense","with":[{"text":"27"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"65"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.dondoguu"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.dondoguu_dokan.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:dondoguu_dokan",gender:0b,move:"float",part:"legs",armor:65,defense:27,activated:0b,model_data:{height:0,leg_offset:[]},version:1}}
+execute positioned -1737 45 -392 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:1,Unbreakable:1b,HideFlags:4,CustomModelData:30,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.dondoguu_dokan"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.float"}','{"italic":false,"color":"white","translate":"medabots_server:move.float.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.defense","with":[{"text":"27"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"65"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.dondoguu"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.dondoguu_dokan.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:dondoguu_dokan",gender:0b,move:"float",part:"legs",armor:65,defense:27,activated:0b,model_data:{height:0,leg_offset:[]},version:1}}}}
 execute positioned -1718 45 -402 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1717 45 -402 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1700 45 -359 run function medabots_server:set_blocks/pot/2_medallar_cents
@@ -156,7 +156,7 @@ execute positioned -1688 45 -437 run function medabots_server:set_blocks/pot
 execute positioned -1686 45 -435 run function medabots_server:set_blocks/pot/bomb/delay_5
 # Stage build item pot
 execute positioned -1686 45 -437 run function medabots_server:set_blocks/pot
-replaceitem block -1686 45 -437 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"bomb",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:entity.bomb"}]}'}}
+execute positioned -1686 45 -437 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"bomb",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:entity.bomb"}]}'}}}}
 execute positioned -1717 45 -440 run function medabots_server:set_blocks/pot/yellow_plant
 execute positioned -1717 45 -435 run function medabots_server:set_blocks/pot/4_medallar_cents
 execute positioned -1716 45 -432 run function medabots_server:set_blocks/pot/balloon_bomb
@@ -206,12 +206,12 @@ execute positioned -1674 45 -357 run function medabots_server:set_blocks/wall
 execute positioned -1674 45 -364 run function medabots_server:set_blocks/wall
 execute positioned -1673 45 -370 run function medabots_server:set_blocks/wall
 execute positioned -1674 45 -376 run function medabots_server:set_blocks/wall
-execute positioned -1747 45 -354 run function medabots_server:set_blocks/door/east/power_0
-execute positioned -1687 45 -359 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1673 45 -388 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1695 45 -411 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1694 45 -434 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1747 45 -413 run function medabots_server:set_blocks/door/south/power_0
+execute positioned -1747 45 -355 run function medabots_server:set_blocks/door/z/power_0
+execute positioned -1687 45 -359 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1673 45 -388 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1695 45 -412 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1694 45 -434 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1747 45 -413 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1716 45 -356 run function medabots_server:set_blocks/starting_area
 teleport @s -1716 45 -356 0 0
 bossbar set medabots_server:seashore_b/time value 0

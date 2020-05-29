@@ -24,15 +24,14 @@ scoreboard players add @s[tag=life_time] LifeTime 1
 tag @e[distance=..10,tag=balloon_bomb] add potential_burst
 
 # Destroy pots
-execute if entity @s[tag=in_ground] if block ~ ~ ~ minecraft:chest run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~0.1 ~ ~ minecraft:chest positioned ~0.5 ~ ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~-0.1 ~ ~ minecraft:chest positioned ~-0.5 ~ ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~ ~ ~0.1 minecraft:chest positioned ~ ~ ~0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~ ~ ~-0.1 minecraft:chest positioned ~ ~ ~-0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~0.1 ~-1 ~ minecraft:chest positioned ~0.5 ~-0.7 ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~-0.1 ~-1 ~ minecraft:chest positioned ~-0.5 ~-0.7 ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~ ~-1 ~0.1 minecraft:chest positioned ~ ~-0.7 ~0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
-execute if entity @s[tag=in_ground] if block ~ ~-1 ~-0.1 minecraft:chest positioned ~ ~-0.7 ~-0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~0.1 ~ ~ minecraft:black_stained_glass positioned ~0.5 ~ ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~-0.1 ~ ~ minecraft:black_stained_glass positioned ~-0.5 ~ ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~ ~ ~0.1 minecraft:black_stained_glass positioned ~ ~ ~0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~ ~ ~-0.1 minecraft:black_stained_glass positioned ~ ~ ~-0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~0.1 ~-1 ~ minecraft:black_stained_glass positioned ~0.5 ~-0.7 ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~-0.1 ~-1 ~ minecraft:black_stained_glass positioned ~-0.5 ~-0.7 ~ run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~ ~-1 ~0.1 minecraft:black_stained_glass positioned ~ ~-0.7 ~0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
+execute if entity @s[tag=in_ground] if block ~ ~-1 ~-0.1 minecraft:black_stained_glass positioned ~ ~-0.7 ~-0.5 run tag @e[sort=nearest,limit=1,distance=..1,tag=pot] add broken
 
 # Kill all landed arrows
 kill @s[tag=in_ground]

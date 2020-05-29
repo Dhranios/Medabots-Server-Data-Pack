@@ -33,7 +33,7 @@ function medabots_server:other/random_message
 execute unless entity @s[scores={Gamemode=0,State=1..2}] run function medabots_server:dialog/try
 
 # Books
-execute unless entity @s[scores={Gamemode=0}] run function #medabots_server:books
+execute unless entity @s[tag=medabot] run function #medabots_server:books
 
 # Functions that run on every player on the server except mods
 execute if entity @s[scores={Moderator=0}] run function medabots_server:main/non_mods

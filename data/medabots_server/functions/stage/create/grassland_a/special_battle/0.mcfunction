@@ -12,7 +12,7 @@ execute positioned -1534 45 -168 run function medabots_server:set_blocks/floor_s
 execute positioned -1536 45 -177 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1542 45 -167 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1542 45 -176 run function medabots_server:set_blocks/floor_switch/green
-execute positioned -1547 45 -172 run function medabots_server:set_blocks/door/east/power_1
+execute positioned -1547 45 -173 run function medabots_server:set_blocks/door/z/power_1
 scoreboard players set @e[x=-1527.5,y=45,z=-170.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true

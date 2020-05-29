@@ -1,22 +1,16 @@
-# Pot moving on raft
-teleport @s[scores={Moving=1}] ~1 ~ ~
-teleport @s[scores={Moving=2}] ~ ~ ~1
-teleport @s[scores={Moving=3}] ~-1 ~ ~
-teleport @s[scores={Moving=4}] ~ ~ ~-1
-execute at @s[scores={Moving=1}] run clone ~-1 ~1 ~ ~-1 ~ ~ ~ ~ ~ replace move
-execute at @s[scores={Moving=2}] run clone ~ ~1 ~-1 ~ ~ ~-1 ~ ~ ~ replace move
-execute at @s[scores={Moving=3}] run clone ~1 ~1 ~ ~1 ~ ~ ~ ~ ~ replace move
-execute at @s[scores={Moving=4}] run clone ~ ~1 ~1 ~ ~ ~1 ~ ~ ~ replace move
-scoreboard players reset @s Moving
-
 # Remove if pot is broken
-execute at @s unless block ~ ~ ~ minecraft:black_stained_glass unless block ~ ~ ~ minecraft:chest run tag @s add broken
+execute at @s if entity @e[distance=..0.4,type=minecraft:shulker,tag=pot_hitbox,nbt={AbsorptionAmount:0.0f}] run tag @s add broken
+execute as @e[distance=..0.4,tag=pot_hitbox] run data merge entity @s {Peek:1b}
 
 # Drop contents if the pot gets broken
-execute if entity @s[tag=broken] at @s if block ~ ~ ~ minecraft:chest run function medabots_server:blocks/pot/broken
-execute if entity @s[tag=broken] at @s unless block ~ ~ ~ minecraft:chest run function medabots_server:blocks/pot/spawn_entity
+execute at @s[tag=broken] run function medabots_server:blocks/pot/broken
 
 # Remove when cleaning up a stage
 execute if entity @s[tag=broken] run tag @s add dead
-execute if entity @s[tag=dead] at @s run setblock ~ ~1 ~ minecraft:air
-execute if entity @s[tag=dead] at @s unless entity @e[distance=..0.7,tag=!dead,tag=pot] run fill ~ ~ ~ ~ ~ ~ minecraft:air replace minecraft:chest
+execute if entity @s[tag=dead] at @s unless entity @e[distance=..0.7,tag=!dead,tag=pot] run tag @e[distance=..0.4,type=minecraft:shulker,tag=pot_hitbox] add dead
+execute if entity @s[tag=dead] at @s unless entity @e[distance=..0.7,tag=!dead,tag=pot] run teleport @e[distance=..0.4,type=minecraft:shulker,tag=pot_hitbox] ~ 0 ~
+execute if entity @s[tag=dead] at @s unless entity @e[distance=..0.7,tag=!dead,tag=pot] run tag @e[distance=..0.4,type=minecraft:armor_stand,tag=pot_model] add dead
+
+# Refresh clients
+data merge entity @s {Air:1}
+data merge entity @s {Air:0}

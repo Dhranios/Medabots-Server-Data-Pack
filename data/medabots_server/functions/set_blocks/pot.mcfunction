@@ -1,4 +1,2 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.pot"}',Tags:["pot"],Duration:2147483647}
-setblock ~ ~ ~ minecraft:chest[facing=south,type=single]
-setblock ~ ~1 ~ minecraft:barrier
+summon minecraft:area_effect_cloud ~ ~-0.375 ~ {CustomName:'{"translate":"medabots_server:block.pot"}',Tags:["pot","hostile"],Duration:2147483647,Passengers:[{id:"minecraft:armor_stand",CustomName:'{"translate":"medabots_server:block.pot"}',Tags:["pot_model"],Invisible:1b,Marker:1b,Rotation:[0.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:44,medabots_server:{contents:{}}}}]},{id:"minecraft:shulker",Silent:1b,NoAI:1b,AbsorptionAmount:1.0f,DeathLootTable:"minecraft:empty",Peek:1b,Tags:["pot_hitbox","hostile"],ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,Amplifier:0b,ShowParticles:0b}]}]}
 execute as @e[distance=..0.7,tag=floor_switch] at @s run function medabots_server:blocks/floor_switch

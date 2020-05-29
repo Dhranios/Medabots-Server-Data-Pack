@@ -4,4 +4,4 @@ scoreboard players reset @s[tag=!message] RandomMessage
 
 # Random server messages
 scoreboard players add @s[tag=message] RandomMessage 1
-execute as @s[scores={RandomMessage=6667}] run function medabots_server:other/random_message_show
+execute as @s[scores={RandomMessage=6667}] positioned -286 55 -52 run function medabots_server:other/random_message_show

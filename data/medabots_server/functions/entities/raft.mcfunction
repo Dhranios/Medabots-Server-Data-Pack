@@ -15,11 +15,14 @@ execute at @s run teleport @s[scores={Moving=4}] ~ ~ ~-0.2
 scoreboard players add @s[scores={Moving=1..,Steps=0..4}] Steps 1
 
 # Move entities on top
-execute if entity @s[scores={Moving=1..,Steps=3}] positioned ~ ~1 ~ run scoreboard players operation @e[distance=..0.6,tag=pot,type=minecraft:area_effect_cloud] Moving = @s Moving
 execute if entity @s[scores={Moving=1}] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~0.2 ~ ~
 execute if entity @s[scores={Moving=2}] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~ ~ ~0.2
 execute if entity @s[scores={Moving=3}] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~-0.2 ~ ~
 execute if entity @s[scores={Moving=4}] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~ ~ ~-0.2
+execute if entity @s[scores={Moving=1}] positioned ~ ~1 ~ if entity @e[distance=..0.6,tag=hostile] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~0.2 ~ ~
+execute if entity @s[scores={Moving=2}] positioned ~ ~1 ~ if entity @e[distance=..0.6,tag=hostile] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~ ~ ~0.2
+execute if entity @s[scores={Moving=3}] positioned ~ ~1 ~ if entity @e[distance=..0.6,tag=hostile] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~-0.2 ~ ~
+execute if entity @s[scores={Moving=4}] positioned ~ ~1 ~ if entity @e[distance=..0.6,tag=hostile] positioned ~ ~1 ~ as @e[distance=..0.6,tag=hostile] at @s run teleport @s ~ ~ ~-0.2
 
 # Crush enemies
 execute if entity @s[scores={Moving=1..}] run function medabots_server:entities/raft/crush

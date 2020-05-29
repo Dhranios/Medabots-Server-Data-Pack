@@ -19,6 +19,7 @@ execute if entity @s[tag=laser_trap,tag=!stage_builder,tag=!disabled] run functi
 execute if entity @s[tag=door,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/door
 execute if entity @s[tag=floor_switch,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/floor_switch
 execute if entity @s[tag=alarm,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/alarm
+execute if entity @s[tag=action_floor,tag=!stage_builder,tag=!disabled] run function medabots_server:blocks/action_floor
 
 # Inventory entities shouldn't exist post-processing
 tag @s[tag=inventory] add dead

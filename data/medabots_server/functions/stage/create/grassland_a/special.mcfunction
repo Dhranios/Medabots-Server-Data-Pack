@@ -91,14 +91,14 @@ execute positioned -1565 45 -142 run function medabots_server:set_blocks/wall
 execute positioned -1559 45 -143 run function medabots_server:set_blocks/wall
 execute positioned -1514 45 -168 run function medabots_server:set_blocks/wall
 execute positioned -1522 45 -171 run function medabots_server:set_blocks/wall
-execute positioned -1517 45 -128 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1536 45 -158 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1527 45 -171 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1528 45 -171 run function medabots_server:set_blocks/door/east/power_0
+execute positioned -1517 45 -128 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1540 45 -127 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1548 45 -157 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1536 45 -158 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1524 45 -160 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1514 45 -162 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1527 45 -172 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1528 45 -172 run function medabots_server:set_blocks/door/z/power_0
 execute positioned -1516 45 -123 run function medabots_server:set_blocks/starting_area
 teleport @s -1516 45 -123 0 0
 bossbar set medabots_server:grassland_a/time value 0

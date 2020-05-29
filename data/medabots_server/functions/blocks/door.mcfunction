@@ -15,20 +15,16 @@ execute align xyz unless entity @e[dx=0,dy=4,dz=1,tag=!door] run scoreboard play
 scoreboard players add @s[tag=powered,scores={Time=..9}] Time 1
 
 # Open the door
-execute if entity @s[tag=powered,scores={Time=2}] run function medabots_server:blocks/door/open
+execute if entity @s[tag=powered,scores={Time=1}] run function medabots_server:blocks/door/open
 
 # Close the door
-execute if entity @s[tag=!powered,scores={Time=8}] run function medabots_server:blocks/door/close
+execute if entity @s[tag=!powered,scores={Time=9}] run function medabots_server:blocks/door/close
 
 # Remove when cleaning up a stage
-execute if entity @s[tag=dead,tag=east] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead,tag=east] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~-1 minecraft:air replace minecraft:iron_trapdoor
-execute if entity @s[tag=dead,tag=north] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead,tag=north] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~-1 ~3 ~ minecraft:air replace minecraft:iron_trapdoor
-execute if entity @s[tag=dead,tag=south] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead,tag=south] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:iron_trapdoor
-execute if entity @s[tag=dead,tag=west] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:barrier
-execute if entity @s[tag=dead,tag=west] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:iron_trapdoor
+execute if entity @s[tag=dead,tag=z] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[tag=dead,tag=z] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~ ~3 ~1 minecraft:air replace minecraft:iron_trapdoor
+execute if entity @s[tag=dead,tag=x] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:black_stained_glass
+execute if entity @s[tag=dead,tag=x] unless entity @e[tag=!dead,distance=..0.7,tag=door] run fill ~ ~ ~ ~1 ~3 ~ minecraft:air replace minecraft:iron_trapdoor
 
 # Custom stage object powering
 execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

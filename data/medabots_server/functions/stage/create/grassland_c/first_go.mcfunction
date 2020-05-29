@@ -68,7 +68,7 @@ execute positioned -1519 44 -433 run function medabots_server:set_blocks/pot/gua
 execute positioned -1519 44 -434 run function medabots_server:set_blocks/pot/balloon_bomb
 # Medapart pot
 execute positioned -1520 44 -434 run function medabots_server:set_blocks/pot
-replaceitem block -1520 44 -434 container.0 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:16,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bezelga_helmet"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.repair"}','{"italic":false,"color":"white","translate":"medabots_server:move.repair.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"5"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.bezelga"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.bezelga_helmet.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:bezelga_helmet",gender:0b,move:"repair",part:"head",armor:50,power:13,uses:5,activated:0b,version:1}}
+execute positioned -1520 44 -434 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:16,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.bezelga_helmet"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.repair"}','{"italic":false,"color":"white","translate":"medabots_server:move.repair.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"5"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.bezelga"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.bezelga_helmet.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:bezelga_helmet",gender:0b,move:"repair",part:"head",armor:50,power:13,uses:5,activated:0b,version:1}}}}
 execute positioned -1548 44 -425 run function medabots_server:set_blocks/pot/2_medallar_cents
 execute positioned -1550 44 -430 run function medabots_server:set_blocks/pot
 execute positioned -1553 44 -432 run function medabots_server:set_blocks/pot/balloon_bomb
@@ -152,21 +152,21 @@ execute positioned -1532 44 -444 run function medabots_server:set_blocks/whrilpo
 execute positioned -1531 44 -445 run function medabots_server:set_blocks/whrilpool
 execute positioned -1530 44 -445 run function medabots_server:set_blocks/whrilpool
 execute positioned -1529 44 -444 run function medabots_server:set_blocks/whrilpool
-execute positioned -1538 44 -429 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1525 44 -433 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1542 44 -435 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1550 44 -425 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1556 44 -430 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1562 44 -439 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1559 44 -458 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1559 44 -462 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1557 44 -463 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1541 44 -449 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1523 44 -449 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1528 44 -454 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1519 44 -470 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1538 44 -454 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1538 44 -457 run function medabots_server:set_blocks/door/south/power_0
+execute positioned -1538 44 -429 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1526 44 -433 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1542 44 -436 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1550 44 -426 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1557 44 -430 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1562 44 -439 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1559 44 -458 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1559 44 -462 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1557 44 -463 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1541 44 -450 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1523 44 -449 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1528 44 -454 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1519 44 -470 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1538 44 -454 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1538 44 -457 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1535 44 -423 run function medabots_server:set_blocks/starting_area
 teleport @s -1535 44 -423 0 0
 bossbar set medabots_server:grassland_c/time value 0

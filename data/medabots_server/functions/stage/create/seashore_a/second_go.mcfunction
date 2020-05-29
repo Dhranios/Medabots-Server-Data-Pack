@@ -81,7 +81,7 @@ execute positioned -1551 45 -205 run function medabots_server:set_blocks/pot/6_m
 execute positioned -1556 45 -193 run function medabots_server:set_blocks/pot/4_medallar_cents
 # Stage build item pot
 execute positioned -1565 45 -239 run function medabots_server:set_blocks/pot
-replaceitem block -1565 45 -239 container.0 minecraft:diamond_pickaxe{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"drawbridge",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.drawbridge"}]}'}}
+execute positioned -1565 45 -239 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"drawbridge",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.drawbridge"}]}'}}}}
 execute positioned -1562 45 -235 run function medabots_server:set_blocks/pot
 execute positioned -1564 45 -231 run function medabots_server:set_blocks/pot
 execute positioned -1567 45 -236 run function medabots_server:set_blocks/pot/6_medallar_cents
@@ -92,7 +92,7 @@ execute positioned -1509 45 -225 run function medabots_server:set_blocks/pot
 execute positioned -1514 45 -223 run function medabots_server:set_blocks/pot/guard/slow
 # Medapart pot
 execute positioned -1510 45 -223 run function medabots_server:set_blocks/pot
-replaceitem block -1510 45 -223 container.0 minecraft:fishing_rod{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:12,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.hellphoenix_flame_gun"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melt"}','{"italic":false,"color":"white","translate":"medabots_server:move.melt.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.hellphoenix"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.hellphoenix_flame_gun.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:hellphoenix_flame_gun",gender:0b,move:"melt",part:"left_arm",armor:45,power:22,activated:0b,version:1}}
+execute positioned -1510 45 -223 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:2,Unbreakable:1b,HideFlags:4,CustomModelData:12,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.hellphoenix_flame_gun"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.melt"}','{"italic":false,"color":"white","translate":"medabots_server:move.melt.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"45"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.hellphoenix"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.hellphoenix_flame_gun.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:hellphoenix_flame_gun",gender:0b,move:"melt",part:"left_arm",armor:45,power:22,activated:0b,version:1}}}}
 execute positioned -1511 45 -192 run function medabots_server:set_blocks/bridge
 execute positioned -1514 45 -190 run function medabots_server:set_blocks/bridge
 execute positioned -1528 45 -193 run function medabots_server:set_blocks/bridge
@@ -155,10 +155,10 @@ execute positioned -1560 45 -209 run function medabots_server:set_blocks/wall
 execute positioned -1550 45 -213 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1550 45 -215 run function medabots_server:set_blocks/accelerator/west
 execute positioned -1543 45 -215 run function medabots_server:set_blocks/accelerator/west
-execute positioned -1533 45 -196 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1551 45 -194 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1534 45 -207 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1569 45 -207 run function medabots_server:set_blocks/door/south/power_1
+execute positioned -1533 45 -196 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1551 45 -194 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1534 45 -207 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1569 45 -207 run function medabots_server:set_blocks/door/x/power_1
 execute positioned -1538 45 -228 run function medabots_server:set_blocks/goal_area
 execute positioned -1509 45 -196 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 2

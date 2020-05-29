@@ -208,16 +208,16 @@ execute positioned -1658 44 -667 run function medabots_server:set_blocks/stone
 execute positioned -1659 44 -669 run function medabots_server:set_blocks/stone
 execute positioned -1636 44 -680 run function medabots_server:set_blocks/wall
 execute positioned -1636 44 -683 run function medabots_server:set_blocks/wall
-execute positioned -1617 44 -659 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1626 44 -659 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1608 44 -659 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1617 44 -684 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1629 44 -672 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1636 44 -681 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1629 44 -663 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1631 44 -658 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1656 44 -684 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1656 44 -685 run function medabots_server:set_blocks/door/south/power_0
+execute positioned -1617 44 -659 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1626 44 -659 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1608 44 -659 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1617 44 -684 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1629 44 -673 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1636 44 -682 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1629 44 -664 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1632 44 -658 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1656 44 -684 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1656 44 -685 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1617 44 -646 run function medabots_server:set_blocks/starting_area
 teleport @s -1617 44 -646 0 0
 bossbar set medabots_server:ruins_out_c/time value 0

@@ -120,7 +120,7 @@ execute positioned -1521 45 -379 run function medabots_server:set_blocks/pot
 execute positioned -1523 45 -377 run function medabots_server:set_blocks/pot/cannon/search/north/delay_4
 # Medapart pot
 execute positioned -1525 45 -379 run function medabots_server:set_blocks/pot
-replaceitem block -1525 45 -379 container.0 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burntube"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:move.napalm.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.fly_falcon"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burntube.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:fly_falcon_burntube",gender:0b,move:"napalm",part:"right_arm",armor:50,power:18,activated:0b,version:1}}
+execute positioned -1525 45 -379 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:13,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burntube"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.napalm"}','{"italic":false,"color":"white","translate":"medabots_server:move.napalm.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.fly_falcon"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.fly_falcon_burntube.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:fly_falcon_burntube",gender:0b,move:"napalm",part:"right_arm",armor:50,power:18,activated:0b,version:1}}}}
 execute positioned -1543 45 -326 run function medabots_server:set_blocks/wall
 execute positioned -1554 45 -321 run function medabots_server:set_blocks/wall
 execute positioned -1558 45 -341 run function medabots_server:set_blocks/wall
@@ -156,16 +156,16 @@ execute positioned -1539 45 -391 run function medabots_server:set_blocks/bridge
 execute positioned -1539 45 -392 run function medabots_server:set_blocks/bridge
 execute positioned -1540 45 -392 run function medabots_server:set_blocks/bridge
 execute positioned -1540 45 -393 run function medabots_server:set_blocks/bridge
-execute positioned -1543 45 -327 run function medabots_server:set_blocks/door/east/power_1
-execute positioned -1560 45 -341 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1522 45 -340 run function medabots_server:set_blocks/door/north/power_0
-execute positioned -1544 45 -361 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1544 45 -363 run function medabots_server:set_blocks/door/west/power_1
-execute positioned -1556 45 -368 run function medabots_server:set_blocks/door/south/power_1
-execute positioned -1558 45 -384 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1538 45 -403 run function medabots_server:set_blocks/door/west/power_0
-execute positioned -1520 45 -389 run function medabots_server:set_blocks/door/north/power_1
-execute positioned -1559 45 -385 run function medabots_server:set_blocks/door/south/power_0
+execute positioned -1543 45 -328 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1560 45 -341 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1523 45 -340 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1544 45 -361 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1544 45 -363 run function medabots_server:set_blocks/door/z/power_1
+execute positioned -1556 45 -368 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1559 45 -384 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1538 45 -403 run function medabots_server:set_blocks/door/z/power_0
+execute positioned -1521 45 -389 run function medabots_server:set_blocks/door/x/power_1
+execute positioned -1559 45 -385 run function medabots_server:set_blocks/door/x/power_0
 execute positioned -1538 45 -326 run function medabots_server:set_blocks/starting_area
 teleport @s -1538 45 -326 0 0
 bossbar set medabots_server:grassland_b/time value 0

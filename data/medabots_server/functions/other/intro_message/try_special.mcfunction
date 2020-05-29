@@ -4,7 +4,7 @@ tag @e[type=minecraft:area_effect_cloud,tag=message_selection,sort=random,limit=
 execute if entity @e[type=minecraft:area_effect_cloud,tag=message_selection,tag=selected,tag=1] run tag @s add message_1
 execute if entity @e[type=minecraft:area_effect_cloud,tag=message_selection,tag=selected,tag=2] run tag @s add message_2
 
-# Send the introer message depending on selected set
+# Send the intro message depending on selected set
 execute if entity @s[nbt={CustomName:'{"translate":"medabots_server:entity.spyke"}'}] run playsound medabots_server:entity.spyke.intro voice @a[tag=this_robattle] ~ ~ ~ 1000
 execute if entity @s[nbt={CustomName:'{"translate":"medabots_server:entity.spyke"}'}] run tellraw @a[tag=this_robattle] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:message.special_intro.spyke"}]}
 execute if entity @s[nbt={CustomName:'{"translate":"medabots_server:entity.spyke"}'}] run scoreboard players set @e[tag=mr_referee,tag=this_robattle] Dialog 50

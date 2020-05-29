@@ -17,10 +17,10 @@ execute positioned -1515 45 -168 run function medabots_server:set_blocks/pot
 execute positioned -1523 45 -172 run function medabots_server:set_blocks/stone
 execute positioned -1523 45 -171 run function medabots_server:set_blocks/stone
 execute positioned -1531 45 -159 run function medabots_server:set_blocks/glass
-execute positioned -1562 45 -139 run function medabots_server:set_blocks/door/south/power_0
-execute positioned -1563 45 -142 run function medabots_server:set_blocks/door/west/power_0
-execute positioned -1560 45 -143 run function medabots_server:set_blocks/door/north/power_0
-execute positioned -1559 45 -140 run function medabots_server:set_blocks/door/east/power_0
+execute positioned -1562 45 -139 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1563 45 -142 run function medabots_server:set_blocks/door/z/power_0
+execute positioned -1561 45 -143 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1559 45 -141 run function medabots_server:set_blocks/door/z/power_0
 execute positioned -1516 45 -174 run function medabots_server:set_blocks/goal_area
 execute positioned -1519 45 -171 run function medabots_server:set_blocks/starting_area
 scoreboard players set @s StageVersion 5
