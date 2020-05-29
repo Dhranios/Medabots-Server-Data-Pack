@@ -8,7 +8,7 @@ execute positioned -1624 45 -211 run function medabots_server:spawn_entities/ice
 execute positioned -1628 45 -212 run function medabots_server:spawn_entities/ice_block
 execute positioned -1632 45 -210 run function medabots_server:spawn_entities/ice_block
 execute positioned -1634 45 -208 run function medabots_server:spawn_entities/ice_block
-scoreboard players set @e[x=-1622.5,y=45,z=-202.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1622.5,y=45,z=-203.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s State 2

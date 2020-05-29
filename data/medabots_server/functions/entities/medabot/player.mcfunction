@@ -56,7 +56,8 @@ clear @s[scores={Time=0}] minecraft:tipped_arrow
 tag @s[scores={Time=0}] remove head_selected
 tag @s[scores={Time=0}] remove right_arm_selected
 tag @s[scores={Time=0}] remove left_arm_selected
-execute if entity @s[scores={Time=0,State=1,UsePart=1..}] run function medabots_server:items/medapart/activate/player
+execute if entity @s[scores={Time=0,State=1,UsePart=1..},nbt={SelectedItem:{tag:{medabots_server:{activated:1b}}}}] run function medabots_server:items/medapart/activate/player
+execute if entity @s[scores={Time=0,State=1,UsePart=1..},nbt={SelectedItem:{tag:{medabots_server:{activated:0b}}}},nbt=!{SelectedItem:{tag:{medabots_server:{part:"medal"}}}}] run function medabots_server:items/try_to_swap_medapart
 execute if entity @s[scores={State=1}] run scoreboard players add @s TotalTime 1
 
 # Static flying

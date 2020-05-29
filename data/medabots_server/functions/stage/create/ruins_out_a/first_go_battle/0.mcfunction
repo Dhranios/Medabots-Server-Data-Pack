@@ -6,7 +6,7 @@ execute positioned -1605 45 -300 run function medabots_server:set_blocks/gas_flo
 execute positioned -1611 45 -294 run function medabots_server:set_blocks/gas_floor/confuse/power_1
 execute positioned -1604 45 -300 run function medabots_server:set_blocks/floor_switch/green
 execute positioned -1611 45 -293 run function medabots_server:set_blocks/floor_switch/green
-scoreboard players set @e[x=-1609,y=45,z=-307.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1610.5,y=45,z=-307.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s State 2

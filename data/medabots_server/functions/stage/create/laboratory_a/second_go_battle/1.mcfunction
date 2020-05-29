@@ -8,7 +8,7 @@ execute positioned -1794 44 -259 run function medabots_server:spawn_entities/gua
 execute positioned -1805 44 -259 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1794 44 -254 run function medabots_server:spawn_entities/guard/slow
 execute positioned -1805 44 -254 run function medabots_server:spawn_entities/guard/slow
-scoreboard players set @e[x=-1798.5,y=44,z=-271.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
+scoreboard players set @e[x=-1799.5,y=44,z=-271.5,distance=..0.7,tag=door,scores={PowerNeeded=0}] PowerNeeded 1
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s State 2

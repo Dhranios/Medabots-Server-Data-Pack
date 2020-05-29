@@ -8,10 +8,8 @@ data modify entity @s[scores={Time=4}] ArmorItems[3].tag.CustomModelData set val
 data modify entity @s[scores={Time=6}] ArmorItems[3].tag.CustomModelData set value 23
 data modify entity @s[scores={Time=8}] ArmorItems[3].tag.CustomModelData set value 24
 data modify entity @s[scores={Time=9}] ArmorItems[3].tag.CustomModelData set value 25
-execute positioned ~ ~ ~-1 align xyz unless entity @e[dx=0,dy=4,dz=1,tag=!door] run scoreboard players remove @s[tag=!powered,tag=east,scores={Time=1..}] Time 1
-execute positioned ~-1 ~ ~ align xyz unless entity @e[dx=1,dy=4,dz=0,tag=!door] run scoreboard players remove @s[tag=!powered,tag=north,scores={Time=1..}] Time 1
-execute align xyz unless entity @e[dx=1,dy=4,dz=0,tag=!door] run scoreboard players remove @s[tag=!powered,tag=south,scores={Time=1..}] Time 1
-execute align xyz unless entity @e[dx=0,dy=4,dz=1,tag=!door] run scoreboard players remove @s[tag=!powered,tag=west,scores={Time=1..}] Time 1
+execute align xyz unless entity @e[dx=1,dy=4,dz=0,tag=!door] run scoreboard players remove @s[tag=!powered,tag=x,scores={Time=1..}] Time 1
+execute align xyz unless entity @e[dx=0,dy=4,dz=1,tag=!door] run scoreboard players remove @s[tag=!powered,tag=z,scores={Time=1..}] Time 1
 scoreboard players add @s[tag=powered,scores={Time=..9}] Time 1
 
 # Open the door

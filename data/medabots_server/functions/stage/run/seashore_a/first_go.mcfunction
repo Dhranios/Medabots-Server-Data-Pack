@@ -7,7 +7,7 @@ execute if entity @e[scores={Stage=4},tag=hide_normal_time] if score #temp Time 
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/seashore_a
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if entity @e[x=-1510.5,y=45,z=-189.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1513.5,y=45,z=-215.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1510.5,y=45,z=-189.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1513.5,y=45,z=-216.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1548.5,y=45,z=-185.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1532.5,y=45,z=-195.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1536.5,y=45,z=-186.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1550.5,y=45,z=-193.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1533.5,y=45,z=-205.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1533.5,y=45,z=-206.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
