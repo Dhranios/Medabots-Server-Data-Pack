@@ -5,8 +5,8 @@ teleport @s[scores={Time=1}] ~ ~2 ~
 execute if entity @s[scores={Time=2}] facing entity @e[tag=target,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Time=3}] facing entity @e[tag=target,limit=1] feet rotated ~ 0 run teleport @s ^-1 ^ ^
 
-tag @s[scores={Time=19}] remove walk_start
-tag @s[scores={Time=19}] add walk
+tag @s[scores={Time=21}] remove walk_start
+tag @s[scores={Time=21}] add walk
 execute if entity @s[scores={Time=20..24}] positioned ^1 ^-2 ^0.4 if entity @e[tag=potential_target,distance=..2] run tag @s add has_target
 execute if entity @s[scores={Time=20..24}] positioned ^1 ^ ^0.4 if entity @e[tag=potential_target,distance=..2] run tag @s add has_target
 execute if entity @s[scores={Time=24},tag=!has_target] unless block ^ ^-4 ^1 minecraft:air run playsound medabots_server:entity.master_hand.finger_walk hostile @a ~ ~ ~ 1

@@ -9,7 +9,7 @@ execute if entity @s[tag=catch] run function medabots_server:animations/master_h
 execute if entity @s[tag=applaud] run function medabots_server:animations/master_hand/applaud/middle_finger
 execute if entity @s[tag=double_punch] run function medabots_server:animations/master_hand/double_punch/middle_finger
 execute if entity @s[tag=fast_idle] run function medabots_server:animations/master_hand/fast_idle/middle_finger
-execute if entity @s[tag=grab] run function medabots_server:animations/master_hand/grab/middle_finger
+execute if entity @s[tag=grab,tag=!grab_success] run function medabots_server:animations/master_hand/grab/middle_finger
 execute if entity @s[tag=grab_success] run function medabots_server:animations/master_hand/grab_success/middle_finger
 execute if entity @s[tag=jet] run function medabots_server:animations/master_hand/jet/middle_finger
 execute if entity @s[tag=ram] run function medabots_server:animations/master_hand/ram/middle_finger

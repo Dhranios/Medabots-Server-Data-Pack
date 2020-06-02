@@ -8,9 +8,10 @@ execute if entity @s[tag=!appearing,tag=!catch,tag=!applaud,tag=!double_punch,ta
 execute if entity @s[tag=catch] run function medabots_server:animations/crazy_hand/catch/hand
 execute if entity @s[tag=applaud] run function medabots_server:animations/crazy_hand/applaud/hand
 execute if entity @s[tag=double_punch] run function medabots_server:animations/crazy_hand/double_punch/hand
-execute if entity @s[tag=grab] run function medabots_server:animations/crazy_hand/grab/hand
+execute if entity @s[tag=grab,tag=!grab_success] run function medabots_server:animations/crazy_hand/grab/hand
 execute if entity @s[tag=grab_success] run function medabots_server:animations/crazy_hand/grab_success/hand
 execute if entity @s[tag=jet] run function medabots_server:animations/crazy_hand/jet/hand
+execute if entity @s[tag=ram] run function medabots_server:animations/crazy_hand/ram/hand
 execute if entity @s[tag=punch] run function medabots_server:animations/crazy_hand/punch/hand
 execute if entity @s[tag=fake_out] run function medabots_server:animations/crazy_hand/fake_out/hand
 execute if entity @s[tag=drill] run function medabots_server:animations/crazy_hand/drill/hand

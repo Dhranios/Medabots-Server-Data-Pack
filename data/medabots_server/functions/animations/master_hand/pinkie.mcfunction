@@ -9,14 +9,14 @@ execute if entity @s[tag=catch] run function medabots_server:animations/master_h
 execute if entity @s[tag=applaud] run function medabots_server:animations/master_hand/applaud/pinkie
 execute if entity @s[tag=double_punch] run function medabots_server:animations/master_hand/double_punch/pinkie
 execute if entity @s[tag=fast_idle] run function medabots_server:animations/master_hand/fast_idle/pinkie
-execute if entity @s[tag=grab] run function medabots_server:animations/master_hand/grab/pinkie
+execute if entity @s[tag=grab,tag=!grab_success] run function medabots_server:animations/master_hand/grab/pinkie
 execute if entity @s[tag=grab_success] run function medabots_server:animations/master_hand/grab_success/pinkie
 execute if entity @s[tag=jet] run function medabots_server:animations/master_hand/jet/pinkie
 execute if entity @s[tag=ram] run function medabots_server:animations/master_hand/ram/pinkie
 execute if entity @s[tag=punch] run function medabots_server:animations/master_hand/punch/pinkie
 execute if entity @s[tag=fake_out] run function medabots_server:animations/master_hand/fake_out/pinkie
 execute if entity @s[tag=drill] run function medabots_server:animations/master_hand/drill/pinkie
-execute if entity @s[tag=walk_start,tag=!walk_stop,tag=!walk_kick] run function medabots_server:animations/master_hand/walk_start/pinkie
+execute if entity @s[tag=walk_start,tag=!walk,tag=!walk_stop,tag=!walk_kick] run function medabots_server:animations/master_hand/walk_start/pinkie
 execute if entity @s[tag=walk_stop] run function medabots_server:animations/master_hand/walk_stop/pinkie
 execute if entity @s[tag=walk_kick] run function medabots_server:animations/master_hand/walk_kick/pinkie
 execute if entity @s[tag=slap] run function medabots_server:animations/master_hand/slap/pinkie
