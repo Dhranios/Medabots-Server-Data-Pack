@@ -5,6 +5,8 @@ tag @s[tag=!dying,nbt={AbsorptionAmount:0.0f}] add dying
 
 execute if entity @e[distance=..1,tag=footstool,type=minecraft:area_effect_cloud] if entity @s[tag=!roll] run function medabots_server:entities/topmaniac/footstooled
 
+execute unless entity @s[tag=dying,tag=!dead] if score @s Health < @s LastHealth run tag @s[scores={State=1}] add not_footstool_only
+execute unless entity @s[tag=dying,tag=!dead] if score @s Health < @s LastHealth run tag @s[scores={State=2..4,Time=1..}] add not_footstool_only
 execute unless entity @s[tag=dying,tag=!dead] if score @s Health < @s LastHealth run playsound medabots_server:entity.topmaniac.damage hostile @a ~ ~ ~ 1
 execute if entity @s[tag=dying,tag=!dead] run playsound medabots_server:entity.topmaniac.death hostile @a ~ ~ ~ 1
 

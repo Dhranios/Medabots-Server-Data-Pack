@@ -18,5 +18,5 @@ execute if entity @s[scores={AnimationProg=7..12}] store result entity @s Pose.H
 execute if entity @s[scores={AnimationProg=151..160}] store result entity @s Pose.Head[2] float 1 run scoreboard players remove #temp Time 18
 execute if entity @s[scores={AnimationProg=171..180}] store result entity @s Pose.Head[2] float 1 run scoreboard players add #temp Time 18
 scoreboard players reset #temp Time
-execute if entity @s[scores={AnimationProg=155..175}] at @e[type=minecraft:ghast,tag=this_crazy_hand,limit=1] rotated ~ 0 run teleport @s ^ ^-0.4 ^0.5
+execute if entity @s[scores={AnimationProg=155..175}] rotated ~ 0 run teleport @s ^ ^-0.4 ^0.5
 tag @s[scores={AnimationProg=180}] remove bombs

@@ -83,6 +83,10 @@ scoreboard players set @s[scores={Shopping=1..}] Shopping 0
 scoreboard players set @s[scores={BuyMedapart=1..}] BuyMedapart 0
 execute if entity @s[tag=!trading] run function medabots_server:shopping/reset
 
+scoreboard players remove @s[scores={Sound=1..}] Sound 1
+kill @s[tag=dead]
+tag @s[tag=dead] remove dead
+
 # Store old position
 scoreboard players operation @s OtherX = @s PosX
 scoreboard players operation @s OtherY = @s PosY

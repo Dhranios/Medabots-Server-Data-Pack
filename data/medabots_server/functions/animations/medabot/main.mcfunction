@@ -1,15 +1,16 @@
-execute if entity @e[tag=this_medabot,tag=drowned,limit=1] run tag @s[tag=!not_yet] add drowned
-execute if entity @e[tag=this_medabot,tag=crushed,limit=1] run tag @s[tag=!not_yet] add crushed
-execute if entity @e[tag=this_medabot,tag=!drowned,tag=!crushed,limit=1] run tag @s[tag=!not_yet] add normal_death
-execute if entity @e[tag=this_medabot,tag=dying,limit=1] run tag @s[tag=!not_yet] add dying
-execute if entity @e[tag=dancing,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add dancing
-execute if entity @e[tag=carried,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add carried
-execute if entity @e[tag=walking,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add walking
-execute if entity @e[tag=running,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add running
-execute if entity @e[tag=sneak_pos,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add sneak_pos
-execute if entity @e[tag=sneaking,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add sneaking
+data modify entity @s Tags append from entity @e[type=!minecraft:armor_stand,tag=this_medabot,limit=1] Tags[]
+tag @s[tag=!not_yet] remove drowned
+tag @s[tag=!not_yet] remove crushed
+tag @s[tag=!not_yet] remove dying
+tag @s[tag=!not_yet,tag=dying,tag=!drowned,tag=!crushed] add normal_death
 tag @s[tag=walking,tag=sneak_pos] add sneaking
 tag @s[tag=walking,tag=sneak_pos] remove walking
+execute if entity @a[tag=!has_medabot_form,nbt={SelectedItemSlot:0},tag=this_medabot,limit=1] run tag @s add guarding
+execute if entity @a[tag=!has_medabot_form,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]},tag=!static_fly,tag=this_medabot,limit=1] run tag @s remove guarding
+execute if entity @e[type=minecraft:skeleton,tag=this_medabot,limit=1,tag=legs_selected] run tag @s add guarding
+execute if entity @e[type=minecraft:skeleton,tag=fly_legs,tag=!static_fly,tag=this_medabot,limit=1,tag=legs_selected] run tag @s remove guarding
+execute if entity @e[tag=this_medabot,scores={NoDefendTime=1..}] run tag @s remove guarding
+execute if entity @e[tag=this_medabot,tag=leg,limit=1] run tag @s add has_legs
 execute if entity @s[tag=legs] run function medabots_server:animations/medabot/split_legs
 execute if entity @s[tag=source,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/source
 execute if entity @s[tag=hips,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/hips
@@ -39,6 +40,19 @@ execute if entity @s[tag=chest,tag=tinpet_editing] run function medabots_server:
 execute if entity @s[tag=head,tag=tinpet_editing] run function medabots_server:animations/medabot/tinpet_editing/head
 execute if entity @s[tag=medal,tag=tinpet_editing] run function medabots_server:animations/medabot/tinpet_editing/medal
 scoreboard players set @s[tag=!dancing] AnimationProg 0
+tag @s[tag=sneaking] add was_sneaking
+tag @s[tag=!sneaking] remove was_sneaking
+tag @s[tag=sneak_pos] add was_sneak_posing
+tag @s[tag=!sneak_pos] remove was_sneak_posing
+tag @s[tag=was_selected] remove was_selected
+tag @s[tag=selected] add was_selected
+tag @s[tag=selected] remove selected
+tag @s[tag=was_guarding] remove was_guarding
+tag @s[tag=guarding] add was_guarding
+tag @s[tag=guarding] remove guarding
+tag @s[tag=was_edge_grabbing] remove was_edge_grabbing
+tag @s[tag=edge_grabbing] add was_edge_grabbing
+tag @s[tag=edge_grabbing] remove edge_grabbing
 tag @s[tag=dancing] remove dancing
 tag @s[tag=carried] remove carried
 tag @s[tag=walking] remove walking

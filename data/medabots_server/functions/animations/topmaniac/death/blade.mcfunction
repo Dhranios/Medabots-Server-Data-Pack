@@ -1,5 +1,5 @@
 scoreboard players add @s AnimationProg 1
-execute at @e[type=minecraft:spider,tag=this_topmaniac,limit=1] run teleport @s ~ ~-1.43 ~ ~ ~
+execute if entity @s[scores={AnimationProg=1}] run teleport @s ~ ~-1.43 ~ ~ ~
 execute if entity @s[scores={AnimationProg=1}] run data merge entity @s[tag=blade_0] {Pose:{Head:[0.001f,0.001f,0.001f]}}
 execute if entity @s[scores={AnimationProg=1}] run data merge entity @s[tag=blade_1] {Pose:{Head:[0.001f,40.0f,0.001f]}}
 execute if entity @s[scores={AnimationProg=1}] run data merge entity @s[tag=blade_2] {Pose:{Head:[0.001f,80.0f,0.001f]}}

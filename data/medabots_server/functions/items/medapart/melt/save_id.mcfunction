@@ -1,0 +1,14 @@
+# Set which part was activated
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:hellphoenix_flame_gun"}}}]}] MedapartID 1
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:helphoenix_blast_gun"}}}]}] MedapartID 2
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:hellphoenix_fire_gun"}}}]}] MedapartID 3
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:poison_scorpi_scorpion_rat"}}}]}] MedapartID 4
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:poison_scorpi_scorpion_dog"}}}]}] MedapartID 5
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:poison_scorpi_scorpion_cat"}}}]}] MedapartID 6
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:flame_tisara_sala_arm"}}}]}] MedapartID 7
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:flame_tisara_sala_head"}}}]}] MedapartID 8
+scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:flame_tisara_sala_hand"}}}]}] MedapartID 9
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:attack_tyrano_breathfire"}}}]}] MedapartID 10
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:sphere_doomers_fire_doomer"}}}]}] MedapartID 11
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:galleom_flaming_engine"}}}]}] MedapartID 12
+scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:nino_bolganone"}}}]}] MedapartID 13

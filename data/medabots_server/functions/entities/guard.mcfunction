@@ -53,6 +53,8 @@ execute if entity @s[tag=dead] as @e[tag=guard_model,type=minecraft:armor_stand]
 execute if entity @s[tag=dead] as @e[scores={GuardNr=1..}] if score @s GuardNr > #temp GuardNr run scoreboard players remove @s GuardNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp GuardNr
 
+tag @s remove alarm_ringing
+
 # Model
 execute if entity @s[tag=!dead] run function medabots_server:animations/guard
 data merge entity @s {Invulnerable:0b}

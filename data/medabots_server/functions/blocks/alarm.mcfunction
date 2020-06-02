@@ -30,10 +30,6 @@ tag @s[tag=ringing_2] remove ringing_2
 execute store result score #temp Stage run scoreboard players get @s Stage
 execute if entity @s[scores={Time=1..}] as @e[tag=guard,distance=..16,tag=!alarm_ringing] if score @s Stage = #temp Stage run tag @s add alarm_ringing
 
-# Stop annoying the guards when disabled again
-execute if entity @s[scores={Time=0}] as @e[tag=guard,distance=..16,tag=alarm_ringing] if score @s Stage = #temp Stage run tag @s remove alarm_ringing
-scoreboard players reset #temp Stage
-
 # Remove when cleaning up a stage
 execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 

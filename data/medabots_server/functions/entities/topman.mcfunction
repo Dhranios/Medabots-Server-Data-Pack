@@ -27,9 +27,9 @@ execute at @s[scores={Time=..0},tag=!dying] run function medabots_server:entitie
 
 # Hit
 execute if entity @e[distance=..0.7,tag=footstool] positioned ~ ~1 ~ run effect give @e[tag=medabot,dy=1] minecraft:instant_damage 2 0 true
-execute positioned ~-0.3 ~-1 ~-0.3 as @e[tag=medabot,dx=1,dy=1,dz=1] run playsound medabots_server:entity.topman.attack hostile @a ~ ~ ~ 1
-execute positioned ~-0.3 ~-1 ~-0.3 run effect give @e[tag=medabot,dx=1,dy=1,dz=1] minecraft:instant_damage 1 0 true
-execute positioned ~-0.3 ~-1 ~-0.3 as @e[tag=medabot,dx=1,dy=1,dz=1] positioned ~0.3 ~1 ~0.3 facing entity @s feet rotated ~ 0 positioned as @s if block ^ ^ ^1 minecraft:air if block ^ ^1 ^1 minecraft:air run teleport @s ^ ^0.5 ^1
+execute positioned ~-0.5 ~-1 ~-0.5 as @e[tag=medabot,dx=0,dy=1,dz=0] run playsound medabots_server:entity.topman.attack hostile @a ~ ~ ~ 1
+execute positioned ~-0.5 ~-1 ~-0.5 run effect give @e[tag=medabot,dx=0,dy=1,dz=0] minecraft:instant_damage 1 0 true
+execute positioned ~-0.5 ~-1 ~-0.5 as @e[tag=medabot,dx=0,dy=1,dz=0] positioned ~0.3 ~1 ~0.3 facing entity @s feet rotated ~ 0 positioned as @s if block ^ ^ ^1 minecraft:air if block ^ ^1 ^1 minecraft:air run teleport @s ^ ^0.5 ^1
 
 # Fall
 execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall

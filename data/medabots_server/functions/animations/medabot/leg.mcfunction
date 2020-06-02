@@ -1,5 +1,5 @@
 # Move with
-execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s ^ ^ ^ ~ ~
+teleport @s ^ ^ ^ ~ ~
 execute unless entity @s[scores={LeftAmount=0}] run function medabots_server:animations/medabot/offset/left
 execute unless entity @s[scores={UpAmount=0}] run function medabots_server:animations/medabot/offset/up
 execute unless entity @s[scores={ForwardAmount=0}] run function medabots_server:animations/medabot/offset/forward
@@ -15,7 +15,3 @@ execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[n
 execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{move:"multi_legged"}}}]},tag=!dancing,tag=!carried] run function medabots_server:animations/medabot/walking/multi_legged_legs
 execute unless entity @s[tag=!walking,tag=!running,tag=!sneaking] if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{leg_offset:[]}}}}]},tag=!dancing,tag=!carried] run function medabots_server:animations/medabot/walking/legs
 execute if entity @s[tag=dancing,nbt={ArmorItems:[{tag:{medabots_server:{move:"two_legged"}}}]}] run function medabots_server:animations/medabot/dancing/two_legged_legs
-tag @s[tag=sneaking] add was_sneaking
-tag @s[tag=!sneaking] remove was_sneaking
-tag @s[tag=sneak_pos] add was_sneak_posing
-tag @s[tag=!sneak_pos] remove was_sneak_posing

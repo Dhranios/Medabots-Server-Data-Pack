@@ -8,5 +8,5 @@ execute if entity @s[scores={AnimationProg=1..10}] store result entity @s Pose.H
 scoreboard players reset #temp Time
 execute if entity @s[scores={AnimationProg=10}] run data modify entity @s Pose.Head[2] set value 0f
 execute if entity @s[scores={AnimationProg=1}] run data modify entity @s Pose.Head[1] set value 0f
-execute at @e[type=minecraft:spider,tag=this_topmaniac,limit=1] rotated ~ 0 run teleport @s[scores={AnimationProg=..5}] ^0.43 ^ ^0.2 ~ ~
+execute rotated ~ 0 run teleport @s[scores={AnimationProg=..5}] ^0.43 ^ ^0.2 ~ 0
 tag @s[scores={AnimationProg=10}] remove roll_stop

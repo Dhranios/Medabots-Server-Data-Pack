@@ -1,4 +1,5 @@
 execute if entity @s[scores={DeathTime=1}] run advancement grant @a[tag=potential_target,distance=..30] only medabots_server:bosses/wave_1/topmaniac
+execute if entity @s[scores={DeathTime=1},tag=!not_footstool_only] run advancement grant @a[tag=potential_target,distance=..30] only medabots_server:main/true_maniac
 scoreboard players add @s DeathTime 1
 data merge entity @s[scores={DeathTime=1}] {AbsorptionAmount:1000000.0f}
 execute at @s[scores={DeathTime=1}] run teleport @s ~ ~0.7 ~ ~ ~

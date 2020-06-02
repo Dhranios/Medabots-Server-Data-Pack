@@ -1,5 +1,3 @@
-execute if entity @e[tag=edge_grabbing,tag=this_medabot,tag=!medabot_model,limit=1] run tag @s add edge_grabbing
-
 # Rotate if moving
 execute store result score @s PosX run scoreboard players get @e[tag=this_medabot,tag=!medabot_model,limit=1] PosX
 execute store result score @s PosZ run scoreboard players get @e[tag=this_medabot,tag=!medabot_model,limit=1] PosZ
@@ -41,7 +39,4 @@ execute if entity @e[tag=edge_grabbing,tag=this_medabot,tag=!medabot_model,limit
 execute store result score @s[tag=edge_grabbing] MedabotRotation run data get entity @s Rotation[0] 1000
 execute unless entity @s[scores={UpAmount=0}] run function medabots_server:animations/medabot/offset/up
 
-tag @s[tag=was_edge_grabbing] remove was_edge_grabbing
-tag @s[tag=edge_grabbing] add was_edge_grabbing
-tag @s[tag=edge_grabbing] remove edge_grabbing
 execute if entity @s[tag=dancing] at @s run function medabots_server:animations/medabot/dancing/body

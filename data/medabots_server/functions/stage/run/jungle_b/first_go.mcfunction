@@ -23,7 +23,7 @@ execute if block -1590 45 -412 minecraft:iron_trapdoor[open=true] if block -1579
 execute if entity @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=12,Medabot=0..,State=1..2}]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=12}] run tag @s remove run_until_the_time_is_up
 execute if entity @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=-1589.5,y=45,z=-411.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=-1590.5,y=45,z=-411.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=-1578.5,y=45,z=-416.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run bossbar set medabots_server:jungle_b/robattle players
 kill @e[x=-1583.5,y=45,z=-408.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up]
@@ -31,9 +31,9 @@ scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block -1601 45 -468 minecraft:iron_trapdoor[open=true] if block -1606 45 -456 minecraft:black_stained_glass if entity @s[x=-1604,y=45,z=-470,dx=3,dy=3,dz=3] run function medabots_server:stage/create/jungle_b/first_go_battle/1
 execute if entity @e[x=-1608.5,y=45,z=-462.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=12,Medabot=0..,State=1..2}]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1600.5,y=45,z=-467.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1605.5,y=45,z=-455.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1615.5,y=45,z=-463.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1600.5,y=45,z=-468.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1606.5,y=45,z=-455.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1615.5,y=45,z=-464.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:jungle_b/robattle players
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1608.5,y=45,z=-462.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots

@@ -8,8 +8,8 @@ execute if entity @e[scores={Stage=10},tag=hide_normal_time] if score #temp Time
 scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/grassland_b
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
-execute if entity @e[x=-1540.5,y=45,z=-326.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=-1542.5,y=45,z=-326.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if entity @e[x=-1540.5,y=45,z=-326.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1542.5,y=45,z=-326.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @e[x=-1540.5,y=45,z=-326.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=-1542.5,y=45,z=-327.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
+execute if entity @e[x=-1540.5,y=45,z=-326.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1542.5,y=45,z=-327.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1563.5,y=45,z=-336.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=-1559.5,y=45,z=-340.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if entity @e[x=-1563.5,y=45,z=-336.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1559.5,y=45,z=-340.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=-1566.5,y=45,z=-365.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=-1555.5,y=45,z=-367.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
@@ -32,7 +32,7 @@ execute if entity @e[x=-1521.5,y=45,z=-365.5,distance=..0.7,tag=floor_switch,typ
 execute if block -1522 45 -340 minecraft:iron_trapdoor[open=true] if block -1518 45 -335 minecraft:air if entity @s[x=-1524,y=45,z=-340,dx=3,dy=3,dz=3] run function medabots_server:stage/create/grassland_b/first_go_battle/0
 execute if entity @e[x=-1520.5,y=45,z=-328.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=10,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1521.5,y=45,z=-339.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1522.5,y=45,z=-339.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:grassland_b/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
@@ -43,7 +43,7 @@ execute if entity @s[tag=mission_success] run tag @e[scores={Stage=10,Medabot=0.
 execute if entity @s[tag=mission_success] as @a[scores={Stage=10,Medabot=0..,State=1..},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1537.5,y=45,z=-402.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1519.5,y=45,z=-388.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[tag=mission_success] run scoreboard players set @e[x=-1520.5,y=45,z=-388.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:grassland_b/robattle players
 execute if entity @s[tag=mission_success] run kill @e[x=-1570,y=43,z=-414,dx=62,dy=7,dz=95,tag=mission,type=minecraft:area_effect_cloud]
 tag @s[tag=mission_success] remove mission_success

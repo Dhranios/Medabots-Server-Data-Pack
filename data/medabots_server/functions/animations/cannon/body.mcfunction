@@ -1,2 +1,2 @@
 # Move with
-execute at @e[tag=this_cannon,limit=1] run teleport @s ~ ~ ~
+teleport @s ~ ~ ~ 0 0

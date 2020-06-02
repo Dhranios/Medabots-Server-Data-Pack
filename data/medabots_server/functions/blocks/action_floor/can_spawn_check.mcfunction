@@ -1,2 +1,2 @@
 execute unless block ~ ~ ~ minecraft:air run tag @s add no_spawning
-execute if entity @e[distance=..0.7,tag=!action_floor,type=!minecraft:item,type=!minecraft:experience_orb,limit=1] run tag @s add no_spawning
+execute positioned ~-0.5 ~ ~-0.5 if entity @e[dx=0,dy=1,dz=0,tag=!action_floor,type=!minecraft:item,type=!minecraft:experience_orb,limit=1] run tag @s add no_spawning

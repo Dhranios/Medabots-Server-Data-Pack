@@ -37,6 +37,8 @@ scoreboard players set @s[scores={GoalSearch=1..}] GoalSearch 0
 
 # If I see the goal, walk towards it, quietly
 execute if entity @s[tag=walking,tag=see_goal_area] run playsound medabots_server:entity.rubberobo.see_goal_area neutral @a ~ ~ ~ 1
+execute if entity @s[tag=walking,tag=see_goal_area] run stopsound @a neutral medabots_server:entity.rubberobo.walk
+execute if entity @s[tag=walking,tag=see_goal_area] run stopsound @a neutral medabots_server:entity.rubberobo.walk_downed
 tag @s[tag=walking,tag=see_goal_area] remove walking
 scoreboard players set @s[tag=see_goal_area,tag=!seen_goal_area,scores={Time=0}] Time 20
 tag @s[tag=see_goal_area,tag=!seen_goal_area,scores={Time=20}] add seen_goal_area

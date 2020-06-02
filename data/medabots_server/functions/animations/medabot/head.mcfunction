@@ -1,8 +1,8 @@
 execute if entity @s[tag=!separated] run function medabots_server:animations/medabot/separate_chest
 
 # Move with
-execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s[tag=!sneak_pos] ^ ^.39 ^
-execute at @e[tag=this_medabot,tag=source,limit=1] rotated ~ 0 run teleport @s[tag=sneak_pos] ^ ^.33 ^
+teleport @s[tag=!sneak_pos] ^ ^.39 ^
+teleport @s[tag=sneak_pos] ^ ^.33 ^
 
 # Look left/right
 execute as @e[tag=this_medabot,tag=source,limit=1] if entity @s[scores={MedabotRotation=..2147483647}] store result score #temp MedabotRotation run data get entity @s Rotation[0] 1000

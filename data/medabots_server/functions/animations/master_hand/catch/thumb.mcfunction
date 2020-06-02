@@ -11,7 +11,7 @@ execute if entity @s[scores={AnimationProg=78..84}] store result entity @s Pose.
 execute if entity @s[scores={AnimationProg=85..91}] store result entity @s Pose.Head[0] float 1 run scoreboard players remove #temp Time 5
 execute if entity @s[scores={AnimationProg=92..99}] store result entity @s Pose.Head[0] float 1 run scoreboard players add #temp Time 5
 scoreboard players reset #temp Time
-execute if entity @s[scores={AnimationProg=2..4}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^1.3 ^
-execute if entity @s[scores={AnimationProg=5..21}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^-1.3 ^-0.3 ^
-execute if entity @s[scores={AnimationProg=22..24}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^1.3 ^
+execute if entity @s[scores={AnimationProg=2..4}] rotated ~ 0 run teleport @s ^ ^1.3 ^
+execute if entity @s[scores={AnimationProg=5..21}] rotated ~ 0 run teleport @s ^-1.3 ^-0.3 ^
+execute if entity @s[scores={AnimationProg=22..24}] rotated ~ 0 run teleport @s ^ ^1.3 ^
 tag @s[scores={AnimationProg=100}] remove catch

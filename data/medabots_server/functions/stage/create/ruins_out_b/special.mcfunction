@@ -176,7 +176,6 @@ execute positioned -1842 45 -495 run function medabots_server:set_blocks/wall
 execute positioned -1838 45 -508 run function medabots_server:set_blocks/wall
 execute positioned -1839 45 -508 run function medabots_server:set_blocks/wall
 execute positioned -1840 45 -508 run function medabots_server:set_blocks/wall
-execute positioned -1842 45 -520 run function medabots_server:set_blocks/wall
 execute positioned -1821 45 -523 run function medabots_server:set_blocks/wall
 execute positioned -1820 45 -523 run function medabots_server:set_blocks/wall
 execute positioned -1819 45 -523 run function medabots_server:set_blocks/wall
@@ -197,6 +196,7 @@ execute positioned -1815 45 -528 run function medabots_server:set_blocks/door/z/
 execute positioned -1788 45 -488 run function medabots_server:set_blocks/door/x/power_1
 execute positioned -1788 45 -510 run function medabots_server:set_blocks/door/x/power_1
 execute positioned -1788 45 -511 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1788 45 -511 run tag @e[distance=..0.7,tag=door] add robattle
 execute positioned -1788 45 -480 run function medabots_server:set_blocks/starting_area
 teleport @s -1788 45 -480 0 0
 bossbar set medabots_server:ruins_out_b/time value 0

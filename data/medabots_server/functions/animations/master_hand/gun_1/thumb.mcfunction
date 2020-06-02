@@ -10,5 +10,5 @@ scoreboard players reset #temp Time
 execute if entity @s[scores={AnimationProg=87}] run data modify entity @s Pose.Head[2] set value -60f
 execute if entity @s[scores={AnimationProg=88}] run data modify entity @s Pose.Head[2] set value -30f
 execute if entity @s[scores={AnimationProg=89}] run data modify entity @s Pose.Head[2] set value 0f
-execute if entity @s[scores={AnimationProg=3..86}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^1.3 ^
+execute if entity @s[scores={AnimationProg=3..86}] rotated ~ 0 run teleport @s ^ ^1.3 ^
 tag @s[scores={AnimationProg=90}] remove gun_1

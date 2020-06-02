@@ -13,7 +13,7 @@ execute if entity @e[x=-1511.5,y=44,z=-679.5,distance=..0.7,tag=floor_switch,typ
 execute if block -1553 44 -625 minecraft:iron_trapdoor[open=true] if block -1561 44 -665 minecraft:black_stained_glass if entity @s[x=-1555,y=44,z=-625,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_c/first_go_battle/0
 execute if entity @e[x=-1552.5,y=44,z=-618.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=26,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
-execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1552.5,y=44,z=-624.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
+execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1553.5,y=44,z=-624.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=-1560.5,y=44,z=-664.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1552.5,y=44,z=-618.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:iceberg_c/robattle players

@@ -1,4 +1,3 @@
-tag @s remove preference_heal
 tag @s[scores={HeadPer=..50,MedabotLevel=70..}] add preference_heal
 tag @s[scores={HeadPer=..40,MedabotLevel=40..69}] add preference_heal
 tag @s[scores={HeadPer=..30,MedabotLevel=20..49}] add preference_heal

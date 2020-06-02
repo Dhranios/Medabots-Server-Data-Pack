@@ -1,12 +1,11 @@
-teleport @s ~ ~0.056 ~
-data merge entity @s {Air:1}
-data merge entity @s {Air:0}
-execute as @e[distance=..0.4,tag=ice_block] run data merge entity @s {Rotation:[0.0d,0.0d]}
-execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
-execute as @e[distance=..0.4,tag=ice_block,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
-execute as @e[distance=..0.4,tag=round_stone] run data merge entity @s {Rotation:[0.0d,0.0d]}
-execute as @e[distance=..0.4,tag=round_stone,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
-execute as @e[distance=..0.4,tag=round_stone,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
+execute if entity @s[tag=!no_ticking] run function medabots_server:blocks/action_floor/move_ticking
+
+scoreboard players add @s Dialog 1
+tag @s[scores={Dialog=50}] add no_ticking
+tag @s[scores={Dialog=70}] remove no_ticking
+tag @s[scores={Dialog=70}] remove action_floor_moving
+data merge entity @s[scores={Dialog=70}] {Invulnerable:0b}
+scoreboard players reset @s[scores={Dialog=70}] Dialog
 
 # Model
 execute if entity @s[tag=guard] run function medabots_server:animations/guard

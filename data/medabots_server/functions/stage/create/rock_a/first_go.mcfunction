@@ -23,7 +23,7 @@ execute positioned -1625 47 -131 run function medabots_server:spawn_entities/ite
 execute positioned -1629 47 -130 run function medabots_server:spawn_entities/item/bomb_help
 execute positioned -1628 47 -121 run function medabots_server:spawn_entities/item/bomb_help
 execute positioned -1623 45 -167 run function medabots_server:spawn_entities/item/raft_help
-execute positioned -1618 45 -167 run function medabots_server:spawn_entities/item/robattle_help
+execute positioned -1618 45 -167 run function medabots_server:spawn_entities/item/final_robattle_help
 execute positioned -1625 45 -132 run function medabots_server:set_blocks/pot
 execute positioned -1624 45 -132 run function medabots_server:set_blocks/pot
 execute positioned -1625 45 -131 run function medabots_server:set_blocks/pot/bomb/delay_5
@@ -149,6 +149,7 @@ execute positioned -1599 45 -174 run function medabots_server:set_blocks/wall
 execute positioned -1586 45 -164 run function medabots_server:set_blocks/door/x/power_1
 execute positioned -1617 45 -167 run function medabots_server:set_blocks/door/z/power_1
 execute positioned -1616 45 -167 run function medabots_server:set_blocks/door/z/power_0
+execute positioned -1616 45 -167 run tag @e[distance=..0.7,tag=door] add robattle
 execute positioned -1626 45 -127 run function medabots_server:set_blocks/starting_area
 teleport @s -1626 45 -127 0 0
 bossbar set medabots_server:rock_a/time value 0

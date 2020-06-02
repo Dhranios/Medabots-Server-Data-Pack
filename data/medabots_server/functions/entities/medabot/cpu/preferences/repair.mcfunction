@@ -1,4 +1,3 @@
-tag @s remove preference_repair
 tag @s[scores={LegsArmor=..0}] add preference_repair
 tag @s[scores={LeftArmArmor=..0}] add preference_repair
 tag @s[scores={RightArmArmor=..0}] add preference_repair

@@ -6,6 +6,8 @@ scoreboard players operation #temp MedabotNr = @s MedabotNr
 execute if entity @s[tag=!was_hidden] as @e[type=minecraft:armor_stand] if score @s MedabotNr = #temp MedabotNr run tag @s add dead
 execute if entity @s[tag=!was_hidden] run summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:entity.medabot"}',Tags:["last_known_location","life_time"],Invisible:1b,Marker:1b}
 execute if entity @s[tag=!was_hidden] run scoreboard players operation @e[type=minecraft:armor_stand,distance=..0.7] MedabotNr = #temp MedabotNr
+execute if entity @s[tag=!was_hidden,tag=enemy_medabot] run tag @e[type=minecraft:armor_stand,distance=..0.7] add enemy_medabot
+execute if entity @s[tag=!was_hidden,tag=ally_medabot] run tag @e[type=minecraft:armor_stand,distance=..0.7] add ally_medabot
 tag @s add was_hidden
 
 

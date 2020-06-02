@@ -6,4 +6,4 @@ execute if entity @s[scores={AnimationProg=1..5}] store result entity @s Pose.He
 execute if entity @s[scores={AnimationProg=6..12}] store result entity @s Pose.Head[0] float 1 run scoreboard players remove #temp Time 6
 execute if entity @s[scores={AnimationProg=13}] store result entity @s Pose.Head[0] float 1 run scoreboard players add #temp Time 6
 scoreboard players reset #temp Time
-execute at @e[type=minecraft:ghast,tag=this_crazy_hand,limit=1] rotated ~ 0 run teleport @s ^ ^0.45 ^0.05
+execute rotated ~ 0 run teleport @s ^ ^0.45 ^0.05

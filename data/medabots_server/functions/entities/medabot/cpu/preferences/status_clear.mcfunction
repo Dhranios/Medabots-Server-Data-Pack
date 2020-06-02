@@ -1,4 +1,3 @@
-tag @s remove preference_status_clear
 tag @s[scores={BugTime=2..}] add preference_status_clear
 tag @s[scores={ConfuseTime=2..}] add preference_status_clear
 tag @s[scores={FreezeTime=2..}] add preference_status_clear

@@ -33,6 +33,9 @@ tag @s add me
 execute if entity @s[tag=enemy_medabot] as @e[tag=medabot,tag=!enemy_medabot,tag=!dying] if score @s Stage = #temp Stage run tag @s add potential_target
 execute if entity @s[tag=ally_medabot] as @e[tag=medabot,tag=!ally_medabot,tag=!dying] if score @s Stage = #temp Stage run tag @s add potential_target
 execute if entity @s[tag=!enemy_medabot,tag=!ally_medabot] as @e[tag=medabot,tag=!dying,tag=!me] if score @s Stage = #temp Stage run tag @s add potential_target
+execute if entity @s[tag=enemy_medabot] as @e[tag=last_known_location,tag=!enemy_medabot] if score @s Stage = #temp Stage run tag @s add potential_target
+execute if entity @s[tag=ally_medabot] as @e[tag=last_known_location,tag=!ally_medabot] if score @s Stage = #temp Stage run tag @s add potential_target
+execute if entity @s[tag=!enemy_medabot,tag=!ally_medabot] as @e[tag=last_known_location] if score @s Stage = #temp Stage run tag @s add potential_target
 tag @s remove potential_target
 tag @e[tag=potential_target,limit=1,sort=nearest] add target
 tag @s remove me

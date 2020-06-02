@@ -16,6 +16,7 @@ execute as @e[tag=model_piece,tag=source] if score @s MedabotNr = #temp_2 Medabo
 execute store result score @e[tag=me,limit=1] UpAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.height
 tag @e[tag=me,limit=1] remove me
 scoreboard players reset #temp_2 MedabotNr
+tag @s add dead
 
 execute if score #temp Time matches 1.. run function medabots_server:animations/medabot/separate_leg
 execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{tail:{}}}}}]}] run function medabots_server:animations/medabot/separate_tail
@@ -23,4 +24,3 @@ execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{wormtai
 
 scoreboard players reset #temp_2 Time
 scoreboard players reset #temp Time
-tag @s add dead

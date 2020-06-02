@@ -1,6 +1,4 @@
-execute if entity @e[type=minecraft:creeper,tag=this_guard,tag=dying,limit=1] run tag @s add dying
-execute if entity @e[type=minecraft:creeper,tag=this_guard,tag=walking,limit=1] run tag @s add walking
-data modify entity @s Rotation[0] set from entity @e[type=minecraft:creeper,tag=this_guard,limit=1] Rotation[0]
+data modify entity @s Tags append from entity @e[type=minecraft:creeper,tag=this_guard,limit=1] Tags[]
 execute unless data entity @s Pose.Head[0] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}
 execute if entity @s[tag=body,tag=!dying] run function medabots_server:animations/guard/body
 execute if entity @s[tag=hammer,tag=!dying] run function medabots_server:animations/guard/hammer

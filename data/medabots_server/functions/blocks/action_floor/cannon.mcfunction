@@ -111,5 +111,5 @@ execute if entity @s[tag=detect,tag=rotating,tag=north,tag=6_medallar_cents] pos
 execute if entity @s[tag=detect,tag=rotating,tag=north,tag=10_medallar_cents] positioned ~ ~-2.79999 ~ run function medabots_server:spawn_entities/cannon/search/north/delay_4/10_medallar_cents
 execute if entity @s[tag=detect,tag=rotating,tag=north,tag=20_medallar_cents] positioned ~ ~-2.79999 ~ run function medabots_server:spawn_entities/cannon/search/north/delay_4/20_medallar_cents
 execute positioned ~ ~-2.79999 ~ run scoreboard players operation @e[distance=..0.7,type=minecraft:husk,tag=cannon,tag=!action_floor] DelayTime = @s DelayTime
-execute positioned ~ ~-2.79999 ~ run tag @e[distance=..0.7,tag=!action_floor,tag=cannon] add no_processing
+execute positioned ~ ~-2.79999 ~ run tag @e[distance=..0.7,tag=!action_floor,tag=cannon] add action_floor_moving
 execute positioned ~ ~-2.79999 ~ as @e[distance=..0.7,tag=cannon] run data merge entity @s {Invulnerable:1b}

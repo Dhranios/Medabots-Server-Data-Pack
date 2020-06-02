@@ -4,7 +4,7 @@ scoreboard players set @s[scores={Medaforce=1,OverheatingMedal=15..},type=!minec
 scoreboard players set @s[scores={Medaforce=1},tag=blocked_medaforce,type=!minecraft:player] Medaforce 0
 
 # Set charging
-scoreboard players set @s[tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,move:"medaforce_charge"}}}]}] Medaforce 1
+scoreboard players set @s[tag=!blocked_medaforce,nbt={SelectedItemSlot:4,Inventory:[{Slot:4b,tag:{medabots_server:{activated:1b,move:"charge_medaforce"}}}]}] Medaforce 1
 scoreboard players add @s[scores={Medaforce=1}] Charge 1
 
 # Show particles
@@ -14,7 +14,7 @@ execute if entity @s[scores={Medaforce=1}] run particle minecraft:dust 0.5 0.5 0
 execute if entity @s[scores={Charge=50,Medaforce=0..1}] run function medabots_server:items/medapart/charged_medaforce
 
 # Remove 1 medal for while charge each time
-clear @s[scores={Medaforce=1}] minecraft:gold_ingot{medabots_server:{activated:1b,move:"medaforce_charge"}} 1
+clear @s[scores={Medaforce=1}] minecraft:gold_ingot{medabots_server:{activated:1b,move:"charge_medaforce"}} 1
 
 # Overheating charging
 scoreboard players add @s[scores={Medaforce=1}] OverheatingMedal 2

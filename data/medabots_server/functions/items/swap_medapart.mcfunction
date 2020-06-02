@@ -1,3 +1,8 @@
+scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{part:"head"}}}},scores={TransformHTime=2..}] TransformHTime 1
+scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{part:"right_arm"}}}},scores={TransformRTime=2..}] TransformRTime 1
+scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{part:"left_arm"}}}},scores={TransformLTime=2..}] TransformLTime 1
+function medabots_server:effects/transformed/player
+
 summon minecraft:armor_stand ~ ~ ~ {Tags:["inventory"],Invisible:1b,Marker:1b,ArmorItems:[{},{},{},{Slot:0b,id:"minecraft:stone_button",Count:1b,tag:{medabots_server:{id:"medabots_server:inventory",items:[]}}}]}
 data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items set from entity @s Inventory
 

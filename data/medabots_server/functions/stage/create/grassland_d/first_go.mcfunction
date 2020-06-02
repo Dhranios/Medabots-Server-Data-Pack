@@ -154,6 +154,7 @@ execute positioned -1549 45 -728 run function medabots_server:set_blocks/door/x/
 execute positioned -1544 45 -740 run function medabots_server:set_blocks/door/x/power_1
 execute positioned -1543 45 -728 run function medabots_server:set_blocks/door/x/power_1
 execute positioned -1588 45 -730 run function medabots_server:set_blocks/door/x/power_0
+execute positioned -1588 45 -730 run tag @e[distance=..0.7,tag=door] add robattle
 execute positioned -1574 45 -693 run function medabots_server:set_blocks/starting_area
 teleport @s -1574 45 -693 0 0
 bossbar set medabots_server:grassland_d/time value 0

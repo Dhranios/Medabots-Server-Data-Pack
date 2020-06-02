@@ -1,3 +1,5 @@
+scoreboard players set @s[tag=walk] AnimationProg 0
+tag @s remove walk
 scoreboard players set @s[tag=walk_start] AnimationProg 0
 tag @s remove walk_start
 scoreboard players set @s[scores={AnimationProg=5}] AnimationProg 0

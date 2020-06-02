@@ -14,21 +14,21 @@ execute if entity @s[scores={AnimationProg=20..29}] store result entity @s Pose.
 execute if entity @s[scores={AnimationProg=30..65}] store result entity @s Pose.Head[2] float 1 run scoreboard players add #temp Time 15
 execute if entity @s[scores={AnimationProg=66..75}] store result entity @s Pose.Head[2] float 1 run scoreboard players remove #temp Time 9
 scoreboard players reset #temp Time
-execute if entity @s[scores={AnimationProg=6..23}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
-execute if entity @s[scores={AnimationProg=22..25}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^0.65 ^0.8 ^
-execute if entity @s[scores={AnimationProg=26..30}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^1.3 ^
-execute if entity @s[scores={AnimationProg=31..34}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^0.65 ^0.8 ^
-execute if entity @s[scores={AnimationProg=35..36}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
-execute if entity @s[scores={AnimationProg=37..40}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^0.65 ^-0.8 ^
-execute if entity @s[scores={AnimationProg=41..42}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^-1.3 ^
-execute if entity @s[scores={AnimationProg=43..46}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^-0.65 ^-0.8 ^
-execute if entity @s[scores={AnimationProg=47..47}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^-1.3 ^-0.3 ^
-execute if entity @s[scores={AnimationProg=48..51}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^-0.65 ^0.8 ^
-execute if entity @s[scores={AnimationProg=52..52}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^1.3 ^
-execute if entity @s[scores={AnimationProg=53..56}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^0.65 ^0.8 ^
-execute if entity @s[scores={AnimationProg=57..57}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
-execute if entity @s[scores={AnimationProg=58..61}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^0.65 ^-0.8 ^
-execute if entity @s[scores={AnimationProg=62..66}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^ ^-1.3 ^
-execute if entity @s[scores={AnimationProg=67..70}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^0.65 ^-0.8 ^
-execute if entity @s[scores={AnimationProg=71..}] at @e[type=minecraft:ghast,tag=this_master_hand,limit=1] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
+execute if entity @s[scores={AnimationProg=6..23}] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
+execute if entity @s[scores={AnimationProg=22..25}] rotated ~ 0 run teleport @s ^0.65 ^0.8 ^
+execute if entity @s[scores={AnimationProg=26..30}] rotated ~ 0 run teleport @s ^ ^1.3 ^
+execute if entity @s[scores={AnimationProg=31..34}] rotated ~ 0 run teleport @s ^0.65 ^0.8 ^
+execute if entity @s[scores={AnimationProg=35..36}] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
+execute if entity @s[scores={AnimationProg=37..40}] rotated ~ 0 run teleport @s ^0.65 ^-0.8 ^
+execute if entity @s[scores={AnimationProg=41..42}] rotated ~ 0 run teleport @s ^ ^-1.3 ^
+execute if entity @s[scores={AnimationProg=43..46}] rotated ~ 0 run teleport @s ^-0.65 ^-0.8 ^
+execute if entity @s[scores={AnimationProg=47..47}] rotated ~ 0 run teleport @s ^-1.3 ^-0.3 ^
+execute if entity @s[scores={AnimationProg=48..51}] rotated ~ 0 run teleport @s ^-0.65 ^0.8 ^
+execute if entity @s[scores={AnimationProg=52..52}] rotated ~ 0 run teleport @s ^ ^1.3 ^
+execute if entity @s[scores={AnimationProg=53..56}] rotated ~ 0 run teleport @s ^0.65 ^0.8 ^
+execute if entity @s[scores={AnimationProg=57..57}] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
+execute if entity @s[scores={AnimationProg=58..61}] rotated ~ 0 run teleport @s ^0.65 ^-0.8 ^
+execute if entity @s[scores={AnimationProg=62..66}] rotated ~ 0 run teleport @s ^ ^-1.3 ^
+execute if entity @s[scores={AnimationProg=67..70}] rotated ~ 0 run teleport @s ^0.65 ^-0.8 ^
+execute if entity @s[scores={AnimationProg=71..}] rotated ~ 0 run teleport @s ^1.3 ^0.3 ^
 tag @s[scores={AnimationProg=120}] remove jet

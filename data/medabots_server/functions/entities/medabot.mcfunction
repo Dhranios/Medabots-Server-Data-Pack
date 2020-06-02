@@ -44,7 +44,9 @@ execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation @s
 execute if entity @s[scores={LegsArmor=1..}] run scoreboard players reset #temp Damage
 
 # Prevent earrape when not verified and when leaving stage
+execute if entity @s[nbt=!{HurtTime:0s},tag=!hurt] run function medabots_server:entities/medabot/hit_charge
 scoreboard players set @s[nbt={HurtTime:0s}] Damage 0
+tag @s[nbt={HurtTime:0s}] remove hurt
 
 # Prevent normal damage
 effect give @s[type=!#medabots_server:undead,scores={Damage=1..}] minecraft:instant_health 1 19 true

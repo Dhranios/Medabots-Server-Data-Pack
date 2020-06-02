@@ -2,7 +2,7 @@ execute store result score @s Health run data get entity @s AbsorptionAmount
 
 # Target entity
 execute store result score #temp Stage run scoreboard players get @s Stage
-execute as @e[tag=medabot,tag=!enemy_medabot,tag=!dying] if score @s Stage = #temp Stage run tag @s add potential_target
+execute as @e[tag=medabot,tag=!enemy_medabot,tag=!dying,tag=!enemy_medabot] if score @s Stage = #temp Stage run tag @s add potential_target
 execute as @e[tag=last_known_location,type=minecraft:armor_stand] if score @s Stage = #temp Stage run tag @s add potential_target
 tag @e[tag=potential_target,limit=1,sort=nearest,tag=!was_hidden] add target
 scoreboard players reset #temp Stage
