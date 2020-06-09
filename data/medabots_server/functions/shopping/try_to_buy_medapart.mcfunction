@@ -75,7 +75,7 @@ execute if entity @s[scores={BuyMedapart=74},advancements={medabots_server:get_a
 execute if entity @s[scores={BuyMedapart=75},advancements={medabots_server:get_all_medabots/wave_1/doctor_study={right_arm=true}}] run function medabots_server:give_items/medaparts/doctor_study/point_radar
 execute if entity @s[scores={BuyMedapart=76},advancements={medabots_server:get_all_medabots/wave_1/doctor_study={head=true}}] run function medabots_server:give_items/medaparts/doctor_study/search_radar
 execute if entity @s[scores={BuyMedapart=77},advancements={medabots_server:get_all_medabots/wave_1/dondoguu={legs=true}}] run function medabots_server:give_items/medaparts/dondoguu/dokan
-execute if entity @s[scores={BuyMedapart=78},advancements={medabots_server:get_all_medabots/wave_1/dondoguu={left_arm=true}}] run function medabots_server:give_items/medaparts/dondoguu/dohtattack
+execute if entity @s[scores={BuyMedapart=78},advancements={medabots_server:get_all_medabots/wave_1/dondoguu={left_arm=true}}] run function medabots_server:give_items/medaparts/dondoguu/dohtatack
 execute if entity @s[scores={BuyMedapart=79},advancements={medabots_server:get_all_medabots/wave_1/dondoguu={right_arm=true}}] run function medabots_server:give_items/medaparts/dondoguu/dohtack
 execute if entity @s[scores={BuyMedapart=80},advancements={medabots_server:get_all_medabots/wave_1/dondoguu={head=true}}] run function medabots_server:give_items/medaparts/dondoguu/dogu
 execute if entity @s[scores={BuyMedapart=81},advancements={medabots_server:get_all_medabots/wave_1/dorcus={legs=true}}] run function medabots_server:give_items/medaparts/dorcus/windfluke
@@ -86,10 +86,10 @@ execute if entity @s[scores={BuyMedapart=85},advancements={medabots_server:get_a
 execute if entity @s[scores={BuyMedapart=86},advancements={medabots_server:get_all_medabots/wave_1/dragonbeetle={left_arm=true}}] run function medabots_server:give_items/medaparts/dragonbeetle/veryweighter
 execute if entity @s[scores={BuyMedapart=87},advancements={medabots_server:get_all_medabots/wave_1/dragonbeetle={right_arm=true}}] run function medabots_server:give_items/medaparts/dragonbeetle/heavyweighter
 execute if entity @s[scores={BuyMedapart=88},advancements={medabots_server:get_all_medabots/wave_1/dragonbeetle={head=true}}] run function medabots_server:give_items/medaparts/dragonbeetle/hardweighter
-execute if entity @s[scores={BuyMedapart=89},advancements={medabots_server:get_all_medabots/wave_1/fancyroll={legs=true}}] run function medabots_server:give_items/medaparts/fancyroll/bubuhip
+execute if entity @s[scores={BuyMedapart=89},advancements={medabots_server:get_all_medabots/wave_1/fancyroll={legs=true}}] run function medabots_server:give_items/medaparts/fancyroll/babuhip
 execute if entity @s[scores={BuyMedapart=90},advancements={medabots_server:get_all_medabots/wave_1/fancyroll={left_arm=true}}] run function medabots_server:give_items/medaparts/fancyroll/letbomb
 execute if entity @s[scores={BuyMedapart=91},advancements={medabots_server:get_all_medabots/wave_1/fancyroll={right_arm=true}}] run function medabots_server:give_items/medaparts/fancyroll/magicalbit
-execute if entity @s[scores={BuyMedapart=92},advancements={medabots_server:get_all_medabots/wave_1/fancyroll={head=true}}] run function medabots_server:give_items/medaparts/fancyroll/palrunmannor
+execute if entity @s[scores={BuyMedapart=92},advancements={medabots_server:get_all_medabots/wave_1/fancyroll={head=true}}] run function medabots_server:give_items/medaparts/fancyroll/palrunmanner
 execute if entity @s[scores={BuyMedapart=93},advancements={medabots_server:get_all_medabots/wave_1/flame_tisala={legs=true}}] run function medabots_server:give_items/medaparts/flame_tisala/sala_tail
 execute if entity @s[scores={BuyMedapart=94},advancements={medabots_server:get_all_medabots/wave_1/flame_tisala={left_arm=true}}] run function medabots_server:give_items/medaparts/flame_tisala/sala_arm
 execute if entity @s[scores={BuyMedapart=95},advancements={medabots_server:get_all_medabots/wave_1/flame_tisala={right_arm=true}}] run function medabots_server:give_items/medaparts/flame_tisala/sala_hand
@@ -108,7 +108,7 @@ execute if entity @s[scores={BuyMedapart=107},advancements={medabots_server:get_
 execute if entity @s[scores={BuyMedapart=108},advancements={medabots_server:get_all_medabots/wave_1/god_emperor={head=true}}] run function medabots_server:give_items/medaparts/god_emperor/death_break
 execute if entity @s[scores={BuyMedapart=109},advancements={medabots_server:get_all_medabots/wave_1/grade_kabuki={legs=true}}] run function medabots_server:give_items/medaparts/grade_kabuki/flower_road
 execute if entity @s[scores={BuyMedapart=110},advancements={medabots_server:get_all_medabots/wave_1/grade_kabuki={left_arm=true}}] run function medabots_server:give_items/medaparts/grade_kabuki/acting
-execute if entity @s[scores={BuyMedapart=111},advancements={medabots_server:get_all_medabots/wave_1/grade_kabuki={right_arm=true}}] run function medabots_server:give_items/medaparts/grade_kabuki/dicider
+execute if entity @s[scores={BuyMedapart=111},advancements={medabots_server:get_all_medabots/wave_1/grade_kabuki={right_arm=true}}] run function medabots_server:give_items/medaparts/grade_kabuki/decider
 execute if entity @s[scores={BuyMedapart=112},advancements={medabots_server:get_all_medabots/wave_1/grade_kabuki={head=true}}] run function medabots_server:give_items/medaparts/grade_kabuki/free_hair
 execute if entity @s[scores={BuyMedapart=113},advancements={medabots_server:get_all_medabots/wave_1/hellphoenix={legs=true}}] run function medabots_server:give_items/medaparts/hellphoenix/red_tail
 execute if entity @s[scores={BuyMedapart=114},advancements={medabots_server:get_all_medabots/wave_1/hellphoenix={left_arm=true}}] run function medabots_server:give_items/medaparts/hellphoenix/flame_gun
@@ -138,7 +138,7 @@ execute if entity @s[scores={BuyMedapart=137},advancements={medabots_server:get_
 execute if entity @s[scores={BuyMedapart=138},advancements={medabots_server:get_all_medabots/wave_1/king_pharaoh={left_arm=true}}] run function medabots_server:give_items/medaparts/king_pharaoh/dark_hall
 execute if entity @s[scores={BuyMedapart=139},advancements={medabots_server:get_all_medabots/wave_1/king_pharaoh={right_arm=true}}] run function medabots_server:give_items/medaparts/king_pharaoh/black_hall
 execute if entity @s[scores={BuyMedapart=140},advancements={medabots_server:get_all_medabots/wave_1/king_pharaoh={head=true}}] run function medabots_server:give_items/medaparts/king_pharaoh/grand_bomb
-execute if entity @s[scores={BuyMedapart=141},advancements={medabots_server:get_all_medabots/wave_1/knight_armor={legs=true}}] run function medabots_server:give_items/medaparts/knight_armor/troyan_horse
+execute if entity @s[scores={BuyMedapart=141},advancements={medabots_server:get_all_medabots/wave_1/knight_armor={legs=true}}] run function medabots_server:give_items/medaparts/knight_armor/trojan_horse
 execute if entity @s[scores={BuyMedapart=142},advancements={medabots_server:get_all_medabots/wave_1/knight_armor={left_arm=true}}] run function medabots_server:give_items/medaparts/knight_armor/greatshield
 execute if entity @s[scores={BuyMedapart=143},advancements={medabots_server:get_all_medabots/wave_1/knight_armor={right_arm=true}}] run function medabots_server:give_items/medaparts/knight_armor/knightshield
 execute if entity @s[scores={BuyMedapart=144},advancements={medabots_server:get_all_medabots/wave_1/knight_armor={head=true}}] run function medabots_server:give_items/medaparts/knight_armor/clearshield
@@ -196,7 +196,7 @@ execute if entity @s[scores={BuyMedapart=195},advancements={medabots_server:get_
 execute if entity @s[scores={BuyMedapart=196},advancements={medabots_server:get_all_medabots/wave_1/poison_scorpi={head=true}}] run function medabots_server:give_items/medaparts/poison_scorpi/scorpion_dog
 execute if entity @s[scores={BuyMedapart=197},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={legs=true}}] run function medabots_server:give_items/medaparts/potato_insect/caterpie
 execute if entity @s[scores={BuyMedapart=198},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={left_arm=true}}] run function medabots_server:give_items/medaparts/potato_insect/attenderskin
-execute if entity @s[scores={BuyMedapart=199},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={right_arm=true}}] run function medabots_server:give_items/medaparts/potato_insect/ragingskin
+execute if entity @s[scores={BuyMedapart=199},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={right_arm=true}}] run function medabots_server:give_items/medaparts/potato_insect/rangingskin
 execute if entity @s[scores={BuyMedapart=200},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={head=true}}] run function medabots_server:give_items/medaparts/potato_insect/changedress
 execute if entity @s[scores={BuyMedapart=201},advancements={medabots_server:get_all_medabots/wave_1/pretty_prime={legs=true}}] run function medabots_server:give_items/medaparts/pretty_prime/temple_master
 execute if entity @s[scores={BuyMedapart=202},advancements={medabots_server:get_all_medabots/wave_1/pretty_prime={left_arm=true}}] run function medabots_server:give_items/medaparts/pretty_prime/shineshield

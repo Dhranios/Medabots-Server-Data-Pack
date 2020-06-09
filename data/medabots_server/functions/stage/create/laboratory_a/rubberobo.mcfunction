@@ -97,18 +97,18 @@ execute positioned -1740 44 -290 run function medabots_server:set_blocks/action_
 execute positioned -1739 44 -290 run function medabots_server:set_blocks/action_floor/cannon/tripwire/south/delay_4/power_0
 execute positioned -1740 44 -300 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
 execute positioned -1739 44 -300 run function medabots_server:set_blocks/action_floor/guard/medium/power_0
-execute positioned -1775 44 -264 run function medabots_server:set_blocks/spring_wall/north/delay_1/power_0
-execute positioned -1777 44 -266 run function medabots_server:set_blocks/spring_wall/north/delay_1/power_0
-execute positioned -1779 44 -268 run function medabots_server:set_blocks/spring_wall/north/delay_1/power_0
-execute positioned -1780 44 -272 run function medabots_server:set_blocks/spring_wall/east/delay_1/power_0
-execute positioned -1778 44 -274 run function medabots_server:set_blocks/spring_wall/east/delay_1/power_0
-execute positioned -1776 44 -276 run function medabots_server:set_blocks/spring_wall/east/delay_1/power_0
-execute positioned -1770 44 -277 run function medabots_server:set_blocks/spring_wall/south/delay_1/power_0
-execute positioned -1768 44 -275 run function medabots_server:set_blocks/spring_wall/south/delay_1/power_0
-execute positioned -1766 44 -273 run function medabots_server:set_blocks/spring_wall/south/delay_1/power_0
-execute positioned -1765 44 -269 run function medabots_server:set_blocks/spring_wall/west/delay_1/power_0
-execute positioned -1767 44 -267 run function medabots_server:set_blocks/spring_wall/west/delay_1/power_0
-execute positioned -1769 44 -265 run function medabots_server:set_blocks/spring_wall/west/delay_1/power_0
+execute positioned -1775 44 -264 run function medabots_server:set_blocks/spring_wall/north/delay_2/power_0
+execute positioned -1777 44 -266 run function medabots_server:set_blocks/spring_wall/north/delay_2/power_0
+execute positioned -1779 44 -268 run function medabots_server:set_blocks/spring_wall/north/delay_2/power_0
+execute positioned -1780 44 -272 run function medabots_server:set_blocks/spring_wall/east/delay_2/power_0
+execute positioned -1778 44 -274 run function medabots_server:set_blocks/spring_wall/east/delay_2/power_0
+execute positioned -1776 44 -276 run function medabots_server:set_blocks/spring_wall/east/delay_2/power_0
+execute positioned -1770 44 -277 run function medabots_server:set_blocks/spring_wall/south/delay_2/power_0
+execute positioned -1768 44 -275 run function medabots_server:set_blocks/spring_wall/south/delay_2/power_0
+execute positioned -1766 44 -273 run function medabots_server:set_blocks/spring_wall/south/delay_2/power_0
+execute positioned -1765 44 -269 run function medabots_server:set_blocks/spring_wall/west/delay_2/power_0
+execute positioned -1767 44 -267 run function medabots_server:set_blocks/spring_wall/west/delay_2/power_0
+execute positioned -1769 44 -265 run function medabots_server:set_blocks/spring_wall/west/delay_2/power_0
 execute positioned -1740 44 -266 run function medabots_server:set_blocks/spring_wall/north/delay_10/power_1
 execute positioned -1760 44 -284 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_1
 execute positioned -1760 44 -285 run function medabots_server:set_blocks/spring_wall/west/delay_10/power_1
@@ -128,7 +128,7 @@ execute positioned -1753 44 -252 run function medabots_server:set_blocks/pot/can
 execute positioned -1751 44 -254 run function medabots_server:set_blocks/pot
 # Medapart pot
 execute positioned -1750 44 -254 run function medabots_server:set_blocks/pot
-execute positioned -1750 44 -254 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:10,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.magicalcard_magitech"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.confuse"}','{"italic":false,"color":"white","translate":"medabots_server:move.confuse.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"6"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"80"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.magicalcard"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.magicalcard_magitech.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:magicalcard_magitech",gender:0b,move:"confuse",part:"head",armor:80,power:20,uses:6,activated:0b,version:1}}}}
+execute positioned -1750 44 -254 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:fishing_rod",Count:1b,tag:{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:10,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.magicalcard_magitech"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.confuse"}','{"italic":false,"color":"white","translate":"medabots_server:move.confuse.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"6"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"80"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.magicalcard"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.magicalcard_magitech.model"}']},medabots_server:{stage_item:1b,id:"medabots_server:magicalcard_magitech",gender:0b,move:"confuse",part:"head",armor:80,charge:60,power:20,uses:6,activated:0b,version:1}}}}
 execute positioned -1749 44 -253 run function medabots_server:set_blocks/pot
 execute positioned -1750 44 -252 run function medabots_server:set_blocks/pot/bomb/delay_5
 execute positioned -1754 44 -282 run function medabots_server:set_blocks/pot

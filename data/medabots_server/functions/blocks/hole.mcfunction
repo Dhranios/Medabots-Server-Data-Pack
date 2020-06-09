@@ -4,7 +4,7 @@ execute if entity @s[tag=dead] run function medabots_server:blocks/put_block_bac
 # Countdown punching
 scoreboard players remove @s[scores={Time=1..}] Time 1
 scoreboard players remove @s[scores={Time=..-1}] Time 1
-execute positioned ~ ~-1 ~ if entity @e[tag=hostile,type=!minecraft:item,distance=..0.7] run scoreboard players remove @s[scores={Time=0}] Time 1
+execute positioned ~ ~-1 ~ if entity @e[tag=hostile,type=!minecraft:item,tag=!model_piece,distance=..0.7] run scoreboard players remove @s[scores={Time=0}] Time 1
 
 # Ambient sound
 execute if entity @s[scores={Time=0,Sound=0}] run playsound medabots_server:block.hole.ambient hostile @a ~ ~ ~ 0.2

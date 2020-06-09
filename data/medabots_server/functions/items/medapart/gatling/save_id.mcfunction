@@ -3,7 +3,7 @@ scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_s
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:aimflash_tripod"}}}]}] MedapartID 2
 scoreboard players set @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm",activated:1b,id:"medabots_server:sailor_multi_pateri_vulcan"}}}]}] MedapartID 3
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:blackbeetle_blackblaster"}}}]}] MedapartID 4
-scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:arcbeetle_ignition"}}}]}] MedapartID 5
+scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:arcbeetle_explode"}}}]}] MedapartID 5
 scoreboard players set @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head",activated:1b,id:"medabots_server:zant_zant_helmet"}}}]}] MedapartID 6
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:warbonnet_range_shooter"}}}]}] MedapartID 7
 scoreboard players set @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm",activated:1b,id:"medabots_server:metabee_sub_machie_gun"}}}]}] MedapartID 8

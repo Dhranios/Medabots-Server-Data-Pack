@@ -1,4 +1,4 @@
 function medabots_server:give_items/medaparts/dondoguu/dokan
-function medabots_server:give_items/medaparts/dondoguu/dohtattack
+function medabots_server:give_items/medaparts/dondoguu/dohtatack
 function medabots_server:give_items/medaparts/dondoguu/dohtack
 function medabots_server:give_items/medaparts/dondoguu/dogu

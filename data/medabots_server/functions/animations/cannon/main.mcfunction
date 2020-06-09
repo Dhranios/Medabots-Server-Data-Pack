@@ -4,6 +4,7 @@ execute if entity @s[tag=body,tag=!dying] run function medabots_server:animation
 execute if entity @s[tag=head,tag=!dying] run function medabots_server:animations/cannon/head
 execute if entity @s[tag=body,tag=dying] run function medabots_server:animations/cannon/death/body
 execute if entity @s[tag=head,tag=dying] run function medabots_server:animations/cannon/death/head
+tag @s remove cannon
 data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2

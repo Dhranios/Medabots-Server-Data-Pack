@@ -10,7 +10,7 @@ teleport @s[tag=sneak_pos,tag=guarding] ^.2 ^.26 ^ ~ ~
 
 # Equipped arms
 execute if entity @a[nbt={SelectedItemSlot:1},tag=this_medabot,limit=1,scores={State=1..2}] run tag @s add selected
-execute if entity @e[type=!minecraft:player,tag=this_medabot,limit=1,tag=left_arm_selected] run tag @s add selected
+execute if entity @e[type=minecraft:skeleton,tag=this_medabot,limit=1,tag=left_arm_selected] run tag @s add selected
 data merge entity @s[tag=!selected,tag=was_selected] {Pose:{Head:[0.0f,0.0f,0.001f]}}
 
 # Look up/down

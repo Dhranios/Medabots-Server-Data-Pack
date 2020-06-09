@@ -1,2 +1,3 @@
 function medabots_server:set_blocks/mirror
-summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.mirror"}',Tags:["mirror","45"],Invisible:1b,NoGravity:1b,Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:glass_pane",Count:1b}],Rotation:[45.0f,0.0f]}
+data modify entity @e[tag=mirror,distance=..0.7,limit=1] Pose.Head[1] set value 45.0f
+tag @e[tag=mirror,distance=..0.7,limit=1] add 45

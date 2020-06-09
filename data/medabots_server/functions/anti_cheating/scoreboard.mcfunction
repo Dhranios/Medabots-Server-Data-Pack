@@ -62,7 +62,6 @@ scoreboard objectives add GuardNr dummy
 scoreboard objectives add HeadArmor dummy
 scoreboard objectives add HeadDanger dummy
 scoreboard objectives add HeadPer dummy
-scoreboard objectives add HeadPower dummy
 scoreboard objectives add HeadUses dummy
 scoreboard objectives add HeadUsesDanger dummy
 scoreboard objectives add HeadUsesPer dummy
@@ -93,7 +92,6 @@ scoreboard objectives add LeftAmount dummy
 scoreboard objectives add LeftArmArmor dummy
 scoreboard objectives add LeftArmDanger dummy
 scoreboard objectives add LeftArmPer dummy
-scoreboard objectives add LeftArmPower dummy
 scoreboard objectives add LegsDefense dummy
 scoreboard objectives add LegsArmor dummy
 scoreboard objectives add LegsDanger dummy
@@ -114,6 +112,8 @@ scoreboard objectives add MedabotRotation dummy
 scoreboard objectives add Medaforce dummy
 scoreboard objectives add MedaforceTimer dummy
 scoreboard objectives add MedapartID dummy
+scoreboard objectives add MedapartPower dummy
+scoreboard objectives add MedapartSpeed dummy
 scoreboard objectives add MedapartType dummy
 scoreboard objectives add Message dummy
 scoreboard objectives add Minecart minecraft.custom:minecraft.minecart_one_cm
@@ -152,7 +152,6 @@ scoreboard objectives add ReactionTime dummy
 scoreboard objectives add RightArmArmor dummy
 scoreboard objectives add RightArmDanger dummy
 scoreboard objectives add RightArmPer dummy
-scoreboard objectives add RightArmPower dummy
 scoreboard objectives add Rings dummy
 scoreboard objectives add RingsTotal dummy
 scoreboard objectives add RobattleMusic dummy

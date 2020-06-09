@@ -1,4 +1,8 @@
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run function medabots_server:items/medapart/transform/save_id/cpu
+
+execute store result score @s MedapartPower run data get entity @e[tag=this_medabot,limit=1] ArmorItems[3].tag.medabots_server.power
+execute store result score @s MedapartSpeed run data get entity @e[tag=this_medabot,limit=1] ArmorItems[3].tag.medabots_server.charge
+
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"anti_fly"}}}]}] run scoreboard players set @s MedapartType 1
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"anti_tank"}}}]}] run scoreboard players set @s MedapartType 2
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"auxilary_charge"}}}]}] run scoreboard players set @s MedapartType 3
@@ -38,3 +42,4 @@ execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_se
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"sword"}}}]}] run scoreboard players set @s MedapartType 37
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run scoreboard players set @s MedapartType 38
 execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"wave"}}}]}] run scoreboard players set @s MedapartType 39
+execute if entity @e[tag=this_medabot,limit=1,nbt={ArmorItems:[{tag:{medabots_server:{move:"beam"}}}]}] run scoreboard players set @s MedapartType 40

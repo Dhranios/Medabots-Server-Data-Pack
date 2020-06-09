@@ -109,6 +109,7 @@ execute if entity @s[scores={MedapartType=36}] run function medabots_server:item
 execute if entity @s[scores={MedapartType=37}] run function medabots_server:items/medapart/sword
 execute if entity @s[scores={MedapartType=38}] run function medabots_server:items/medapart/transform
 execute if entity @s[scores={MedapartType=39}] run function medabots_server:items/medapart/wave
+execute if entity @s[scores={MedapartType=40}] run function medabots_server:items/medapart/beam
 execute if entity @s[scores={SelfDestruct=1..}] run function medabots_server:items/medapart/self_destruct
 
 # Forget the part

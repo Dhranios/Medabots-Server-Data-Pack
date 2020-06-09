@@ -2,7 +2,7 @@ execute store result score #temp DialogNr run scoreboard players get @s DialogNr
 execute as @a[scores={DialogNr=1..}] if score @s DialogNr = #temp DialogNr run tag @s add this_dialog
 execute if entity @a[tag=this_dialog] run tag @s add player_is_here
 execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model,tag=!player_is_here] run scoreboard players operation #temp MedabotNr = @s MedabotNr
-execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model,tag=!player_is_here] as @e[scores={MedabotNr=1..},tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run kill @s
+execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model,tag=!player_is_here] as @e[scores={MedabotNr=1..},tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run tag @s add dead
 execute if entity @s[scores={MedabotNr=1..},tag=!medabot_model,tag=!player_is_here] as @e[scores={MedabotNr=1..},tag=medabot_model] if score @s MedabotNr > #temp MedabotNr run scoreboard players remove @s MedabotNr 1
 scoreboard players reset #temp MedabotNr
 scoreboard players reset #temp DialogNr

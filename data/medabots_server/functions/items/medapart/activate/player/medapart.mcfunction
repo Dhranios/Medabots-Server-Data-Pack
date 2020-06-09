@@ -1,5 +1,6 @@
 # Save which medapart is used, if it changes form
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"anti_fly"}}}}] run function medabots_server:items/medapart/anti_fly/save_id
+execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"beam"}}}}] run function medabots_server:items/medapart/beam/save_id
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"break"}}}}] run function medabots_server:items/medapart/break/save_id
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"falling"}}}}] run function medabots_server:items/medapart/falling/save_id
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"gatling"}}}}] run function medabots_server:items/medapart/gatling/save_id
@@ -13,6 +14,9 @@ execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"rifle"}}}}] 
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"sacrifice"}}}}] run function medabots_server:items/medapart/sacrifice/save_id
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"sword"}}}}] run function medabots_server:items/medapart/sword/save_id
 execute if entity @s[nbt={SelectedItem:{tag:{medabots_server:{move:"transform"}}}}] run function medabots_server:items/medapart/transform/save_id/player
+
+execute store result score @s MedapartPower run data get entity @s SelectedItem.tag.medabots_server.power
+execute store result score @s MedapartSpeed run data get entity @s SelectedItem.tag.medabots_server.charge
 
 # Activate left arm
 scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{move:"anti_fly"}}}}] MedapartType 1
@@ -54,3 +58,4 @@ scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{move:"status_
 scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{move:"sword"}}}}] MedapartType 37
 scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{move:"transform"}}}}] MedapartType 38
 scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{move:"wave"}}}}] MedapartType 39
+scoreboard players set @s[nbt={SelectedItem:{tag:{medabots_server:{move:"beam"}}}}] MedapartType 40

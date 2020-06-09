@@ -18,7 +18,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:fancyroll_palrunmannor\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:fancyroll_palrunmanner\"}}"
                     }
                 ]
             }
@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:fancyroll_bubuhip\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:fancyroll_babuhip\"}}"
                     }
                 ]
             }

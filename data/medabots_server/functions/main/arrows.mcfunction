@@ -7,11 +7,13 @@ execute store result score @s OtherZ run scoreboard players get @s MotionZ
 tag @s[nbt={inGround:1b}] add in_ground
 
 # Make the shooting attacks do something
+data merge entity @s[tag=!beam,nbt={CustomPotionEffects:[{Id:18b,Amplifier:9b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:'{"translate":"medabots_server:move.beam"}',Tags:["beam"]}
 data merge entity @s[tag=!anti_fly,nbt={CustomPotionEffects:[{Id:18b,Amplifier:8b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:'{"translate":"medabots_server:move.anti_fly"}',Tags:["anti_fly"]}
 data merge entity @s[tag=!ultra_shot,nbt={CustomPotionEffects:[{Id:18b,Amplifier:4b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:'{"translate":"medabots_server:move.kabuto"}',Tags:["ultra_shot"]}
 data merge entity @s[tag=!missile,nbt={CustomPotionEffects:[{Id:18b,Amplifier:3b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:'{"translate":"medabots_server:move.missile"}',Tags:["missile"]}
 data merge entity @s[tag=!napalm,nbt={CustomPotionEffects:[{Id:18b,Amplifier:1b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:'{"translate":"medabots_server:move.napalm"}',Tags:["napalm"]}
 data merge entity @s[tag=!laser,nbt={CustomPotionEffects:[{Id:18b,Amplifier:2b,Duration:0,Ambient:1b,ShowParticles:0b}]}] {CustomName:'{"translate":"medabots_server:move.laser"}',Tags:["laser"]}
+execute if entity @s[tag=beam] run function medabots_server:items/medapart/beam/arrow
 execute if entity @s[tag=anti_fly] run function medabots_server:items/medapart/anti_fly/arrow
 execute if entity @s[tag=ultra_shot] run function medabots_server:items/medapart/ultra_shot/arrow
 execute if entity @s[tag=missile] run function medabots_server:items/medapart/missile/arrow

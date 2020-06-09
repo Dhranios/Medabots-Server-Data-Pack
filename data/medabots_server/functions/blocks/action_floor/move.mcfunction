@@ -2,6 +2,7 @@ execute if entity @s[tag=!no_ticking] run function medabots_server:blocks/action
 
 scoreboard players add @s Dialog 1
 tag @s[scores={Dialog=50}] add no_ticking
+execute if entity @s[scores={Dialog=51},tag=cannon] positioned ~ ~0.1 ~ align y run teleport @s ~ ~ ~
 tag @s[scores={Dialog=70}] remove no_ticking
 tag @s[scores={Dialog=70}] remove action_floor_moving
 data merge entity @s[scores={Dialog=70}] {Invulnerable:0b}

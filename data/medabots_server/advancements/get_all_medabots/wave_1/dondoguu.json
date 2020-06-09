@@ -38,7 +38,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:dondoguu_dohtattack\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:dondoguu_dohtatack\"}}"
                     }
                 ]
             }

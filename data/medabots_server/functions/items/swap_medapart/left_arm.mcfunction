@@ -1,5 +1,4 @@
 execute store result score @s MaxLeftArmArmor run data get entity @s SelectedItem.tag.medabots_server.armor
-execute store result score @s LeftArmPower run data get entity @s SelectedItem.tag.medabots_server.power
 
 scoreboard players operation @s LeftArmArmor = @s LeftArmPer
 scoreboard players operation @s LeftArmArmor *= @s MaxLeftArmArmor

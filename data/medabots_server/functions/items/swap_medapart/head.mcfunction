@@ -1,6 +1,5 @@
 execute store result score @s MaxHeadUses run data get entity @s SelectedItem.tag.medabots_server.uses
 execute store result score @s MaxHeadArmor run data get entity @s SelectedItem.tag.medabots_server.armor
-execute store result score @s HeadPower run data get entity @s SelectedItem.tag.medabots_server.power
 
 scoreboard players operation @s HeadArmor = @s HeadPer
 scoreboard players operation @s HeadArmor *= @s MaxHeadArmor

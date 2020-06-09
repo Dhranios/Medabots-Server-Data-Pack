@@ -11,7 +11,7 @@ execute if entity @s[tag=blue_floor_switch] run function medabots_server:blocks/
 tag @s[tag=trigger] remove trigger
 
 # Custom stage object powering
-execute if entity @s[tag=custom_stage] unless entity @s[scores={HomeX=0,HomeY=0,HomeZ=0}] run function medabots_server:blocks/floor_switch/custom_stage
+execute if entity @s[tag=custom_stage,scores={Time=1..}] unless entity @s[scores={HomeX=0,HomeY=0,HomeZ=0}] run function medabots_server:blocks/floor_switch/custom_stage
 
 # Remove when cleaning up stage
 execute if entity @s[tag=dead] run function medabots_server:blocks/floor_switch/clean_up

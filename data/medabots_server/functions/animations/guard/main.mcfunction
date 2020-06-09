@@ -8,7 +8,10 @@ execute if entity @s[tag=body,tag=dying] run function medabots_server:animations
 execute if entity @s[tag=hammer,tag=dying] run function medabots_server:animations/guard/death/hammer
 execute if entity @s[tag=front_legs,tag=dying] run function medabots_server:animations/guard/death/front_legs
 execute if entity @s[tag=back_legs,tag=dying] run function medabots_server:animations/guard/death/back_legs
-data merge entity @s {Fire:2s}
+tag @s remove guard
 tag @s remove walking
+tag @s remove hurt
+tag @s remove attack
+data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2

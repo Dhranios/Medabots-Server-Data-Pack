@@ -12,9 +12,9 @@ scoreboard players operation @e[tag=model_piece,tag=new,limit=1] MedabotNr = @s 
 scoreboard players operation #temp_3 Time = #temp_2 Time
 execute if score #temp_3 Time matches 1.. as @e[tag=model_piece,tag=new,limit=1] run function medabots_server:animations/medabot/dump_previous_leg_offsets
 scoreboard players reset #temp_3 Time
-execute as @e[tag=model_piece,tag=new,limit=1] store result score @s LeftAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.leg_offset[0].l
-execute as @e[tag=model_piece,tag=new,limit=1] store result score @s UpAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.leg_offset[0].u
-execute as @e[tag=model_piece,tag=new,limit=1] store result score @s ForwardAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.leg_offset[0].f
+execute as @e[tag=model_piece,tag=new,limit=1] store result score @s LeftAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.legs[0].l
+execute as @e[tag=model_piece,tag=new,limit=1] store result score @s UpAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.legs[0].u
+execute as @e[tag=model_piece,tag=new,limit=1] store result score @s ForwardAmount run data get entity @s ArmorItems[3].tag.medabots_server.model_data.legs[0].f
 execute if entity @s[tag=left] run tag @e[tag=model_piece,tag=new,limit=1] add left
 execute if entity @s[tag=tinpet_editing] run tag @e[tag=model_piece,tag=new,limit=1] add tinpet_editing
 execute if entity @s[tag=cutscene] run tag @e[tag=model_piece,tag=new,limit=1] add cutscene

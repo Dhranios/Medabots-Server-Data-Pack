@@ -1,21 +1,20 @@
-execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1 ~-0.3 ~ run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
-execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.3 ~1 run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
-execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1 ~-0.3 ~ run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
-execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.3 ~-1 run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
-execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1 ~-0.3 ~ run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 1
-execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1 ~-0.3 ~ run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 1
-execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1 ~-0.3 ~ run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 1
-execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.3 ~1 run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 2
-execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.3 ~1 run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 2
-execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~-0.3 ~1 run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 2
-execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1 ~-0.3 ~ run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 3
-execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1 ~-0.3 ~ run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 3
-execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1 ~-0.3 ~ run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 3
-execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.3 ~-1 run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 4
-execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.3 ~-1 run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 4
-execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~-0.3 ~-1 run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 4
-execute if block ~ ~ ~ minecraft:piston[facing=east] positioned ~1 ~ ~ unless entity @e[tag=action_floor,scores={Time=1..},distance=..0.7] at @s run setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=true]
-execute if block ~ ~ ~ minecraft:piston[facing=south] positioned ~ ~ ~1 unless entity @e[tag=action_floor,scores={Time=1..},distance=..0.7] at @s run setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=true]
-execute if block ~ ~ ~ minecraft:piston[facing=west] positioned ~-1 ~ ~ unless entity @e[tag=action_floor,scores={Time=1..},distance=..0.7] at @s run setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=true]
-execute if block ~ ~ ~ minecraft:piston[facing=north] positioned ~ ~ ~-1 unless entity @e[tag=action_floor,scores={Time=1..},distance=..0.7] at @s run setblock ~ ~-1 ~ minecraft:observer[facing=down,powered=true]
-tag @s remove push
+execute if entity @s[tag=east] positioned ~1 ~-0.3 ~ run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
+execute if entity @s[tag=east] positioned ~1 ~-0.3 ~ run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 1
+execute if entity @s[tag=east] positioned ~1 ~-0.3 ~ run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 1
+execute if entity @s[tag=east] positioned ~1 ~-0.3 ~ run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 1
+execute if entity @s[tag=east] positioned ~1 ~ ~ as @e[tag=!bomb,tag=!round_stone,tag=!ice_block,tag=hostile,type=!minecraft:armor_stand,type=!minecraft:area_effect_cloud,tag=!action_floor_moving,distance=..0.7] at @s run teleport @s ~1 ~ ~
+execute if entity @s[tag=south] positioned ~ ~-0.3 ~1 run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
+execute if entity @s[tag=south] positioned ~ ~-0.3 ~1 run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 2
+execute if entity @s[tag=south] positioned ~ ~-0.3 ~1 run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 2
+execute if entity @s[tag=south] positioned ~ ~-0.3 ~1 run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 2
+execute if entity @s[tag=south] positioned ~ ~ ~1 as @e[tag=!bomb,tag=!round_stone,tag=!ice_block,tag=hostile,type=!minecraft:armor_stand,type=!minecraft:area_effect_cloud,tag=!action_floor_moving,distance=..0.7] at @s run teleport @s ~ ~ ~1
+execute if entity @s[tag=west] positioned ~-1 ~-0.3 ~ run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
+execute if entity @s[tag=west] positioned ~-1 ~-0.3 ~ run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 3
+execute if entity @s[tag=west] positioned ~-1 ~-0.3 ~ run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 3
+execute if entity @s[tag=west] positioned ~-1 ~-0.3 ~ run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 3
+execute if entity @s[tag=west] positioned ~-1 ~ ~ as @e[tag=!bomb,tag=!round_stone,tag=!ice_block,tag=hostile,type=!minecraft:armor_stand,type=!minecraft:area_effect_cloud,tag=!action_floor_moving,distance=..0.7] at @s run teleport @s ~-1 ~ ~
+execute if entity @s[tag=north] positioned ~ ~-0.3 ~-1 run tag @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] add spring_wall_pushed
+execute if entity @s[tag=north] positioned ~ ~-0.3 ~-1 run scoreboard players set @e[tag=round_stone,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 4
+execute if entity @s[tag=north] positioned ~ ~-0.3 ~-1 run scoreboard players set @e[tag=ice_block,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 4
+execute if entity @s[tag=north] positioned ~ ~-0.3 ~-1 run scoreboard players set @e[tag=bomb,type=minecraft:area_effect_cloud,distance=..1,scores={Moving=0}] Moving 4
+execute if entity @s[tag=north] positioned ~ ~ ~-1 as @e[tag=!bomb,tag=!round_stone,tag=!ice_block,tag=hostile,type=!minecraft:armor_stand,type=!minecraft:area_effect_cloud,tag=!action_floor_moving,distance=..0.7] at @s run teleport @s ~ ~ ~-1

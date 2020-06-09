@@ -1,3 +1,2 @@
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.spring_wall"}',Tags:["spring_wall","south"],Invisible:1b,Marker:1b,Rotation:[0.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:53}}]}
 function medabots_server:set_blocks/spring_wall
-setblock ~ ~ ~ minecraft:piston[facing=south,extended=false]
-tag @e[distance=..0.7,tag=spring_wall] add south

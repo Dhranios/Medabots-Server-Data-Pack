@@ -1,4 +1,4 @@
-function medabots_server:give_items/medaparts/fancyroll/bubuhip
+function medabots_server:give_items/medaparts/fancyroll/babuhip
 function medabots_server:give_items/medaparts/fancyroll/letbomb
 function medabots_server:give_items/medaparts/fancyroll/magicalbit
-function medabots_server:give_items/medaparts/fancyroll/palrunmannor
+function medabots_server:give_items/medaparts/fancyroll/palrunmanner

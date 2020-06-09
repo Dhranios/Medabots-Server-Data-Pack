@@ -1,7 +1,7 @@
 data modify entity @s Tags append from entity @e[type=!minecraft:armor_stand,tag=this_medabot,limit=1] Tags[]
-tag @s[tag=!not_yet] remove drowned
-tag @s[tag=!not_yet] remove crushed
-tag @s[tag=!not_yet] remove dying
+tag @s[tag=not_yet] remove drowned
+tag @s[tag=not_yet] remove crushed
+tag @s[tag=not_yet] remove dying
 tag @s[tag=!not_yet,tag=dying,tag=!drowned,tag=!crushed] add normal_death
 tag @s[tag=walking,tag=sneak_pos] add sneaking
 tag @s[tag=walking,tag=sneak_pos] remove walking
@@ -21,6 +21,7 @@ execute if entity @s[tag=left_arm,tag=!dying,tag=!tinpet_editing] run function m
 execute if entity @s[tag=right_arm,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/right_arm
 execute if entity @s[tag=chest,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/chest
 execute if entity @s[tag=head,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/head
+execute if entity @s[tag=source,tag=dying] run function medabots_server:animations/medabot/death/hips
 execute if entity @s[tag=hips,tag=dying] run function medabots_server:animations/medabot/death/hips
 execute if entity @s[tag=leg,tag=dying] run function medabots_server:animations/medabot/death/legs
 execute if entity @s[tag=tail,tag=dying] run function medabots_server:animations/medabot/death/hips
@@ -59,6 +60,7 @@ tag @s[tag=walking] remove walking
 tag @s[tag=running] remove running
 tag @s[tag=sneak_pos] remove sneak_pos
 tag @s[tag=sneaking] remove sneaking
+tag @s remove medabot
 data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2

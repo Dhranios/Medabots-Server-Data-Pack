@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:grade_kabuki_dicider\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:grade_kabuki_decider\"}}"
                     }
                 ]
             }

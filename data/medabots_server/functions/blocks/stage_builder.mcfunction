@@ -7,9 +7,8 @@ tag @e[distance=..0.7,tag=ice_block,tag=!action_floor] add dead
 tag @e[distance=..0.7,tag=rubberobo] add dead
 
 tag @s add me
-execute if entity @e[distance=..0.7,tag=!me,tag=!dead,tag=!model_piece,type=!minecraft:player,type=!minecraft:item,tag=!mr_referee,tag=!medabot_walk_detection,tag=!guard_walk_detection,tag=!mission] run tag @s add cancel
-execute if block ~ ~ ~ minecraft:iron_door[hinge=right] run tag @s add cancel
-execute if block ~ ~ ~ minecraft:quartz_pillar run tag @s add cancel
+execute if entity @e[distance=..0.7,tag=!me,tag=!dead,tag=!model_piece,type=!minecraft:player,type=!minecraft:item,type=!minecraft:experience_orb,tag=!mr_referee,tag=!medabot_walk_detection,tag=!guard_walk_detection,tag=!mission] run tag @s add cancel
+execute unless block ~ ~ ~ minecraft:air run tag @s add cancel
 
 # Remove
 kill @s

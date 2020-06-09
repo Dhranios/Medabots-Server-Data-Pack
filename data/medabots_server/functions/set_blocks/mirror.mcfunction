@@ -1,2 +1,2 @@
-setblock ~ ~ ~ minecraft:cut_sandstone
-setblock ~ ~1 ~ minecraft:barrier
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.mirror"}',Tags:["mirror"],Invisible:1b,NoGravity:1b,Marker:1b,Pose:{RightArm:[0.0f,0.0f,0.0f],Head:[001.0f,0.0f,0.0f]},HandItems:[{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:52}},{}],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:51}}]}
+fill ~ ~ ~ ~ ~1 ~ minecraft:black_stained_glass

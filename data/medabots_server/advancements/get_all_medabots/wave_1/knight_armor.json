@@ -48,7 +48,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:knight_armor_troyan_horse\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:knight_armor_trojan_horse\"}}"
                     }
                 ]
             }

@@ -1,3 +1,2 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.algae"}',Tags:["algae"],Duration:2147483647}
-fill ~ ~-2 ~ ~ ~-1 ~ minecraft:ice
-setblock ~ ~1 ~ minecraft:barrier
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.algae"}',Tags:["algae"],Invisible:1b,Marker:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:45}}]}
+fill ~ ~-2 ~ ~ ~-1 ~ minecraft:black_stained_glass_pane[waterlogged=true,east=true,north=true,south=true,west=true]
