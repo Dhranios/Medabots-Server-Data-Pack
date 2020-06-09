@@ -43,6 +43,11 @@ execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation @s
 execute if entity @s[scores={LegsArmor=1..}] run scoreboard players operation @s Damage /= #100 Constants
 execute if entity @s[scores={LegsArmor=1..}] run scoreboard players reset #temp Damage
 
+scoreboard players add @s[tag=destroyed] Damage 50
+scoreboard players add @s[tag=destroyed_strong] Damage 150
+tag @s remove destroyed
+tag @s remove destroyed_strong
+
 # Prevent earrape when not verified and when leaving stage
 execute if entity @s[nbt=!{HurtTime:0s},tag=!hurt] run function medabots_server:entities/medabot/hit_charge
 scoreboard players set @s[nbt={HurtTime:0s}] Damage 0

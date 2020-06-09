@@ -1,6 +1,11 @@
 # Initiazing scores and tags for new entities
 execute if entity @s[tag=!marked] run function medabots_server:main/mark_entities
 
+effect give @s[type=#medabots_server:undead,tag=destroyed,tag=!medabot] minecraft:instant_health 1 2 true
+effect give @s[type=!#medabots_server:undead,tag=destroyed,tag=!medabot] minecraft:instant_damage 1 2 true
+effect give @s[type=#medabots_server:undead,tag=destroyed_strong,tag=!medabot] minecraft:instant_health 1 3 true
+effect give @s[type=!#medabots_server:undead,tag=destroyed_strong,tag=!medabot] minecraft:instant_damage 1 3 true
+
 # Functions that run on every entity that is in combat
 execute if entity @s[tag=hostile] run function medabots_server:main/hostiles
 
@@ -66,3 +71,6 @@ execute if entity @s[tag=select_corps,tag=talk] run function medabots_server:dia
 tag @s[tag=talked,tag=!talk] remove talked
 tag @s[tag=!talked,tag=talk] add talked
 tag @s[tag=talk] remove talk
+
+tag @s remove destroyed
+tag @s remove destroyed_strong
