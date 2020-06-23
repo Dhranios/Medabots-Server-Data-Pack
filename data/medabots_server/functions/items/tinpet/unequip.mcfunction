@@ -22,8 +22,7 @@ execute if entity @s[tag=valid,scores={EditingTinpet=6}] run data modify entity 
 execute if entity @s[tag=valid,scores={EditingTinpet=7}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:7b}].tag.medabots_server.items.medal
 execute if entity @s[tag=valid,scores={EditingTinpet=8}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:8b}].tag.medabots_server.items.medal
 execute if entity @s[tag=valid,scores={EditingTinpet=9}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.items.medal
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.M set from entity @s UUIDMost
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.L set from entity @s UUIDLeast
+execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner set from entity @s UUID
 execute if entity @s[tag=valid] run tag @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] remove replacement
 tag @s remove valid
 
@@ -51,8 +50,7 @@ execute if entity @s[tag=valid,scores={EditingTinpet=6}] run data modify entity 
 execute if entity @s[tag=valid,scores={EditingTinpet=7}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:7b}].tag.medabots_server.items.head
 execute if entity @s[tag=valid,scores={EditingTinpet=8}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:8b}].tag.medabots_server.items.head
 execute if entity @s[tag=valid,scores={EditingTinpet=9}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.items.head
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.M set from entity @s UUIDMost
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.L set from entity @s UUIDLeast
+execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner set from entity @s UUID
 execute if entity @s[tag=valid] run tag @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] remove replacement
 tag @s remove valid
 
@@ -80,8 +78,7 @@ execute if entity @s[tag=valid,scores={EditingTinpet=6}] run data modify entity 
 execute if entity @s[tag=valid,scores={EditingTinpet=7}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:7b}].tag.medabots_server.items.right_arm
 execute if entity @s[tag=valid,scores={EditingTinpet=8}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:8b}].tag.medabots_server.items.right_arm
 execute if entity @s[tag=valid,scores={EditingTinpet=9}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.items.right_arm
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.M set from entity @s UUIDMost
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.L set from entity @s UUIDLeast
+execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner set from entity @s UUID
 execute if entity @s[tag=valid] run tag @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] remove replacement
 tag @s remove valid
 
@@ -109,8 +106,7 @@ execute if entity @s[tag=valid,scores={EditingTinpet=6}] run data modify entity 
 execute if entity @s[tag=valid,scores={EditingTinpet=7}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:7b}].tag.medabots_server.items.left_arm
 execute if entity @s[tag=valid,scores={EditingTinpet=8}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:8b}].tag.medabots_server.items.left_arm
 execute if entity @s[tag=valid,scores={EditingTinpet=9}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.items.left_arm
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.M set from entity @s UUIDMost
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.L set from entity @s UUIDLeast
+execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner set from entity @s UUID
 execute if entity @s[tag=valid] run tag @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] remove replacement
 tag @s remove valid
 
@@ -138,8 +134,7 @@ execute if entity @s[tag=valid,scores={EditingTinpet=6}] run data modify entity 
 execute if entity @s[tag=valid,scores={EditingTinpet=7}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:7b}].tag.medabots_server.items.legs
 execute if entity @s[tag=valid,scores={EditingTinpet=8}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:8b}].tag.medabots_server.items.legs
 execute if entity @s[tag=valid,scores={EditingTinpet=9}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.items.legs
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.M set from entity @s UUIDMost
-execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.L set from entity @s UUIDLeast
+execute if entity @s[tag=valid] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner set from entity @s UUID
 execute if entity @s[tag=valid] run tag @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] remove replacement
 tag @s remove valid
 

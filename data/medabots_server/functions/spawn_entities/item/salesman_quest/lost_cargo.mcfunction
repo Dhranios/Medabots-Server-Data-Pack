@@ -1,3 +1,2 @@
-summon minecraft:item ~ ~ ~ {Owner:{L:0l,M:0l},Item:{id:"minecraft:red_shulker_box",Count:1b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:salesman_quest",type:"lost_cargo"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.salesman_quest.lost_cargo"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
-data modify entity @e[distance=..0.7,type=minecraft:item,limit=1] Owner.L set from entity @s UUIDLeast
-data modify entity @e[distance=..0.7,type=minecraft:item,limit=1] Owner.M set from entity @s UUIDMost
+summon minecraft:item ~ ~ ~ {Item:{id:"minecraft:red_shulker_box",Count:1b,tag:{medabots_server:{stage_item:1b,id:"medabots_server:salesman_quest",type:"lost_cargo"},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.salesman_quest.lost_cargo"}'}}},Tags:["hostile","do_not_teleport"],Age:-32768s}
+data modify entity @e[distance=..0.7,type=minecraft:item,limit=1] Owner set from entity @s UUID

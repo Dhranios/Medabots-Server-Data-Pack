@@ -77,26 +77,6 @@ execute if block -1741 44 -206 minecraft:iron_trapdoor[open=true] run scoreboard
 execute if block -1741 44 -206 minecraft:black_stained_glass run scoreboard players set @e[x=-1756.5,y=44,z=-198.5,distance=..0.7,tag=action_floor,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if block -1741 44 -206 minecraft:iron_trapdoor[open=true] run scoreboard players set @e[x=-1750.5,y=44,z=-192.5,distance=..0.7,tag=action_floor,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if block -1741 44 -206 minecraft:black_stained_glass run scoreboard players set @e[x=-1750.5,y=44,z=-192.5,distance=..0.7,tag=action_floor,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
-execute if block -1680 44 -237 minecraft:air if block -1680 44 -237 minecraft:black_stained_glass run summon minecraft:tnt -1680 44 -237 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1680 44 -237 minecraft:air run setblock -1680 44 -237 minecraft:air
-execute if block -1721 44 -227 minecraft:air if block -1721 44 -227 minecraft:black_stained_glass run summon minecraft:tnt -1721 44 -227 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1721 44 -227 minecraft:air run setblock -1721 44 -227 minecraft:air
-execute if block -1719 44 -226 minecraft:air if block -1719 44 -226 minecraft:black_stained_glass run summon minecraft:tnt -1719 44 -226 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1719 44 -226 minecraft:air run setblock -1719 44 -226 minecraft:air
-execute if block -1718 44 -224 minecraft:air if block -1718 44 -224 minecraft:black_stained_glass run summon minecraft:tnt -1718 44 -224 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1718 44 -224 minecraft:air run setblock -1718 44 -224 minecraft:air
-execute if block -1729 44 -205 minecraft:air if block -1729 44 -205 minecraft:black_stained_glass run summon minecraft:tnt -1729 44 -205 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1729 44 -205 minecraft:air run setblock -1729 44 -205 minecraft:air
-execute if block -1753 44 -204 minecraft:air if block -1753 44 -204 minecraft:black_stained_glass run summon minecraft:tnt -1753 44 -204 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1753 44 -204 minecraft:air run setblock -1753 44 -204 minecraft:air
-execute if block -1732 44 -189 minecraft:air if block -1732 44 -189 minecraft:black_stained_glass run summon minecraft:tnt -1732 44 -189 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1732 44 -189 minecraft:air run setblock -1732 44 -189 minecraft:air
-execute if block -1717 44 -189 minecraft:air if block -1717 44 -189 minecraft:black_stained_glass run summon minecraft:tnt -1717 44 -189 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1717 44 -189 minecraft:air run setblock -1717 44 -189 minecraft:air
-execute if block -1680 44 -194 minecraft:air if block -1680 44 -194 minecraft:black_stained_glass run summon minecraft:tnt -1680 44 -194 {CustomName:'{"translate":"medabots_server:entity.bomb"}',Fuse:100s,Tags:["bomb","hostile","killerable"]}
-execute if block -1680 44 -194 minecraft:air run setblock -1680 44 -194 minecraft:air
-execute if block -1680 44 -188 minecraft:air if block -1680 44 -188 minecraft:black_stained_glass run summon minecraft:creeper -1680 44 -188 {Silent:1b,PersistenceRequired:1b,Attributes:[{Name:"generic.maxHealth",Base:100.0d}],Fuse:30s,CustomName:'{"translate":"medabots_server:entity.guard"}',Team:"StageEnemy",Tags:["hostile","killerable","guard","slow"],NoAI:1b,DeathLootTable:"medabots_server:entities/guard",AbsorptionAmount:10.0f,Health:100.0f}
-execute if block -1680 44 -188 minecraft:air run setblock -1680 44 -188 minecraft:air
 execute if block -1710 44 -209 minecraft:iron_trapdoor[open=true] if entity @s[x=-1709,y=44,z=-210,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_a/first_go_battle/0
 execute if entity @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=6,Medabot=0..,State=1..2}]
 execute as @e[x=-1764,y=41,z=-247,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 6

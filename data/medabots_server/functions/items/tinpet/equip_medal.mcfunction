@@ -41,8 +41,7 @@ execute if entity @s[scores={EditingTinpet=6}] run data modify entity @e[type=mi
 execute if entity @s[scores={EditingTinpet=7}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:7b}].tag.medabots_server.items.medal
 execute if entity @s[scores={EditingTinpet=8}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:8b}].tag.medabots_server.items.medal
 execute if entity @s[scores={EditingTinpet=9}] run data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Item set from entity @s Inventory[{Slot:-106b}].tag.medabots_server.items.medal
-data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.M set from entity @s UUIDMost
-data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner.L set from entity @s UUIDLeast
+data modify entity @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] Owner set from entity @s UUID
 tag @e[type=minecraft:item,tag=replacement,distance=..1,limit=1] remove replacement
 
 # Equip selected medal and show in Lore

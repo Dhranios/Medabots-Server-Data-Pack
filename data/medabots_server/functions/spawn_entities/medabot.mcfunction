@@ -1,5 +1,5 @@
 # Spawn base Medabot
-summon minecraft:skeleton ~ ~ ~ {Silent:1b,CustomNameVisisble:1b,ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"generic.maxHealth",Base:100.0d},{Name:"generic.attackDamage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/medabot",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["new_medabot","medabot","killerable","hostile"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
+summon minecraft:skeleton ~ ~ ~ {Silent:1b,CustomNameVisisble:1b,ArmorItems:[{},{},{},{id:"minecraft:structure_void",Count:1b}],HandItems:[{},{}],Attributes:[{Name:"minecraft:generic.max_health",Base:100.0d},{Name:"minecraft:generic.attack_damage",Base:0.0d}],Health:100.0f,DeathLootTable:"medabots_server:entities/medabot",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],HandDropChances:[0.0f,0.0f],PersistenceRequired:1b,Tags:["new_medabot","medabot","killerable","hostile"],AbsorptionAmount:100.0f,ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}]}
 scoreboard players set @e[tag=new_medabot,limit=1] Killer 0
 scoreboard players set @e[tag=new_medabot,limit=1] Charge 0
 scoreboard players set @e[tag=new_medabot,limit=1] Dialog 0
