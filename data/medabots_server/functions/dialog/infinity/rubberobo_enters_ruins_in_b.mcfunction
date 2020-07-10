@@ -8,13 +8,13 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1622 50 -526 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1621 50 -529 run function medabots_server:spawn_entities/cutscene/rubberobo
-execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand -1619 50 -529 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:658695}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:3478528}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:9175557}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
-execute at @s as @e[x=-1619,y=50,z=-529,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
+execute if entity @s[scores={Dialog=1}] positioned 44 59 46 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 45 59 43 run function medabots_server:spawn_entities/cutscene/rubberobo
+execute if entity @s[scores={Dialog=1}] run summon minecraft:armor_stand 47 59 43 {Invulnerable:1b,NoGravity:1b,ShowArms:1b,NoBasePlate:1b,DisabledSlots:2039583,Tags:["kid","cutscene","this_dialog"],Pose:{RightArm:[-15.0f,0.0f,0.001f],LeftArm:[-15.0f,0.0f,0.001f],RightLeg:[0.0f,0.0f,0.001f],LeftLeg:[0.0f,0.0f,0.001f]},Rotation:[90.0f,0.0f],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:658695}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:3478528}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:9175557}}},{id:"minecraft:player_head",Count:1b,tag:{}}]}
+execute at @s as @e[x=47,y=59,z=43,tag=kid,distance=..1] run scoreboard players operation @s DialogNr = #temp DialogNr
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -160 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 ~
-teleport @s[scores={Dialog=1}] -1620 50 -526 -180 0
+teleport @s[scores={Dialog=1}] 46 59 46 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_in_b.1"}]}
 tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_in_b.2"}]}
 tellraw @s[scores={Dialog=128}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.unknown","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_in_b.3"}]}
@@ -34,7 +34,7 @@ tellraw @s[scores={Dialog=456}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=488}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_in_b.13"}]}
 tellraw @s[scores={Dialog=576}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_in_b.14"}]}
 tellraw @s[scores={Dialog=608}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_ruins_in_b.15"}]}
-execute if entity @s[scores={Dialog=624}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1621 50 -572
+execute if entity @s[scores={Dialog=624}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 45 59 0
 execute if entity @s[scores={Dialog=624}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=824}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=824}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead

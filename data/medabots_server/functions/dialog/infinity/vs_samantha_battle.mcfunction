@@ -8,15 +8,15 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 35
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1951 51 -563 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1947 51 -560 run function medabots_server:spawn_entities/cutscene/peppercat
-execute if entity @s[scores={Dialog=1}] positioned -1936 51 -568 run function medabots_server:spawn_entities/cutscene/max
-execute if entity @s[scores={Dialog=1}] positioned -1949 51 -559 run function medabots_server:spawn_entities/cutscene/samantha
+execute if entity @s[scores={Dialog=1}] positioned 22 59 26 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 26 59 29 run function medabots_server:spawn_entities/cutscene/peppercat
+execute if entity @s[scores={Dialog=1}] positioned 37 59 21 run function medabots_server:spawn_entities/cutscene/max
+execute if entity @s[scores={Dialog=1}] positioned 24 59 30 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -52 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 65 ~
 execute if entity @s[scores={Dialog=1..178}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..178}] at @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1949 51 -564 0 0
+teleport @s[scores={Dialog=1}] 24 59 25 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.1"}]}
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.2"}]}
 tellraw @s[scores={Dialog=88}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.3"}]}
@@ -104,12 +104,12 @@ tellraw @s[scores={Dialog=2058}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2066}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.63"}]}
 tellraw @s[scores={Dialog=2090}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.64"}]}
 tellraw @s[scores={Dialog=2114}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.65"}]}
-execute if entity @s[scores={Dialog=2138}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
+execute if entity @s[scores={Dialog=2138}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 24 59 49
 execute if entity @s[scores={Dialog=2138}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2243}] run kill @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1]
 tellraw @s[scores={Dialog=2198}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.66"}]}
 tellraw @s[scores={Dialog=2206}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.peppercat","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.67"}]}
-execute if entity @s[scores={Dialog=2224}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
+execute if entity @s[scores={Dialog=2224}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 24 59 49
 execute if entity @s[scores={Dialog=2224}] run tag @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2329}] run kill @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=2243}] MusicType 35
@@ -120,7 +120,7 @@ tellraw @s[scores={Dialog=2275}] {"translate":"chat.type.text","with":[{"transla
 execute if entity @s[scores={Dialog=2283..2322}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=2283}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.71"}]}
 tellraw @s[scores={Dialog=2299}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_samantha_battle.72"}]}
-execute if entity @s[scores={Dialog=2323}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
+execute if entity @s[scores={Dialog=2323}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 24 59 49
 execute if entity @s[scores={Dialog=2323}] as @e[tag=samantha,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=2370}] run kill @e[tag=samantha,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=2370}] MusicType 1

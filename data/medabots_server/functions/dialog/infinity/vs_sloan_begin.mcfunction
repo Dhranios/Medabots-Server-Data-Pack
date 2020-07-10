@@ -8,15 +8,15 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 35
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1538 51 -366 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1540 51 -361 run function medabots_server:spawn_entities/cutscene/samantha
-execute if entity @s[scores={Dialog=1}] positioned -1542 51 -362 run function medabots_server:spawn_entities/cutscene/sloan
-execute if entity @s[scores={Dialog=1}] positioned -1538 51 -361 run function medabots_server:spawn_entities/cutscene/spyke
+execute if entity @s[scores={Dialog=1}] positioned 32 59 48 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 30 59 53 run function medabots_server:spawn_entities/cutscene/samantha
+execute if entity @s[scores={Dialog=1}] positioned 28 59 52 run function medabots_server:spawn_entities/cutscene/sloan
+execute if entity @s[scores={Dialog=1}] positioned 32 59 53 run function medabots_server:spawn_entities/cutscene/spyke
 execute if entity @s[scores={Dialog=1..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=samantha,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..543}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..783}] at @e[tag=sloan,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=sloan,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..495}] at @e[tag=spyke,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=spyke,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1540 51 -367 0 0
+teleport @s[scores={Dialog=1}] 30 59 47 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_sloan_begin.1"}]}
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_sloan_begin.2"}]}
 tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_sloan_begin.3"}]}
@@ -44,9 +44,9 @@ tellraw @s[scores={Dialog=680}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=712}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_sloan_begin.21"}]}
 tellraw @s[scores={Dialog=744}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_sloan_begin.22"}]}
 tellraw @s[scores={Dialog=768}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_sloan_begin.23"}]}
-execute if entity @s[scores={Dialog=784}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1540 51 -319
-execute if entity @s[scores={Dialog=784}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1540 51 -319
-execute if entity @s[scores={Dialog=784}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1540 51 -319
+execute if entity @s[scores={Dialog=784}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 30 59 95
+execute if entity @s[scores={Dialog=784}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 30 59 95
+execute if entity @s[scores={Dialog=784}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 30 59 95
 execute if entity @s[scores={Dialog=784}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=784}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=784}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking

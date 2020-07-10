@@ -1,0 +1,20 @@
+{
+    "type": "medabots_server:eternal_moondown",
+    "generator": {
+        "settings": {
+            "lakes": false,
+            "features": false,
+            "biome": "minecraft:basalt_deltas",
+            "structures": {
+                "structures": {}
+            },
+            "layers": [
+                {
+                    "height": 1,
+                    "block": "minecraft:basalt"
+                }
+            ]
+        },
+        "type": "minecraft:flat"
+    }
+}

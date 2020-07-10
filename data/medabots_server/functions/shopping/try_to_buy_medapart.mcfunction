@@ -196,7 +196,7 @@ execute if entity @s[scores={BuyMedapart=195},advancements={medabots_server:get_
 execute if entity @s[scores={BuyMedapart=196},advancements={medabots_server:get_all_medabots/wave_1/poison_scorpi={head=true}}] run function medabots_server:give_items/medaparts/poison_scorpi/scorpion_dog
 execute if entity @s[scores={BuyMedapart=197},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={legs=true}}] run function medabots_server:give_items/medaparts/potato_insect/caterpie
 execute if entity @s[scores={BuyMedapart=198},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={left_arm=true}}] run function medabots_server:give_items/medaparts/potato_insect/attenderskin
-execute if entity @s[scores={BuyMedapart=199},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={right_arm=true}}] run function medabots_server:give_items/medaparts/potato_insect/rangingskin
+execute if entity @s[scores={BuyMedapart=199},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={right_arm=true}}] run function medabots_server:give_items/medaparts/potato_insect/ragingskin
 execute if entity @s[scores={BuyMedapart=200},advancements={medabots_server:get_all_medabots/wave_1/potato_insect={head=true}}] run function medabots_server:give_items/medaparts/potato_insect/changedress
 execute if entity @s[scores={BuyMedapart=201},advancements={medabots_server:get_all_medabots/wave_1/pretty_prime={legs=true}}] run function medabots_server:give_items/medaparts/pretty_prime/temple_master
 execute if entity @s[scores={BuyMedapart=202},advancements={medabots_server:get_all_medabots/wave_1/pretty_prime={left_arm=true}}] run function medabots_server:give_items/medaparts/pretty_prime/shineshield

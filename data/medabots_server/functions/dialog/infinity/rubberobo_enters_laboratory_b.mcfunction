@@ -8,11 +8,11 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1728 50 -576 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1727 50 -579 run function medabots_server:spawn_entities/cutscene/rubberobo
+execute if entity @s[scores={Dialog=1}] positioned 32 59 57 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 33 59 54 run function medabots_server:spawn_entities/cutscene/rubberobo
 execute if entity @s[scores={Dialog=1..595}] at @e[tag=rubberobo,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..635}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1727 50 -575 -180 0
+teleport @s[scores={Dialog=1}] 33 59 58 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_laboratory_b.1"}]}
 tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_laboratory_b.2"}]}
 tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_laboratory_b.3"}]}
@@ -26,7 +26,7 @@ tellraw @s[scores={Dialog=380}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=428}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_laboratory_b.11"}]}
 tellraw @s[scores={Dialog=468}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_laboratory_b.12"}]}
 tellraw @s[scores={Dialog=500}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.rubberobo_enters_laboratory_b.13"}]}
-execute if entity @s[scores={Dialog=596}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1728 50 -604
+execute if entity @s[scores={Dialog=596}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 32 59 29
 execute if entity @s[scores={Dialog=596}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=713}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=713}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead

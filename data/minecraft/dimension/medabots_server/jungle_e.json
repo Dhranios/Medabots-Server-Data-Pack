@@ -1,0 +1,40 @@
+{
+    "type": "medabots_server:stage",
+    "generator": {
+        "settings": {
+            "lakes": false,
+            "features": false,
+            "biome": "minecraft:jungle",
+            "structures": {
+                "structures": {}
+            },
+            "layers": [
+                {
+                    "height": 1,
+                    "block": "minecraft:bedrock"
+                },
+                {
+                    "height": 47,
+                    "block": "minecraft:stone"
+                },
+                {
+                    "height": 4,
+                    "block": "minecraft:dirt"
+                },
+                {
+                    "height": 1,
+                    "block": "minecraft:grass_block"
+                },
+                {
+                    "height": 2,
+                    "block": "minecraft:jungle_wood"
+                },
+                {
+                    "height": 1,
+                    "block": "minecraft:jungle_leaves"
+                }
+            ]
+        },
+        "type": "minecraft:flat"
+    }
+}

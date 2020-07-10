@@ -8,13 +8,13 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 35
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1728 50 -574 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1726 50 -572 run function medabots_server:spawn_entities/cutscene/krosserdog
-execute if entity @s[scores={Dialog=1}] positioned -1727 50 -571 run function medabots_server:spawn_entities/cutscene/spyke
+execute if entity @s[scores={Dialog=1}] positioned 32 59 59 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 34 59 61 run function medabots_server:spawn_entities/cutscene/krosserdog
+execute if entity @s[scores={Dialog=1}] positioned 33 59 62 run function medabots_server:spawn_entities/cutscene/spyke
 execute if entity @s[scores={Dialog=1..851}] at @e[tag=spyke,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=spyke,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..851}] at @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..1087}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=spyke,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1727 50 -575 0 0
+teleport @s[scores={Dialog=1}] 33 59 58 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.spykes_insperation.1"}]}
 tellraw @s[scores={Dialog=8}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.spykes_insperation.2","with":[{"selector":"@s"}]}]}
 tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.spykes_insperation.3"}]}
@@ -43,9 +43,9 @@ tellraw @s[scores={Dialog=840}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=872}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.spykes_insperation.26"}]}
 tellraw @s[scores={Dialog=896}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.spykes_insperation.27"}]}
 tellraw @s[scores={Dialog=920}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.krosserdog","color":"green"},{"translate":"medabots_server:dialog.infinity.spykes_insperation.28"}]}
-execute if entity @s[scores={Dialog=952}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1727 50 -542
+execute if entity @s[scores={Dialog=952}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 33 59 91
 execute if entity @s[scores={Dialog=953}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=952}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1727 50 -542
+execute if entity @s[scores={Dialog=952}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 33 59 91
 execute if entity @s[scores={Dialog=952}] run tag @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1088}] as @e[tag=spyke,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=1092}] as @e[tag=krosserdog,tag=!medabot_model,tag=this_dialog,limit=1] run kill @s

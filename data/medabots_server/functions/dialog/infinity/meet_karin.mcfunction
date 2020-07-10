@@ -8,10 +8,10 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 36
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1540 51 -149 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1537 51 -149 run function medabots_server:spawn_entities/cutscene/neutranurse
-execute if entity @s[scores={Dialog=1}] positioned -1537 51 -151 run function medabots_server:spawn_entities/cutscene/karin
-teleport @s[scores={Dialog=1}] -1540 51 -151 -90 0
+execute if entity @s[scores={Dialog=1}] positioned 30 59 31 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 33 59 31 run function medabots_server:spawn_entities/cutscene/neutranurse
+execute if entity @s[scores={Dialog=1}] positioned 33 59 29 run function medabots_server:spawn_entities/cutscene/karin
+teleport @s[scores={Dialog=1}] 30 59 29 -90 0
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 90 ~
 execute if entity @s[scores={Dialog=1..953}] at @e[tag=karin,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=karin,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
@@ -34,14 +34,14 @@ tellraw @s[scores={Dialog=776}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=858}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_karin.17"}]}
 tellraw @s[scores={Dialog=874}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.neutranurse","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_karin.18"}]}
 tellraw @s[scores={Dialog=906}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.karin","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_karin.19"}]}
-execute if entity @s[scores={Dialog=954}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
+execute if entity @s[scores={Dialog=954}] as @e[tag=karin,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 63
 execute if entity @s[scores={Dialog=954}] run tag @e[tag=karin,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=954}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
+execute if entity @s[scores={Dialog=954}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 63
 execute if entity @s[scores={Dialog=954}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking
 execute if entity @s[scores={Dialog=990}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s remove walking
 execute if entity @s[scores={Dialog=990..1100}] at @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=neutranurse,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=990}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.neutranurse","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_karin.20"}]}
-execute if entity @s[scores={Dialog=1101}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
+execute if entity @s[scores={Dialog=1101}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 63
 execute if entity @s[scores={Dialog=1101}] as @e[tag=neutranurse,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking
 execute if entity @s[scores={Dialog=1106}] as @e[tag=karin,tag=this_dialog,limit=1] run kill @s
 tag @s[scores={Dialog=1217}] remove dialog_infinity_meet_karin

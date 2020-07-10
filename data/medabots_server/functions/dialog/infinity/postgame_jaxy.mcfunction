@@ -7,13 +7,13 @@ scoreboard players add @s Dialog 1
 scoreboard players set @s[scores={Dialog=1}] MusicType 41
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1997 51 -563 run function medabots_server:spawn_entities/cutscene/jaxy
+execute if entity @s[scores={Dialog=1}] positioned 20 59 18 run function medabots_server:spawn_entities/cutscene/jaxy
 execute if entity @s[scores={Dialog=1..95}] at @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1997 51 -560 -180 0
+teleport @s[scores={Dialog=1}] 20 59 21 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_jaxy.1","with":[{"selector":"@s"}]}]}
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_jaxy.2"}]}
 tellraw @s[scores={Dialog=64}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.jaxy","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_jaxy.3"}]}
-execute if entity @s[scores={Dialog=96}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -581
+execute if entity @s[scores={Dialog=96}] as @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 19 59 0
 execute if entity @s[scores={Dialog=96}] run tag @e[tag=jaxy,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 scoreboard players set @s[scores={Dialog=180}] KillStreak 2
 scoreboard players set @s[scores={Dialog=180}] MusicType 1

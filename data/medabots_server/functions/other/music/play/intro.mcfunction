@@ -97,7 +97,7 @@ playsound medabots_server:music.stage.arena.final_destination_2_intro music @s[s
 scoreboard players set @s[scores={MusicType=53}] Music 21
 advancement grant @s[scores={MusicType=53}] only medabots_server:special_items/jukebox/wave_1/final_destination_2
 playsound medabots_server:music.stage.boss.master_hand_and_crazy_hand_2_intro music @s[scores={MusicType=54}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=54}] Music 222
+scoreboard players set @s[scores={MusicType=54}] Music 232
 advancement grant @s[scores={MusicType=54}] only medabots_server:special_items/jukebox/wave_1/master_hand_smash_melee
 advancement grant @s[scores={MusicType=55}] only medabots_server:special_items/jukebox/wave_1/boss_mae
 advancement grant @s[scores={MusicType=56}] only medabots_server:special_items/jukebox/wave_0/mr_referee

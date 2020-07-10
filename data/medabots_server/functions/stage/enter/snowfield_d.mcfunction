@@ -1,2 +1,4 @@
-teleport @s[scores={Dialog=0,Verified=3}] -1572 51 -784 -180 0
+scoreboard players set @s[scores={Dialog=0,Verified=3}] PrevMusicType 0
+scoreboard players set @s[scores={Dialog=0,Verified=3}] Music 0
+execute in medabots_server:snowfield_d run teleport @s[scores={Dialog=0,Verified=3}] 30 59 31 -180 0
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}

@@ -8,11 +8,11 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 48
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1543 50 -576 run function medabots_server:spawn_entities/cutscene/peppercat
-execute if entity @s[scores={Dialog=1}] positioned -1543 50 -575 run function medabots_server:spawn_entities/cutscene/samantha
+execute if entity @s[scores={Dialog=1}] positioned 27 59 32 run function medabots_server:spawn_entities/cutscene/peppercat
+execute if entity @s[scores={Dialog=1}] positioned 27 59 33 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=1}] as @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 0 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s facing entity @e[tag=peppercat,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1541 50 -578 45 0
+teleport @s[scores={Dialog=1}] 29 59 30 45 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.1"}]}
 tellraw @s[scores={Dialog=8}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.2"}]}
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.3"}]}
@@ -24,8 +24,8 @@ tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=168}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.9"}]}
 tellraw @s[scores={Dialog=184}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.10"}]}
 tellraw @s[scores={Dialog=192}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.11"}]}
-execute if entity @s[scores={Dialog=200}] positioned -1540 50 -550 run function medabots_server:spawn_entities/cutscene/erika
-execute if entity @s[scores={Dialog=200}] positioned -1542 50 -550 run function medabots_server:spawn_entities/cutscene/koji
+execute if entity @s[scores={Dialog=200}] positioned 30 59 58 run function medabots_server:spawn_entities/cutscene/erika
+execute if entity @s[scores={Dialog=200}] positioned 28 59 58 run function medabots_server:spawn_entities/cutscene/koji
 execute if entity @s[scores={Dialog=200}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 0
 execute if entity @s[scores={Dialog=200}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=304}] run tag @e[tag=erika,tag=this_dialog,limit=1] remove walking
@@ -62,7 +62,7 @@ tellraw @s[scores={Dialog=1344}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1368}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.36"}]}
 tellraw @s[scores={Dialog=1424}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.37"}]}
 tellraw @s[scores={Dialog=1488}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.38"}]}
-execute if entity @s[scores={Dialog=1544}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1541 50 -549
+execute if entity @s[scores={Dialog=1544}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 59
 execute if entity @s[scores={Dialog=1544}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1565}] run tag @e[tag=erika,tag=this_dialog,limit=1] remove walking
 tellraw @s[scores={Dialog=1544}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.39"}]}
@@ -74,7 +74,7 @@ tellraw @s[scores={Dialog=1680}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1712}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.45"}]}
 tellraw @s[scores={Dialog=1744}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.46"}]}
 tellraw @s[scores={Dialog=1760}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.erika","color":"green"},{"translate":"medabots_server:dialog.infinity.peppercat_saved.47"}]}
-execute if entity @s[scores={Dialog=1784}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1541 50 -549
+execute if entity @s[scores={Dialog=1784}] as @e[tag=erika,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 59
 execute if entity @s[scores={Dialog=1784}] run tag @e[tag=erika,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1870}] run kill @e[tag=erika,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=1824}] MusicType 22

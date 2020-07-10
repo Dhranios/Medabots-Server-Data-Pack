@@ -8,15 +8,15 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/o
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1622 50 -526 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1621 50 -530 run function medabots_server:spawn_entities/cutscene/rubberobo
-execute if entity @s[scores={Dialog=1}] positioned -1621 50 -530 run tag @e[tag=rubberobo,tag=this_dialog,limit=1,distance=..0.7] add rubberobo_1
-execute if entity @s[scores={Dialog=1}] positioned -1619 50 -530 run function medabots_server:spawn_entities/cutscene/rubberobo
-execute if entity @s[scores={Dialog=1}] positioned -1619 50 -530 run tag @e[tag=rubberobo,tag=this_dialog,limit=1,distance=..0.7] add rubberobo_2
+execute if entity @s[scores={Dialog=1}] positioned 44 59 46 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 45 59 52 run function medabots_server:spawn_entities/cutscene/rubberobo
+execute if entity @s[scores={Dialog=1}] positioned 45 59 52 run tag @e[tag=rubberobo,tag=this_dialog,limit=1,distance=..0.7] add rubberobo_1
+execute if entity @s[scores={Dialog=1}] positioned 47 59 52 run function medabots_server:spawn_entities/cutscene/rubberobo
+execute if entity @s[scores={Dialog=1}] positioned 47 59 52 run tag @e[tag=rubberobo,tag=this_dialog,limit=1,distance=..0.7] add rubberobo_2
 execute if entity @s[scores={Dialog=1..1054}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=rubberobo_1,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=rubberobo_1,tag=this_dialog,limit=1] at @s facing entity @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..143}] at @e[tag=rubberobo_2,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=rubberobo_2,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1620 50 -526 -180 0
+teleport @s[scores={Dialog=1}] 46 59 46 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.other.ruins_in_b_fvbico.1"}]}
 tellraw @s[scores={Dialog=8}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.other.ruins_in_b_fvbico.2"}]}
 tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.ruins_in_b_fvbico.3"}]}
@@ -49,7 +49,7 @@ execute if entity @s[scores={Dialog=752}] as @e[tag=rubberobo_1,tag=this_dialog,
 tellraw @s[scores={Dialog=752}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.other.ruins_in_b_fvbico.24"}]}
 tellraw @s[scores={Dialog=800}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.other.ruins_in_b_fvbico.25"}]}
 tellraw @s[scores={Dialog=840}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.other.ruins_in_b_fvbico.26"}]}
-execute if entity @s[scores={Dialog=856}] as @e[tag=rubberobo,tag=this_dialog] at @s run teleport @s ~ ~ ~ facing -1621 50 -572
+execute if entity @s[scores={Dialog=856}] as @e[tag=rubberobo,tag=this_dialog] at @s run teleport @s ~ ~ ~ facing 45 59 0
 execute if entity @s[scores={Dialog=856}] as @e[tag=rubberobo,tag=this_dialog] run tag @s add running
 execute if entity @s[scores={Dialog=1055}] run teleport @e[tag=rubberobo,tag=this_dialog] ~ -100 ~
 execute if entity @s[scores={Dialog=1055}] run tag @e[tag=rubberobo,tag=this_dialog] add dead

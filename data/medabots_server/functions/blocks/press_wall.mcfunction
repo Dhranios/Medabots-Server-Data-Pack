@@ -3,36 +3,38 @@ execute if score @s[tag=!dying] PowerAmount >= @s PowerNeeded run tag @s add pow
 execute unless score @s[tag=!dying] PowerAmount >= @s PowerNeeded run tag @s remove powered
 
 # Extending and retracting
-execute if entity @s[tag=north,tag=powered,tag=!cannot_extend] run function medabots_server:blocks/press_wall/extend/north
-execute if entity @s[tag=south,tag=powered,tag=!cannot_extend] run function medabots_server:blocks/press_wall/extend/south
-execute if entity @s[tag=east,tag=powered,tag=!cannot_extend] run function medabots_server:blocks/press_wall/extend/east
-execute if entity @s[tag=west,tag=powered,tag=!cannot_extend] run function medabots_server:blocks/press_wall/extend/west
-execute if entity @s[tag=north,tag=!powered] run function medabots_server:blocks/press_wall/retract/north
-execute if entity @s[tag=south,tag=!powered] run function medabots_server:blocks/press_wall/retract/south
-execute if entity @s[tag=east,tag=!powered] run function medabots_server:blocks/press_wall/retract/east
-execute if entity @s[tag=west,tag=!powered] run function medabots_server:blocks/press_wall/retract/west
+scoreboard players operation #temp PressWallNr = @s PressWallNr
+execute as @e[type=minecraft:armor_stand,tag=press_wall,tag=second_half] if score @s PressWallNr = #temp PressWallNr run tag @s add this_press_wall
+execute if entity @s[tag=powered,tag=!cannot_extend] at @e[type=minecraft:armor_stand,tag=this_press_wall] run function medabots_server:blocks/press_wall/extend
+execute if entity @s[tag=!powered,scores={Time=1..}] at @e[type=minecraft:armor_stand,tag=this_press_wall] run function medabots_server:blocks/press_wall/retract
 
-# Needs to retract fully before being removed
-tag @s[tag=dead] add dying
-tag @s[tag=dead] remove powered
-tag @s[tag=dead] remove dead
-execute if entity @s[tag=dying,scores={Time=..0}] run fill ~ ~ ~ ~ ~3 ~ minecraft:air
-execute if entity @s[tag=dying,scores={Time=..0}] run fill ~ ~-1 ~ ~ ~-1 ~ minecraft:grass_block replace minecraft:dirt
-tag @s[tag=dying,scores={Time=..0}] add dead
+execute unless entity @s[tag=!powered,scores={Time=1..}] unless entity @s[tag=powered,tag=!cannot_extend,tag=!extending_blocked] run function medabots_server:blocks/press_wall/final_update
 
 # Takes time
-tag @s[scores={Time=10,Range=2},tag=powered] add cannot_extend
-tag @s[scores={Time=20,Range=3},tag=powered] add cannot_extend
-tag @s[scores={Time=30,Range=4},tag=powered] add cannot_extend
-tag @s[scores={Time=40,Range=5},tag=powered] add cannot_extend
-tag @s[scores={Time=50,Range=6},tag=powered] add cannot_extend
-tag @s[scores={Time=60,Range=7},tag=powered] add cannot_extend
-tag @s[scores={Time=70,Range=8},tag=powered] add cannot_extend
-tag @s[scores={Time=80,Range=9},tag=powered] add cannot_extend
-tag @s[scores={Time=90,Range=10},tag=powered] add cannot_extend
 scoreboard players add @s[tag=powered,tag=!cannot_extend,tag=!extending_blocked] Time 1
-scoreboard players remove @s[tag=dying] Time 1
-scoreboard players remove @s[scores={Time=1..},tag=!powered,tag=!dying] Time 1
+scoreboard players remove @s[scores={Time=1..},tag=!powered] Time 1
+tag @s[scores={Time=8,Range=2},tag=powered] add cannot_extend
+tag @s[scores={Time=16,Range=3},tag=powered] add cannot_extend
+tag @s[scores={Time=24,Range=4},tag=powered] add cannot_extend
+tag @s[scores={Time=32,Range=5},tag=powered] add cannot_extend
+tag @s[scores={Time=40,Range=6},tag=powered] add cannot_extend
+tag @s[scores={Time=48,Range=7},tag=powered] add cannot_extend
+tag @s[scores={Time=56,Range=8},tag=powered] add cannot_extend
+tag @s[scores={Time=64,Range=9},tag=powered] add cannot_extend
+tag @s[scores={Time=72,Range=10},tag=powered] add cannot_extend
+tag @s[scores={Time=80,Range=11},tag=powered] add cannot_extend
+tag @s[scores={Time=88,Range=12},tag=powered] add cannot_extend
+tag @s[scores={Time=96,Range=13},tag=powered] add cannot_extend
+tag @s[scores={Time=104,Range=14},tag=powered] add cannot_extend
+tag @s[scores={Time=112,Range=15},tag=powered] add cannot_extend
+tag @s[scores={Time=120,Range=16},tag=powered] add cannot_extend
+tag @s[scores={Time=128,Range=17},tag=powered] add cannot_extend
+tag @s[scores={Time=136,Range=18},tag=powered] add cannot_extend
+tag @s[scores={Time=144,Range=19},tag=powered] add cannot_extend
+tag @s[scores={Time=152,Range=20},tag=powered] add cannot_extend
+tag @s[scores={Time=160,Range=21},tag=powered] add cannot_extend
+tag @s[scores={Time=168,Range=22},tag=powered] add cannot_extend
+tag @s[scores={Time=176,Range=23..},tag=powered] add cannot_extend
 execute if entity @s[tag=!powered,scores={Time=1}] run playsound medabots_server:block.press_wall.stop block @a ~ ~ ~ 1
 execute if entity @s[tag=powered,tag=!stop_sound_played] unless entity @s[tag=!cannot_extend,tag=!extending_blocked] run playsound medabots_server:block.press_wall.stop block @a ~ ~ ~ 1
 tag @s[tag=stop_sound_played] remove stop_sound_played
@@ -40,12 +42,11 @@ execute unless entity @s[tag=!cannot_extend,tag=!extending_blocked] run tag @s[t
 tag @e[tag=!powered,tag=cannot_extend] remove cannot_extend
 tag @e[tag=extending_blocked] remove extending_blocked
 
-# There's always a block at me
-execute if entity @s[tag=north,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=z]
-execute if entity @s[tag=south,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=z]
-execute if entity @s[tag=east,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=x]
-execute if entity @s[tag=west,tag=!dying] run setblock ~ ~ ~ minecraft:quartz_pillar[axis=x]
-execute if entity @s[tag=!dying] run fill ~ ~1 ~ ~ ~3 ~ minecraft:black_stained_glass
+# Remove if stage ends
+fill ~ ~ ~ ~ ~3 ~ minecraft:black_stained_glass replace minecraft:air
+execute if entity @s[tag=dead] run function medabots_server:blocks/press_wall/clean_up
+tag @e[type=minecraft:armor_stand,tag=this_press_wall] remove this_press_wall
+scoreboard players reset #temp PressWallNr
 
 # Custom stage object powering
 execute if entity @s[tag=custom_stage] run function medabots_server:blocks/custom_stage_object

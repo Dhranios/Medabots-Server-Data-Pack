@@ -15,3 +15,8 @@ effect give @s minecraft:invisibility 1000000 0 true
 tag @s add has_medabot_form
 tag @s add medabot
 scoreboard players set @s PlayerInteract 0
+execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:fishing_rod",Count:1b,tag:{}}]}
+execute in minecraft:overworld run data modify block -286 0 -52 Items[0].tag merge from entity @s Inventory[{Slot:-106b}].tag
+execute in minecraft:overworld run data modify block -286 0 -52 Items[0].tag.medabots_server merge value {activated:1b}
+execute in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock

@@ -6,3 +6,4 @@ function medabots_server:other/inventory_boxes/load
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",type:"lost_cargo"}}}}] run function medabots_server:items/obtained_special_item/salesman_quest/lost_cargo
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",type:"borrowed_camera"}}}}] run function medabots_server:items/obtained_special_item/salesman_quest/borrowed_camera
 execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",type:"mysterious_artifact"}}}}] run function medabots_server:items/obtained_special_item/salesman_quest/mysterious_artifact
+execute if entity @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",type:"metal_detector"}}}}] run function medabots_server:items/obtained_special_item/salesman_quest/metal_detector

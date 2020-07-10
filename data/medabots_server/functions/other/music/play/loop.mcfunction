@@ -47,7 +47,7 @@ scoreboard players set @s[scores={MusicType=22}] Music 1233
 playsound medabots_server:music.stage.arena.lagdou_ruins_3 music @s[scores={MusicType=23}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=23}] Music 900
 playsound medabots_server:music.stage.arena.ricco_harbor music @s[scores={MusicType=24}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=24}] Music 2440
+scoreboard players set @s[scores={MusicType=24}] Music 2280
 playsound medabots_server:music.stage.arena.ricco_harbor_removed music @s[scores={MusicType=25}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=25}] Music 3640
 execute if entity @s[scores={MusicType=26}] run function medabots_server:other/music/play/loop_robattle

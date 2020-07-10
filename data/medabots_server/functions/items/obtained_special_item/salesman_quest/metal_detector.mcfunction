@@ -1,0 +1,2 @@
+kill @e[distance=..0.1,nbt={Item:{tag:{medabots_server:{id:"medabots_server:salesman_quest",type:"metal_detector"}}}}]
+tag @s[advancements={medabots_server:main/salesman_quest/mermaid_medal={seaslug_burried_item=true,obtain_item=false}}] add dialog_other_salesman_mermaid_medal_item

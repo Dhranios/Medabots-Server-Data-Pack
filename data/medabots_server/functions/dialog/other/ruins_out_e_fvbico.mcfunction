@@ -8,12 +8,12 @@ scoreboard players set @s[scores={Dialog=1}] MusicType 39
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
 advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/other ruins_out_e_fvbico
-execute if entity @s[scores={Dialog=1}] positioned -1894 51 -491 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1890 51 -492 run function medabots_server:spawn_entities/cutscene/max
+execute if entity @s[scores={Dialog=1}] positioned 28 59 45 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 32 59 44 run function medabots_server:spawn_entities/cutscene/max
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..739}] at @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[distance=..0.1,tag=max,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add dancing
-teleport @s[scores={Dialog=1}] -1892 51 -489 -145 0
+teleport @s[scores={Dialog=1}] 30 59 47 -145 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.1"}]}
 tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.2"}]}
 tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.3"}]}
@@ -39,10 +39,10 @@ execute if entity @s[scores={Dialog=740..1236}] as @e[tag=metabee,tag=!medabot_m
 execute if entity @s[scores={Dialog=740..1236}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=seaslug,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 scoreboard players set @s[scores={Dialog=740}] MusicType 32
 scoreboard players set @s[scores={Dialog=740}] Music 0
-execute if entity @s[scores={Dialog=740}] positioned -1892 51 -533 run function medabots_server:spawn_entities/cutscene/gillgirl
-execute if entity @s[scores={Dialog=740}] positioned -1891 51 -533 run function medabots_server:spawn_entities/cutscene/seaslug
-execute if entity @s[scores={Dialog=740}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1892 51 -501
-execute if entity @s[scores={Dialog=740}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1891 51 -501
+execute if entity @s[scores={Dialog=740}] positioned 30 59 3 run function medabots_server:spawn_entities/cutscene/gillgirl
+execute if entity @s[scores={Dialog=740}] positioned 31 59 3 run function medabots_server:spawn_entities/cutscene/seaslug
+execute if entity @s[scores={Dialog=740}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 30 59 35
+execute if entity @s[scores={Dialog=740}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 35
 execute if entity @s[scores={Dialog=740}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=740}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add walking
 tellraw @s[scores={Dialog=740}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.20"}]}
@@ -59,14 +59,14 @@ tellraw @s[scores={Dialog=930}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=994}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.27"}]}
 tellraw @s[scores={Dialog=1058}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.28"}]}
 tellraw @s[scores={Dialog=1082}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.29"}]}
-execute if entity @s[scores={Dialog=1086}] positioned -1892 51 -534 run function medabots_server:spawn_entities/cutscene/shrimplips
-execute if entity @s[scores={Dialog=1086}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1892 51 -499
+execute if entity @s[scores={Dialog=1086}] positioned 30 59 2 run function medabots_server:spawn_entities/cutscene/shrimplips
+execute if entity @s[scores={Dialog=1086}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 30 59 37
 execute if entity @s[scores={Dialog=1086}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add walking
 tellraw @s[scores={Dialog=1102}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.30"}]}
 tellraw @s[scores={Dialog=1122}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.31"}]}
 tellraw @s[scores={Dialog=1202}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.32"}]}
-execute if entity @s[scores={Dialog=1230}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1893 51 -500
-execute if entity @s[scores={Dialog=1230}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1890 51 -500
+execute if entity @s[scores={Dialog=1230}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 36
+execute if entity @s[scores={Dialog=1230}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 32 59 36
 execute if entity @s[scores={Dialog=1230}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1230}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1236}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] remove walking
@@ -92,14 +92,14 @@ tellraw @s[scores={Dialog=1678}] {"translate":"chat.type.text","with":[{"selecto
 tellraw @s[scores={Dialog=1718}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.45"}]}
 tellraw @s[scores={Dialog=1718}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.46"}]}
 tellraw @s[scores={Dialog=1718}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.47"}]}
-execute if entity @s[scores={Dialog=1738}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1892 51 -512
-execute if entity @s[scores={Dialog=1738}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1893 51 -534
-execute if entity @s[scores={Dialog=1738}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1892 51 -514
+execute if entity @s[scores={Dialog=1738}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 30 59 24
+execute if entity @s[scores={Dialog=1738}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 2
+execute if entity @s[scores={Dialog=1738}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 30 59 22
 execute if entity @s[scores={Dialog=1738}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add running
 execute if entity @s[scores={Dialog=1738}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add running
 execute if entity @s[scores={Dialog=1738}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add running
-execute if entity @s[scores={Dialog=1768}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1893 51 -534
-execute if entity @s[scores={Dialog=1778}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1893 51 -534
+execute if entity @s[scores={Dialog=1768}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 2
+execute if entity @s[scores={Dialog=1778}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 2
 execute if entity @s[scores={Dialog=1818}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=1818}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add dead
 execute if entity @s[scores={Dialog=1820}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add dead
@@ -113,7 +113,7 @@ tellraw @s[scores={Dialog=1798}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=1854}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.53"}]}
 tellraw @s[scores={Dialog=1878}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.54"}]}
 tellraw @s[scores={Dialog=1926}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.ruins_out_e_fvbico.55"}]}
-execute if entity @s[scores={Dialog=1934}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1893 51 -534
+execute if entity @s[scores={Dialog=1934}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 2
 execute if entity @s[scores={Dialog=1934}] run tag @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 tag @s[scores={Dialog=2132}] remove dialog_other_ruins_out_e_fvbico
 scoreboard players set @s[scores={Dialog=2132}] MusicType 1

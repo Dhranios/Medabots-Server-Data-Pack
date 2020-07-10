@@ -8,15 +8,15 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 44
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1541 50 -511 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1543 50 -513 run function medabots_server:spawn_entities/cutscene/totalizer
-execute if entity @s[scores={Dialog=1}] positioned -1538 50 -515 run function medabots_server:spawn_entities/cutscene/caroline
-execute if entity @s[scores={Dialog=1}] positioned -1538 50 -513 run function medabots_server:spawn_entities/cutscene/doctor_haru
+execute if entity @s[scores={Dialog=1}] positioned 29 59 34 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 27 59 32 run function medabots_server:spawn_entities/cutscene/totalizer
+execute if entity @s[scores={Dialog=1}] positioned 32 59 30 run function medabots_server:spawn_entities/cutscene/caroline
+execute if entity @s[scores={Dialog=1}] positioned 32 59 32 run function medabots_server:spawn_entities/cutscene/doctor_haru
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -90 ~
 execute if entity @s[scores={Dialog=1..1027}] at @e[tag=doctor_haru,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=doctor_haru,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..1027}] at @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1541 50 -515 0 0
+teleport @s[scores={Dialog=1}] 29 59 30 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.1"}]}
 tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.2"}]}
 tellraw @s[scores={Dialog=40}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.totalizer","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.3"}]}
@@ -43,10 +43,10 @@ tellraw @s[scores={Dialog=788}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=892}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.23"}]}
 tellraw @s[scores={Dialog=916}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.24"}]}
 tellraw @s[scores={Dialog=964}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.doctor_haru","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.25"}]}
-execute if entity @s[scores={Dialog=1028}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1541 50 -484
+execute if entity @s[scores={Dialog=1028}] as @e[tag=doctor_haru,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 31
 execute if entity @s[scores={Dialog=1028}] run tag @e[tag=doctor_haru,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1164}] run kill @e[tag=doctor_haru,tag=this_dialog,limit=1]
-execute if entity @s[scores={Dialog=1028}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1541 50 -484
+execute if entity @s[scores={Dialog=1028}] as @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 31
 execute if entity @s[scores={Dialog=1028}] run tag @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1174}] run kill @e[tag=caroline,tag=!medabot_model,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=1068}] MusicType 50
@@ -90,7 +90,7 @@ tellraw @s[scores={Dialog=2064}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2120}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.57"}]}
 tellraw @s[scores={Dialog=2176}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.58"}]}
 tellraw @s[scores={Dialog=2208}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.totalizer","color":"green"},{"translate":"medabots_server:dialog.infinity.totalizer_saved.59"}]}
-execute if entity @s[scores={Dialog=2228}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1541 50 -484
+execute if entity @s[scores={Dialog=2228}] as @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 29 59 31
 execute if entity @s[scores={Dialog=2228}] run tag @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2364}] run kill @e[tag=totalizer,tag=!medabot_model,tag=this_dialog,limit=1]
 scoreboard players set @s[scores={Dialog=2268}] MusicType 22

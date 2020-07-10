@@ -146,6 +146,7 @@ scoreboard objectives add PosZ dummy
 scoreboard objectives add PowerAmount dummy
 scoreboard objectives add PowerNeeded dummy
 scoreboard objectives add PrevMusicType dummy
+scoreboard objectives add PressWallNr dummy
 scoreboard objectives add RandomMessage dummy
 scoreboard objectives add Range dummy
 scoreboard objectives add ReactionTime dummy
@@ -792,9 +793,9 @@ bossbar set medabots_server:argorok/arena max 500
 bossbar set medabots_server:hr_d3 max 300
 bossbar set medabots_server:hr_d3/mt_battle max 500
 bossbar set medabots_server:hr_d3/arena max 500
-bossbar set medabots_server:topmaniac max 300
-bossbar set medabots_server:topmaniac/mt_battle max 500
-bossbar set medabots_server:topmaniac/arena max 500
+bossbar set medabots_server:topmaniac max 900
+bossbar set medabots_server:topmaniac/mt_battle max 1500
+bossbar set medabots_server:topmaniac/arena max 1500
 bossbar set medabots_server:lor_starcutter max 300
 bossbar set medabots_server:lor_starcutter/mt_battle max 500
 bossbar set medabots_server:lor_starcutter/arena max 500

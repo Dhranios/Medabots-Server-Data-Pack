@@ -12,7 +12,8 @@ execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:pass",stage_item:1b}}}]}] run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore append from entity @s Inventory[{tag:{medabots_server:{stage_item:1b}}}].tag.display.Name
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:stage_build_item",stage_item:1b}}}]}] run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore append from entity @s Inventory[{tag:{medabots_server:{stage_item:1b}}}].tag.display.Name
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:salesman_quest",stage_item:1b}}}]}] run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore append from entity @s Inventory[{tag:{medabots_server:{stage_item:1b}}}].tag.display.Name
+execute store result score #temp Money run data get entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{stage_item:1b}}}].Count
+execute store result entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{stage_item:1b}}}].Count byte 1 run scoreboard players remove #temp Money 1
+data remove entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{Count:0b,tag:{medabots_server:{stage_item:1b}}}]
 execute as @e[tag=inventory,limit=1] run function medabots_server:other/inventory_boxes/set
 function medabots_server:other/inventory_boxes/load
-
-clear @s #minecraft:all{medabots_server:{stage_item:1b}} 1

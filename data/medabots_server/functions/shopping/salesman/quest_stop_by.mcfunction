@@ -6,4 +6,5 @@ tag @s[advancements={medabots_server:main/salesman_quest/unicorn_medal={find_the
 tag @s[advancements={medabots_server:main/salesman_quest/unicorn_medal={find_the_expert=true,end_the_quest=false}}] add dialog_other_salesman_unicorn_medal_end
 tag @s[advancements={medabots_server:main/salesman_quest/monkey_medal={clear_the_stage=true,end_the_quest=false}}] add dialog_other_salesman_monkey_medal_end
 tag @s[advancements={medabots_server:main/salesman_quest/chameleon_medal={defeat_the_three_colors=true,end_the_quest=false}}] add dialog_other_salesman_chameleon_medal_end
+tag @s[advancements={medabots_server:main/salesman_quest/mermaid_medal={obtain_item=true,end_the_quest=false}}] add dialog_other_salesman_mermaid_medal_end
 tag @s remove go_talk_to_salesman

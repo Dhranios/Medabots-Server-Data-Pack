@@ -1,0 +1,32 @@
+{
+    "type": "medabots_server:dark_stage",
+    "generator": {
+        "settings": {
+            "lakes": false,
+            "features": false,
+            "biome": "minecraft:nether_wastes",
+            "structures": {
+                "structures": {}
+            },
+            "layers": [
+                {
+                    "height": 1,
+                    "block": "minecraft:bedrock"
+                },
+                {
+                    "height": 49,
+                    "block": "minecraft:stone"
+                },
+                {
+                    "height": 3,
+                    "block": "minecraft:netherrack"
+                },
+                {
+                    "height": 2,
+                    "block": "minecraft:lava"
+                }
+            ]
+        },
+        "type": "minecraft:flat"
+    }
+}

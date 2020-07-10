@@ -8,9 +8,9 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 42
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1671 51 -147 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1673 51 -149.0 run function medabots_server:spawn_entities/cutscene/director_tune
-teleport @s[scores={Dialog=1..20}] -1673 51 -148 -180 0
+execute if entity @s[scores={Dialog=1}] positioned 34 59 32 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 32 59 30.0 run function medabots_server:spawn_entities/cutscene/director_tune
+teleport @s[scores={Dialog=1..30}] 32 59 31 -180 0
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 120 ~
 execute if entity @s[scores={Dialog=1..112}] at @e[tag=director_tune,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=director_tune,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.1"}]}
@@ -19,7 +19,7 @@ teleport @s[scores={Dialog=31..40}] ~-0.2 ~ ~0.1 ~6 ~
 tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.3"}]}
 tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.4"}]}
 tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.director_tune","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_director_tune.5"}]}
-execute if entity @s[scores={Dialog=112}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1673 51 -116
+execute if entity @s[scores={Dialog=112}] as @e[tag=director_tune,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 32 59 63
 execute if entity @s[scores={Dialog=112}] as @e[tag=director_tune,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=187}] as @e[tag=director_tune,tag=this_dialog,limit=1] run kill @s
 execute if entity @s[scores={Dialog=142..}] at @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~

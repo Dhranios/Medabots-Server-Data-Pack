@@ -8,11 +8,11 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1999 51 -560 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1998 51 -564 run function medabots_server:spawn_entities/cutscene/squidguts
+execute if entity @s[scores={Dialog=1}] positioned 18 59 21 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 19 59 17 run function medabots_server:spawn_entities/cutscene/squidguts
 execute if entity @s[scores={Dialog=1..857}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -180 ~
-teleport @s[scores={Dialog=1}] -1997 51 -560 -180 0
+teleport @s[scores={Dialog=1}] 20 59 21 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.1"}]}
 execute if entity @s[scores={Dialog=24..786}] at @e[tag=squidguts,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=squidguts,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=24}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_squidguts.2"}]}

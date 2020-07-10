@@ -29,5 +29,6 @@ tag @s remove continue
 tag @s remove mirror
 tag @s remove me
 tag @s remove pot
+tag @s add can_hit
 scoreboard players remove @s Steps 1
 execute if entity @s[tag=!dead,scores={Steps=1..}] at @s run function medabots_server:items/medapart/laser/move

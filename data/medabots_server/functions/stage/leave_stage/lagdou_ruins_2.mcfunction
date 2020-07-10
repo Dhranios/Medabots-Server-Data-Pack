@@ -1,4 +1,4 @@
-teleport @s -1295 51 -32 -180 0
+teleport @s 34 61 26 -180 0
 scoreboard players reset @s Stage
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s PrevMusicType 0
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0

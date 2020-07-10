@@ -28,7 +28,7 @@
             "conditions": {
                 "items": [
                     {
-                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:potato_insect_rangingskin\"}}"
+                        "nbt": "{medabots_server:{stage_item:0b,id:\"medabots_server:potato_insect_ragingskin\"}}"
                     }
                 ]
             }

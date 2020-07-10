@@ -32,7 +32,7 @@ execute if entity @s[tag=dead] run fill ~ ~ ~ ~ ~1 ~ minecraft:air
 
 # Reset the timer
 execute if entity @s[tag=!dead,tag=!stopped] run function medabots_server:blocks/fan/rotate_blades
-scoreboard players set @s[scores={Time=10}] Time 0
+scoreboard players set @s[scores={Time=10..}] Time 0
 
 # Change the moving speed
 execute if entity @s[scores={Time=0}] run function medabots_server:blocks/fan/hit

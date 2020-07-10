@@ -8,9 +8,9 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 39
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1541 51 -149 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1536 51 -147 run function medabots_server:spawn_entities/cutscene/max
-teleport @s[scores={Dialog=1}] -1539 51 -151 -55 0
+execute if entity @s[scores={Dialog=1}] positioned 29 59 31 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 34 59 33 run function medabots_server:spawn_entities/cutscene/max
+teleport @s[scores={Dialog=1}] 31 59 29 -55 0
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -55 ~
 execute if entity @s[scores={Dialog=1}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 125 ~
 playsound medabots_server:entity.max.photo neutral @s[scores={Dialog=1}] ~ ~ ~ 1000
@@ -24,7 +24,7 @@ tellraw @s[scores={Dialog=176}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=224}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_max.8"}]}
 tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_max.9"}]}
 tellraw @s[scores={Dialog=336}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.max","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_max.10"}]}
-execute if entity @s[scores={Dialog=352}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -117
+execute if entity @s[scores={Dialog=352}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 63
 execute if entity @s[scores={Dialog=352}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] at @s run tag @s add walking
 execute if entity @s[scores={Dialog=483}] as @e[tag=max,tag=!medabot_model,tag=this_dialog,limit=1] run kill @s
 scoreboard players set @s[scores={Dialog=452}] MusicType 1

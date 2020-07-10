@@ -10,10 +10,10 @@ execute if score #temp NeededPlayers matches 0 run tellraw @a {"translate":"meda
 execute if score #temp NeededPlayers matches 1 run tellraw @a {"translate":"medabots_server:message.stage.players.1","color":"green","with":[{"translate":"medabots_server:location.final_destination_1"}]}
 execute if score #temp NeededPlayers matches 2.. run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.final_destination_1"},{"score":{"name":"#temp","objective":"NeededPlayers"}}]}
 
-execute if score #temp NeededPlayers matches 0 run data merge block -2016 44 -195 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute if score #temp NeededPlayers matches 0 run setblock -2014 45 -195 minecraft:red_wool
-execute if score #temp NeededPlayers matches 0 run data merge block -2016 44 -197 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/final_destination_1/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
-execute if score #temp NeededPlayers matches 0 run setblock -2014 45 -197 minecraft:red_wool
+execute if score #temp NeededPlayers matches 0 run data merge block 50 44 35 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
+execute if score #temp NeededPlayers matches 0 run setblock 52 45 35 minecraft:air
+execute if score #temp NeededPlayers matches 0 run data merge block 50 44 33 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/final_destination_1/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
+execute if score #temp NeededPlayers matches 0 run setblock 52 45 33 minecraft:air
 
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/final_destination_1/empty
 #execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/final_destination_1/master_hand

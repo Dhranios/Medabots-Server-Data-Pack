@@ -1,8 +1,8 @@
 execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
 execute if entity @s[tag=has_medabot_form] run function medabots_server:items/player_interactions/medabot/revert
-teleport @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] -1229 25 -94 90 0
-execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] run data merge block -1237 52 -139 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_6/enter"}}'}
-execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] run setblock -1237 53 -141 minecraft:red_wool
+teleport @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] 38 32 45 90 0
+execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] run data merge block 30 59 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_6/enter"}}'}
+execute if entity @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] run setblock 30 60 -2 minecraft:air
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] Music 0
 scoreboard players set @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] MusicType 4
 scoreboard players set @s[scores={Dialog=0,Level=30..},advancements={medabots_server:stages/wave_1/lagdou_ruins_5_second_go=true},gamemode=adventure,tag=!random_arena_version] Stage 41

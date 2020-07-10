@@ -1,8 +1,8 @@
-data merge block -1347 51 -228 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_5/enter"}}'}
-setblock -1347 52 -230 minecraft:red_wool
+data merge block 29 59 48 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_5/enter"}}'}
+setblock 29 60 46 minecraft:air
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 4
-scoreboard players set @s Stage 49
+scoreboard players set @s Stage 40
 scoreboard players set @s Gamemode 0
 
 loot spawn ~ ~ ~ loot medabots_server:gameplay/options/2

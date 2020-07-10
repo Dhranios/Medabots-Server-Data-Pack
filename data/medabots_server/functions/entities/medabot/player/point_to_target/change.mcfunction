@@ -4,6 +4,7 @@ data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.i
 execute store result entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:effect_list"}}}].tag.LodestonePos.X int 1 run data get entity @e[tag=target,limit=1] Pos[0]
 execute store result entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:effect_list"}}}].tag.LodestonePos.Y int 1 run data get entity @e[tag=target,limit=1] Pos[1]
 execute store result entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:effect_list"}}}].tag.LodestonePos.Z int 1 run data get entity @e[tag=target,limit=1] Pos[2]
+data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:effect_list"}}}].tag.LodestoneDimension set from entity @s Dimension
 
 execute as @e[tag=inventory,limit=1] run function medabots_server:other/inventory_boxes/set
 function medabots_server:other/inventory_boxes/load

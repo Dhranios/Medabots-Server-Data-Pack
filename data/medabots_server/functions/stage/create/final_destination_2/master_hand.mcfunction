@@ -1,5 +1,5 @@
-execute positioned -1979 43 -221 rotated 90 0 run function medabots_server:spawn_entities/master_hand/2
-teleport @s -1991 43 -221 -90 0
+execute positioned 31 43 10 rotated 90 0 run function medabots_server:spawn_entities/master_hand/2
+teleport @s 19 43 10 -90 0
 tag @s add main
 bossbar set medabots_server:crazy_hand/2 value 360
 bossbar set medabots_server:master_hand/2 value 360

@@ -8,9 +8,9 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 35
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1539 51 -218 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1535 51 -217 run function medabots_server:spawn_entities/cutscene/samantha
-teleport @s[scores={Dialog=1}] -1539 51 -216 -105 0
+execute if entity @s[scores={Dialog=1}] positioned 31 59 29 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 35 59 30 run function medabots_server:spawn_entities/cutscene/samantha
+teleport @s[scores={Dialog=1}] 31 51 31 -105 0
 execute if entity @s[scores={Dialog=1}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ -75 ~
 execute if entity @s[scores={Dialog=1..320}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.1"}]}
@@ -25,12 +25,12 @@ tellraw @s[scores={Dialog=224}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=264}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.10"}]}
 tellraw @s[scores={Dialog=288}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.11"}]}
 tellraw @s[scores={Dialog=320}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.12"}]}
-execute if entity @s[scores={Dialog=320}] positioned -1540 51 -185 run function medabots_server:spawn_entities/cutscene/spyke
-execute if entity @s[scores={Dialog=320}] positioned -1538 51 -185 run function medabots_server:spawn_entities/cutscene/sloan
-execute if entity @s[scores={Dialog=321}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1536 51 -217
+execute if entity @s[scores={Dialog=320}] positioned 30 51 62 run function medabots_server:spawn_entities/cutscene/spyke
+execute if entity @s[scores={Dialog=320}] positioned 32 51 62 run function medabots_server:spawn_entities/cutscene/sloan
+execute if entity @s[scores={Dialog=321}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 34 51 -217
 execute if entity @s[scores={Dialog=321}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=452}] as @e[tag=spyke,tag=this_dialog,limit=1] run tag @s remove walking
-execute if entity @s[scores={Dialog=321}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1535 51 -217
+execute if entity @s[scores={Dialog=321}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 35 51 -217
 execute if entity @s[scores={Dialog=321}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=452}] as @e[tag=sloan,tag=this_dialog,limit=1] run tag @s remove walking
 execute if entity @s[scores={Dialog=321..452}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s facing entity @e[tag=spyke,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -48,13 +48,13 @@ tellraw @s[scores={Dialog=677}] {"translate":"chat.type.text","with":[{"translat
 execute if entity @s[scores={Dialog=687}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ 5 ~
 tellraw @s[scores={Dialog=687}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.22"}]}
 tellraw @s[scores={Dialog=759}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.23"}]}
-execute if entity @s[scores={Dialog=759}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -184
+execute if entity @s[scores={Dialog=759}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 63
 execute if entity @s[scores={Dialog=759}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=759}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -184
+execute if entity @s[scores={Dialog=759}] as @e[tag=sloan,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 63
 execute if entity @s[scores={Dialog=759}] run tag @e[tag=sloan,tag=this_dialog,limit=1] add walking
 tellraw @s[scores={Dialog=775}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.24"}]}
 tellraw @s[scores={Dialog=807}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.spyke","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.25"}]}
-execute if entity @s[scores={Dialog=807}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1539 51 -184
+execute if entity @s[scores={Dialog=807}] as @e[tag=spyke,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 31 59 63
 execute if entity @s[scores={Dialog=808}] run tag @e[tag=spyke,tag=this_dialog,limit=1] add walking
 tellraw @s[scores={Dialog=847}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.26"}]}
 tellraw @s[scores={Dialog=879}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.meet_screws.27"}]}

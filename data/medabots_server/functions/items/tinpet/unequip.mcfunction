@@ -139,30 +139,30 @@ execute if entity @s[tag=valid] run tag @e[type=minecraft:item,tag=replacement,d
 tag @s remove valid
 
 # Remove equipped data and show in Lore
-setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}}]}
-execute if entity @s[scores={EditingTinpet=0}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:0b}].tag
-execute if entity @s[scores={EditingTinpet=1}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:1b}].tag
-execute if entity @s[scores={EditingTinpet=2}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:2b}].tag
-execute if entity @s[scores={EditingTinpet=3}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:3b}].tag
-execute if entity @s[scores={EditingTinpet=4}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:4b}].tag
-execute if entity @s[scores={EditingTinpet=5}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:5b}].tag
-execute if entity @s[scores={EditingTinpet=6}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:6b}].tag
-execute if entity @s[scores={EditingTinpet=7}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:7b}].tag
-execute if entity @s[scores={EditingTinpet=8}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:8b}].tag
-execute if entity @s[scores={EditingTinpet=9}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:-106b}].tag
-data modify block -286 0 -52 Items[0].tag.medabots_server.items set value {medal:{},head:{},right_arm:{},left_arm:{},legs:{}}
-data modify block -286 0 -52 Items[0].tag.display.Lore set value ['{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}']
-execute if entity @s[scores={EditingTinpet=0}] run loot replace entity @s hotbar.0 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=1}] run loot replace entity @s hotbar.1 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=2}] run loot replace entity @s hotbar.2 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=3}] run loot replace entity @s hotbar.3 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=4}] run loot replace entity @s hotbar.4 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=5}] run loot replace entity @s hotbar.5 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=6}] run loot replace entity @s hotbar.6 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=7}] run loot replace entity @s hotbar.7 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=8}] run loot replace entity @s hotbar.8 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute if entity @s[scores={EditingTinpet=9}] run loot replace entity @s weapon.offhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-setblock -286 0 -52 minecraft:bedrock
+execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}}]}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=0}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:0b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=1}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:1b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=2}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:2b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=3}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:3b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=4}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:4b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=5}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:5b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=6}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:6b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=7}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:7b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=8}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:8b}].tag
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=9}] run data modify block -286 0 -52 Items[0].tag set from entity @s Inventory[{Slot:-106b}].tag
+execute in minecraft:overworld run data modify block -286 0 -52 Items[0].tag.medabots_server.items set value {medal:{},head:{},right_arm:{},left_arm:{},legs:{}}
+execute in minecraft:overworld run data modify block -286 0 -52 Items[0].tag.display.Lore set value ['{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}','{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}']
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=0}] run loot replace entity @s hotbar.0 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=1}] run loot replace entity @s hotbar.1 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=2}] run loot replace entity @s hotbar.2 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=3}] run loot replace entity @s hotbar.3 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=4}] run loot replace entity @s hotbar.4 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=5}] run loot replace entity @s hotbar.5 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=6}] run loot replace entity @s hotbar.6 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=7}] run loot replace entity @s hotbar.7 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=8}] run loot replace entity @s hotbar.8 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld if entity @s[scores={EditingTinpet=9}] run loot replace entity @s weapon.offhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock
 
 # Update model
 scoreboard players operation #temp MedabotNr = @s MedabotNr

@@ -6,10 +6,10 @@ execute if score #temp NeededPlayers matches 0 run tellraw @a {"translate":"meda
 execute if score #temp NeededPlayers matches 1 run tellraw @a {"translate":"medabots_server:message.stage.players.1","color":"green","with":[{"translate":"medabots_server:location.rock_e"}]}
 execute if score #temp NeededPlayers matches 2.. run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.rock_e"},{"score":{"name":"#temp","objective":"NeededPlayers"}}]}
 
-execute if score #temp NeededPlayers matches 0 run data merge block -1859 52 -345 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1859 53 -347 minecraft:red_wool
-execute if score #temp NeededPlayers matches 0 run data merge block -1861 52 -345 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/rock_e/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1861 53 -347 minecraft:red_wool
+execute if score #temp NeededPlayers matches 0 run data merge block 47 60 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
+execute if score #temp NeededPlayers matches 0 run setblock 47 61 -2 minecraft:air
+execute if score #temp NeededPlayers matches 0 run data merge block 45 60 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/rock_e/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
+execute if score #temp NeededPlayers matches 0 run setblock 45 61 -2 minecraft:air
 
 execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/rock_e/custom
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/rock_e/dev_ultimategold

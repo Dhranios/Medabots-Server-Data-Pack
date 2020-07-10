@@ -1,0 +1,28 @@
+{
+    "type": "medabots_server:stage",
+    "generator": {
+        "settings": {
+            "lakes": false,
+            "features": false,
+            "biome": "minecraft:desert",
+            "structures": {
+                "structures": {}
+            },
+            "layers": [
+                {
+                    "height": 1,
+                    "block": "minecraft:bedrock"
+                },
+                {
+                    "height": 41,
+                    "block": "minecraft:stone"
+                },
+                {
+                    "height": 13,
+                    "block": "minecraft:sand"
+                }
+            ]
+        },
+        "type": "minecraft:flat"
+    }
+}

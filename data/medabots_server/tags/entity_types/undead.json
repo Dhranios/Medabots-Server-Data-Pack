@@ -7,9 +7,10 @@
         "minecraft:stray",
         "minecraft:wither",
         "minecraft:wither_skeleton",
+        "minecraft:zoglin",
         "minecraft:zombie",
         "minecraft:zombie_horse",
-        "minecraft:zombie_pigman",
-        "minecraft:zombie_villager"
+        "minecraft:zombie_villager",
+        "minecraft:zombified_piglin"
     ]
 }

@@ -10,10 +10,10 @@ execute if score #temp NeededPlayers matches 0 run tellraw @a {"translate":"meda
 execute if score #temp NeededPlayers matches 1 run tellraw @a {"translate":"medabots_server:message.stage.players.1","color":"green","with":[{"translate":"medabots_server:location.lagdou_ruins_1"}]}
 execute if score #temp NeededPlayers matches 2.. run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.lagdou_ruins_1"},{"score":{"name":"#temp","objective":"NeededPlayers"}}]}
 
-execute if score #temp NeededPlayers matches 0 run data merge block -1297 52 -115 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1297 53 -117 minecraft:red_wool
-execute if score #temp NeededPlayers matches 0 run data merge block -1299 52 -115 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_1/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1299 53 -117 minecraft:red_wool
+execute if score #temp NeededPlayers matches 0 run data merge block 32 62 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
+execute if score #temp NeededPlayers matches 0 run setblock 32 63 -2 minecraft:air
+execute if score #temp NeededPlayers matches 0 run data merge block 30 62 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_1/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
+execute if score #temp NeededPlayers matches 0 run setblock 30 63 -2 minecraft:air
 
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/lagdou_ruins_1/empty
 

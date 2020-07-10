@@ -18,6 +18,7 @@ scoreboard players add @s[scores={Dialog=1..28}] Dialog 1
 tag @s remove can_cooperate
 scoreboard players operation #temp Stage = @s Stage
 execute if entity @s[scores={Time=0}] as @e[tag=master_hand,tag=!dying] if score @s Stage = #temp Stage run tag @e[distance=..0.1,tag=crazy_hand] add can_cooperate
+tag @s[tag=!can_cooperate,tag=cooperate] add idle
 tag @s[tag=!can_cooperate] remove cooperate
 execute if entity @s[scores={Dialog=29},tag=can_cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","cooperate"],Duration:1}
 execute if entity @s[scores={Dialog=29},tag=can_cooperate] run summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"text":"Random Select"}',Tags:["random_select","cooperate"],Duration:1}

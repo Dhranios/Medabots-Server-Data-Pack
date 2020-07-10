@@ -10,10 +10,10 @@ execute if score #temp NeededPlayers matches 0 run tellraw @a {"translate":"meda
 execute if score #temp NeededPlayers matches 1 run tellraw @a {"translate":"medabots_server:message.stage.players.1","color":"green","with":[{"translate":"medabots_server:location.ruins_battle"}]}
 execute if score #temp NeededPlayers matches 2.. run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.ruins_battle"},{"score":{"name":"#temp","objective":"NeededPlayers"}}]}
 
-execute if score #temp NeededPlayers matches 0 run data merge block -1996 52 -581 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1996 53 -583 minecraft:red_wool
-execute if score #temp NeededPlayers matches 0 run data merge block -1998 52 -581 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/ruins_battle/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1998 53 -583 minecraft:red_wool
+execute if score #temp NeededPlayers matches 0 run data merge block 21 60 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
+execute if score #temp NeededPlayers matches 0 run setblock 21 61 -2 minecraft:air
+execute if score #temp NeededPlayers matches 0 run data merge block 19 60 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/ruins_battle/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
+execute if score #temp NeededPlayers matches 0 run setblock 19 61 -2 minecraft:air
 
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/ruins_battle/walls
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/ruins_battle/wind

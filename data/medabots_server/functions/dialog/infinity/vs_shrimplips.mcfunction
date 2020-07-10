@@ -8,11 +8,11 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1948 51 -566 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1952 51 -566 run function medabots_server:spawn_entities/cutscene/shrimplips
+execute if entity @s[scores={Dialog=1}] positioned 25 59 23 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 21 59 23 run function medabots_server:spawn_entities/cutscene/shrimplips
 execute if entity @s[scores={Dialog=1..2225}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=shrimplips,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..1104}] at @e[tag=shrimplips,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=shrimplips,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1949 51 -564 125 0
+teleport @s[scores={Dialog=1}] 24 59 25 125 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.1"}]}
 tellraw @s[scores={Dialog=8}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.2"}]}
 tellraw @s[scores={Dialog=48}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.3"}]}
@@ -37,8 +37,8 @@ tellraw @s[scores={Dialog=904}] {"translate":"chat.type.text","with":[{"selector
 tellraw @s[scores={Dialog=920}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.22"}]}
 tellraw @s[scores={Dialog=960}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.23"}]}
 tellraw @s[scores={Dialog=984}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.24"}]}
-execute if entity @s[scores={Dialog=1064}] positioned -1949 51 -540 run function medabots_server:spawn_entities/cutscene/rubberobo
-execute if entity @s[scores={Dialog=1064}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1952 51 -563
+execute if entity @s[scores={Dialog=1064}] positioned 24 59 49 run function medabots_server:spawn_entities/cutscene/rubberobo
+execute if entity @s[scores={Dialog=1064}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 21 59 26
 execute if entity @s[scores={Dialog=1064}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=1065..1173}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ^ ^ ^0.2125
 execute if entity @s[scores={Dialog=1174}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s remove running
@@ -74,10 +74,10 @@ tellraw @s[scores={Dialog=1942}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=2046}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.51"}]}
 tellraw @s[scores={Dialog=2062}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.shrimplips","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.52"}]}
 tellraw @s[scores={Dialog=2110}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.rubberobo","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_shrimplips.53"}]}
-execute if entity @s[scores={Dialog=2118}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -589
+execute if entity @s[scores={Dialog=2118}] as @e[tag=shrimplips,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 0
 execute if entity @s[scores={Dialog=2118}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=2226}] run tag @e[tag=shrimplips,tag=this_dialog,limit=1] add dead
-execute if entity @s[scores={Dialog=2118}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -540
+execute if entity @s[scores={Dialog=2118}] as @e[tag=rubberobo,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 24 59 49
 execute if entity @s[scores={Dialog=2118}] as @e[tag=rubberobo,tag=this_dialog,limit=1] run tag @s add running
 execute if entity @s[scores={Dialog=2227}] run teleport @e[tag=rubberobo,tag=this_dialog,limit=1] ~ -100 ~
 execute if entity @s[scores={Dialog=2227}] run tag @e[tag=rubberobo,tag=this_dialog,limit=1] add dead

@@ -8,11 +8,11 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1947 51 -616 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1951 51 -612 run function medabots_server:spawn_entities/cutscene/gillgirl
+execute if entity @s[scores={Dialog=1}] positioned 25 59 24 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 21 59 28 run function medabots_server:spawn_entities/cutscene/gillgirl
 execute if entity @s[scores={Dialog=1..1047}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=gillgirl,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..443}] at @e[tag=gillgirl,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=gillgirl,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1949 51 -616 0 0
+teleport @s[scores={Dialog=1}] 23 59 24 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.1"}]}
 tellraw @s[scores={Dialog=72}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.2"}]}
 tellraw @s[scores={Dialog=176}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.3"}]}
@@ -24,21 +24,21 @@ tellraw @s[scores={Dialog=360}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=392}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.9"}]}
 scoreboard players set @s[scores={Dialog=424}] MusicType 33
 scoreboard players set @s[scores={Dialog=424}] Music 0
-execute if entity @s[scores={Dialog=424}] positioned -1948 51 -593 run function medabots_server:spawn_entities/cutscene/select_corps
-execute if entity @s[scores={Dialog=424}] positioned -1948 51 -593 run tag @e[tag=select_corps,tag=this_dialog,distance=..0.7,limit=1] add select_corps_1
-execute if entity @s[scores={Dialog=424}] as @e[tag=select_corps_1,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -612
+execute if entity @s[scores={Dialog=424}] positioned 24 59 47 run function medabots_server:spawn_entities/cutscene/select_corps
+execute if entity @s[scores={Dialog=424}] positioned 24 59 47 run tag @e[tag=select_corps,tag=this_dialog,distance=..0.7,limit=1] add select_corps_1
+execute if entity @s[scores={Dialog=424}] as @e[tag=select_corps_1,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 28
 execute if entity @s[scores={Dialog=424}] run tag @e[tag=select_corps_1,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=522}] run tag @e[tag=select_corps_1,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=523..1027}] as @e[tag=select_corps_1,tag=this_dialog,limit=1] at @s facing entity @e[tag=gillgirl,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=424}] positioned -1949 51 -595 run function medabots_server:spawn_entities/cutscene/select_corps
-execute if entity @s[scores={Dialog=424}] positioned -1949 51 -595 run tag @e[tag=select_corps,tag=this_dialog,distance=..0.7,limit=1] add select_corps_2
-execute if entity @s[scores={Dialog=424}] as @e[tag=select_corps_2,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1951 51 -610
+execute if entity @s[scores={Dialog=424}] positioned 23 59 45 run function medabots_server:spawn_entities/cutscene/select_corps
+execute if entity @s[scores={Dialog=424}] positioned 23 59 45 run tag @e[tag=select_corps,tag=this_dialog,distance=..0.7,limit=1] add select_corps_2
+execute if entity @s[scores={Dialog=424}] as @e[tag=select_corps_2,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 21 59 30
 execute if entity @s[scores={Dialog=424}] run tag @e[tag=select_corps_2,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=495}] run tag @e[tag=select_corps_2,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=496..1027}] as @e[tag=select_corps_2,tag=this_dialog,limit=1] at @s facing entity @e[tag=gillgirl,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=424}] positioned -1951 51 -593 run function medabots_server:spawn_entities/cutscene/select_corps
-execute if entity @s[scores={Dialog=424}] positioned -1951 51 -593 run tag @e[tag=select_corps,tag=this_dialog,distance=..0.7,limit=1] add select_corps_3
-execute if entity @s[scores={Dialog=424}] as @e[tag=select_corps_3,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1953 51 -612
+execute if entity @s[scores={Dialog=424}] positioned 21 59 47 run function medabots_server:spawn_entities/cutscene/select_corps
+execute if entity @s[scores={Dialog=424}] positioned 21 59 47 run tag @e[tag=select_corps,tag=this_dialog,distance=..0.7,limit=1] add select_corps_3
+execute if entity @s[scores={Dialog=424}] as @e[tag=select_corps_3,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 19 59 28
 execute if entity @s[scores={Dialog=424}] run tag @e[tag=select_corps_3,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=514}] run tag @e[tag=select_corps_3,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=515..1027}] as @e[tag=select_corps_3,tag=this_dialog,limit=1] at @s facing entity @e[tag=gillgirl,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -63,20 +63,20 @@ tellraw @s[scores={Dialog=884}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=948}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.24"}]}
 tellraw @s[scores={Dialog=972}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.25"}]}
 tellraw @s[scores={Dialog=980}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.gillgirl","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.26"}]}
-execute if entity @s[scores={Dialog=1028}] as @e[tag=select_corps_1,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
+execute if entity @s[scores={Dialog=1028}] as @e[tag=select_corps_1,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=1028}] run tag @e[tag=select_corps_1,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1118}] run kill @e[tag=select_corps_1,tag=this_dialog,limit=1]
-execute if entity @s[scores={Dialog=1028}] as @e[tag=select_corps_3,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
+execute if entity @s[scores={Dialog=1028}] as @e[tag=select_corps_3,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=1028}] run tag @e[tag=select_corps_3,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1120}] run kill @e[tag=select_corps_3,tag=this_dialog,limit=1]
-execute if entity @s[scores={Dialog=1028}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
+execute if entity @s[scores={Dialog=1028}] as @e[tag=gillgirl,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=1028}] run tag @e[tag=gillgirl,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=1119}] run kill @e[tag=gillgirl,tag=this_dialog,limit=1]
 execute if entity @s[scores={Dialog=1048..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=select_corps_2,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1028..1103}] at @e[tag=select_corps_2,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=select_corps_2,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=1048}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.27"}]}
 tellraw @s[scores={Dialog=1088}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.28"}]}
-execute if entity @s[scores={Dialog=1104}] as @e[tag=select_corps_2,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
+execute if entity @s[scores={Dialog=1104}] as @e[tag=select_corps_2,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=1104}] run tag @e[tag=select_corps_2,tag=this_dialog,limit=1] add walking
 tellraw @s[scores={Dialog=1124}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.gillgirls_jammy_battle.29"}]}
 tag @s[scores={Dialog=1185}] remove dialog_infinity_gillgirls_jammy_battle

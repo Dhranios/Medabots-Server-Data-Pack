@@ -135,6 +135,18 @@
         "salesman_mermaid_medal": {
             "trigger": "minecraft:impossible"
         },
+        "salesman_mermaid_medal_find": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_mermaid_medal_follow": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_mermaid_medal_burried": {
+            "trigger": "minecraft:impossible"
+        },
+        "salesman_mermaid_medal_item": {
+            "trigger": "minecraft:impossible"
+        },
         "salesman_mermaid_medal_end": {
             "trigger": "minecraft:impossible"
         }

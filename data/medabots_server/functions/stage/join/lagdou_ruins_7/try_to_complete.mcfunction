@@ -10,10 +10,10 @@ execute if score #temp NeededPlayers matches 0 run tellraw @a {"translate":"meda
 execute if score #temp NeededPlayers matches 1 run tellraw @a {"translate":"medabots_server:message.stage.players.1","color":"green","with":[{"translate":"medabots_server:location.lagdou_ruins_7"}]}
 execute if score #temp NeededPlayers matches 2.. run tellraw @a {"translate":"medabots_server:message.stage.players.more","color":"green","with":[{"translate":"medabots_server:location.lagdou_ruins_7"},{"score":{"name":"#temp","objective":"NeededPlayers"}}]}
 
-execute if score #temp NeededPlayers matches 0 run data merge block -1279 52 -178 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1279 53 -180 minecraft:red_wool
-execute if score #temp NeededPlayers matches 0 run data merge block -1281 52 -178 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_7/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
-execute if score #temp NeededPlayers matches 0 run setblock -1281 53 -180 minecraft:red_wool
+execute if score #temp NeededPlayers matches 0 run data merge block 32 59 42 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/generic/no_pvp_on"}}'}
+execute if score #temp NeededPlayers matches 0 run setblock 32 60 40 minecraft:air
+execute if score #temp NeededPlayers matches 0 run data merge block 30 59 42 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/lagdou_ruins_7/enter"}}',Text3:'{"translate":"medabots_server:sign.stage.play.main_player"}'}
+execute if score #temp NeededPlayers matches 0 run setblock 30 60 40 minecraft:air
 
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/lagdou_ruins_7/empty
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/lagdou_ruins_7/darkness

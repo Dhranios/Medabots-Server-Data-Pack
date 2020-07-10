@@ -8,11 +8,11 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1997 51 -607 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -2000 51 -601 run function medabots_server:spawn_entities/cutscene/squidguts
+execute if entity @s[scores={Dialog=1}] positioned 25 59 25 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 22 59 31 run function medabots_server:spawn_entities/cutscene/squidguts
 execute if entity @s[scores={Dialog=1..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..499}] at @e[tag=squidguts,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=squidguts,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1999 51 -608 0 0
+teleport @s[scores={Dialog=1}] 23 59 24 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.1"}]}
 tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.2"}]}
 tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.3"}]}
@@ -26,8 +26,8 @@ tellraw @s[scores={Dialog=400}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=416}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.11"}]}
 scoreboard players set @s[scores={Dialog=480}] MusicType 33
 scoreboard players set @s[scores={Dialog=480}] Music 0
-execute if entity @s[scores={Dialog=480}] positioned -1999 51 -585 run function medabots_server:spawn_entities/cutscene/select_corps
-execute if entity @s[scores={Dialog=480}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -601
+execute if entity @s[scores={Dialog=480}] positioned 23 59 47 run function medabots_server:spawn_entities/cutscene/select_corps
+execute if entity @s[scores={Dialog=480}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 24 51 31
 execute if entity @s[scores={Dialog=480}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
 execute if entity @s[scores={Dialog=555}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] remove walking
 execute if entity @s[scores={Dialog=555..1127}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s facing entity @e[tag=squidguts,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
@@ -50,9 +50,9 @@ tellraw @s[scores={Dialog=968}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=976}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.27"}]}
 tellraw @s[scores={Dialog=1016}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.select_corps","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.28"}]}
 tellraw @s[scores={Dialog=1040}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.squidguts","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.29"}]}
-execute if entity @s[scores={Dialog=1128}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
+execute if entity @s[scores={Dialog=1128}] as @e[tag=squidguts,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=1128}] run tag @e[tag=squidguts,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=1128}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1999 51 -585
+execute if entity @s[scores={Dialog=1128}] as @e[tag=select_corps,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=1128}] run tag @e[tag=select_corps,tag=this_dialog,limit=1] add walking
 tellraw @s[scores={Dialog=1148}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.squidguts_jammy_battle.30"}]}
 tag @s[scores={Dialog=1198}] remove dialog_infinity_squidguts_jammy_battle

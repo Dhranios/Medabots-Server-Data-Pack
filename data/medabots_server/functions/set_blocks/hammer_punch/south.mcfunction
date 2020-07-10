@@ -1,4 +1,2 @@
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.hammer_punch"}',Tags:["hammer_punch","south"],Invisible:1b,Marker:1b,Rotation:[0.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:60}}]}
 function medabots_server:set_blocks/hammer_punch
-setblock ~ ~ ~ minecraft:brown_mushroom_block[down=true,east=true,north=true,south=false,up=true,west=true]
-setblock ~ ~1 ~ minecraft:piston[facing=south,extended=false]
-tag @e[distance=..0.7,tag=hammer_punch] add south

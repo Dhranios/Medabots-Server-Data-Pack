@@ -1,22 +1,22 @@
-execute positioned -1889 44 -541 run function medabots_server:spawn_entities/item/10_medallar_cents
-execute positioned -1891 44 -558 run function medabots_server:set_blocks/door/x/power_0
-execute positioned -1879 44 -562 run function medabots_server:set_blocks/door/x/power_0
-execute positioned -1879 44 -561 run function medabots_server:set_blocks/door/x/power_0
-execute positioned -1876 44 -571 run function medabots_server:set_blocks/door/z/power_1
-execute positioned -1875 44 -571 run function medabots_server:set_blocks/door/z/power_0
-execute positioned -1880 44 -583 run function medabots_server:set_blocks/door/z/power_1
-execute positioned -1879 44 -583 run function medabots_server:set_blocks/door/z/power_0
-execute positioned -1889 44 -585 run function medabots_server:set_blocks/door/x/power_1
-execute positioned -1889 44 -586 run function medabots_server:set_blocks/door/x/power_0
-execute positioned -1901 44 -581 run function medabots_server:set_blocks/door/x/power_1
-execute positioned -1901 44 -582 run function medabots_server:set_blocks/door/x/power_0
-execute positioned -1903 44 -573 run function medabots_server:set_blocks/door/z/power_1
-execute positioned -1904 44 -573 run function medabots_server:set_blocks/door/z/power_0
-execute positioned -1899 44 -561 run function medabots_server:set_blocks/door/z/power_1
-execute positioned -1899 44 -561 run tag @e[distance=..0.7,tag=door] add robattle
-execute positioned -1900 44 -561 run function medabots_server:set_blocks/door/z/power_0
-execute positioned -1890 44 -548 run function medabots_server:set_blocks/starting_area
-teleport @s -1890 44 -548 0 0
+execute positioned 32 53 62 run function medabots_server:spawn_entities/item/10_medallar_cents
+execute positioned 30 53 45 run function medabots_server:set_blocks/door/x/power_0
+execute positioned 42 53 41 run function medabots_server:set_blocks/door/x/power_0
+execute positioned 42 53 42 run function medabots_server:set_blocks/door/x/power_0
+execute positioned 45 53 32 run function medabots_server:set_blocks/door/z/power_1
+execute positioned 46 53 32 run function medabots_server:set_blocks/door/z/power_0
+execute positioned 41 53 20 run function medabots_server:set_blocks/door/z/power_1
+execute positioned 42 53 20 run function medabots_server:set_blocks/door/z/power_0
+execute positioned 32 53 18 run function medabots_server:set_blocks/door/x/power_1
+execute positioned 32 53 17 run function medabots_server:set_blocks/door/x/power_0
+execute positioned 20 53 22 run function medabots_server:set_blocks/door/x/power_1
+execute positioned 20 53 21 run function medabots_server:set_blocks/door/x/power_0
+execute positioned 18 53 30 run function medabots_server:set_blocks/door/z/power_1
+execute positioned 17 53 30 run function medabots_server:set_blocks/door/z/power_0
+execute positioned 22 53 42 run function medabots_server:set_blocks/door/z/power_1
+execute positioned 22 53 42 run tag @e[distance=..0.7,tag=door] add robattle
+execute positioned 21 53 42 run function medabots_server:set_blocks/door/z/power_0
+execute positioned 31 53 55 run function medabots_server:set_blocks/starting_area
+teleport @s 31 53 55 0 0
 bossbar set medabots_server:boxer/time value 0
 bossbar set medabots_server:boxer/time players @s
 scoreboard players set @s State 1

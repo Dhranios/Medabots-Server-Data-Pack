@@ -1,4 +1,4 @@
-data modify storage medabots_server:topmaniac Tags set from entity @e[type=minecraft:ghast,tag=this_topmaniac,limit=1] Tags
+data modify storage medabots_server:topmaniac Tags set from entity @e[type=minecraft:spider,tag=this_topmaniac,limit=1] Tags
 execute if entity @s[scores={AnimationProg=1..}] if data storage medabots_server:topmaniac {Tags:["dying"]} run scoreboard players set @s[tag=!dying] AnimationProg 0
 execute if entity @s[scores={AnimationProg=1..}] if data storage medabots_server:topmaniac {Tags:["roll_start"]} run scoreboard players set @s[tag=!roll_start] AnimationProg 0
 execute if entity @s[scores={AnimationProg=1..}] if data storage medabots_server:topmaniac {Tags:["roll"]} run scoreboard players set @s[tag=!roll] AnimationProg 0

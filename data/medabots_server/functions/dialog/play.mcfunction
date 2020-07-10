@@ -225,7 +225,10 @@ execute if entity @s[tag=dialog_other_salesman_monkey_medal_stage] run function 
 execute if entity @s[tag=dialog_other_salesman_chameleon_medal] run function medabots_server:dialog/other/salesman_chameleon_medal
 execute if entity @s[tag=dialog_other_salesman_chameleon_medal_vs] run function medabots_server:dialog/other/salesman_chameleon_medal_vs
 execute if entity @s[tag=dialog_other_salesman_chameleon_medal_battle] run function medabots_server:dialog/other/salesman_chameleon_medal_battle
-#execute if entity @s[tag=dialog_other_salesman_mermaid_medal] run function medabots_server:dialog/other/salesman_mermaid_medal
+execute if entity @s[tag=dialog_other_salesman_mermaid_medal] run function medabots_server:dialog/other/salesman_mermaid_medal
+execute if entity @s[tag=dialog_other_salesman_mermaid_medal_find] run function medabots_server:dialog/other/salesman_mermaid_medal_find
+execute if entity @s[tag=dialog_other_salesman_mermaid_medal_follow] run function medabots_server:dialog/other/salesman_mermaid_medal_follow
+execute if entity @s[tag=dialog_other_salesman_mermaid_medal_burried] run function medabots_server:dialog/other/salesman_mermaid_medal_burried
 
 # Clashable
 execute if entity @s[tag=dialog_other_get_nino] unless entity @s[tag=!get_nino_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/get_nino
@@ -241,3 +244,5 @@ execute if entity @s[tag=dialog_other_salesman_unicorn_medal_return] unless enti
 execute if entity @s[tag=dialog_other_salesman_unicorn_medal_end] unless entity @s[tag=!salesman_unicorn_medal_end_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_unicorn_medal_end
 execute if entity @s[tag=dialog_other_salesman_monkey_medal_end] unless entity @s[tag=!salesman_monkey_medal_end_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_monkey_medal_end
 execute if entity @s[tag=dialog_other_salesman_chameleon_medal_end] unless entity @s[tag=!salesman_chameleon_medal_end_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_chameleon_medal_end
+execute if entity @s[tag=dialog_other_salesman_mermaid_medal_item] unless entity @s[tag=!salesman_mermaid_medal_item_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_mermaid_medal_item
+execute if entity @s[tag=dialog_other_salesman_mermaid_medal_end] unless entity @s[tag=!salesman_mermaid_medal_end_dialog,scores={Dialog=1..}] run function medabots_server:dialog/other/salesman_mermaid_medal_end

@@ -113,6 +113,6 @@ experience add @s -1 levels
 effect give @s minecraft:health_boost 1000000 19 true
 effect give @s minecraft:instant_health 1 19 true
 stopsound @s music
-teleport @s -1873 51 -620
-spawnpoint @s -286 55 -52
+execute in medabots_server:tutorial_default run teleport @s 15 59 13
+execute in minecraft:overworld run spawnpoint @s -286 55 -52
 tag @s add try_tutorial_level

@@ -8,11 +8,11 @@ advancement grant @s[scores={Dialog=1}] only medabots_server:story_progression/i
 scoreboard players set @s[scores={Dialog=1}] MusicType 32
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1999 51 -561 run function medabots_server:spawn_entities/cutscene/metabee
-execute if entity @s[scores={Dialog=1}] positioned -1997 51 -564 run function medabots_server:spawn_entities/cutscene/seaslug
+execute if entity @s[scores={Dialog=1}] positioned 18 59 20 run function medabots_server:spawn_entities/cutscene/metabee
+execute if entity @s[scores={Dialog=1}] positioned 20 59 17 run function medabots_server:spawn_entities/cutscene/seaslug
 execute if entity @s[scores={Dialog=1..1319}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=seaslug,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..3907}] at @e[tag=seaslug,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=seaslug,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1997 51 -560 -180 0
+teleport @s[scores={Dialog=1}] 20 59 21 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_seaslug.1"}]}
 tellraw @s[scores={Dialog=32}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_seaslug.2"}]}
 tellraw @s[scores={Dialog=56}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_seaslug.3"}]}
@@ -111,7 +111,7 @@ tellraw @s[scores={Dialog=3844}] {"translate":"chat.type.text","with":[{"transla
 tellraw @s[scores={Dialog=3860}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_seaslug.94"}]}
 tellraw @s[scores={Dialog=3868}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_seaslug.95"}]}
 tellraw @s[scores={Dialog=3900}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.seaslug","color":"green"},{"translate":"medabots_server:dialog.infinity.vs_seaslug.96"}]}
-execute if entity @s[scores={Dialog=3908}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1998 51 -581
+execute if entity @s[scores={Dialog=3908}] as @e[tag=seaslug,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 19 59 0
 execute if entity @s[scores={Dialog=3908}] run tag @e[tag=seaslug,tag=this_dialog,limit=1] add running
 tag @s[scores={Dialog=3949}] remove dialog_infinity_vs_seaslug
 scoreboard players set @s[scores={Dialog=3949}] MusicType 1

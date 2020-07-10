@@ -24,7 +24,7 @@ execute if entity @s[tag=pawn,tag=white,scores={PosX=7}] run function medabots_s
 execute if entity @s[tag=pawn,tag=black,scores={PosX=0}] run function medabots_server:items/player_interactions/chess/game/promote
 tag @s[distance=..0.5,tag=!did_not_move] add did_move
 execute if entity @s[tag=did_move] run tag @e[tag=pawn,tag=this_chess_game,tag=2_steps] remove 2_steps
-execute if entity @s[tag=!did_move,tag=!did_not_move] run tellraw @a[distance=..0.5,tag=this_chess_game,limit=1] {"translate":"medabots_server:message.player_interactions.chess.invalid_move"}
+execute if entity @s[tag=!did_move,tag=!did_not_move] run tellraw @a[distance=..0.5,tag=this_chess_game,limit=1] {"translate":"medabots_server:message.player_interactions.chess.invalid_move","color":"green"}
 execute if entity @s[tag=pawn,tag=white] if score #temp PosX matches 2 run tag @s add 2_steps
 execute if entity @s[tag=pawn,tag=black] if score #temp PosX matches -2 run tag @s add 2_steps
 tag @s remove did_not_move

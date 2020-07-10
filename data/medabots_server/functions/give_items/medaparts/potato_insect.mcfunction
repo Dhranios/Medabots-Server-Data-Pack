@@ -1,4 +1,4 @@
 function medabots_server:give_items/medaparts/potato_insect/caterpie
 function medabots_server:give_items/medaparts/potato_insect/attenderskin
-function medabots_server:give_items/medaparts/potato_insect/rangingskin
+function medabots_server:give_items/medaparts/potato_insect/ragingskin
 function medabots_server:give_items/medaparts/potato_insect/changedress

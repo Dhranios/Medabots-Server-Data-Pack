@@ -24,6 +24,9 @@ execute if entity @s[tag=action_floor,tag=!disabled] run function medabots_serve
 execute if entity @s[tag=algae,tag=!disabled] run function medabots_server:blocks/algae
 execute if entity @s[tag=drawbridge,tag=!disabled] run function medabots_server:blocks/drawbridge
 execute if entity @s[tag=spring_wall,tag=!disabled] run function medabots_server:blocks/spring_wall
+execute if entity @s[tag=hammer_punch,tag=!disabled] run function medabots_server:blocks/hammer_punch
+execute if entity @s[tag=press_wall,tag=!second_half,tag=!disabled] run function medabots_server:blocks/press_wall
+tag @s[tag=press_wall,tag=second_half,tag=dead] remove dead
 
 # Inventory entities shouldn't exist post-processing
 tag @s[tag=inventory] add dead

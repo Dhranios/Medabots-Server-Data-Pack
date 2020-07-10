@@ -33,7 +33,7 @@ scoreboard players set @s[scores={Jukebox=16},advancements={medabots_server:spec
 playsound medabots_server:music.stage.arena.lagdou_ruins_3 music @s[scores={Jukebox=17},advancements={medabots_server:special_items/jukebox/wave_1/lagdou_ruins_final=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=17},advancements={medabots_server:special_items/jukebox/wave_1/lagdou_ruins_final=true}] Music 900
 playsound medabots_server:music.stage.arena.ricco_harbor music @s[scores={Jukebox=18},advancements={medabots_server:special_items/jukebox/wave_1/ricco_harbor=true}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Jukebox=18},advancements={medabots_server:special_items/jukebox/wave_1/ricco_harbor=true}] Music 2440
+scoreboard players set @s[scores={Jukebox=18},advancements={medabots_server:special_items/jukebox/wave_1/ricco_harbor=true}] Music 2280
 playsound medabots_server:music.stage.arena.ricco_harbor_removed music @s[scores={Jukebox=19},advancements={medabots_server:special_items/jukebox/wave_1/ricco_harbor_removed=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=19},advancements={medabots_server:special_items/jukebox/wave_1/ricco_harbor_removed=true}] Music 3640
 playsound medabots_server:music.stage.arena.final_destination_1 music @s[scores={Jukebox=20},advancements={medabots_server:special_items/jukebox/wave_1/final_destination_1=true}] ~ ~ ~ 1000

@@ -1,0 +1,35 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:fishing_rod",
+            "nbt": "{Unbreakable:1b,Damage:6,CustomModelData:3}"
+        },
+        "title": {
+            "translate": "medabots_server:advancements.main.salesman_quest.mermaid_medal"
+        },
+        "description": {
+            "translate": "medabots_server:advancements.main.salesman_quest.mermaid_medal.description"
+        }
+    },
+    "parent": "medabots_server:main/salesman_quest/monkey_medal",
+    "criteria": {
+        "start_the_quest": {
+            "trigger": "minecraft:impossible"
+        },
+        "find_seaslug": {
+            "trigger": "minecraft:impossible"
+        },
+        "follow_seaslug": {
+            "trigger": "minecraft:impossible"
+        },
+        "seaslug_burried_item": {
+            "trigger": "minecraft:impossible"
+        },
+        "obtain_item": {
+            "trigger": "minecraft:impossible"
+        },
+        "end_the_quest": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

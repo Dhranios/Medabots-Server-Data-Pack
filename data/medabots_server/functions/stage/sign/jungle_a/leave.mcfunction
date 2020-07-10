@@ -1,7 +1,7 @@
 execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
-teleport @s -1673 51 -148 -180 0
-data merge block -1674 52 -179 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/jungle_a/play"}}'}
-setblock -1674 53 -181 minecraft:redstone_block
+teleport @s 32 59 31 -180 0
+data merge block 31 60 0 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/sign/jungle_a/play"}}'}
+setblock 31 61 -2 minecraft:stone_button[face=wall,facing=north,powered=true]
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 1
 scoreboard players reset @s Stage

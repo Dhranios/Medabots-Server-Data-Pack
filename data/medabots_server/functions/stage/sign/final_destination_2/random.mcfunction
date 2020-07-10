@@ -1,5 +1,5 @@
-data merge block -1959 44 -197 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/final_destination_2/enter"}}'}
-setblock -1957 45 -197 minecraft:red_wool
+data merge block 50 44 33 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/final_destination_2/enter"}}'}
+setblock 52 45 33 minecraft:air
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
 scoreboard players set @s MusicType 4
 scoreboard players set @s Stage 62

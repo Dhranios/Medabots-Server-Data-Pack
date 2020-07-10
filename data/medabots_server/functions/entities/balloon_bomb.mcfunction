@@ -36,7 +36,7 @@ execute if entity @e[distance=..0.4,tag=balloon_bomb,type=minecraft:shulker,nbt=
 execute as @e[distance=..0.4,tag=balloon_bomb,tag=should_burst] run tag @s remove should_burst
 execute as @e[distance=..0.4,tag=balloon_bomb,tag=potential_burst] run tag @s add should_burst
 execute as @e[distance=..0.4,tag=balloon_bomb,tag=potential_burst] run tag @s remove potential_burst
-execute as @e[distance=..0.4,tag=balloon_bomb,type=minecraft:shulker] run data merge entity @s {Health:20.0f,Peek:1b,AbsorptionAmount:1000.0f}
+execute as @e[distance=..0.4,tag=balloon_bomb,type=minecraft:shulker] run data merge entity @s {Health:20.0f,Air:300s,Peek:1b,AbsorptionAmount:1000.0f}
 execute as @e[distance=..0.4,tag=balloon_bomb,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
 
 # Position correcion

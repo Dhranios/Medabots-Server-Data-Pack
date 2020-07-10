@@ -1,4 +1,6 @@
-teleport @s[scores={Dialog=0,Verified=3}] -1949 51 -564 -180 0
+scoreboard players set @s[scores={Dialog=0,Verified=3}] PrevMusicType 0
+scoreboard players set @s[scores={Dialog=0,Verified=3}] Music 0
+execute in medabots_server:park_battle run teleport @s[scores={Dialog=0,Verified=3}] 24 59 25 -180 0
 scoreboard players set @s[scores={Dialog=0,Verified=3}] KillStreak 0
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
 execute if entity @s[advancements={medabots_server:story_progression/infinity={spykes_insperation=true,vs_samantha=false}}] run tag @s add dialog_infinity_vs_samantha

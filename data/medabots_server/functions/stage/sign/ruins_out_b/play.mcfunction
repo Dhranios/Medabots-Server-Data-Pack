@@ -1,8 +1,8 @@
 execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
 execute if entity @s[tag=has_medabot_form] run function medabots_server:items/player_interactions/medabot/revert
-teleport @s[scores={Dialog=0},gamemode=adventure] -1808 37 -478 90 0
-execute if entity @s[scores={Dialog=0},gamemode=adventure] run data merge block -1814 52 -535 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/ruins_out_b/enter"}}'}
-execute if entity @s[scores={Dialog=0},gamemode=adventure] run setblock -1814 53 -537 minecraft:red_wool
+teleport @s[scores={Dialog=0},gamemode=adventure] 50 45 58 90 0
+execute if entity @s[scores={Dialog=0},gamemode=adventure] run data merge block 44 60 1 {Text1:'{"text":"","clickEvent":{"action":"run_command","value":"function medabots_server:stage/try/ruins_out_b/enter"}}'}
+execute if entity @s[scores={Dialog=0},gamemode=adventure] run setblock 44 61 -1 minecraft:air
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={Dialog=0},gamemode=adventure] Music 0
 scoreboard players set @s[scores={Dialog=0},gamemode=adventure] MusicType 4
 scoreboard players set @s[scores={Dialog=0},gamemode=adventure] Stage 16

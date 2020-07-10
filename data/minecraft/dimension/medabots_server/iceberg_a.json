@@ -1,0 +1,28 @@
+{
+    "type": "medabots_server:dark_stage",
+    "generator": {
+        "settings": {
+            "lakes": false,
+            "features": false,
+            "biome": "minecraft:snowy_mountains",
+            "structures": {
+                "structures": {}
+            },
+            "layers": [
+                {
+                    "height": 1,
+                    "block": "minecraft:bedrock"
+                },
+                {
+                    "height": 49,
+                    "block": "minecraft:stone"
+                },
+                {
+                    "height": 14,
+                    "block": "minecraft:cobblestone"
+                }
+            ]
+        },
+        "type": "minecraft:flat"
+    }
+}

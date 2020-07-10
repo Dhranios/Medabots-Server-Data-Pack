@@ -7,13 +7,13 @@ scoreboard players add @s Dialog 1
 scoreboard players set @s[scores={Dialog=1}] MusicType 35
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1949 51 -619 run function medabots_server:spawn_entities/cutscene/samantha
+execute if entity @s[scores={Dialog=1}] positioned 23 59 21 run function medabots_server:spawn_entities/cutscene/samantha
 execute if entity @s[scores={Dialog=1..143}] at @e[tag=samantha,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=samantha,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1949 51 -616 -180 0
+teleport @s[scores={Dialog=1}] 23 59 24 -180 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_samantha.1","with":[{"selector":"@s"}]}]}
 tellraw @s[scores={Dialog=48}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_samantha.2"}]}
 tellraw @s[scores={Dialog=104}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.samantha","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_samantha.3"}]}
-execute if entity @s[scores={Dialog=144}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1950 51 -640
+execute if entity @s[scores={Dialog=144}] as @e[tag=samantha,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 22 59 0
 execute if entity @s[scores={Dialog=144}] run tag @e[tag=samantha,tag=this_dialog,limit=1] add walking
 scoreboard players set @s[scores={Dialog=242}] KillStreak 1
 scoreboard players set @s[scores={Dialog=242}] MusicType 1

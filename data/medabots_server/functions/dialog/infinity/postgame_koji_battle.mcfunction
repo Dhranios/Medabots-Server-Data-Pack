@@ -7,16 +7,16 @@ scoreboard players add @s Dialog 1
 scoreboard players set @s[scores={Dialog=1}] MusicType 38
 scoreboard players set @s[scores={Dialog=1}] Music 0
 execute if entity @s[scores={Dialog=1,Jukebox=1..}] run function medabots_server:items/jukebox/turn_off
-execute if entity @s[scores={Dialog=1}] positioned -1948 51 -613 run function medabots_server:spawn_entities/cutscene/roks
-execute if entity @s[scores={Dialog=1}] positioned -1950 51 -613 run function medabots_server:spawn_entities/cutscene/koji
+execute if entity @s[scores={Dialog=1}] positioned 24 59 27 run function medabots_server:spawn_entities/cutscene/roks
+execute if entity @s[scores={Dialog=1}] positioned 22 59 27 run function medabots_server:spawn_entities/cutscene/koji
 execute if entity @s[scores={Dialog=1..55}] at @e[tag=koji,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=koji,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=1..55}] at @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
-teleport @s[scores={Dialog=1}] -1949 51 -616 0 0
+teleport @s[scores={Dialog=1}] 23 59 24 0 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.koji","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_koji_battle.1"}]}
 tellraw @s[scores={Dialog=16}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.roks","color":"green"},{"translate":"medabots_server:dialog.infinity.postgame_koji_battle.2"}]}
-execute if entity @s[scores={Dialog=56}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
+execute if entity @s[scores={Dialog=56}] as @e[tag=koji,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=56}] run tag @e[tag=koji,tag=this_dialog,limit=1] add walking
-execute if entity @s[scores={Dialog=56}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing -1949 51 -593
+execute if entity @s[scores={Dialog=56}] as @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] at @s run teleport @s ~ ~ ~ facing 23 59 47
 execute if entity @s[scores={Dialog=56}] run tag @e[tag=roks,tag=!medabot_model,tag=this_dialog,limit=1] add walking
 scoreboard players set @s[scores={Dialog=150}] KillStreak 0
 scoreboard players set @s[scores={Dialog=150}] MusicType 1

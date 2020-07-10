@@ -1,51 +1,51 @@
-execute positioned -2001 45 -572 run function medabots_server:set_blocks/accelerator/south
-execute positioned -1997 45 -575 run function medabots_server:set_blocks/accelerator/south
-execute positioned -1996 45 -570 run function medabots_server:set_blocks/accelerator/south
-execute positioned -1992 45 -572 run function medabots_server:set_blocks/accelerator/south
-execute positioned -1985 45 -565 run function medabots_server:set_blocks/accelerator/west
-execute positioned -1982 45 -561 run function medabots_server:set_blocks/accelerator/west
-execute positioned -1988 45 -560 run function medabots_server:set_blocks/accelerator/west
-execute positioned -1985 45 -556 run function medabots_server:set_blocks/accelerator/west
-execute positioned -1992 45 -549 run function medabots_server:set_blocks/accelerator/north
-execute positioned -1996 45 -546 run function medabots_server:set_blocks/accelerator/north
-execute positioned -1997 45 -551 run function medabots_server:set_blocks/accelerator/north
-execute positioned -2001 45 -549 run function medabots_server:set_blocks/accelerator/north
-execute positioned -2008 45 -556 run function medabots_server:set_blocks/accelerator/east
-execute positioned -2011 45 -560 run function medabots_server:set_blocks/accelerator/east
-execute positioned -2006 45 -561 run function medabots_server:set_blocks/accelerator/east
-execute positioned -2008 45 -565 run function medabots_server:set_blocks/accelerator/east
+execute positioned 16 53 9 run function medabots_server:set_blocks/accelerator/south
+execute positioned 20 53 6 run function medabots_server:set_blocks/accelerator/south
+execute positioned 21 53 11 run function medabots_server:set_blocks/accelerator/south
+execute positioned 25 53 9 run function medabots_server:set_blocks/accelerator/south
+execute positioned 32 53 16 run function medabots_server:set_blocks/accelerator/west
+execute positioned 35 53 20 run function medabots_server:set_blocks/accelerator/west
+execute positioned 29 53 21 run function medabots_server:set_blocks/accelerator/west
+execute positioned 32 53 25 run function medabots_server:set_blocks/accelerator/west
+execute positioned 25 53 32 run function medabots_server:set_blocks/accelerator/north
+execute positioned 21 53 35 run function medabots_server:set_blocks/accelerator/north
+execute positioned 20 53 30 run function medabots_server:set_blocks/accelerator/north
+execute positioned 16 53 32 run function medabots_server:set_blocks/accelerator/north
+execute positioned 9 53 25 run function medabots_server:set_blocks/accelerator/east
+execute positioned 6 53 21 run function medabots_server:set_blocks/accelerator/east
+execute positioned 11 53 20 run function medabots_server:set_blocks/accelerator/east
+execute positioned 9 53 16 run function medabots_server:set_blocks/accelerator/east
 
-execute if entity @s[scores={ArenaType=0}] run teleport @s -1997 45 -564 0 0
-execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1996 45 -557 0 0
-execute if entity @s[scores={ArenaType=0},tag=vs_cpus,tag=!story_battle] positioned -1996 45 -557 run function medabots_server:stage/create/ruins_battle/random_enemy
+execute if entity @s[scores={ArenaType=0}] run teleport @s 20 53 17 0 0
+execute if entity @s[scores={ArenaType=0}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] 21 53 24 0 0
+execute if entity @s[scores={ArenaType=0},tag=vs_cpus,tag=!story_battle] positioned 21 53 24 run function medabots_server:stage/create/ruins_battle/random_enemy
 
-execute if entity @s[scores={ArenaType=1}] run teleport @s -1997 45 -564 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1996 45 -557 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=49}] -1994 45 -556 0 0
-execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] -1998 45 -555 0 0
-execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1996 45 -557 run function medabots_server:stage/create/ruins_battle/random_enemy
-execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1994 45 -556 run function medabots_server:stage/create/ruins_battle/random_enemy
-execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned -1998 45 -555 run function medabots_server:stage/create/ruins_battle/random_enemy
+execute if entity @s[scores={ArenaType=1}] run teleport @s 20 53 17 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] 21 53 24 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=49}] 23 53 25 0 0
+execute if entity @s[scores={ArenaType=1}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] 19 53 26 0 0
+execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned 21 53 24 run function medabots_server:stage/create/ruins_battle/random_enemy
+execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned 23 53 25 run function medabots_server:stage/create/ruins_battle/random_enemy
+execute if entity @s[scores={ArenaType=1},tag=vs_cpus,tag=!story_battle] positioned 19 53 26 run function medabots_server:stage/create/ruins_battle/random_enemy
 
-execute if entity @s[scores={ArenaType=2}] run teleport @s -1997 45 -564 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1995 45 -564 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=49}] -1996 45 -557 0 0
-execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] -1994 45 -557 0 0
-execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1995 45 -564 run function medabots_server:stage/create/generic/get_ally
-execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1996 45 -557 run function medabots_server:stage/create/ruins_battle/random_enemy
-execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned -1994 45 -557 run function medabots_server:stage/create/ruins_battle/random_enemy
+execute if entity @s[scores={ArenaType=2}] run teleport @s 20 53 17 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] 22 53 17 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=49}] 21 53 24 0 0
+execute if entity @s[scores={ArenaType=2}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] 23 53 24 0 0
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned 22 53 17 run function medabots_server:stage/create/generic/get_ally
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned 21 53 24 run function medabots_server:stage/create/ruins_battle/random_enemy
+execute if entity @s[scores={ArenaType=2},tag=vs_cpus,tag=!story_battle] positioned 23 53 24 run function medabots_server:stage/create/ruins_battle/random_enemy
 
-execute if entity @s[scores={ArenaType=3}] run teleport @s -1997 45 -564 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] -1996 45 -557 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=49}] -2000 45 -560 0 0
-execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] -1993 45 -561 0 0
-execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1996 45 -557 run function medabots_server:stage/create/ruins_battle/random_neutral
-execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -2000 45 -560 run function medabots_server:stage/create/ruins_battle/random_neutral
-execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned -1993 45 -561 run function medabots_server:stage/create/ruins_battle/random_neutral
+execute if entity @s[scores={ArenaType=3}] run teleport @s 20 53 17 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=0,Gamemode=0,Stage=49}] 21 53 24 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=1,Gamemode=0,Stage=49}] 17 53 21 0 0
+execute if entity @s[scores={ArenaType=3}] run teleport @a[scores={StageIndex=2,Gamemode=0,Stage=49}] 24 53 20 0 0
+execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned 21 53 24 run function medabots_server:stage/create/ruins_battle/random_neutral
+execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned 17 53 21 run function medabots_server:stage/create/ruins_battle/random_neutral
+execute if entity @s[scores={ArenaType=3},tag=vs_cpus,tag=!story_battle] positioned 24 53 20 run function medabots_server:stage/create/ruins_battle/random_neutral
 
-summon minecraft:armor_stand -1994 45 -561 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Rotation:[90.0f,0.0f]}
+summon minecraft:armor_stand 23 53 20 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee"],Rotation:[90.0f,0.0f]}
 
-scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] Stage 49
-scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] State 1
-execute as @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-scoreboard players set @a[x=-2017,y=43,z=-581,dx=42,dy=7,dz=42] MusicType 0
+scoreboard players set @a[x=0,y=51,z=0,dx=42,dy=7,dz=42] Stage 49
+scoreboard players set @a[x=0,y=51,z=0,dx=42,dy=7,dz=42] State 1
+execute as @a[x=0,y=51,z=0,dx=42,dy=7,dz=42] unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
+scoreboard players set @a[x=0,y=51,z=0,dx=42,dy=7,dz=42] MusicType 0

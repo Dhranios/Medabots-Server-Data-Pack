@@ -1,5 +1,5 @@
-execute if entity @e[type=minecraft:armor_stand,tag=king,tag=dead,tag=black] run tellraw @a[tag=this_chess_game] {"translate":"medabots_server:message.player_interactions.chess.end.white"}
-execute if entity @e[type=minecraft:armor_stand,tag=king,tag=dead,tag=white] run tellraw @a[tag=this_chess_game] {"translate":"medabots_server:message.player_interactions.chess.end.black"}
+execute if entity @e[type=minecraft:armor_stand,tag=king,tag=dead,tag=black] run tellraw @a[tag=this_chess_game] {"translate":"medabots_server:message.player_interactions.chess.end.white","color":"green"}
+execute if entity @e[type=minecraft:armor_stand,tag=king,tag=dead,tag=white] run tellraw @a[tag=this_chess_game] {"translate":"medabots_server:message.player_interactions.chess.end.black","color":"green"}
 tag @e[tag=this_chess_game,type=!minecraft:player] add dead
 
 scoreboard players set @a[tag=this_chess_game] PlayerInteract 0

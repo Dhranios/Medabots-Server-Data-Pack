@@ -5,11 +5,11 @@ tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:male_tinpet"
 tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}}] add female_tinpet
 tag @s[nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:neutral_tinpet"}}}}] add neutral_tinpet
 
-setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
-data modify block -286 0 -52 Items[0] merge from entity @s SelectedItem
-data modify block -286 0 -52 Items[0].tag.medabots_server merge value {activated:1b}
-loot replace entity @s weapon.mainhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-setblock -286 0 -52 minecraft:bedrock
+execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
+execute in minecraft:overworld run data modify block -286 0 -52 Items[0] merge from entity @s SelectedItem
+execute in minecraft:overworld run data modify block -286 0 -52 Items[0].tag.medabots_server merge value {activated:1b}
+execute in minecraft:overworld run loot replace entity @s weapon.mainhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
+execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock
 
 function medabots_server:gamemodes/default/load_medabot_inventory
 
@@ -45,5 +45,8 @@ scoreboard players operation @s LegsArmor = @s MaxLegsArmor
 function medabots_server:items/enable_medaparts
 
 # Model
-function medabots_server:entities/medabot/spawn_model
+function medabots_server:entities/medabot/spawn_model/gamemode
 effect give @s minecraft:invisibility 1000000 0 true
+
+execute unless entity @s[scores={HeadArmor=1..}] run tellraw @s {"text":"Something went wrong changing gamemode.","color":"red"}
+execute unless entity @s[scores={HeadArmor=1..}] run function medabots_server:gamemodes/default/reset

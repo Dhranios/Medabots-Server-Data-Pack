@@ -1,7 +1,7 @@
 playsound medabots_server:music.stage.boss.master_hand_1_intro music @s[scores={Jukebox=1},advancements={medabots_server:special_items/jukebox/wave_1/master_hand_smash_bros=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=1},advancements={medabots_server:special_items/jukebox/wave_1/master_hand_smash_bros=true}] Music 452
 playsound medabots_server:music.stage.boss.master_hand_and_crazy_hand_2_intro music @s[scores={Jukebox=2},advancements={medabots_server:special_items/jukebox/wave_1/master_hand_smash_melee=true}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Jukebox=2},advancements={medabots_server:special_items/jukebox/wave_1/master_hand_smash_melee=true}] Music 222
+scoreboard players set @s[scores={Jukebox=2},advancements={medabots_server:special_items/jukebox/wave_1/master_hand_smash_melee=true}] Music 232
 playsound medabots_server:music.stage.boss.master_hand_and_crazy_hand_3_intro music @s[scores={Jukebox=3},advancements={medabots_server:special_items/jukebox/wave_1/master_hand_smash_brawl=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=3},advancements={medabots_server:special_items/jukebox/wave_1/master_hand_smash_brawl=true}] Music 173
 playsound medabots_server:music.stage.boss.master_core_intro music @s[scores={Jukebox=5},advancements={medabots_server:special_items/jukebox/wave_1/master_core=true}] ~ ~ ~ 1000

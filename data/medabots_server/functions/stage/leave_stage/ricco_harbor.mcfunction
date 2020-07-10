@@ -1,4 +1,4 @@
-teleport @s -1440 51 -158 -180 0
+teleport @s 64 92 52 -180 0
 tag @s remove achieve_screw_you_all
 scoreboard players reset @s Stage
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s PrevMusicType 0

@@ -14,4 +14,4 @@ tag @e[tag=model_piece,tag=new_chest,limit=1] remove new_chest
 data modify entity @s ArmorItems[3].id set value "minecraft:carrot_on_a_stick"
 data modify entity @s ArmorItems[3].tag.Damage set value 23
 tag @s add separated
-kill @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{has_head:0b}}}}]}]
+tag @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{has_head:0b}}}}]}] add dead
