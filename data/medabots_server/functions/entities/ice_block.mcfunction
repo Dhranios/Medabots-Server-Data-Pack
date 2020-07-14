@@ -62,21 +62,16 @@ execute if entity @s[scores={Time=1}] run playsound medabots_server:block.moving
 # Crush enemies
 execute if entity @s[scores={Moving=1..}] run function medabots_server:entities/ice_block/crush
 
+# Prevent model and collision from messing up
+execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run data merge entity @s {Rotation:[0.0d,0.0d]}
+execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
+execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run data merge entity @s {Health:20.0f,Peek:1b,AbsorptionAmount:1000.0f}
+
 # Remove model and collision if dead
 execute if entity @s[tag=dead] run function medabots_server:entities/ice_block/death
 
-# Prevent model and collision from messing up
-execute as @e[distance=..0.4,tag=ice_block] run data merge entity @s {Rotation:[0.0d,0.0d]}
-execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
-execute as @e[distance=..0.4,tag=ice_block,type=minecraft:shulker] run data merge entity @s {Health:20.0f,Peek:1b,AbsorptionAmount:1000.0f}
-execute as @e[distance=..0.4,tag=ice_block,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
-
 # Position correcion
-execute unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava at @s positioned ~ ~0.6 ~ align y run teleport @s ~ ~-0.375 ~
+execute unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava at @s positioned ~ ~0.6 ~ align y run teleport @s ~ ~ ~
 execute if entity @s[scores={Moving=0},tag=has_moved] at @s align xz run teleport @s ~0.5 ~ ~0.5
 tag @s[scores={Moving=0},tag=has_moved] remove has_moved
 execute unless entity @s[scores={Moving=0..}] run scoreboard players set @s Moving 0
-
-# Refresh clients
-data merge entity @s {Air:1}
-data merge entity @s {Air:0}

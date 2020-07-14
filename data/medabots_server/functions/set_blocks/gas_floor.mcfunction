@@ -1,4 +1,3 @@
-summon minecraft:area_effect_cloud ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.gas_floor"}',Tags:["gas_floor"],Duration:2147483647}
-setblock ~ ~ ~ minecraft:light_gray_carpet
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.gas_floor"}',Tags:["gas_floor"],Invisible:1b,Marker:1b,Rotation:[0.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:246}}]}
 scoreboard players set @e[distance=..0.7,tag=gas_floor] PowerNeeded 1
 scoreboard players set @e[distance=..0.7,tag=gas_floor] PowerAmount 0

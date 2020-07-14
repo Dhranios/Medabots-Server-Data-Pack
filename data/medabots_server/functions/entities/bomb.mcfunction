@@ -1,6 +1,8 @@
 # Timer countdown
-scoreboard players remove @s[scores={DelayTime=1..},tag=enabled] DelayTime 1
-execute if entity @s[scores={DelayTime=0},tag=!dead,tag=enabled] run function medabots_server:entities/bomb/explode
+scoreboard players remove @s[tag=enabled] DelayTime 1
+scoreboard players reset @s[scores={DelayTime=..0},tag=!dead,tag=enabled] Moving
+execute if entity @s[scores={DelayTime=0},tag=!dead,tag=enabled] run playsound medabots_server:entity.bomb.explode hostile @a ~ ~ ~ 1
+execute if entity @s[scores={DelayTime=-10},tag=!dead,tag=enabled] run function medabots_server:entities/bomb/explode
 
 # Push away
 execute if entity @s[scores={Moving=0}] run function medabots_server:entities/bomb/hit
@@ -57,23 +59,18 @@ scoreboard players set @s[scores={Moving=1..,Steps=5},tag=!spring_wall_pushed] M
 scoreboard players set @s[scores={Steps=5}] Steps 0
 tag @s[scores={Moving=0}] remove spring_wall_pushed
 
+# Prevent model and collision from messing up
+execute as @e[distance=..0.4,tag=bomb,type=minecraft:shulker] run data merge entity @s {Rotation:[0.0d,0.0d]}
+execute as @e[distance=..0.4,tag=bomb,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
+execute as @e[distance=..0.4,tag=bomb,type=minecraft:shulker] run data merge entity @s {Health:20.0f,Peek:1b,AbsorptionAmount:1000.0f}
+
 # Remove model and collision if dead
 execute if entity @s[tag=dead] run function medabots_server:entities/bomb/death
 
-# Prevent model and collision from messing up
-execute as @e[distance=..0.4,tag=bomb] run data merge entity @s {Rotation:[0.0d,0.0d]}
-execute as @e[distance=..0.4,tag=bomb,type=minecraft:shulker] run effect give @s minecraft:invisibility 1000000 0 true
-execute as @e[distance=..0.4,tag=bomb,type=minecraft:shulker] run data merge entity @s {Health:20.0f,Peek:1b,AbsorptionAmount:1000.0f}
-execute as @e[distance=..0.4,tag=bomb,type=minecraft:falling_block] run data merge entity @s {Time:1,DropItem:0b}
-
 # Position correcion (else it floats above the ground)
 execute at @s unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:bubble_column unless block ~ ~-0.2 ~ minecraft:black_carpet unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava run tag @s add align_y
-execute at @s positioned ~ ~0.6 ~ align y run teleport @s[tag=align_y] ~ ~-0.375 ~
+execute at @s[tag=align_y] positioned ~ ~0.6 ~ align y run teleport @s ~ ~ ~
 execute if entity @s[scores={Moving=0},tag=has_moved] at @s align xz run teleport @s ~0.5 ~ ~0.5
 tag @s[scores={Moving=0},tag=has_moved] remove has_moved
 execute unless entity @s[scores={Steps=0..}] run scoreboard players set @s Steps 0
 execute unless entity @s[scores={Moving=0..}] run scoreboard players set @s Moving 0
-
-# Refresh clients
-data merge entity @s {Air:1}
-data merge entity @s {Air:0}

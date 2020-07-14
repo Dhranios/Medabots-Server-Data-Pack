@@ -12,6 +12,11 @@ execute if entity @s[tag=laser,tag=source] run function medabots_server:items/me
 execute if entity @s[tag=mr_referee] run function medabots_server:dialog/mr_referee
 
 # Make stage objects do something
+execute if entity @s[tag=balloon_bomb,tag=!action_floor,tag=!pot,tag=!disabled] run function medabots_server:entities/balloon_bomb
+execute if entity @s[tag=bomb,tag=!action_floor,tag=!pot,tag=!disabled] run function medabots_server:entities/bomb
+execute if entity @s[tag=round_stone,tag=!action_floor,tag=!disabled] run function medabots_server:entities/round_stone
+execute if entity @s[tag=ice_block,tag=!action_floor,tag=!disabled] run function medabots_server:entities/ice_block
+execute if entity @s[tag=pot,tag=!disabled] run function medabots_server:blocks/pot
 execute if entity @s[tag=mirror,tag=!disabled] run function medabots_server:blocks/mirror
 execute if entity @s[tag=mission,tag=!disabled] run function medabots_server:entities/mission
 execute if entity @s[tag=accelerator,tag=!disabled] run function medabots_server:blocks/accelerator
@@ -25,6 +30,7 @@ execute if entity @s[tag=algae,tag=!disabled] run function medabots_server:block
 execute if entity @s[tag=drawbridge,tag=!disabled] run function medabots_server:blocks/drawbridge
 execute if entity @s[tag=spring_wall,tag=!disabled] run function medabots_server:blocks/spring_wall
 execute if entity @s[tag=hammer_punch,tag=!disabled] run function medabots_server:blocks/hammer_punch
+execute if entity @s[tag=gas_floor,tag=!disabled] run function medabots_server:blocks/gas_floor
 execute if entity @s[tag=press_wall,tag=!second_half,tag=!disabled] run function medabots_server:blocks/press_wall
 tag @s[tag=press_wall,tag=second_half,tag=dead] remove dead
 
