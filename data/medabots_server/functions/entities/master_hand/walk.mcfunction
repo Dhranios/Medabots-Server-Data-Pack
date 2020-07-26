@@ -9,9 +9,9 @@ tag @s[scores={Time=21}] remove walk_start
 tag @s[scores={Time=21}] add walk
 execute if entity @s[scores={Time=20..24}] positioned ^1 ^-2 ^0.4 if entity @e[tag=potential_target,distance=..2] run tag @s add has_target
 execute if entity @s[scores={Time=20..24}] positioned ^1 ^ ^0.4 if entity @e[tag=potential_target,distance=..2] run tag @s add has_target
-execute if entity @s[scores={Time=24},tag=!has_target] unless block ^ ^-4 ^1 minecraft:air run playsound medabots_server:entity.master_hand.finger_walk hostile @a ~ ~ ~ 1
-execute if entity @s[scores={Time=20..24},tag=!has_target] unless block ^ ^-4 ^1 minecraft:air if block ^ ^ ^3 minecraft:air run teleport @s ^ ^ ^0.4
-execute if entity @s[scores={Time=24},tag=!has_target] if block ^ ^-4 ^1 minecraft:air run tag @s add walk_stop
+execute if entity @s[scores={Time=24},tag=!has_target] unless block ^ ^-3 ^1 minecraft:air run playsound medabots_server:entity.master_hand.finger_walk hostile @a ~ ~ ~ 1
+execute if entity @s[scores={Time=20..24},tag=!has_target] unless block ^ ^-3 ^1 minecraft:air if block ^ ^ ^3 minecraft:air run teleport @s ^ ^ ^0.4
+execute if entity @s[scores={Time=24},tag=!has_target] if block ^ ^-3 ^1 minecraft:air run tag @s add walk_stop
 execute if entity @s[scores={Time=24},tag=!has_target] unless block ^ ^ ^3 minecraft:air run tag @s add walk_stop
 scoreboard players set @s[scores={Time=24},tag=!has_target,tag=!walk_stop] Time 19
 

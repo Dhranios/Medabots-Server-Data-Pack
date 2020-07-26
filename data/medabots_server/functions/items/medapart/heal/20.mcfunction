@@ -12,4 +12,4 @@ execute if entity @s[tag=enemy_medabot] run scoreboard players add @e[distance=.
 execute if entity @s[tag=enemy_medabot] as @e[distance=..16,tag=ally_medabot] if score @s HeadArmor > @s MaxHeadArmor run scoreboard players operation @s HeadArmor = @s MaxHeadArmor
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[tag=head_selected] HeadUses 1
+execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_selected] HeadUses 1

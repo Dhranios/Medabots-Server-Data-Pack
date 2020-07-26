@@ -42,4 +42,4 @@ execute if entity @s[type=!minecraft:player] run tag @e[type=minecraft:item,tag=
 execute if entity @s[type=!minecraft:player] run kill @e[type=minecraft:area_effect_cloud,tag=falling]
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[tag=head_selected] HeadUses 1
+execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_selected] HeadUses 1

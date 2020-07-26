@@ -136,7 +136,7 @@ scoreboard players set @s[scores={MusicType=67}] Music 3800
 playsound medabots_server:music.stage.mt_battle_colosseum music @s[scores={MusicType=68}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=68}] Music 1280
 playsound medabots_server:music.stage.boss.topmaniac music @s[scores={MusicType=69}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=69}] Music 1115
+scoreboard players set @s[scores={MusicType=69}] Music 892
 playsound medabots_server:music.stage.boss.magolor music @s[scores={MusicType=70}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=70}] Music 2153
 playsound medabots_server:music.stage.boss.magolor_soul music @s[scores={MusicType=71}] ~ ~ ~ 1000

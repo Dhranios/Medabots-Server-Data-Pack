@@ -8,4 +8,4 @@ execute if entity @s[scores={ScoutTime=1..}] positioned ^ ^ ^10 run kill @e[type
 execute if entity @s[scores={ScoutTime=1..}] positioned ^ ^ ^10 run kill @e[type=minecraft:arrow,tag=napalm,distance=..15]
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[tag=head_selected] HeadUses 1
+execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_selected] HeadUses 1

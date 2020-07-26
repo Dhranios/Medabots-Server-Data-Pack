@@ -134,7 +134,7 @@ playsound medabots_server:music.stage.mt_battle_colosseum_intro music @s[scores=
 scoreboard players set @s[scores={MusicType=68}] Music 80
 advancement grant @s[scores={MusicType=68}] only medabots_server:special_items/jukebox/wave_0/mt_battle_colosseum
 playsound medabots_server:music.stage.boss.topmaniac_intro music @s[scores={MusicType=69}] ~ ~ ~ 1000
-scoreboard players set @s[scores={MusicType=69}] Music 55
+scoreboard players set @s[scores={MusicType=69}] Music 172
 advancement grant @s[scores={MusicType=69}] only medabots_server:special_items/jukebox/wave_1/topmaniac
 playsound medabots_server:music.stage.boss.magolor_intro music @s[scores={MusicType=70}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=70}] Music 308

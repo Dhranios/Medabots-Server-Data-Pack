@@ -2,9 +2,6 @@
 summon minecraft:armor_stand ^ ^0.1 ^1 {Invisible:1b,Small:1b,ArmorItems:[{},{},{},{id:"minecraft:wither_skeleton_skull",Count:1b}],CustomName:'{"translate":"medabots_server:move.destroy"}',Tags:["destroy"]}
 execute positioned ^ ^0.1 ^1 at @e[type=minecraft:armor_stand,tag=destroy,distance=..0.2] rotated as @s run teleport @e[type=minecraft:armor_stand,tag=destroy,distance=..0.2] ~ ~ ~ ~ ~
 
-# Remove from head uses if this was the head part
-scoreboard players remove @s[tag=head_selected] HeadUses 1
-
 # Make the closest destroy move deal damage
 tag @s add me
 execute unless entity @s[scores={ScoutTime=1..}] if entity @s[tag=!ally_medabot,tag=!enemy_medabot] at @e[sort=nearest,type=minecraft:armor_stand,tag=destroy,limit=1] positioned ^ ^ ^1 as @e[distance=..1.5,tag=hostile,tag=!me] run effect give @s[type=#medabots_server:undead] minecraft:instant_health 1 2 true

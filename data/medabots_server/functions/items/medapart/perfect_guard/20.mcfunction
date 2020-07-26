@@ -12,4 +12,4 @@ execute if entity @s[scores={ScoutTime=1..},tag=ally_medabot] run scoreboard pla
 execute if entity @s[scores={ScoutTime=1..},tag=enemy_medabot] run scoreboard players set @e[distance=..16,tag=enemy_medabot] PerfectGuardTime 300
 
 # Remove from head uses if this was the head
-scoreboard players remove @s[tag=head_selected] HeadUses 1
+execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_selected] HeadUses 1

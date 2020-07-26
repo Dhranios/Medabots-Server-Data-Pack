@@ -12,5 +12,5 @@ replaceitem entity @s[tag=right_arm_selected,scores={Drop=0,ScoutTime=1..}] hotb
 replaceitem entity @s[scores={ScoutTime=1..},type=!minecraft:player] weapon.mainhand minecraft:bow{Unbreakable:1b,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice"}',Lore:['{"translate":"medabots_server:medabots_server:move.sacrifice"}','{"italic":false,"color":"white","translate":"medabots_server:item.generic.shoot"}']},Enchantments:[{id:"minecraft:power",lvl:5s}],medabots_server:{id:"medabots_server:sacrifice"}}
 
 # destroy the arm used
-scoreboard players set @s[tag=left_arm_selected] LeftArmArmor 0
-scoreboard players set @s[tag=right_arm_selected] RightArmArmor 0
+execute unless entity @s[gamemode=creative] run scoreboard players set @s[tag=left_arm_selected] LeftArmArmor 0
+execute unless entity @s[gamemode=creative] run scoreboard players set @s[tag=right_arm_selected] RightArmArmor 0

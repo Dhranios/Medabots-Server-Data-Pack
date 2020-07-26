@@ -14,4 +14,4 @@ clear @s[tag=left_arm_selected] minecraft:fishing_rod{medabots_server:{part:"lef
 clear @s[tag=head_selected] minecraft:fishing_rod{medabots_server:{part:"head",activated:1b}}
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[tag=head_selected] HeadUses 1
+execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_selected] HeadUses 1

@@ -27,7 +27,7 @@ execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned 31 43 10 run f
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned 25 43 14 run function medabots_server:stage/create/final_destination_2/neutral
 execute if entity @s[scores={ArenaType=3},tag=vs_cpus] positioned 25 43 6 run function medabots_server:stage/create/final_destination_2/neutral
 
-summon minecraft:armor_stand 26 43 8 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[0.0f,0.0f]}
+summon minecraft:armor_stand 25 43 8 {Invisible:1b,Marker:1b,Small:1b,CustomName:'{"translate":"medabots_server:entity.mr_referee"}',Tags:["mr_referee","not_7","no_overwrite"],Rotation:[0.0f,0.0f]}
 
 scoreboard players set @a[scores={Gamemode=0,Stage=62}] Stage 62
 scoreboard players set @a[scores={Gamemode=0,Stage=62}] MusicType 53

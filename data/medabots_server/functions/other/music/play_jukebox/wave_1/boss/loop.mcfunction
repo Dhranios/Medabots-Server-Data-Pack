@@ -15,7 +15,7 @@ scoreboard players set @s[scores={Jukebox=7},advancements={medabots_server:speci
 playsound medabots_server:music.stage.boss.magolor_soul music @s[scores={Jukebox=8},advancements={medabots_server:special_items/jukebox/wave_1/magolor_soul=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=8},advancements={medabots_server:special_items/jukebox/wave_1/magolor_soul=true}] Music 2640
 playsound medabots_server:music.stage.boss.topmaniac music @s[scores={Jukebox=9},advancements={medabots_server:special_items/jukebox/wave_1/topmaniac=true}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Jukebox=9},advancements={medabots_server:special_items/jukebox/wave_1/topmaniac=true}] Music 1115
+scoreboard players set @s[scores={Jukebox=9},advancements={medabots_server:special_items/jukebox/wave_1/topmaniac=true}] Music 892
 playsound medabots_server:music.stage.boss.hr_d3 music @s[scores={Jukebox=10},advancements={medabots_server:special_items/jukebox/wave_1/hr_d3=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=10},advancements={medabots_server:special_items/jukebox/wave_1/hr_d3=true}] Music 1487
 playsound medabots_server:music.stage.boss.argorok music @s[scores={Jukebox=11},advancements={medabots_server:special_items/jukebox/wave_1/argorok=true}] ~ ~ ~ 1000

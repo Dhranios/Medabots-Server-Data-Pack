@@ -18,10 +18,10 @@ execute if entity @s[scores={Time=34}] positioned ^ ^-2 ^0.4 as @e[tag=potential
 execute if entity @s[scores={Time=34}] positioned ^ ^ ^0.4 as @e[tag=potential_target,distance=..2] at @s rotated as @e[type=minecraft:ghast,tag=crazy_hand,limit=1,scores={Time=34}] facing ^ ^-2 ^-2 if block ^ ^ ^-1 minecraft:air if block ^ ^ ^-2 minecraft:air unless block ^ ^ ^-3 minecraft:air run teleport @s ^ ^ ^-2
 execute if entity @s[scores={Time=34}] positioned ^ ^-2 ^0.4 as @e[tag=potential_target,distance=..2] at @s rotated as @e[type=minecraft:ghast,tag=crazy_hand,limit=1,scores={Time=34}] facing ^ ^-2 ^-2 if block ^ ^ ^-1 minecraft:air unless block ^ ^ ^-2 minecraft:air run teleport @s ^ ^ ^-1
 execute if entity @s[scores={Time=34}] positioned ^ ^ ^0.4 as @e[tag=potential_target,distance=..2] at @s rotated as @e[type=minecraft:ghast,tag=crazy_hand,limit=1,scores={Time=34}] facing ^ ^-2 ^-2 if block ^ ^ ^-1 minecraft:air unless block ^ ^ ^-2 minecraft:air run teleport @s ^ ^ ^-1
-execute if entity @s[scores={Time=34,Sound=0}] unless block ^ ^-4 ^1 minecraft:air run playsound medabots_server:entity.crazy_hand.scratch hostile @a ~ ~ ~ 1
-execute if entity @s[scores={Time=34,Sound=0}] unless block ^ ^-4 ^1 minecraft:air run scoreboard players set @s Sound 10
-execute if entity @s[scores={Time=34}] unless block ^ ^-4 ^1 minecraft:air if block ^ ^ ^3 minecraft:air run teleport @s ^ ^ ^0.4
-execute if entity @s[scores={Time=34}] if block ^ ^-4 ^1 minecraft:air run tag @s add crawl_stop
+execute if entity @s[scores={Time=34,Sound=0}] unless block ^ ^-2 ^1 minecraft:air run playsound medabots_server:entity.crazy_hand.scratch hostile @a ~ ~ ~ 1
+execute if entity @s[scores={Time=34,Sound=0}] unless block ^ ^-2 ^1 minecraft:air run scoreboard players set @s Sound 10
+execute if entity @s[scores={Time=34}] unless block ^ ^-2 ^1 minecraft:air if block ^ ^ ^3 minecraft:air run teleport @s ^ ^ ^0.4
+execute if entity @s[scores={Time=34}] if block ^ ^-2 ^1 minecraft:air run tag @s add crawl_stop
 execute if entity @s[scores={Time=34}] unless block ^ ^ ^3 minecraft:air run tag @s add crawl_stop
 scoreboard players set @s[scores={Time=34},tag=!crawl_stop] Time 33
 

@@ -13,12 +13,12 @@ execute if entity @s[tag=cooperate] run particle minecraft:dust 0.5 0.5 0.0 1 ~ 
 
 # Behavior depending on version
 execute if entity @s[tag=smash_melee,tag=!dying,tag=appeared] run function medabots_server:entities/crazy_hand/melee
-execute if entity @s[tag=smash_brawl,tag=!dying,tag=appeared] run function medabots_server:entities/crazy_hand/melee
+execute if entity @s[tag=smash_brawl,tag=!dying,tag=appeared] run function medabots_server:entities/crazy_hand/brawl
 execute if entity @s[tag=smash_4,tag=!dying,tag=appeared] run function medabots_server:entities/crazy_hand/4
 execute if entity @s[tag=!smash_bros,tag=!smash_melee,tag=!smash_brawl,tag=!smash_4,tag=!dying,tag=appeared] run function medabots_server:entities/crazy_hand/generic
 
 execute if entity @s[tag=smash_melee,tag=!dying,tag=!appeared] run function medabots_server:entities/crazy_hand/appear_melee
-execute if entity @s[tag=smash_brawl,tag=!dying,tag=!appeared] run function medabots_server:entities/crazy_hand/appear_melee
+execute if entity @s[tag=smash_brawl,tag=!dying,tag=!appeared] run function medabots_server:entities/crazy_hand/appear_brawl
 execute if entity @s[tag=smash_4,tag=!dying,tag=!appeared] run function medabots_server:entities/crazy_hand/appear_4
 execute if entity @s[tag=!smash_bros,tag=!smash_melee,tag=!smash_brawl,tag=!smash_4,tag=!dying,tag=!appeared] run function medabots_server:entities/crazy_hand/appear_generic
 

@@ -16,4 +16,4 @@ tag @e[tag=this_trap] remove this_trap
 tag @s remove this_entity
 
 # Remove from head uses if this was the head part
-scoreboard players remove @s[tag=head_selected] HeadUses 1
+execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_selected] HeadUses 1

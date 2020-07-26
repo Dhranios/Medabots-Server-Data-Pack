@@ -12,13 +12,13 @@ execute store result entity @s[tag=idle,tag=!dying] Pos[1] double 0.01 run score
 # Behavior depending on version
 execute if entity @s[tag=smash_bros,tag=!dying,tag=appeared] run function medabots_server:entities/master_hand/64
 execute if entity @s[tag=smash_melee,tag=!dying,tag=appeared] run function medabots_server:entities/master_hand/melee
-execute if entity @s[tag=smash_brawl,tag=!dying,tag=appeared] run function medabots_server:entities/master_hand/melee
+execute if entity @s[tag=smash_brawl,tag=!dying,tag=appeared] run function medabots_server:entities/master_hand/brawl
 execute if entity @s[tag=smash_4,tag=!dying,tag=appeared] run function medabots_server:entities/master_hand/4
 execute if entity @s[tag=!smash_bros,tag=!smash_melee,tag=!smash_brawl,tag=!smash_4,tag=!dying,tag=appeared] run function medabots_server:entities/master_hand/generic
 
 execute if entity @s[tag=smash_bros,tag=!dying,tag=!appeared] run function medabots_server:entities/master_hand/appear_64
 execute if entity @s[tag=smash_melee,tag=!dying,tag=!appeared] run function medabots_server:entities/master_hand/appear_melee
-execute if entity @s[tag=smash_brawl,tag=!dying,tag=!appeared] run function medabots_server:entities/master_hand/appear_melee
+execute if entity @s[tag=smash_brawl,tag=!dying,tag=!appeared] run function medabots_server:entities/master_hand/appear_brawl
 execute if entity @s[tag=smash_4,tag=!dying,tag=!appeared] run function medabots_server:entities/master_hand/appear_4
 execute if entity @s[tag=!smash_bros,tag=!smash_melee,tag=!smash_brawl,tag=!smash_4,tag=!dying,tag=!appeared] run function medabots_server:entities/master_hand/appear_generic
 
