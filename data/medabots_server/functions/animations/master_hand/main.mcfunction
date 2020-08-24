@@ -41,7 +41,6 @@ execute if entity @s[tag=middle_finger,tag=dying] run function medabots_server:a
 execute if entity @s[tag=ring_finger,tag=dying] run function medabots_server:animations/master_hand/death/ring_finger
 execute if entity @s[tag=pinkie,tag=dying] run function medabots_server:animations/master_hand/death/pinkie
 tag @s remove master_hand
-data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2
 tag @s[tag=!appearing] remove was_appearing

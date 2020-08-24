@@ -10,6 +10,5 @@ execute if entity @s[tag=blade,tag=!dying] run function medabots_server:animatio
 execute if entity @s[tag=body,tag=dying] run function medabots_server:animations/topmaniac/death/body
 execute if entity @s[tag=blade,tag=dying] run function medabots_server:animations/topmaniac/death/blade
 tag @s remove topmaniac
-data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2

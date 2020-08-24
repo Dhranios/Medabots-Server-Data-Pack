@@ -1,4 +1,4 @@
-# New gass floors need scores and carpet
+# New gas floors need scores and carpet
 execute unless entity @s[scores={Time=0..}] run scoreboard players add @s Time 20
 
 # Coundown blowing

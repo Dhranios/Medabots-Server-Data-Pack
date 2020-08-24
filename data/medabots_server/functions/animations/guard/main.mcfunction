@@ -12,6 +12,5 @@ tag @s remove guard
 tag @s remove walking
 tag @s remove hurt
 tag @s remove attack
-data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2

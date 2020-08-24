@@ -61,6 +61,5 @@ tag @s[tag=running] remove running
 tag @s[tag=sneak_pos] remove sneak_pos
 tag @s[tag=sneaking] remove sneaking
 tag @s remove medabot
-data merge entity @s {Fire:2s}
 tag @s add found_owner
 tag @s add found_owner_2
