@@ -1,4 +1,5 @@
 execute as @e[type=!minecraft:player,distance=0..] unless entity @s[scores={Stage=0..}] unless entity @s[x=0,y=43,z=33,dx=49,dy=2,dz=2] unless entity @s[x=26,y=27,z=41,dx=4,dy=2,dz=4] run scoreboard players set @s Stage 63
+execute if entity @e[scores={Stage=63},tag=master_hand,type=minecraft:ghast,tag=appeared] run scoreboard players set @s[scores={State=2}] State 1
 execute if entity @e[scores={Stage=63},tag=master_hand,type=minecraft:ghast] run tag @s add no_end
 execute if entity @e[scores={Stage=63},tag=crazy_hand,type=minecraft:ghast] run tag @s add no_end
 execute as @s[scores={State=1..},tag=!no_end] run function medabots_server:stage/clean_up/final_destination_3

@@ -11,5 +11,5 @@ function medabots_server:gamemodes/default/set_stats
 scoreboard players set @s Stage 63
 scoreboard players set @s MusicType 60
 execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-scoreboard players set @s State 1
+scoreboard players set @s State 2
 scoreboard players set @s KillStreak 0
