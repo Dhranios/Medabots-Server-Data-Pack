@@ -1,4 +1,10 @@
 execute if entity @s[scores={Time=0}] positioned ~-1 ~ ~-1 run effect give @e[tag=potential_target,dx=2,dy=0,dz=2] minecraft:instant_damage 1 1 true
+execute if entity @s[scores={Time=0}] at @e[tag=target,limit=1] facing entity @s feet rotated ~5 0 positioned ^ ^ ^8 run summon minecraft:area_effect_cloud ~ ~ ~ {Tags:["move_target"],Duration:1}
+execute facing entity @e[tag=move_target,limit=1] feet rotated ~ 0 positioned ^ ^ ^1 if block ~0.5 ~ ~0.5 minecraft:air if block ~-0.5 ~ ~0.5 minecraft:air if block ~0.5 ~ ~-0.5 minecraft:air if block ~-0.5 ~ ~-0.5 minecraft:air unless block ~ ~-1 ~ minecraft:air run tag @s add continue
+execute facing entity @e[tag=move_target,limit=1] feet rotated ~ 0 run teleport @s[tag=continue] ^ ^ ^0.15
+execute facing entity @e[tag=move_target,limit=1] feet rotated ~ 0 if entity @s[tag=continue] positioned ~-1 ~ ~-1 as @e[tag=potential_target,dx=2,dy=0,dz=2] positioned as @s positioned ^ ^ ^0.3 if block ~0.4 ~ ~0.4 minecraft:air if block ~-0.4 ~ ~0.4 minecraft:air if block ~0.4 ~ ~-0.4 minecraft:air if block ~-0.4 ~ ~-0.4 minecraft:air positioned as @s run teleport @s ^ ^ ^0.3
+tag @s remove continue
+kill @e[tag=move_target,limit=1,type=minecraft:area_effect_cloud]
 
 # Select random attack
 scoreboard players set @s[scores={Dialog=30}] Dialog 0

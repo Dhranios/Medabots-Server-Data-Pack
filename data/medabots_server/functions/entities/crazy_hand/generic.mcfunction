@@ -11,7 +11,7 @@ execute if entity @s[tag=dying,tag=!dead] run playsound medabots_server:entity.c
 # Select random attack
 scoreboard players set @s[scores={Dialog=29}] Dialog 0
 execute unless entity @s[scores={Dialog=0..}] run scoreboard players add @s Dialog 0
-execute if entity @e[distance=..30,tag=target] run scoreboard players add @s[scores={Time=0,Dialog=0},tag=!cooperate] Dialog 1
+execute if entity @e[distance=..30,tag=target] run scoreboard players add @s[scores={Time=0,Dialog=0},tag=!cooperate,tag=idle] Dialog 1
 scoreboard players add @s[scores={Dialog=1..28}] Dialog 1
 tag @s remove can_cooperate
 scoreboard players operation #temp Stage = @s Stage
