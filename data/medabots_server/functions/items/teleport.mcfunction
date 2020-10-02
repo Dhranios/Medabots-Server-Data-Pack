@@ -7,7 +7,7 @@ execute unless entity @s[scores={Time=0..}] if data entity @s Thrower run scoreb
 execute if entity @s[scores={Stage=0..}] run data merge entity @s[tag=!do_not_teleport] {PickupDelay:0s}
 execute unless entity @s[scores={Stage=0..}] run data merge entity @s[tag=!do_not_teleport,nbt={Item:{tag:{medabots_server:{activated:1b}}}}] {PickupDelay:0s}
 execute if entity @s[scores={Time=60},tag=!break,tag=!falling,tag=!damage_ball] if data entity @s Owner run function medabots_server:items/replace
-execute if entity @s[tag=!break,tag=!falling,tag=!damage_ball] if data entity @s Thrower unless data entity @s Owner run data modify entity @s Owner merge from entity @s Thrower
+execute if entity @s[tag=!break,tag=!falling,tag=!damage_ball] if data entity @s Thrower unless data entity @s Owner run data modify entity @s Owner set from entity @s Thrower
 execute if entity @s[tag=medabot_loot] store result score #temp Stage run scoreboard players get @s Stage
 execute if entity @s[tag=medabot_loot] as @a[tag=hostile] unless entity @s[scores={DeathTime=1..}] if score @s Stage = #temp Stage run tag @s add this_medabot
 execute if entity @s[tag=medabot_loot,tag=enemy_loot] at @a[tag=this_medabot,sort=nearest,limit=1,tag=!enemy_medabot] run teleport @s ~ ~ ~

@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "move_item": {
+            "trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"items": [
+					{
+						"nbt": "{medabots_server:{refresh:1b,id:\"medabots_server:custom_stage\"}}"
+					}
+				]
+			}
+        }
+    },
+	"rewards": {
+		"function": "medabots_server:items/custom_stage"
+	}
+}
