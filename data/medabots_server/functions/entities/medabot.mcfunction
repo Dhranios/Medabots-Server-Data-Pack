@@ -26,9 +26,6 @@ execute if entity @s[tag=dying] run function medabots_server:animations/medabot/
 # Send a killer message depending on parts
 execute if entity @s[scores={Killer=1..}] run function medabots_server:other/killer
 
-# No vanilla combat
-effect give @s minecraft:weakness 1000000 127 true
-
 # Set the damage taken
 execute if entity @s[type=minecraft:player] store result score @s Damage run data get entity @s Health -1
 execute if entity @s[type=!minecraft:player] store result score @s Damage run data get entity @s AbsorptionAmount -1

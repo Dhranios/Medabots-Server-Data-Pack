@@ -1,2 +1,2 @@
-summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.drawbridge"}',Tags:["drawbridge","west"],Invisible:1b,Marker:1b,Rotation:[-90.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:46}}]}
+summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"medabots_server:block.drawbridge"}',Tags:["drawbridge","east"],Invisible:1b,Marker:1b,Rotation:[90.0f,0.0f],ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:10,Unbreakable:1b,CustomModelData:46}}]}
 function medabots_server:set_blocks/drawbridge

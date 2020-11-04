@@ -11,6 +11,14 @@ execute if entity @s[tag=preference_ranged,scores={Dialog=0}] run function medab
 execute if entity @s[tag=preference_charge_medaforce,scores={Charge=..49,Dialog=0}] run function medabots_server:entities/medabot/cpu/preference_selection/charge_medaforce
 scoreboard players set @s[tag=preference_melee,scores={HeadUses=0,LeftArmArmor=..0,RightArmArmor=..0},tag=blocked_medaforce] SelfDestruct 1
 function medabots_server:entities/medabot/cpu/preferences/clear
+tag @s[tag=head_activated] add head_selected
+tag @s[tag=right_arm_activated] add right_arm_selected
+tag @s[tag=left_arm_activated] add left_arm_selected
+tag @s[tag=legs_activated] add legs_selected
+tag @s[tag=!head_activated] remove head_selected
+tag @s[tag=!right_arm_activated] remove right_arm_selected
+tag @s[tag=!left_arm_activated] remove left_arm_selected
+tag @s[tag=!legs_activated] remove legs_selected
 
 scoreboard players set @s ReactionTime 60
 scoreboard players operation @s ReactionTime -= @s MedabotLevel

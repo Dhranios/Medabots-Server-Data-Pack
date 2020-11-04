@@ -39,7 +39,7 @@ execute positioned 38 53 22 run function medabots_server:set_blocks/pot/10_medal
 execute positioned 57 53 19 run function medabots_server:set_blocks/pot
 # Stage build item pot
 execute positioned 76 53 33 run function medabots_server:set_blocks/pot
-execute positioned 76 53 33 run data modify entity @e[distance=..0.7,tag=pot_model,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"alarm",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.alarm"}]}'}}}}
+execute positioned 76 53 33 run data modify entity @e[distance=..0.7,tag=pot,limit=1] ArmorItems[3].tag.medabots_server merge value {contents:{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:7,HideFlags:4,AttributeModifiers:[],medabots_server:{id:"medabots_server:stage_build_item",type:"alarm",stage_item:1b},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.stage_build_item","with":[{"translate":"medabots_server:block.alarm"}]}'}}}}
 execute positioned 50 53 87 run function medabots_server:set_blocks/bridge
 execute positioned 76 53 51 run function medabots_server:set_blocks/bridge
 execute positioned 77 53 51 run function medabots_server:set_blocks/bridge

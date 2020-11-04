@@ -18,4 +18,4 @@ execute if entity @s[scores={Charge=31..40,ScoutTime=1..}] anchored eyes run sum
 execute if entity @s[scores={Charge=41..50,ScoutTime=1..}] anchored eyes run summon minecraft:creeper ^ ^ ^2 {CustomName:'{"translate":"medabots_server:move.wave"}',Fuse:0s,ExplosionRadius:6b,Tags:["wave"]}
 
 # Remove from head uses if it was the head part
-scoreboard players remove @s[tag=head_selected] HeadUses 1
+scoreboard players remove @s[tag=head_activated] HeadUses 1

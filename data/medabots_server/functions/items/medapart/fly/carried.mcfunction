@@ -13,8 +13,8 @@ execute unless block ~0.3 ~0.9 ~ minecraft:air run tag @s add let_go
 execute unless block ~ ~-0.5 ~ minecraft:air run tag @s add let_go
 tag @s[tag=sneak_pos] add let_go
 tag @s[tag=dying] add let_go
-tag @s[tag=left_arm_selected,scores={Damage=1..}] add let_go
-tag @s[tag=right_arm_selected,scores={Damage=1..}] add let_go
+tag @s[tag=left_arm_activated,scores={Damage=1..}] add let_go
+tag @s[tag=right_arm_activated,scores={Damage=1..}] add let_go
 execute positioned ~ ~2 ~ if entity @e[tag=carrying,sort=nearest,limit=1,tag=ally_medabot,tag=dying] run tag @s[tag=ally_medabot] add let_go
 execute positioned ~ ~2 ~ if entity @e[tag=carrying,sort=nearest,limit=1,tag=enemy_medabot,tag=dying] run tag @s[tag=enemy_medabot] add let_go
 

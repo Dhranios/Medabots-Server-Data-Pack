@@ -52,11 +52,19 @@ scoreboard players set @s[scores={HeadUsesPer=51..}] HeadUsesDanger 0
 title @s[scores={State=1..2},gamemode=!creative,gamemode=!spectator] actionbar {"translate":"medabots_server:scoreboard.objective.legs_armor","color":"yellow","with":[{"score":{"name":"@s[scores={LegsDanger=0}]","objective":"LegsArmor"},"color":"green"},{"score":{"name":"@s[scores={LegsDanger=1}]","objective":"LegsArmor"},"color":"gold"},{"score":{"name":"@s[scores={LegsDanger=2}]","objective":"LegsArmor"},"color":"red"},{"score":{"name":"@s[scores={LegsDanger=3}]","objective":"LegsArmor"},"color":"black"}],"extra":[{"text":" | ","color":"white"},{"translate":"medabots_server:scoreboard.objective.left_arm_armor","color":"yellow","with":[{"score":{"name":"@s[scores={LeftArmDanger=0}]","objective":"LeftArmArmor"},"color":"green"},{"score":{"name":"@s[scores={LeftArmDanger=1}]","objective":"LeftArmArmor"},"color":"gold"},{"score":{"name":"@s[scores={LeftArmDanger=2}]","objective":"LeftArmArmor"},"color":"red"},{"score":{"name":"@s[scores={LeftArmDanger=3}]","objective":"LeftArmArmor"},"color":"black"}]},{"text":" | ","color":"white"},{"translate":"medabots_server:scoreboard.objective.right_arm_armor","color":"yellow","with":[{"score":{"name":"@s[scores={RightArmDanger=0}]","objective":"RightArmArmor"},"color":"green"},{"score":{"name":"@s[scores={RightArmDanger=1}]","objective":"RightArmArmor"},"color":"gold"},{"score":{"name":"@s[scores={RightArmDanger=2}]","objective":"RightArmArmor"},"color":"red"},{"score":{"name":"@s[scores={RightArmDanger=3}]","objective":"RightArmArmor"},"color":"black"}]},{"text":" | ","color":"white"},{"translate":"medabots_server:scoreboard.objective.head_armor","color":"yellow","with":[{"score":{"name":"@s[scores={HeadDanger=0}]","objective":"HeadArmor"},"color":"green"},{"score":{"name":"@s[scores={HeadDanger=1}]","objective":"HeadArmor"},"color":"gold"},{"score":{"name":"@s[scores={HeadDanger=2}]","objective":"HeadArmor"},"color":"red"},{"score":{"name":"@s[scores={HeadDanger=3}]","objective":"HeadArmor"},"color":"black"}]},{"text":" | ","color":"white"},{"translate":"medabots_server:scoreboard.objective.head_uses_left","color":"yellow","with":[{"score":{"name":"@s[scores={HeadUsesDanger=0}]","objective":"HeadUses"},"color":"green"},{"score":{"name":"@s[scores={HeadUsesDanger=1}]","objective":"HeadUses"},"color":"gold"},{"score":{"name":"@s[scores={HeadUsesDanger=2}]","objective":"HeadUses"},"color":"red"},{"score":{"name":"@s[scores={HeadUsesDanger=3}]","objective":"HeadUses"},"color":"black"}]}]}
 
 # Let the combat begin, activate your part
+tag @s[nbt={SelectedItemSlot:3}] add head_selected
+tag @s[nbt={SelectedItemSlot:2}] add right_arm_selected
+tag @s[nbt={SelectedItemSlot:1}] add left_arm_selected
+tag @s[nbt={SelectedItemSlot:0}] add legs_selected
+tag @s remove head_selected
+tag @s remove right_arm_selected
+tag @s remove left_arm_selected
+tag @s remove legs_selected
 function #medabots_server:placeholders
 clear @s[scores={Time=0}] minecraft:tipped_arrow
-tag @s[scores={Time=0}] remove head_selected
-tag @s[scores={Time=0}] remove right_arm_selected
-tag @s[scores={Time=0}] remove left_arm_selected
+tag @s[scores={Time=0}] remove head_activated
+tag @s[scores={Time=0}] remove right_arm_activated
+tag @s[scores={Time=0}] remove left_arm_activated
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:help"}}}]}] run function medabots_server:items/help
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:effect_list"}}}]}] run function medabots_server:entities/medabot/player/point_to_target
 execute if entity @s[scores={Time=0,State=1,UsePart=1..},nbt={SelectedItem:{tag:{medabots_server:{activated:1b}}}}] run function medabots_server:items/medapart/activate/player

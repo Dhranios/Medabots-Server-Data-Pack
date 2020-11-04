@@ -1,4 +1,3 @@
-data modify storage medabots_server:master_hand Tags set from entity @e[type=minecraft:ghast,tag=this_master_hand,limit=1] Tags
 execute if entity @s[scores={AnimationProg=1..}] if data storage medabots_server:master_hand {Tags:["dying"]} run scoreboard players set @s[tag=!dying] AnimationProg 0
 execute unless data storage medabots_server:master_hand {Tags:["appeared"]} run tag @s add appearing
 scoreboard players set @s[tag=!appearing,tag=was_appearing] AnimationProg 0

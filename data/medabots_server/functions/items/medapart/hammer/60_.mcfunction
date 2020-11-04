@@ -16,9 +16,9 @@ replaceitem entity @s[scores={MedapartID=10,Drop=0},tag=hostile] hotbar.1 minecr
 replaceitem entity @s[scores={MedapartID=11,Drop=0},tag=hostile] hotbar.2 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:71,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.galleom_jet_engine"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.hammer"}','{"italic":false,"color":"white","translate":"medabots_server:move.hammer.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.infinite"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"100"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.galleom"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.galleom_jet_engine.model"}','{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}']},medabots_server:{id:"medabots_server:galleom_jet_engine",gender:0b,move:"hammer",part:"right_arm",armor:100,charge:60,power:50,activated:1b,version:1}}
 
 # Finish move
-scoreboard players reset @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
-scoreboard players reset @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
-scoreboard players reset @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head"}}}]}] MedapartType
+scoreboard players reset @s[tag=left_arm_activated,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=right_arm_activated,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=head_activated,nbt={Inventory:[{tag:{medabots_server:{part:"head"}}}]}] MedapartType
 scoreboard players reset @s[type=!minecraft:player] MedapartType
 scoreboard players reset @s[tag=!hostile] MedapartType
 execute unless entity @s[scores={MedapartType=1..}] run scoreboard players reset @s MedapartID

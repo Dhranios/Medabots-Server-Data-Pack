@@ -1,5 +1,4 @@
 # No vanilla combat
-effect give @s minecraft:weakness 1000000 127 true
 effect give @s[nbt=!{HurtTime:0s}] minecraft:instant_health 1 19 true
 
 # Re-give new items so they are seen by advancements

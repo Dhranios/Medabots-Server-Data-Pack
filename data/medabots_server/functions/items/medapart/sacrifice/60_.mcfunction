@@ -11,8 +11,8 @@ replaceitem entity @s[scores={MedapartID=3,Drop=0},tag=hostile] hotbar.1 minecra
 replaceitem entity @s[scores={MedapartID=4,Drop=0},tag=hostile] hotbar.2 minecraft:fishing_rod{Damage:3,Unbreakable:1b,HideFlags:4,CustomModelData:22,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_burst"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice"}','{"italic":false,"color":"white","translate":"medabots_server:move.sacrifice.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.1"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"50"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.abyss_greater"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.abyss_greater_burst.model"}','{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}']},medabots_server:{id:"medabots_server:abyss_greater_burst",gender:0b,move:"sacrifice",part:"right_arm",armor:50,charge:60,power:42,activated:1b,version:1}}
 
 # Finish the move
-scoreboard players reset @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
-scoreboard players reset @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=left_arm_activated,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=right_arm_activated,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
 scoreboard players reset @s[type=!minecraft:player] MedapartType
 scoreboard players reset @s[tag=!hostile] MedapartType
 execute unless entity @s[scores={MedapartType=1..}] run scoreboard players reset @s MedapartID

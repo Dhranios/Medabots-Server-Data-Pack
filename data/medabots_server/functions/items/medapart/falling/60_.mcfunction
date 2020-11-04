@@ -8,9 +8,9 @@ replaceitem entity @s[scores={MedapartID=3,Drop=0},tag=hostile] hotbar.3 minecra
 replaceitem entity @s[scores={MedapartID=4,Drop=0},tag=hostile] hotbar.3 minecraft:fishing_rod{Damage:4,Unbreakable:1b,HideFlags:4,CustomModelData:11,display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.baroncastle_king_balcony"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:move.falling"}','{"italic":false,"color":"white","translate":"medabots_server:move.falling.description"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.uses.more","with":[{"text":"8"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.armor","with":[{"text":"55"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.male"}','{"italic":false,"color":"white","translate":"medabots_server:entity.baroncastle"}','{"italic":false,"color":"white","translate":"medabots_server:item.medapart.wave","with":[{"text":"1"}]}','{"italic":false,"color":"white","translate":"medabots_server:item.baroncastle_king_balcony.model"}','{"italic":false,"color":"green","translate":"medabots_server:item.medapart.activated"}']},medabots_server:{id:"medabots_server:baroncastle_king_balcony",gender:0b,move:"falling",part:"head",armor:55,charge:60,power:28,uses:8,activated:1b,version:1}}
 
 # Finish move
-scoreboard players reset @s[tag=left_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
-scoreboard players reset @s[tag=head_selected,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
-scoreboard players reset @s[tag=right_arm_selected,nbt={Inventory:[{tag:{medabots_server:{part:"head"}}}]}] MedapartType
+scoreboard players reset @s[tag=left_arm_activated,nbt={Inventory:[{tag:{medabots_server:{part:"left_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=head_activated,nbt={Inventory:[{tag:{medabots_server:{part:"right_arm"}}}]}] MedapartType
+scoreboard players reset @s[tag=right_arm_activated,nbt={Inventory:[{tag:{medabots_server:{part:"head"}}}]}] MedapartType
 scoreboard players reset @s[type=!minecraft:player] MedapartType
 scoreboard players reset @s[tag=!hostile] MedapartType
 execute unless entity @s[scores={MedapartType=1..}] run scoreboard players reset @s MedapartID

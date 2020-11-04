@@ -12,4 +12,4 @@ execute if entity @s[scores={ScoutTime=1..},tag=enemy_medabot] positioned ^ ^ ^2
 tag @s remove me
 
 # Remove from head uses if this was the head part
-execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_selected] HeadUses 1
+execute unless entity @s[gamemode=creative] run scoreboard players remove @s[tag=head_activated] HeadUses 1

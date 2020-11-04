@@ -11,7 +11,7 @@ execute unless block ~ ~-1 ~ minecraft:air run scoreboard players set @s[scores=
 
 # Fly up
 scoreboard players set @s[scores={LegsArmor=1..},tag=!static_fly,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]}] Fly 3
-scoreboard players set @s[scores={LegsArmor=1..,FlyTime=..150},type=!minecraft:player,tag=!static_fly,tag=fly_legs,tag=legs_selected] Fly 3
+scoreboard players set @s[scores={LegsArmor=1..,FlyTime=..150},type=!minecraft:player,tag=!static_fly,tag=fly_legs,tag=legs_activated] Fly 3
 execute if entity @s[scores={LegsArmor=1..,Fly=1..2}] run function medabots_server:items/medapart/fly/hot_air
 
 # CPU behavior

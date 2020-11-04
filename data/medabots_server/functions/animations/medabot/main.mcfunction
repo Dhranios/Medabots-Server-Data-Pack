@@ -1,15 +1,12 @@
-data modify entity @s Tags append from entity @e[type=!minecraft:armor_stand,tag=this_medabot,limit=1] Tags[]
+data modify entity @s Tags append from storage medabots_server:medabot Tags[]
 tag @s[tag=not_yet] remove drowned
 tag @s[tag=not_yet] remove crushed
 tag @s[tag=not_yet] remove dying
 tag @s[tag=!not_yet,tag=dying,tag=!drowned,tag=!crushed] add normal_death
 tag @s[tag=walking,tag=sneak_pos] add sneaking
 tag @s[tag=walking,tag=sneak_pos] remove walking
-execute if entity @a[tag=!has_medabot_form,nbt={SelectedItemSlot:0},tag=this_medabot,limit=1] run tag @s add guarding
-execute if entity @a[tag=!has_medabot_form,nbt={SelectedItemSlot:0,Inventory:[{Slot:0b,tag:{medabots_server:{move:"fly"}}}]},tag=!static_fly,tag=this_medabot,limit=1] run tag @s remove guarding
-execute if entity @e[type=minecraft:skeleton,tag=this_medabot,limit=1,tag=legs_selected] run tag @s add guarding
-execute if entity @e[type=minecraft:skeleton,tag=fly_legs,tag=!static_fly,tag=this_medabot,limit=1,tag=legs_selected] run tag @s remove guarding
-execute if entity @e[tag=this_medabot,scores={NoDefendTime=1..}] run tag @s remove guarding
+execute unless entity @s[tag=fly_legs,tag=!static_fly] run tag @s[tag=!has_medabot_form,tag=cpu,tag=legs_selected] add guarding
+tag @s[tag=cannot_defend] remove guarding
 execute if entity @e[tag=this_medabot,tag=leg,limit=1] run tag @s add has_legs
 execute if entity @s[tag=legs] run function medabots_server:animations/medabot/split_legs
 execute if entity @s[tag=source,tag=!dying,tag=!tinpet_editing] run function medabots_server:animations/medabot/source

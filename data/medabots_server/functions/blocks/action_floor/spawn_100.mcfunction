@@ -1,4 +1,5 @@
-scoreboard players operation @e[distance=..0.7,tag=action_floor_moving] ActionFloorNr = @s ActionFloorNr
+scoreboard players operation @e[tag=!balloon_bomb,distance=..0.7,tag=action_floor_moving] ActionFloorNr = @s ActionFloorNr
+execute positioned ~ ~1 ~ run scoreboard players operation @e[tag=balloon_bomb,distance=..0.7,tag=action_floor_moving] ActionFloorNr = @s ActionFloorNr
 tag @s[tag=1_medallar_cent] remove 1_medallar_cent
 tag @s[tag=2_medallar_cents] remove 2_medallar_cents
 tag @s[tag=4_medallar_cents] remove 4_medallar_cents

@@ -7,22 +7,22 @@ scoreboard players reset #temp Damage
 # Damage the selected part
 execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=fell] if score @s LegsArmor < @s Damage run scoreboard players set @s LegsArmor 0
 execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=fell] if score @s LegsArmor >= @s Damage run scoreboard players operation @s LegsArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=legs_selected] unless entity @s[scores={NoDefendTime=1..}] if score @s LegsArmor < @s Damage run scoreboard players set @s LegsArmor 0
-execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=legs_selected] unless entity @s[scores={NoDefendTime=1..}] if score @s LegsArmor >= @s Damage run scoreboard players operation @s LegsArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LegsArmor=..-1},tag=legs_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..,LegsArmor=..-1},tag=legs_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LeftArmArmor=1..},tag=left_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s LeftArmArmor < @s Damage run scoreboard players set @s LeftArmArmor 0
-execute if entity @s[scores={Damage=1..,LeftArmArmor=1..},tag=left_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s LeftArmArmor >= @s Damage run scoreboard players operation @s LeftArmArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LeftArmArmor=..-1},tag=left_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..,LeftArmArmor=..-1},tag=left_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,RightArmArmor=1..},tag=right_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s RightArmArmor < @s Damage run scoreboard players set @s RightArmArmor 0
-execute if entity @s[scores={Damage=1..,RightArmArmor=1..},tag=right_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s RightArmArmor >= @s Damage run scoreboard players operation @s RightArmArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},tag=right_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},tag=right_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-execute if entity @s[scores={Damage=1..},tag=!legs_selected,tag=!left_arm_selected,tag=!right_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..},tag=!legs_selected,tag=!left_arm_selected,tag=!right_arm_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
-execute if entity @s[scores={Damage=1..,LegsArmor=1..,NoDefendTime=1..},tag=legs_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
-execute if entity @s[scores={Damage=1..,LegsArmor=1..,NoDefendTime=1..},tag=legs_selected] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=legs_activated] unless entity @s[scores={NoDefendTime=1..}] if score @s LegsArmor < @s Damage run scoreboard players set @s LegsArmor 0
+execute if entity @s[scores={Damage=1..,LegsArmor=1..},tag=legs_activated] unless entity @s[scores={NoDefendTime=1..}] if score @s LegsArmor >= @s Damage run scoreboard players operation @s LegsArmor -= @s Damage
+execute if entity @s[scores={Damage=1..,LegsArmor=..-1},tag=legs_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[scores={Damage=1..,LegsArmor=..-1},tag=legs_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[scores={Damage=1..,LeftArmArmor=1..},tag=left_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s LeftArmArmor < @s Damage run scoreboard players set @s LeftArmArmor 0
+execute if entity @s[scores={Damage=1..,LeftArmArmor=1..},tag=left_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s LeftArmArmor >= @s Damage run scoreboard players operation @s LeftArmArmor -= @s Damage
+execute if entity @s[scores={Damage=1..,LeftArmArmor=..-1},tag=left_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[scores={Damage=1..,LeftArmArmor=..-1},tag=left_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[scores={Damage=1..,RightArmArmor=1..},tag=right_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s RightArmArmor < @s Damage run scoreboard players set @s RightArmArmor 0
+execute if entity @s[scores={Damage=1..,RightArmArmor=1..},tag=right_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s RightArmArmor >= @s Damage run scoreboard players operation @s RightArmArmor -= @s Damage
+execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},tag=right_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[scores={Damage=1..,RightArmArmor=..-1},tag=right_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[scores={Damage=1..},tag=!legs_activated,tag=!left_arm_activated,tag=!right_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[scores={Damage=1..},tag=!legs_activated,tag=!left_arm_activated,tag=!right_arm_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
+execute if entity @s[scores={Damage=1..,LegsArmor=1..,NoDefendTime=1..},tag=legs_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor < @s Damage run scoreboard players set @s HeadArmor 0
+execute if entity @s[scores={Damage=1..,LegsArmor=1..,NoDefendTime=1..},tag=legs_activated] unless entity @s[scores={LegsArmor=0..},tag=fell] if score @s HeadArmor >= @s Damage run scoreboard players operation @s HeadArmor -= @s Damage
 
 tag @s[tag=!fell_2] remove fell
 tag @s remove fell_2
@@ -47,11 +47,11 @@ function #medabots_server:cpu_medabot_preference
 # Try to execute preference
 execute unless entity @s[scores={Medaforce=1}] run scoreboard players add @s[scores={Dialog=..-1}] Dialog 1
 scoreboard players set @s[scores={Time=1..}] Dialog -40
-tag @s[scores={Time=0,Dialog=0}] remove legs_selected
-tag @s[scores={Time=0,Dialog=0}] remove left_arm_selected
-tag @s[scores={Time=0,Dialog=0}] remove right_arm_selected
-tag @s[scores={Time=0,Dialog=0}] remove head_selected
-tag @s[scores={Time=0,Dialog=0}] remove medaforce_selected
+tag @s[scores={Time=0,Dialog=0}] remove legs_activated
+tag @s[scores={Time=0,Dialog=0}] remove left_arm_activated
+tag @s[scores={Time=0,Dialog=0}] remove right_arm_activated
+tag @s[scores={Time=0,Dialog=0}] remove head_activated
+tag @s[scores={Time=0,Dialog=0}] remove medaforce_activated
 execute store result score #temp MedabotNr run scoreboard players get @s MedabotNr
 execute as @e[scores={MedabotNr=0..}] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
 scoreboard players remove @s[scores={ReactionTime=1..}] ReactionTime 1
@@ -85,19 +85,19 @@ scoreboard players reset #temp MotionY
 scoreboard players reset #temp MotionZ
 
 # Prevent multiple selected medaparts at once
-replaceitem entity @s[tag=legs_selected] weapon.mainhand minecraft:air
-tag @s[tag=legs_selected] remove medaforce_selected
-tag @s[tag=left_arm_selected] remove medaforce_selected
-tag @s[tag=right_arm_selected] remove medaforce_selected
-tag @s[tag=head_selected] remove medaforce_selected
-scoreboard players set @s[tag=!medaforce_selected] Medaforce 0
+replaceitem entity @s[tag=legs_activated] weapon.mainhand minecraft:air
+tag @s[tag=legs_activated] remove medaforce_activated
+tag @s[tag=left_arm_activated] remove medaforce_activated
+tag @s[tag=right_arm_activated] remove medaforce_activated
+tag @s[tag=head_activated] remove medaforce_activated
+scoreboard players set @s[tag=!medaforce_activated] Medaforce 0
 
 # Activate appropriate medapart
-execute if entity @s[tag=right_arm_selected,scores={Time=0,Dialog=0}] run function medabots_server:items/medapart/activate/cpu/right_arm
-execute if entity @s[tag=head_selected,scores={Time=0,Dialog=0}] run function medabots_server:items/medapart/activate/cpu/head
-execute if entity @s[tag=left_arm_selected,scores={Time=0,Dialog=0}] run function medabots_server:items/medapart/activate/cpu/left_arm
-execute if entity @s[tag=medaforce_selected,scores={Time=0,Dialog=0}] unless entity @s[scores={Medaforce=2..}] run scoreboard players set @s Medaforce 1
-execute if entity @s[scores={Medaforce=2..,Time=0,Dialog=0},tag=medaforce_selected] run function medabots_server:items/medapart/activate/cpu/medaforce
+execute if entity @s[tag=right_arm_activated,scores={Time=0,Dialog=0}] run function medabots_server:items/medapart/activate/cpu/right_arm
+execute if entity @s[tag=head_activated,scores={Time=0,Dialog=0}] run function medabots_server:items/medapart/activate/cpu/head
+execute if entity @s[tag=left_arm_activated,scores={Time=0,Dialog=0}] run function medabots_server:items/medapart/activate/cpu/left_arm
+execute if entity @s[tag=medaforce_activated,scores={Time=0,Dialog=0}] unless entity @s[scores={Medaforce=2..}] run scoreboard players set @s Medaforce 1
+execute if entity @s[scores={Medaforce=2..,Time=0,Dialog=0},tag=medaforce_activated] run function medabots_server:items/medapart/activate/cpu/medaforce
 
 # CPU only things
 execute if entity @s[tag=dead] run scoreboard players operation #temp MedabotNr = @s MedabotNr

@@ -1,7 +1,3 @@
-# Give only 1 player the tag, if nobody has the tag yet
-execute unless entity @a[tag=message] run tag @s add message
-scoreboard players reset @s[tag=!message] RandomMessage
-
 # Random server messages
-scoreboard players add @s[tag=message] RandomMessage 1
-execute as @s[scores={RandomMessage=6667}] positioned -286 55 -52 run function medabots_server:other/random_message_show
+scoreboard players add #message RandomMessage 1
+execute if score #message RandomMessage matches 6667 positioned -286 55 -52 run function medabots_server:other/random_message_show

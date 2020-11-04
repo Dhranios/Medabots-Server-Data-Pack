@@ -28,4 +28,4 @@ execute if entity @e[type=minecraft:area_effect_cloud,scores={RandomMessage=1},t
 execute if entity @e[type=minecraft:area_effect_cloud,scores={RandomMessage=1},tag=13] run tellraw @a[scores={Dialog=..0}] {"translate":"medabots_server:message.random.13","color":"gold"}
 execute if entity @e[type=minecraft:area_effect_cloud,scores={RandomMessage=1},tag=14] run tellraw @a[scores={Dialog=..0}] {"translate":"medabots_server:message.random.14","color":"gold"}
 kill @e[type=minecraft:area_effect_cloud,tag=random_message]
-scoreboard players set @s RandomMessage 0
+scoreboard players set #message RandomMessage 0

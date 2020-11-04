@@ -22,24 +22,24 @@ execute if entity @s[tag=preference_gatling] run function medabots_server:entiti
 execute if entity @s[tag=preference_press] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/press
 execute if entity @s[tag=preference_sacrifice] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/sacrifice
 
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected,scores={Charge=50..},tag=kuwagata_medal] run tag @s add medaforce_selected
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected,scores={Charge=50..},tag=kabuto_medal] run tag @s add medaforce_selected
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected,scores={Charge=50..},tag=cameleon_medal] run tag @s add medaforce_selected
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,scores={Charge=50..},tag=kuwagata_medal] run tag @s add medaforce_activated
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,scores={Charge=50..},tag=kabuto_medal] run tag @s add medaforce_activated
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,scores={Charge=50..},tag=cameleon_medal] run tag @s add medaforce_activated
 
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected,scores={RightArmArmor=1..}] if entity @e[tag=this_medabot,limit=1,tag=right_arm,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run tag @s add right_arm_selected
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected,scores={LeftArmArmor=1..}] if entity @e[tag=this_medabot,limit=1,tag=left_arm,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run tag @s add left_arm_selected
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected,scores={HeadUses=1..}] if entity @e[tag=this_medabot,limit=1,tag=chest,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run tag @s add head_selected
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/anti_fly
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/rifle
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/laser
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/missile
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/napalm
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/break
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/gatling
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/press
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/sacrifice
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,scores={RightArmArmor=1..}] if entity @e[tag=this_medabot,limit=1,tag=right_arm,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run tag @s add right_arm_activated
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,scores={LeftArmArmor=1..}] if entity @e[tag=this_medabot,limit=1,tag=left_arm,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run tag @s add left_arm_activated
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,scores={HeadUses=1..}] if entity @e[tag=this_medabot,limit=1,tag=chest,nbt={ArmorItems:[{tag:{medabots_server:{move:"transform"}}}]}] run tag @s add head_activated
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/anti_fly
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/rifle
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/laser
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/missile
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/napalm
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/break
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/gatling
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/press
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preference_selection/ranged/sacrifice
 
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected,scores={Charge=50..},tag=alien_medal] run tag @s add medaforce_selected
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,scores={Charge=50..},tag=alien_medal] run tag @s add medaforce_activated
 
-execute unless entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run function medabots_server:entities/medabot/cpu/preferences/clear
-execute if entity @s[tag=!right_arm_selected,tag=!left_arm_selected,tag=!head_selected,tag=!medaforce_selected] run tag @s add preference_charge_medaforce
+execute unless entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run function medabots_server:entities/medabot/cpu/preferences/clear
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated] run tag @s add preference_charge_medaforce

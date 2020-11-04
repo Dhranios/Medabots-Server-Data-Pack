@@ -1,5 +1,6 @@
 tag @s add this_medabot
 scoreboard players operation #temp MedabotNr = @s MedabotNr
+data modify storage medabots_server:medabot Tags set from entity @s Tags
 execute as @e[type=minecraft:armor_stand,tag=medabot_model,tag=!found_owner] if score @s MedabotNr = #temp MedabotNr run tag @s add this_medabot
 execute as @e[type=minecraft:armor_stand,tag=this_medabot,tag=source,limit=1] run function medabots_server:animations/medabot/main
 execute as @e[type=minecraft:armor_stand,tag=this_medabot,tag=!source] at @e[tag=this_medabot,tag=source,limit=1] run function medabots_server:animations/medabot/main

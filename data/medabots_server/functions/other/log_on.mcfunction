@@ -1,15 +1,12 @@
 # Reset title times
 title @s times 10 60 20
-effect give @s minecraft:health_boost 1000000 19 true
+attribute @s minecraft:generic.max_health base set 100
+attribute @s minecraft:generic.attack_damage base set 0
 effect give @s minecraft:instant_health 1 19 true
 
 # No longer AFK
 scoreboard players set @s AFKTime 0
 team leave @s
-
-# Not the random message "owner" anymore
-tag @a[tag=message] remove message
-scoreboard players reset @s RandomMessage
 
 execute if entity @s[scores={EditingTinpet=0..}] run function medabots_server:items/tinpet/stop_editing
 execute unless entity @s[tag=!awaiting_response,tag=!challenged_to_robattle] run scoreboard players set @s PlayerInteract -1
