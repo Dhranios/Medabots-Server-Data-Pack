@@ -19,7 +19,7 @@ execute in minecraft:overworld run setblock -286 3 -52 minecraft:oak_sign{Text1:
 execute in minecraft:overworld run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore[2] set from block -286 3 -52 Text1
 execute as @e[tag=inventory,limit=1] run function medabots_server:other/inventory_boxes/set
 function medabots_server:other/inventory_boxes/load
-in minecraft:overworld run setblock -286 3 -52 minecraft:stone
+execute in minecraft:overworld run setblock -286 3 -52 minecraft:stone
 scoreboard players reset #temp Money
 scoreboard players reset #temp2 Money
 scoreboard players reset #temp3 Money

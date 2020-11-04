@@ -4,9 +4,9 @@ data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.i
 data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.medabots_server.items[-1].Count set value 1b
 execute store result score #temp Money run data get entity @s Inventory[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.medabots_server.items
 scoreboard players add #temp Money 1
-in minecraft:overworld run setblock -286 3 -52 minecraft:oak_sign{Text1:'{"italic":false,"color":"white","translate":"medabots_server:item.loot_container.items","with":[{"score":{"objective":"Money","name":"#temp"}}]}'}
-in minecraft:overworld run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore[1] set from block -286 3 -52 Text1
-in minecraft:overworld run setblock -286 3 -52 minecraft:stone
+execute in minecraft:overworld run setblock -286 3 -52 minecraft:oak_sign{Text1:'{"italic":false,"color":"white","translate":"medabots_server:item.loot_container.items","with":[{"score":{"objective":"Money","name":"#temp"}}]}'}
+execute in minecraft:overworld run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore[1] set from block -286 3 -52 Text1
+execute in minecraft:overworld run setblock -286 3 -52 minecraft:stone
 scoreboard players reset #temp Money
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:plant",stage_item:1b}}}]}] run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore append from entity @s Inventory[{tag:{medabots_server:{stage_item:1b}}}].tag.display.Name
 execute if entity @s[nbt={Inventory:[{tag:{medabots_server:{id:"medabots_server:pass",stage_item:1b}}}]}] run data modify entity @e[tag=inventory,limit=1] ArmorItems[3].tag.medabots_server.items[{tag:{medabots_server:{id:"medabots_server:loot_container"}}}].tag.display.Lore append from entity @s Inventory[{tag:{medabots_server:{stage_item:1b}}}].tag.display.Name
