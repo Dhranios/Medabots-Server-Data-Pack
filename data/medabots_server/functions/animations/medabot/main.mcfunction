@@ -5,7 +5,7 @@ tag @s[tag=not_yet] remove dying
 tag @s[tag=!not_yet,tag=dying,tag=!drowned,tag=!crushed] add normal_death
 tag @s[tag=walking,tag=sneak_pos] add sneaking
 tag @s[tag=walking,tag=sneak_pos] remove walking
-execute unless entity @s[tag=fly_legs,tag=!static_fly] run tag @s[tag=!has_medabot_form,tag=cpu,tag=legs_selected] add guarding
+execute unless entity @s[tag=fly_legs,tag=!static_fly] run tag @s[tag=!has_medabot_form,tag=legs_selected] add guarding
 tag @s[tag=cannot_defend] remove guarding
 execute if entity @e[tag=this_medabot,tag=leg,limit=1] run tag @s add has_legs
 execute if entity @s[tag=legs] run function medabots_server:animations/medabot/split_legs
@@ -58,5 +58,9 @@ tag @s[tag=running] remove running
 tag @s[tag=sneak_pos] remove sneak_pos
 tag @s[tag=sneaking] remove sneaking
 tag @s remove medabot
+tag @s remove head_selected
+tag @s remove right_arm_selected
+tag @s remove left_arm_selected
+tag @s remove legs_selected
 tag @s add found_owner
 tag @s add found_owner_2
