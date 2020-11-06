@@ -56,7 +56,6 @@ scoreboard players reset @s StageVersion
 scoreboard players reset @s NeededPlayers
 
 # Prevent health from ever dropping to the default 20, which'll cause severe issues
-effect give @s minecraft:health_boost 1000000 19 true
 effect give @s minecraft:instant_health 1 19 true
 
 # Re-give items

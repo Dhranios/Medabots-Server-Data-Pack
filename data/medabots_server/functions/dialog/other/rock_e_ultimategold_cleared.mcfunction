@@ -14,25 +14,25 @@ teleport @s[scores={Dialog=1}] 46 59 47 90 0
 tellraw @s[scores={Dialog=1}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.1"}]}
 tellraw @s[scores={Dialog=80}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.2"}]}
 tellraw @s[scores={Dialog=160}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.3"}]}
-tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.4"}]}
+tellraw @s[scores={Dialog=248}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.4"}]}
 execute if entity @s[scores={Dialog=269..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=ultimategold,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
 tellraw @s[scores={Dialog=360}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.5"}]}
-tellraw @s[scores={Dialog=400}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.6"}]}
-tellraw @s[scores={Dialog=568}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.7"}]}
-tellraw @s[scores={Dialog=744}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.8"}]}
+tellraw @s[scores={Dialog=400}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.6"}]}
+tellraw @s[scores={Dialog=568}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.7"}]}
+tellraw @s[scores={Dialog=744}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.8"}]}
 tellraw @s[scores={Dialog=936}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.9"}]}
-tellraw @s[scores={Dialog=1008}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.10"}]}
-tellraw @s[scores={Dialog=1112}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.11"}]}
+tellraw @s[scores={Dialog=1008}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.10"}]}
+tellraw @s[scores={Dialog=1112}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.11"}]}
 tellraw @s[scores={Dialog=1168}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.12"}]}
-tellraw @s[scores={Dialog=1176}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.13"}]}
-tellraw @s[scores={Dialog=1256}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.14"}]}
-tellraw @s[scores={Dialog=1344}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.15"}]}
-tellraw @s[scores={Dialog=1424}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.16"}]}
-tellraw @s[scores={Dialog=1536}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.17"}]}
+tellraw @s[scores={Dialog=1176}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.13"}]}
+tellraw @s[scores={Dialog=1256}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.14"}]}
+tellraw @s[scores={Dialog=1344}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.15"}]}
+tellraw @s[scores={Dialog=1424}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.16"}]}
+tellraw @s[scores={Dialog=1536}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.17"}]}
 tellraw @s[scores={Dialog=1704}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.18"}]}
 tellraw @s[scores={Dialog=1776}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.19"}]}
-tellraw @s[scores={Dialog=1880}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.20"}]}
-tellraw @s[scores={Dialog=1968}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.21"}]}
+tellraw @s[scores={Dialog=1880}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.20"}]}
+tellraw @s[scores={Dialog=1968}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.21"}]}
 execute if entity @s[scores={Dialog=2040}] as @e[tag=ultimategold,tag=this_dialog] at @s run teleport @s ~ ~ ~ facing 46 59 94
 execute if entity @s[scores={Dialog=2040}] run tag @e[tag=ultimategold,tag=this_dialog] add walking
 tellraw @s[scores={Dialog=2100}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold_cleared.22"}]}

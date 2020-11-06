@@ -20,7 +20,7 @@ playsound medabots_server:music.stage.boss.argorok_intro music @s[scores={Jukebo
 scoreboard players set @s[scores={Jukebox=11},advancements={medabots_server:special_items/jukebox/wave_1/argorok=true}] Music 769
 playsound medabots_server:music.stage.boss.galleom_1_intro music @s[scores={Jukebox=12},advancements={medabots_server:special_items/jukebox/wave_1/galleom=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=12},advancements={medabots_server:special_items/jukebox/wave_1/galleom=true}] Music 190
-playsound medabots_server:music.stage.boss.galleom_2_intro music @s[scores={Jukebox=12},advancements={medabots_server:special_items/jukebox/wave_1/galleom_tank=true}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.boss.galleom_2_intro music @s[scores={Jukebox=13},advancements={medabots_server:special_items/jukebox/wave_1/galleom_tank=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=13},advancements={medabots_server:special_items/jukebox/wave_1/galleom_tank=true}] Music 30
 
 scoreboard players operation @s[scores={Music=0}] PrevJukebox = @s Jukebox

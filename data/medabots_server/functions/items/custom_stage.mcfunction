@@ -1,10 +1,8 @@
 execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:diamond_pickaxe",Count:1b,tag:{}}]}
 execute in minecraft:overworld run data modify block -286 0 -52 Items[0].tag merge from entity @s Inventory[{tag:{medabots_server:{refresh:1b}}}].tag
-execute in minecraft:overworld run setblock -286 0 -53 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:diamond_pickaxe",Count:1b,tag:{value:""}}]}
-execute in minecraft:overworld run loot spawn -286 0 -53 loot medabots_server:gameplay/get_player_name
-execute in minecraft:overworld positioned -286 0 -53 run data modify block ~ ~ ~ Items[0].tag.value set from entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}},limit=1] Item.tag.SkullOwner.Name
-execute in minecraft:overworld positioned -286 0 -53 run kill @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}},limit=1]
-execute in minecraft:overworld run setblock -286 1 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:diamond_pickaxe",Count:1b,tag:{value:""}}]}
+execute in minecraft:overworld run setblock -286 0 -53 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:diamond_pickaxe",Count:1b,tag:{value:[I;]}}]}
+execute in minecraft:overworld positioned -286 0 -53 run data modify block ~ ~ ~ Items[0].tag.value set from entity @s UUID
+execute in minecraft:overworld run setblock -286 1 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:diamond_pickaxe",Count:1b,tag:{value:[I;]}}]}
 execute in minecraft:overworld run function medabots_server:items/custom_stage/search
 
 execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock

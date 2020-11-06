@@ -12,5 +12,6 @@ execute if score #temp NeededPlayers matches 0 run data merge block 31 60 0 {Tex
 execute if score #temp NeededPlayers matches 0 run setblock 31 61 -2 minecraft:air
 
 execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVersion=0..}] run function medabots_server:stage/create/ruins_out_e/custom
+execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/ruins_out_e/dev_dhranios
 
 scoreboard players reset #temp NeededPlayers

@@ -76,13 +76,13 @@ scoreboard players set @s[scores={Sneaking=1..,AFKTime=1..}] AFKTime 0
 
 # Now AFK
 execute if entity @s[scores={AFKTime=1200}] run tellraw @a {"translate":"medabots_server:message.afk.yes","with":[{"selector":"@s"}]}
-execute if entity @s[scores={AFKTime=1200}] run playsound medabots_server:entity.metabee.forgetting_me voice @s ~ ~ ~ 1
-tellraw @s[scores={AFKTime=1200}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:message.metabee.forgetting_me"}]}
+execute if entity @s[scores={AFKTime=1200},tag=!metabee_messages] run playsound medabots_server:entity.metabee.forgetting_me voice @s ~ ~ ~ 1
+tellraw @s[scores={AFKTime=1200},tag=!metabee_messages] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:message.metabee.forgetting_me"}]}
 team join AFK @s[scores={AFKTime=1200..},team=!AFK]
 
 # Friendly reminder
-execute if entity @s[scores={AFKTime=2400}] run playsound medabots_server:entity.metabee.hurry_up voice @s ~ ~ ~ 1
-tellraw @s[scores={AFKTime=2400}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:message.metabee.hurry_up"}]}
+execute if entity @s[scores={AFKTime=2400},tag=!metabee_messages] run playsound medabots_server:entity.metabee.hurry_up voice @s ~ ~ ~ 1
+tellraw @s[scores={AFKTime=2400},tag=!metabee_messages] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:message.metabee.hurry_up"}]}
 
 # Make sounds
 execute if entity @s[scores={Run=5..,Jump=0,Sound=0},tag=action_mode,tag=!medabot] if block ~ ~ ~ minecraft:stone_slab[type=bottom] run playsound medabots_server:entity.medabot.move.roll player @s ~ ~ ~ .2

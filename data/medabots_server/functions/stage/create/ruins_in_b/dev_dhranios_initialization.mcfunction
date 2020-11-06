@@ -3,7 +3,7 @@ scoreboard players set @s StageIndex -1
 scoreboard players set @s NeededPlayers 5
 tag @s add main
 scoreboard players set @s StageVersion 4
-execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ruins_in_b/dev_fvbico
+execute if entity @s[tag=vs_cpus] run function medabots_server:stage/create/ruins_in_b/dev_dhranios
 execute if entity @s[tag=!vs_cpus] run function medabots_server:stage/join/ruins_in_b/try_to_complete
 execute if entity @s[tag=!vs_cpus] run teleport @s 46 59 46 -180 0
 execute if entity @s[tag=!vs_cpus] run setblock 47 61 0 minecraft:stone_button[face=wall,facing=north,powered=true]

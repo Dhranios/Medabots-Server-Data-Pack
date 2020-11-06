@@ -2,6 +2,8 @@ tellraw @s[scores={SettingsCheck=3},tag=action_mode] {"translate":"medabots_serv
 tellraw @s[scores={SettingsCheck=3},tag=!action_mode] {"translate":"medabots_server:settings.action_mode","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 6"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
 tellraw @s[scores={SettingsCheck=3},tag=player_interactions] {"translate":"medabots_server:settings.player_interactions","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 14"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
 tellraw @s[scores={SettingsCheck=3},tag=!player_interactions] {"translate":"medabots_server:settings.player_interactions","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 14"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
+tellraw @s[scores={SettingsCheck=3},tag=metabee_messages] {"translate":"medabots_server:settings.metabee_messages","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 15"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
+tellraw @s[scores={SettingsCheck=3},tag=!metabee_messages] {"translate":"medabots_server:settings.metabee_messages","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 15"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"color":"blue","extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
 tellraw @s[scores={SettingsCheck=3}] {"text":""}
 tellraw @s[scores={SettingsCheck=3},tag=vs_cpus] {"translate":"medabots_server:settings.vs_cpus","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"extra":[{"text":" "},{"translate":"medabots_server:settings.on"}]}
 tellraw @s[scores={SettingsCheck=3},tag=!vs_cpus] {"translate":"medabots_server:settings.vs_cpus","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 4"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"extra":[{"text":" "},{"translate":"medabots_server:settings.off"}]}
@@ -122,6 +124,16 @@ tag @s[scores={PlayerInteract=0},tag=toggle_player_interactions] add player_inte
 scoreboard players reset @s[scores={PlayerInteract=0},tag=toggle_player_interactions] SettingsCheck
 tag @s[scores={PlayerInteract=0},tag=toggle_player_interactions] remove toggle_player_interactions
 tag @s[scores={SettingsCheck=14,PlayerInteract=0},tag=player_interactions] remove player_interactions
+
+# Toggle metabee messages
+tellraw @s[scores={SettingsCheck=15,PlayerInteract=1..}] {"translate":"medabots_server:settings.player_interacted","color":"blue"}
+tellraw @s[scores={SettingsCheck=15,PlayerInteract=0},tag=!metabee_messages] {"translate":"medabots_server:settings.modified.metabee_messages","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 15"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.on"}]}
+tellraw @s[scores={SettingsCheck=15,PlayerInteract=0},tag=metabee_messages] {"translate":"medabots_server:settings.modified.metabee_messages","color":"blue","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set 15"},"hoverEvent":{"action":"show_text","value":{"translate":"medabots_server:settings.click.modify"}},"with":[{"translate":"medabots_server:settings.off"}]}
+tag @s[scores={SettingsCheck=15,PlayerInteract=0},tag=!metabee_messages] add toggle_metabee_messages
+tag @s[scores={PlayerInteract=0},tag=toggle_metabee_messages] add metabee_messages
+scoreboard players reset @s[scores={PlayerInteract=0},tag=toggle_metabee_messages] SettingsCheck
+tag @s[scores={PlayerInteract=0},tag=toggle_metabee_messages] remove toggle_metabee_messages
+tag @s[scores={SettingsCheck=15,PlayerInteract=0},tag=metabee_messages] remove metabee_messages
 
 
 scoreboard players reset @s[scores={SettingsCheck=3..}] SettingsCheck

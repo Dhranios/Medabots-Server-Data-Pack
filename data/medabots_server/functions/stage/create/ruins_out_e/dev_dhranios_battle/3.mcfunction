@@ -8,7 +8,7 @@ execute positioned 25 53 46 run function medabots_server:spawn_entities/cannon/s
 execute positioned 36 53 46 run function medabots_server:spawn_entities/cannon/search/west/delay_1
 execute positioned 29 53 50 run function medabots_server:set_blocks/pot/bomb/delay_0
 execute positioned 32 53 50 run function medabots_server:set_blocks/pot/bomb/delay_0
-scoreboard players set @e[x=31.5,y=53,z=28.5,distance=..0.7,tag=door,scores={PowerNeeded=1}] PowerNeeded 2
+scoreboard players set @e[x=30.5,y=53,z=28.5,distance=..0.7,tag=door,scores={PowerNeeded=1}] PowerNeeded 2
 effect give @s minecraft:night_vision 2 0 true
 effect give @s minecraft:blindness 2 0 true
 scoreboard players set @s State 2

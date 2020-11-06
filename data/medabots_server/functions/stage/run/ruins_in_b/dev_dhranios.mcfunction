@@ -77,35 +77,35 @@ execute if entity @e[x=51.5,y=53,z=38.5,distance=..0.7,tag=floor_switch,type=min
 execute if entity @e[x=51.5,y=53,z=38.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=46,y=53,z=30,distance=..5,tag=press_wall,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=51.5,y=53,z=38.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=47,y=53,z=65,distance=..4,tag=press_wall,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if entity @e[x=51.5,y=53,z=38.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=47,y=53,z=65,distance=..4,tag=press_wall,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
-execute if block 53 53 45 minecraft:iron_trapdoor[open=true] unless block 58 52 45 #minecraft:wool if entity @s[x=53,y=53,z=44,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_fvbico_battle/0
+execute if block 53 53 45 minecraft:iron_trapdoor[open=true] unless block 58 52 45 #minecraft:wool if entity @s[x=53,y=53,z=44,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_dhranios_battle/0
 execute if entity @e[x=58.5,y=53,z=46.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=53.5,y=53,z=45.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:ruins_in_b/robattle players
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,tag=mission,type=minecraft:area_effect_cloud]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block 53 53 58 minecraft:iron_trapdoor[open=true] unless block 58 52 59 #minecraft:wool if entity @s[x=53,y=53,z=57,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_fvbico_battle/1
+execute if block 53 53 58 minecraft:iron_trapdoor[open=true] unless block 58 52 59 #minecraft:wool if entity @s[x=53,y=53,z=57,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_dhranios_battle/1
 execute if entity @e[x=58.5,y=53,z=60.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=53.5,y=53,z=58.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:ruins_in_b/robattle players
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,tag=mission,type=minecraft:area_effect_cloud]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block 38 53 46 minecraft:iron_trapdoor[open=true] unless block 33 52 45 #minecraft:wool if entity @s[x=35,y=53,z=44,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_fvbico_battle/2
+execute if block 38 53 46 minecraft:iron_trapdoor[open=true] unless block 33 52 45 #minecraft:wool if entity @s[x=35,y=53,z=44,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_dhranios_battle/2
 execute if entity @e[x=33.5,y=53,z=46.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=38.5,y=53,z=45.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:ruins_in_b/robattle players
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,tag=mission,type=minecraft:area_effect_cloud]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block 38 53 59 minecraft:iron_trapdoor[open=true] unless block 33 52 59 #minecraft:wool if entity @s[x=35,y=53,z=57,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_fvbico_battle/3
+execute if block 38 53 59 minecraft:iron_trapdoor[open=true] unless block 33 52 59 #minecraft:wool if entity @s[x=35,y=53,z=57,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_dhranios_battle/3
 execute if entity @e[x=33.5,y=53,z=60.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=38.5,y=53,z=58.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:ruins_in_b/robattle players
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,tag=mission,type=minecraft:area_effect_cloud]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
-execute if block 45 53 20 minecraft:iron_trapdoor[open=true] if block 46 53 88 minecraft:black_stained_glass if entity @s[x=44,y=53,z=17,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_fvbico_battle/4
+execute if block 45 53 20 minecraft:iron_trapdoor[open=true] if block 46 53 88 minecraft:black_stained_glass if entity @s[x=44,y=53,z=17,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/dev_dhranios_battle/4
 execute if entity @e[x=46.5,y=53,z=10.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,State=1..2}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=45.5,y=53,z=20.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
@@ -115,6 +115,6 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=0,y=9,
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute as @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 17
 execute if entity @s[tag=clear_stage] run function medabots_server:stage/clean_up/ruins_in_b
-advancement grant @s[tag=clear_stage] only medabots_server:developer_challenge/ruins_in_b_fvbico
-tag @s[tag=clear_stage,advancements={medabots_server:story_progression/other={ruins_in_b_fvbico=true,ruins_in_b_fvbico_cleared=false}}] add dialog_other_ruins_in_b_fvbico_cleared
+advancement grant @s[tag=clear_stage] only medabots_server:developer_challenge/ruins_in_b_dhranios
+tag @s[tag=clear_stage,advancements={medabots_server:story_progression/other={ruins_in_b_dhranios=true,ruins_in_b_dhranios_cleared=false}}] add dialog_other_ruins_in_b_dhranios_cleared
 execute if entity @s[tag=clear_stage] positioned 46 59 46 run function medabots_server:stage/clear

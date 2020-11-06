@@ -7,7 +7,7 @@ advancement grant @s[scores={MusicType=3}] only medabots_server:special_items/ju
 playsound medabots_server:music.stage.selection_intro music @s[scores={MusicType=4}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=4}] Music 42
 advancement grant @s[scores={MusicType=4}] only medabots_server:special_items/jukebox/wave_0/stage_selection
-playsound medabots_server:music.stage.mt_battle.stage_intro music @s[scores={MusicType=5}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.mt_battle_intro music @s[scores={MusicType=5}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=5}] Music 91
 advancement grant @s[scores={MusicType=5}] only medabots_server:special_items/jukebox/wave_0/mt_battle
 playsound medabots_server:music.stage.fly_course_intro music @s[scores={MusicType=6}] ~ ~ ~ 1000

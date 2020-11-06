@@ -20,13 +20,13 @@ execute if entity @s[scores={Dialog=344}] run tag @e[tag=ultimategold,tag=this_d
 execute if entity @s[scores={Dialog=551}] run tag @e[tag=ultimategold,tag=this_dialog] remove walking
 execute if entity @s[scores={Dialog=552..}] at @e[tag=ultimategold,tag=this_dialog,limit=1] facing entity @s feet run teleport @e[tag=ultimategold,tag=this_dialog,limit=1] ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=384..}] as @e[tag=metabee,tag=!medabot_model,tag=this_dialog,limit=1] at @s facing entity @e[tag=ultimategold,tag=this_dialog,limit=1] feet run teleport @s ~ ~ ~ ~ ~
-tellraw @s[scores={Dialog=344}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.6"}]}
+tellraw @s[scores={Dialog=344}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.6"}]}
 tellraw @s[scores={Dialog=440}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.7"}]}
-tellraw @s[scores={Dialog=472}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.8"}]}
+tellraw @s[scores={Dialog=472}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.8"}]}
 tellraw @s[scores={Dialog=528}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.9"}]}
-tellraw @s[scores={Dialog=576}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.10"}]}
-tellraw @s[scores={Dialog=704}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.11"}]}
-tellraw @s[scores={Dialog=760}] {"translate":"chat.type.text","with":[{"text":"UltimateGold"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.12"}]}
+tellraw @s[scores={Dialog=576}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.10"}]}
+tellraw @s[scores={Dialog=704}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.11"}]}
+tellraw @s[scores={Dialog=760}] {"translate":"chat.type.text","with":[{"text":"UltimateGold","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.12"}]}
 tellraw @s[scores={Dialog=808}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.metabee","color":"green"},{"translate":"medabots_server:dialog.other.rock_e_ultimategold.13"}]}
 tag @s[scores={Dialog=840}] remove dialog_other_rock_e_ultimategold
 scoreboard players reset @s[scores={Dialog=840}] DialogNr

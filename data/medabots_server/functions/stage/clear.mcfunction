@@ -14,15 +14,12 @@ tag @s[scores={StageVersion=1..}] add not_custom
 tag @s[scores={Stage=0}] add not_custom
 function medabots_server:gamemodes/default/reset
 execute store result score #temp Stage run data get entity @s Inventory[{Slot:-106b}].tag.medabots_server.stage
-execute if score #temp Stage = @s Stage run tag @s[tag=!not_custom] add cleared_custom_stage
-execute if score #temp Stage = @s Stage run tag @s[tag=cleared_custom_stage,nbt={Inventory:[{Slot:-106b,tag:{display:{Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.cleared","with":[{"color":"green","translate":"medabots_server:item.custom_stage.cleared.yes"}]}']}}}]}] remove cleared_custom_stage
+execute if score #temp Stage = @s Stage run tag @s[tag=!not_custom,nbt=!{Inventory:[{Slot:-106b,tag:{display:{Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.cleared","with":[{"color":"green","translate":"medabots_server:item.custom_stage.cleared.yes"}]}']}}}]}] add cleared_custom_stage
 scoreboard players reset #temp Stage
 scoreboard players reset @s Stage
 execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:diamond_pickaxe",Count:1b,tag:{}}]}
 execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld run data modify block -286 0 -52 Items[0].tag merge from entity @s Inventory[{Slot:-106b}].tag
-execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld run loot spawn -286 0 -52 loot medabots_server:gameplay/get_player_name
-execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld positioned -286 0 -52 run data modify block ~ ~ ~ Items[0].tag.medabots_server.cleared append from entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}},limit=1] Item.tag.SkullOwner.Name 
-execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld positioned -286 0 -52 run kill @e[type=minecraft:item,distance=..0.7,nbt={Item:{id:"minecraft:player_head"}},limit=1]
+execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld positioned -286 0 -52 run data modify block ~ ~ ~ Items[0].tag.medabots_server.cleared append from entity @s UUID
 execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld run data modify block -286 0 -52 Items[0].tag.display.Lore[3] set value '{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.cleared","with":[{"color":"green","translate":"medabots_server:item.custom_stage.cleared.yes"}]}'
 execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld run loot replace entity @s weapon.offhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 execute if entity @s[tag=cleared_custom_stage] in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock

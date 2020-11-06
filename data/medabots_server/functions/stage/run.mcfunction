@@ -72,7 +72,7 @@ execute if entity @s[scores={Stage=17}] unless entity @s[scores={StageVersion=1.
 execute if entity @s[scores={Stage=17,StageVersion=1}] run function medabots_server:stage/run/ruins_in_b/first_go
 execute if entity @s[scores={Stage=17,StageVersion=2}] run function medabots_server:stage/run/ruins_in_b/second_go
 execute if entity @s[scores={Stage=17,StageVersion=3}] run function medabots_server:stage/run/ruins_in_b/rubberobo
-execute if entity @s[scores={Stage=17,StageVersion=4}] run function medabots_server:stage/run/ruins_in_b/dev_fvbico
+execute if entity @s[scores={Stage=17,StageVersion=4}] run function medabots_server:stage/run/ruins_in_b/dev_dhranios
 execute if entity @s[scores={Stage=18}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/laboratory_b/custom
 execute if entity @s[scores={Stage=18,StageVersion=1}] run function medabots_server:stage/run/laboratory_b/first_go
 execute if entity @s[scores={Stage=18,StageVersion=2}] run function medabots_server:stage/run/laboratory_b/second_go
@@ -183,7 +183,7 @@ execute if entity @s[scores={Stage=55}] unless entity @s[scores={StageVersion=1.
 execute if entity @s[scores={Stage=56}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/snowfield_e/custom
 execute if entity @s[scores={Stage=57}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/iceberg_e/custom
 execute if entity @s[scores={Stage=58}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/ruins_out_e/custom
-execute if entity @s[scores={Stage=58,StageVersion=1}] run function medabots_server:stage/run/ruins_out_e/dev_fvbico
+execute if entity @s[scores={Stage=58,StageVersion=1}] run function medabots_server:stage/run/ruins_out_e/dev_dhranios
 execute if entity @s[scores={Stage=59}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/ruins_in_e/custom
 execute if entity @s[scores={Stage=60}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/rock_f/custom
 execute if entity @s[scores={Stage=61,StageVersion=1}] run function medabots_server:stage/run/final_destination_1/empty

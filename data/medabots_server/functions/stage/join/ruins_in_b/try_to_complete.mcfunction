@@ -15,6 +15,6 @@ execute if score #temp NeededPlayers matches 0 unless entity @s[scores={StageVer
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=1}] run function medabots_server:stage/create/ruins_in_b/first_go
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=2}] run function medabots_server:stage/create/ruins_in_b/second_go
 execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=3}] run function medabots_server:stage/create/ruins_in_b/rubberobo
-execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=4}] run function medabots_server:stage/create/ruins_in_b/dev_fvbico
+execute if score #temp NeededPlayers matches 0 if entity @s[scores={StageVersion=4}] run function medabots_server:stage/create/ruins_in_b/dev_dhranios
 
 scoreboard players reset #temp NeededPlayers

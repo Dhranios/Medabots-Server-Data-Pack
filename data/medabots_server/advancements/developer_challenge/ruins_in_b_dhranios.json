@@ -1,10 +1,10 @@
 {
     "display": {
         "icon": {
-            "item": "minecraft:stone_bricks"
+            "item": "minecraft:yellow_terracotta"
         },
         "title": {
-            "translate": "medabots_server:location.ruins_out_e",
+            "translate": "medabots_server:location.ruins_in_b",
 			"extra": [
 				{
 					"text": " "
@@ -13,7 +13,7 @@
 					"translate": "medabots_server:sign.stage.version.dev",
 					"with": [
 						{
-							"text": "FVbico"
+							"text": "Dhranios"
 						}
 					]
 				}
@@ -23,13 +23,13 @@
             "translate": "medabots_server:advancements.stages.version",
 			"with": [
 				{
-					"translate": "medabots_server:location.ruins_out_e"
+					"translate": "medabots_server:location.ruins_in_b"
 				},
 				{
 					"translate": "medabots_server:sign.stage.version.dev",
 					"with": [
 						{
-							"text": "FVbico"
+							"text": "Dhranios"
 						}
 					]
 				}
@@ -37,7 +37,7 @@
         },
         "frame": "challenge"
     },
-	"parent": "medabots_server:developer_challenge/rock_e_ultimategold",
+	"parent": "medabots_server:developer_challenge/root",
     "criteria": {
         "cleared": {
             "trigger": "minecraft:impossible"

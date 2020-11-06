@@ -42,10 +42,10 @@
         "magolor_appears": {
             "trigger": "minecraft:impossible"
         },
-        "ruins_in_b_fvbico": {
+        "ruins_in_b_dhranios": {
             "trigger": "minecraft:impossible"
         },
-        "ruins_in_b_fvbico_cleared": {
+        "ruins_in_b_dhranios_cleared": {
             "trigger": "minecraft:impossible"
         },
         "rock_e_ultimategold": {
@@ -54,10 +54,10 @@
         "rock_e_ultimategold_cleared": {
             "trigger": "minecraft:impossible"
         },
-        "ruins_out_e_fvbico": {
+        "ruins_out_e_dhranios": {
             "trigger": "minecraft:impossible"
         },
-        "ruins_out_e_fvbico_cleared": {
+        "ruins_out_e_dhranios_cleared": {
             "trigger": "minecraft:impossible"
         },
         "salesman_knight_medal": {
