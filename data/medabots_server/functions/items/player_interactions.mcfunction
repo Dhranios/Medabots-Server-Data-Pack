@@ -25,7 +25,6 @@ execute if entity @s[scores={PlayerInteract=7,Dialog=0}] run function medabots_s
 
 execute unless entity @s[scores={PlayerInteract=1..}] run scoreboard players enable @s PlayerInteract
 execute if entity @s[scores={PlayerInteract=4}] run scoreboard players enable @s PlayerInteract
-execute if entity @s[scores={PlayerInteract=6}] run scoreboard players enable @s PlayerInteract
 scoreboard players set @s[scores={Dialog=1..}] PlayerInteract 0
 scoreboard players set @s[scores={PlayerInteract=1,Dialog=0},gamemode=!adventure] PlayerInteract 0
 scoreboard players set @s[scores={PlayerInteract=2,Dialog=0},gamemode=!adventure] PlayerInteract -1

@@ -1,1 +1,2 @@
-execute unless entity @a[x=0,y=50,z=0,dx=31,dy=7,dz=27] run function medabots_server:stage/create/tutorial
+execute in medabots_server:tutorial_default run teleport @s[nbt=!{Dimension:"medabots_server:tutorial_default"}] 16 60 16 -180 0
+execute in medabots_server:tutorial_default unless entity @a[x=0,y=50,z=0,dx=31,dy=7,dz=27] run function medabots_server:stage/create/tutorial

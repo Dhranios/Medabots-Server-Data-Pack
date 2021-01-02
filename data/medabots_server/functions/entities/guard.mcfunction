@@ -8,6 +8,7 @@ scoreboard players remove @s[scores={Time=1..},tag=!disabled] Time 1
 
 # If hurt, freezes
 tag @s[nbt=!{HurtTime:0s},tag=!disabled,tag=!has_hurt] add hurt
+execute if entity @s[tag=hurt] run function medabots_server:entities/guard/hurt
 tag @s[nbt=!{HurtTime:0s},tag=!disabled] add has_hurt
 tag @s[nbt={HurtTime:0s},tag=!disabled] remove has_hurt
 
@@ -25,6 +26,10 @@ execute unless block ~ ~ ~ minecraft:water unless predicate medabots_server:enti
 execute if block ~ ~ ~ minecraft:water positioned ~ ~1 ~ unless predicate medabots_server:entities/guard/can_move_check run tag @s[tag=!disabled] add cannot_move
 execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^0.5 if entity @e[tag=medabot,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
 execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^1.1 ^0.5 if entity @e[tag=medabot,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
+scoreboard players add @s[tag=attack] AnimationProg 1
+execute if entity @s[tag=attack,scores={AnimationProg=3}] positioned ^ ^ ^0.5 run function medabots_server:entities/guard/attack
+execute if entity @s[tag=attack,scores={AnimationProg=3}] positioned ^ ^1.1 ^0.5 run function medabots_server:entities/guard/attack
+tag @s[scores={AnimationProg=3}] remove attack
 
 # Walk to target or random location
 tag @s remove walking
