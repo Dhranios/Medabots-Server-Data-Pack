@@ -9,7 +9,7 @@ data modify entity @e[tag=new,limit=1,tag=enemy_medabot] Tags append from entity
 execute store result entity @e[tag=new,limit=1] Pos[0] double 1 run data get entity @s Item.tag.medabots_server.stage_data[0].position[0]
 execute store result entity @e[tag=new,limit=1] Pos[1] double 1 run data get entity @s Item.tag.medabots_server.stage_data[0].position[1]
 execute store result entity @e[tag=new,limit=1] Pos[2] double 1 run data get entity @s Item.tag.medabots_server.stage_data[0].position[2]
-execute as @e[tag=new] at @s run teleport @s ~0.5 ~ ~0.5
+execute as @e[tag=new,limit=1] at @s run teleport @s ~0.5 ~ ~0.5
 
 # Set the builder data
 execute if entity @e[tag=new,limit=1,tag=mission] run data modify entity @e[tag=new,limit=1,tag=mission] ArmorItems[3] set from entity @s Item.tag.medabots_server.stage_data[0].nbt
@@ -24,14 +24,14 @@ execute store result score @e[tag=new,limit=1] DelayTime run data get entity @s 
 execute store result score @e[tag=new,limit=1] PowerNeeded run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[6]
 execute store result score @e[tag=new,limit=1] Speed run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[7]
 execute store result score @e[tag=new,limit=1] StageIndex run data get entity @s Item.tag.medabots_server.stage_data[0].additional_data[8]
-execute at @e[tag=new,tag=starting_area] run teleport @a[tag=building_player,limit=1] ~ ~ ~ 0 0
+execute at @e[tag=new,limit=1,tag=starting_area] run teleport @a[tag=building_player,limit=1] ~ ~ ~ 0 0
 
 execute as @e[tag=new,limit=1,tag=mission] at @s run teleport @s ~ ~-3 ~
 execute as @e[tag=new,limit=1,tag=enemy_medabot] at @s run teleport @s ~ ~-3 ~
 
 
 # Next, if any left
-tag @e[tag=new] remove no_ticking
-tag @e[tag=new] remove new
+tag @e[tag=new,limit=1] remove no_ticking
+tag @e[tag=new,limit=1] remove new
 data remove entity @s Item.tag.medabots_server.stage_data[0]
 execute if entity @s[nbt={Item:{tag:{medabots_server:{stage_data:[{}]}}}}] run function medabots_server:stage/create/generic/custom/build

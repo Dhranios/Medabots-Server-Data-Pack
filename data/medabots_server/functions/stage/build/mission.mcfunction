@@ -71,11 +71,12 @@ execute if entity @s[tag=!failed,scores={StageBuild=50}] run summon minecraft:ar
 execute if entity @s[tag=!failed,scores={StageBuild=51}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","run_until_the_time_is_up"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
 execute if entity @s[tag=!failed,scores={StageBuild=52}] run summon minecraft:armor_stand ~ ~ ~ {Tags:["no_ticking","mission","open_the_exit_door"],Invisible:1b,Marker:1b,CustomName:'{"translate":"medabots_server:entity.mission"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b}]}
 execute if entity @s[tag=!failed] run data modify entity @e[distance=..0.7,tag=mission,limit=1] ArmorItems[3] set from entity @s Inventory[{Slot:-106b}]
+execute if entity @s[tag=!failed] run scoreboard players set @e[distance=..0.7,tag=mission,limit=1] DelayTime 3600
 execute if entity @s[tag=!failed] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.mission.medabot","color":"yellow"}
-execute if entity @s[tag=!failed,y_rotation=0..-180,tag=!north,tag=!south] run tag @e[distance=..0.7,tag=mission] add east
-execute if entity @s[tag=!failed,y_rotation=-90..90,tag=!east,tag=!west] run tag @e[distance=..0.7,tag=mission] add north
-execute if entity @s[tag=!failed,y_rotation=90..-90,tag=!east,tag=!west] run tag @e[distance=..0.7,tag=mission] add south
-execute if entity @s[tag=!failed,y_rotation=-180..0,tag=!north,tag=!south] run tag @e[distance=..0.7,tag=mission] add west
+execute if entity @s[tag=!failed,y_rotation=-90..90] if entity @e[distance=..0.7,tag=door,tag=x] run tag @e[distance=..0.7,tag=mission] add north
+execute if entity @s[tag=!failed,y_rotation=90..-90] if entity @e[distance=..0.7,tag=door,tag=x] run tag @e[distance=..0.7,tag=mission] add south
+execute if entity @s[tag=!failed,y_rotation=0..-180] if entity @e[distance=..0.7,tag=door,tag=z] run tag @e[distance=..0.7,tag=mission] add east
+execute if entity @s[tag=!failed,y_rotation=-180..0] if entity @e[distance=..0.7,tag=door,tag=z] run tag @e[distance=..0.7,tag=mission] add west
 execute if entity @s[tag=!failed] run scoreboard players operation @e[distance=..0.7,tag=mission] StageIndex = #temp StageIndex
 execute if entity @s[tag=!failed] run scoreboard players add @s NeededPlayers 1
 scoreboard players reset #temp Stage

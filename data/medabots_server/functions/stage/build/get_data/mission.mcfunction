@@ -8,4 +8,4 @@ execute if entity @e[distance=..0.7,limit=1,tag=mission,tag=north] run tellraw @
 execute if entity @e[distance=..0.7,limit=1,tag=mission,tag=south] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.facing.south","color":"green"}
 execute if entity @e[distance=..0.7,limit=1,tag=mission,tag=east] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.facing.east","color":"green"}
 execute if entity @e[distance=..0.7,limit=1,tag=mission,tag=west] run tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.facing.west","color":"green"}
-tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.mission","color":"green"}
+tellraw @s {"translate":"medabots_server:message.stage.stage_builder.get_data.variables.mission","color":"green"}

@@ -1,7 +1,18 @@
 {
     "criteria": {
         "move_item": {
-            "trigger": "minecraft:inventory_changed"
+            "trigger": "minecraft:inventory_changed",
+			"conditions": {
+				"player": [
+					{
+						"condition": "entity_scores",
+						"entity": "this",
+						"scores": {
+							"ShopIndex0": 2
+						}
+					}
+				]
+			}
         }
     },
 	"rewards": {

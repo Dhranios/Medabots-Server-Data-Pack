@@ -2,11 +2,10 @@ summon minecraft:armor_stand ~ ~ ~ {Tags:["tinpet"],Invisible:1b,Marker:1b}
 data modify entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3] set from entity @s SelectedItem
 
 # Save inventory
-execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone_button",Count:1b,tag:{medabots_server:{id:"medabots_server:inventory",items:[]},Enchantments:[{id:"minecraft:binding_curse",lvl:1s}]}}]}
-execute in minecraft:overworld run data modify block -286 0 -52 Items[0].tag.medabots_server.items set from entity @s Inventory
+data modify storage medabots_server:data medabot_inventories append value {uuid:[I;],inventory:[]}
+data modify storage medabots_server:data medabot_inventories[-1].uuid set from entity @s UUID
+data modify storage medabots_server:data medabot_inventories[-1].inventory set from entity @s Inventory
 clear @s
-execute in minecraft:overworld run loot replace entity @s armor.head mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
-execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock
 
 # Load Medaparts
 execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:1b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:2b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:3b,id:"minecraft:fishing_rod",Count:1b,tag:{Unbreakable:1b}},{Slot:4b,id:"minecraft:gold_ingot",Count:50b,tag:{Unbreakable:1b}}]}
@@ -15,6 +14,13 @@ execute as @e[tag=tinpet,limit=1,distance=..0.1] in minecraft:overworld run data
 execute as @e[tag=tinpet,limit=1,distance=..0.1] in minecraft:overworld run data modify block -286 0 -52 Items[2].tag merge from entity @s ArmorItems[3].tag.medabots_server.items.right_arm.tag
 execute as @e[tag=tinpet,limit=1,distance=..0.1] in minecraft:overworld run data modify block -286 0 -52 Items[3].tag merge from entity @s ArmorItems[3].tag.medabots_server.items.head.tag
 execute as @e[tag=tinpet,limit=1,distance=..0.1] in minecraft:overworld run data modify block -286 0 -52 Items[4].tag merge from entity @s ArmorItems[3].tag.medabots_server.items.medal.tag
+execute store result score @s MedabotLevel run data get entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.medal.tag.medabots_server.xp.levels
+execute if entity @s[scores={MedabotLevel=1..}] run function medabots_server:gamemodes/default/load_levels
+execute store result score @s MedabotLevel run data get entity @e[tag=tinpet,limit=1,distance=..0.1] ArmorItems[3].tag.medabots_server.items.medal.tag.medabots_server.xp.points
+execute if entity @s[scores={MedabotLevel=1..}] run function medabots_server:gamemodes/default/load_points
+execute store result score @s MedabotLevel run experience query @s levels
+data remove block -286 0 -52 Items[4].tag.display.Lore[2]
+data remove block -286 0 -52 Items[4].tag.medabots_server.xp
 execute in minecraft:overworld run loot replace entity @s hotbar.0 5 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock
 replaceitem entity @s hotbar.5 minecraft:compass{CustomModelData:1,LodestoneTracked:0b,LodestoneDimension:"minecraft:overworld",LodestonePos:{X:0,Y:0,Z:0},display:{Name:'{"italic":false,"color":"white","translate":"medabots_server:item.effect_list"}',Lore:['{"italic":false,"color":"white","translate":"medabots_server:item.effect_list.description"}']},AttributeModifiers:[],HideFlags:62,medabots_server:{id:"medabots_server:effect_list",activated:1b}}

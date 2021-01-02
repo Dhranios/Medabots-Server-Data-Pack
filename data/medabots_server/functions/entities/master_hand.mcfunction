@@ -31,7 +31,6 @@ tag @e[tag=target,limit=1] remove target
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp MasterHandNr = @s MasterHandNr
 execute if entity @s[tag=dead] as @e[tag=master_hand_model,type=minecraft:armor_stand] if score @s MasterHandNr = #temp MasterHandNr run kill @s
-execute if entity @s[tag=dead] as @e[scores={MasterHandNr=1..}] if score @s MasterHandNr > #temp MasterHandNr run scoreboard players remove @s MasterHandNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp MasterHandNr
 
 # Model

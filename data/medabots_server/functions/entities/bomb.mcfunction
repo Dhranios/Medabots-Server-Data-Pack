@@ -21,15 +21,8 @@ execute at @s run teleport @s[scores={Moving=4}] ~ ~ ~-0.2
 scoreboard players add @s[scores={Moving=1..,Steps=0..4}] Steps 1
 
 # Fall
-execute if entity @s[scores={Time=1}] if block ~ ~-0.2 ~ minecraft:air run playsound medabots_server:block.moving_block.fall block @a ~ ~ ~ 1
-execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
-execute at @s if block ~ ~-0.2 ~ minecraft:black_stained_glass run tag @s add fall
-execute at @s if block ~ ~-0.2 ~ minecraft:black_carpet run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water positioned ~ ~-0.5 ~ if entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add align_y
-execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column positioned ~ ~-0.5 ~ if entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add align_y
-execute at @s if block ~ ~-0.2 ~ minecraft:lava run tag @s add fall
+execute if entity @s[scores={Time=1}] if block ~ ~-0.2 ~ #medabots_server:entities/can_fall_in run playsound medabots_server:block.moving_block.fall block @a ~ ~ ~ 1
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ #medabots_server:entities/can_fall_in positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
 execute at @s[tag=fall] run fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
 execute at @s[tag=fall] run teleport @s ~ ~-0.2 ~
 tag @s[tag=fall] remove fall
@@ -68,7 +61,7 @@ execute as @e[distance=..0.4,tag=bomb,type=minecraft:shulker] run data merge ent
 execute if entity @s[tag=dead] run function medabots_server:entities/bomb/death
 
 # Position correcion (else it floats above the ground)
-execute at @s unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:bubble_column unless block ~ ~-0.2 ~ minecraft:black_carpet unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava run tag @s add align_y
+execute at @s unless block ~ ~-0.2 ~ #medabots_server:entities/can_fall_in run tag @s add align_y
 execute at @s[tag=align_y] positioned ~ ~0.6 ~ align y run teleport @s ~ ~ ~
 execute if entity @s[scores={Moving=0},tag=has_moved] at @s align xz run teleport @s ~0.5 ~ ~0.5
 tag @s[scores={Moving=0},tag=has_moved] remove has_moved

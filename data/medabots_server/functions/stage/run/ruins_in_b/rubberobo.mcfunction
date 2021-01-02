@@ -35,7 +35,7 @@ execute if entity @e[x=66.5,y=53,z=37.5,distance=..0.7,tag=floor_switch,type=min
 execute if entity @e[x=66.5,y=53,z=37.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=66.5,y=53,z=79.5,distance=..0.7,tag=laser_trap,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if entity @e[x=78.5,y=53,z=32.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=78.5,y=53,z=43.5,distance=..0.7,tag=laser_trap,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if block 45 53 20 minecraft:iron_trapdoor[open=true] if entity @s[x=44,y=53,z=17,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_in_b/rubberobo_battle/0
-execute if entity @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,State=1..2}]
+execute if entity @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=17,Medabot=0..,State=1}]
 execute as @e[x=0,y=9,z=0,dx=92,dy=49,dz=92,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 17
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/ruins_in_b
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/ruins_in_b_rubberobo

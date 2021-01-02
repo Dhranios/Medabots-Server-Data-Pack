@@ -3,8 +3,8 @@ scoreboard players set @e[distance=..0.7,tag=topman] Sound 0
 scoreboard players set @e[distance=..0.7,tag=topman] Time 0
 scoreboard players set @e[distance=..0.7,tag=topman] Killer 0
 teleport @e[distance=..0.7,tag=topman] ~ ~ ~ ~ 0
-scoreboard players operation @e[distance=..0.7,tag=topman] TopmanNr > @e[tag=topman] TopmanNr
-scoreboard players add @e[distance=..0.7,tag=topman] TopmanNr 1
+execute store result score @e[distance=..0.7,tag=topman,limit=1] TopmanNr run data get storage medabots_server:data unique_id.topman
+execute store result storage medabots_server:data unique_id.topman int 1 run scoreboard players add @e[distance=..0.7,tag=topman,limit=1] TopmanNr 1
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["body","topman_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:25}}]}
 summon minecraft:armor_stand ~ ~ ~ {Rotation:[0.0f,0.0f],NoGravity:1b,Invisible:1b,Marker:1b,Tags:["hands","hands_0","topman_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:26}}]}
 summon minecraft:armor_stand ~ ~ ~ {Rotation:[-90.0f,0.0f],NoGravity:1b,Invisible:1b,Marker:1b,Tags:["hands","hands_1","topman_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:26}}]}

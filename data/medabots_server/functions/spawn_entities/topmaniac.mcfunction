@@ -8,8 +8,8 @@ execute as @e[distance=..0.7,tag=topmaniac] store result score @s HomeRot run da
 execute as @e[distance=..0.7,tag=topmaniac] store result score @s HomeX run data get entity @s Pos[0] 100
 execute as @e[distance=..0.7,tag=topmaniac] store result score @s HomeY run data get entity @s Pos[1] 100
 execute as @e[distance=..0.7,tag=topmaniac] store result score @s HomeZ run data get entity @s Pos[2] 100
-scoreboard players operation @e[distance=..0.7,tag=topmaniac] TopmaniacNr > @e[tag=topmaniac] TopmaniacNr
-scoreboard players add @e[distance=..0.7,tag=topmaniac] TopmaniacNr 1
+execute store result score @e[distance=..0.7,tag=topmaniac,limit=1] TopmaniacNr run data get storage medabots_server:data unique_id.topmaniac
+execute store result storage medabots_server:data unique_id.topmaniac int 1 run scoreboard players add @e[distance=..0.7,tag=topmaniac,limit=1] TopmaniacNr 1
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["body","topmaniac_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:20}}]}
 summon minecraft:armor_stand ~ ~ ~ {Rotation:[0.0f,0.0f],NoGravity:1b,Invisible:1b,Marker:1b,Tags:["blade","blade_0","topmaniac_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:24}}]}
 summon minecraft:armor_stand ~ ~ ~ {Rotation:[40.0f,0.0f],NoGravity:1b,Invisible:1b,Marker:1b,Tags:["blade","blade_1","topmaniac_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:24}}]}

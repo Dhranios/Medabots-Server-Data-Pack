@@ -102,7 +102,6 @@ execute if entity @s[scores={Medaforce=2..,Time=0,Dialog=0},tag=medaforce_activa
 # CPU only things
 execute if entity @s[tag=dead] run scoreboard players operation #temp MedabotNr = @s MedabotNr
 execute if entity @s[tag=dead] as @e[tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run kill @s
-execute if entity @s[tag=dead] as @e[scores={MedabotNr=1..}] if score @s MedabotNr > #temp MedabotNr run scoreboard players remove @s MedabotNr 1
 teleport @s[tag=dead] ~ -1000 ~
 scoreboard players reset #temp MedabotNr
 execute if entity @s[nbt=!{ArmorItems:[{id:"minecraft:structure_void"}]}] run replaceitem entity @s armor.head minecraft:structure_void

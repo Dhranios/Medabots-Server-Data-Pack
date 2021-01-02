@@ -7,8 +7,8 @@ execute as @e[distance=..0.7,tag=crazy_hand] store result score @s HomeRot run d
 execute as @e[distance=..0.7,tag=crazy_hand] store result score @s HomeX run data get entity @s Pos[0] 100
 execute as @e[distance=..0.7,tag=crazy_hand] store result score @s HomeY run data get entity @s Pos[1] 100
 execute as @e[distance=..0.7,tag=crazy_hand] store result score @s HomeZ run data get entity @s Pos[2] 100
-scoreboard players operation @e[distance=..0.7,tag=crazy_hand] CrazyHandNr > @e[tag=crazy_hand] CrazyHandNr
-scoreboard players add @e[distance=..0.7,tag=crazy_hand] CrazyHandNr 1
+execute store result score @e[distance=..0.7,tag=crazy_hand,limit=1] CrazyHandNr run data get storage medabots_server:data unique_id.crazy_hand
+execute store result storage medabots_server:data unique_id.crazy_hand int 1 run scoreboard players add @e[distance=..0.7,tag=crazy_hand,limit=1] CrazyHandNr 1
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["hand","crazy_hand_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:14}}]}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["thumb","crazy_hand_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:15}}]}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["index_finger","crazy_hand_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}',ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Damage:3,Unbreakable:1b,CustomModelData:16}}]}

@@ -186,6 +186,7 @@ execute if entity @s[scores={Stage=58}] unless entity @s[scores={StageVersion=1.
 execute if entity @s[scores={Stage=58,StageVersion=1}] run function medabots_server:stage/run/ruins_out_e/dev_dhranios
 execute if entity @s[scores={Stage=59}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/ruins_in_e/custom
 execute if entity @s[scores={Stage=60}] unless entity @s[scores={StageVersion=1..}] run function medabots_server:stage/run/rock_f/custom
+execute if entity @s[scores={Stage=60,StageVersion=1}] run function medabots_server:stage/run/rock_f/dev_dhranios
 execute if entity @s[scores={Stage=61,StageVersion=1}] run function medabots_server:stage/run/final_destination_1/empty
 execute if entity @s[scores={Stage=61,StageVersion=2}] run function medabots_server:stage/run/final_destination_1/master_hand
 execute if entity @s[scores={Stage=62,StageVersion=1}] run function medabots_server:stage/run/final_destination_2/empty

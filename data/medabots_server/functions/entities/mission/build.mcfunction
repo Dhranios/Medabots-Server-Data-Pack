@@ -18,7 +18,7 @@ execute store result score @e[tag=new,limit=1] Speed run data get entity @s Item
 
 execute at @e[tag=new,tag=starting_area] if block ~ ~-1 ~ minecraft:air run function medabots_server:set_blocks/bridge
 execute at @e[tag=new,tag=starting_area] if block ~ ~-1 ~ minecraft:water if block ~ ~-2 ~ minecraft:water run function medabots_server:set_blocks/bridge
-execute at @e[tag=new,tag=starting_area] run teleport @a[tag=building_player,limit=1] ~ ~-1 ~ 0 0
+execute at @e[tag=new,tag=starting_area] if block ~ ~-1 ~ minecraft:water run teleport @a[tag=building_player,limit=1] ~ ~-1 ~ 0 0
 execute at @e[tag=new,tag=starting_area] unless block ~ ~-1 ~ minecraft:water run teleport @a[tag=building_player,limit=1] ~ ~ ~ 0 0
 kill @e[tag=new,tag=starting_area]
 
@@ -30,7 +30,7 @@ execute as @e[distance=..0.7,tag=mission] at @e[tag=new,tag=goal_area,limit=1] u
 execute as @e[distance=..0.7,tag=mission] unless entity @s[tag=!run_until_the_time_is_up,tag=!defeat_all_guards] run tag @e[tag=new,limit=1,tag=guard,tag=!pot,tag=!action_floor] add mission_entity
 execute as @e[distance=..0.7,tag=mission] unless entity @s[tag=!run_until_the_time_is_up,tag=!destroy_all_cannons] run tag @e[tag=new,limit=1,tag=cannon,tag=!pot,tag=!action_floor] add mission_entity
 
-execute as @e[tag=door,tag=new,limit=1] at @s if entity @e[distance=..0.7,tag=door,tag=!stage_builder,type=minecraft:area_effect_cloud] run tag @e[distance=..0.7,tag=door,type=minecraft:area_effect_cloud] add mission_door
+execute as @e[tag=door,tag=new,limit=1] at @s if entity @e[distance=..0.7,tag=door,tag=!stage_builder,type=minecraft:armor_stand] run tag @e[distance=..0.7,tag=door,type=minecraft:armor_stand] add mission_door
 
 # Next, if any left
 tag @e[tag=new] remove no_ticking

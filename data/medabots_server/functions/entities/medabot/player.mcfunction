@@ -78,6 +78,7 @@ tag @s[scores={State=1,UsePart=1..},tag=static_flying] add static_fly
 tag @s[scores={State=1,UsePart=1..},tag=static_flying] remove static_flying
 
 # Check status effects
+execute store result score @s MedabotLevel run experience query @s levels
 execute if entity @s[tag=!checked_effects,nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:effect_list"}}}}] run function medabots_server:items/effect_list
 tag @s[tag=checked_effects,nbt=!{SelectedItem:{tag:{medabots_server:{id:"medabots_server:effect_list"}}}}] remove checked_effects
 

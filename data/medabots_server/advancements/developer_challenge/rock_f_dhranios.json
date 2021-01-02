@@ -1,0 +1,49 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:granite"
+        },
+        "title": {
+            "translate": "medabots_server:location.rock_f",
+			"extra": [
+				{
+					"text": " "
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.dev",
+					"with": [
+						{
+							"text": "Dhranios"
+						}
+					]
+				}
+			]
+        },
+        "description": {
+            "translate": "medabots_server:advancements.stages.version",
+			"with": [
+				{
+					"translate": "medabots_server:location.rock_f"
+				},
+				{
+					"translate": "medabots_server:sign.stage.version.dev",
+					"with": [
+						{
+							"text": "Dhranios"
+						}
+					]
+				}
+			]
+        },
+        "frame": "challenge"
+    },
+	"parent": "medabots_server:developer_challenge/ruins_out_e_dhranios",
+    "criteria": {
+        "cleared": {
+            "trigger": "minecraft:impossible"
+        }
+    },
+    "rewards": {
+        "function": "medabots_server:advancements/developer_challenge"
+    }
+}

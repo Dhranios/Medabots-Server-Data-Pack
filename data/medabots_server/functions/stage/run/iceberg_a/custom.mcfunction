@@ -12,7 +12,9 @@ execute if entity @s[tag=remove_bossbar] run bossbar set medabots_server:iceberg
 tag @s[tag=remove_bossbar] remove remove_bossbar
 execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:iceberg_a/time players
 execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:iceberg_a/robattle players @a[scores={Stage=6}]
-execute if entity @s[tag=add_bossbar] run bossbar set medabots_server:iceberg_a/robattle value 3600
+execute if entity @s[tag=add_bossbar] store result bossbar medabots_server:iceberg_a/robattle max run scoreboard players get @s MissionTime
+execute if entity @s[tag=add_bossbar] store result bossbar medabots_server:iceberg_a/robattle value run scoreboard players get @s MissionTime
+execute if entity @s[tag=add_bossbar] run scoreboard players reset @s MissionTime
 tag @s[tag=add_bossbar] remove add_bossbar
 execute as @e[x=-2,y=50,z=-2,dx=88,dy=7,dz=63,tag=build_stage,type=minecraft:item,limit=1] run data modify entity @s Item.tag.display.Lore[0] set value '{"italic":false,"color":"white","translate":"medabots_server:item.custom_stage.location","with":[{"translate":"medabots_server:location.iceberg_a"}]}'
 execute as @e[x=-2,y=50,z=-2,dx=88,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 6

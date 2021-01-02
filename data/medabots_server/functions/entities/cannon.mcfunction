@@ -59,7 +59,6 @@ teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp CannonNr = @s CannonNr
 execute if entity @s[tag=dead] as @e[tag=cannon_model,type=minecraft:armor_stand] if score @s CannonNr = #temp CannonNr run kill @s
 execute if entity @s[tag=dead] as @e[tag=cannon_blockade,type=minecraft:shulker] if score @s CannonNr = #temp CannonNr run kill @s
-execute if entity @s[tag=dead] as @e[scores={CannonNr=1..}] if score @s CannonNr > #temp CannonNr run scoreboard players remove @s CannonNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp CannonNr
 
 # Model

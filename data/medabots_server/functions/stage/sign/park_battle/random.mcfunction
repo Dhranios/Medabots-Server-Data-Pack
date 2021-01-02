@@ -1,8 +1,3 @@
-execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s Music 0
-scoreboard players set @s MusicType 4
-scoreboard players set @s Stage 50
-scoreboard players set @s Gamemode 0
-
 loot spawn ~ ~ ~ loot medabots_server:gameplay/options/8
 execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:1}}}] run function medabots_server:stage/try/park_battle/cannons_1
 execute if entity @e[type=minecraft:item,distance=..0.7,nbt={Item:{tag:{Option:2}}}] run function medabots_server:stage/try/park_battle/walls

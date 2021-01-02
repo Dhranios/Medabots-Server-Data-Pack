@@ -1,6 +1,6 @@
 # Trigger
-execute unless entity @s[scores={Stage=1..}] as @e[distance=..0.7,tag=enemy_medabot,limit=1,type=minecraft:armor_stand] positioned ~ ~3 ~ run scoreboard players operation @s Stage = @e[distance=..0.7,tag=door,limit=1,type=minecraft:area_effect_cloud] Stage
-execute unless entity @s[scores={Stage=1..}] positioned ~ ~3 ~ run scoreboard players operation @s Stage = @e[distance=..0.7,tag=door,limit=1,type=minecraft:area_effect_cloud] Stage
+execute unless entity @s[scores={Stage=1..}] as @e[distance=..0.7,tag=enemy_medabot,limit=1,type=minecraft:armor_stand] positioned ~ ~3 ~ if entity @e[distance=..0.7,tag=door,type=minecraft:armor_stand,scores={Stage=1..},limit=1] run scoreboard players operation @s Stage = @e[distance=..0.7,tag=door,type=minecraft:armor_stand,limit=1] Stage
+execute unless entity @s[scores={Stage=1..}] positioned ~ ~3 ~ if entity @e[distance=..0.7,tag=door,type=minecraft:armor_stand,scores={Stage=1..},limit=1] run scoreboard players operation @s Stage = @e[distance=..0.7,tag=door,type=minecraft:armor_stand,limit=1] Stage
 
 scoreboard players operation #temp Stage = @s Stage
 

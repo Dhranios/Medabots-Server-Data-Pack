@@ -1,6 +1,6 @@
 summon minecraft:husk ~ ~ ~ {ActiveEffects:[{Id:14b,Duration:1000000,Ambient:1b,ShowParticles:0b,Amplifier:0b}],NoAI:1b,Silent:1b,CustomName:'{"translate":"medabots_server:entity.cannon"}',Tags:["hostile","killerable","cannon"],DeathLootTable:"medabots_server:entities/cannon",ArmorDropChances:[0.0f,0.0f,0.0f,0.0f],Attributes:[{Name:"minecraft:generic.knockback_resistance",Base:1.0d},{Name:"minecraft:zombie.spawn_reinforcements",Base:0.0d},{Name:"minecraft:generic.max_health",Base:100.0d}],PersistenceRequired:1b,Team:"StageEnemy",AbsorptionAmount:20.0f,Health:100.0f}
-scoreboard players operation @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] CannonNr > @e[tag=cannon,tag=!pot,tag=!action_floor] CannonNr
-scoreboard players add @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] CannonNr 1
+execute store result score @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor,limit=1] CannonNr run data get storage medabots_server:data unique_id.cannon
+execute store result storage medabots_server:data unique_id.cannon int 1 run scoreboard players add @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor,limit=1] CannonNr 1
 scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] CannonFire 0
 scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] DelayTime 0
 scoreboard players set @e[distance=..0.7,tag=cannon,tag=!pot,tag=!action_floor] Time 20

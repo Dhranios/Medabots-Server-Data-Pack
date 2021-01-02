@@ -60,6 +60,12 @@
         "ruins_out_e_dhranios_cleared": {
             "trigger": "minecraft:impossible"
         },
+        "rock_f_dhranios": {
+            "trigger": "minecraft:impossible"
+        },
+        "rock_f_dhranios_cleared": {
+            "trigger": "minecraft:impossible"
+        },
         "salesman_knight_medal": {
             "trigger": "minecraft:impossible"
         },

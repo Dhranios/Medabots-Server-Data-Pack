@@ -46,18 +46,18 @@ execute if entity @e[x=83.5,y=53,z=31.5,distance=..0.7,tag=floor_switch,type=min
 execute if entity @e[x=83.5,y=53,z=31.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] if entity @e[x=83.5,y=53,z=30.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run tag @e[x=72,y=52,z=30,dx=10,dy=3,dz=2,tag=alarm,type=minecraft:armor_stand] add enabled
 execute if entity @s[advancements={medabots_server:main/salesman_quest/mermaid_medal={seaslug_burried_item=true,obtain_item=false}},tag=!metal_detector_spawned] positioned 44 53 39 run function medabots_server:stage/run/seashore_b/metal_detector
 execute if block 15 53 88 minecraft:iron_trapdoor[open=true] if block 2 52 74 minecraft:water if entity @s[x=12,y=52,z=86,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_b/second_go_battle/0
-execute if entity @e[x=7.5,y=52,z=81.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=13,Medabot=0..,State=1..2}]
+execute if entity @e[x=7.5,y=52,z=81.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=13,Medabot=0..,State=1}]
 execute if entity @e[x=7.5,y=52,z=81.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[scores={Stage=13},tag=cannon,type=minecraft:husk,tag=mission_entity] run tag @s add mission_success
 execute if entity @s[tag=mission_success] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[tag=mission_success] run scoreboard players set @e[x=15.5,y=53,z=87.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[tag=mission_success] run kill @e[x=0,y=50,z=0,dx=94,dy=7,dz=94,tag=mission,type=minecraft:area_effect_cloud]
 execute if entity @s[tag=mission_success] run tag @e[scores={Stage=13,Medabot=0..,State=1..},type=minecraft:skeleton] add dead
-execute if entity @s[tag=mission_success] as @a[scores={Stage=13,Medabot=0..,State=1..2},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
+execute if entity @s[tag=mission_success] as @a[scores={Stage=13,Medabot=0..,State=1},tag=enemy_medabot] run function medabots_server:stage/exit/enforced
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:seashore_b/robattle players
 tag @s[tag=mission_success] remove mission_success
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block 15 53 29 minecraft:iron_trapdoor[open=true] if entity @s[x=14,y=53,z=26,dx=3,dy=3,dz=3] run function medabots_server:stage/create/seashore_b/second_go_battle/1
-execute if entity @e[x=0,y=50,z=0,dx=94,dy=7,dz=94,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=13,Medabot=0..,State=1..2}]
+execute if entity @e[x=0,y=50,z=0,dx=94,dy=7,dz=94,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=13,Medabot=0..,State=1}]
 execute as @e[x=0,y=50,z=0,dx=94,dy=7,dz=94,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 13
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/seashore_b
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/seashore_b_second_go

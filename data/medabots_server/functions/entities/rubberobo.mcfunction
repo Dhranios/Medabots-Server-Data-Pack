@@ -91,10 +91,7 @@ execute if block ~ ~-1 ~ minecraft:bricks if block ~ ~3 ~ minecraft:brick_slab r
 teleport @s[tag=dead] ~ -100 ~
 
 # Fall in holes, lava, water and craters
-execute at @s if block ~ ~-1 ~ minecraft:air run teleport @s ~ ~-0.2 ~
-execute at @s positioned ~ ~-1 ~ if block ~ ~ ~ minecraft:water unless entity @e[tag=raft,distance=..0.7] at @s run teleport @s ~ ~-0.2 ~
-execute at @s if block ~ ~-1 ~ minecraft:lava run teleport @s ~ ~-0.2 ~
-execute at @s if block ~ ~-1 ~ minecraft:black_carpet run teleport @s ~ ~-0.2 ~
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ #medabots_server:entities/can_fall_in positioned ~ ~-0.5 ~ unless entity @e[tag=raft,distance=..0.7] at @s run teleport @s ~ ~-0.2 ~
 
 # Reset scores
 execute store result score @s Health run data get entity @s AbsorptionAmount

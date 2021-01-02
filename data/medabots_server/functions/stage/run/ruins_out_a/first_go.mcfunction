@@ -41,7 +41,7 @@ execute if entity @e[x=28.5,y=53,z=34.5,distance=..0.7,tag=floor_switch,type=min
 execute if entity @e[x=30.5,y=53,z=15.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=29.5,y=53,z=15.5,distance=..0.7,tag=gas_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @e[x=23.5,y=53,z=22.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=23.5,y=53,z=21.5,distance=..0.7,tag=gas_floor,scores={PowerAmount=0}] PowerAmount 1
 execute if block 24 53 7 minecraft:iron_trapdoor[open=true] if block 12 53 15 minecraft:black_stained_glass if entity @s[x=22,y=53,z=8,dx=3,dy=3,dz=3] run function medabots_server:stage/create/ruins_out_a/first_go_battle/0
-execute if entity @e[x=24.5,y=53,z=16.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=7,Medabot=0..,State=1..2}]
+execute if entity @e[x=24.5,y=53,z=16.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=7,Medabot=0..,State=1}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=23.5,y=53,z=7.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=11.5,y=53,z=15.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1

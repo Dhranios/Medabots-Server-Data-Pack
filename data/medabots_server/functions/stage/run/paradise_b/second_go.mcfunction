@@ -19,7 +19,7 @@ execute if entity @e[x=27.5,y=53,z=2.5,distance=..0.7,tag=floor_switch,type=mine
 execute if entity @e[x=27.5,y=53,z=2.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players remove @e[x=11.5,y=53,z=3.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] Moving 1
 execute if entity @e[x=27.5,y=53,z=2.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run tag @e[x=11.5,y=53,z=3.5,distance=..0.7,tag=fan,type=minecraft:armor_stand,tag=changed] remove changed
 execute if block 47 53 49 minecraft:iron_trapdoor[open=true] if block 50 53 45 minecraft:air if entity @s[x=46,y=53,z=46,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/second_go_battle/0
-execute if entity @e[x=55.5,y=53,z=47.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1..2}]
+execute if entity @e[x=55.5,y=53,z=47.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1}]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @e[x=55.5,y=53,z=47.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=22}] run tag @s remove run_until_the_time_is_up
 execute if entity @e[x=55.5,y=53,z=47.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @e[x=55.5,y=53,z=47.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=47.5,y=53,z=49.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
@@ -27,7 +27,7 @@ execute if entity @e[x=55.5,y=53,z=47.5,distance=..0.7,tag=mission,type=minecraf
 kill @e[x=55.5,y=53,z=47.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block 9 53 49 minecraft:iron_trapdoor[open=true] if block 6 53 52 minecraft:air if entity @s[x=7,y=53,z=49,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/second_go_battle/1
-execute if entity @e[x=7.5,y=53,z=55.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1..2}]
+execute if entity @e[x=7.5,y=53,z=55.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1}]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @e[x=7.5,y=53,z=55.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=22}] run tag @s remove run_until_the_time_is_up
 execute if entity @e[x=7.5,y=53,z=55.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @e[x=7.5,y=53,z=55.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=8.5,y=53,z=49.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
@@ -35,7 +35,7 @@ execute if entity @e[x=7.5,y=53,z=55.5,distance=..0.7,tag=mission,type=minecraft
 kill @e[x=7.5,y=53,z=55.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block 15 53 38 minecraft:iron_trapdoor[open=true] if block 17 53 37 minecraft:air if entity @s[x=14,y=53,z=35,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/second_go_battle/2
-execute if entity @e[x=13.5,y=53,z=36.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1..2}]
+execute if entity @e[x=13.5,y=53,z=36.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1}]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @e[x=13.5,y=53,z=36.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=22}] run tag @s remove run_until_the_time_is_up
 execute if entity @e[x=13.5,y=53,z=36.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @e[x=13.5,y=53,z=36.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=15.5,y=53,z=38.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
@@ -43,7 +43,7 @@ execute if entity @e[x=13.5,y=53,z=36.5,distance=..0.7,tag=mission,type=minecraf
 kill @e[x=13.5,y=53,z=36.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block 21 53 31 minecraft:iron_trapdoor[open=true] if block 19 53 29 minecraft:air if entity @s[x=20,y=52,z=28,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/second_go_battle/3
-execute if entity @e[x=24.5,y=53,z=29.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1..2}]
+execute if entity @e[x=24.5,y=53,z=29.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1}]
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] as @e[x=24.5,y=53,z=29.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] unless entity @e[tag=mission_entity,scores={Stage=22}] run tag @s remove run_until_the_time_is_up
 execute if entity @e[x=24.5,y=53,z=29.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run title @s title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @e[x=24.5,y=53,z=29.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up] run scoreboard players set @e[x=21.5,y=53,z=31.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
@@ -51,7 +51,7 @@ execute if entity @e[x=24.5,y=53,z=29.5,distance=..0.7,tag=mission,type=minecraf
 kill @e[x=24.5,y=53,z=29.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,tag=!run_until_the_time_is_up]
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block 6 53 10 minecraft:iron_trapdoor[open=true] if entity @s[x=4,y=53,z=10,dx=3,dy=3,dz=3] run function medabots_server:stage/create/paradise_b/second_go_battle/4
-execute if entity @e[x=0,y=50,z=0,dx=64,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1..2}]
+execute if entity @e[x=0,y=50,z=0,dx=64,dy=7,dz=63,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=22,Medabot=0..,State=1}]
 execute as @e[x=0,y=50,z=0,dx=64,dy=7,dz=63,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 22
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/paradise_b
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/paradise_b_second_go

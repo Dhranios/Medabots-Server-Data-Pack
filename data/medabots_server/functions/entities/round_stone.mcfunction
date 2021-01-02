@@ -25,15 +25,9 @@ execute at @s run teleport @s[scores={Moving=3}] ~-0.2 ~ ~
 execute at @s run teleport @s[scores={Moving=4}] ~ ~ ~-0.2
 
 # Fall
-execute if entity @s[scores={Time=1}] if block ~ ~-0.2 ~ minecraft:air run playsound medabots_server:block.moving_block.fall block @a ~ ~ ~ 1
-execute if block ~ ~-0.2 ~ minecraft:air at @s run fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
-execute if block ~ ~-0.2 ~ minecraft:water at @s run fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
-execute if block ~ ~-0.2 ~ minecraft:lava at @s run fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
-execute if block ~ ~-0.2 ~ minecraft:black_carpet at @s run fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
-execute if block ~ ~-0.2 ~ minecraft:air at @s run teleport @s ~ ~-0.2 ~
-execute if block ~ ~-0.2 ~ minecraft:water at @s run teleport @s ~ ~-0.2 ~
-execute if block ~ ~-0.2 ~ minecraft:lava at @s run teleport @s ~ ~-0.2 ~
-execute if block ~ ~-0.2 ~ minecraft:black_carpet at @s run teleport @s ~ ~-0.2 ~
+execute if entity @s[scores={Time=1}] if block ~ ~-0.2 ~ #medabots_server:entities/can_fall_in run playsound medabots_server:block.moving_block.fall block @a ~ ~ ~ 1
+execute if block ~ ~-0.2 ~ #medabots_server:entities/can_fall_in at @s run fill ~ ~-1 ~ ~ ~3 ~ minecraft:air replace minecraft:black_stained_glass
+execute if block ~ ~-0.2 ~ #medabots_server:entities/can_fall_in at @s run teleport @s ~ ~-0.2 ~
 execute if entity @s[y=0,dy=1] run tag @s add dead
 
 # Move sound
@@ -54,7 +48,7 @@ execute as @e[distance=..0.4,tag=round_stone,type=minecraft:shulker] run data me
 execute if entity @s[tag=dead] run function medabots_server:entities/round_stone/death
 
 # Position correcion (else it floats above the ground)
-execute unless block ~ ~-0.2 ~ minecraft:air unless block ~ ~-0.2 ~ minecraft:water unless block ~ ~-0.2 ~ minecraft:lava at @s positioned ~ ~0.6 ~ align y run teleport @s ~ ~ ~
+execute unless block ~ ~-0.2 ~ #medabots_server:entities/can_fall_in at @s positioned ~ ~0.6 ~ align y run teleport @s ~ ~ ~
 execute if entity @s[scores={Moving=0},tag=has_moved] at @s align xz run teleport @s ~0.5 ~ ~0.5
 tag @s[scores={Moving=0},tag=has_moved] remove has_moved
 execute unless entity @s[scores={Moving=0..}] run scoreboard players set @s Moving 0

@@ -8,7 +8,7 @@ scoreboard players reset #temp Time
 execute if entity @s[scores={State=0}] run function medabots_server:stage/clean_up/laboratory_c
 execute if entity @s[scores={State=0}] run function medabots_server:other/death
 execute if block 10 53 22 minecraft:iron_trapdoor[open=true] if entity @s[x=9,y=53,z=19,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_c/second_go_battle/0
-execute if entity @e[x=0,y=51,z=0,dx=22,dy=7,dz=44,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=28,Medabot=0..,State=1..2}]
+execute if entity @e[x=0,y=51,z=0,dx=22,dy=7,dz=44,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=28,Medabot=0..,State=1}]
 execute as @e[x=0,y=51,z=0,dx=22,dy=7,dz=44,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 28
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/laboratory_c
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/laboratory_c_second_go

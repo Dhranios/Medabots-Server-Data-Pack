@@ -25,7 +25,6 @@ scoreboard players set @s[scores={Charge=1..}] Charge 0
 # Un-set combat
 scoreboard players operation #temp MedabotNr = @s MedabotNr
 execute as @e[tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run kill @s
-execute as @e[scores={MedabotNr=1..}] if score @s MedabotNr > #temp MedabotNr run scoreboard players remove @s MedabotNr 1
 scoreboard players reset @s MedabotNr
 scoreboard players reset #temp MedabotNr
 effect clear @s minecraft:invisibility
@@ -51,9 +50,14 @@ tag @s remove swim_legs
 tag @s remove dying
 tag @s remove had_death
 tag @s remove spawned_pass
+tag @s remove legs_selected
+tag @s remove left_arm_selected
+tag @s remove right_arm_selected
+tag @s remove head_selected
 scoreboard players reset @s StageIndex
 scoreboard players reset @s StageVersion
 scoreboard players reset @s NeededPlayers
+scoreboard players reset @s MedabotLevel
 
 # Prevent health from ever dropping to the default 20, which'll cause severe issues
 effect give @s minecraft:instant_health 1 19 true
@@ -85,14 +89,22 @@ execute in minecraft:overworld if entity @s[tag=drop_left_arm] run data modify b
 execute in minecraft:overworld if entity @s[tag=drop_left_arm] run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.display.Lore[3] set value '{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}'
 execute in minecraft:overworld if entity @s[tag=drop_legs] run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.legs set value {}
 execute in minecraft:overworld if entity @s[tag=drop_legs] run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.display.Lore[4] set value '{"italic":true,"color":"gray","translate":"medabots_server:item.tinpet.unequipped"}'
+execute in minecraft:overworld store result block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.medal.tag.medabots_server.xp.levels int 1 run experience query @s levels
+execute in minecraft:overworld store result block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.medal.tag.medabots_server.xp.points int 1 run experience query @s points
+execute in minecraft:overworld if entity @s[level=100..] run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.medal.tag.medabots_server.xp set value {levels:100,points:0}
+execute in minecraft:overworld run setblock -286 1 -52 minecraft:oak_sign{Text1:'{"italic":false,"color":"white","translate":"medabots_server:item.medapart.level","with":[{"nbt":"Items[{tag:{medabots_server:{part:\'tinpet\',activated:1b}}}].tag.medabots_server.items.medal.tag.medabots_server.xp.levels","block":"-286 0 -52"}]}'}
+execute in minecraft:overworld run data modify block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.items.medal.tag.display.Lore[2] set from block -286 1 -52 Text1
 execute in minecraft:overworld run data remove block -286 0 -52 Items[{tag:{medabots_server:{part:"tinpet",activated:1b}}}].tag.medabots_server.activated
 execute in minecraft:overworld run loot replace entity @s hotbar.0 9 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock
-execute in minecraft:overworld run clear @s minecraft:stone{remove:1b}
+execute in minecraft:overworld run setblock -286 1 -52 minecraft:stone
+clear @s minecraft:stone{remove:1b}
 tag @s remove drop_head
 tag @s remove drop_right_arm
 tag @s remove drop_left_arm
 tag @s remove drop_legs
+experience set @s 0 levels
+experience set @s 0 points
 
 # Remove scores
 scoreboard players reset @s LegsArmor

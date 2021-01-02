@@ -16,8 +16,8 @@ summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["n
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","left_arm","medabot_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","right_arm","medabot_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["new_model","head","medabot_model","model_piece","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-scoreboard players operation @e[tag=new_medabot,limit=1] MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
-scoreboard players add @e[tag=new_medabot,limit=1] MedabotNr 1
+execute store result score @e[tag=new_medabot,limit=1] MedabotNr run data get storage medabots_server:data unique_id.medabot
+execute store result storage medabots_server:data unique_id.medabot int 1 run scoreboard players add @e[tag=new_medabot,limit=1] MedabotNr 1
 execute as @e[tag=new_model] run scoreboard players operation @s MedabotNr = @e[tag=new_medabot,limit=1] MedabotNr
 
 # Get Equipment
@@ -82,7 +82,7 @@ execute if entity @s[nbt={Item:{tag:{medabots_server:{items:{medal:{tag:{medabot
 execute if entity @s[nbt={Item:{tag:{medabots_server:{items:{medal:{tag:{medabots_server:{id:"medabots_server:unicorn_medal"}}}}}}}}] run tag @e[tag=new_medabot,limit=1] add unicorn_medal
 execute if entity @s[nbt={Item:{tag:{medabots_server:{items:{medal:{tag:{medabots_server:{id:"medabots_server:devil_medal"}}}}}}}}] run tag @e[tag=new_medabot,limit=1] add devil_medal
 
-execute store result score @e[tag=new_medabot,limit=1] MedabotLevel run data get entity @s Item.tag.medabots_server.cpu_data.level
+execute store result score @e[tag=new_medabot,limit=1] MedabotLevel run data get entity @s Item.tag.medabots_server.items.medal.tag.medabots_server.xp.levels
 
 # Set stats
 execute store result score @e[tag=new_medabot,limit=1] MaxHeadUses run data get entity @s Item.tag.medabots_server.items.head.tag.medabots_server.uses

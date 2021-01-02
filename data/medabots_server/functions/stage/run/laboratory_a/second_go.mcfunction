@@ -65,7 +65,7 @@ execute if entity @e[x=38.5,y=53,z=31.5,distance=..0.7,tag=floor_switch,type=min
 execute if entity @e[x=43.5,y=53,z=36.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=34.5,y=53,z=36.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] if entity @e[x=38.5,y=53,z=31.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=..0}] run scoreboard players set @e[x=51.5,y=53,z=36.5,distance=..0.7,tag=spring_wall,type=minecraft:armor_stand,scores={PowerAmount=1}] PowerAmount 0
 execute if entity @e[x=30.5,y=53,z=3.5,distance=..0.7,tag=floor_switch,type=minecraft:armor_stand,scores={Time=1..}] run scoreboard players set @e[x=45.5,y=53,z=3.5,distance=..0.7,tag=spring_wall,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if block 50 53 50 minecraft:iron_trapdoor[open=true] if block 57 53 44 minecraft:black_stained_glass if entity @s[x=50,y=53,z=49,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_a/second_go_battle/0
-execute if entity @e[x=58.5,y=53,z=51.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=9,Medabot=0..,State=1..2}]
+execute if entity @e[x=58.5,y=53,z=51.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=9,Medabot=0..,State=1}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=50.5,y=53,z=50.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=57.5,y=53,z=44.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
@@ -74,7 +74,7 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1,y=5
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:laboratory_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block 12 53 49 minecraft:iron_trapdoor[open=true] if block 1 53 30 minecraft:black_stained_glass if entity @s[x=10,y=53,z=49,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_a/second_go_battle/1
-execute if entity @e[x=11.5,y=53,z=59.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=9,Medabot=0..,State=1..2}]
+execute if entity @e[x=11.5,y=53,z=59.5,distance=..0.7,tag=mission,type=minecraft:area_effect_cloud,scores={Dialog=81}] store result score @s BattlingMedabots if entity @e[scores={Stage=9,Medabot=0..,State=1}]
 title @s[scores={BattlingMedabots=1,State=1..}] title {"translate":"medabots_server:message.stage.mission.complete","color":"green"}
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=11.5,y=53,z=49.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run scoreboard players set @e[x=1.5,y=53,z=30.5,distance=..0.7,tag=door,type=minecraft:armor_stand,scores={PowerAmount=0}] PowerAmount 1
@@ -82,7 +82,7 @@ execute if entity @s[scores={BattlingMedabots=1,State=1..}] run kill @e[x=-1,y=5
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run bossbar set medabots_server:laboratory_a/robattle players
 scoreboard players reset @s[scores={BattlingMedabots=1..}] BattlingMedabots
 execute if block 39 53 8 minecraft:iron_trapdoor[open=true] if entity @s[x=37.5,y=53,z=8,dx=3,dy=3,dz=3] run function medabots_server:stage/create/laboratory_a/second_go_battle/2
-execute if entity @e[x=-1,y=50,z=-1,dx=80,dy=8,dz=72,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=9,Medabot=0..,State=1..2}]
+execute if entity @e[x=-1,y=50,z=-1,dx=80,dy=8,dz=72,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=9,Medabot=0..,State=1}]
 execute as @e[x=-1,y=50,z=-1,dx=80,dy=8,dz=72,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 9
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/laboratory_a
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/laboratory_a_second_go

@@ -1,4 +1,4 @@
-data modify entity @s Tags append from storage medabots_server:medabot Tags[]
+data modify entity @s Tags append from storage medabots_server:data medabot.tags[]
 tag @s[tag=not_yet] remove drowned
 tag @s[tag=not_yet] remove crushed
 tag @s[tag=not_yet] remove dying

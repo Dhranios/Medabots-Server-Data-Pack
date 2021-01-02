@@ -23,19 +23,15 @@ teleport @s[tag=!dying,scores={ConfuseTime=1..},tag=!disabled] ~ ~ ~ ~-18 ~
 # Attack
 execute unless block ~ ~ ~ minecraft:water unless predicate medabots_server:entities/guard/can_move_check run tag @s[tag=!disabled] add cannot_move
 execute if block ~ ~ ~ minecraft:water positioned ~ ~1 ~ unless predicate medabots_server:entities/guard/can_move_check run tag @s[tag=!disabled] add cannot_move
-execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^0.5 if entity @a[tag=hostile,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
-execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^1.1 ^0.5 if entity @a[tag=hostile,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
+execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^ ^0.5 if entity @e[tag=medabot,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
+execute if entity @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!disabled] unless entity @s[scores={IneffectiveTime=1..}] positioned ^ ^1.1 ^0.5 if entity @e[tag=medabot,distance=..0.55,tag=!enemy_medabot,tag=!dying,scores={State=1}] run tag @s add attack
 
 # Walk to target or random location
 tag @s remove walking
 execute at @s[scores={Time=0},tag=!hurt,tag=!alarm_ringing,tag=!dying,tag=!cannot_move,tag=!attack,tag=!disabled] run function medabots_server:entities/guard/wander
 
 # Fall
-execute at @s[tag=!disabled] if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
-execute at @s[tag=!disabled] if block ~ ~-0.2 ~ minecraft:black_carpet run tag @s add fall
-execute at @s[tag=!disabled] positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:water positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
-execute at @s[tag=!disabled] positioned ~ ~-0.2 ~ if block ~ ~ ~ minecraft:bubble_column positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
-execute at @s[tag=!disabled] if block ~ ~-0.2 ~ minecraft:lava run tag @s add fall
+execute at @s[tag=!disabled] positioned ~ ~-0.2 ~ if block ~ ~ ~ #medabots_server:entities/can_fall_in positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
 execute at @s[tag=fall,tag=!disabled] run teleport @s ~ ~-0.2 ~
 execute at @s[tag=!fall,tag=!disabled] align y unless block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~
 execute at @s[tag=!fall,tag=!disabled] align y if block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~0.5 ~
@@ -50,7 +46,6 @@ execute if entity @s[tag=attack,tag=!disabled] at @e[distance=..3,type=minecraft
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp GuardNr = @s GuardNr
 execute if entity @s[tag=dead] as @e[tag=guard_model,type=minecraft:armor_stand] if score @s GuardNr = #temp GuardNr run kill @s
-execute if entity @s[tag=dead] as @e[scores={GuardNr=1..}] if score @s GuardNr > #temp GuardNr run scoreboard players remove @s GuardNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp GuardNr
 
 tag @s remove alarm_ringing

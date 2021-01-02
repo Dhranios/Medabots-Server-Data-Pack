@@ -38,7 +38,7 @@ execute if entity @s[tag=mission_success] run kill @e[x=0,y=50,z=0,dx=62,dy=7,dz
 execute if entity @s[tag=mission_success] run bossbar set medabots_server:iceberg_d/robattle players
 tag @s[tag=mission_success] remove mission_success
 execute if block 45 53 21 minecraft:iron_trapdoor[open=true] if entity @s[x=44,y=53,z=18,dx=3,dy=3,dz=3] run function medabots_server:stage/create/iceberg_d/first_go_battle/1
-execute if entity @e[x=0,y=50,z=0,dx=62,dy=7,dz=62,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=33,Medabot=0..,State=1..2}]
+execute if entity @e[x=0,y=50,z=0,dx=62,dy=7,dz=62,tag=mr_referee,type=minecraft:armor_stand,tag=finished] store result score @s BattlingMedabots if entity @e[scores={Stage=33,Medabot=0..,State=1}]
 execute as @e[x=0,y=50,z=0,dx=62,dy=7,dz=62,type=!minecraft:player] unless entity @s[scores={Stage=0..}] run scoreboard players set @s Stage 33
 execute if entity @s[scores={BattlingMedabots=1,State=1..}] run function medabots_server:stage/clean_up/iceberg_d
 advancement grant @s[scores={BattlingMedabots=1,State=1..}] only medabots_server:stages/wave_1/iceberg_d_first_go

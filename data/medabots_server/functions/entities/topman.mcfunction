@@ -32,12 +32,10 @@ execute positioned ~-0.5 ~-1 ~-0.5 run effect give @e[tag=medabot,dx=0,dy=1,dz=0
 execute positioned ~-0.5 ~-1 ~-0.5 as @e[tag=medabot,dx=0,dy=1,dz=0] positioned ~0.3 ~1 ~0.3 facing entity @s feet rotated ~ 0 positioned as @s if block ^ ^ ^1 minecraft:air if block ^ ^1 ^1 minecraft:air run teleport @s ^ ^0.5 ^1
 
 # Fall
-execute at @s if block ~ ~-0.2 ~ minecraft:air run tag @s add fall
-execute at @s if block ~ ~-0.2 ~ minecraft:lava run tag @s add fall
-execute at @s if block ~ ~-0.2 ~ minecraft:water run tag @s add fall
-execute at @s if block ~ ~-0.2 ~ minecraft:bubble_column run tag @s add fall
+execute at @s positioned ~ ~-0.2 ~ if block ~ ~ ~ #medabots_server:entities/can_fall_in positioned ~ ~-0.5 ~ unless entity @e[tag=raft,type=minecraft:area_effect_cloud,distance=..0.7] run tag @s add fall
 execute at @s if block ~ ~0.2 ~ minecraft:water run tag @s add dying
 execute at @s if block ~ ~0.2 ~ minecraft:bubble_column run tag @s add dying
+execute at @s if block ~ ~0.2 ~ minecraft:lava run tag @s add dying
 execute at @s[tag=fall,tag=!dying] run teleport @s ~ ~-0.2 ~
 execute at @s[tag=!fall] align y unless block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~ ~
 execute at @s[tag=!fall] align y if block ~ ~ ~ #minecraft:slabs[type=bottom] run teleport @s ~ ~0.5 ~
@@ -51,7 +49,6 @@ execute at @e[distance=..3,type=minecraft:area_effect_cloud,tag=melee_trap] run 
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp TopmanNr = @s TopmanNr
 execute if entity @s[tag=dead] as @e[tag=topman_model,type=minecraft:armor_stand] if score @s TopmanNr = #temp TopmanNr run kill @s
-execute if entity @s[tag=dead] as @e[scores={TopmanNr=1..}] if score @s TopmanNr > #temp TopmanNr run scoreboard players remove @s TopmanNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp TopmanNr
 
 # Model

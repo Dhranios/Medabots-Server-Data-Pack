@@ -6,9 +6,11 @@ tag @e[distance=..0.7,tag=round_stone,tag=!action_floor] add dead
 tag @e[distance=..0.7,tag=ice_block,tag=!action_floor] add dead
 tag @e[distance=..0.7,tag=rubberobo] add dead
 
+
 tag @s add me
-execute if entity @e[distance=..0.7,tag=!me,tag=!dead,tag=!model_piece,type=!minecraft:player,type=!minecraft:item,type=!minecraft:experience_orb,tag=!mr_referee,tag=!medabot_walk_detection,tag=!guard_walk_detection,tag=!mission] run tag @s add cancel
-execute unless block ~ ~ ~ minecraft:air run tag @s add cancel
+execute if entity @e[distance=..0.7,tag=!me,tag=!dead,tag=!model_piece,type=!minecraft:player,type=!minecraft:item,type=!minecraft:experience_orb,tag=!mr_referee,tag=!medabot_walk_detection,tag=!guard_walk_detection,tag=!mission] unless entity @e[distance=..0.7,tag=enemy_medabot,tag=!medabot] run tag @s add cancel
+execute unless block ~ ~ ~ minecraft:air run tag @s[tag=!door] add cancel
+execute unless block ~ ~ ~ minecraft:air unless block ~ ~ ~ minecraft:black_stained_glass unless block ~ ~ ~ minecraft:iron_trapdoor run tag @s[tag=door] add cancel
 
 # Remove
 kill @s

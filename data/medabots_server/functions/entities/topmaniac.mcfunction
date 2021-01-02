@@ -20,7 +20,6 @@ tag @e[tag=target,limit=1] remove target
 teleport @s[tag=dead] ~ -1000 ~
 execute if entity @s[tag=dead] run scoreboard players operation #temp TopmaniacNr = @s TopmaniacNr
 execute if entity @s[tag=dead] as @e[tag=topmaniac_model,type=minecraft:armor_stand] if score @s TopmaniacNr = #temp TopmaniacNr run kill @s
-execute if entity @s[tag=dead] as @e[scores={TopmaniacNr=1..}] if score @s TopmaniacNr > #temp TopmaniacNr run scoreboard players remove @s TopmaniacNr 1
 execute if entity @s[tag=dead] run scoreboard players reset #temp TopmaniacNr
 
 # Model
