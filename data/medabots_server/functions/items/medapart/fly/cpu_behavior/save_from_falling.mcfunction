@@ -15,7 +15,7 @@ tag @s[tag=select_legs_now] remove left_arm_activated
 tag @s[tag=select_legs_now] remove right_arm_activated
 tag @s[tag=select_legs_now] remove head_activated
 tag @s[tag=select_legs_now] remove medal_activated
-replaceitem entity @s[tag=select_legs_now] weapon.mainhand minecraft:air
+item entity @s[tag=select_legs_now] weapon.mainhand replace minecraft:air
 scoreboard players operation @s[tag=select_legs_now] Dialog = @s Time
 scoreboard players operation @s[tag=select_legs_now] Dialog *= #-1 Constants
 tag @s[tag=select_legs_now] remove select_legs_now

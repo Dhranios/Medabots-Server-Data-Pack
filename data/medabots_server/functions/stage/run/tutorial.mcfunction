@@ -31,7 +31,7 @@ execute unless score @s LegsArmor = @s MaxLegsArmor run scoreboard players add @
 execute if entity @s[scores={Dialog=1104}] run scoreboard players set @e[scores={Stage=0},tag=enemy_medabot] State 2
 execute if entity @s[scores={Dialog=1104}] run scoreboard players set @e[scores={Stage=0},tag=enemy_medabot] Time 950
 execute if entity @s[scores={Dialog=1104}] run teleport @e[tag=enemy_medabot,scores={Stage=0}] 4 53 3
-execute if entity @s[scores={Dialog=1104}] run replaceitem entity @e[tag=enemy_medabot,scores={Stage=0}] weapon.mainhand minecraft:air
+execute if entity @s[scores={Dialog=1104}] run item entity @e[tag=enemy_medabot,scores={Stage=0}] weapon.mainhand replace minecraft:air
 teleport @s[scores={Dialog=1104}] 4 53 15
 scoreboard players set @s[scores={Dialog=1104}] HeadUses 0
 scoreboard players set @s[scores={Dialog=1104}] RightArmArmor -1

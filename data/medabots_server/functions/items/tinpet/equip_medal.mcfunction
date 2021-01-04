@@ -71,12 +71,12 @@ execute in minecraft:overworld if entity @s[scores={EditingTinpet=9}] run loot r
 execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock
 
 # Remove medal from inventory
-replaceitem entity @s[nbt={SelectedItemSlot:0}] hotbar.0 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:1}] hotbar.1 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:2}] hotbar.2 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:3}] hotbar.3 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:4}] hotbar.4 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:5}] hotbar.5 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:6}] hotbar.6 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:7}] hotbar.7 minecraft:air
-replaceitem entity @s[nbt={SelectedItemSlot:8}] hotbar.8 minecraft:air
+item entity @s[nbt={SelectedItemSlot:0}] hotbar.0 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:1}] hotbar.1 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:2}] hotbar.2 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:3}] hotbar.3 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:4}] hotbar.4 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:5}] hotbar.5 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:6}] hotbar.6 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:7}] hotbar.7 replace minecraft:air
+item entity @s[nbt={SelectedItemSlot:8}] hotbar.8 replace minecraft:air
