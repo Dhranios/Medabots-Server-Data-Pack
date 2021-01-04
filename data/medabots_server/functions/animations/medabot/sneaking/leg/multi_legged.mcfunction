@@ -1,0 +1,2 @@
+execute if entity @s[tag=left] run function medabots_server:animations/medabot/sneaking/leg/multi_legged/left
+execute if entity @s[tag=!left] run function medabots_server:animations/medabot/sneaking/leg/multi_legged/right

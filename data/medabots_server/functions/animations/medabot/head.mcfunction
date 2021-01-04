@@ -23,5 +23,4 @@ execute unless entity @s[scores={RotationDif=-60000..60000}] store result entity
 scoreboard players reset #temp MedabotRotation
 
 # Look up/down
-execute unless entity @s[nbt={Pose:{Head:[0.001f]}}] run data merge entity @s {Pose:{Head:[0.001f,0.001f,0.001f]}}
-execute store result entity @s Pose.Head[0] float 0.8 run data get entity @e[tag=this_medabot,limit=1] Rotation[1] 1
+execute store result entity @s Pose.Head[0] float 0.8 run data get entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[1] 1

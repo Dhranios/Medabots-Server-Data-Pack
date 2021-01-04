@@ -1,4 +1,4 @@
-summon minecraft:armor_stand ~ ~-.1 ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["chest","medabot_model","model_piece","new_chest","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
+summon minecraft:armor_stand ~ ~-.1 ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["chest","medabot_model","model_piece","this_medabot","new_chest","found_owner","found_owner_2"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 data modify entity @e[tag=model_piece,tag=new_chest,limit=1] ArmorItems[3] merge from entity @s ArmorItems[3]
 data modify entity @e[tag=model_piece,tag=new_chest,limit=1] ArmorItems[3].id set value "minecraft:carrot_on_a_stick"
 data modify entity @e[tag=model_piece,tag=new_chest,limit=1] ArmorItems[3].tag.Damage set value 24

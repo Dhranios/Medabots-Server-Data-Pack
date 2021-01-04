@@ -40,3 +40,7 @@ execute store result score @s[tag=edge_grabbing] MedabotRotation run data get en
 execute unless entity @s[scores={UpAmount=0}] run function medabots_server:animations/medabot/offset/up
 
 execute if entity @s[tag=dancing] at @s run function medabots_server:animations/medabot/dancing/body
+
+execute unless data storage medabots_server:data medabot{swimming:0b,gliding:0b} run data modify entity @s Rotation[1] set from entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[1]
+execute unless data storage medabots_server:data medabot{swimming:0b,gliding:0b} run data modify entity @s Rotation[0] set from entity @e[tag=this_medabot,tag=!medabot_model,limit=1] Rotation[0]
+execute if data storage medabots_server:data medabot{swimming:0b,gliding:0b} run data modify entity @s Rotation[1] set value 0.0f

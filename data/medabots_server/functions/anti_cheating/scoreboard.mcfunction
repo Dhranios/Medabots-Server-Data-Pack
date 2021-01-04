@@ -74,6 +74,7 @@ scoreboard objectives add HomeY dummy
 scoreboard objectives add HomeZ dummy
 scoreboard objectives add Horse minecraft.custom:minecraft.horse_one_cm
 scoreboard objectives add Hunger food
+scoreboard objectives add IncreaseAmount dummy
 scoreboard objectives add IneffectiveTime dummy
 scoreboard objectives add InfectTime dummy
 scoreboard objectives add InfectTimer dummy
@@ -92,8 +93,9 @@ scoreboard objectives add LeftAmount dummy
 scoreboard objectives add LeftArmArmor dummy
 scoreboard objectives add LeftArmDanger dummy
 scoreboard objectives add LeftArmPer dummy
-scoreboard objectives add LegsDefense dummy
+scoreboard objectives add LegCount dummy
 scoreboard objectives add LegsArmor dummy
+scoreboard objectives add LegsDefense dummy
 scoreboard objectives add LegsDanger dummy
 scoreboard objectives add LegsPer dummy
 scoreboard objectives add Level level

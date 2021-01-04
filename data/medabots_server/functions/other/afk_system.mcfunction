@@ -37,42 +37,8 @@ team join Advanced @s[team=!AFK,team=!AllyMedabot,team=!EnemyMedabot,team=!Neutr
 team join Bot @s[team=!AFK,team=!AllyMedabot,team=!EnemyMedabot,team=!NeutralMedabot,team=!Moderator,team=!MtBattleMaster,team=!Donor,team=!Advanced,tag=bot]
 
 # Not AFK anymore
-execute if entity @s[scores={AFKTime=1200..,Trading=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Trading=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,UsePart=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={UsePart=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Attack=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Attack=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Drop=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Drop=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Medaforce=1}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Medaforce=1,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Jump=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Jump=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Fall=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Fall=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Run=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Run=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Swimming=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Swimming=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Flying=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Flying=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Pig=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Pig=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Horse=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Horse=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Boat=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Boat=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Minecart=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Minecart=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,WalkOnWater=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={WalkOnWater=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,WalkUnderWater=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={WalkUnderWater=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Walk=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Walk=1..,AFKTime=1..}] AFKTime 0
-execute if entity @s[scores={AFKTime=1200..,Sneaking=1..}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
-scoreboard players set @s[scores={Sneaking=1..,AFKTime=1..}] AFKTime 0
+execute if entity @s[scores={AFKTime=1200..}] unless entity @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0,UsePart=0}] run tellraw @a {"translate":"medabots_server:message.afk.no","with":[{"selector":"@s"}]}
+execute unless entity @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0,UsePart=0}] run scoreboard players set @s[scores={AFKTime=1..}] AFKTime 0
 
 # Now AFK
 execute if entity @s[scores={AFKTime=1200}] run tellraw @a {"translate":"medabots_server:message.afk.yes","with":[{"selector":"@s"}]}
@@ -115,11 +81,12 @@ tag @s[tag=walking] remove walking
 tag @s[scores={Walk=1..}] add walking
 tag @s[scores={WalkOnWater=1..}] add walking
 tag @s[scores={WalkUnderWater=1..}] add walking
-tag @s[scores={Swimming=1..}] add walking
 execute if entity @s[nbt={OnGround:0b}] if block ~ ~-0.01 ~ minecraft:air run tag @s add walking
 scoreboard players set @s[scores={Walk=1..}] Walk 0
 scoreboard players set @s[scores={WalkOnWater=1..}] WalkOnWater 0
 scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0
+tag @s[tag=swimming] remove swimming
+tag @s[scores={Swimming=1..}] add swimming
 scoreboard players set @s[scores={Swimming=1..}] Swimming 0
 tag @s[tag=running] remove running
 tag @s[scores={Run=1..}] add running
