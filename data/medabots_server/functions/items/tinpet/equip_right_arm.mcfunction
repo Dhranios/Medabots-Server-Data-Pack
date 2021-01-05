@@ -97,15 +97,15 @@ execute in minecraft:overworld run setblock -286 0 -52 minecraft:bedrock
 execute in minecraft:overworld run setblock -286 3 -52 minecraft:bedrock
 
 # Remove right arm from inventory
-item entity @s[tag=valid,nbt={SelectedItemSlot:0}] hotbar.0 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:1}] hotbar.1 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:2}] hotbar.2 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:3}] hotbar.3 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:4}] hotbar.4 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:5}] hotbar.5 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:6}] hotbar.6 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:7}] hotbar.7 replace minecraft:air
-item entity @s[tag=valid,nbt={SelectedItemSlot:8}] hotbar.8 replace minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:0}] hotbar.0 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:1}] hotbar.1 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:2}] hotbar.2 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:3}] hotbar.3 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:4}] hotbar.4 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:5}] hotbar.5 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:6}] hotbar.6 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:7}] hotbar.7 minecraft:air
+replaceitem entity @s[tag=valid,nbt={SelectedItemSlot:8}] hotbar.8 minecraft:air
 
 # Complain about incompatability
 tellraw @s[tag=!valid] {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.error","color":"red"}]}

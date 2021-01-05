@@ -10,8 +10,6 @@
 	"respawn_anchor_works": false,
 	"has_raids": false,
 	"logical_height": 256,
-	"min_y": 0,
-	"height": 256,
 	"coordinate_scale": 1.0,
 	"infiniburn": "minecraft:infiniburn_overworld"
 }
