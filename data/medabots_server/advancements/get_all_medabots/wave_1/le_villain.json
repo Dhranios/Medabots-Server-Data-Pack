@@ -52,8 +52,54 @@
                     }
                 ]
             }
+        },
+        "head_in_tinpet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,part:\"tinpet\",items:{head:{tag:{medabots_server:{id:\"medabots_server:le_villain_grave_lane\"}}}}}}"
+                    }
+                ]
+            }
+        },
+        "right_arm_in_tinpet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,part:\"tinpet\",items:{right_arm:{tag:{medabots_server:{id:\"medabots_server:le_villain_tudge_shield\"}}}}}}"
+                    }
+                ]
+            }
+        },
+        "left_arm_in_tinpet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,part:\"tinpet\",items:{left_arm:{tag:{medabots_server:{id:\"medabots_server:le_villain_crime_stick\"}}}}}}"
+                    }
+                ]
+            }
+        },
+        "legs_in_tinpet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,part:\"tinpet\",items:{legs:{tag:{medabots_server:{id:\"medabots_server:le_villain_protoauto\"}}}}}}"
+                    }
+                ]
+            }
         }
     },
+	"requirements": [
+		[ "head", "head_in_tinpet" ],
+		[ "right_arm", "right_arm_in_tinpet" ],
+		[ "left_arm", "left_arm_in_tinpet" ],
+		[ "legs", "legs_in_tinpet" ]
+	],
     "rewards": {
         "function": "medabots_server:advancements/get_all_medabots/wave_1/le_villain"
     }

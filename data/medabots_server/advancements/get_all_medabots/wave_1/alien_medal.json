@@ -22,8 +22,21 @@
                     }
                 ]
             }
+        },
+        "medal_in_tinpet": {
+            "trigger": "minecraft:inventory_changed",
+            "conditions": {
+                "items": [
+                    {
+                        "nbt": "{medabots_server:{stage_item:0b,part:\"tinpet\",items:{medal:{tag:{medabots_server:{id:\"medabots_server:alien_medal\"}}}}}}"
+                    }
+                ]
+            }
         }
     },
+	"requirements": [
+		[ "medal", "medal_in_tinpet" ]
+	],
     "rewards": {
         "function": "medabots_server:advancements/get_all_medabots/wave_1/alien_medal"
     }
