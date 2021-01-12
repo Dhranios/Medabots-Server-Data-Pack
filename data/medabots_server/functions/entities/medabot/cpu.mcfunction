@@ -85,7 +85,7 @@ scoreboard players reset #temp MotionY
 scoreboard players reset #temp MotionZ
 
 # Prevent multiple selected medaparts at once
-replaceitem entity @s[tag=legs_activated] weapon.mainhand minecraft:air
+item entity @s[tag=legs_activated] weapon.mainhand replace minecraft:air
 tag @s[tag=legs_activated] remove medaforce_activated
 tag @s[tag=left_arm_activated] remove medaforce_activated
 tag @s[tag=right_arm_activated] remove medaforce_activated
@@ -104,7 +104,7 @@ execute if entity @s[tag=dead] run scoreboard players operation #temp MedabotNr 
 execute if entity @s[tag=dead] as @e[tag=medabot_model] if score @s MedabotNr = #temp MedabotNr run kill @s
 teleport @s[tag=dead] ~ -1000 ~
 scoreboard players reset #temp MedabotNr
-execute if entity @s[nbt=!{ArmorItems:[{id:"minecraft:structure_void"}]}] run replaceitem entity @s armor.head minecraft:structure_void
+execute if entity @s[nbt=!{ArmorItems:[{id:"minecraft:structure_void"}]}] run item entity @s armor.head replace minecraft:structure_void
 
 # tag as walking if total moved distance is 0.05 or more
 tag @s remove walking

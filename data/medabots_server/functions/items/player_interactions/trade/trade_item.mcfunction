@@ -12,7 +12,7 @@ execute as @e[type=minecraft:item,tag=traded_item,limit=1] if data entity @s Ite
 execute as @e[type=minecraft:item,tag=traded_item,limit=1] if entity @s[nbt={Item:{tag:{medabots_server:{id:"medabots_server:custom_stage"}}}}] run data merge entity @s {Item:{tag:{medabots_server:{refresh:1b}}}}
 tag @e[type=minecraft:item,tag=traded_item,limit=1] remove traded_item
 
-replaceitem entity @a[distance=..10,tag=asked_to_trade,tag=accepted] weapon.offhand minecraft:air
-replaceitem entity @a[distance=..10,tag=awaiting_trade_response,tag=accepted] weapon.offhand minecraft:air
+item entity @a[distance=..10,tag=asked_to_trade,tag=accepted] weapon.offhand replace minecraft:air
+item entity @a[distance=..10,tag=awaiting_trade_response,tag=accepted] weapon.offhand replace minecraft:air
 tag @a[distance=..10,tag=asked_to_trade,tag=accepted] remove accepted
 tag @a[distance=..10,tag=awaiting_trade_response,tag=accepted] remove accepted 

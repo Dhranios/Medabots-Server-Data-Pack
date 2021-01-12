@@ -4,7 +4,7 @@ execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,scores={He
 execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,scores={Charge=50..},tag=knight_medal] run tag @s add medaforce_activated
 
 execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,tag=!fly_legs,scores={LegsArmor=1..}] run tag @s add legs_activated
-execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,tag=!fly_legs,scores={LegsArmor=1..}] run replaceitem entity @s weapon.mainhand minecraft:air
+execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,tag=!fly_legs,scores={LegsArmor=1..}] run item entity @s weapon.mainhand replace minecraft:air
 execute if entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,tag=!fly_legs,scores={LegsArmor=1..}] run scoreboard players set @s Dialog -40
 
 execute unless entity @s[tag=!right_arm_activated,tag=!left_arm_activated,tag=!head_activated,tag=!medaforce_activated,tag=!fly_legs] run function medabots_server:entities/medabot/cpu/preferences/clear

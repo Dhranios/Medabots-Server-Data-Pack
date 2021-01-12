@@ -41,7 +41,7 @@ execute if entity @s[y=2,dy=255,scores={DeathTime=1}] as @e[distance=..1] unless
 gamemode spectator @s[scores={DeathTime=1}]
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Time 950
 execute if entity @s[scores={DeathTime=1}] run scoreboard players set @s Damage 0
-replaceitem entity @s[scores={DeathTime=1},type=!minecraft:player] weapon.mainhand minecraft:air
+item entity @s[scores={DeathTime=1},type=!minecraft:player] weapon.mainhand replace minecraft:air
 execute if entity @s[scores={DeathTime=1}] run function medabots_server:effects/clear
 execute if entity @s[scores={DeathTime=1},type=minecraft:player] run function medabots_server:other/death
 execute if entity @s[scores={DeathTime=1}] run function medabots_server:other/death_message
