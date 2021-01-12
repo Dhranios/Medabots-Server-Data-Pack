@@ -11,9 +11,6 @@ execute unless entity @s[nbt={Inventory:[{Slot:8b}]}] run item entity @s[scores=
 execute unless entity @s[nbt={Inventory:[{Slot:8b}]}] run item entity @s[scores={FlyCourse=1..2},tag=!long_fly_course_speed,tag=!fly_course_speed] hotbar.8 replace minecraft:firework_rocket{Fireworks:{Flight:1b},medabots_server:{id:"medabots_server:fly_course_speed"},display:{Name:"{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_course_speed\"}",Lore:["{\"italic\":false,\"color\":\"white\",\"translate\":\"medabots_server:item.fly_course_speed.description\"}"]}}
 
 # Play the music
-execute unless entity @s[scores={Jukebox=1..}] run scoreboard players set @s[scores={FlyCourse=1}] Music 0
-scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:0b}] MusicType 0
-scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] MusicType 6
 scoreboard players set @s[scores={FlyCourse=1},nbt={FallFlying:1b}] Time 220
 
 # Stop the course

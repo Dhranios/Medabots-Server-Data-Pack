@@ -12,7 +12,7 @@
         },
         "hidden": true
     },
-	"parent": "medabots_server:bosses/wave_1/argorok",
+	"parent": "medabots_server:bosses/wave_1/topmaniac",
     "criteria": {
         "defeated": {
             "trigger": "minecraft:impossible"

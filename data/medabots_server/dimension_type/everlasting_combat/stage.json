@@ -9,9 +9,9 @@
 	"bed_works": false,
 	"respawn_anchor_works": false,
 	"has_raids": false,
-	"logical_height": 4096,
+	"logical_height": 4080,
 	"min_y": -2048,
-	"height": 4096,
+	"height": 4080,
 	"coordinate_scale": 1.0,
 	"infiniburn": "minecraft:infiniburn_overworld"
 }

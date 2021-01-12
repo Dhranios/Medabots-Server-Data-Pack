@@ -10,9 +10,9 @@ advancement grant @s[scores={MusicType=4}] only medabots_server:special_items/ju
 playsound medabots_server:music.stage.mt_battle_intro music @s[scores={MusicType=5}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=5}] Music 91
 advancement grant @s[scores={MusicType=5}] only medabots_server:special_items/jukebox/wave_0/mt_battle
-playsound medabots_server:music.stage.fly_course_intro music @s[scores={MusicType=6}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.medium_fly_course_intro music @s[scores={MusicType=6}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=6}] Music 127
-advancement grant @s[scores={MusicType=6}] only medabots_server:special_items/jukebox/wave_0/fly_course
+advancement grant @s[scores={MusicType=6}] only medabots_server:special_items/jukebox/wave_0/medium_fly_course
 advancement grant @s[scores={MusicType=7}] only medabots_server:special_items/jukebox/wave_1/grassland
 playsound medabots_server:music.stage.rock_intro music @s[scores={MusicType=8}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=8}] Music 24
@@ -164,5 +164,26 @@ advancement grant @s[scores={MusicType=78}] only medabots_server:special_items/j
 playsound medabots_server:music.entity.dimentio_intro music @s[scores={MusicType=79}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=79}] Music 29
 advancement grant @s[scores={MusicType=79}] only medabots_server:special_items/jukebox/wave_0/dimentio
+playsound medabots_server:music.stage.everlasting_combat.another_dimension_intro music @s[scores={MusicType=80}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=80}] Music 111
+advancement grant @s[scores={MusicType=80}] only medabots_server:special_items/jukebox/wave_1/another_dimension
+playsound medabots_server:music.stage.everlasting_combat.dreadnought_galaxy_intro music @s[scores={MusicType=81}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=81}] Music 275
+advancement grant @s[scores={MusicType=81}] only medabots_server:special_items/jukebox/wave_1/dreadnought_galaxy
+playsound medabots_server:music.stage.everlasting_combat.egg_engines_intro music @s[scores={MusicType=82}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=82}] Music 147
+advancement grant @s[scores={MusicType=82}] only medabots_server:special_items/jukebox/wave_1/egg_engines
+playsound medabots_server:music.stage.everlasting_combat.palace_of_twilight_intro music @s[scores={MusicType=83}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=83}] Music 640
+advancement grant @s[scores={MusicType=84}] only medabots_server:special_items/jukebox/wave_1/palace_of_twilight
+playsound medabots_server:music.stage.everlasting_combat.mustafar_intro music @s[scores={MusicType=84}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=84}] Music 222
+advancement grant @s[scores={MusicType=84}] only medabots_server:special_items/jukebox/wave_1/mustafar
+playsound medabots_server:music.stage.easy_fly_course_intro music @s[scores={MusicType=85}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=85}] Music 170
+advancement grant @s[scores={MusicType=85}] only medabots_server:special_items/jukebox/wave_0/easy_fly_course
+playsound medabots_server:music.stage.hard_fly_course_intro music @s[scores={MusicType=86}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=86}] Music 303
+advancement grant @s[scores={MusicType=86}] only medabots_server:special_items/jukebox/wave_0/hard_fly_course
 
 scoreboard players operation @s[scores={Music=0}] PrevMusicType = @s MusicType

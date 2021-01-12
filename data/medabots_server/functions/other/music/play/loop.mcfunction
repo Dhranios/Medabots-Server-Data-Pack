@@ -10,7 +10,7 @@ playsound medabots_server:music.stage.selection music @s[scores={MusicType=4}] ~
 scoreboard players set @s[scores={MusicType=4}] Music 342
 playsound medabots_server:music.stage.mt_battle music @s[scores={MusicType=5}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=5}] Music 1095
-playsound medabots_server:music.stage.fly_course music @s[scores={MusicType=6}] ~ ~ ~ 1000
+playsound medabots_server:music.stage.medium_fly_course music @s[scores={MusicType=6}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=6}] Music 1816
 playsound medabots_server:music.stage.grassland music @s[scores={MusicType=7}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=7}] Music 1000
@@ -157,6 +157,20 @@ playsound medabots_server:music.battle.dimentio music @s[scores={MusicType=78}] 
 scoreboard players set @s[scores={MusicType=78}] Music 1408
 playsound medabots_server:music.entity.dimentio music @s[scores={MusicType=79}] ~ ~ ~ 1000
 scoreboard players set @s[scores={MusicType=79}] Music 669
+playsound medabots_server:music.stage.everlasting_combat.another_dimension music @s[scores={MusicType=80}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=80}] Music 1560
+playsound medabots_server:music.stage.everlasting_combat.dreadnought_galaxy music @s[scores={MusicType=81}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=81}] Music 1733
+playsound medabots_server:music.stage.everlasting_combat.egg_engines music @s[scores={MusicType=82}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=82}] Music 1329
+playsound medabots_server:music.stage.everlasting_combat.palace_of_twilight music @s[scores={MusicType=83}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=83}] Music 5120
+playsound medabots_server:music.stage.everlasting_combat.mustafar music @s[scores={MusicType=84}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=84}] Music 1304
+playsound medabots_server:music.stage.easy_fly_course music @s[scores={MusicType=85}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=85}] Music 1250
+playsound medabots_server:music.stage.hard_fly_course music @s[scores={MusicType=86}] ~ ~ ~ 1000
+scoreboard players set @s[scores={MusicType=86}] Music 1350
 
 tag @s[scores={MusicType=58..59,OldMusicType=1..}] add not_yet
 scoreboard players operation @s[scores={MusicType=58..59,OldMusicType=1..}] MusicType = @s OldMusicType

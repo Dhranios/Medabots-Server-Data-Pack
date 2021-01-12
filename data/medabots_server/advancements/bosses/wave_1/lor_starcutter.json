@@ -12,7 +12,7 @@
         },
         "hidden": true
     },
-	"parent": "medabots_server:bosses/wave_1/topmaniac",
+	"parent": "medabots_server:bosses/wave_1/master_edges",
     "criteria": {
         "defeated": {
             "trigger": "minecraft:impossible"

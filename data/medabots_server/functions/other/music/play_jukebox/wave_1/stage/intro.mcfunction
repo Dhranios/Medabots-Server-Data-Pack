@@ -20,5 +20,15 @@ playsound medabots_server:music.stage.subspace_2_intro music @s[scores={Jukebox=
 scoreboard players set @s[scores={Jukebox=25},advancements={medabots_server:special_items/jukebox/wave_1/subspace_2=true}] Music 82
 playsound medabots_server:music.stage.subspace_3_intro music @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/wave_1/subspace_3=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=26},advancements={medabots_server:special_items/jukebox/wave_1/subspace_3=true}] Music 255
+playsound medabots_server:music.stage.everlasting_combat.another_dimension_intro music @s[scores={Jukebox=27},advancements={medabots_server:special_items/jukebox/wave_1/another_dimension=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=27},advancements={medabots_server:special_items/jukebox/wave_1/another_dimension=true}] Music 111
+playsound medabots_server:music.stage.everlasting_combat.dreadnought_galaxy_intro music @s[scores={Jukebox=28},advancements={medabots_server:special_items/jukebox/wave_1/dreadnought_galaxy=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=28},advancements={medabots_server:special_items/jukebox/wave_1/dreadnought_galaxy=true}] Music 275
+playsound medabots_server:music.stage.everlasting_combat.egg_engines_intro music @s[scores={Jukebox=29},advancements={medabots_server:special_items/jukebox/wave_1/egg_engines=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=29},advancements={medabots_server:special_items/jukebox/wave_1/egg_engines=true}] Music 147
+playsound medabots_server:music.stage.everlasting_combat.mustafar_intro music @s[scores={Jukebox=30},advancements={medabots_server:special_items/jukebox/wave_1/mustafar=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=30},advancements={medabots_server:special_items/jukebox/wave_1/mustafar=true}] Music 222
+playsound medabots_server:music.stage.everlasting_combat.palace_of_twilight_intro music @s[scores={Jukebox=31},advancements={medabots_server:special_items/jukebox/wave_1/palace_of_twilight=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=31},advancements={medabots_server:special_items/jukebox/wave_1/palace_of_twilight=true}] Music 640
 
 scoreboard players operation @s[scores={Music=0}] PrevJukebox = @s Jukebox

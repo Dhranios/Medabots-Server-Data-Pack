@@ -12,7 +12,7 @@
         },
         "hidden": true
     },
-	"parent": "medabots_server:bosses/wave_1",
+	"parent": "medabots_server:bosses/wave_1/hr_d3",
     "criteria": {
         "defeated": {
             "trigger": "minecraft:impossible"

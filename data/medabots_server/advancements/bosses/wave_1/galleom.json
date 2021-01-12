@@ -12,7 +12,7 @@
         },
         "hidden": true
     },
-	"parent": "medabots_server:bosses/wave_1/master_edges",
+	"parent": "medabots_server:bosses/wave_1/argorok",
     "criteria": {
         "defeated": {
             "trigger": "minecraft:impossible"

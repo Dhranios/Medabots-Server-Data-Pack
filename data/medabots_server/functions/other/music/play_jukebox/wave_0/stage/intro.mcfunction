@@ -4,9 +4,13 @@ playsound medabots_server:music.stage.cleared_intro music @s[scores={Jukebox=2},
 scoreboard players set @s[scores={Jukebox=2},advancements={medabots_server:special_items/jukebox/wave_0/stage_cleared=true}] Music 40
 playsound medabots_server:music.stage.failed_intro music @s[scores={Jukebox=3},advancements={medabots_server:special_items/jukebox/wave_0/stage_failed=true}] ~ ~ ~ 1000
 scoreboard players set @s[scores={Jukebox=3},advancements={medabots_server:special_items/jukebox/wave_0/stage_failed=true}] Music 129
-playsound medabots_server:music.stage.fly_course_intro music @s[scores={Jukebox=4},advancements={medabots_server:special_items/jukebox/wave_0/fly_course=true}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Jukebox=4},advancements={medabots_server:special_items/jukebox/wave_0/fly_course=true}] Music 127
-playsound medabots_server:music.stage.mt_battle_intro music @s[scores={Jukebox=5},advancements={medabots_server:special_items/jukebox/wave_0/mt_battle=true}] ~ ~ ~ 1000
-scoreboard players set @s[scores={Jukebox=5},advancements={medabots_server:special_items/jukebox/wave_0/mt_battle=true}] Music 91
+playsound medabots_server:music.stage.easy_fly_course_intro music @s[scores={Jukebox=4},advancements={medabots_server:special_items/jukebox/wave_0/easy_fly_course=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=4},advancements={medabots_server:special_items/jukebox/wave_0/easy_fly_course=true}] Music 170
+playsound medabots_server:music.stage.medium_fly_course_intro music @s[scores={Jukebox=5},advancements={medabots_server:special_items/jukebox/wave_0/medium_fly_course=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=5},advancements={medabots_server:special_items/jukebox/wave_0/medium_fly_course=true}] Music 127
+playsound medabots_server:music.stage.hard_fly_course_intro music @s[scores={Jukebox=6},advancements={medabots_server:special_items/jukebox/wave_0/hard_fly_course=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=6},advancements={medabots_server:special_items/jukebox/wave_0/hard_fly_course=true}] Music 303
+playsound medabots_server:music.stage.mt_battle_intro music @s[scores={Jukebox=7},advancements={medabots_server:special_items/jukebox/wave_0/mt_battle=true}] ~ ~ ~ 1000
+scoreboard players set @s[scores={Jukebox=7},advancements={medabots_server:special_items/jukebox/wave_0/mt_battle=true}] Music 91
 
 scoreboard players operation @s[scores={Music=0}] PrevJukebox = @s Jukebox
