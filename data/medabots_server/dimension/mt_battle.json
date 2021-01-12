@@ -1,5 +1,5 @@
 {
-    "type": "medabots_server:stage",
+    "type": "medabots_server:mt_battle",
     "generator": {
         "settings": {
             "lakes": false,
