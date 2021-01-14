@@ -87,6 +87,7 @@ scoreboard players set @s[scores={WalkOnWater=1..}] WalkOnWater 0
 scoreboard players set @s[scores={WalkUnderWater=1..}] WalkUnderWater 0
 tag @s[tag=swimming] remove swimming
 tag @s[scores={Swimming=1..}] add swimming
+execute if block ~ ~ ~ minecraft:water if entity @s[nbt={FallFlying:0b}] positioned ~ ~1 ~ unless entity @s[dy=0] run tag @s add swimming
 scoreboard players set @s[scores={Swimming=1..}] Swimming 0
 tag @s[tag=running] remove running
 tag @s[scores={Run=1..}] add running

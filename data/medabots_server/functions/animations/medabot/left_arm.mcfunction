@@ -19,7 +19,7 @@ execute if entity @s[tag=selected] store result score #temp Time run data get en
 execute if entity @s[tag=selected] store result entity @s Pose.Head[0] float 1 run scoreboard players operation #temp Time -= #70 Constants
 execute if entity @s[tag=selected] store result entity @s Rotation[0] float 1 run data get entity @e[tag=this_medabot,tag=head,limit=1] Rotation[0] 1
 scoreboard players reset #temp Time
-execute unless entity @s[tag=swimming,tag=!dancing] run function medabots_server:animations/medabot/idle/left_arm
+execute if entity @s[tag=!swimming,tag=!dancing] run function medabots_server:animations/medabot/idle/left_arm
 
 # Walk animation
 data modify entity @s[tag=!edge_grabbing,tag=was_edge_grabbing] Pose.Head[0] set value 0.001f

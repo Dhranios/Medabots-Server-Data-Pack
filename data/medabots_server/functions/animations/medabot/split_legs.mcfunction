@@ -22,6 +22,7 @@ execute if score #temp Time matches 1.. run function medabots_server:animations/
 execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{tail:{}}}}}]}] run function medabots_server:animations/medabot/separate_tail
 execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{model_data:{wormtail:{}}}}}]}] run function medabots_server:animations/medabot/separate_wormtail
 execute at @e[tag=leg,tag=this_medabot,type=minecraft:armor_stand] run scoreboard players add @e[tag=this_medabot,tag=medabot_model,type=minecraft:armor_stand] LegCount 1
+execute if entity @s[nbt={ArmorItems:[{tag:{medabots_server:{move:"swim"}}}]}] run tag @e[tag=this_medabot,tag=medabot_model,type=minecraft:armor_stand] add swim_legs
 
 scoreboard players reset #temp_2 Time
 scoreboard players reset #temp Time

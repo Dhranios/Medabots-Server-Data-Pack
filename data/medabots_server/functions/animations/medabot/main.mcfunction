@@ -4,6 +4,8 @@ tag @s[scores={AnimationProg=0}] remove dancing
 execute if entity @s[scores={AnimationProg=1..}] unless data storage medabots_server:data medabot{tags:["sneaking"]} run scoreboard players set @s[tag=was_sneaking,tag=!was_swimming] AnimationProg 0
 execute if entity @s[scores={AnimationProg=1..}] unless data storage medabots_server:data medabot{tags:["walking"]} run scoreboard players set @s[tag=was_walking,tag=!was_swimming] AnimationProg 0
 execute if entity @s[scores={AnimationProg=1..}] unless data storage medabots_server:data medabot{tags:["running"]} run scoreboard players set @s[tag=was_running,tag=!was_swimming] AnimationProg 0
+execute if entity @s[scores={AnimationProg=1..}] unless data storage medabots_server:data medabot{tags:["swimming"]} run scoreboard players set @s[tag=was_swimming] AnimationProg 0
+execute if entity @s[scores={AnimationProg=0},tag=was_swimming] store result entity @s Pose.Head[0] float 1 run scoreboard players get @s IncreaseAmount
 execute if entity @s[scores={AnimationProg=1..}] if data storage medabots_server:data medabot{tags:["dancing"]} run scoreboard players set @s[tag=!dancing] AnimationProg 0
 execute if entity @s[scores={AnimationProg=1..}] if data storage medabots_server:data medabot{tags:["swimming"]} run scoreboard players set @s[tag=!was_swimming] AnimationProg 0
 data modify entity @s Tags append from storage medabots_server:data medabot.tags[]
