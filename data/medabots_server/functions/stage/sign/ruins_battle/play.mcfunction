@@ -13,9 +13,7 @@ execute if entity @s[advancements={medabots_server:story_progression/infinity={v
 execute if entity @s[advancements={medabots_server:story_progression/infinity={motivated_fight=true,motivated_fight_battle=false}},scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_screws=true,vs_screws_battle=false}},scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
 execute if entity @s[advancements={medabots_server:story_progression/infinity={vs_jaxy=true,vs_jaxy_battle=false}},scores={Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
-execute if entity @s[scores={KillStreak=1,Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
-execute if entity @s[scores={KillStreak=2,Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
-execute if entity @s[scores={KillStreak=3,Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
+execute if entity @s[scores={KillStreak=1..3,Dialog=0},gamemode=adventure,tag=!random_arena_version] run function medabots_server:stage/sign/generic/story_battle
 tellraw @s[scores={Dialog=1..}] {"translate":"medabots_server:message.stage.dialog","color":"green"}
 
-execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=random_arena_version] run function medabots_server:stage/sign/ruins_battle/random
+execute if entity @s[scores={Dialog=0},gamemode=adventure,tag=random_arena_version] run function medabots_server:stage/sign/ruins_battle/random_story
