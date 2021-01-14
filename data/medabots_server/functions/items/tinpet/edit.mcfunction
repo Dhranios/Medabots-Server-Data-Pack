@@ -2,7 +2,7 @@
 execute store result score @s EditingTinpet run data get entity @s SelectedItemSlot
 execute unless entity @s[nbt={SelectedItem:{}}] run scoreboard players set @s EditingTinpet 9
 
-execute if entity @s[tag=has_medabot_form] run function medabots_server:items/player_interations/medabot/revert
+execute if entity @s[tag=has_medabot_form] run function medabots_server:items/player_interactions/medabot/revert
 
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.edit"}]}
 tellraw @s[scores={EditingTinpet=0..8},nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:item.tinpet","color":"green"},{"translate":"medabots_server:message.tinpet.edit.male"}]}
@@ -25,8 +25,8 @@ summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["l
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["right_arm","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["head","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
 summon minecraft:armor_stand ~ ~ ~ {NoGravity:1b,Invisible:1b,Marker:1b,Tags:["medal","medabot_model","model_piece","new","found_owner","found_owner_2","tinpet_editing"],CustomName:'{"translate":"medabots_server:entity.model_piece"}'}
-scoreboard players operation @s MedabotNr > @e[scores={MedabotNr=0..}] MedabotNr
-scoreboard players add @s MedabotNr 1
+execute store result score @s MedabotNr run data get storage medabots_server:data unique_id.medabot
+execute store result storage medabots_server:data unique_id.medabot int 1 run scoreboard players add @s MedabotNr 1
 execute at @s as @e[tag=medabot_model,tag=new] run scoreboard players operation @s MedabotNr = @a[distance=..0.1,limit=1] MedabotNr
 execute at @s[scores={EditingTinpet=0..8},nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:male_tinpet"}}}}] unless entity @s[nbt={SelectedItem:{tag:{medabots_server:{items:{legs:{tag:{medabots_server:{part:"legs"}}}}}}}}] run item entity @e[tag=legs,tag=new] armor.head replace minecraft:fishing_rod{Damage:1,Unbreakable:1b,CustomModelData:-1,medabots_server:{part:"legs",model_data:{height:0,legs:[{l:0,u:0,r:0},{l:0,u:0,r:0}]}}}
 execute at @s[scores={EditingTinpet=0..8},nbt={SelectedItem:{tag:{medabots_server:{id:"medabots_server:female_tinpet"}}}}] unless entity @s[nbt={SelectedItem:{tag:{medabots_server:{items:{legs:{tag:{medabots_server:{part:"legs"}}}}}}}}] run item entity @e[tag=legs,tag=new] armor.head replace minecraft:fishing_rod{Damage:1,Unbreakable:1b,CustomModelData:-2,medabots_server:{part:"legs",model_data:{height:0,legs:[{l:0,u:0,r:0},{l:0,u:0,r:0}]}}}
@@ -66,9 +66,9 @@ execute at @s[scores={EditingTinpet=9}] as @e[tag=head,tag=new] run data modify 
 execute at @s[scores={EditingTinpet=9}] as @e[tag=medal,tag=new] run data modify entity @s ArmorItems[3] merge from entity @a[distance=..0.1,limit=1] Inventory[{Slot:-106b}].tag.medabots_server.items.medal
 tag @e[tag=medabot_model,tag=new] remove new
 
-execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:stone",Count:1b}]}
-execute in minecraft:overworld if entity @s[nbt={SelectedItem:{}}] run data modify block -286 0 -52 Items[0] merge from entity @s SelectedItem
-execute in minecraft:overworld unless entity @s[nbt={SelectedItem:{}}] run data modify block -286 0 -52 Items[0] merge from entity @s Inventory:[{Slot:-106b}]
+execute in minecraft:overworld run setblock -286 0 -52 minecraft:shulker_box{Items:[{Slot:0b,id:"minecraft:fishing_rod",Count:1b,tag:{}}]}
+execute in minecraft:overworld if entity @s[nbt={SelectedItem:{}}] run data modify block -286 0 -52 Items[0].tag merge from entity @s SelectedItem.tag
+execute in minecraft:overworld unless entity @s[nbt={SelectedItem:{}}] run data modify block -286 0 -52 Items[0].tag merge from entity @s Inventory[{Slot:-106b}].tag
 execute in minecraft:overworld run data remove block -286 0 -52 Items[0].tag.medabots_server.activated
 execute in minecraft:overworld if entity @s[nbt={SelectedItem:{}}] run loot replace entity @s weapon.mainhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}
 execute in minecraft:overworld unless entity @s[nbt={SelectedItem:{}}] run loot replace entity @s weapon.offhand 1 mine -286 0 -52 minecraft:golden_pickaxe{phi:{drop_contents:true}}

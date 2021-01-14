@@ -19,7 +19,7 @@ tellraw @s[scores={Dialog=728}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=784}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.salesman_mermaid_medal.11"}]}
 tellraw @s[scores={Dialog=792}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman","color":"green"},{"translate":"medabots_server:dialog.other.salesman_mermaid_medal.12"}]}
 tellraw @s[scores={Dialog=928}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman","color":"green"},{"translate":"medabots_server:dialog.other.salesman_mermaid_medal.13"}]}
-tellraw @s[scores={Dialog=992}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman","color":"green"},{"translate":"medabots_server:dialog.other.salesman_mermaid_medal.14"}]}
+tellraw @s[scores={Dialog=992}] {"translate":"chat.type.text","with":[{"selector":"@s","color":"green"},{"translate":"medabots_server:dialog.other.salesman_mermaid_medal.14"}]}
 tellraw @s[scores={Dialog=1032}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman","color":"green"},{"translate":"medabots_server:dialog.other.salesman_mermaid_medal.15"}]}
 tellraw @s[scores={Dialog=1104}] {"translate":"chat.type.text","with":[{"translate":"medabots_server:entity.salesman","color":"green"},{"translate":"medabots_server:dialog.other.salesman_mermaid_medal.16"}]}
 tag @s[scores={Dialog=1176}] remove dialog_other_salesman_mermaid_medal

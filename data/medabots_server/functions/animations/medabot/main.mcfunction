@@ -11,8 +11,6 @@ tag @s[tag=not_yet] remove drowned
 tag @s[tag=not_yet] remove crushed
 tag @s[tag=not_yet] remove dying
 tag @s[tag=!not_yet,tag=dying,tag=!drowned,tag=!crushed] add normal_death
-tag @s[tag=walking,tag=sneak_pos] add sneaking
-tag @s[tag=walking,tag=sneak_pos] remove walking
 execute if data storage medabots_server:data medabot{gliding:1b} run tag @s[tag=walking] remove walking
 execute unless entity @s[tag=fly_legs,tag=!static_fly] run tag @s[tag=legs_selected] add guarding
 tag @s[tag=cannot_defend] remove guarding

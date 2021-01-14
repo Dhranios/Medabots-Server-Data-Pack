@@ -115,6 +115,8 @@ execute if entity @s[scores={Trading=1..},tag=!trading] run function medabots_se
 scoreboard players set @s[scores={Trading=1..},tag=trading] Trading 0
 execute unless entity @e[tag=shop,distance=..4,limit=1] run tag @s[tag=trading] remove trading
 tag @s[scores={Trading=1..}] add trading
+tag @s[tag=walking,tag=sneak_pos] add sneaking
+tag @s[tag=walking,tag=sneak_pos] remove walking
 
 # Count up
 execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s[scores={Trading=0,Jump=0,Run=0,Walk=0,Swimming=0,Flying=0,Boat=0,Minecart=0,Horse=0,Pig=0,Sneaking=0,WalkOnWater=0,WalkUnderWater=0,Fall=0,UsePart=0}] AFKTime 1
